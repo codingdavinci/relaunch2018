@@ -1,0 +1,14 @@
+uuid: ae5dfec1-e4f5-45b7-b98a-67852adb0b06
+langcode: de
+status: true
+dependencies:
+  config:
+    - user.role.founder
+  module:
+    - user
+id: user_remove_role_action.founder
+label: 'Den ausgewählten Benutzern die Rolle Founder entziehen'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: founder

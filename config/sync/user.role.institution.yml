@@ -1,0 +1,17 @@
+uuid: 3d3e6beb-0f3c-4981-b43c-54e1988a4575
+langcode: de
+status: true
+dependencies: {  }
+id: institution
+label: Institution
+weight: -7
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'access toolbar'
+  - 'create data_set content'
+  - 'edit own data_set content'
+  - 'use data_set transition create_new_draft'
+  - 'view data_set revisions'
+  - 'view own unpublished content'
+  - 'view the administration theme'

@@ -1,0 +1,45 @@
+uuid: be293925-2bdf-40de-8671-4bacd9da8cf8
+langcode: de
+status: true
+dependencies: {  }
+id: event_manager
+label: 'Event Manager'
+weight: -6
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'access toolbar'
+  - 'create article content'
+  - 'create data_set content'
+  - 'create event content'
+  - 'create project content'
+  - 'delete any data_set content'
+  - 'delete any project content'
+  - 'delete data_set revisions'
+  - 'delete event revisions'
+  - 'delete own article content'
+  - 'delete own data_set content'
+  - 'delete own event content'
+  - 'delete own project content'
+  - 'delete project revisions'
+  - 'edit any data_set content'
+  - 'edit any event content'
+  - 'edit any project content'
+  - 'edit own article content'
+  - 'edit own data_set content'
+  - 'edit own event content'
+  - 'edit own project content'
+  - 'revert data_set revisions'
+  - 'use article transition create_new_draft'
+  - 'use article transition keep_published'
+  - 'use data_set transition create_new_draft'
+  - 'use data_set transition publish'
+  - 'use event transition create_new_draft'
+  - 'use event transition keep_published'
+  - 'use project transition publish'
+  - 'view article revisions'
+  - 'view data_set revisions'
+  - 'view event revisions'
+  - 'view own unpublished content'
+  - 'view project revisions'
+  - 'view the administration theme'

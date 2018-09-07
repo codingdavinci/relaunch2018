@@ -1,0 +1,14 @@
+uuid: 5f5b5101-2e54-4b3a-aac2-0679ee7fb2d6
+langcode: de
+status: true
+dependencies:
+  config:
+    - user.role.institution
+  module:
+    - user
+id: user_add_role_action.institution
+label: 'Den ausgewählten Benutzern die Rolle Institution zuweisen'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: institution

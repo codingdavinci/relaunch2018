@@ -1,0 +1,14 @@
+uuid: f0fd585b-45bc-4934-bf9f-393f042c0a69
+langcode: de
+status: true
+dependencies:
+  config:
+    - user.role.founder
+  module:
+    - user
+id: user_add_role_action.founder
+label: 'Den ausgewählten Benutzern die Rolle Founder zuweisen'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: founder

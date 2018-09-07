@@ -1,0 +1,29 @@
+uuid: d8e1dc34-f0ab-480b-afdc-6e2de48060d3
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.node.data_set.body
+    - node.type.data_set
+  module:
+    - text
+    - user
+id: node.data_set.default
+targetEntityType: node
+bundle: data_set
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

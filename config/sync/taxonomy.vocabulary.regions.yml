@@ -1,0 +1,9 @@
+uuid: c1618106-5ed3-4c71-9d0e-97d0121d99a5
+langcode: de
+status: true
+dependencies: {  }
+name: Regionen
+vid: regions
+description: ''
+hierarchy: 0
+weight: 0

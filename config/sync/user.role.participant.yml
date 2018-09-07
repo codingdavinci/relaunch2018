@@ -1,0 +1,18 @@
+uuid: 48c09aed-5180-4743-aaf6-c860b2602627
+langcode: de
+status: true
+dependencies: {  }
+id: participant
+label: Teilnehmer
+weight: -8
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'access toolbar'
+  - 'create project content'
+  - 'delete own project content'
+  - 'edit own project content'
+  - 'use project transition create_new_draft'
+  - 'view own unpublished content'
+  - 'view project revisions'
+  - 'view the administration theme'

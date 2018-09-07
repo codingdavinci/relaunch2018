@@ -1,0 +1,47 @@
+<?php
+
+use Drupal\Core\Access\AccessResult;
+use Drupal\Core\Session\AccountInterface;
+use Drupal\node\NodeInterface;
+use Drupal\user\Entity\User;
+
+/**
+ * Implements hook_node_access().
+ */
+function access_privileges_node_access(NodeInterface $node, $op, AccountInterface $account) {
+
+  if (!$node->hasField('field_region')) {
+    // Node may not be not assigned to a particular region.
+    return AccessResult::neutral();
+  }
+
+  $regionValues = $node->get('field_region')->getValue();
+
+  if (count($regionValues) === 0) {
+    return AccessResult::forbidden(
+      'Node is not assigned to a particular region, but the user is.'
+    );
+  }
+
+  $regionTermIds = array_map(function($value) {
+    return $value['target_id'];
+  }, $regionValues);
+
+  $user = User::load($account->id());
+
+  $userRegionValues = $user->get('field_region')->getValue();
+
+  if (count($userRegionValues) === 0) {
+    // User is not limited to a particular region.
+    return AccessResult::neutral();
+  }
+
+  $userRegionTermIds = array_map(function($value) {
+    return $value['target_id'];
+  }, $userRegionValues);
+
+  return AccessResult::forbiddenIf(
+    !count(array_intersect($regionTermIds, $userRegionTermIds)),
+    'Node is assigned to a region the user is not assigned to.'
+  );
+}

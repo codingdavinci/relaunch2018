@@ -1,0 +1,17 @@
+uuid: bdb2c6bb-ef99-403c-9b80-717129908d99
+langcode: de
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Datensatz
+type: data_set
+description: 'Ein von einer Institution bereitgestellter Datensatz.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

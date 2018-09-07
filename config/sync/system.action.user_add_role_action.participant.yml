@@ -1,0 +1,14 @@
+uuid: aff8891f-2a9d-4523-996e-4ae5f89da6d4
+langcode: de
+status: true
+dependencies:
+  config:
+    - user.role.participant
+  module:
+    - user
+id: user_add_role_action.participant
+label: 'Den ausgewählten Benutzern die Rolle Teilnehmer zuweisen'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: participant

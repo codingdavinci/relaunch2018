@@ -1,0 +1,11 @@
+uuid: 5f2be8c5-80cc-4323-bea6-787b0d2a4418
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.data_set
+id: node.data_set
+target_entity_type_id: node
+target_bundle: data_set
+default_langcode: site_default
+language_alterable: false

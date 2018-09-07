@@ -1,11 +1,19 @@
-uuid: daf60075-11de-4725-b192-ca6c6618b520
-langcode: en
+uuid: 2482ec04-7630-4aec-b16b-616ae091b82e
+langcode: de
 status: true
 dependencies: {  }
 _core:
   default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
 id: authenticated
-label: 'Authenticated user'
-weight: 1
+label: 'Angemeldete Benutzer'
+weight: -9
 is_admin: false
-permissions: {  }
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access shortcuts'
+  - 'access site-wide contact form'
+  - 'post comments'
+  - 'search content'
+  - 'skip comment approval'
+  - 'use text format basic_html'

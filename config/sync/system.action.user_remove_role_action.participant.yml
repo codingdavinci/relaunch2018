@@ -1,0 +1,14 @@
+uuid: ef809324-c78d-45e2-b93b-830e525f0e24
+langcode: de
+status: true
+dependencies:
+  config:
+    - user.role.participant
+  module:
+    - user
+id: user_remove_role_action.participant
+label: 'Den ausgewählten Benutzern die Rolle Teilnehmer entziehen'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: participant

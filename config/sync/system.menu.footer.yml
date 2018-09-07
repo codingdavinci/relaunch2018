@@ -1,10 +1,10 @@
-uuid: 14d80c02-2cbb-4912-984e-f0509c567ed8
-langcode: en
+uuid: c0532b34-5ea2-4d5a-b114-d8dda367bf05
+langcode: de
 status: true
 dependencies: {  }
 _core:
   default_config_hash: 7yrlW5z9zdg2eBucB2GPqXKSMQfH9lSRSO4DbWF7AFc
 id: footer
-label: Footer
-description: 'Site information links'
+label: Fußzeile
+description: 'Links zu Website-Informationen'
 locked: true
