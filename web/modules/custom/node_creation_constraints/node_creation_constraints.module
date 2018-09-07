@@ -1,0 +1,43 @@
+<?php
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\user\Entity\User;
+
+/**
+ * Implements hook_form_alter().
+ */
+function node_creation_constraints_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+
+  if (!in_array('field_region', array_keys($form))) {
+    // No region to be set in this form.
+    return;
+  }
+
+  $user = User::load(Drupal::currentUser()->id());
+
+  $userRegionValues = $user->get('field_region')->getValue();
+
+  if (count($userRegionValues) === 0) {
+    // User is not limited to a particular region.
+    return;
+  }
+
+  // Disable or remove regions the user is not assigned to from form element
+  // options:
+
+  $userRegionTermIds = array_map(function($value) {
+    return $value['target_id'];
+  }, $userRegionValues);
+
+  $availableOptions = array_keys($form['field_region']['widget']['#options']);
+
+  foreach (array_diff($availableOptions, $userRegionTermIds) as $termId) {
+    if ($form['field_region']['widget']['#type'] === 'radios') {
+      $form['field_region']['widget'][$termId]['#disabled'] = true;
+    }
+    elseif ($form['field_region']['widget']['#type'] === 'select') {
+      unset($form['field_region']['widget']['#options'][$termId]);
+    }
+  }
+
+}

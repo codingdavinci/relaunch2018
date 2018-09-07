@@ -1,0 +1,6 @@
+name: Node Creation Contraints
+version: 0.1
+type: module
+description: "Constraints on forms, custom form building and handling."
+package: Custom
+core: 8.x
