@@ -75,6 +75,11 @@
                 ".editorconfig": "../.editorconfig",
                 ".gitattributes": "../.gitattributes"
             }
+        },
+        "patches": {
+            "drupal/config_installer": {
+                "Fixing RuntimeException during installation": "https://www.drupal.org/files/issues/2018-09-06/2991182-9.patch"
+            }
         }
     }
 }
