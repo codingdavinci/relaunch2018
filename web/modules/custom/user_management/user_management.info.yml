@@ -1,0 +1,6 @@
+name: User Management
+version: 0.1
+type: module
+description: "Custom user management."
+package: Custom
+core: 8.x
