@@ -1,0 +1,6 @@
+name: Assign Roles Privilege
+version: 0.1
+type: module
+description: "Assigns the privilege to manage users of specific roles."
+package: Custom
+core: 8.x

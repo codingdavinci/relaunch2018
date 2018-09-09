@@ -10,6 +10,8 @@ permissions:
   - 'access content overview'
   - 'access toolbar'
   - 'administer nodes'
+  - 'administer permissions'
+  - 'administer users'
   - 'bypass node access'
   - 'create article content'
   - 'create data_set content'

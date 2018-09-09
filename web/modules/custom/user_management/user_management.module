@@ -7,7 +7,7 @@ const USER_MANAGEMENT_DEFAULT_ROLE_ID = 'participant';
 const USER_MANAGEMENT_SELECTABLE_ROLE_IDS = ['institution', 'participant'];
 
 /**
- * Implements hook_form_BASE_FORM_ID_alter().
+ * Implements hook_form_FORM_ID_alter().
  */
 function user_management_form_user_register_form_alter(&$form, FormStateInterface $form_state, $form_id) {
 
@@ -30,7 +30,7 @@ function user_management_form_user_register_form_alter(&$form, FormStateInterfac
  * allowed to be set automatically.
  *
  * @param $form
- * @param \Drupal\Core\Form\FormStateInterface $form_state
+ * @param FormStateInterface $form_state
  */
 function _user_management_submit($form, FormStateInterface &$form_state) {
   $roleId = USER_MANAGEMENT_DEFAULT_ROLE_ID;

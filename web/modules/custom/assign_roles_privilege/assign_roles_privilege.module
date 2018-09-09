@@ -1,0 +1,183 @@
+<?php
+
+/**
+ * NOTE: This implementation is use-case specific. At least part of this
+ * functionality may be replaced by a contributed module in the future, in
+ * particular by "RoleAssign", "Role Delegation" or "Administer Users by Role".
+ * However, at the time of implementing this functionality, no flawless module
+ * having emerged alpha state was available.
+ * https://www.drupal.org/project/ideas/issues/2835087 may also be monitored.
+ */
+
+use Drupal\Core\Entity\EntityFormInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\user\Entity\User;
+use Drupal\user\UserInterface;
+use Drupal\views\Plugin\views\query\QueryPluginBase;
+use Drupal\views\Plugin\views\query\Sql;
+use Drupal\views\ViewExecutable;
+
+const ASSIGN_ROLES_PRIVILEGE_ROLE = 'event_manager';
+const ASSIGN_ROLES_PRIVILEGE_ASSIGNABLE_ROLES = ['institution', 'participant', 'event_manager'];
+const ASSIGN_ROLES_PRIVILEGE_PROTECTED_ROLES = ['administrator', 'founder'];
+
+/**
+ * Implements hook_form_alter().
+ */
+function assign_roles_privilege_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if ($form_id !== 'user_register_form' && $form_id !== 'user_form') {
+    return;
+  }
+
+  if (!_assign_roles_is_privileged_user()) {
+    // Fall back to system handling as this functionality is not intended to
+    // affect users of that role.
+    return;
+  }
+
+  /** @var EntityFormInterface $formObject */
+  $formObject = $form_state->getFormObject();
+
+  /** @var User $user */
+  $user = $formObject->getEntity();
+
+  if (_assign_roles_privilege_is_protected($user)) {
+    // User is not allowed to make changes to this user account.
+    $form['actions']['#disabled'] = true;
+    return;
+  }
+
+  $rolesField = array(
+    '#type' => 'checkboxes',
+    '#title' => t('Roles'),
+    '#options' => array_intersect_key(
+      user_role_names(true),
+      array_flip(ASSIGN_ROLES_PRIVILEGE_ASSIGNABLE_ROLES)
+    ),
+    '#default_value' => $user->isNew() ? [] : $user->getRoles(),
+  );
+
+  // Add the assign roles checkboxes to the user form and ensure that the notify
+  // user checkbox is displayed below.
+  if (isset($form['notify'])) {
+    $notifyField = $form['notify'];
+    unset($form['notify']);
+    $form['roles'] = $rolesField;
+    $form['notify'] = $notifyField;
+  }
+  else {
+    $form['roles'] = $rolesField;
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_presave().
+ */
+function assign_roles_privilege_user_presave(UserInterface $user) {
+  if (!_assign_roles_is_privileged_user()) {
+    // Fall back to system handling.
+    return;
+  }
+
+  /** @var User $user */
+  $newRoles = $user->getRoles();
+
+  // Revoke roles the operating user is not allowed to assign.
+  foreach ($newRoles as $newRole) {
+    if (!in_array($newRole, ASSIGN_ROLES_PRIVILEGE_ASSIGNABLE_ROLES)) {
+      if (($key = array_search($newRole, $newRoles)) !== false) {
+        unset($newRoles[$key]);
+      }
+    }
+  }
+
+  if (!$user->isNew()) {
+    $originalAccount = $user->original;
+    $originalRoles = $originalAccount->getRoles();
+
+    if (_assign_roles_privilege_is_protected($originalAccount)) {
+      // Actually, the user is not allowed to edit this account and somehow
+      // managed to circumvent edit blocking.
+      $user->roles = $originalRoles;
+      return;
+    }
+
+    // Get a list of unassignable roles and add them to the new account roles
+    // if they were assigned originally to the account and the operating user
+    // somehow is trying to unassign them.
+    foreach (_assign_roles_privilege_get_unassignable_roles() as $unassignableRole) {
+      if (in_array($unassignableRole, $originalRoles)) {
+        $newRoles[] = $unassignableRole;
+      }
+    }
+  }
+
+  $user->roles = $newRoles;
+}
+
+/**
+ * Implements hook_views_query_alter().
+ */
+function assign_roles_privilege_views_query_alter(ViewExecutable $view, QueryPluginBase $query) {
+  if (in_array(ASSIGN_ROLES_PRIVILEGE_ROLE, \Drupal::currentUser()->getRoles())) {
+    // In the listing of users, exclude user accounts with roles the user is not
+    // allowed to edit.
+    /** @var Sql $query */
+    $query->addWhereExpression(
+      0,
+      "users_field_data.uid NOT IN ("
+      . "SELECT entity_id FROM user__roles WHERE roles_target_id IN("
+      . "'" . implode("', '", ASSIGN_ROLES_PRIVILEGE_PROTECTED_ROLES) . "'"
+      . ")"
+      . ")"
+    );
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_predelete().
+ */
+function assign_roles_privilege_user_predelete(UserInterface $user) {
+  if (!_assign_roles_is_privileged_user()) {
+    // Fall back to system handling.
+    return;
+  }
+
+  if (_assign_roles_privilege_is_protected($user)) {
+    throw new Exception('No permission to delete this user.');
+  }
+}
+
+/**
+ * Returns whether the current user is the user privilege is assigned to.
+ *
+ * @return bool
+ */
+function _assign_roles_is_privileged_user() {
+  /** @var User $user */
+  $user = \Drupal::currentUser();
+  $roles = $user->getRoles();
+  return in_array(ASSIGN_ROLES_PRIVILEGE_ROLE, $roles)
+    && count(array_intersect(ASSIGN_ROLES_PRIVILEGE_PROTECTED_ROLES, $roles)) === 0;
+}
+
+/**
+ * Returns a list of roles ids that are not allowed to be assigned by the
+ * privileged user.
+ *
+ * @return string[]
+ */
+function _assign_roles_privilege_get_unassignable_roles() {
+  return array_diff(
+    array_keys(user_role_names(true)),
+    ASSIGN_ROLES_PRIVILEGE_ASSIGNABLE_ROLES
+  );
+}
+
+/**
+ * @param UserInterface $user
+ * @return bool
+ */
+function _assign_roles_privilege_is_protected(UserInterface $user) {
+  return count(array_intersect($user->getRoles(), ASSIGN_ROLES_PRIVILEGE_PROTECTED_ROLES)) > 0;
+}
