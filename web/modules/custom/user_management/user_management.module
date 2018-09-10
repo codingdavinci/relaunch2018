@@ -1,6 +1,7 @@
 <?php
 
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Session\AccountProxyInterface;
 use Drupal\user\Entity\User;
 
 const USER_MANAGEMENT_DEFAULT_ROLE_ID = 'participant';
@@ -10,6 +11,34 @@ const USER_MANAGEMENT_SELECTABLE_ROLE_IDS = ['institution', 'participant'];
  * Implements hook_form_FORM_ID_alter().
  */
 function user_management_form_user_register_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+
+  $currentUser = \Drupal::currentUser();
+  $roles = $currentUser->getRoles();
+
+  if (in_array('anonymous', $roles)) {
+    // Hide region field on the visitor's registration form.
+    $form['field_region']['#access'] = false;
+  }
+  else if (
+    !$currentUser->hasPermission('administer_permissions')
+    && in_array('event_manager', $roles)
+  ) {
+    // Limit event managers to only assign their respective region(s) to users
+    // they create.
+
+    $regionIds = _user_management_get_user_regions($currentUser);
+
+    $form['field_region']['widget']['#default_value'] = [];
+
+    foreach (array_keys($form['field_region']['widget']['#options']) as $termId) {
+      if (in_array($termId, $regionIds)) {
+        $form['field_region']['widget']['#default_value'][] = $termId;
+      }
+      else {
+        $form['field_region']['widget'][$termId]['#disabled'] = true;
+      }
+    }
+  }
 
   $role = \Drupal::request()->query->get('role');
 
@@ -21,6 +50,36 @@ function user_management_form_user_register_form_alter(&$form, FormStateInterfac
   }
 
   $form['actions']['submit']['#submit'][] = '_user_management_submit';
+}
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter().
+ */
+function user_management_form_user_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if ($form_id !== 'user_form') {
+    return;
+  }
+
+  $currentUser = \Drupal::currentUser();
+  $roles = $currentUser->getRoles();
+
+  if (
+    $currentUser->hasPermission('administer_permissions')
+    || !in_array('event_manager', $roles)
+  ) {
+    return;
+  }
+
+  // Limit event managers to only change their respective region(s) on existing
+  // users.
+
+  $regionIds = _user_management_get_user_regions($currentUser);
+
+  foreach (array_keys($form['field_region']['widget']['#options']) as $termId) {
+    if (!in_array($termId, $regionIds)) {
+      $form['field_region']['widget'][$termId]['#disabled'] = true;
+    }
+  }
 }
 
 /**
@@ -49,4 +108,15 @@ function _user_management_submit($form, FormStateInterface &$form_state) {
     $user->addRole($role->id());
     $user->save();
   }
+}
+
+/**
+ * @param AccountProxyInterface $user
+ * @return array
+ */
+function _user_management_get_user_regions(AccountProxyInterface $user) {
+  $user = User::load($user->id());
+  return array_map(function($value) {
+    return $value['target_id'];
+  }, $user->get('field_region')->getValue());
 }

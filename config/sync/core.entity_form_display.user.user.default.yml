@@ -19,13 +19,13 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_region:
-    weight: 3
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
     region: content
   language:
-    weight: 2
+    weight: 1
     region: content
     settings: {  }
     third_party_settings: {  }

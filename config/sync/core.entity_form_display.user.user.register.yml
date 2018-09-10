@@ -1,6 +1,6 @@
 uuid: 1c635b7c-97c6-4a5b-83e7-2eeb2027d8ee
 langcode: de
-status: true
+status: false
 dependencies:
   config:
     - core.entity_form_mode.user.register
@@ -20,7 +20,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   language:
-    weight: 2
+    weight: 1
     region: content
     settings: {  }
     third_party_settings: {  }
