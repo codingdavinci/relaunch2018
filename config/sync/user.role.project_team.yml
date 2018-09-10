@@ -2,8 +2,8 @@ uuid: 48c09aed-5180-4743-aaf6-c860b2602627
 langcode: de
 status: true
 dependencies: {  }
-id: participant
-label: Teilnehmer
+id: project_team
+label: 'Project Team'
 weight: -8
 is_admin: null
 permissions:

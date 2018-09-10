@@ -2,8 +2,8 @@ uuid: b6934100-52a1-4053-8e91-35dbeceeb057
 langcode: de
 status: true
 dependencies: {  }
-id: founder
-label: Gründer
+id: office
+label: Geschäftsstelle
 weight: -5
 is_admin: null
 permissions:

@@ -4,8 +4,8 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Session\AccountProxyInterface;
 use Drupal\user\Entity\User;
 
-const USER_MANAGEMENT_DEFAULT_ROLE_ID = 'participant';
-const USER_MANAGEMENT_SELECTABLE_ROLE_IDS = ['institution', 'participant'];
+const USER_MANAGEMENT_DEFAULT_ROLE_ID = 'project_team';
+const USER_MANAGEMENT_SELECTABLE_ROLE_IDS = ['institution', 'project_team'];
 
 /**
  * Implements hook_form_FORM_ID_alter().
@@ -21,9 +21,9 @@ function user_management_form_user_register_form_alter(&$form, FormStateInterfac
   }
   else if (
     !$currentUser->hasPermission('administer_permissions')
-    && in_array('event_manager', $roles)
+    && in_array('event_team', $roles)
   ) {
-    // Limit event managers to only assign their respective region(s) to users
+    // Limit Event Team to only assign their respective region(s) to users
     // they create.
 
     $regionIds = _user_management_get_user_regions($currentUser);
@@ -65,12 +65,12 @@ function user_management_form_user_form_alter(&$form, FormStateInterface $form_s
 
   if (
     $currentUser->hasPermission('administer_permissions')
-    || !in_array('event_manager', $roles)
+    || !in_array('event_team', $roles)
   ) {
     return;
   }
 
-  // Limit event managers to only change their respective region(s) on existing
+  // Limit Event Team to only change their respective region(s) on existing
   // users.
 
   $regionIds = _user_management_get_user_regions($currentUser);

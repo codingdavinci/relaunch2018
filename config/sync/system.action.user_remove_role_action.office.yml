@@ -3,12 +3,12 @@ langcode: de
 status: true
 dependencies:
   config:
-    - user.role.founder
+    - user.role.office
   module:
     - user
-id: user_remove_role_action.founder
-label: 'Den ausgewählten Benutzern die Rolle Founder entziehen'
+id: user_remove_role_action.office
+label: 'Den ausgewählten Benutzern die Rolle Geschäftsstelle entziehen'
 type: user
 plugin: user_remove_role_action
 configuration:
-  rid: founder
+  rid: office

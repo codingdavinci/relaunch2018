@@ -3,12 +3,12 @@ langcode: de
 status: true
 dependencies:
   config:
-    - user.role.event_manager
+    - user.role.event_team
   module:
     - user
-id: user_remove_role_action.event_manager
-label: 'Den ausgewählten Benutzern die Rolle Event Manager entziehen'
+id: user_remove_role_action.event_team
+label: 'Den ausgewählten Benutzern die Rolle Event Team entziehen'
 type: user
 plugin: user_remove_role_action
 configuration:
-  rid: event_manager
+  rid: event_team

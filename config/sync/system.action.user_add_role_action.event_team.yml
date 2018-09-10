@@ -3,12 +3,12 @@ langcode: de
 status: true
 dependencies:
   config:
-    - user.role.event_manager
+    - user.role.event_team
   module:
     - user
-id: user_add_role_action.event_manager
-label: 'Den ausgewählten Benutzern die Rolle Event Manager zuweisen'
+id: user_add_role_action.event_team
+label: 'Den ausgewählten Benutzern die Rolle Event Team zuweisen'
 type: user
 plugin: user_add_role_action
 configuration:
-  rid: event_manager
+  rid: event_team

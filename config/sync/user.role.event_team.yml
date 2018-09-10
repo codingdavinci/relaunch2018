@@ -2,8 +2,8 @@ uuid: be293925-2bdf-40de-8671-4bacd9da8cf8
 langcode: de
 status: true
 dependencies: {  }
-id: event_manager
-label: 'Event Manager'
+id: event_team
+label: 'Event Team'
 weight: -6
 is_admin: null
 permissions:

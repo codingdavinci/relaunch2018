@@ -3,12 +3,12 @@ langcode: de
 status: true
 dependencies:
   config:
-    - user.role.participant
+    - user.role.project_team
   module:
     - user
-id: user_add_role_action.participant
-label: 'Den ausgewählten Benutzern die Rolle Teilnehmer zuweisen'
+id: user_add_role_action.project_team
+label: 'Den ausgewählten Benutzern die Rolle Project Team zuweisen'
 type: user
 plugin: user_add_role_action
 configuration:
-  rid: participant
+  rid: project_team

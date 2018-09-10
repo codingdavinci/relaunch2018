@@ -17,9 +17,9 @@ use Drupal\views\Plugin\views\query\QueryPluginBase;
 use Drupal\views\Plugin\views\query\Sql;
 use Drupal\views\ViewExecutable;
 
-const ASSIGN_ROLES_PRIVILEGE_ROLE = 'event_manager';
-const ASSIGN_ROLES_PRIVILEGE_ASSIGNABLE_ROLES = ['institution', 'participant', 'event_manager'];
-const ASSIGN_ROLES_PRIVILEGE_PROTECTED_ROLES = ['administrator', 'founder'];
+const ASSIGN_ROLES_PRIVILEGE_ROLE = 'event_team';
+const ASSIGN_ROLES_PRIVILEGE_ASSIGNABLE_ROLES = ['institution', 'project_team', 'event_team'];
+const ASSIGN_ROLES_PRIVILEGE_PROTECTED_ROLES = ['administrator', 'office'];
 
 /**
  * Implements hook_form_alter().
