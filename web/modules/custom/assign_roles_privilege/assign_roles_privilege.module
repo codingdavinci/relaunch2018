@@ -71,6 +71,21 @@ function assign_roles_privilege_form_alter(&$form, FormStateInterface $form_stat
 }
 
 /**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function assign_roles_privilege_form_views_form_user_admin_people_page_1_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if (!_assign_roles_is_privileged_user()) {
+    return;
+  }
+
+  foreach (array_keys($form['header']['user_bulk_form']['action']['#options']) as $option) {
+    if (preg_match('/^user_(add|remove)_role_action\.[_0-9a-z]+$/', $option)) {
+      unset($form['header']['user_bulk_form']['action']['#options'][$option]);
+    }
+  };
+}
+
+/**
  * Implements hook_ENTITY_TYPE_presave().
  */
 function assign_roles_privilege_user_presave(UserInterface $user) {
@@ -119,6 +134,10 @@ function assign_roles_privilege_user_presave(UserInterface $user) {
  * Implements hook_views_query_alter().
  */
 function assign_roles_privilege_views_query_alter(ViewExecutable $view, QueryPluginBase $query) {
+  if ($view->id() !== 'user_admin_people') {
+    return;
+  }
+
   if (in_array(ASSIGN_ROLES_PRIVILEGE_ROLE, \Drupal::currentUser()->getRoles())) {
     // In the listing of users, exclude user accounts with roles the user is not
     // allowed to edit.
@@ -126,9 +145,8 @@ function assign_roles_privilege_views_query_alter(ViewExecutable $view, QueryPlu
     $query->addWhereExpression(
       0,
       "users_field_data.uid NOT IN ("
-      . "SELECT entity_id FROM user__roles WHERE roles_target_id IN("
-      . "'" . implode("', '", ASSIGN_ROLES_PRIVILEGE_PROTECTED_ROLES) . "'"
-      . ")"
+      . "SELECT entity_id FROM user__roles WHERE roles_target_id "
+      . "IN('" . implode("', '", ASSIGN_ROLES_PRIVILEGE_PROTECTED_ROLES) . "')"
       . ")"
     );
   }
