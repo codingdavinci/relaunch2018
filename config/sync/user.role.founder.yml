@@ -7,7 +7,9 @@ label: Gründer
 weight: -5
 is_admin: null
 permissions:
+  - 'access administration pages'
   - 'access content overview'
+  - 'access taxonomy overview'
   - 'access toolbar'
   - 'administer nodes'
   - 'administer permissions'
@@ -19,6 +21,8 @@ permissions:
   - 'create page content'
   - 'create project content'
   - 'create region content'
+  - 'create terms in founders'
+  - 'create terms in regions'
   - 'delete all revisions'
   - 'delete any article content'
   - 'delete any data_set content'
@@ -38,6 +42,8 @@ permissions:
   - 'delete page revisions'
   - 'delete project revisions'
   - 'delete region revisions'
+  - 'delete terms in founders'
+  - 'delete terms in regions'
   - 'edit any article content'
   - 'edit any data_set content'
   - 'edit any event content'
@@ -50,6 +56,8 @@ permissions:
   - 'edit own page content'
   - 'edit own project content'
   - 'edit own region content'
+  - 'edit terms in founders'
+  - 'edit terms in regions'
   - 'revert all revisions'
   - 'revert article revisions'
   - 'revert data_set revisions'
