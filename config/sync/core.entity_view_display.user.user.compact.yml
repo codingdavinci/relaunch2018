@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.user.compact
-    - field.field.user.user.field_region
   module:
     - user
 _core:
@@ -15,6 +14,5 @@ bundle: user
 mode: compact
 content: {  }
 hidden:
-  field_region: true
   langcode: true
   member_for: true

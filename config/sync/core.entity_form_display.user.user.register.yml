@@ -4,7 +4,6 @@ status: false
 dependencies:
   config:
     - core.entity_form_mode.user.register
-    - field.field.user.user.field_region
   module:
     - user
 _core:
@@ -26,6 +25,5 @@ content:
     third_party_settings: {  }
 hidden:
   contact: true
-  field_region: true
   langcode: true
   timezone: true

@@ -2,8 +2,6 @@ uuid: 7e5b63df-c4c9-4f62-a493-c4c787c93fe7
 langcode: de
 status: true
 dependencies:
-  config:
-    - field.field.user.user.field_region
   module:
     - user
 _core:
@@ -18,12 +16,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_region:
-    weight: 2
-    settings: {  }
-    third_party_settings: {  }
-    type: options_buttons
-    region: content
   language:
     weight: 1
     region: content

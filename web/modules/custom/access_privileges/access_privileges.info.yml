@@ -1,6 +1,0 @@
-name: Access Privileges
-version: 0.1
-type: module
-description: "Custom access privileges for the Coding Da Vince site."
-package: Custom
-core: 8.x
