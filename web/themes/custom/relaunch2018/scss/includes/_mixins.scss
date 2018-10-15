@@ -1,0 +1,13 @@
+@mixin easeOut {
+  transition: all .4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@mixin fadeInOut {
+  transition: opacity .4s ease-in-out;
+}
+
+@mixin md {
+  @media screen and (max-width: 720px) {
+    @content;
+  }
+}

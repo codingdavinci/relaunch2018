@@ -4,4 +4,10 @@ description: 'Theme for Coding Da Vinci.'
 core: 8.x
 libraries:
   - relaunch2018/global-css
+  - relaunch2018/global-js
 base theme: classy
+libraries-override:
+  classy/base:
+    css:
+      component:
+        css/components/menu.css: css/menu.css

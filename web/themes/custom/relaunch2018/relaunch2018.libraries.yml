@@ -4,3 +4,11 @@ global-css:
     theme:
       css/font-barlow.css: {}
       css/layout.css: {}
+      css/menu.css: {}
+
+global-js:
+  version: 1.x
+  js:
+    js/menu.js: {}
+  dependencies:
+    - core/jquery
