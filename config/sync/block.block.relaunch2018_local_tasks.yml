@@ -1,0 +1,22 @@
+uuid: 83336f5e-dcdc-473a-8c67-b366dde9d690
+langcode: de
+status: true
+dependencies:
+  theme:
+    - relaunch2018
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: relaunch2018_local_tasks
+theme: relaunch2018
+region: content
+weight: -40
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Reiter
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

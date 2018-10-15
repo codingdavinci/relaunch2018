@@ -1,0 +1,22 @@
+uuid: 38cdd9b4-ccfd-481e-90d1-efbe7a05a963
+langcode: de
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - relaunch2018
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: relaunch2018_breadcrumbs
+theme: relaunch2018
+region: header
+weight: -4
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Pfadnavigation
+  provider: system
+  label_display: '0'
+visibility: {  }

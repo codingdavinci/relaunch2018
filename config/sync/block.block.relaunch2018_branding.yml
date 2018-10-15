@@ -1,0 +1,25 @@
+uuid: 87598eae-2912-4258-8ee2-60aebd210bda
+langcode: de
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - relaunch2018
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: relaunch2018_branding
+theme: relaunch2018
+region: header
+weight: -6
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Branding der Website'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

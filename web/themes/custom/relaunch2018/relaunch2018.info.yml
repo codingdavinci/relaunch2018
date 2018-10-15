@@ -1,0 +1,5 @@
+name: Relaunch 2018
+type: theme
+description: 'Theme for Coding Da Vinci.'
+core: 8.x
+base theme: classy

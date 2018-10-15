@@ -1,0 +1,22 @@
+uuid: dce594c5-51d1-4a15-a0db-22ef90ff3bc1
+langcode: de
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - relaunch2018
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: relaunch2018_messages
+theme: relaunch2018
+region: header
+weight: -3
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Status-Nachrichten
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,20 @@
+uuid: c2977418-628e-4c8f-9458-8280e4584c7c
+langcode: de
+status: true
+dependencies:
+  theme:
+    - relaunch2018
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: relaunch2018_page_title
+theme: relaunch2018
+region: content
+weight: -50
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: Seitentitel
+  provider: core
+  label_display: '0'
+visibility: {  }

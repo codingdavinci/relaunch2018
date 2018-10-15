@@ -1,0 +1,22 @@
+uuid: 8c7b3f17-8ae9-4e9d-94c5-469352e60d87
+langcode: de
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - relaunch2018
+_core:
+  default_config_hash: jQQUUWN2Uxr5qZtc9zcJKBCxpKY8orN1u2HPqYYRQDI
+id: relaunch2018_powered
+theme: relaunch2018
+region: header
+weight: -1
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

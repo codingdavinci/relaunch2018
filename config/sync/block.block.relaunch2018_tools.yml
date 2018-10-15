@@ -1,0 +1,26 @@
+uuid: 3f9d8739-fd9e-4b3e-af61-8e7f20308103
+langcode: de
+status: false
+dependencies:
+  config:
+    - system.menu.tools
+  module:
+    - system
+  theme:
+    - relaunch2018
+_core:
+  default_config_hash: NeHSoqm4XFqA7_0bDmR429ZZQt3LRbZMNRJTMsFyOfI
+id: relaunch2018_tools
+theme: relaunch2018
+region: header
+weight: -2
+provider: null
+plugin: 'system_menu_block:tools'
+settings:
+  id: 'system_menu_block:tools'
+  label: Werkzeuge
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }
