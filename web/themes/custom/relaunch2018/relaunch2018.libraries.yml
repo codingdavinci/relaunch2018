@@ -1,0 +1,6 @@
+global-css:
+  version: 1.x
+  css:
+    theme:
+      css/font-barlow.css: {}
+      css/layout.css: {}
