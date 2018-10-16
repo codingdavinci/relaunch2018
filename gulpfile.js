@@ -4,7 +4,18 @@ var importOnce = require('node-sass-import-once');
 
 var root = 'web/themes/custom/relaunch2018/';
 
-gulp.task('sass', function() {
+gulp.task('copy', function() {
+  gulp.src(['node_modules/bootstrap/**/*'])
+  .pipe(gulp.dest('web/themes/custom/relaunch2018/lib/bootstrap'));
+
+  gulp.src(['node_modules/popper.js/**/*'])
+  .pipe(gulp.dest('web/themes/custom/relaunch2018/lib/popper.js'));
+
+  gulp.src(['node_modules/typeface-barlow/**/*'])
+  .pipe(gulp.dest('web/themes/custom/relaunch2018/lib/fonts/barlow'));
+});
+
+gulp.task('scss', function() {
   return gulp.src(root + 'scss/*.scss')
   .pipe(sass({
     importer: importOnce
@@ -12,9 +23,4 @@ gulp.task('sass', function() {
   .pipe(gulp.dest(root + 'css'))
 });
 
-gulp.task('copy', function() {
-  gulp.src(['node_modules/typeface-barlow/**/*'])
-  .pipe(gulp.dest('web/themes/custom/relaunch2018/lib/fonts/barlow'));
-});
-
-gulp.task('default', ['sass', 'copy']);
+gulp.task('default', ['copy', 'scss']);

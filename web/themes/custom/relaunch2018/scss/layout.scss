@@ -1,5 +1,6 @@
 @import 'includes/variables';
 @import 'includes/mixins';
+@import '../lib/bootstrap/scss/bootstrap-grid.scss';
 
 body {
   background-color: $color-gray-6;
