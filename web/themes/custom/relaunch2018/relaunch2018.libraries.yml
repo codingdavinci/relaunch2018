@@ -5,6 +5,8 @@ global-css:
       css/layout.css: {}
       css/menu.css: {}
       lib/fonts/barlow/index.css: {}
+  dependencies:
+    - relaunch2018/cdv-font
 
 global-js:
   version: 1.x
@@ -12,3 +14,9 @@ global-js:
     js/menu.js: {}
   dependencies:
     - core/jquery
+
+cdv-font:
+  version: 1.x
+  css:
+    theme:
+      includes/cdv_icons/css/cdv_icons.css: {}
