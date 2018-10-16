@@ -1,7 +1,73 @@
 @import 'includes/variables';
 @import 'includes/mixins';
-@import '../lib/bootstrap/scss/bootstrap-grid.scss';
+@import '../lib/bootstrap/scss/bootstrap';
 
 body {
   background-color: $color-gray-6;
+}
+
+footer {
+  background-color: $color-main;
+  color: $color-gray-2;
+  font-size: 1.1rem;
+  padding: 60px 0 40px 0;
+
+  em {
+    color: $color-white;
+    font-style: normal;
+  }
+
+  a {
+    color: $color-white;
+  }
+
+  .logos-container {
+    padding-top: 20px;
+
+    .d-table-cell {
+      padding: 0 15px;
+
+      &:first-child {
+        padding-left: 0;
+      }
+      &:last-child {
+        padding-right: 0;
+      }
+
+      img {
+        mix-blend-mode: multiply;
+        opacity: .6;
+      }
+    }
+  }
+
+  .field--name-field-textblock {
+    color: $color-white;
+    font-size: 1.0rem;
+
+    h3 {
+      font-size: 1.0rem;
+      font-weight: 600;
+    }
+
+    a {
+      font-weight: bold;
+    }
+
+    .icon-arrow {
+      &:before {
+        font-size: .7rem;
+        margin-right: .8rem;
+        text-decoration: none;
+      }
+    }
+
+    .icon-mail-1 {
+      &:before {
+        font-size: .7rem;
+        margin-right: .6rem;
+      }
+    }
+
+  }
 }

@@ -11,3 +11,5 @@ libraries-override:
     css:
       component:
         css/components/menu.css: css/menu.css
+ckeditor_stylesheets:
+  - includes/cdv_icons/css/cdv_icons.css

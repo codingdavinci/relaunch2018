@@ -1,0 +1,8 @@
+<?php
+
+/**
+ * Implements hook_preprocess().
+ */
+function relaunch2018_preprocess(&$vars) {
+  $vars['theme_path'] = base_path() . $vars['directory'];
+}

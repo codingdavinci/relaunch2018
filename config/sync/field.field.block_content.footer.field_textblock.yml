@@ -1,0 +1,21 @@
+uuid: 5cb963b3-d5b7-4b3f-9396-4d1231c53df0
+langcode: de
+status: true
+dependencies:
+  config:
+    - block_content.type.footer
+    - field.storage.block_content.field_textblock
+  module:
+    - text
+id: block_content.footer.field_textblock
+field_name: field_textblock
+entity_type: block_content
+bundle: footer
+label: 'Textblock (rechts)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

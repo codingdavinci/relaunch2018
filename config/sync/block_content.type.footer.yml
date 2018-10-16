@@ -1,0 +1,8 @@
+uuid: 6cf68b3e-c5cf-48d5-848a-435d0826045d
+langcode: de
+status: true
+dependencies: {  }
+id: footer
+label: Footer
+revision: 1
+description: 'Block mit allen Informationen für den Fußbereich der Seite,'

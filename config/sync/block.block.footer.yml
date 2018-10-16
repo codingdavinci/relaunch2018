@@ -1,0 +1,25 @@
+uuid: 47d45405-2fa2-4eeb-9b48-9e67b9cf3ac6
+langcode: de
+status: true
+dependencies:
+  content:
+    - 'block_content:footer:27c2c182-f477-435d-a043-d5ca9ece1dcb'
+  module:
+    - block_content
+  theme:
+    - relaunch2018
+id: footer
+theme: relaunch2018
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:27c2c182-f477-435d-a043-d5ca9ece1dcb'
+settings:
+  id: 'block_content:27c2c182-f477-435d-a043-d5ca9ece1dcb'
+  label: Footer
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

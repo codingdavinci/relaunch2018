@@ -1,0 +1,22 @@
+uuid: 150b9b9a-9f7b-4809-8708-568c8e6051e2
+langcode: de
+status: true
+dependencies:
+  config:
+    - block_content.type.footer
+    - field.storage.block_content.body
+  module:
+    - text
+id: block_content.footer.body
+field_name: body
+entity_type: block_content
+bundle: footer
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary
