@@ -12,4 +12,9 @@ gulp.task('sass', function() {
   .pipe(gulp.dest(root + 'css'))
 });
 
-gulp.task('default', ['sass']);
+gulp.task('copy', function() {
+  gulp.src(['node_modules/typeface-barlow/**/*'])
+  .pipe(gulp.dest('web/themes/custom/relaunch2018/lib/fonts/barlow'));
+});
+
+gulp.task('default', ['sass', 'copy']);

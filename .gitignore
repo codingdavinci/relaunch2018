@@ -25,3 +25,6 @@
 
 # Ignore files aggregated by npm
 /node_modules
+
+# Ignore files copied by Gulp
+/web/themes/custom/relaunch2018/lib
