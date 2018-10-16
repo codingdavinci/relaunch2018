@@ -11,7 +11,7 @@ gulp.task('copy', function() {
   gulp.src(['node_modules/popper.js/**/*'])
   .pipe(gulp.dest('web/themes/custom/relaunch2018/lib/popper.js'));
 
-  gulp.src(['node_modules/typeface-barlow/**/*'])
+  return gulp.src(['node_modules/typeface-barlow/**/*'])
   .pipe(gulp.dest('web/themes/custom/relaunch2018/lib/fonts/barlow'));
 });
 
@@ -23,4 +23,4 @@ gulp.task('scss', function() {
   .pipe(gulp.dest(root + 'css'))
 });
 
-gulp.task('default', ['copy', 'scss']);
+gulp.task('default', gulp.series('copy', 'scss'), function() {});
