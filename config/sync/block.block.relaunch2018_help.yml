@@ -1,6 +1,6 @@
 uuid: 99a16f42-e149-40ea-a51c-42059fc69313
 langcode: de
-status: true
+status: false
 dependencies:
   module:
     - help
@@ -10,8 +10,8 @@ _core:
   default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
 id: relaunch2018_help
 theme: relaunch2018
-region: content
-weight: -30
+region: sidebar_first
+weight: -6
 provider: null
 plugin: help_block
 settings:

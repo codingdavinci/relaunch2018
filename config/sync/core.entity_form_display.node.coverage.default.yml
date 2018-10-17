@@ -1,0 +1,53 @@
+uuid: c72a6562-0de5-447d-a17f-8b0933b3c17c
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.node.coverage.field_date
+    - field.field.node.coverage.field_link
+    - node.type.coverage
+  module:
+    - datetime
+    - link
+id: node.coverage.default
+targetEntityType: node
+bundle: coverage
+mode: default
+content:
+  field_date:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_link:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  moderation_state: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true

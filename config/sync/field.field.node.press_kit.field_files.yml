@@ -1,0 +1,27 @@
+uuid: 102f3604-fe96-4c0b-a791-85efe34a96ea
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_files
+    - node.type.press_kit
+  module:
+    - file
+id: node.press_kit.field_files
+field_name: field_files
+entity_type: node
+bundle: press_kit
+label: Dateien
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf zip png'
+  max_filesize: ''
+  description_field: true
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

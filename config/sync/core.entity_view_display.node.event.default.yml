@@ -4,9 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.node.event.body
-    - field.field.node.event.field_region
+    - field.field.node.event.field_range
     - node.type.event
   module:
+    - datetime_range
     - text
     - user
 id: node.event.default
@@ -26,13 +27,15 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_region:
-    weight: 102
+  field_range:
+    weight: 103
     label: above
     settings:
-      link: true
+      separator: '-'
+      format_type: medium
+      timezone_override: ''
     third_party_settings: {  }
-    type: entity_reference_label
+    type: daterange_default
     region: content
   links:
     weight: 100

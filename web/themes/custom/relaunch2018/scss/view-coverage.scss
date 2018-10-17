@@ -1,0 +1,27 @@
+@import 'includes/variables';
+@import '../lib/bootstrap/scss/bootstrap-grid';
+
+.view-coverage {
+  margin-bottom: $content-margin-bottom;
+
+  h3 {
+    color: $color-main;
+    margin-bottom: 1.75rem;
+  }
+
+  .item-list {
+    margin-bottom: 3rem;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  .views-field-field-date {
+    font-weight: 300;
+
+    @include media-breakpoint-up(sm) {
+      text-align: right;
+    }
+  }
+}

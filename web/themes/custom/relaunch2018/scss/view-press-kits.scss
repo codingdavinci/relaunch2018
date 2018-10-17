@@ -1,0 +1,30 @@
+@import 'includes/variables';
+@import '../lib/bootstrap/scss/bootstrap-grid';
+
+.view-press-kits {
+  font-weight: 300;
+  margin-bottom: $content-margin-bottom;
+
+  .card-columns {
+    column-count: 1;
+
+    .card {
+      display: inline-block;
+      margin-bottom: 40px;
+    }
+
+    @include media-breakpoint-up(md) {
+      column-count: 2;
+    }
+  }
+
+  h2 {
+    color: $color-deep-teal;
+    font-size: 1.2rem;
+    margin-bottom: 0;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}

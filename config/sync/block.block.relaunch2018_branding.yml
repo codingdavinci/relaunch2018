@@ -10,8 +10,8 @@ _core:
   default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
 id: relaunch2018_branding
 theme: relaunch2018
-region: header
-weight: -6
+region: sidebar_first
+weight: -3
 provider: null
 plugin: system_branding_block
 settings:

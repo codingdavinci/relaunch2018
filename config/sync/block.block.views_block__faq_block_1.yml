@@ -1,0 +1,30 @@
+uuid: 7ebf0844-2b8b-4a11-b7c9-4921b187de83
+langcode: de
+status: true
+dependencies:
+  config:
+    - views.view.faq
+  module:
+    - system
+    - views
+  theme:
+    - relaunch2018
+id: views_block__faq_block_1
+theme: relaunch2018
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:faq-block_1'
+settings:
+  id: 'views_block:faq-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /haeufig-gestellte-fragen
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,21 @@
+uuid: 691492e5-610e-46ef-9d88-1a1b8089e06a
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_range
+    - node.type.event
+  module:
+    - datetime_range
+id: node.event.field_range
+field_name: field_range
+entity_type: node
+bundle: event
+label: Zeitspanne
+description: 'Start- und Enddatum des Events.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: daterange

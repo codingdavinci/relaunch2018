@@ -4,10 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.node.event.body
-    - field.field.node.event.field_region
+    - field.field.node.event.field_range
     - node.type.event
   module:
     - content_moderation
+    - datetime_range
     - path
     - text
 id: node.event.default
@@ -30,11 +31,11 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_region:
-    weight: 122
+  field_range:
+    weight: 123
     settings: {  }
     third_party_settings: {  }
-    type: options_select
+    type: daterange_default
     region: content
   langcode:
     type: language_select

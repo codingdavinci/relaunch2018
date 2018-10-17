@@ -8,6 +8,9 @@ gulp.task('copy', function() {
   gulp.src(['node_modules/bootstrap/**/*'])
   .pipe(gulp.dest('web/themes/custom/relaunch2018/lib/bootstrap'));
 
+  gulp.src(['node_modules/jquery.easing/**/*'])
+  .pipe(gulp.dest('web/themes/custom/relaunch2018/lib/jquery.easing'));
+
   gulp.src(['node_modules/popper.js/**/*'])
   .pipe(gulp.dest('web/themes/custom/relaunch2018/lib/popper.js'));
 

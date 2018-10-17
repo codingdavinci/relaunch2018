@@ -1,0 +1,18 @@
+uuid: 368b9d30-c282-4d43-bdd1-51fc210e2aa3
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.coverage
+id: node.coverage.title
+field_name: title
+entity_type: node
+bundle: coverage
+label: Titel
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,22 @@
+uuid: 1dc54c47-5587-4316-9e11-8d52722d59e3
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.press_kit
+  module:
+    - text
+id: node.press_kit.body
+field_name: body
+entity_type: node
+bundle: press_kit
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

@@ -1,0 +1,9 @@
+uuid: 54485f43-55b4-4909-a2ac-fe7b9abb3f6b
+langcode: de
+status: true
+dependencies: {  }
+name: FAQ
+vid: faq
+description: 'Kategorien der FAQ.'
+hierarchy: 0
+weight: 0

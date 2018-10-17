@@ -1,0 +1,41 @@
+uuid: f0d8c334-4472-42d6-ad70-7a8376a90995
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.node.press_kit.body
+    - field.field.node.press_kit.field_event
+    - field.field.node.press_kit.field_files
+    - node.type.press_kit
+  module:
+    - file
+    - text
+    - user
+id: node.press_kit.default
+targetEntityType: node
+bundle: press_kit
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_files:
+    weight: 2
+    label: visually_hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_event: true
+  langcode: true

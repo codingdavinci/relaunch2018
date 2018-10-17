@@ -1,0 +1,21 @@
+uuid: dfa3aa71-6c97-422a-9df4-c5a84b9068a3
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date
+    - node.type.coverage
+  module:
+    - datetime
+id: node.coverage.field_date
+field_name: field_date
+entity_type: node
+bundle: coverage
+label: date
+description: 'Datum der Veröffentlichung'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

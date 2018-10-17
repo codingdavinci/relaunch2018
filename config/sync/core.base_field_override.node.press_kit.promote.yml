@@ -1,0 +1,22 @@
+uuid: 0084b683-41ab-4568-b738-572a1919bc12
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.press_kit
+id: node.press_kit.promote
+field_name: promote
+entity_type: node
+bundle: press_kit
+label: 'Auf der Startseite anzeigen'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: An
+  off_label: Aus
+field_type: boolean

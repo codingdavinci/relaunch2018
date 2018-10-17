@@ -1,6 +1,6 @@
 uuid: c2015d4a-1bea-4c4d-b784-011cae3c98d6
 langcode: de
-status: true
+status: false
 dependencies:
   theme:
     - relaunch2018
@@ -8,8 +8,8 @@ _core:
   default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
 id: relaunch2018_local_actions
 theme: relaunch2018
-region: content
-weight: -20
+region: sidebar_first
+weight: -5
 provider: null
 plugin: local_actions_block
 settings:

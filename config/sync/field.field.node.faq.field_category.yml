@@ -1,26 +1,26 @@
-uuid: a481260c-d962-4001-a17a-bb9c8ec93a62
+uuid: 49ed62ce-a804-4c92-b3d1-0593a9dae149
 langcode: de
 status: true
 dependencies:
   config:
-    - field.storage.node.field_region
-    - node.type.event
-    - taxonomy.vocabulary.regions
-id: node.event.field_region
-field_name: field_region
+    - field.storage.node.field_category
+    - node.type.faq
+    - taxonomy.vocabulary.faq
+id: node.faq.field_category
+field_name: field_category
 entity_type: node
-bundle: event
-label: Region
-description: 'Region, in der die Veranstaltung stattfindet.'
+bundle: faq
+label: Kategorie
+description: ''
 required: true
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      regions: regions
+      faq: faq
     sort:
       field: name
       direction: asc

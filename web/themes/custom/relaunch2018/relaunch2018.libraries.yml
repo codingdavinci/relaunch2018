@@ -4,19 +4,30 @@ global-css:
     theme:
       css/layout.css: {}
       css/menu.css: {}
+      css/styles.css: {}
+      css/view-coverage.css: {}
+      css/view-faq.css: {}
+      css/view-press-kits.css: {}
       lib/fonts/barlow/index.css: {}
   dependencies:
     - relaunch2018/cdv-font
+    - relaunch2018/jquery-easing
 
 global-js:
   version: 1.x
   js:
     js/menu.js: {}
+    js/view-faq.js: {}
   dependencies:
     - core/jquery
+    - relaunch2018/jquery-easing
 
 cdv-font:
   version: 1.x
   css:
     theme:
       includes/cdv_icons/css/cdv_icons.css: {}
+
+jquery-easing:
+  js:
+    lib/jquery.easing/jquery.easing.js: {}

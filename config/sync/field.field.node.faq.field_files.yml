@@ -1,0 +1,27 @@
+uuid: f507a135-0415-40e0-85e0-9d6a179f48d3
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_files
+    - node.type.faq
+  module:
+    - file
+id: node.faq.field_files
+field_name: field_files
+entity_type: node
+bundle: faq
+label: Dateien
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: pdf
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

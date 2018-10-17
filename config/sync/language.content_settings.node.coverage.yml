@@ -1,0 +1,11 @@
+uuid: 5482104e-e190-4fe6-bdbe-7458c263e06f
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.coverage
+id: node.coverage
+target_entity_type_id: node
+target_bundle: coverage
+default_langcode: site_default
+language_alterable: false

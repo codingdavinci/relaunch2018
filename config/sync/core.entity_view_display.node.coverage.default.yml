@@ -1,0 +1,45 @@
+uuid: 94139d4a-4bfb-4478-9bb6-becc15d5a8a0
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.node.coverage.field_date
+    - field.field.node.coverage.field_link
+    - node.type.coverage
+  module:
+    - datetime
+    - link
+    - user
+id: node.coverage.default
+targetEntityType: node
+bundle: coverage
+mode: default
+content:
+  field_date:
+    weight: 102
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_link:
+    weight: 103
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

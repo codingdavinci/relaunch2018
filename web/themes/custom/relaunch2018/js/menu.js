@@ -28,11 +28,11 @@
 
       if (!$menu.hasClass('active')) {
         $menu.addClass('active');
-        $burger.addClass('close');
+        $burger.addClass('menu--close');
         this._repositionSubMenu();
       } else {
         $menu.removeClass('active');
-        $burger.removeClass('close');
+        $burger.removeClass('menu--close');
       }
     },
 

@@ -1,0 +1,78 @@
+@import 'includes/variables';
+
+.view-faq {
+  font-size: 1.4rem;
+  margin-bottom: $content-margin-bottom;
+
+  .view-content {
+    ul {
+      list-style-type: none;
+
+      li {
+        margin: 0;
+      }
+    }
+
+    &>.item-list {
+      margin-bottom: 40px;
+
+      h3 {
+        border-top: 1px solid $color-red;
+        color: $color-red;
+        font-size: 1.1rem;
+        font-weight: 500;
+        padding-top: 4px;
+        text-align: right;
+        text-transform: uppercase;
+      }
+
+      ul {
+        li {
+          .views-field-title {
+            margin-bottom: 20px;
+
+            a {
+              color: $color-gray-2;
+              font-weight: 300;
+
+              &:active,
+              &:focus {
+                text-decoration: none;
+              }
+            }
+          }
+
+          .item-content {
+            display: none;
+            margin-bottom: 40px;
+
+            .views-field-body,
+            .views-field-field-files,
+            .views-field-field-links {
+              font-size: 1.1rem;
+              letter-spacing: 0.01em;
+
+              a {
+                color: $color-deep-teal;
+              }
+
+              .icon-arrow {
+                &:before {
+                  color: $color-gray-3;
+                }
+              }
+            }
+          }
+          &.active {
+            .views-field-title {
+              a {
+                color: $color-gray-1;
+                font-weight: 500;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

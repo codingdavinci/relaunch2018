@@ -10,8 +10,8 @@ _core:
   default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
 id: relaunch2018_messages
 theme: relaunch2018
-region: header
-weight: -3
+region: sidebar_first
+weight: 0
 provider: null
 plugin: system_messages_block
 settings:

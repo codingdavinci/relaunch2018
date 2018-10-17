@@ -10,8 +10,8 @@ _core:
   default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
 id: relaunch2018_breadcrumbs
 theme: relaunch2018
-region: header
-weight: -4
+region: sidebar_first
+weight: -1
 provider: null
 plugin: system_breadcrumb_block
 settings:

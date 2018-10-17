@@ -1,0 +1,11 @@
+uuid: 54513462-c9ce-400e-a43a-3e75af21c6dd
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.press_kit
+id: node.press_kit
+target_entity_type_id: node
+target_bundle: press_kit
+default_langcode: site_default
+language_alterable: false

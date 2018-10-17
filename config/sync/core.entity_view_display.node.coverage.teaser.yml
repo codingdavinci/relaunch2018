@@ -1,0 +1,25 @@
+uuid: 57c385c8-a647-4b87-b98d-f847c6fe29f2
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.coverage.field_date
+    - field.field.node.coverage.field_link
+    - node.type.coverage
+  module:
+    - user
+id: node.coverage.teaser
+targetEntityType: node
+bundle: coverage
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_date: true
+  field_link: true
+  langcode: true

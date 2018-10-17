@@ -1,0 +1,17 @@
+uuid: 97637014-831f-4b43-9378-35ca172f1134
+langcode: de
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Pressemappe
+type: press_kit
+description: 'Zusammenstellung von Pressematerial zu einer Veranstaltung.'
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

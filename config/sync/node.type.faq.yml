@@ -1,0 +1,17 @@
+uuid: 7230fd5e-1e1f-4ecc-a578-4c2f20a250e0
+langcode: de
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: FAQ
+type: faq
+description: 'Eintrag in den FAQ.'
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

@@ -1,0 +1,24 @@
+@import 'includes/variables';
+
+body {
+  color: $color-gray-3;
+  font-family: $font-family-base;
+  font-size: 1.2rem;
+}
+
+a {
+  color: $color-deep-blue;
+}
+
+span.icon-arrow {
+  &:before {
+    font-size: .7rem;
+    margin-right: 1rem;
+    vertical-align: middle;
+  }
+}
+
+.card {
+  background-color: transparent;
+  border: none;
+}
