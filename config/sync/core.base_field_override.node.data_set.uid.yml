@@ -1,0 +1,20 @@
+uuid: 3ed1f2c9-71cd-40b9-ba5b-edac7ca3f1db
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.data_set
+id: node.data_set.uid
+field_name: uid
+entity_type: node
+bundle: data_set
+label: 'Geschrieben von'
+description: 'Der Benutzername des Autors.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

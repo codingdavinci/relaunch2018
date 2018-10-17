@@ -1,0 +1,20 @@
+uuid: 50595c25-2fe9-4bf0-9a6a-046300c044b7
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.faq
+  module:
+    - path
+id: taxonomy_term.faq.path
+field_name: path
+entity_type: taxonomy_term
+bundle: faq
+label: URL-Alias
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

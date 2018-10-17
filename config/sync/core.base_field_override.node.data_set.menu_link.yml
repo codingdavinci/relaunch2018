@@ -1,0 +1,20 @@
+uuid: cc301fd3-8e66-46a2-8b76-73c0d4cd6413
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.data_set
+id: node.data_set.menu_link
+field_name: menu_link
+entity_type: node
+bundle: data_set
+label: Menü-Link
+description: 'Automatisch erstellter Menülink für den Beitrag (nur während des Speichervorgangs verfügbar).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

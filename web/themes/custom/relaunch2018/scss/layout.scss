@@ -6,6 +6,51 @@ body {
   background-color: $color-gray-6;
 }
 
+.region-content {
+  .language-switcher-language-url {
+    right: 30px;
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+}
+
+.language-switcher-language-url {
+  color: $color-gray-3;
+  font-size: 1rem;
+  position: absolute;
+  top: 25px;
+
+  .links {
+    padding-left: 0;
+
+    li {
+      display: inline;
+      margin-left: .3rem;
+
+      &:after {
+        content: '}';
+      }
+      &:before {
+        content: '{';
+      }
+
+      a {
+        color: $color-gray-2;
+      }
+
+      &.is-active {
+        font-weight: 600;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    font-size: 1.2rem;
+  }
+}
+
 footer {
   background-color: $color-main;
   color: $color-gray-2;

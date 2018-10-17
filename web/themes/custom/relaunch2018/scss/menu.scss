@@ -58,6 +58,14 @@
       font-weight: 500;
     }
 
+    .language-switcher-language-url {
+      left: 25px;
+
+      @include media-breakpoint-up(md) {
+        display: none;
+      }
+    }
+
     .menu--main {
       a {
         color: $color-deep-teal;

@@ -1,0 +1,18 @@
+uuid: cde42c6a-1fdc-45d6-8653-869082f20f34
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.faq
+id: taxonomy_term.faq.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: faq
+label: Geändert
+description: 'Der Zeitpunkt an dem der Begriff zuletzt bearbeitet wurde.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

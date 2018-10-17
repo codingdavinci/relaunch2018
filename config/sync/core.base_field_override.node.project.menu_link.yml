@@ -1,0 +1,20 @@
+uuid: 94661544-2980-4ef0-9bb7-0f671a01f893
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.project
+id: node.project.menu_link
+field_name: menu_link
+entity_type: node
+bundle: project
+label: Menü-Link
+description: 'Automatisch erstellter Menülink für den Beitrag (nur während des Speichervorgangs verfügbar).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

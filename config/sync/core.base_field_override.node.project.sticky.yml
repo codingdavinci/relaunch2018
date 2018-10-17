@@ -1,0 +1,22 @@
+uuid: 5050bead-8d86-4138-a98b-2043b2e25f6e
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.project
+id: node.project.sticky
+field_name: sticky
+entity_type: node
+bundle: project
+label: 'Oben in Listen'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: An
+  off_label: Aus
+field_type: boolean

@@ -1,0 +1,20 @@
+uuid: 2fb9d46f-2eae-4ce6-9e2d-032921cf7b27
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.founders
+  module:
+    - path
+id: taxonomy_term.founders.path
+field_name: path
+entity_type: taxonomy_term
+bundle: founders
+label: URL-Alias
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

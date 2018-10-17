@@ -1,0 +1,6 @@
+name: Language Switcher
+version: 0.1
+type: module
+description: "Customizes the language switcher."
+package: Custom
+core: 8.x

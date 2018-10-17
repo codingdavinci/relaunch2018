@@ -1,0 +1,20 @@
+uuid: 63d1fe4a-50d1-4781-a998-a0c016f7083e
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.project
+  module:
+    - path
+id: node.project.path
+field_name: path
+entity_type: node
+bundle: project
+label: URL-Alias
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

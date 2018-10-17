@@ -1,0 +1,20 @@
+uuid: 329284f1-5201-4b0b-a969-74f8e207781e
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.founders
+  module:
+    - text
+id: taxonomy_term.founders.description
+field_name: description
+entity_type: taxonomy_term
+bundle: founders
+label: Beschreibung
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

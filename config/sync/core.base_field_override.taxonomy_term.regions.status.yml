@@ -1,0 +1,22 @@
+uuid: 851eafc6-2f1a-42bf-ac04-9f5c4ae9b53f
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.regions
+id: taxonomy_term.regions.status
+field_name: status
+entity_type: taxonomy_term
+bundle: regions
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: An
+  off_label: Aus
+field_type: boolean

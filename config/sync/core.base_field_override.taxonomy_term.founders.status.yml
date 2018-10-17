@@ -1,0 +1,22 @@
+uuid: d1c1e731-f93e-4400-83ba-6cd1b726737b
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.founders
+id: taxonomy_term.founders.status
+field_name: status
+entity_type: taxonomy_term
+bundle: founders
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: An
+  off_label: Aus
+field_type: boolean

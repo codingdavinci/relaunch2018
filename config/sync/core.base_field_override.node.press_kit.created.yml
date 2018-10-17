@@ -1,0 +1,18 @@
+uuid: 1c44eb35-ca22-4fb0-b602-dbaf3c6e21ed
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.press_kit
+id: node.press_kit.created
+field_name: created
+entity_type: node
+bundle: press_kit
+label: 'Geschrieben am'
+description: 'Der Zeitpunkt an dem Beitrag geschrieben wurde.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

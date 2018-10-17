@@ -1,0 +1,18 @@
+uuid: 19eaa804-fb50-4260-8422-ec2e237cf0cb
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.press_kit
+id: node.press_kit.moderation_state
+field_name: moderation_state
+entity_type: node
+bundle: press_kit
+label: 'Moderation state'
+description: 'Der Moderationsstatus dieses Inhalts.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

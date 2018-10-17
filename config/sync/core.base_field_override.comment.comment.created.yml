@@ -1,0 +1,18 @@
+uuid: 3003745f-8402-4a0a-83ba-d1b5195b640c
+langcode: de
+status: true
+dependencies:
+  config:
+    - comment.type.comment
+id: comment.comment.created
+field_name: created
+entity_type: comment
+bundle: comment
+label: Erstellt
+description: 'Der Zeitpunkt, zu dem der Kommentar erstellt wurde.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

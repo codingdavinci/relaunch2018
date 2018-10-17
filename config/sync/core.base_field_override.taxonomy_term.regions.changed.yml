@@ -1,0 +1,18 @@
+uuid: 2c2a7706-84c1-4fc6-ad5a-476f4df8fe96
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.regions
+id: taxonomy_term.regions.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: regions
+label: Geändert
+description: 'Der Zeitpunkt an dem der Begriff zuletzt bearbeitet wurde.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

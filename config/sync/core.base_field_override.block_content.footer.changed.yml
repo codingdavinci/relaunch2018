@@ -1,0 +1,18 @@
+uuid: cf32e931-cc20-46e6-a8e8-92a583da3692
+langcode: de
+status: true
+dependencies:
+  config:
+    - block_content.type.footer
+id: block_content.footer.changed
+field_name: changed
+entity_type: block_content
+bundle: footer
+label: Geändert
+description: 'Der Zeitpunkt zu dem der benutzerdefinierte Block zuletzt bearbeitet wurde.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

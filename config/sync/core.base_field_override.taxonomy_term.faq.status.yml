@@ -1,0 +1,22 @@
+uuid: 152bd107-c049-4f3f-a9a9-3f35a22ce3e0
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.faq
+id: taxonomy_term.faq.status
+field_name: status
+entity_type: taxonomy_term
+bundle: faq
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: An
+  off_label: Aus
+field_type: boolean

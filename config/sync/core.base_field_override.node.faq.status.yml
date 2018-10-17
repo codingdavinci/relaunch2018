@@ -1,0 +1,22 @@
+uuid: c73a1ef3-dd04-4a8b-b8ea-85b6bf0f482f
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.faq
+id: node.faq.status
+field_name: status
+entity_type: node
+bundle: faq
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: An
+  off_label: Aus
+field_type: boolean

@@ -1,0 +1,22 @@
+uuid: 27df6970-8ba4-4f55-931b-5203dedd4238
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.press_kit
+id: node.press_kit.status
+field_name: status
+entity_type: node
+bundle: press_kit
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: An
+  off_label: Aus
+field_type: boolean

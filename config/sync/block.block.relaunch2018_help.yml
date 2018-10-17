@@ -11,7 +11,7 @@ _core:
 id: relaunch2018_help
 theme: relaunch2018
 region: sidebar_first
-weight: -6
+weight: -9
 provider: null
 plugin: help_block
 settings:

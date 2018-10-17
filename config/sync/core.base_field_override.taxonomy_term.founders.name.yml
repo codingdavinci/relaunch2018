@@ -1,0 +1,18 @@
+uuid: d5eb9893-7a31-46cf-83d6-ee153c846ea2
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.founders
+id: taxonomy_term.founders.name
+field_name: name
+entity_type: taxonomy_term
+bundle: founders
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,20 @@
+uuid: dfae2377-c3a1-4519-9b72-5f84d1e88fe2
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.faq
+  module:
+    - text
+id: taxonomy_term.faq.description
+field_name: description
+entity_type: taxonomy_term
+bundle: faq
+label: Beschreibung
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

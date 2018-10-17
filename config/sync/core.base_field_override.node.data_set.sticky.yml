@@ -1,0 +1,22 @@
+uuid: f6e4c3c4-c064-4855-8f0c-553a89a75035
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.data_set
+id: node.data_set.sticky
+field_name: sticky
+entity_type: node
+bundle: data_set
+label: 'Oben in Listen'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: An
+  off_label: Aus
+field_type: boolean

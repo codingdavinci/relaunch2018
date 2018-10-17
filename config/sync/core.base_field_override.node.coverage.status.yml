@@ -1,0 +1,22 @@
+uuid: e4389ef2-cccb-4c6d-979c-7318f0fc890d
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.coverage
+id: node.coverage.status
+field_name: status
+entity_type: node
+bundle: coverage
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: An
+  off_label: Aus
+field_type: boolean

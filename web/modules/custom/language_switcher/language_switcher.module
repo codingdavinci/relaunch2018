@@ -1,0 +1,50 @@
+<?php
+
+use Drupal\Core\Entity\ContentEntityInterface;
+
+const LANGUAGE_SWITCHER_LANGUAGES = [
+  'English' => 'EN',
+  'German' => 'DE',
+];
+
+/**
+ * Implements hook_language_switch_links_alter().
+ *
+ * @param array $links
+ */
+function language_switcher_language_switch_links_alter(array &$links) {
+  if ($entity = _language_switcher_get_page_entity()) {
+
+    foreach ($links as $langCode => &$link) {
+      if (in_array($link['title'], LANGUAGE_SWITCHER_LANGUAGES)) {
+        $link['title'] = LANGUAGE_SWITCHER_LANGUAGES[$link['title']];
+      }
+
+      try {
+        if (!$entity->getTranslation($langCode)->access('view')) {
+          // Content is not accessible (e.g. not published)
+          unset($link['url']);
+        }
+      }
+      catch (\InvalidArgumentException $e) {
+        // Content is not translated.
+        unset($link['url']);
+      }
+    }
+  }
+
+}
+
+/**
+ * Retrieves the current page entity.
+ *
+ * @return Drupal\Core\Entity\ContentEntityInterface|FALSE
+ */
+function _language_switcher_get_page_entity() {
+  $params = \Drupal::routeMatch()->getParameters()->all();
+  $entity = reset($params);
+  if ($entity instanceof ContentEntityInterface) {
+    return $entity;
+  }
+  return FALSE;
+}

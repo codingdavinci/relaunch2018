@@ -1,0 +1,18 @@
+uuid: 11f3eadd-b7dc-4e5b-96fb-0d7167b81acc
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.faq
+id: node.faq.changed
+field_name: changed
+entity_type: node
+bundle: faq
+label: Geändert
+description: 'Zeitpunkt, zu dem der Beitrag zuletzt bearbeitet wurde.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

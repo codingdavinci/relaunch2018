@@ -1,0 +1,20 @@
+uuid: 2565f44a-7bb8-44e0-9ca8-77c68224cf22
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.press_kit
+  module:
+    - path
+id: node.press_kit.path
+field_name: path
+entity_type: node
+bundle: press_kit
+label: URL-Alias
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

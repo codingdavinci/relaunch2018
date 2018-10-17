@@ -1,0 +1,22 @@
+uuid: b28d8947-4873-4328-a57c-a7b54432091c
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.data_set
+id: node.data_set.status
+field_name: status
+entity_type: node
+bundle: data_set
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: An
+  off_label: Aus
+field_type: boolean

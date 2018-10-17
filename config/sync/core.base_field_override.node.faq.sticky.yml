@@ -1,0 +1,22 @@
+uuid: d6aa2c09-1b1f-4d80-b05e-c3a7c0997f50
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.faq
+id: node.faq.sticky
+field_name: sticky
+entity_type: node
+bundle: faq
+label: 'Oben in Listen'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: An
+  off_label: Aus
+field_type: boolean

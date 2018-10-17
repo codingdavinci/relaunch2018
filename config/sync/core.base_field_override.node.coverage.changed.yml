@@ -1,0 +1,18 @@
+uuid: f9af2961-4bc2-48d2-93ad-6efbafb78b7f
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.coverage
+id: node.coverage.changed
+field_name: changed
+entity_type: node
+bundle: coverage
+label: Geändert
+description: 'Zeitpunkt, zu dem der Beitrag zuletzt bearbeitet wurde.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

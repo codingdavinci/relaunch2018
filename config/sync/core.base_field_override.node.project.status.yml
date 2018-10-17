@@ -1,0 +1,22 @@
+uuid: fab60b7f-278c-43e4-a0c5-a93dee0be4a4
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.project
+id: node.project.status
+field_name: status
+entity_type: node
+bundle: project
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: An
+  off_label: Aus
+field_type: boolean

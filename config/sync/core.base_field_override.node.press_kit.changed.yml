@@ -1,0 +1,18 @@
+uuid: 46e7c8bc-0f4c-4ae8-b86b-ce99cf667970
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.press_kit
+id: node.press_kit.changed
+field_name: changed
+entity_type: node
+bundle: press_kit
+label: Geändert
+description: 'Zeitpunkt, zu dem der Beitrag zuletzt bearbeitet wurde.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

@@ -1,0 +1,20 @@
+uuid: ad84d2e3-264d-4554-9b00-a5888444ffd4
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.coverage
+id: node.coverage.uid
+field_name: uid
+entity_type: node
+bundle: coverage
+label: 'Geschrieben von'
+description: 'Der Benutzername des Autors.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

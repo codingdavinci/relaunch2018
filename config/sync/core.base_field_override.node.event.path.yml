@@ -1,0 +1,20 @@
+uuid: 6ac09e15-56aa-4fdf-8d62-6ec44b96de2a
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.event
+  module:
+    - path
+id: node.event.path
+field_name: path
+entity_type: node
+bundle: event
+label: URL-Alias
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

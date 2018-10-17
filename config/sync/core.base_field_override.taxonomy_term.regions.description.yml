@@ -1,0 +1,20 @@
+uuid: b40b25a5-b84a-4b39-939a-0e7ad16fd493
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.regions
+  module:
+    - text
+id: taxonomy_term.regions.description
+field_name: description
+entity_type: taxonomy_term
+bundle: regions
+label: Beschreibung
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

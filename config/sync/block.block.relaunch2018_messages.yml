@@ -1,6 +1,6 @@
 uuid: dce594c5-51d1-4a15-a0db-22ef90ff3bc1
 langcode: de
-status: false
+status: true
 dependencies:
   module:
     - system
@@ -10,8 +10,8 @@ _core:
   default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
 id: relaunch2018_messages
 theme: relaunch2018
-region: sidebar_first
-weight: 0
+region: highlighted
+weight: -7
 provider: null
 plugin: system_messages_block
 settings:

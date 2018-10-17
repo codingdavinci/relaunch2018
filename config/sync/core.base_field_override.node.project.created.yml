@@ -1,0 +1,18 @@
+uuid: 94ed9199-67aa-49e4-98cd-775f86065eec
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.project
+id: node.project.created
+field_name: created
+entity_type: node
+bundle: project
+label: 'Geschrieben am'
+description: 'Der Zeitpunkt an dem Beitrag geschrieben wurde.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

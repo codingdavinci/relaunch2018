@@ -1,0 +1,20 @@
+uuid: 1cc50aec-aa68-40c6-a560-0f16d2f9bf37
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.event
+id: node.event.uid
+field_name: uid
+entity_type: node
+bundle: event
+label: 'Geschrieben von'
+description: 'Der Benutzername des Autors.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

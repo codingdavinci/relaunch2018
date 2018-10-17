@@ -1,0 +1,18 @@
+uuid: fc85649f-2ad1-4171-a7c0-69bbe10fdec8
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.data_set
+id: node.data_set.created
+field_name: created
+entity_type: node
+bundle: data_set
+label: 'Geschrieben am'
+description: 'Der Zeitpunkt an dem Beitrag geschrieben wurde.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

@@ -1,0 +1,22 @@
+uuid: 9051de0e-f343-446f-883e-2d6afa2098a4
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.coverage
+id: node.coverage.sticky
+field_name: sticky
+entity_type: node
+bundle: coverage
+label: 'Oben in Listen'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: An
+  off_label: Aus
+field_type: boolean

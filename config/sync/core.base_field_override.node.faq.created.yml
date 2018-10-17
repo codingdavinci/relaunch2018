@@ -1,0 +1,18 @@
+uuid: 2e537671-5eb0-452f-9f5c-090ced9323af
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.faq
+id: node.faq.created
+field_name: created
+entity_type: node
+bundle: faq
+label: 'Geschrieben am'
+description: 'Der Zeitpunkt an dem Beitrag geschrieben wurde.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created
