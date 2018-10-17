@@ -1,5 +1,6 @@
 @import 'includes/variables';
 @import 'includes/mixins';
+@import '../lib/bootstrap/scss/bootstrap-grid';
 
 .region-primary-menu {
   color: $color-white;
@@ -53,6 +54,10 @@
     transform: translate3d(-100%, 0, 0);
     @include easeOut;
 
+    @include media-breakpoint-down(sm) {
+      font-weight: 500;
+    }
+
     .menu--main {
       a {
         color: $color-deep-teal;
@@ -74,8 +79,20 @@
           transform: translate3d(500px, 0, 0);
           @include easeOut;
 
+          &.active {
+            @include media-breakpoint-up(md) {
+              background: linear-gradient(
+                180deg, rgba(0,0,0,0) calc(55% - 3px),
+                $color-deep-teal calc(55%),
+                rgba(0,0,0,0) calc(55% + 3px)
+              );
+            }
+          }
+
           a {
+            background-color: $color-red-3;
             display: inline-block;
+            padding-right: 1rem;
             position: relative;
             @include easeOut;
 
@@ -107,10 +124,18 @@
         }
       }
 
-    }
+      .menu--main--submenu {
+        display: inline-block;
+        font-weight: 400;
+        @include easeOut;
 
-    #block-relaunch2018-main-menu-2 {
-      font-weight: 400;
+        .menu {
+          .menu-item {
+            @include easeOut;
+          }
+        }
+      }
+
     }
 
     .menu--account {

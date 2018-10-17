@@ -5,16 +5,31 @@
     var self = this;
     var $context = $('.region-primary-menu');
     var $burger = $context.find('.burger');
+    var $mainMenu = $context.find('.menu--main');
+    var $subMenu = $context.find('.menu--main--submenu');
 
     $burger.on('click', function() {
       self._changeState($context);
     });
 
+    $mainMenu.find('a').on('click', function(e) {
+      var $a = $(e.target);
+      var $item = $a.closest('.menu-item');
+      var subMenuHtml = $item.data('submenu');
+
+      $mainMenu.find('.active').removeClass('active');
+      $item.addClass('active');
+
+      if (subMenuHtml) {
+        $subMenu.empty().append(subMenuHtml).data('menu-parent', $item).addClass('active');
+        self._repositionSubMenu();
+        return false;
+      }
+    });
+
     $(window).on('resize', function() {
       self._repositionSubMenu();
     });
-
-    this._repositionSubMenu();
   };
 
   $.extend(MainMenu.prototype, {
@@ -42,11 +57,14 @@
      */
     _repositionSubMenu: function() {
       var $mainMenu = $('.menu--main');
-      if ($mainMenu.length > 1) {
-        var $activeItem = $mainMenu.first().find('.menu-item--active-trail');
-        if ($activeItem) {
-          $mainMenu.last().css('marginTop', $activeItem.offset().top + 'px');
-        }
+      var $subMenu = $mainMenu.find('.menu--main--submenu');
+      var $parent = $subMenu.data('menu-parent');
+
+      if ($parent) {
+        $subMenu.css(
+          'marginTop',
+          $parent.offset().top - $mainMenu.offset().top + 'px'
+        );
       }
     }
 
