@@ -9,8 +9,10 @@
     "typeface-barlow": "*"
   },
   "devDependencies": {
+    "del": "^3.0.0",
     "gulp": "^4.0.0",
     "gulp-sass": "^4.0.0",
+    "merge-stream": "^1.0.1",
     "node-sass-import-once": "^1.2.0"
   }
 }
