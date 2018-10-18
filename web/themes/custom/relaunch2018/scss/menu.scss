@@ -67,6 +67,8 @@
     }
 
     .menu--main {
+      margin-top: 8rem;
+
       a {
         color: $color-deep-teal;
         text-decoration: none;
@@ -181,10 +183,6 @@
     &.active {
       transform: translate3d(0, 0, 0);
       visibility: visible;
-
-      .menu--main {
-        margin-top: 8rem;
-      }
 
       .menu--account {
         opacity: 1;

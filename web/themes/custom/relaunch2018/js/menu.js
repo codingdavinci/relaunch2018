@@ -1,30 +1,38 @@
-(function($, window) {
+(function($, Hammer, window) {
   'use strict';
 
   var MainMenu = function() {
     var self = this;
     var $context = $('.region-primary-menu');
-    var $burger = $context.find('.burger');
-    var $mainMenu = $context.find('.menu--main');
-    var $subMenu = $context.find('.menu--main--submenu');
+    this.$burger = $context.find('.burger');
+    this.$menuContainer = $context.find('.menu--container');
+    this.$mainMenu = $context.find('.menu--main');
+    this.$subMenu = $context.find('.menu--main--submenu');
 
-    $burger.on('click', function() {
+    this.$burger.on('click', function() {
       self._changeState($context);
     });
 
-    $mainMenu.find('a').on('click', function(e) {
+    this.$mainMenu.find('a').on('click', function(e) {
       var $a = $(e.target);
       var $item = $a.closest('.menu-item');
       var subMenuHtml = $item.data('submenu');
 
-      $mainMenu.find('.active').removeClass('active');
+      self.$mainMenu.find('.active').removeClass('active');
       $item.addClass('active');
 
       if (subMenuHtml) {
-        $subMenu.empty().append(subMenuHtml).data('menu-parent', $item).addClass('active');
+        self.$subMenu.empty().append(subMenuHtml)
+        .data('menu-parent', $item)
+        .addClass('active');
+
         self._repositionSubMenu();
         return false;
       }
+    });
+
+    (new Hammer(this.$menuContainer.get(0))).on('panleft', function() {
+      self._changeState($context);
     });
 
     $(window).on('resize', function() {
@@ -33,21 +41,50 @@
   };
 
   $.extend(MainMenu.prototype, {
+    /**
+     * @type {jQuery}
+     */
+    $burger: undefined,
+
+    /**
+     * @type {jQuery}
+     */
+    $menuContainer: undefined,
+
+    /**
+     * @type {jQuery}
+     */
+    $mainMenu: undefined,
+
+    /**
+     * @type {jQuery}
+     */
+    $subMenu: undefined,
 
     /**
      * @param {jQuery} $context
      */
     _changeState: function($context) {
-      var $burger = $context.find('.burger');
-      var $menu = $context.find('.menu--container');
+      var self = this;
 
-      if (!$menu.hasClass('active')) {
-        $menu.addClass('active');
-        $burger.addClass('menu--close');
+      if (!this.$menuContainer.hasClass('active')) {
+        this.$menuContainer.addClass('active');
+        this.$burger.addClass('menu--close');
         this._repositionSubMenu();
+
+        $(window).on('click.menu', function(e) {
+          var $target = $(e.target);
+          if (
+            !$target.closest(self.$burger).length
+            && !$target.closest(self.$menuContainer).length
+          ) {
+            self._changeState($context);
+          }
+        });
       } else {
-        $menu.removeClass('active');
-        $burger.removeClass('menu--close');
+        this.$menuContainer.removeClass('active');
+        this.$burger.removeClass('menu--close');
+        $(window).off('.menu');
       }
     },
 
@@ -56,14 +93,12 @@
      * main menu.
      */
     _repositionSubMenu: function() {
-      var $mainMenu = $('.menu--main');
-      var $subMenu = $mainMenu.find('.menu--main--submenu');
-      var $parent = $subMenu.data('menu-parent');
+      var $parent = this.$subMenu.data('menu-parent');
 
       if ($parent) {
-        $subMenu.css(
+        this.$subMenu.css(
           'marginTop',
-          $parent.offset().top - $mainMenu.offset().top + 'px'
+          $parent.offset().top - this.$mainMenu.offset().top + 'px'
         );
       }
     }
@@ -72,4 +107,4 @@
 
   new MainMenu();
 
-}(jQuery, window));
+}(jQuery, Hammer, window));

@@ -11,6 +11,7 @@ global-css:
       lib/fonts/barlow/index.css: {}
   dependencies:
     - relaunch2018/cdv-font
+    - relaunch2018/hammerjs
     - relaunch2018/jquery-easing
 
 global-js:
@@ -27,6 +28,10 @@ cdv-font:
   css:
     theme:
       includes/cdv_icons/css/cdv_icons.css: {}
+
+hammerjs:
+  js:
+    lib/hammerjs/hammer.js: {}
 
 jquery-easing:
   js:
