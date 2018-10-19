@@ -18,6 +18,14 @@ span.icon-arrow {
   }
 }
 
+.icon-mail-1 {
+  &:before {
+    font-size: .9rem;
+    margin-right: .6rem !important;
+    vertical-align: .05rem;
+  }
+}
+
 .card {
   background-color: transparent;
   border: none;
