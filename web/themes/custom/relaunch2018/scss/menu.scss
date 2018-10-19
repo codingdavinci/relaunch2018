@@ -38,6 +38,10 @@
           content: 'X';
         }
       }
+      
+      @include media-breakpoint-down(md) {
+        display: none;
+      }
     }
   }
 
