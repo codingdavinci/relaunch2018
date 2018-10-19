@@ -64,6 +64,10 @@ footer {
 
   a {
     color: $color-white;
+
+    &:hover {
+      color: $color-white;
+    }
   }
 
   .logos-container {
