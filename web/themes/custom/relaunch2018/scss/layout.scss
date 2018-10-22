@@ -2,10 +2,6 @@
 @import 'includes/mixins';
 @import '../lib/bootstrap/scss/bootstrap';
 
-body {
-  background-color: $color-gray-6;
-}
-
 .region-content {
   .language-switcher-language-url {
     right: 30px;
@@ -84,6 +80,7 @@ footer {
     font-size: 1.0rem;
 
     h3 {
+      color: $color-white;
       font-size: 1.0rem;
       font-weight: 600;
     }
