@@ -18,7 +18,7 @@ body {
 
 .language-switcher-language-url {
   color: $color-gray-3;
-  font-size: 1rem;
+  font-size: calc(12px + .5vw);
   position: absolute;
   top: 25px;
 
