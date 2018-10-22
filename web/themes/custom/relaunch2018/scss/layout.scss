@@ -73,20 +73,9 @@ footer {
   .logos-container {
     padding-top: 20px;
 
-    .d-table-cell {
-      padding: 0 15px;
-
-      &:first-child {
-        padding-left: 0;
-      }
-      &:last-child {
-        padding-right: 0;
-      }
-
-      img {
-        mix-blend-mode: multiply;
-        opacity: .6;
-      }
+    img {
+      mix-blend-mode: multiply;
+      opacity: .6;
     }
   }
 
