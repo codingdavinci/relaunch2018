@@ -13,7 +13,7 @@
 }
 
 .language-switcher-language-url {
-  color: $color-gray-3;
+  color: rgba($color-white, .25);
   font-size: calc(12px + .5vw);
   position: absolute;
   top: 25px;
@@ -33,11 +33,17 @@
       }
 
       a {
-        color: $color-gray-2;
+        color: rgba($color-white, .5);
       }
 
       &.is-active {
+        color: $color-white;
         font-weight: 600;
+
+        a {
+          color: $color-white;
+          font-weight: 600;
+        }
       }
     }
   }
