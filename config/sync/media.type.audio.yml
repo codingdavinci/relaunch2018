@@ -1,0 +1,15 @@
+uuid: f0b73017-2fef-4637-b0b9-2d72cb56e9b1
+langcode: de
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: RQ75tMARZvKiI0hge9SKZpZFi-dOzZyq0nlouHHBeLM
+id: audio
+label: Audio
+description: 'Eine Audiodatei hochladen.'
+source: audio_file
+queue_thumbnail_downloads: false
+new_revision: true
+source_configuration:
+  source_field: field_media_audio_file
+field_map: {  }

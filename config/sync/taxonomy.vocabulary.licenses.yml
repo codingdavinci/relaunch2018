@@ -1,0 +1,9 @@
+uuid: da8c5e81-bb77-4fa7-a2b6-d14c90539257
+langcode: de
+status: true
+dependencies: {  }
+name: Lizenzen
+vid: licenses
+description: 'Für hochgeladene Bilder wählbare Lizenzen.'
+hierarchy: 0
+weight: 0

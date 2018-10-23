@@ -1,0 +1,19 @@
+uuid: 466e31d7-3d78-428e-962a-7ca870816957
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_creator
+    - media.type.image
+id: media.image.field_creator
+field_name: field_creator
+entity_type: media
+bundle: image
+label: Urheber
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

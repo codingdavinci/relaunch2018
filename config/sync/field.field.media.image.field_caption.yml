@@ -1,0 +1,19 @@
+uuid: c3d1b9d0-a21c-479e-8b38-125cc44dce54
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_caption
+    - media.type.image
+id: media.image.field_caption
+field_name: field_caption
+entity_type: media
+bundle: image
+label: Bildunterschrift
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

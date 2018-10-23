@@ -1,0 +1,23 @@
+uuid: d654911c-b98a-413e-953c-e74fe9985902
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_link
+    - taxonomy.vocabulary.licenses
+  module:
+    - link
+id: taxonomy_term.licenses.field_link
+field_name: field_link
+entity_type: taxonomy_term
+bundle: licenses
+label: Link
+description: 'Link zum vollständigen Lizenztext.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link
