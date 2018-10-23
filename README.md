@@ -20,6 +20,7 @@ The project was set up using the [Composer template for Drupal projects](https:/
 4. Run `gulp`, which is installed through npm, to copy files loaded by npm to appropriate directories and to compile SCSS to CSS files.
 5. Configure the web root to point to the `web` subdirectory.
 6. The CMS installation may be run by using a browser to access the web interface in the domain’s base path as configured in step 5. During the installation process, select the “Config Installer” installation profile to import configuration from `../config/sync`.
+7. To set up [Matomo](https://matomo.org/) tracking, go to `<domain>/admin/config/system/matomo`.
 
 ## Updating
 
