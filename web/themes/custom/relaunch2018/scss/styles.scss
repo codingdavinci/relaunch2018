@@ -1,7 +1,6 @@
 @import 'includes/variables';
 
 body {
-  background-color: $color-gray-6;
   color: $color-gray-3;
   font-family: $font-family-base;
   font-size: 1.2rem;
@@ -52,11 +51,14 @@ p {
 
 a {
   color: $color-deep-blue;
-  letter-spacing: 0.02rem;
   text-decoration: none;
 
   &:hover {
     text-decoration: underline;
+  }
+
+  &:before {
+    color: $color-deep-blue;
   }
 }
 

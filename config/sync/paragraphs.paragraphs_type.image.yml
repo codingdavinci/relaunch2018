@@ -1,0 +1,9 @@
+uuid: 69801e48-941b-4872-87f6-19f2018e1e7a
+langcode: de
+status: true
+dependencies: {  }
+id: image
+label: Bild
+icon_uuid: null
+description: 'Abschnitt, der ein einziges Bild enthält.'
+behavior_plugins: {  }

@@ -1,0 +1,41 @@
+uuid: 5046eeeb-6e47-4fab-833d-de851f47538a
+langcode: de
+status: true
+dependencies:
+  config:
+    - views.view.articles
+  module:
+    - ctools
+    - node
+    - views
+  theme:
+    - relaunch2018
+id: views_block__articles_block_1
+theme: relaunch2018
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:articles-block_1'
+settings:
+  id: 'views_block:articles-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      article: article
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  node_type:
+    id: node_type
+    bundles:
+      article: article
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

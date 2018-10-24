@@ -1,0 +1,9 @@
+uuid: bceecbed-d331-4fca-938a-89ecca468e29
+langcode: de
+status: true
+dependencies: {  }
+id: text
+label: Text
+icon_uuid: null
+description: 'reiner Textabschnitt'
+behavior_plugins: {  }

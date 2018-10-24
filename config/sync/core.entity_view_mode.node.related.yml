@@ -1,0 +1,10 @@
+uuid: 5abd327a-4669-4d1b-bbf8-daf71372fc5a
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+id: node.related
+label: 'Verwandter Inhalt'
+targetEntityType: node
+cache: true

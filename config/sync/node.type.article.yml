@@ -1,7 +1,13 @@
 uuid: fe0b24aa-9148-4775-ad3a-ecf315f5e784
 langcode: de
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
 _core:
   default_config_hash: AeW1SEDgb1OTQACAWGhzvMknMYAJlcZu0jljfeU3oso
 name: Artikel

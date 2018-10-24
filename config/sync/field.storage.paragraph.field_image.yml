@@ -1,16 +1,16 @@
-uuid: 389177d6-c6cb-49b6-a935-7b3e706211c6
+uuid: 51d05945-bc43-42db-86d7-8c0e72df27b3
 langcode: de
 status: true
 dependencies:
   module:
-    - node
-    - taxonomy
-id: node.field_region
-field_name: field_region
-entity_type: node
+    - media
+    - paragraphs
+id: paragraph.field_image
+field_name: field_image
+entity_type: paragraph
 type: entity_reference
 settings:
-  target_type: taxonomy_term
+  target_type: media
 module: core
 locked: false
 cardinality: 1

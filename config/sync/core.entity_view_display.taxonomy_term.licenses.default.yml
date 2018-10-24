@@ -22,13 +22,13 @@ content:
     third_party_settings: {  }
   field_link:
     weight: 1
-    label: above
+    label: hidden
     settings:
       trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
+      url_only: true
+      url_plain: true
+      target: _blank
+      rel: '0'
     third_party_settings: {  }
     type: link
     region: content

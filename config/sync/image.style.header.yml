@@ -1,0 +1,15 @@
+uuid: fe0dae00-dd66-438a-af44-4e1cb1a0e6da
+langcode: de
+status: true
+dependencies: {  }
+name: header
+label: Header-Bild
+effects:
+  2503dca8-5140-470c-b1d3-09fe8f79ccce:
+    uuid: 2503dca8-5140-470c-b1d3-09fe8f79ccce
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1600
+      height: 900
+      anchor: center-center

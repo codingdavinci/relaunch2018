@@ -1,0 +1,48 @@
+<?php
+
+use Drupal\node\Entity\Node;
+use Drupal\views\Plugin\views\query\QueryPluginBase;
+use Drupal\views\Plugin\views\query\Sql;
+use Drupal\views\ViewExecutable;
+
+/**
+ * Implements hook_views_query_alter().
+ *
+ * @param ViewExecutable $view
+ * @param QueryPluginBase $query
+ */
+function related_content_views_query_alter(ViewExecutable $view, QueryPluginBase $query) {
+  if ($view->id() !== 'articles') {
+    return;
+  }
+
+  // Figure out articles that have a tag in common.
+  try {
+    /** @var Node $node */
+    $node = Node::load(intval($view->args[0]));
+    $snippet = '';
+    foreach ($node->get('field_tags')->getValue() as $i => $value) {
+      $taxonomyId = $value['target_id'];
+
+      if ($i > 0) {
+        $snippet .= ' OR ';
+      }
+
+      $snippet .= 'EXISTS('
+        . 'SELECT * FROM node__field_tags '
+        . 'WHERE node__field_tags.field_tags_target_id = ' . $taxonomyId . ' '
+        . 'AND node__field_tags.entity_id = node_field_data.nid'
+        . ')';
+    }
+
+    $groupId = $query->setWhereGroup();
+
+    /** @var Sql $query */
+    $query->addWhereExpression($groupId, $snippet);
+
+  }
+  catch (Exception $exception) {
+    // Ignore unexpected input.
+  }
+
+}

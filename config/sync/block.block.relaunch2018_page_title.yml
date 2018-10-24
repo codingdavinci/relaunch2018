@@ -2,6 +2,8 @@ uuid: c2977418-628e-4c8f-9458-8280e4584c7c
 langcode: de
 status: true
 dependencies:
+  module:
+    - node
   theme:
     - relaunch2018
 _core:
@@ -17,4 +19,17 @@ settings:
   label: Seitentitel
   provider: core
   label_display: '0'
-visibility: {  }
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      coverage: coverage
+      data_set: data_set
+      event: event
+      faq: faq
+      page: page
+      press_kit: press_kit
+      project: project
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

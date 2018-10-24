@@ -89,7 +89,7 @@ tips:
   views-ui-preview:
     id: views-ui-preview
     plugin: text
-    label: Vorschau
+    label: Preview
     body: 'Eine Vorschau der Ansicht anzeigen.'
     weight: 10
     location: left
