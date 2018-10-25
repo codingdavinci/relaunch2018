@@ -1,0 +1,31 @@
+uuid: 2c9c6a63-b897-4f1f-8a22-fff0efcae172
+langcode: de
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:97ea7aba-196d-4466-afdf-3e354e9f82a7'
+  module:
+    - block_content
+    - system
+  theme:
+    - relaunch2018
+id: articles_header
+theme: relaunch2018
+region: content_header
+weight: -11
+provider: null
+plugin: 'block_content:97ea7aba-196d-4466-afdf-3e354e9f82a7'
+settings:
+  id: 'block_content:97ea7aba-196d-4466-afdf-3e354e9f82a7'
+  label: 'Überschrift der Artikel-Übersicht'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: "/news\r\n/tags/*"
+    negate: false
+    context_mapping: {  }

@@ -12,7 +12,7 @@ use Drupal\views\ViewExecutable;
  * @param QueryPluginBase $query
  */
 function related_content_views_query_alter(ViewExecutable $view, QueryPluginBase $query) {
-  if ($view->id() !== 'articles') {
+  if ($view->id() !== 'articles' || $view->current_display !== 'block_1') {
     return;
   }
 

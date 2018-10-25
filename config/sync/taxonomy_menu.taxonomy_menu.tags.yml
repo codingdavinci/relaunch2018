@@ -1,0 +1,14 @@
+uuid: ebfa2be3-03d7-4d2d-9396-57193bf35e2c
+langcode: de
+status: true
+dependencies:
+  config:
+    - system.menu.tags
+    - taxonomy.vocabulary.tags
+id: tags
+label: Tags
+vocabulary: tags
+menu: tags
+expanded: false
+depth: 0
+menu_parent: 'tags:'

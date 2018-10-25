@@ -8,7 +8,7 @@
  * @param array $build
  */
 function article_header_block_view_block_content_alter(array &$build) {
-  if ($build['#id'] === 'article_header') {
+  if ($build['#id'] === 'article_header' || $build['#id'] === 'articles_header') {
     $build['#pre_render'][] = '_article_header_block_pre_render';
   }
 }

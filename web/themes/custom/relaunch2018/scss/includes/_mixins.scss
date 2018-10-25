@@ -11,3 +11,14 @@
     @content;
   }
 }
+
+@mixin curlyBraces($color) {
+  &:after {
+    color: $color;
+    content: '}';
+  }
+  &:before {
+    color: $color;
+    content: '{';
+  }
+}

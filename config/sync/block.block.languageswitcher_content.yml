@@ -9,7 +9,7 @@ dependencies:
 id: languageswitcher_content
 theme: relaunch2018
 region: content
-weight: -10
+weight: -11
 provider: null
 plugin: 'language_block:language_interface'
 settings:

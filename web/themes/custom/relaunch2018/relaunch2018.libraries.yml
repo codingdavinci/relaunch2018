@@ -4,8 +4,10 @@ global-css:
     theme:
       css/layout.css: {}
       css/menu.css: {}
+      css/pager.css: {}
       css/styles.css: {}
       css/view-coverage.css: {}
+      css/view-articles.css: {}
       css/view-faq.css: {}
       css/view-press-kits.css: {}
       lib/fonts/barlow/index.css: {}
@@ -18,6 +20,7 @@ global-js:
   version: 1.x
   js:
     js/menu.js: {}
+    js/read-more.js: {}
     js/view-faq.js: {}
   dependencies:
     - core/jquery

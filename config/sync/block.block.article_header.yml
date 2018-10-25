@@ -1,9 +1,9 @@
-uuid: 65493f94-f0f0-4626-9983-3d8001f0c65a
+uuid: 7878b976-a5c1-4691-9b3d-c50576c531d0
 langcode: de
 status: true
 dependencies:
   content:
-    - 'block_content:basic:f4b902fc-de31-48e8-878f-c1129df5e54a'
+    - 'block_content:basic:4760c3fc-9d41-40c7-99d8-9fe5c42c1e57'
   module:
     - block_content
     - ctools
@@ -12,13 +12,13 @@ dependencies:
     - relaunch2018
 id: article_header
 theme: relaunch2018
-region: content
-weight: -9
+region: content_header
+weight: -10
 provider: null
-plugin: 'block_content:f4b902fc-de31-48e8-878f-c1129df5e54a'
+plugin: 'block_content:4760c3fc-9d41-40c7-99d8-9fe5c42c1e57'
 settings:
-  id: 'block_content:f4b902fc-de31-48e8-878f-c1129df5e54a'
-  label: 'Header eines einzelnen Artikels.'
+  id: 'block_content:4760c3fc-9d41-40c7-99d8-9fe5c42c1e57'
+  label: 'Allgemeine Überschrift eines einzelnen Artikels'
   provider: block_content
   label_display: '0'
   status: true

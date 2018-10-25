@@ -1,0 +1,29 @@
+uuid: 99c3d94f-562c-48e1-852e-429720713479
+langcode: de
+status: true
+dependencies:
+  config:
+    - system.menu.tags
+  module:
+    - system
+  theme:
+    - relaunch2018
+id: tags
+theme: relaunch2018
+region: content_header
+weight: -9
+provider: null
+plugin: 'system_menu_block:tags'
+settings:
+  id: 'system_menu_block:tags'
+  label: Tags
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility:
+  request_path:
+    id: request_path
+    pages: "/news\r\n/tags/*"
+    negate: false
+    context_mapping: {  }

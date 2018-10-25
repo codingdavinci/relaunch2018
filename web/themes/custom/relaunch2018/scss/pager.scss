@@ -1,0 +1,19 @@
+@import 'includes/variables';
+
+.pager {
+  .pager__items {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+
+    .pager__item {
+      a {
+        color: $color-main;
+      }
+
+      &.is-active {
+        display: none;
+      }
+    }
+  }
+}

@@ -9,7 +9,7 @@ _core:
 id: relaunch2018_local_tasks
 theme: relaunch2018
 region: header
-weight: -8
+weight: -12
 provider: null
 plugin: local_tasks_block
 settings:

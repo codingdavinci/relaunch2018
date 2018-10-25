@@ -1,0 +1,14 @@
+@import 'includes/variables';
+@import '../lib/bootstrap/scss/bootstrap-grid';
+
+.view-articles.view-display-id-page_1 {
+  .view-content {
+    .views-row {
+      margin-bottom: 30px;
+
+      @include media-breakpoint-up(md) {
+        margin-bottom: 100px;
+      }
+    }
+  }
+}

@@ -2,7 +2,24 @@
 
 /**
  * Implements hook_preprocess().
+ *
+ * @param array $vars
  */
-function relaunch2018_preprocess(&$vars) {
+function relaunch2018_preprocess(array &$vars) {
   $vars['theme_path'] = base_path() . $vars['directory'];
+}
+
+
+/**
+ * Implements hook_theme_suggestions_field_alter().
+ *
+ * @param array $suggestions
+ * @param array $variables
+ */
+function relaunch2018_theme_suggestions_field_alter(array &$suggestions, array $variables) {
+  $suggestions[] = 'field__'
+    . $variables['element']['#entity_type'] . '__'
+    . $variables['element']['#field_name'] . '__'
+    . $variables['element']['#bundle'] . '__'
+    . $variables['element']['#view_mode'];
 }

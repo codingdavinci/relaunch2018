@@ -1,0 +1,8 @@
+uuid: a42b2785-cf88-4c37-a560-1380f3032654
+langcode: und
+status: true
+dependencies: {  }
+id: tags
+label: Tags
+description: 'Automatisch generiertes Menü mit in Artikeln verwendeten Tags.'
+locked: false
