@@ -2,19 +2,11 @@ global-css:
   version: 1.x
   css:
     theme:
-      css/layout.css: {}
-      css/menu.css: {}
-      css/pager.css: {}
-      css/styles.css: {}
-      css/view-coverage.css: {}
-      css/view-articles.css: {}
-      css/view-faq.css: {}
-      css/view-press-kits.css: {}
+      css/global.css: {}
       lib/fonts/barlow/index.css: {}
   dependencies:
     - relaunch2018/cdv-font
     - relaunch2018/hammerjs
-    - relaunch2018/jquery-easing
 
 global-js:
   version: 1.x

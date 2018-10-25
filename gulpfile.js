@@ -3,11 +3,13 @@ var del = require('del');
 var merge = require('merge-stream');
 var sass = require('gulp-sass');
 var importOnce = require('node-sass-import-once');
+var concat = require('gulp-concat');
 
 var root = 'web/themes/custom/relaunch2018/';
 
 gulp.task('clean', function() {
   return del([
+    'web/themes/custom/relaunch2018/css',
     'web/themes/custom/relaunch2018/lib/bootstrap',
     'web/themes/custom/relaunch2018/lib/hammerjs',
     'web/themes/custom/relaunch2018/lib/jquery.easing',
@@ -37,6 +39,7 @@ gulp.task('copy', function() {
 
 gulp.task('scss', function() {
   return gulp.src(root + 'scss/*.scss')
+  .pipe(concat('global.scss'))
   .pipe(sass({
     importer: importOnce
   }))
