@@ -1,5 +1,9 @@
 @import 'includes/base';
 
+html {
+  height: 100%;
+}
+
 body {
   background-color: $color-gray-6;
 }

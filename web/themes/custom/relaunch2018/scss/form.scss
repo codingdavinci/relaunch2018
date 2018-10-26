@@ -1,0 +1,29 @@
+@import 'includes/base';
+
+input {
+  @include border-radius($border-radius);
+
+  border: 0;
+  color: $color-gray-1;
+  font-size: 1.3rem;
+  letter-spacing: .04em;
+  max-width: 100%;
+  padding: 10px 15px;
+
+  &::-webkit-input-placeholder {
+    color: $color-gray-3;
+  }
+  &::-moz-placeholder {
+    color: $color-gray-3;
+  }
+  &:-ms-input-placeholder {
+    color: $color-gray-3;
+  }
+
+  &[type="submit"] {
+    background-color: $color-main;
+    color: $color-white;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}

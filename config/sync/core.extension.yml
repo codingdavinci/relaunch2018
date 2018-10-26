@@ -31,6 +31,7 @@ module:
   language_switcher: 0
   link: 0
   locale: 0
+  login: 0
   matomo: 0
   media: 0
   menu_ui: 0

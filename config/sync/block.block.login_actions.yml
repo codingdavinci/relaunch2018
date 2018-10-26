@@ -1,4 +1,4 @@
-uuid: 83336f5e-dcdc-473a-8c67-b366dde9d690
+uuid: ef45e750-9952-4a11-9281-8116dc72cc46
 langcode: de
 status: true
 dependencies:
@@ -6,17 +6,15 @@ dependencies:
     - system
   theme:
     - relaunch2018
-_core:
-  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
-id: relaunch2018_local_tasks
+id: login_actions
 theme: relaunch2018
-region: header
-weight: -12
+region: content
+weight: 0
 provider: null
 plugin: local_tasks_block
 settings:
   id: local_tasks_block
-  label: Reiter
+  label: Login-Aktionen
   provider: core
   label_display: '0'
   primary: true
@@ -25,5 +23,5 @@ visibility:
   request_path:
     id: request_path
     pages: /user/login
-    negate: true
+    negate: false
     context_mapping: {  }

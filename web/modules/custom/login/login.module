@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * Implements hook_preprocess_HOOK().
+ *
+ * @param array $variables
+ */
+function login_preprocess_block__login_actions(array &$variables) {
+  // Hide link to Login page from local tasks menu on Login page:
+  $variables['content']['#primary']['user.login']['#access'] = FALSE;
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * @param array $form
+ */
+function login_form_user_login_form_alter(array &$form) {
+  $form['name']['#title_display'] = 'invisible';
+  $form['pass']['#title_display'] = 'invisible';
+
+  $form['name']['#placeholder'] = '{' . t('Username') . '}';
+  $form['pass']['#placeholder'] = '{' . t('Password') . '}';
+
+  unset($form['name']['#description']);
+  unset($form['pass']['#description']);
+}

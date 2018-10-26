@@ -1,0 +1,6 @@
+name: Login
+version: 0.1
+type: module
+description: "Customises the login form."
+package: Custom
+core: 8.x

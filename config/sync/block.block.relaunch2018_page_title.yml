@@ -3,7 +3,7 @@ langcode: de
 status: true
 dependencies:
   module:
-    - node
+    - system
   theme:
     - relaunch2018
 _core:
@@ -20,16 +20,8 @@ settings:
   provider: core
   label_display: '0'
 visibility:
-  node_type:
-    id: node_type
-    bundles:
-      coverage: coverage
-      data_set: data_set
-      event: event
-      faq: faq
-      page: page
-      press_kit: press_kit
-      project: project
+  request_path:
+    id: request_path
+    pages: '/user/*'
     negate: false
-    context_mapping:
-      node: '@node.node_route_context:node'
+    context_mapping: {  }
