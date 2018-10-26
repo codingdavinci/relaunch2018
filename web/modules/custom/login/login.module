@@ -35,3 +35,21 @@ function login_form_user_pass_alter(array &$form) {
   $form['name']['#title_display'] = 'invisible';
   $form['name']['#placeholder'] = '{' . t('Username or email address') . '}';
 }
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * @param array $form
+ */
+function login_form_user_register_form_alter(array &$form) {
+  if (\Drupal::currentUser()->isAuthenticated()) {
+    // Do not apply changes to backend's user registration form.
+    return;
+  }
+
+  $form['account']['name']['#title_display'] = 'invisible';
+  $form['account']['mail']['#title_display'] = 'invisible';
+
+  $form['account']['name']['#placeholder'] = '{' . t('Username') . '}';
+  $form['account']['mail']['#placeholder'] = '{' . t('Email address') . '}';
+}
