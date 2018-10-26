@@ -38,12 +38,22 @@ gulp.task('copy', function() {
 });
 
 gulp.task('scss', function() {
-  return gulp.src(root + 'scss/*.scss')
-  .pipe(concat('global.scss'))
-  .pipe(sass({
-    importer: importOnce
-  }))
-  .pipe(gulp.dest(root + 'css'))
+  return merge(
+
+    gulp.src(root + 'scss/*.scss')
+    .pipe(concat('global.scss'))
+    .pipe(sass({
+      importer: importOnce
+    }))
+    .pipe(gulp.dest(root + 'css')),
+
+    gulp.src(root + 'scss/styles.scss')
+    .pipe(sass({
+      importer: importOnce
+    }))
+    .pipe(gulp.dest(root + 'css'))
+
+  );
 });
 
 gulp.task('default', gulp.series('clean', 'copy', 'scss'), function() {});
