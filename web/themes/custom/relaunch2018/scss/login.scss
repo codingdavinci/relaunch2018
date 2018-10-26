@@ -33,11 +33,17 @@ body.path-user {
           margin: 50px 0 $content-margin-bottom 0;
         }
 
-        .user-login-form {
+        form {
           margin: 50px 30px 0 30px;
 
           .form-item {
             margin-bottom: 30px;
+          }
+
+          p {
+            margin-bottom: 30px;
+            max-width: 600px;
+            text-align: left;
           }
         }
 
@@ -51,8 +57,14 @@ body.path-user {
             color: $color-white;
             padding: 0;
 
-            &:hover {
+            &:hover,
+            &:focus {
               background-color: transparent;
+            }
+
+            &.is-active {
+              background: transparent;
+              color: $color-deep-teal;
             }
           }
 

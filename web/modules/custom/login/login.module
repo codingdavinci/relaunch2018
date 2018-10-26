@@ -25,3 +25,13 @@ function login_form_user_login_form_alter(array &$form) {
   unset($form['name']['#description']);
   unset($form['pass']['#description']);
 }
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * @param array $form
+ */
+function login_form_user_pass_alter(array &$form) {
+  $form['name']['#title_display'] = 'invisible';
+  $form['name']['#placeholder'] = '{' . t('Username or email address') . '}';
+}
