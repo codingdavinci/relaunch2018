@@ -7,9 +7,63 @@ const USER_MANAGEMENT_DEFAULT_ROLE_ID = 'project_team';
 const USER_MANAGEMENT_SELECTABLE_ROLE_IDS = ['institution', 'project_team'];
 
 /**
- * Implements hook_form_FORM_ID_alter().
+ * Implements hook_preprocess_HOOK().
+ *
+ * @param array $variables
  */
-function user_management_form_user_register_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+function user_management_preprocess_html(array &$variables) {
+  if (\Drupal::service('path.current')->getPath() === '/user/register') {
+    if (($role = \Drupal::request()->query->get('role')) !== null) {
+      if ($role === 'institution') {
+        $variables['head_title']['title'] = t('Create new institution account');
+      }
+      else {
+        $variables['head_title']['title'] = t('Create new participant account');
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ *
+ * @param array $variables
+ */
+function user_management_preprocess_block__page_title_block(array &$variables) {
+  if (\Drupal::service('path.current')->getPath() === '/user/register') {
+    if (($role = \Drupal::request()->query->get('role')) !== null) {
+      if ($role === 'institution') {
+        $variables['content']['#title'] = t('Create new institution account');
+      }
+      else {
+        $variables['content']['#title'] = t('Create new participant account');
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ *
+ * @param array $variables
+ */
+function user_management_preprocess_block__login_actions(array &$variables) {
+  if (($role = \Drupal::request()->query->get('role')) !== null) {
+    foreach ($variables['content']['#primary'] as &$route) {
+      /** @var \Drupal\Core\Url $url */
+      $url = $route['#link']['url'];
+      $url->setRouteParameter('role', $role);
+      $route['#link']['url'] = $url;
+    }
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * @param array $form
+ */
+function user_management_form_user_register_form_alter(array &$form) {
   $role = \Drupal::request()->query->get('role');
 
   if (in_array($role, USER_MANAGEMENT_SELECTABLE_ROLE_IDS)) {
@@ -28,10 +82,10 @@ function user_management_form_user_register_form_alter(&$form, FormStateInterfac
  * update the new user assigning the user that role, as long as that role is
  * allowed to be set automatically.
  *
- * @param $form
+ * @param array $form
  * @param FormStateInterface $form_state
  */
-function _user_management_submit($form, FormStateInterface &$form_state) {
+function _user_management_submit(array $form, FormStateInterface &$form_state) {
   $roleId = USER_MANAGEMENT_DEFAULT_ROLE_ID;
 
   if ($form_state->hasValue('user_management__role')) {
