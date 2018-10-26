@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
+    - field.field.node.page.field_inline_images
     - node.type.page
   module:
     - text
@@ -18,14 +19,15 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 100
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
   links:
-    weight: 101
+    weight: 1
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_inline_images: true
   langcode: true

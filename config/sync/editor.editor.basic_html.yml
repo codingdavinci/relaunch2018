@@ -29,6 +29,7 @@ settings:
           items:
             - BulletedList
             - NumberedList
+            - Table
         -
           name: Media
           items:
@@ -46,7 +47,7 @@ settings:
     language:
       language_list: un
     stylescombo:
-      styles: "a.icon-arrow|Link mit Pfeil\r\na.icon-mail-1|verlinkte E-Mail-Adresse\r\np.icon-mail-1|E-Mail-Adresse"
+      styles: "a.icon-arrow|Link mit Pfeil\r\na.icon-mail-1|verlinkte E-Mail-Adresse\r\np.small|kleiner Text\r\np.icon-mail-1|E-Mail-Adresse"
 image_upload:
   status: true
   scheme: public

@@ -4,9 +4,13 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
+    - field.field.node.page.field_inline_images
+    - image.style.thumbnail
     - node.type.page
   module:
     - content_moderation
+    - image
+    - insert
     - path
     - text
 _core:
@@ -31,6 +35,33 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_inline_images:
+    weight: 121
+    settings:
+      preview_image_style: thumbnail
+      progress_indicator: throbber
+    third_party_settings:
+      insert:
+        styles:
+          image: image
+          insert__auto: 0
+          link: 0
+          icon_link: 0
+          audio: 0
+          video: 0
+          large: 0
+          header: 0
+          thumbnail: 0
+          medium: 0
+        default: image
+        auto_image_style: image
+        link_image: ''
+        width: ''
+        align: '1'
+        caption: 0
+        rotate: 0
+    type: image_image
+    region: content
   langcode:
     type: language_select
     weight: 2
@@ -78,6 +109,11 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete

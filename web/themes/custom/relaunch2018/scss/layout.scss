@@ -135,3 +135,12 @@ body {
   margin-bottom: 50px;
   padding-bottom: 50px;
 }
+
+.node--type-page {
+  margin-bottom: 30px;
+  margin-top: 60px;
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: $content-margin-bottom;
+  }
+}
