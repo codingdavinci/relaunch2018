@@ -23,3 +23,20 @@ function relaunch2018_theme_suggestions_field_alter(array &$suggestions, array $
     . $variables['element']['#bundle'] . '__'
     . $variables['element']['#view_mode'];
 }
+
+/**
+ * Implements hook_page_attachments_alter().
+ *
+ * @param array $attachments
+ */
+function relaunch2018_page_attachments_alter(array &$attachments) {
+  // Remove default shortcut icon definition, since we set more elaborate
+  // definitions by overwriting html.html.twig.
+  if (isset($attachments['#attached']['html_head_link'])) {
+    foreach ($attachments['#attached']['html_head_link'] as $key => $config) {
+      if (isset($config[0]['rel']) && $config[0]['rel'] === 'shortcut icon') {
+        unset($attachments['#attached']['html_head_link'][$key]);
+      }
+    }
+  }
+}
