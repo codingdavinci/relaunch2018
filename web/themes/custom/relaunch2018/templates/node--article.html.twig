@@ -84,12 +84,14 @@
 {{ attach_library('classy/node') }}
 <article{{ attributes.addClass(classes) }}>
   <div class="article--main-image">
-    {{ content.field_image }}
+    <div class="container">
+      {{ content.field_image }}
+    </div>
   </div>
 
   <div class="article--content-container">
     <div class="row">
-      <div class="article--main col-12 col-md-9 offset-md-3">
+      <div class="article--main col-12 col-sm-10 offset-sm-1 col-md-9 offset-md-2">
         <div class="article-content">
 
         {% if not page %}
