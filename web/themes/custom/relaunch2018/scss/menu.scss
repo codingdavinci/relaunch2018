@@ -70,7 +70,7 @@
         }
       }
       
-      @include media-breakpoint-down(sm) {
+      @include media-breakpoint-down(xs) {
         display: none;
       }
     }
@@ -96,7 +96,7 @@
     .language-switcher-language-url {
       left: 25px;
 
-      @include media-breakpoint-up(md) {
+      @include media-breakpoint-up(sm) {
         display: none;
       }
     }

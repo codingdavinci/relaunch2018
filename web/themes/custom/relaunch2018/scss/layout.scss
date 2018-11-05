@@ -33,26 +33,43 @@ body {
 
 .region-content {
   .language-switcher-language-url {
+    margin-top: .5rem;
     right: 30px;
 
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(xs) {
       display: none;
+    }
+
+    ul {
+      @include border-radius($border-radius);
+      background-color: $white;
+      box-shadow: 0 5px 15px rgba($black, 0.1);
+      display: flex;
     }
   }
 }
 
 .language-switcher-language-url {
-  color: rgba($color-white, .25);
-  font-size: calc(12px + .5vw);
+  color: $color-green-lighter;
+  font-size: 1.2rem;
   position: absolute;
   top: 25px;
+
+  @include media-breakpoint-up(sm) {
+    font-size: 1.2rem;
+  }
+
+  @include media-breakpoint-up(md) {
+    font-size: 1.5rem;
+  }
 
   .links {
     padding-left: 0;
 
     li {
+      background-color: $white;
       display: inline;
-      margin-left: .3rem;
+      padding: .3rem;
 
       &:after {
         content: '}';
@@ -61,24 +78,30 @@ body {
         content: '{';
       }
 
+      &:first-child {
+        @include border-left-radius($border-radius);
+      }
+
+      &:last-child {
+        @include border-right-radius($border-radius);
+      }
+
       a {
-        color: rgba($color-white, .5);
+        color: $color-green;
       }
 
       &.is-active {
-        color: $color-white;
+        @include border-radius($border-radius);
+        background-color: $color-green-lighter;
+        color: $white;
         font-weight: 600;
 
         a {
-          color: $color-white;
+          color: $white;
           font-weight: 600;
         }
       }
     }
-  }
-
-  @include media-breakpoint-up(md) {
-    font-size: 1.2rem;
   }
 }
 
