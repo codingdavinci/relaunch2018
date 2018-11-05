@@ -21,9 +21,8 @@ function article_header_block_view_block_content_alter(array &$build) {
  */
 function _article_header_block_pre_render(array $build) {
   $build['content']['rss_link'] = [
-    // TODO: Use proper feed icon when included in font.
-    '#markup' => '<div class="icon-star-empty article--rss--subscribe d-none d-md-block">'
-      .'<a href="' . DRUPAL_ROOT . '/rss.xml">'
+    '#markup' => '<div class="article--rss--subscribe d-none d-md-block">'
+      .'<a href="' . DRUPAL_ROOT . '/rss.xml" class="icon-rss">'
       . t('Subscribe to RSS feed')
       . '</a></div>',
     '#weight' => 99,
