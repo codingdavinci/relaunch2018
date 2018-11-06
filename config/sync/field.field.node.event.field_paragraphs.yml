@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_paragraphs
     - node.type.event
+    - paragraphs.paragraphs_type.image
     - paragraphs.paragraphs_type.textblock_left
     - paragraphs.paragraphs_type.textblock_right
   module:
@@ -26,6 +27,7 @@ settings:
     target_bundles:
       textblock_left: textblock_left
       textblock_right: textblock_right
+      image: image
     target_bundles_drag_drop:
       textblock_left:
         enabled: true
@@ -34,8 +36,8 @@ settings:
         enabled: true
         weight: -8
       image:
+        enabled: true
         weight: -7
-        enabled: false
       text:
         weight: -6
         enabled: false
