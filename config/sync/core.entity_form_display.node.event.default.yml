@@ -4,11 +4,13 @@ status: true
 dependencies:
   config:
     - field.field.node.event.body
+    - field.field.node.event.field_paragraphs
     - field.field.node.event.field_range
     - node.type.event
   module:
     - content_moderation
     - datetime_range
+    - paragraphs
     - path
     - text
 id: node.event.default
@@ -31,6 +33,18 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_paragraphs:
+    weight: 124
+    settings:
+      title: Seitenabschnitt
+      title_plural: Seitenabschnitte
+      edit_mode: open
+      add_mode: select
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
   field_range:
     weight: 123
     settings: {  }

@@ -1,0 +1,42 @@
+uuid: 884baa22-3baa-40b1-9b0c-2da27f25265d
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraphs
+    - node.type.event
+    - paragraphs.paragraphs_type.textblock_left
+    - paragraphs.paragraphs_type.textblock_right
+  module:
+    - entity_reference_revisions
+id: node.event.field_paragraphs
+field_name: field_paragraphs
+entity_type: node
+bundle: event
+label: Abschnitte
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      textblock_left: textblock_left
+      textblock_right: textblock_right
+    target_bundles_drag_drop:
+      textblock_left:
+        enabled: true
+        weight: -9
+      textblock_right:
+        enabled: true
+        weight: -8
+      image:
+        weight: -7
+        enabled: false
+      text:
+        weight: -6
+        enabled: false
+field_type: entity_reference_revisions

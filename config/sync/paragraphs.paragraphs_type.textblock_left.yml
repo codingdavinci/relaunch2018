@@ -1,0 +1,9 @@
+uuid: f393298f-d1b4-45a2-8895-3db9176aab69
+langcode: de
+status: true
+dependencies: {  }
+id: textblock_left
+label: 'Textblock links'
+icon_uuid: null
+description: 'Links angeordneter Textblock.'
+behavior_plugins: {  }

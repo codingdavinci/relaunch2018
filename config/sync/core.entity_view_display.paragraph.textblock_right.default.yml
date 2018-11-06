@@ -1,0 +1,22 @@
+uuid: 24028afb-a77b-463f-bbab-c21cf8e6de9d
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.textblock_right.field_text
+    - paragraphs.paragraphs_type.textblock_right
+  module:
+    - text
+id: paragraph.textblock_right.default
+targetEntityType: paragraph
+bundle: textblock_right
+mode: default
+content:
+  field_text:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

@@ -1,0 +1,9 @@
+uuid: 57a8ace7-a2d7-4b04-ad1c-d4d69ffbb2a4
+langcode: de
+status: true
+dependencies: {  }
+id: textblock_right
+label: 'Textblock rechts'
+icon_uuid: null
+description: 'Rechts ausgerichteter Textblock.'
+behavior_plugins: {  }

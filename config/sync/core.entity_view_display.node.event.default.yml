@@ -4,43 +4,37 @@ status: true
 dependencies:
   config:
     - field.field.node.event.body
+    - field.field.node.event.field_paragraphs
     - field.field.node.event.field_range
     - node.type.event
   module:
-    - datetime_range
-    - text
+    - entity_reference_revisions
     - user
 id: node.event.default
 targetEntityType: node
 bundle: event
 mode: default
 content:
-  body:
-    label: hidden
-    type: text_default
-    weight: 101
-    settings: {  }
-    third_party_settings: {  }
-    region: content
   content_moderation_control:
-    weight: -20
+    weight: 0
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
-  field_range:
-    weight: 103
-    label: above
+  field_paragraphs:
+    weight: 2
+    label: hidden
     settings:
-      separator: '-'
-      format_type: medium
-      timezone_override: ''
+      view_mode: default
+      link: ''
     third_party_settings: {  }
-    type: daterange_default
+    type: entity_reference_revisions_entity_view
     region: content
   links:
-    weight: 100
+    weight: 1
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
+  body: true
+  field_range: true
   langcode: true
