@@ -1,0 +1,25 @@
+{#
+/**
+ * @see paragraph.html.twig
+ */
+#}
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+{% block paragraph %}
+  <div{{ attributes.addClass(classes) }}>
+    <div class="row">
+      <div class="col-md-6">{{ content.field_text }}</div>
+      {% if content.field_image %}
+        <div class="col-md-6 text-align-right">
+          {{ content.field_image }}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+{% endblock paragraph %}

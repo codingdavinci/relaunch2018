@@ -115,8 +115,8 @@
 
       .field--name-field-image {
         img {
-          @include media-breakpoint-up(sm) {
-            @include border-radius($border-radius);
+          @include media-breakpoint-down(xs) {
+            border-radius: 0;
           }
         }
       }
@@ -248,22 +248,6 @@
     }
   }
 
-  .media--type-image {
-    display: block;
-    width: 100%;
-
-    .field--name-field-caption,
-    .field--name-field-creator,
-    .field--name-field-license {
-      display: inline-block;
-    }
-
-    img {
-      height: auto;
-      width: 100%
-    }
-  }
-
   &.node--view-mode-teaser {
     color: $color-gray-1;
 
@@ -361,10 +345,6 @@
       }
       @include media-breakpoint-up(xl) {
         min-height: 275px;
-      }
-
-      img {
-        @include border-radius($border-radius);
       }
     }
 

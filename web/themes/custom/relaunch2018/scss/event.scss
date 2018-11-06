@@ -1,0 +1,15 @@
+.page-node-type-event {
+
+  .media--type-image {
+    &.media--view-mode-full {
+      padding: 0;
+      flex-direction: column;
+
+      img {
+        height: auto;
+        max-width: 100%;
+      }
+    }
+
+  }
+}
