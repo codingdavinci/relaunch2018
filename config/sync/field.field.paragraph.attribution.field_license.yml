@@ -1,0 +1,25 @@
+uuid: 55e0f549-9e2d-4e9d-a67d-0a8186782f6a
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_license
+    - paragraphs.paragraphs_type.attribution
+id: paragraph.attribution.field_license
+field_name: field_license
+entity_type: paragraph
+bundle: attribution
+label: Lizenz
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: licenses
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

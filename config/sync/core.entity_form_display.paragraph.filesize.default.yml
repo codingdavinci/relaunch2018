@@ -1,0 +1,30 @@
+uuid: 2bb141d0-3123-4f95-b6f1-22fbae7e6391
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.filesize.field_size
+    - field.field.paragraph.filesize.field_unit
+    - paragraphs.paragraphs_type.filesize
+id: paragraph.filesize.default
+targetEntityType: paragraph
+bundle: filesize
+mode: default
+content:
+  field_size:
+    weight: 0
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_unit:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

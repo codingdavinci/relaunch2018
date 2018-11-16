@@ -1,0 +1,9 @@
+uuid: e7b11411-4d64-4021-9d38-9a8dcbf2a6e8
+langcode: de
+status: true
+dependencies: {  }
+id: attribution
+label: Lizenzhinweis
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

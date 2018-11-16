@@ -13,7 +13,7 @@ entity_type: taxonomy_term
 bundle: licenses
 label: Link
 description: 'Link zum vollständigen Lizenztext.'
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''

@@ -1,0 +1,11 @@
+uuid: e1386e03-248e-43fc-bdf2-e12b6cd5517c
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.theme
+id: taxonomy_term.theme
+target_entity_type_id: taxonomy_term
+target_bundle: theme
+default_langcode: site_default
+language_alterable: false

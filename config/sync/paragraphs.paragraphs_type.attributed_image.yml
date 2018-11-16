@@ -1,0 +1,9 @@
+uuid: aa63b891-015a-4df9-a052-bcc091f176b7
+langcode: de
+status: true
+dependencies: {  }
+id: attributed_image
+label: 'Bild mit Lizenzhinweis'
+icon_uuid: null
+description: 'Upload-Feld für ein Bild mit Lizenzauswahl und Urheberangabe.'
+behavior_plugins: {  }

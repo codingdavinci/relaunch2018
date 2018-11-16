@@ -1,0 +1,29 @@
+uuid: edc3a36b-5599-4c01-8866-49b916fd5e30
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metadata_format
+    - node.type.data_set
+    - taxonomy.vocabulary.metadata_file_types
+id: node.data_set.field_metadata_format
+field_name: field_metadata_format
+entity_type: node
+bundle: data_set
+label: 'Lieferformat der Metadaten'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      metadata_file_types: metadata_file_types
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

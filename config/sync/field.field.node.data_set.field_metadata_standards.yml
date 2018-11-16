@@ -1,0 +1,29 @@
+uuid: fea9342f-e101-43bb-af4f-1fd1b2203cbb
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metadata_standards
+    - node.type.data_set
+    - taxonomy.vocabulary.metadata_standards
+id: node.data_set.field_metadata_standards
+field_name: field_metadata_standards
+entity_type: node
+bundle: data_set
+label: Metadaten-Standard
+description: 'Falls Ihre Daten nicht in einem den etablierten Metadaten-Standards entsprechenden Lieferformat vorliegen, geben Sie bitte ersatzweise dass Programm an, aus dem Sie Ihre Daten exportiert haben.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      metadata_standards: metadata_standards
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

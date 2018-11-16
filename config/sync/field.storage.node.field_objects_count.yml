@@ -1,0 +1,20 @@
+uuid: 3beb2571-4f70-40c6-be6e-1f6ef70a1383
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_objects_count
+field_name: field_objects_count
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

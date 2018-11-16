@@ -1,0 +1,23 @@
+uuid: 875d3eaa-d6c6-44e3-922c-4cf8e1730fd6
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_objects_count
+    - node.type.data_set
+id: node.data_set.field_objects_count
+field_name: field_objects_count
+entity_type: node
+bundle: data_set
+label: 'Anzahl der dargestellten Objekte'
+description: 'Falls diese Anzahl von der Anzahl der Mediendateien abweicht.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

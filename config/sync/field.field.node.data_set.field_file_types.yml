@@ -1,0 +1,29 @@
+uuid: 534dad46-fdb8-4ef0-ab0b-a83725096c2d
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_file_types
+    - node.type.data_set
+    - taxonomy.vocabulary.file_types
+id: node.data_set.field_file_types
+field_name: field_file_types
+entity_type: node
+bundle: data_set
+label: Dateitypen
+description: 'Geben Sie an, in welchem Bild-, Audio-, Video- oder sonstigem Format die von Ihnen zur Verfügung gestellten Mediendateien vorliegen.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      file_types: file_types
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

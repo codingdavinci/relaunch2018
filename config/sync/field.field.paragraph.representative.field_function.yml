@@ -1,0 +1,19 @@
+uuid: 5162bb36-2d20-4f6a-a6dc-13efdd92b1ad
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_function
+    - paragraphs.paragraphs_type.representative
+id: paragraph.representative.field_function
+field_name: field_function
+entity_type: paragraph
+bundle: representative
+label: Tätigkeit
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

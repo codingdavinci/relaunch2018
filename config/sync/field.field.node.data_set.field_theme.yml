@@ -1,29 +1,29 @@
-uuid: af2205de-bf7f-41b8-b03b-ac7a684cc3f0
+uuid: f1497283-2e54-4d37-b33d-ea038557bff7
 langcode: de
 status: true
 dependencies:
   config:
-    - field.storage.node.field_events
+    - field.storage.node.field_theme
     - node.type.data_set
-    - node.type.event
-id: node.data_set.field_events
-field_name: field_events
+    - taxonomy.vocabulary.theme
+id: node.data_set.field_theme
+field_name: field_theme
 entity_type: node
 bundle: data_set
-label: Events
+label: Thema
 description: ''
 required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:node'
+  handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      event: event
+      theme: theme
     sort:
-      field: nid
-      direction: DESC
+      field: name
+      direction: asc
     auto_create: false
     auto_create_bundle: ''
 field_type: entity_reference

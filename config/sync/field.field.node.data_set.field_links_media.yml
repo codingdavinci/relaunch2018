@@ -1,0 +1,23 @@
+uuid: 7d50cb5a-368e-4226-b91f-d7e240d83895
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_links_media
+    - node.type.data_set
+  module:
+    - link
+id: node.data_set.field_links_media
+field_name: field_links_media
+entity_type: node
+bundle: data_set
+label: 'Link zu den Mediendateien'
+description: 'z.B. Wikimedia Commons, Flickr Commons, DDB, Europeana, eigene Webseite…'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 2
+field_type: link

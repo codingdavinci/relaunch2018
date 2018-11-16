@@ -3,38 +3,344 @@ langcode: de
 status: true
 dependencies:
   config:
-    - field.field.node.data_set.body
-    - field.field.node.data_set.field_events
+    - field.field.node.data_set.field_attributed_image
+    - field.field.node.data_set.field_description
+    - field.field.node.data_set.field_file_types
+    - field.field.node.data_set.field_georef_standard
+    - field.field.node.data_set.field_keywords
+    - field.field.node.data_set.field_links_api
+    - field.field.node.data_set.field_links_media
+    - field.field.node.data_set.field_links_metadata
+    - field.field.node.data_set.field_media_count
+    - field.field.node.data_set.field_media_filesize
+    - field.field.node.data_set.field_media_license
+    - field.field.node.data_set.field_metadata_doc_links
+    - field.field.node.data_set.field_metadata_filesize
+    - field.field.node.data_set.field_metadata_format
+    - field.field.node.data_set.field_metadata_license
+    - field.field.node.data_set.field_metadata_standards
+    - field.field.node.data_set.field_object_type
+    - field.field.node.data_set.field_objects_count
+    - field.field.node.data_set.field_remarks
+    - field.field.node.data_set.field_representative
+    - field.field.node.data_set.field_theme
+    - field.field.node.data_set.field_vocabulary
     - node.type.data_set
   module:
     - content_moderation
+    - field_group
+    - link
+    - paragraphs
     - path
     - text
+third_party_settings:
+  field_group:
+    group_tabs:
+      children:
+        - group_general
+        - group_media
+        - group_metadata
+        - group_links
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      format_settings:
+        label: Reiter
+        direction: horizontal
+        id: ''
+        classes: ''
+      label: Reiter
+      region: content
+    group_media:
+      children:
+        - field_object_type
+        - field_file_types
+        - field_media_count
+        - field_objects_count
+        - field_media_filesize
+        - field_media_license
+      parent_name: group_tabs
+      weight: 1
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Mediendateien
+      region: content
+    group_metadata:
+      children:
+        - field_metadata_format
+        - field_metadata_standards
+        - field_metadata_filesize
+        - field_georef_standard
+        - field_vocabulary
+        - field_metadata_doc_links
+        - field_metadata_license
+      parent_name: group_tabs
+      weight: 2
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Metadaten
+      region: content
+    group_links:
+      children:
+        - field_links_api
+        - field_links_media
+        - field_links_metadata
+      parent_name: group_tabs
+      weight: 3
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Zugang/Links zu den Daten'
+      region: content
+    group_general:
+      children:
+        - title
+        - field_attributed_image
+        - field_description
+        - field_theme
+        - field_keywords
+        - field_representative
+      parent_name: group_tabs
+      weight: 0
+      format_type: tab
+      format_settings:
+        label: 'Allgemeine Angaben'
+        formatter: open
+        description: ''
+        id: ''
+        classes: ''
+        required_fields: false
+      label: 'Allgemeine Angaben'
+      region: content
 id: node.data_set.default
 targetEntityType: node
 bundle: data_set
 mode: default
 content:
-  body:
-    type: text_textarea_with_summary
-    weight: 121
-    settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
-    third_party_settings: {  }
-    region: content
   created:
     type: datetime_timestamp
-    weight: 10
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_events:
-    weight: 122
+  field_attributed_image:
+    type: paragraphs
+    weight: 2
+    settings:
+      title: Seitenabschnitt
+      title_plural: Seitenabschnitte
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: attributed_image
+      features:
+        duplicate: '0'
+        collapse_edit_all: '0'
+        add_above: '0'
+    third_party_settings: {  }
+    region: content
+  field_description:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_file_types:
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
+    region: content
+  field_georef_standard:
+    weight: 19
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_keywords:
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete_tags
+    region: content
+  field_links_api:
+    weight: 23
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_links_media:
+    weight: 24
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_links_metadata:
+    weight: 25
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_media_count:
+    weight: 7
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_media_filesize:
+    type: entity_reference_paragraphs
+    weight: 9
+    settings:
+      title: Seitenabschnitt
+      title_plural: Seitenabschnitte
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_media_license:
+    type: entity_reference_paragraphs
+    weight: 10
+    settings:
+      title: Seitenabschnitt
+      title_plural: Seitenabschnitte
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_metadata_doc_links:
+    weight: 21
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_metadata_filesize:
+    type: entity_reference_paragraphs
+    weight: 18
+    settings:
+      title: Seitenabschnitt
+      title_plural: Seitenabschnitte
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_metadata_format:
+    weight: 16
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_metadata_license:
+    type: entity_reference_paragraphs
+    weight: 22
+    settings:
+      title: Seitenabschnitt
+      title_plural: Seitenabschnitte
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_metadata_standards:
+    weight: 17
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_object_type:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_objects_count:
+    weight: 8
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_remarks:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_representative:
+    type: paragraphs
+    weight: 6
+    settings:
+      title: Seitenabschnitt
+      title_plural: Seitenabschnitte
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
+    third_party_settings: {  }
+    region: content
+  field_theme:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_vocabulary:
+    weight: 20
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   langcode:
     type: language_select
@@ -45,13 +351,13 @@ content:
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 100
+    weight: 8
     settings: {  }
     region: content
     third_party_settings: {  }
   path:
     type: path
-    weight: 30
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -59,26 +365,26 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 15
+    weight: 5
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 120
+    weight: 9
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 16
+    weight: 6
     region: content
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: -5
+    weight: 1
     region: content
     settings:
       size: 60
@@ -86,7 +392,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 3
     settings:
       match_operator: CONTAINS
       size: 60

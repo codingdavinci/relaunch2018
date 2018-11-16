@@ -1,0 +1,52 @@
+uuid: 426a3159-dd7b-4ab7-8d7e-21731b2d4c21
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_media_license
+    - node.type.data_set
+    - paragraphs.paragraphs_type.attribution
+  module:
+    - entity_reference_revisions
+id: node.data_set.field_media_license
+field_name: field_media_license
+entity_type: node
+bundle: data_set
+label: 'Lizenz der Mediendateien'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      attribution: attribution
+    target_bundles_drag_drop:
+      attribution:
+        enabled: true
+        weight: 9
+      attributed_image:
+        weight: 10
+        enabled: false
+      filesize:
+        weight: 11
+        enabled: false
+      image:
+        weight: 12
+        enabled: false
+      representative:
+        weight: 13
+        enabled: false
+      text:
+        weight: 14
+        enabled: false
+      textblock_left:
+        weight: 15
+        enabled: false
+      textblock_right:
+        weight: 16
+        enabled: false
+field_type: entity_reference_revisions

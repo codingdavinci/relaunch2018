@@ -1,0 +1,23 @@
+uuid: 229f292d-6260-4a3f-830c-57c4259cfdce
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metadata_doc_links
+    - node.type.data_set
+  module:
+    - link
+id: node.data_set.field_metadata_doc_links
+field_name: field_metadata_doc_links
+entity_type: node
+bundle: data_set
+label: 'Dokumentation/Legende zu den Metadaten'
+description: 'Bitte erklären Sie Metadatenfeldbezeichnungen, die sich einem normalen Nutzer nicht sofort erschließen. Erläutern Sie bitte ebenfalls Sonderzeichen mit inhaltlicher Bedeutung, Nichtsortierzeichen „¬”, usf. ; ein Beispiel finden Sie unter <a href="https://daten.berlin.de/datensaetze/liste-der-verbannten-bücher-0" target="_blank">https://daten.berlin.de/datensaetze/liste-der-verbannten-bücher-0</a>.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 2
+field_type: link

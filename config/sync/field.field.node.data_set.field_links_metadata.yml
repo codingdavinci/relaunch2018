@@ -1,0 +1,23 @@
+uuid: ae874fea-0f39-4b87-8116-42c04c8c2f36
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_links_metadata
+    - node.type.data_set
+  module:
+    - link
+id: node.data_set.field_links_metadata
+field_name: field_links_metadata
+entity_type: node
+bundle: data_set
+label: 'Link zu den Metadaten'
+description: 'z.B. DDB, Wikidata, Europeana, <a href="http://offenedaten.de" target="_blank">offenedaten.de</a>, eigene Webseite…'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 2
+field_type: link

@@ -22,6 +22,7 @@
         "drupal/config_installer": "^1.8",
         "drupal/console": "~1.0",
         "drupal/core": "~8.6.0",
+        "drupal/field_group": "^3.0",
         "drupal/insert": "^2.0",
         "drupal/matomo": "^1.7",
         "drupal/paragraphs": "^1.3",

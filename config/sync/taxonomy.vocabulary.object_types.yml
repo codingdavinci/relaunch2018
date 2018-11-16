@@ -1,0 +1,9 @@
+uuid: d0cde3dd-8ad0-49ec-aef4-13cbb33a0f10
+langcode: de
+status: true
+dependencies: {  }
+name: Objekttypen
+vid: object_types
+description: 'Zur Kategorisierung von Datensätzen.'
+hierarchy: 0
+weight: 0

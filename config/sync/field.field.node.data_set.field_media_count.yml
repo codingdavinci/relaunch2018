@@ -1,0 +1,23 @@
+uuid: c1ed5d7e-9365-440f-963f-7be9ebf61b76
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_media_count
+    - node.type.data_set
+id: node.data_set.field_media_count
+field_name: field_media_count
+entity_type: node
+bundle: data_set
+label: 'Gesamtzahl Mediendateien'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

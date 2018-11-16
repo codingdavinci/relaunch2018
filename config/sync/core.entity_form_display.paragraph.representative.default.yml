@@ -1,0 +1,59 @@
+uuid: 582019f6-11a6-4215-a4c9-ead0c2190f42
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.representative.field_email
+    - field.field.paragraph.representative.field_event
+    - field.field.paragraph.representative.field_function
+    - field.field.paragraph.representative.field_name
+    - field.field.paragraph.representative.field_phone
+    - paragraphs.paragraphs_type.representative
+  module:
+    - telephone
+id: paragraph.representative.default
+targetEntityType: paragraph
+bundle: representative
+mode: default
+content:
+  field_email:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_event:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_function:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_name:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_phone:
+    weight: 4
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

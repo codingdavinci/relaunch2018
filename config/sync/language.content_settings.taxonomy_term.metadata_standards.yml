@@ -1,0 +1,11 @@
+uuid: b44bf559-d528-4d4a-acd8-8d0c1c47f9c2
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.metadata_standards
+id: taxonomy_term.metadata_standards
+target_entity_type_id: taxonomy_term
+target_bundle: metadata_standards
+default_langcode: site_default
+language_alterable: false

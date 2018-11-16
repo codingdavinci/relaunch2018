@@ -1,0 +1,9 @@
+uuid: e4635acc-31fb-482f-b938-0f49d462aba8
+langcode: de
+status: true
+dependencies: {  }
+id: representative
+label: 'Vertreter beim Kick-Off'
+icon_uuid: null
+description: 'Kontaktdaten einer Person mit Referenz zu einer Veranstaltung.'
+behavior_plugins: {  }

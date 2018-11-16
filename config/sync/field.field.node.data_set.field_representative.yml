@@ -1,0 +1,46 @@
+uuid: 6fce77af-00b9-4744-8619-f8125e4bebad
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_representative
+    - node.type.data_set
+    - paragraphs.paragraphs_type.representative
+  module:
+    - entity_reference_revisions
+id: node.data_set.field_representative
+field_name: field_representative
+entity_type: node
+bundle: data_set
+label: 'Vertreter beim Kick-Off'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      representative: representative
+    target_bundles_drag_drop:
+      attributed_image:
+        weight: 7
+        enabled: false
+      image:
+        weight: 8
+        enabled: false
+      representative:
+        enabled: true
+        weight: 9
+      text:
+        weight: 10
+        enabled: false
+      textblock_left:
+        weight: 11
+        enabled: false
+      textblock_right:
+        weight: 12
+        enabled: false
+field_type: entity_reference_revisions

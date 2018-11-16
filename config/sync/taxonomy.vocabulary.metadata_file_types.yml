@@ -1,0 +1,9 @@
+uuid: 01eecca2-5195-4675-b959-ff291a416ab0
+langcode: de
+status: true
+dependencies: {  }
+name: Metadaten-Dateitypen
+vid: metadata_file_types
+description: 'Zu den Metadaten eines Datensatzes auswählbare Dateitypen.'
+hierarchy: 0
+weight: 0

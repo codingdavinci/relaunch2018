@@ -1,0 +1,20 @@
+uuid: 2d9a55f7-24b7-4da1-b40d-550fa7dc70ae
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_metadata_format
+field_name: field_metadata_format
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,9 @@
+uuid: f504222c-0f53-4bfc-8728-cd95f5a5140e
+langcode: de
+status: true
+dependencies: {  }
+name: Schlüsselwörter
+vid: keywords
+description: 'Zur Kategorisierung von Datensätzen.'
+hierarchy: 0
+weight: 0

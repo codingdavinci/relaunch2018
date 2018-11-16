@@ -1,0 +1,11 @@
+uuid: 0e39bd9d-98eb-4e55-9e51-2932319a18ff
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.filesize_units
+id: taxonomy_term.filesize_units
+target_entity_type_id: taxonomy_term
+target_bundle: filesize_units
+default_langcode: site_default
+language_alterable: false

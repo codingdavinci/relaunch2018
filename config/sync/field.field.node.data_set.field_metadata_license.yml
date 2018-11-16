@@ -1,0 +1,52 @@
+uuid: f2b4a8a5-2b7a-40df-9263-b181d116adc5
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metadata_license
+    - node.type.data_set
+    - paragraphs.paragraphs_type.attribution
+  module:
+    - entity_reference_revisions
+id: node.data_set.field_metadata_license
+field_name: field_metadata_license
+entity_type: node
+bundle: data_set
+label: 'Lizenz der Metadaten'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      attribution: attribution
+    target_bundles_drag_drop:
+      attributed_image:
+        weight: 9
+        enabled: false
+      attribution:
+        enabled: true
+        weight: 10
+      filesize:
+        weight: 11
+        enabled: false
+      image:
+        weight: 12
+        enabled: false
+      representative:
+        weight: 13
+        enabled: false
+      text:
+        weight: 14
+        enabled: false
+      textblock_left:
+        weight: 15
+        enabled: false
+      textblock_right:
+        weight: 16
+        enabled: false
+field_type: entity_reference_revisions

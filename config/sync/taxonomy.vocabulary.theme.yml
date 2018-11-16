@@ -1,0 +1,9 @@
+uuid: bf7c4d56-7fdd-4691-b267-f670958b0d92
+langcode: de
+status: true
+dependencies: {  }
+name: Themen
+vid: theme
+description: 'Zur Kategorisierung von Datensätzen.'
+hierarchy: 0
+weight: 0

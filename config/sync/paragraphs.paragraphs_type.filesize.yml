@@ -1,0 +1,9 @@
+uuid: 96b15821-bf1a-4510-888d-135e70136e2f
+langcode: de
+status: true
+dependencies: {  }
+id: filesize
+label: Dateigröße
+icon_uuid: null
+description: 'Numerisches Eingabefeld mit Auswahlfeld für die Einheit.'
+behavior_plugins: {  }

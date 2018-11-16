@@ -1,0 +1,9 @@
+uuid: 7cab7f0b-73fd-4fa6-9fdc-64aa72559346
+langcode: de
+status: true
+dependencies: {  }
+name: Dateitypen
+vid: file_types
+description: 'Zur Kategorisierung von Datensätzen.'
+hierarchy: 0
+weight: 0

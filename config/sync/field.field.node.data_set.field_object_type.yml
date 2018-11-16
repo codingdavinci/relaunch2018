@@ -1,0 +1,29 @@
+uuid: 427b7435-bb7d-4726-95fc-d52fcd6f3e54
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_object_type
+    - node.type.data_set
+    - taxonomy.vocabulary.object_types
+id: node.data_set.field_object_type
+field_name: field_object_type
+entity_type: node
+bundle: data_set
+label: Objekttyp
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      object_types: object_types
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,42 @@
+uuid: ddce8a45-d649-47e1-8463-f80dfbcd9d3b
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.attributed_image.field_author
+    - field.field.paragraph.attributed_image.field_inline_image
+    - field.field.paragraph.attributed_image.field_license
+    - paragraphs.paragraphs_type.attributed_image
+  module:
+    - image
+id: paragraph.attributed_image.default
+targetEntityType: paragraph
+bundle: attributed_image
+mode: default
+content:
+  field_author:
+    weight: 4
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_inline_image:
+    weight: 2
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_license:
+    weight: 3
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden: {  }

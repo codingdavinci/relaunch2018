@@ -1,0 +1,29 @@
+uuid: b0de8554-fd9d-4d8d-8d17-78e17c6d88b2
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_license
+    - paragraphs.paragraphs_type.attributed_image
+    - taxonomy.vocabulary.licenses
+id: paragraph.attributed_image.field_license
+field_name: field_license
+entity_type: paragraph
+bundle: attributed_image
+label: Lizenz
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      licenses: licenses
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

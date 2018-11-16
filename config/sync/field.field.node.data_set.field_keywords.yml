@@ -1,0 +1,29 @@
+uuid: 14da06ad-3310-45c4-8e2c-210757d5aac8
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_keywords
+    - node.type.data_set
+    - taxonomy.vocabulary.keywords
+id: node.data_set.field_keywords
+field_name: field_keywords
+entity_type: node
+bundle: data_set
+label: Schlüsselwörter
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      keywords: keywords
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

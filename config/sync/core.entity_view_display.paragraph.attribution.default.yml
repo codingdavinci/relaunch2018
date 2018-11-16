@@ -1,0 +1,30 @@
+uuid: 4e3e6119-18e8-4782-a74d-39c9d6552868
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.attribution.field_author
+    - field.field.paragraph.attribution.field_license
+    - paragraphs.paragraphs_type.attribution
+id: paragraph.attribution.default
+targetEntityType: paragraph
+bundle: attribution
+mode: default
+content:
+  field_author:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_license:
+    weight: 0
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden: {  }

@@ -1,0 +1,19 @@
+uuid: 02b87cac-a712-48de-b8c6-be37d56f0770
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_author
+    - paragraphs.paragraphs_type.attributed_image
+id: paragraph.attributed_image.field_author
+field_name: field_author
+entity_type: paragraph
+bundle: attributed_image
+label: Urheber
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

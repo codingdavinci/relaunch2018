@@ -1,0 +1,23 @@
+uuid: 9deb153a-3ae7-4fe1-9dbc-3ca9dbd9080d
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_links_api
+    - node.type.data_set
+  module:
+    - link
+id: node.data_set.field_links_api
+field_name: field_links_api
+entity_type: node
+bundle: data_set
+label: 'Link zur API'
+description: 'Falls die Metadaten (möglicherweise auch Mediendateien) zu den Objekten Ihrer Sammlung über eine Schnittstelle (API, SPARQL-Endpunkt, OAI-Server, o.ä.) öffentlich im Internet zugänglich sind, tragen Sie hier bitte die entsprechenden Informationen ein, inklusive der Dokumentation. Dabei muss es sich nicht um Ihren eigenen Webauftritt handeln; hier können Sie Datenportale mit entsprechenden Schnittstellen wie z.B. die Deutsche Digitale Bibliothek angeben.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 2
+field_type: link

@@ -1,0 +1,46 @@
+uuid: 20011536-26b6-4da0-99e4-ddc75c99b8b1
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.attributed_image.field_author
+    - field.field.paragraph.attributed_image.field_inline_image
+    - field.field.paragraph.attributed_image.field_license
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.attributed_image
+  module:
+    - image
+id: paragraph.attributed_image.default
+targetEntityType: paragraph
+bundle: attributed_image
+mode: default
+content:
+  field_author:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_inline_image:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_license:
+    weight: 3
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

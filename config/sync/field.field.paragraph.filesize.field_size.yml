@@ -1,0 +1,23 @@
+uuid: bc29d260-e9e9-4984-bf5b-53f8b73f0a9d
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_size
+    - paragraphs.paragraphs_type.filesize
+id: paragraph.filesize.field_size
+field_name: field_size
+entity_type: paragraph
+bundle: filesize
+label: Größe
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: !!float 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

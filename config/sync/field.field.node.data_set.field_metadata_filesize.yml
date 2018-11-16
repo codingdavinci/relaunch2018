@@ -1,0 +1,52 @@
+uuid: 3e262bcb-9635-4060-b03a-b5e889d41311
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metadata_filesize
+    - node.type.data_set
+    - paragraphs.paragraphs_type.filesize
+  module:
+    - entity_reference_revisions
+id: node.data_set.field_metadata_filesize
+field_name: field_metadata_filesize
+entity_type: node
+bundle: data_set
+label: 'Gesamtgröße der Metadaten'
+description: 'Bezogen auf die Speichermenge.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      filesize: filesize
+    target_bundles_drag_drop:
+      attributed_image:
+        weight: 9
+        enabled: false
+      attribution:
+        weight: 10
+        enabled: false
+      filesize:
+        enabled: true
+        weight: 11
+      image:
+        weight: 12
+        enabled: false
+      representative:
+        weight: 13
+        enabled: false
+      text:
+        weight: 14
+        enabled: false
+      textblock_left:
+        weight: 15
+        enabled: false
+      textblock_right:
+        weight: 16
+        enabled: false
+field_type: entity_reference_revisions
