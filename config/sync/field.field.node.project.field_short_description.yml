@@ -1,0 +1,19 @@
+uuid: 8a5f90ed-55d1-4fa4-8b3b-520e123e11b0
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_short_description
+    - node.type.project
+id: node.project.field_short_description
+field_name: field_short_description
+entity_type: node
+bundle: project
+label: Kurzbeschreibung
+description: 'Das ist eine Platzhalterbeschreibung.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

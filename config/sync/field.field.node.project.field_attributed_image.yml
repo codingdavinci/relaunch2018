@@ -1,0 +1,55 @@
+uuid: 646ee634-810d-4f50-9072-28d11ba53b26
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_attributed_image
+    - node.type.project
+    - paragraphs.paragraphs_type.attributed_image
+  module:
+    - entity_reference_revisions
+id: node.project.field_attributed_image
+field_name: field_attributed_image
+entity_type: node
+bundle: project
+label: Bild
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      attributed_image: attributed_image
+    target_bundles_drag_drop:
+      attributed_image:
+        enabled: true
+        weight: 10
+      attribution:
+        weight: 11
+        enabled: false
+      filesize:
+        weight: 12
+        enabled: false
+      image:
+        weight: 13
+        enabled: false
+      representative:
+        weight: 14
+        enabled: false
+      team_email:
+        weight: 15
+        enabled: false
+      text:
+        weight: 16
+        enabled: false
+      textblock_left:
+        weight: 17
+        enabled: false
+      textblock_right:
+        weight: 18
+        enabled: false
+field_type: entity_reference_revisions

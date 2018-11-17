@@ -1,0 +1,9 @@
+uuid: c663cb6f-94b6-4759-8848-31889e6d43c0
+langcode: de
+status: true
+dependencies: {  }
+name: Projekttypen
+vid: project_types
+description: 'Zur Kategorisierung von Projekten.'
+hierarchy: 0
+weight: 0

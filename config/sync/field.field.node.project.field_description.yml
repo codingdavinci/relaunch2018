@@ -1,0 +1,21 @@
+uuid: 54823bb8-5031-4d8e-beba-cd4a323a6b7c
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description
+    - node.type.project
+  module:
+    - text
+id: node.project.field_description
+field_name: field_description
+entity_type: node
+bundle: project
+label: Beschreibung
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

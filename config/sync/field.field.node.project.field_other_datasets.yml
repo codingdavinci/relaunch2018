@@ -1,0 +1,23 @@
+uuid: a883d624-6ab7-438f-adde-803832afe84e
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_other_datasets
+    - node.type.project
+  module:
+    - link
+id: node.project.field_other_datasets
+field_name: field_other_datasets
+entity_type: node
+bundle: project
+label: 'Andere Datensätze'
+description: 'Das ist eine Platzhalterbeschreibung.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 2
+field_type: link

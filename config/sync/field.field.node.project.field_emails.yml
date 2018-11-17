@@ -1,0 +1,55 @@
+uuid: 06cffb9c-d6ed-41aa-ab38-354520569a4f
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_emails
+    - node.type.project
+    - paragraphs.paragraphs_type.team_email
+  module:
+    - entity_reference_revisions
+id: node.project.field_emails
+field_name: field_emails
+entity_type: node
+bundle: project
+label: E-Mail-Adressen
+description: 'Das ist eine Platzhalterbeschreibung.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      team_email: team_email
+    target_bundles_drag_drop:
+      team_email:
+        enabled: true
+        weight: 10
+      attributed_image:
+        weight: 11
+        enabled: false
+      attribution:
+        weight: 12
+        enabled: false
+      filesize:
+        weight: 13
+        enabled: false
+      image:
+        weight: 14
+        enabled: false
+      representative:
+        weight: 15
+        enabled: false
+      text:
+        weight: 16
+        enabled: false
+      textblock_left:
+        weight: 17
+        enabled: false
+      textblock_right:
+        weight: 18
+        enabled: false
+field_type: entity_reference_revisions

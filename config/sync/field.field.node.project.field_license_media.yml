@@ -1,0 +1,55 @@
+uuid: 553cc47f-5655-4c26-9106-229a67ae0496
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_license_media
+    - node.type.project
+    - paragraphs.paragraphs_type.attribution
+  module:
+    - entity_reference_revisions
+id: node.project.field_license_media
+field_name: field_license_media
+entity_type: node
+bundle: project
+label: 'Lizenz der Mediendateien'
+description: 'Das ist eine Platzhalterbeschreibung.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      attribution: attribution
+    target_bundles_drag_drop:
+      attributed_image:
+        weight: 10
+        enabled: false
+      attribution:
+        enabled: true
+        weight: 11
+      filesize:
+        weight: 12
+        enabled: false
+      image:
+        weight: 13
+        enabled: false
+      representative:
+        weight: 14
+        enabled: false
+      team_email:
+        weight: 15
+        enabled: false
+      text:
+        weight: 16
+        enabled: false
+      textblock_left:
+        weight: 17
+        enabled: false
+      textblock_right:
+        weight: 18
+        enabled: false
+field_type: entity_reference_revisions

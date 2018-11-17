@@ -1,29 +1,29 @@
-uuid: 73d3a7e5-c84b-40ba-be80-e5735344aefc
+uuid: 0b48121f-9857-4e35-a8d7-f178556da6c3
 langcode: de
 status: true
 dependencies:
   config:
-    - field.storage.node.field_datasets
-    - node.type.data_set
+    - field.storage.node.field_tags
     - node.type.project
-id: node.project.field_datasets
-field_name: field_datasets
+    - taxonomy.vocabulary.project_types
+id: node.project.field_tags
+field_name: field_tags
 entity_type: node
 bundle: project
-label: Datensätze
+label: Projekttyp
 description: 'Das ist eine Platzhalterbeschreibung.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:node'
+  handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      data_set: data_set
+      project_types: project_types
     sort:
-      field: title
-      direction: ASC
+      field: name
+      direction: asc
     auto_create: false
     auto_create_bundle: ''
 field_type: entity_reference

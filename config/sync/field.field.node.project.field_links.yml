@@ -1,0 +1,23 @@
+uuid: 39f25bfd-7dda-4ebe-acab-43133f3ca492
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_links
+    - node.type.project
+  module:
+    - link
+id: node.project.field_links
+field_name: field_links
+entity_type: node
+bundle: project
+label: Links
+description: 'Das ist eine Platzhalterbeschreibung.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 2
+field_type: link

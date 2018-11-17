@@ -3,11 +3,23 @@ langcode: de
 status: true
 dependencies:
   config:
-    - field.field.node.project.body
+    - field.field.node.project.field_attributed_image
     - field.field.node.project.field_datasets
+    - field.field.node.project.field_description
+    - field.field.node.project.field_emails
     - field.field.node.project.field_event
+    - field.field.node.project.field_license_code
+    - field.field.node.project.field_license_media
+    - field.field.node.project.field_links
+    - field.field.node.project.field_links_team
+    - field.field.node.project.field_other_datasets
+    - field.field.node.project.field_remarks
+    - field.field.node.project.field_short_description
+    - field.field.node.project.field_tags
     - node.type.project
   module:
+    - entity_reference_revisions
+    - link
     - text
     - user
 id: node.project.default
@@ -15,17 +27,19 @@ targetEntityType: node
 bundle: project
 mode: default
 content:
-  body:
-    label: hidden
-    type: text_default
-    weight: 101
-    settings: {  }
-    third_party_settings: {  }
-    region: content
   content_moderation_control:
     weight: -20
     settings: {  }
     third_party_settings: {  }
+    region: content
+  field_attributed_image:
+    weight: 114
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
     region: content
   field_datasets:
     weight: 103
@@ -35,8 +49,101 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
+  field_description:
+    weight: 104
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_emails:
+    type: entity_reference_revisions_entity_view
+    weight: 109
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
   field_event:
     weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_license_code:
+    type: entity_reference_revisions_entity_view
+    weight: 111
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_license_media:
+    type: entity_reference_revisions_entity_view
+    weight: 112
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_links:
+    weight: 106
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_links_team:
+    weight: 108
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_other_datasets:
+    weight: 107
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_remarks:
+    weight: 113
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_short_description:
+    weight: 105
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tags:
+    weight: 110
     label: above
     settings:
       link: true

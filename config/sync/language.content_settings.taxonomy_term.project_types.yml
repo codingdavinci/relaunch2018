@@ -1,0 +1,11 @@
+uuid: febab92a-9bf9-4619-8c55-d2db342cc200
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.project_types
+id: taxonomy_term.project_types
+target_entity_type_id: taxonomy_term
+target_bundle: project_types
+default_langcode: site_default
+language_alterable: false
