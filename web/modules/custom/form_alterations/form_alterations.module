@@ -66,3 +66,32 @@ function form_alterations_form_node_data_set_form_alter(array &$form, FormStateI
 
   $form['langcode']['widget'][0]['value']['#title'] = t('Language of this data set description');
 }
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * @param array $form
+ * @param FormStateInterface $form_state
+ * @param string $form_id
+ */
+function form_alterations_form_node_project_form_alter(array &$form, FormStateInterface $form_state, $form_id) {
+  $currentUser = \Drupal::currentUser();
+  $currentRoles = $currentUser->getRoles();
+
+  if (count(array_intersect(['administrator', 'event_team', 'office'], $currentRoles)) === 0) {
+    $form['moderation_state']['#access'] = FALSE;
+    $form['#attached']['library'][] = 'form_alterations/styles';
+  }
+
+  $linkFieldNames = [
+    'field_links',
+    'field_other_datasets',
+    'field_links_team',
+  ];
+
+  foreach ($linkFieldNames as $linkFieldName) {
+    $form[$linkFieldName]['widget']['add_more']['#value'] = t('Add another link');
+  }
+
+  $form['langcode']['widget'][0]['value']['#title'] = t('Language of this project description');
+}
