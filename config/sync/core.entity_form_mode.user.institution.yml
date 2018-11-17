@@ -1,0 +1,10 @@
+uuid: ec894776-512a-4caa-b8e9-e09b0ba67ed0
+langcode: de
+status: true
+dependencies:
+  module:
+    - user
+id: user.institution
+label: Institution
+targetEntityType: user
+cache: true

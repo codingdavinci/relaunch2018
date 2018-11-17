@@ -1,0 +1,23 @@
+uuid: f28da36f-a021-4ca5-9f11-b3f860458b61
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_link
+  module:
+    - link
+    - user
+id: user.user.field_link
+field_name: field_link
+entity_type: user
+bundle: user
+label: Internetseite
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link

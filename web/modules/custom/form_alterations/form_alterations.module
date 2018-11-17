@@ -1,5 +1,6 @@
 <?php
 
+use Drupal\Core\Entity\Display\EntityFormDisplayInterface;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
@@ -94,4 +95,54 @@ function form_alterations_form_node_project_form_alter(array &$form, FormStateIn
   }
 
   $form['langcode']['widget'][0]['value']['#title'] = t('Language of this project description');
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * @param array $form
+ * @param FormStateInterface $form_state
+ * @param string $form_id
+ */
+function form_alterations_form_user_form_alter(array &$form, FormStateInterface $form_state, $form_id) {
+
+  /** @var \Drupal\user\ProfileForm $profileForm */
+  $profileForm = $form_state->getFormObject();
+
+  /** @var \Drupal\user\Entity\User $user */
+  $user = $profileForm->getEntity();
+
+  if (count(array_intersect(['institution'], $user->getRoles())) === 0) {
+    // Hide institution-specific user profile form element, if that profile is
+    // not a institution profile.
+    $form['#attached']['library'][] = 'form_alterations/user-profile-not-institution';
+  }
+}
+
+/**
+ * Implements hook_entity_form_display_alter().
+ *
+ * @param EntityFormDisplayInterface $form_display
+ * @param array $context
+ */
+function form_alterations_entity_form_display_alter(EntityFormDisplayInterface &$form_display, array $context) {
+  $currentUser = \Drupal::currentUser();
+  $currentRoles = $currentUser->getRoles();
+
+  // Unfortunately, $context does not contain info that would allow retrieving
+  // the roles of the user whose profile form is being rendered.
+  // Consequently, the form mode is altered according to the user VIEWING the
+  // form keeping in mind that user managers shall always be able to access all
+  // fields. However, fields that do not apply to a particular user role are
+  // hidden using CSS per form_alterations_form_user_form_alter.
+  if (
+    count(array_intersect(['administrator', 'event_team', 'office', 'institution'], $currentRoles)) > 0
+    && $context['entity_type'] && $context['bundle'] === 'user'
+  ) {
+    $storage = \Drupal::entityTypeManager()->getStorage('entity_form_display');
+    $institutionFormMode = $storage->load('user.user.institution');
+    if ($institutionFormMode !== null) {
+      $form_display = $institutionFormMode;
+    }
+  }
 }

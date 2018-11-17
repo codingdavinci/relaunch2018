@@ -2,8 +2,63 @@ uuid: 7e5b63df-c4c9-4f62-a493-c4c787c93fe7
 langcode: de
 status: true
 dependencies:
+  config:
+    - field.field.user.user.field_institution_name
+    - field.field.user.user.field_link
+    - field.field.user.user.field_logo
+    - field.field.user.user.field_representative_email
+    - field.field.user.user.field_representative_name
+    - field.field.user.user.field_representative_phone
+    - field.field.user.user.field_representative_responsible
   module:
+    - field_group
     - user
+third_party_settings:
+  field_group:
+    group_representative:
+      children:
+        - field_representative_email
+        - field_representative_name
+        - field_representative_phone
+        - field_representative_responsible
+      parent_name: group_institution
+      weight: 5
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: false
+      label: Ansprechpartner
+      region: hidden
+    group_login_data:
+      children: {  }
+      parent_name: ''
+      weight: 7
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: false
+      label: Zugangsdaten
+      region: hidden
+    group_institution:
+      children:
+        - field_institution_name
+        - field_link
+        - field_logo
+        - group_representative
+      parent_name: ''
+      weight: 8
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: false
+      label: 'Daten Ihrer Kulturinstitution'
+      region: hidden
 _core:
   default_config_hash: K-1rBM8mTIkFp9RqOC2tMRUukOQ1xbRCfSKK8dEddnA
 id: user.user.default
@@ -23,5 +78,14 @@ content:
     third_party_settings: {  }
 hidden:
   contact: true
+  field_institution_name: true
+  field_link: true
+  field_logo: true
+  field_representative_email: true
+  field_representative_name: true
+  field_representative_phone: true
+  field_representative_responsible: true
   langcode: true
+  matomo: true
+  path: true
   timezone: true

@@ -1,0 +1,30 @@
+uuid: 8182fa92-329d-4696-8dd9-caf7556f4d03
+langcode: de
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - user
+id: user.field_logo
+field_name: field_logo
+entity_type: user
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

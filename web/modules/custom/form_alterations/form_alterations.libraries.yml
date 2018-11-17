@@ -24,3 +24,9 @@ multistep:
       css/multistep.css: {}
   dependencies:
     - core/jquery
+
+user-profile-not-institution:
+  version: 1.x
+  css:
+    theme:
+      css/user-not-institution.css: {}

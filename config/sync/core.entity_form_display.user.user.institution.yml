@@ -1,0 +1,146 @@
+uuid: d27c8696-15ba-42e9-a594-f84e5eca0af0
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.user.institution
+    - field.field.user.user.field_institution_name
+    - field.field.user.user.field_link
+    - field.field.user.user.field_logo
+    - field.field.user.user.field_representative_email
+    - field.field.user.user.field_representative_name
+    - field.field.user.user.field_representative_phone
+    - field.field.user.user.field_representative_responsible
+    - image.style.thumbnail
+  module:
+    - field_group
+    - image
+    - link
+    - telephone
+    - user
+third_party_settings:
+  field_group:
+    group_representative:
+      children:
+        - field_representative_name
+        - field_representative_responsible
+        - field_representative_email
+        - field_representative_phone
+      parent_name: group_institution
+      weight: 5
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: false
+      label: Ansprechpartner
+      region: content
+    group_login_data:
+      children:
+        - account
+      parent_name: ''
+      weight: 0
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: false
+      label: Zugangsdaten
+      region: content
+    group_institution:
+      children:
+        - field_institution_name
+        - field_link
+        - field_logo
+        - group_representative
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
+      format_settings:
+        label: 'Daten Ihrer Kulturinstitution'
+        description: ''
+        id: institution-data
+        classes: ''
+        required_fields: false
+      label: 'Daten Ihrer Kulturinstitution'
+      region: content
+_core:
+  default_config_hash: K-1rBM8mTIkFp9RqOC2tMRUukOQ1xbRCfSKK8dEddnA
+id: user.user.institution
+targetEntityType: user
+bundle: user
+mode: institution
+content:
+  account:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_institution_name:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_link:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_logo:
+    weight: 4
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_representative_email:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_representative_name:
+    weight: 7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_representative_phone:
+    weight: 10
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_representative_responsible:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  language:
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  contact: true
+  langcode: true
+  matomo: true
+  path: true
+  timezone: true
