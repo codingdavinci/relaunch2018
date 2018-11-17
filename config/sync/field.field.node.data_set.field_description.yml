@@ -13,7 +13,7 @@ entity_type: node
 bundle: data_set
 label: Beschreibung
 description: ''
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''

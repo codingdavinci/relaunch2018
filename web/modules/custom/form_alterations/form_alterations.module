@@ -1,0 +1,68 @@
+<?php
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_preprocess_HOOK().
+ *
+ * @param array $variables
+ */
+function form_alterations_preprocess_file_upload_help(array &$variables) {
+  // Remove unneeded explanations
+  // - number of files:
+  unset($variables['descriptions'][0]);
+  // - maximum file size:
+  unset($variables['descriptions'][1]);
+}
+
+/**
+ * Implements hook_field_widget_WIDGET_TYPE_form_alter().
+ *
+ * @param array $element
+ * @param FormStateInterface $form_state
+ * @param array $context
+ */
+function form_alterations_field_widget_options_select_form_alter(array &$element, FormStateInterface $form_state, array $context) {
+  if (
+    isset($context['form']['#entity_type'])
+    && $context['form']['#entity_type'] === 'paragraph'
+  ) {
+    $element['#options']['_none'] = t('- Select -');
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * @param array $form
+ * @param FormStateInterface $form_state
+ * @param string $form_id
+ */
+function form_alterations_form_node_data_set_form_alter(array &$form, FormStateInterface $form_state, $form_id) {
+  $currentUser = \Drupal::currentUser();
+  $currentRoles = $currentUser->getRoles();
+
+  $form['#attached']['library'][] = 'form_alterations/checkbox-hierarchy';
+  $form['#attached']['library'][] = 'form_alterations/multistep';
+
+  if (count(array_intersect(['administrator', 'event_team', 'office'], $currentRoles)) === 0) {
+    $form['moderation_state']['#access'] = FALSE;
+    $form['#attached']['library'][] = 'form_alterations/styles';
+  }
+
+  unset($form['field_media_filesize']['widget'][0]['subform']['field_unit']['widget']['#options']['_none']);
+  unset($form['field_metadata_filesize']['widget'][0]['subform']['field_unit']['widget']['#options']['_none']);
+
+  $linkFieldNames = [
+    'field_metadata_doc_links',
+    'field_links_api',
+    'field_links_media',
+    'field_links_metadata',
+  ];
+
+  foreach ($linkFieldNames as $linkFieldName) {
+    $form[$linkFieldName]['widget']['add_more']['#value'] = t('Add another link');
+  }
+
+  $form['langcode']['widget'][0]['value']['#title'] = t('Language of this data set description');
+}

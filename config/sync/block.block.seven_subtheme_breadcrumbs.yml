@@ -1,0 +1,22 @@
+uuid: c41456c4-ad27-40f2-b11a-5652c34daa42
+langcode: de
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - seven_subtheme
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: seven_subtheme_breadcrumbs
+theme: seven_subtheme
+region: breadcrumb
+weight: -13
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Pfadnavigation
+  provider: system
+  label_display: '0'
+visibility: {  }

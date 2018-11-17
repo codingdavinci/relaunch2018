@@ -1,0 +1,283 @@
+@import 'includes/base';
+
+#node-data-set-form {
+
+  .form-item {
+
+    &:not(.form-type-checkbox) {
+      margin-bottom: 3em;
+    }
+
+    &.form-type-checkbox {
+      margin: 1em 0;
+    }
+
+    .tabledrag-toggle-weight-wrapper {
+      display: none;
+    }
+  }
+
+  .horizontal-tabs {
+    margin-bottom: 3rem;
+
+    .horizontal-tabs-pane {
+      background: transparent;
+      border: none;
+      padding-top: 1em;
+
+      input,
+      select {
+        max-width: 100%;
+
+        &[type="text"],
+        &[type="email"],
+        &[type="number"],
+        &[type="tel"],
+        &[type="url"],
+        &.form-select {
+          font-size: $font-size-large;
+          line-height: normal;
+          padding: .5em;
+          width: 25em;
+        }
+      }
+
+      .field--name-title,
+      .field--name-field-keywords {
+        input {
+          width: 100%;
+        }
+      }
+
+      .form-checkboxes {
+        label {
+          font-size: $font-size-large;
+        }
+      }
+
+      .field--name-field-attributed-image {
+        h4 {
+          display: none;
+        }
+
+        table {
+          @include border;
+
+          border-collapse: separate;
+          padding: 0 20px;
+
+          thead {
+            display: none;
+          }
+
+          tbody {
+            tr {
+              &:hover {
+                background-color: transparent;
+              }
+            }
+          }
+
+        }
+      }
+
+      .field--name-field-representative {
+        & > div > h4 {
+          display: none;
+        }
+      }
+
+      .field--widget-paragraphs {
+        margin-bottom: 3em;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .form-item {
+          margin-bottom: 0;
+        }
+
+        .paragraph-bullet {
+          display: none;
+        }
+
+        .paragraph-top {
+          display: none;
+        }
+
+        table {
+          @include border;
+
+          border-collapse: separate;
+          padding-bottom: 10px;
+
+          thead {
+            th {
+              border-top: none;
+
+              .paragraphs-actions {
+                display: none;
+              }
+            }
+          }
+
+          tbody {
+            tr {
+              &:hover {
+                background-color: transparent;
+              }
+            }
+          }
+
+        }
+
+        &.field--name-field-media-filesize,
+        &.field--name-field-metadata-filesize {
+          table {
+            border: none;
+
+            thead {
+              display: none;
+            }
+
+            th {
+              background: transparent;
+              border: none;
+              padding: 0;
+              text-transform: none;
+            }
+
+            td {
+              padding: 0;
+            }
+          }
+
+          .form-item {
+            margin-top: 0;
+          }
+
+          .paragraphs-subform {
+            margin-top: 0;
+
+            & > div {
+              display: inline-block;
+
+              .form-item {
+                margin-top: 0;
+              }
+            }
+
+            .field--name-field-size input {
+              width: 15em;
+            }
+
+            .field--name-field-unit select {
+              width: 6em;
+            }
+          }
+
+          label {
+            display: none;
+          }
+        }
+
+        &.field--name-field-media-license,
+        &.field--name-field-metadata-license {
+          table {
+            @include border;
+
+            border-collapse: separate;
+            padding: 0 20px;
+
+            thead {
+              display: none;
+            }
+
+            tbody {
+              tr {
+                &:hover {
+                  background-color: transparent;
+                }
+
+                td {
+                  padding: 20px 0;
+
+                  .paragraphs-subform {
+                    margin-top: 0;
+                  }
+                }
+              }
+            }
+
+          }
+
+          .field--name-field-license {
+            display: inline-block;
+
+            .form-item {
+              margin-top: 0;
+
+              select {
+                width: 10em;
+              }
+            }
+          }
+
+          .field--name-field-author {
+            display: inline-block;
+
+            .form-item {
+              margin-top: 0;
+
+              input {
+                width: 30em;
+              }
+            }
+          }
+
+        }
+
+      }
+
+      .field--name-field-metadata-doc-links,
+      .field--name-field-links-api,
+      .field--name-field-links-media,
+      .field--name-field-links-metadata {
+        table {
+          @include border;
+
+          border-collapse: separate;
+
+          thead {
+            display: none;
+          }
+
+          tbody {
+            tr {
+              &:hover {
+                background-color: transparent;
+              }
+
+              td {
+                .form-item {
+                  margin-bottom: 0;
+
+                  &:first-child {
+                    margin-top: 0;
+                  }
+                }
+              }
+            }
+          }
+
+        }
+      }
+
+      .filter-wrapper {
+        display: none;
+      }
+
+    }
+  }
+}

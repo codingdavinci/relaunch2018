@@ -1,0 +1,44 @@
+@import 'includes/base';
+
+.layout-node-form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  .layout-region {
+    width: 100%;
+
+    &.layout-region-node-secondary {
+      display: none;
+    }
+
+    &.layout-region-node-footer {
+      text-align: center;
+    }
+
+    @include media-breakpoint-up(sm) {
+      width: 540px;
+    }
+    @include media-breakpoint-up(ms) {
+      width: 720px;
+    }
+    @include media-breakpoint-up(lg) {
+      width: 960px;
+    }
+    @include media-breakpoint-up(xl) {
+      width: 1140px;
+    }
+  }
+
+  .form-type-language-select {
+    select {
+      option {
+        &[value="und"],
+        &[value="zxx"] {
+          display: none;
+        }
+      }
+    }
+  }
+
+}

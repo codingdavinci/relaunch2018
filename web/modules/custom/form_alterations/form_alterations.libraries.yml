@@ -1,0 +1,26 @@
+styles:
+  version: 1.x
+  css:
+    theme:
+      css/styles.css: {}
+
+checkbox-hierarchy:
+  version: 1.x
+  js:
+    js/checkbox-hierarchy.js: {}
+  css:
+    theme:
+      css/checkbox-hierarchy.css: {}
+  dependencies:
+    - core/jquery
+    - relaunch2018/jquery-easing
+
+multistep:
+  version: 1.x
+  js:
+    js/multistep.js: {}
+  css:
+    theme:
+      css/multistep.css: {}
+  dependencies:
+    - core/jquery

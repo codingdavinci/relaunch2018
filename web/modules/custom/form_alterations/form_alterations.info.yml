@@ -1,0 +1,6 @@
+name: Form Alterations
+version: 0.1
+type: module
+description: "Applies various alterations to forms."
+package: Custom
+core: 8.x

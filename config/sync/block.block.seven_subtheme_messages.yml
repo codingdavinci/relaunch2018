@@ -1,0 +1,22 @@
+uuid: 564a4e97-b883-47f5-b4d7-64ec9acd890a
+langcode: de
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - seven_subtheme
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: seven_subtheme_messages
+theme: seven_subtheme
+region: highlighted
+weight: -14
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Status-Nachrichten
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -6,6 +6,7 @@ dependencies:
     - field.storage.node.field_paragraphs
     - node.type.event
     - paragraphs.paragraphs_type.image
+    - paragraphs.paragraphs_type.text
     - paragraphs.paragraphs_type.textblock_left
     - paragraphs.paragraphs_type.textblock_right
   module:
@@ -28,6 +29,7 @@ settings:
       textblock_left: textblock_left
       textblock_right: textblock_right
       image: image
+      text: text
     target_bundles_drag_drop:
       textblock_left:
         enabled: true
@@ -39,6 +41,6 @@ settings:
         enabled: true
         weight: -7
       text:
+        enabled: true
         weight: -6
-        enabled: false
 field_type: entity_reference_revisions

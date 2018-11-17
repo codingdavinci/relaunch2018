@@ -8,7 +8,7 @@ id: node.data_set.title
 field_name: title
 entity_type: node
 bundle: data_set
-label: Titel
+label: 'Name/Titel der Sammlung'
 description: ''
 required: true
 translatable: false

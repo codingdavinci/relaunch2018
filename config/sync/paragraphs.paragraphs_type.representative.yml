@@ -3,7 +3,7 @@ langcode: de
 status: true
 dependencies: {  }
 id: representative
-label: 'Vertreter beim Kick-Off'
+label: Vertreter
 icon_uuid: null
 description: 'Kontaktdaten einer Person mit Referenz zu einer Veranstaltung.'
 behavior_plugins: {  }

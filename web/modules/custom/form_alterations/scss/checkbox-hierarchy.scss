@@ -1,0 +1,18 @@
+@import 'includes/base';
+
+.form-checkboxes {
+  .hierarchy {
+    display: none;
+    margin-left: 2em;
+
+    .form-item {
+      // Prevent jitters when sliding up/down:
+      &:first-child {
+        margin-top: 0 !important;
+      }
+      &:last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+  }
+}

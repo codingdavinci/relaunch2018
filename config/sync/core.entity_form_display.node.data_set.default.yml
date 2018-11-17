@@ -42,7 +42,7 @@ third_party_settings:
         - group_metadata
         - group_links
       parent_name: ''
-      weight: 0
+      weight: 2
       format_type: tabs
       format_settings:
         label: Reiter
@@ -108,7 +108,6 @@ third_party_settings:
       region: content
     group_general:
       children:
-        - title
         - field_attributed_image
         - field_description
         - field_theme
@@ -133,7 +132,7 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 4
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -219,7 +218,7 @@ content:
     type: number
     region: content
   field_media_filesize:
-    type: entity_reference_paragraphs
+    type: paragraphs
     weight: 9
     settings:
       title: Seitenabschnitt
@@ -228,10 +227,16 @@ content:
       add_mode: dropdown
       form_display_mode: default
       default_paragraph_type: ''
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
     third_party_settings: {  }
     region: content
   field_media_license:
-    type: entity_reference_paragraphs
+    type: paragraphs
     weight: 10
     settings:
       title: Seitenabschnitt
@@ -240,6 +245,12 @@ content:
       add_mode: dropdown
       form_display_mode: default
       default_paragraph_type: ''
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
     third_party_settings: {  }
     region: content
   field_metadata_doc_links:
@@ -251,7 +262,7 @@ content:
     type: link_default
     region: content
   field_metadata_filesize:
-    type: entity_reference_paragraphs
+    type: paragraphs
     weight: 18
     settings:
       title: Seitenabschnitt
@@ -260,6 +271,12 @@ content:
       add_mode: dropdown
       form_display_mode: default
       default_paragraph_type: ''
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
     third_party_settings: {  }
     region: content
   field_metadata_format:
@@ -269,7 +286,7 @@ content:
     type: options_buttons
     region: content
   field_metadata_license:
-    type: entity_reference_paragraphs
+    type: paragraphs
     weight: 22
     settings:
       title: Seitenabschnitt
@@ -278,16 +295,19 @@ content:
       add_mode: dropdown
       form_display_mode: default
       default_paragraph_type: ''
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
     third_party_settings: {  }
     region: content
   field_metadata_standards:
     weight: 17
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: options_buttons
     region: content
   field_object_type:
     weight: 5
@@ -303,7 +323,7 @@ content:
     type: number
     region: content
   field_remarks:
-    weight: 1
+    weight: 3
     settings:
       rows: 5
       placeholder: ''
@@ -344,20 +364,20 @@ content:
     region: content
   langcode:
     type: language_select
-    weight: 2
+    weight: 1
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 8
+    weight: 9
     settings: {  }
     region: content
     third_party_settings: {  }
   path:
     type: path
-    weight: 7
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -365,26 +385,26 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 5
+    weight: 6
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 9
+    weight: 10
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 6
+    weight: 7
     region: content
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 1
+    weight: 0
     region: content
     settings:
       size: 60
@@ -392,7 +412,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 3
+    weight: 4
     settings:
       match_operator: CONTAINS
       size: 60

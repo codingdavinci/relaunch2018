@@ -1,9 +1,9 @@
 uuid: 5ef9fce8-2372-4ce7-97ea-bade247a218c
-langcode: de
+langcode: en
 status: true
 dependencies: {  }
 id: en
-label: English
+label: Englisch
 direction: ltr
 weight: 1
 locked: false

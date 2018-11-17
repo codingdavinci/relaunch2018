@@ -1,0 +1,20 @@
+uuid: f203abc6-42ad-421e-9fbf-294674965556
+langcode: de
+status: true
+dependencies:
+  module:
+    - user
+  theme:
+    - seven_subtheme
+id: seven_subtheme_login
+theme: seven_subtheme
+region: content
+weight: 0
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: Benutzeranmeldung
+  provider: user
+  label_display: visible
+visibility: {  }

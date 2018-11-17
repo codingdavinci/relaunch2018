@@ -1,0 +1,23 @@
+@import 'includes/base';
+
+.form-alter--multistep {
+  border-top: 1px solid $gray;
+  display: flex;
+  justify-content: space-between;
+  margin: 1.5em;
+  padding-top: 1em;
+
+  .form-alter--multistep--back {
+    button {
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+    }
+  }
+
+  .form-alter--multistep--next {
+    button {
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+    }
+  }
+}

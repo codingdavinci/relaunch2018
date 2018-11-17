@@ -5,8 +5,6 @@ var sass = require('gulp-sass');
 var importOnce = require('node-sass-import-once');
 var concat = require('gulp-concat');
 
-var root = 'web/themes/custom/relaunch2018/';
-
 gulp.task('clean', function() {
   return del([
     'web/themes/custom/relaunch2018/css',
@@ -14,7 +12,9 @@ gulp.task('clean', function() {
     'web/themes/custom/relaunch2018/lib/hammerjs',
     'web/themes/custom/relaunch2018/lib/jquery.easing',
     'web/themes/custom/relaunch2018/lib/popper.js',
-    'web/themes/custom/relaunch2018/lib/fonts/barlow'
+    'web/themes/custom/relaunch2018/lib/fonts/barlow',
+    'web/themes/custom/seven_subtheme/css',
+    'web/modules/custom/form_alterations/css'
   ]);
 });
 
@@ -38,8 +38,11 @@ gulp.task('copy', function() {
 });
 
 gulp.task('scss', function() {
+  var root = 'web/themes/custom/relaunch2018/';
+
   return merge(
 
+    // Frontend theme CSS
     gulp.src(root + 'scss/*.scss')
     .pipe(concat('global.scss'))
     .pipe(sass({
@@ -51,8 +54,22 @@ gulp.task('scss', function() {
     .pipe(sass({
       importer: importOnce
     }))
-    .pipe(gulp.dest(root + 'css'))
+    .pipe(gulp.dest(root + 'css')),
 
+    // Admin theme CSS
+    gulp.src('web/themes/custom/seven_subtheme/scss/*.scss')
+    .pipe(concat('styles.scss'))
+    .pipe(sass({
+      importer: importOnce
+    }))
+    .pipe(gulp.dest('web/themes/custom/seven_subtheme/css')),
+
+    // Custom form CSS
+    gulp.src('web/modules/custom/form_alterations/scss/*.scss')
+    .pipe(sass({
+      importer: importOnce
+    }))
+    .pipe(gulp.dest('web/modules/custom/form_alterations/css'))
   );
 });
 
