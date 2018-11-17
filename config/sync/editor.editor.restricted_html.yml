@@ -1,0 +1,38 @@
+uuid: 7ab4d616-7e50-4586-a880-163cd1034cfe
+langcode: de
+status: true
+dependencies:
+  config:
+    - filter.format.restricted_html
+  module:
+    - ckeditor
+format: restricted_html
+editor: ckeditor
+settings:
+  toolbar:
+    rows:
+      -
+        -
+          name: Formatierung
+          items:
+            - Bold
+            - Italic
+            - Format
+        -
+          name: Listen
+          items:
+            - BulletedList
+            - NumberedList
+  plugins:
+    language:
+      language_list: un
+    stylescombo:
+      styles: ''
+image_upload:
+  status: false
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: null
+    height: null

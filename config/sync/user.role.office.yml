@@ -75,6 +75,7 @@ permissions:
   - 'use event transition keep_published'
   - 'use event transition publish'
   - 'use event transition unpublish'
+  - 'use text format basic_html'
   - 'view all revisions'
   - 'view any unpublished content'
   - 'view article revisions'

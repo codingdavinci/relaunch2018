@@ -13,6 +13,7 @@ permissions:
   - 'delete own project content'
   - 'edit own project content'
   - 'use project transition create_new_draft'
+  - 'use text format restricted_html'
   - 'view own unpublished content'
   - 'view project revisions'
   - 'view the administration theme'

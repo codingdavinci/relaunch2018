@@ -12,6 +12,7 @@ permissions:
   - 'create data_set content'
   - 'edit own data_set content'
   - 'use data_set transition create_new_draft'
+  - 'use text format restricted_html'
   - 'view data_set revisions'
   - 'view own unpublished content'
   - 'view the administration theme'
