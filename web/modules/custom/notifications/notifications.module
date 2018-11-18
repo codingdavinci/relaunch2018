@@ -1,0 +1,260 @@
+<?php
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Messenger\MessengerInterface;
+use Drupal\entity_reference_revisions\EntityReferenceRevisionsFieldItemList;
+use Drupal\node\Entity\Node;
+use Drupal\paragraphs\Entity\Paragraph;
+use Drupal\user\Entity\User;
+
+/**
+ * Implements hook_mail().
+ *
+ * @param string $key
+ * @param array $message
+ * @param array $params
+ */
+function notifications_mail($key, array &$message, array $params) {
+  if ($key === 'notifications_draft') {
+    $options = [
+      'langcode' => $message['langcode'],
+    ];
+
+    $message['from'] = \Drupal::config('system.site')->get('mail');
+
+    $message['subject'] = t(
+      '@action: @title',
+      [
+        '@action' => $params['action'],
+        '@title' => $params['node_title'],
+      ],
+      $options
+    );
+
+    $message['body'] = $params['message'];
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_insert().
+ *
+ * @param EntityInterface $entity
+ */
+function notifications_node_insert(EntityInterface $entity) {
+  /** @var Node entity */
+  if (in_array($entity->bundle(), ['project', 'data_set'])) {
+    $usersIdsToNotify = _notifications_get_users_to_notify($entity);
+
+    if (count($usersIdsToNotify) > 0) {
+      $params = ['node_title' => $entity->label()];
+
+      if ($entity->bundle() === 'project') {
+        $params['action'] = t('Project draft created');
+
+        /** @var User $user */
+        foreach (User::loadMultiple($usersIdsToNotify) as $user) {
+          $params['message'] = _notifications_compile_message(
+            $entity,
+            $user,
+            t('Project description was created and is waiting for approval:')
+          );
+
+          _notifications_send_mail(
+            $user,
+            $params,
+            t('Thank you! Responsible event managers have been notified and will review your project description shortly.'),
+            t('Sorry! There was a problem notifying responsible event managers about your draft. Please inform a responsible event manager.')
+          );
+        }
+      }
+      elseif ($entity->bundle() === 'data_set') {
+        $params['action'] = t('Data set draft created');
+
+        /** @var User $user */
+        foreach (User::loadMultiple($usersIdsToNotify) as $user) {
+          $params['message'] = _notifications_compile_message(
+            $entity,
+            $user,
+            t('Data set description was created and is waiting for approval:')
+          );
+
+          _notifications_send_mail(
+            $user,
+            $params,
+            t('Thank you! Responsible event managers have been notified and will review your data set description shortly.'),
+            t('Sorry! There was a problem notifying responsible event managers about your draft. Please inform a responsible event manager.')
+          );
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_update().
+ *
+ * @param EntityInterface $entity
+ */
+function notifications_node_update(EntityInterface $entity) {
+  /** @var Node entity */
+  if (in_array($entity->bundle(), ['project', 'data_set'])) {
+    $usersIdsToNotify = _notifications_get_users_to_notify($entity);
+
+    if (count($usersIdsToNotify) > 0) {
+      $params = ['node_title' => $entity->label()];
+
+      if ($entity->bundle() === 'project') {
+        $params['action'] = t('Project draft updated');
+
+        /** @var User $user */
+        foreach (User::loadMultiple($usersIdsToNotify) as $user) {
+          $params['message'] = _notifications_compile_message(
+            $entity,
+            $user,
+            t('Project description was updated and is waiting for approval:')
+          );
+
+          _notifications_send_mail(
+            $user,
+            $params,
+            t('Thank you! Responsible event managers have been notified and will review your project description shortly.'),
+            t('Sorry! There was a problem notifying responsible event managers about your draft. Please inform a responsible event manager.')
+          );
+        }
+      }
+      elseif ($entity->bundle() === 'data_set') {
+        $params['action'] = t('Data set draft updated');
+
+        /** @var User $user */
+        foreach (User::loadMultiple($usersIdsToNotify) as $user) {
+          $params['message'] = _notifications_compile_message(
+            $entity,
+            $user,
+            t('Data set description was updated and is waiting for approval:')
+          );
+
+          _notifications_send_mail(
+            $user,
+            $params,
+            t('Thank you! Responsible event managers have been notified and will review your data set description shortly.'),
+            t('Sorry! There was a problem notifying responsible event managers about your draft. Please inform a responsible event manager.')
+          );
+        }
+      }
+    }
+  }
+}
+
+/**
+ * @param EntityInterface $entity
+ * @return int[]
+ */
+function _notifications_get_users_to_notify($entity) {
+  $usersIdsToNotify = [];
+  /** @var Node $entity */
+  $moderationState = $entity->get('moderation_state')->value;
+
+  if ($moderationState === 'draft') {
+    $usersIdsToNotify = _notifications_get_users($entity);
+  }
+
+  return $usersIdsToNotify;
+}
+
+/**
+ * @param EntityInterface $entity
+ * @return int[]
+ */
+function _notifications_get_users(EntityInterface $entity) {
+  $userIds = [];
+
+  /** @var Node $entity */
+  if ($entity->bundle() === 'project') {
+    $eventId = $entity->get('field_event')->target_id;
+
+    if ($eventId !== null) {
+      $event = Node::load($eventId);
+
+      if ($event !== null) {
+        $userIds = _notifications_get_users_from_event($event);
+      }
+    }
+  }
+  elseif ($entity->bundle() === 'data_set') {
+    /** @var EntityReferenceRevisionsFieldItemList $fieldRepresentative */
+    $fieldRepresentative = $entity->get('field_representative');
+
+    $eventIds = [];
+
+    /** @var Paragraph $paragraph */
+    foreach ($fieldRepresentative->referencedEntities() as $paragraph) {
+      $eventIds[] = $paragraph->get('field_event')->target_id;
+    }
+
+    $i = 0;
+    /** @var Node $event */
+    foreach (Node::loadMultiple($eventIds) as $event) {
+      // Check if this is a future event to prevent notifying event managers of
+      // past events, but at least notify managers of most recent event.
+      if ($i++ === 0 || strtotime($event->get('field_range')->end_value) > time()) {
+        $userIds = array_merge($userIds, _notifications_get_users_from_event($event));
+      }
+    }
+
+    $userIds = array_unique($userIds);
+  }
+
+  return $userIds;
+}
+
+/**
+ * @param EntityInterface $event
+ * @return int[]
+ */
+function _notifications_get_users_from_event($event) {
+  $userIds = [];
+  /** @var Node $event */
+  $team = $event->get('field_team')->getValue();
+  foreach ($team as $value) {
+    $userIds[] = $value['target_id'];
+  }
+  return $userIds;
+}
+
+/**
+ * @param EntityInterface $entity
+ * @param User $user
+ * @param string $introMessage
+ * @return string[]
+ */
+function _notifications_compile_message(EntityInterface $entity, $user, $introMessage) {
+  return [
+    $introMessage,
+    $entity->toUrl(
+      'canonical', ['absolute' => TRUE, 'language' => $user->language()]
+    )->toString(),
+  ];
+}
+
+/**
+ * @param User $user
+ * @param array $params
+ * @param string $successMsg
+ * @param string $errorMsg
+ */
+function _notifications_send_mail($user, array $params, $successMsg, $errorMsg) {
+  /** @var \Drupal\Core\Mail\MailManager $mailManager */
+  $mailManager = \Drupal::service('plugin.manager.mail');
+
+  $key = 'notifications_draft';
+  $to = $user->get('mail')->value;
+  $langCode = $user->getPreferredLangcode();
+
+  $result = $mailManager->mail('notifications', $key, $to, $langCode, $params);
+  if ($result['result'] !== TRUE) {
+    \Drupal::messenger()->addMessage($errorMsg, MessengerInterface::TYPE_WARNING);
+  }
+  else {
+    \Drupal::messenger()->addMessage($successMsg);
+  }
+}

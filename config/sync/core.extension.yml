@@ -38,6 +38,7 @@ module:
   media: 0
   menu_ui: 0
   node: 0
+  notifications: 0
   options: 0
   page_cache: 0
   path: 0

@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.event.body
     - field.field.node.event.field_paragraphs
     - field.field.node.event.field_range
+    - field.field.node.event.field_team
     - node.type.event
   module:
     - content_moderation
@@ -50,6 +51,15 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: daterange_default
+    region: content
+  field_team:
+    weight: 125
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   langcode:
     type: language_select
