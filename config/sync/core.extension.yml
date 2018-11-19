@@ -32,6 +32,7 @@ module:
   language: 0
   language_switcher: 0
   link: 0
+  list_edit: 0
   locale: 0
   login: 0
   matomo: 0

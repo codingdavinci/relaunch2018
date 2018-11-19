@@ -1,0 +1,6 @@
+name: List Edit
+version: 0.1
+type: module
+description: "Extends views listing content with edit controls."
+package: Custom
+core: 8.x

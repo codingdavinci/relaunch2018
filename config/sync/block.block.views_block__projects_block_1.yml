@@ -1,0 +1,39 @@
+uuid: 4fccc1a9-ad9f-4e31-8a09-798374c358d1
+langcode: de
+status: true
+dependencies:
+  config:
+    - views.view.projects
+  module:
+    - system
+    - user
+    - views
+  theme:
+    - relaunch2018
+id: views_block__projects_block_1
+theme: relaunch2018
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:projects-block_1'
+settings:
+  id: 'views_block:projects-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '/user/*'
+    negate: false
+    context_mapping: {  }
+  user_role:
+    id: user_role
+    roles:
+      project_team: project_team
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
