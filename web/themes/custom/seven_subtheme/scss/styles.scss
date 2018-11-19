@@ -3,6 +3,11 @@
 #node-data-set-form,
 #node-project-form {
 
+  .description,
+  .counter {
+    margin-bottom: .75em;
+  }
+
   .form-item {
     &:not(.form-type-checkbox) {
       margin-bottom: 3em;
@@ -50,6 +55,12 @@
   .field--name-field-datasets {
     input {
       width: 100%;
+    }
+  }
+
+  .field--name-field-short-description {
+    .description {
+      margin-bottom: 0;
     }
   }
 
@@ -320,6 +331,30 @@
 
   .filter-wrapper {
     display: none;
+  }
+
+  #group-description {
+    background: transparent;
+    border: none;
+    margin: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+
+    legend {
+      letter-spacing: inherit;
+      text-transform: none;
+    }
+    
+    label {
+      display: none;
+    }
+  }
+
+  #group-team-contacts {
+    .description {
+      margin-bottom: 1em;
+    }
   }
 }
 
