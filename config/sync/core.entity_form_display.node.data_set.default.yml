@@ -30,6 +30,7 @@ dependencies:
     - content_moderation
     - field_group
     - link
+    - maxlength
     - paragraphs
     - path
     - text
@@ -160,7 +161,12 @@ content:
     settings:
       rows: 5
       placeholder: ''
-    third_party_settings: {  }
+    third_party_settings:
+      maxlength:
+        maxlength_js: 1500
+        maxlength_js_label: 'Limitiert auf @limit Zeichen (<strong>@remaining</strong> verbleiben).'
+        maxlength_js_enforce: true
+        maxlength_js_truncate_html: true
     type: text_textarea
     region: content
   field_file_types:

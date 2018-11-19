@@ -1,4 +1,4 @@
-uuid: 8a5f90ed-55d1-4fa4-8b3b-520e123e11b0
+uuid: 6fd73398-ffb1-4f49-a0ec-6dd4b6cb4de4
 langcode: de
 status: true
 dependencies:
@@ -10,7 +10,7 @@ field_name: field_short_description
 entity_type: node
 bundle: project
 label: Kurzbeschreibung
-description: 'Das ist eine Platzhalterbeschreibung.'
+description: ''
 required: false
 translatable: false
 default_value: {  }
