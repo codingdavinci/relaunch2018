@@ -2,8 +2,11 @@
 
 .form-checkboxes {
   .hierarchy {
-    display: none;
     margin-left: 2em;
+
+    &:not(.hierarchy-level-visible) {
+      display: none;
+    }
 
     .form-item {
       // Prevent jitters when sliding up/down:

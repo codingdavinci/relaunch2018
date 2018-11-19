@@ -30,6 +30,7 @@
   function insertHierarchyIntoHtml($checkboxes) {
     var $items = $checkboxes.children();
     var currentLevel = 0;
+    var currentLevelChecked = false;
     var html = '';
 
     $items.each(function() {
@@ -39,7 +40,8 @@
       $label.text($label.text().replace(/^-*/g, ''));
 
       if (level > currentLevel) {
-        html += '<div class="hierarchy hierarchy-level-' + level + '">';
+        html += '<div class="hierarchy hierarchy-level-' + level
+          + (currentLevelChecked ? ' hierarchy-level-visible' : '') + '">';
       }
       else if (level < currentLevel) {
         html += '</div>';
@@ -48,6 +50,7 @@
       html += this.outerHTML;
 
       currentLevel = level;
+      currentLevelChecked = $item.find('input').prop('checked');
     });
 
     $items.remove();
@@ -86,6 +89,8 @@
           }
         });
       }
+
+      return false;
     });
   }
 
