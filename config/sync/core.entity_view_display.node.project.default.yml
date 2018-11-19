@@ -74,13 +74,12 @@ content:
     type: entity_reference_label
     region: content
   field_license_code:
-    type: entity_reference_revisions_entity_view
-    weight: 111
+    weight: 116
     label: above
     settings:
-      view_mode: default
-      link: ''
+      link: true
     third_party_settings: {  }
+    type: entity_reference_label
     region: content
   field_license_media:
     type: entity_reference_revisions_entity_view

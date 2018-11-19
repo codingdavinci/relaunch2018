@@ -1,18 +1,17 @@
-uuid: bb63143c-01e9-4958-934b-11877f3cdfeb
+uuid: 21a7640d-4aa7-4720-a5b1-4d1d7e688828
 langcode: de
 status: true
 dependencies:
   module:
-    - entity_reference_revisions
     - node
-    - paragraphs
+    - taxonomy
 id: node.field_license_code
 field_name: field_license_code
 entity_type: node
-type: entity_reference_revisions
+type: entity_reference
 settings:
-  target_type: paragraph
-module: entity_reference_revisions
+  target_type: taxonomy_term
+module: core
 locked: false
 cardinality: 1
 translatable: true

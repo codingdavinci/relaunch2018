@@ -5,5 +5,5 @@ dependencies: {  }
 id: attribution
 label: Lizenzhinweis
 icon_uuid: null
-description: ''
+description: 'Zur Auswahl einer Medienlizenz.'
 behavior_plugins: {  }

@@ -1,0 +1,11 @@
+uuid: d6fe8379-cf76-4cae-9740-05453dc1b953
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.software_licenses
+id: taxonomy_term.software_licenses
+target_entity_type_id: taxonomy_term
+target_bundle: software_licenses
+default_langcode: site_default
+language_alterable: false

@@ -70,6 +70,15 @@
     }
   }
 
+  .form-radios {
+    .form-item {
+      margin: 1em 0;
+    }
+    label {
+      font-size: $font-size-large;
+    }
+  }
+
   .field--name-field-attributed-image {
     h4 {
       display: none;

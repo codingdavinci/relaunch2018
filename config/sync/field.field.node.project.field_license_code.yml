@@ -1,13 +1,11 @@
-uuid: 44bf7edd-6d2d-4564-9ee7-4a95b7efc27b
+uuid: 5177d3ff-3d65-4567-8295-30bbf2204516
 langcode: de
 status: true
 dependencies:
   config:
     - field.storage.node.field_license_code
     - node.type.project
-    - paragraphs.paragraphs_type.attribution
-  module:
-    - entity_reference_revisions
+    - taxonomy.vocabulary.software_licenses
 id: node.project.field_license_code
 field_name: field_license_code
 entity_type: node
@@ -19,37 +17,13 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:paragraph'
+  handler: 'default:taxonomy_term'
   handler_settings:
-    negate: 0
     target_bundles:
-      attribution: attribution
-    target_bundles_drag_drop:
-      attributed_image:
-        weight: 10
-        enabled: false
-      attribution:
-        enabled: true
-        weight: 11
-      filesize:
-        weight: 12
-        enabled: false
-      image:
-        weight: 13
-        enabled: false
-      representative:
-        weight: 14
-        enabled: false
-      team_email:
-        weight: 15
-        enabled: false
-      text:
-        weight: 16
-        enabled: false
-      textblock_left:
-        weight: 17
-        enabled: false
-      textblock_right:
-        weight: 18
-        enabled: false
-field_type: entity_reference_revisions
+      software_licenses: software_licenses
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
