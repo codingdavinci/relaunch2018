@@ -163,8 +163,8 @@ content:
       placeholder: ''
     third_party_settings:
       maxlength:
-        maxlength_js: 1500
-        maxlength_js_label: 'Limitiert auf @limit Zeichen (<strong>@remaining</strong> verbleiben).'
+        maxlength_js: 1000
+        maxlength_js_label: 'Begrenzt auf @limit Zeichen (<strong>@remaining</strong> verbleiben).'
         maxlength_js_enforce: true
         maxlength_js_truncate_html: true
     type: text_textarea
