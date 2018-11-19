@@ -33,13 +33,25 @@ function form_alterations_field_widget_options_select_form_alter(array &$element
 }
 
 /**
- * Implements hook_form_FORM_ID_alter().
+ * Implements hook_form_alter().
  *
  * @param array $form
  * @param FormStateInterface $form_state
  * @param string $form_id
  */
-function form_alterations_form_node_data_set_form_alter(array &$form, FormStateInterface $form_state, $form_id) {
+function form_alterations_form_alter(array &$form, FormStateInterface $form_state, $form_id) {
+  if (in_array($form_id, ['node_data_set_form', 'node_data_set_edit_form'])) {
+    _form_alterations_data_set($form);
+  }
+  elseif (in_array($form_id, ['node_project_form', 'node_project_edit_form'])) {
+    _form_alterations_project($form);
+  }
+}
+
+/**
+ * @param array $form
+ */
+function _form_alterations_data_set(array &$form) {
   $currentUser = \Drupal::currentUser();
   $currentRoles = $currentUser->getRoles();
 
@@ -69,13 +81,9 @@ function form_alterations_form_node_data_set_form_alter(array &$form, FormStateI
 }
 
 /**
- * Implements hook_form_FORM_ID_alter().
- *
  * @param array $form
- * @param FormStateInterface $form_state
- * @param string $form_id
  */
-function form_alterations_form_node_project_form_alter(array &$form, FormStateInterface $form_state, $form_id) {
+function _form_alterations_project(array &$form) {
   $currentUser = \Drupal::currentUser();
   $currentRoles = $currentUser->getRoles();
 

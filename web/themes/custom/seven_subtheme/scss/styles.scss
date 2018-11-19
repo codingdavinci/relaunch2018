@@ -1,215 +1,93 @@
 @import 'includes/base';
 
 #node-data-set-form,
-#node-project-form {
+#node-project-form,
+#node-data-set-edit-form,
+#node-project-edit-form {
 
-  .description,
-  .counter {
-    margin-bottom: .75em;
-  }
+  .layout-region-node-main {
 
-  .form-item {
-    &:not(.form-type-checkbox) {
-      margin-bottom: 3em;
+    .description,
+    .counter {
+      margin-bottom: .75em;
     }
 
-    &.form-type-checkbox {
-      margin: 1em 0;
-    }
-
-    .tabledrag-toggle-weight-wrapper {
-      display: none;
-    }
-  }
-
-  .horizontal-tabs {
-    margin-bottom: 3rem;
-
-    .horizontal-tabs-pane {
-      background: transparent;
-      border: none;
-      padding-top: 1em;
-    }
-  }
-
-  input,
-  select {
-    max-width: 100%;
-
-    &[type="text"],
-    &[type="email"],
-    &[type="number"],
-    &[type="tel"],
-    &[type="url"],
-    &.form-select {
-      font-size: $font-size-large;
-      line-height: normal;
-      padding: .5em;
-      width: 25em;
-    }
-  }
-
-  .field--name-title,
-  .field--name-field-keywords,
-  .field--name-field-short-description,
-  .field--name-field-datasets {
-    input {
-      width: 100%;
-    }
-  }
-
-  .field--name-field-short-description {
-    .description {
-      margin-bottom: 0;
-    }
-  }
-
-  .form-checkboxes {
-    label {
-      font-size: $font-size-large;
-    }
-  }
-
-  .form-radios {
     .form-item {
-      margin: 1em 0;
-    }
-    label {
-      font-size: $font-size-large;
-    }
-  }
+      &:not(.form-type-checkbox) {
+        margin-bottom: 3em;
+      }
 
-  .field--name-field-attributed-image {
-    h4 {
-      display: none;
-    }
+      &.form-type-checkbox {
+        margin: 1em 0;
+      }
 
-    table {
-      @include border;
-
-      border-collapse: separate;
-      padding: 0 20px;
-
-      thead {
+      .tabledrag-toggle-weight-wrapper {
         display: none;
       }
-
-      tbody {
-        tr {
-          &:hover {
-            background-color: transparent;
-          }
-        }
-      }
-
-    }
-  }
-
-  .field--name-field-representative {
-    & > div > h4 {
-      display: none;
-    }
-  }
-
-  .field--widget-paragraphs {
-    margin-bottom: 3em;
-
-    &:last-child {
-      margin-bottom: 0;
     }
 
-    .form-item {
-      margin-bottom: 0;
-    }
+    .horizontal-tabs {
+      margin-bottom: 3rem;
 
-    .paragraph-bullet {
-      display: none;
-    }
-
-    .paragraph-top {
-      display: none;
-    }
-
-    table {
-      @include border;
-
-      border-collapse: separate;
-      padding-bottom: 10px;
-
-      thead {
-        th {
-          border-top: none;
-
-          .paragraphs-actions {
-            display: none;
-          }
-        }
-      }
-
-      tbody {
-        tr {
-          &:hover {
-            background-color: transparent;
-          }
-        }
-      }
-
-    }
-
-    &.field--name-field-media-filesize,
-    &.field--name-field-metadata-filesize {
-      table {
+      .horizontal-tabs-pane {
+        background: transparent;
         border: none;
-
-        thead {
-          display: none;
-        }
-
-        th {
-          background: transparent;
-          border: none;
-          padding: 0;
-          text-transform: none;
-        }
-
-        td {
-          padding: 0;
-        }
-      }
-
-      .form-item {
-        margin-top: 0;
-      }
-
-      .paragraphs-subform {
-        margin-top: 0;
-
-        & > div {
-          display: inline-block;
-
-          .form-item {
-            margin-top: 0;
-          }
-        }
-
-        .field--name-field-size input {
-          width: 15em;
-        }
-
-        .field--name-field-unit select {
-          width: 6em;
-        }
-      }
-
-      label {
-        display: none;
+        padding-top: 1em;
       }
     }
 
-    &.field--name-field-media-license,
-    &.field--name-field-metadata-license,
-    &.field--name-field-license-code,
-    &.field--name-field-license-media {
+    input,
+    select {
+      max-width: 100%;
+
+      &[type="text"],
+      &[type="email"],
+      &[type="number"],
+      &[type="tel"],
+      &[type="url"],
+      &.form-select {
+        font-size: $font-size-large;
+        line-height: normal;
+        padding: .5em;
+        width: 25em;
+      }
+    }
+
+    .field--name-title,
+    .field--name-field-keywords,
+    .field--name-field-short-description,
+    .field--name-field-datasets {
+      input {
+        width: 100%;
+      }
+    }
+
+    .field--name-field-short-description {
+      .description {
+        margin-bottom: 0;
+      }
+    }
+
+    .form-checkboxes {
+      label {
+        font-size: $font-size-large;
+      }
+    }
+
+    .form-radios {
+      .form-item {
+        margin: 1em 0;
+      }
+      label {
+        font-size: $font-size-large;
+      }
+    }
+
+    .field--name-field-attributed-image {
+      h4 {
+        display: none;
+      }
+
       table {
         @include border;
 
@@ -225,150 +103,278 @@
             &:hover {
               background-color: transparent;
             }
+          }
+        }
 
-            td {
-              padding: 20px 0;
+      }
+    }
 
-              .paragraphs-subform {
-                margin-top: 0;
-              }
+    .field--name-field-representative {
+      & > div > h4 {
+        display: none;
+      }
+    }
+
+    .field--widget-paragraphs {
+      margin-bottom: 3em;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .form-item {
+        margin-bottom: 0;
+      }
+
+      .paragraph-bullet {
+        display: none;
+      }
+
+      .paragraph-top {
+        display: none;
+      }
+
+      table {
+        @include border;
+
+        border-collapse: separate;
+        padding-bottom: 10px;
+
+        thead {
+          th {
+            border-top: none;
+
+            .paragraphs-actions {
+              display: none;
+            }
+          }
+        }
+
+        tbody {
+          tr {
+            &:hover {
+              background-color: transparent;
             }
           }
         }
 
       }
 
-      .field--name-field-license {
-        display: inline-block;
+      &.field--name-field-media-filesize,
+      &.field--name-field-metadata-filesize {
+        table {
+          border: none;
 
-        .form-item {
-          margin-top: 0;
-
-          select {
-            width: 10em;
+          thead {
+            display: none;
           }
-        }
-      }
 
-      .field--name-field-author {
-        display: inline-block;
-
-        .form-item {
-          margin-top: 0;
-
-          input {
-            width: 30em;
-          }
-        }
-      }
-
-    }
-
-  }
-
-  .field--name-field-metadata-doc-links,
-  .field--name-field-links-api,
-  .field--name-field-links-media,
-  .field--name-field-links-metadata,
-  .field--name-field-links,
-  .field--name-field-links-team,
-  .field--name-field-other-datasets {
-    table {
-      @include border;
-
-      border-collapse: separate;
-      margin-bottom: 10px;
-      padding-bottom: 10px;
-
-      thead {
-        display: none;
-      }
-
-      tbody {
-        tr {
-          &:hover {
-            background-color: transparent;
+          th {
+            background: transparent;
+            border: none;
+            padding: 0;
+            text-transform: none;
           }
 
           td {
-            &:not(:first-child) {
-              padding-left: 0;
-              padding-right: 0;
-            }
-
-            .form-item {
-              margin-bottom: 0;
-            }
+            padding: 0;
           }
         }
-      }
 
-    }
-  }
-
-  .field--name-field-emails {
-    table {
-      thead {
-        display: none;
-      }
-
-      tbody {
-        td {
-          &:first-child {
-            vertical-align: middle;
-          }
+        .form-item {
+          margin-top: 0;
         }
-      }
-    }
-  }
 
-  fieldset {
-    .fieldset-wrapper {
-      & > div {
-        &:last-child {
+        .paragraphs-subform {
+          margin-top: 0;
+
           & > div {
+            display: inline-block;
+
             .form-item {
-              &:last-child {
+              margin-top: 0;
+            }
+          }
+
+          .field--name-field-size input {
+            width: 15em;
+          }
+
+          .field--name-field-unit select {
+            width: 6em;
+          }
+        }
+
+        label {
+          display: none;
+        }
+      }
+
+      &.field--name-field-media-license,
+      &.field--name-field-metadata-license,
+      &.field--name-field-license-code,
+      &.field--name-field-license-media {
+        table {
+          @include border;
+
+          border-collapse: separate;
+          padding: 0 20px;
+
+          thead {
+            display: none;
+          }
+
+          tbody {
+            tr {
+              &:hover {
+                background-color: transparent;
+              }
+
+              td {
+                padding: 20px 0;
+
+                .paragraphs-subform {
+                  margin-top: 0;
+                }
+              }
+            }
+          }
+
+        }
+
+        .field--name-field-license {
+          display: inline-block;
+
+          .form-item {
+            margin-top: 0;
+
+            select {
+              width: 10em;
+            }
+          }
+        }
+
+        .field--name-field-author {
+          display: inline-block;
+
+          .form-item {
+            margin-top: 0;
+
+            input {
+              width: 30em;
+            }
+          }
+        }
+
+      }
+
+    }
+
+    .field--name-field-metadata-doc-links,
+    .field--name-field-links-api,
+    .field--name-field-links-media,
+    .field--name-field-links-metadata,
+    .field--name-field-links,
+    .field--name-field-links-team,
+    .field--name-field-other-datasets {
+      table {
+        @include border;
+
+        border-collapse: separate;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+
+        thead {
+          display: none;
+        }
+
+        tbody {
+          tr {
+            &:hover {
+              background-color: transparent;
+            }
+
+            td {
+              &:not(:first-child) {
+                padding-left: 0;
+                padding-right: 0;
+              }
+
+              .form-item {
                 margin-bottom: 0;
               }
             }
           }
         }
+
+      }
+    }
+
+    .field--name-field-emails {
+      table {
+        thead {
+          display: none;
+        }
+
+        tbody {
+          td {
+            &:first-child {
+              vertical-align: middle;
+            }
+          }
+        }
+      }
+    }
+
+    fieldset {
+      .fieldset-wrapper {
+        & > div {
+          &:last-child {
+            & > div {
+              .form-item {
+                &:last-child {
+                  margin-bottom: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .filter-wrapper {
+      display: none;
+    }
+
+    #group-description {
+      background: transparent;
+      border: none;
+      margin: 0;
+      padding-bottom: 0;
+      padding-left: 0;
+      padding-right: 0;
+
+      legend {
+        letter-spacing: inherit;
+        text-transform: none;
+      }
+
+      label {
+        display: none;
+      }
+    }
+
+    #group-team-contacts {
+      .description {
+        margin-bottom: 1em;
       }
     }
   }
 
-  .filter-wrapper {
-    display: none;
-  }
-
-  #group-description {
-    background: transparent;
-    border: none;
-    margin: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-
-    legend {
-      letter-spacing: inherit;
-      text-transform: none;
-    }
-    
-    label {
+  .form-type-url {
+    .description {
       display: none;
     }
   }
 
-  #group-team-contacts {
-    .description {
-      margin-bottom: 1em;
-    }
-  }
-}
-
-.form-type-url {
-  .description {
-    display: none;
-  }
 }
