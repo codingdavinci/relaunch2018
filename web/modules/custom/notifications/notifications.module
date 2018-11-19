@@ -188,20 +188,36 @@ function _notifications_get_users(EntityInterface $entity) {
 
     /** @var Paragraph $paragraph */
     foreach ($fieldRepresentative->referencedEntities() as $paragraph) {
-      $eventIds[] = $paragraph->get('field_event')->target_id;
+      $eventId = $paragraph->get('field_event')->target_id;
+      if ($eventId !== null) {
+        $eventIds[] = $paragraph->get('field_event')->target_id;
+      }
     }
 
-    $i = 0;
     /** @var Node $event */
     foreach (Node::loadMultiple($eventIds) as $event) {
       // Check if this is a future event to prevent notifying event managers of
-      // past events, but at least notify managers of most recent event.
-      if ($i++ === 0 || strtotime($event->get('field_range')->end_value) > time()) {
+      // past events.
+      if (strtotime($event->get('field_range')->end_value) > time()) {
         $userIds = array_merge($userIds, _notifications_get_users_from_event($event));
       }
     }
 
-    $userIds = array_unique($userIds);
+    if (count($userIds) > 0) {
+      return array_unique($userIds);
+    }
+
+    // If a data set is updated that does not belong to an upcoming event,
+    // notify "Geschäftsstelle" users.
+    /** @var \Drupal\user\UserStorage $userStorage */
+    $userStorage = \Drupal::service('entity_type.manager')->getStorage('user');
+
+    /** @var \Drupal\Core\Entity\Query\QueryInterface $query */
+    $query = $userStorage->getQuery();
+    $userIds = $query
+      ->condition('status', 1)
+      ->condition('roles', 'office')
+      ->execute();
   }
 
   return $userIds;
