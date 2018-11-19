@@ -23,6 +23,16 @@ settings:
           items:
             - BulletedList
             - NumberedList
+        -
+          name: Links
+          items:
+            - DrupalLink
+            - DrupalUnlink
+        -
+          name: Einfügen
+          items:
+            - PasteText
+            - PasteFromWord
   plugins:
     language:
       language_list: un
