@@ -61,3 +61,18 @@ function list_edit_views_pre_render(ViewExecutable $view) {
     ];
   }
 }
+
+/**
+ * Implements hook_toolbar_alter().
+ *
+ * @param array $items
+ */
+function list_edit_toolbar_alter(&$items) {
+  $currentUser = \Drupal::currentUser();
+  $currentRoles = $currentUser->getRoles();
+  // Remove administration link as content administration is done on per user
+  // page.
+  if (count(array_intersect(['administrator', 'event_team', 'office'], $currentRoles)) === 0) {
+    unset($items['administration']);
+  }
+}

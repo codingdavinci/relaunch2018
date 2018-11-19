@@ -7,7 +7,6 @@ label: Institution
 weight: -7
 is_admin: null
 permissions:
-  - 'access content overview'
   - 'access toolbar'
   - 'create data_set content'
   - 'edit own data_set content'
