@@ -15,9 +15,12 @@ use Drupal\views\ViewExecutable;
  * @return AccessResultInterface
  */
 function list_edit_block_access(Block $block, $operation, AccountInterface $account) {
-  if ($block->id() === 'views_block__projects_block_1' && $operation === 'view') {
-    // Only show block for the current user. (Showing the block on Project Team
-    // user pages only is already specified in the block config.)
+  if (
+    $operation === 'view'
+    && in_array($block->id(), ['views_block__projects_block_1', 'views_block__data_sets_block_1'])
+  ) {
+    // Only show block for the current user. (Additional limitations are applied
+    // in the block layout configuration.)
     $pageUser = \Drupal::routeMatch()->getParameter('user');
     return AccessResult::forbiddenIf(
       $pageUser === null || $pageUser->id() !== \Drupal::currentUser()->id()
@@ -42,6 +45,18 @@ function list_edit_views_pre_render(ViewExecutable $view) {
       'submit' => [
         '#type' => 'submit',
         '#value' => t('Create new project description'),
+      ],
+    ];
+  }
+  elseif ($view->id() === 'data_sets' && $view->current_display === 'block_1') {
+    $url = \Drupal\Core\Url::fromRoute('node.add', ['node_type' => 'data_set']);
+
+    $view->attachment_after[] = [
+      '#type' => 'form',
+      '#action' => $url->toString(),
+      'submit' => [
+        '#type' => 'submit',
+        '#value' => t('Create new data set description'),
       ],
     ];
   }
