@@ -5,5 +5,5 @@ dependencies: {  }
 name: Objekttypen
 vid: object_types
 description: 'Zur Kategorisierung von Datensätzen.'
-hierarchy: 0
+hierarchy: 1
 weight: 0
