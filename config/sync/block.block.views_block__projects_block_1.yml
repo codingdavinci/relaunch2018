@@ -18,10 +18,10 @@ provider: null
 plugin: 'views_block:projects-block_1'
 settings:
   id: 'views_block:projects-block_1'
-  label: ''
+  label: 'Meine Projekte'
   provider: views
-  label_display: '0'
-  views_label: ''
+  label_display: visible
+  views_label: 'Meine Projekte'
   items_per_page: none
   context_mapping: {  }
 visibility:

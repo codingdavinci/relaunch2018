@@ -1,94 +1,96 @@
 @import 'includes/base';
 
 body.path-user {
-  height: 100%;
-
-  &> div {
+  &:not(.user-logged-in) {
     height: 100%;
-  }
 
-  .layout-container {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: space-between;
-
-    .region-header {
-      margin-top: 80px;
+    &> div {
+      height: 100%;
     }
 
-    .layout-content {
-      text-align: center;
+    .layout-container {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: space-between;
 
-      .region-content {
-        background-color: $color-lighter-teal;
-        display: inline-block;
-        margin-top: 20px;
-        max-width: 100%;
+      .region-header {
+        margin-top: 80px;
+      }
 
-        @include media-breakpoint-up(md) {
-          @include border-radius($border-radius);
+      .layout-content {
+        text-align: center;
 
-          box-shadow: 0 5px 25px rgba(0, 0, 0, 0.12);
-          margin: 50px 0 $content-margin-bottom 0;
-        }
+        .region-content {
+          background-color: $color-lighter-teal;
+          display: inline-block;
+          margin-top: 20px;
+          max-width: 100%;
 
-        form {
-          margin: 50px 30px 0 30px;
+          @include media-breakpoint-up(md) {
+            @include border-radius($border-radius);
 
-          .form-item {
-            margin-bottom: 30px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.12);
+            margin: 50px 0 $content-margin-bottom 0;
           }
 
-          p {
-            margin-bottom: 30px;
-            max-width: 600px;
-            text-align: left;
-          }
+          form {
+            margin: 50px 30px 0 30px;
 
-          div.description {
-            margin-bottom: 30px;
-            margin-top: 15px;
-            max-width: 600px;
-            text-align: left;
-          }
-        }
-
-        .block-local-tasks-block {
-          font-size: 1.1rem;
-          letter-spacing: .04em;
-          margin-bottom: 30px;
-          margin-top: 50px;
-
-          a {
-            color: $color-white;
-            padding: 0;
-
-            &:hover,
-            &:focus {
-              background-color: transparent;
+            .form-item {
+              margin-bottom: 30px;
             }
 
-            &.is-active {
-              background: transparent;
-              color: $color-deep-teal;
+            p {
+              margin-bottom: 30px;
+              max-width: 600px;
+              text-align: left;
+            }
+
+            div.description {
+              margin-bottom: 30px;
+              margin-top: 15px;
+              max-width: 600px;
+              text-align: left;
             }
           }
 
-          ul {
-            display: table;
-            width: 100%;
+          .block-local-tasks-block {
+            font-size: 1.1rem;
+            letter-spacing: .04em;
+            margin-bottom: 30px;
+            margin-top: 50px;
 
-            li {
-              display: table-cell;
+            a {
+              color: $color-white;
+              padding: 0;
 
-              &:first-child {
-                padding-left: 30px;
-                text-align: left;
+              &:hover,
+              &:focus {
+                background-color: transparent;
               }
-              &:last-child {
-                padding-right: 30px;
-                text-align: right;
+
+              &.is-active {
+                background: transparent;
+                color: $color-deep-teal;
+              }
+            }
+
+            ul {
+              display: table;
+              width: 100%;
+
+              li {
+                display: table-cell;
+
+                &:first-child {
+                  padding-left: 30px;
+                  text-align: left;
+                }
+                &:last-child {
+                  padding-right: 30px;
+                  text-align: right;
+                }
               }
             }
           }

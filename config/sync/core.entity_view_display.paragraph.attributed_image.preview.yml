@@ -1,0 +1,30 @@
+uuid: 667d07a9-8acd-426f-a113-b6fc129b37b6
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.attributed_image.field_author
+    - field.field.paragraph.attributed_image.field_inline_image
+    - field.field.paragraph.attributed_image.field_license
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.attributed_image
+  module:
+    - image
+id: paragraph.attributed_image.preview
+targetEntityType: paragraph
+bundle: attributed_image
+mode: preview
+content:
+  field_inline_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: thumbnail
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  field_author: true
+  field_license: true

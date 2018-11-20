@@ -13,6 +13,7 @@ dependencies:
   module:
     - image
     - link
+    - telephone
     - user
 _core:
   default_config_hash: V51QPCKkgNREKtSmB9Iu2wmAMEpktVpnzklWaZV8UYo
@@ -22,7 +23,7 @@ bundle: user
 mode: default
 content:
   field_institution_name:
-    weight: 9
+    weight: 2
     label: above
     settings:
       link_to_entity: false
@@ -30,7 +31,7 @@ content:
     type: string
     region: content
   field_link:
-    weight: 7
+    weight: 0
     label: above
     settings:
       trim_length: 80
@@ -42,7 +43,7 @@ content:
     type: link
     region: content
   field_logo:
-    weight: 8
+    weight: 1
     label: above
     settings:
       image_style: ''
@@ -51,14 +52,14 @@ content:
     type: image
     region: content
   field_representative_email:
-    weight: 14
+    weight: 5
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_representative_name:
-    weight: 12
+    weight: 3
     label: above
     settings:
       link_to_entity: false
@@ -66,24 +67,21 @@ content:
     type: string
     region: content
   field_representative_phone:
-    weight: 13
+    weight: 4
     label: above
-    settings: {  }
+    settings:
+      title: ''
     third_party_settings: {  }
-    type: basic_string
+    type: telephone_link
     region: content
   field_representative_responsible:
-    weight: 15
+    weight: 6
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
-  member_for:
-    weight: 5
-    region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
   langcode: true
+  member_for: true

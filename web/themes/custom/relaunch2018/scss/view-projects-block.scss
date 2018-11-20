@@ -1,0 +1,54 @@
+@import 'includes/base';
+
+#block-views-block-projects-block-1 {
+
+  h2 {
+    margin: 2rem 0 1rem 0;
+  }
+
+  .view-projects {
+    margin-bottom: 3rem;
+
+    table.views-table {
+      width: 100%;
+
+      th {
+        &:first-child {
+          display: none;
+
+          @include media-breakpoint-up(md) {
+            display: table-cell;
+          }
+        }
+      }
+
+      td {
+        &:first-child {
+          display: none;
+
+          @include media-breakpoint-up(md) {
+            display: table-cell;
+          }
+        }
+
+        &.views-field-title {
+          word-break: break-all;
+
+          @include media-breakpoint-up(sm) {
+            word-break: normal;
+          }
+        }
+
+        .dropbutton-multiple {
+          margin-right: 0;
+          padding-right: 0;
+        }
+      }
+    }
+
+    .attachment-after {
+      margin: 3rem 0;
+      text-align: center;
+    }
+  }
+}
