@@ -62,7 +62,7 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 15
+    weight: 16
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -131,14 +131,14 @@ content:
     type: options_select
     region: content
   field_license_code:
-    weight: 11
+    weight: 12
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
     region: content
   field_license_media:
     type: paragraphs
-    weight: 12
+    weight: 13
     settings:
       title: Seitenabschnitt
       title_plural: Seitenabschnitte
@@ -179,7 +179,7 @@ content:
     type: link_default
     region: content
   field_remarks:
-    weight: 13
+    weight: 14
     settings:
       rows: 5
       placeholder: ''
@@ -212,13 +212,13 @@ content:
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 19
+    weight: 20
     settings: {  }
     region: content
     third_party_settings: {  }
   path:
     type: path
-    weight: 18
+    weight: 19
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -226,21 +226,21 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 16
+    weight: 17
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 20
+    weight: 21
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 17
+    weight: 18
     region: content
     third_party_settings: {  }
   title:
@@ -253,7 +253,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 14
+    weight: 15
     settings:
       match_operator: CONTAINS
       size: 60

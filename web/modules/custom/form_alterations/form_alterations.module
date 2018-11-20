@@ -52,30 +52,18 @@ function form_alterations_form_alter(array &$form, FormStateInterface $form_stat
  * @param array $form
  */
 function _form_alterations_data_set(array &$form) {
-  $currentUser = \Drupal::currentUser();
-  $currentRoles = $currentUser->getRoles();
-
-  $form['#attached']['library'][] = 'form_alterations/checkbox-hierarchy';
-  $form['#attached']['library'][] = 'form_alterations/multistep';
-
-  if (count(array_intersect(['administrator', 'event_team', 'office'], $currentRoles)) === 0) {
-    $form['moderation_state']['#access'] = FALSE;
-    $form['#attached']['library'][] = 'form_alterations/styles';
-  }
-
-  unset($form['field_media_filesize']['widget'][0]['subform']['field_unit']['widget']['#options']['_none']);
-  unset($form['field_metadata_filesize']['widget'][0]['subform']['field_unit']['widget']['#options']['_none']);
-
-  $linkFieldNames = [
+  _form_alterations_common_changes($form, [
     'field_metadata_doc_links',
     'field_links_api',
     'field_links_media',
     'field_links_metadata',
-  ];
+  ]);
 
-  foreach ($linkFieldNames as $linkFieldName) {
-    $form[$linkFieldName]['widget']['add_more']['#value'] = t('Add another link');
-  }
+  $form['#attached']['library'][] = 'form_alterations/checkbox-hierarchy';
+  $form['#attached']['library'][] = 'form_alterations/multistep';
+
+  unset($form['field_media_filesize']['widget'][0]['subform']['field_unit']['widget']['#options']['_none']);
+  unset($form['field_metadata_filesize']['widget'][0]['subform']['field_unit']['widget']['#options']['_none']);
 
   $form['langcode']['widget'][0]['value']['#title'] = t('Language of this data set description');
 }
@@ -84,25 +72,37 @@ function _form_alterations_data_set(array &$form) {
  * @param array $form
  */
 function _form_alterations_project(array &$form) {
+  _form_alterations_common_changes($form, [
+    'field_links',
+    'field_other_datasets',
+    'field_links_team',
+  ]);
+
+  $form['langcode']['widget'][0]['value']['#title'] = t('Language of this project description');
+}
+
+/**
+ * @param array $form
+ * @param string[]
+ */
+function _form_alterations_common_changes(array &$form, $linkFieldNames) {
   $currentUser = \Drupal::currentUser();
   $currentRoles = $currentUser->getRoles();
 
   if (count(array_intersect(['administrator', 'event_team', 'office'], $currentRoles)) === 0) {
+    // When content is published and #access is set to FALSE, #default_value is
+    // 'published', although the user does not have the permission to publish
+    // directly. So, with #access being FALSE, the user's limitation to only
+    // create new drafts on top of published content is circumvented. Therefore,
+    // #default_value needs to be set manually.
+    $form['moderation_state']['widget'][0]['state']['#default_value'] = 'draft';
     $form['moderation_state']['#access'] = FALSE;
     $form['#attached']['library'][] = 'form_alterations/styles';
   }
 
-  $linkFieldNames = [
-    'field_links',
-    'field_other_datasets',
-    'field_links_team',
-  ];
-
   foreach ($linkFieldNames as $linkFieldName) {
     $form[$linkFieldName]['widget']['add_more']['#value'] = t('Add another link');
   }
-
-  $form['langcode']['widget'][0]['value']['#title'] = t('Language of this project description');
 }
 
 /**
