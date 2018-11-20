@@ -401,7 +401,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Message
+          label: Nachricht
           exclude: false
           alter:
             alter_text: false

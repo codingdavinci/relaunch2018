@@ -3,8 +3,8 @@
 use Drupal\Core\Entity\ContentEntityInterface;
 
 const LANGUAGE_SWITCHER_LANGUAGES = [
-  'English' => 'En',
-  'German' => 'De',
+  'Englisch' => 'En',
+  'Deutsch' => 'De',
 ];
 
 /**
