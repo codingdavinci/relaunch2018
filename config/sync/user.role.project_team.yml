@@ -9,7 +9,6 @@ is_admin: null
 permissions:
   - 'access toolbar'
   - 'create project content'
-  - 'delete own project content'
   - 'edit own project content'
   - 'use project transition create_new_draft'
   - 'use text format restricted_html'
