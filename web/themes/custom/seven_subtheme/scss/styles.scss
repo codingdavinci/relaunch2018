@@ -53,6 +53,29 @@
       }
     }
 
+    .field--widget-options-buttons {
+      border-top: 1px solid $gray;
+      border-bottom: 1px solid $gray;
+      margin-bottom: 3rem;
+      padding: 2rem 0;
+
+      & > .form-item {
+        margin-bottom: 0;
+      }
+
+      & + .field--widget-options-buttons {
+        border-top: none;
+        padding-top: 0;
+      }
+    }
+
+    .details-wrapper {
+      > .field--widget-options-buttons:first-child {
+        border-top: none;
+        padding-top: 0;
+      }
+    }
+
     .field--name-title,
     .field--name-field-keywords,
     .field--name-field-short-description,
@@ -77,6 +100,10 @@
     .form-radios {
       .form-item {
         margin: 1em 0;
+
+        [value='_none'] + label {
+          font-style: italic;
+        }
       }
       label {
         font-size: $font-size-large;
