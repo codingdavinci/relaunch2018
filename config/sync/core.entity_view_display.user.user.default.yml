@@ -10,11 +10,54 @@ dependencies:
     - field.field.user.user.field_representative_name
     - field.field.user.user.field_representative_phone
     - field.field.user.user.field_representative_responsible
+    - image.style.large
   module:
+    - field_group
     - image
     - link
-    - telephone
     - user
+third_party_settings:
+  field_group:
+    group_representative:
+      children:
+        - field_representative_name
+        - field_representative_responsible
+        - field_representative_email
+        - field_representative_phone
+      parent_name: ''
+      weight: 2
+      format_type: html_element
+      format_settings:
+        label: Ansprechpartner
+        element: div
+        show_label: true
+        label_element: h2
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: field-group
+      label: Ansprechpartner
+      region: content
+    group_institution:
+      children:
+        - field_institution_name
+        - field_link
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      format_settings:
+        label: 'Angaben zur Institution'
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: field-group
+      label: 'Angaben zur Institution'
+      region: content
 _core:
   default_config_hash: V51QPCKkgNREKtSmB9Iu2wmAMEpktVpnzklWaZV8UYo
 id: user.user.default
@@ -23,15 +66,17 @@ bundle: user
 mode: default
 content:
   field_institution_name:
+    type: string
     weight: 2
+    region: content
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
-    region: content
   field_link:
-    weight: 0
+    type: link
+    weight: 3
+    region: content
     label: above
     settings:
       trim_length: 80
@@ -40,48 +85,46 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
-    region: content
   field_logo:
-    weight: 1
-    label: above
+    type: image
+    weight: 0
+    region: content
+    label: hidden
     settings:
-      image_style: ''
+      image_style: large
       image_link: ''
     third_party_settings: {  }
-    type: image
-    region: content
   field_representative_email:
-    weight: 5
+    type: email_mailto
+    weight: 6
+    region: content
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: basic_string
-    region: content
   field_representative_name:
-    weight: 3
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
     type: string
-    region: content
-  field_representative_phone:
     weight: 4
-    label: above
-    settings:
-      title: ''
-    third_party_settings: {  }
-    type: telephone_link
     region: content
-  field_representative_responsible:
-    weight: 6
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
+  field_representative_phone:
     type: string
+    weight: 7
     region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_representative_responsible:
+    type: string
+    weight: 5
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
 hidden:
   langcode: true
   member_for: true

@@ -1,11 +1,28 @@
 @import 'includes/base';
 
+.profile {
+  img {
+    height: auto;
+    max-width: 100%;
+  }
+
+  .field-group {
+    margin-bottom: 3rem;
+  }
+
+  .field {
+    margin-bottom: 1rem;
+  }
+}
+
+#block-views-block-data-sets-block-1,
 #block-views-block-projects-block-1 {
 
   h2 {
     margin: 2rem 0 1rem 0;
   }
 
+  .view-data-sets,
   .view-projects {
     margin-bottom: 3rem;
 
@@ -15,10 +32,14 @@
       th {
         &:first-child {
           display: none;
+          visibility: hidden;
 
           @include media-breakpoint-up(md) {
             display: table-cell;
           }
+        }
+        &:last-child {
+          visibility: hidden;
         }
       }
 
