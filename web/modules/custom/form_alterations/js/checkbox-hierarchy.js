@@ -79,9 +79,8 @@
       var $next = $item.next();
 
       if ($next.hasClass('hierarchy')) {
-        $item.find('input').prop('checked', !$next.is(':visible'));
         $next.stop(true);
-        $next[$next.is(':visible') ? 'slideUp' : 'slideDown']({
+        $next[$item.find('input').prop('checked') ? 'slideDown' : 'slideUp']({
           easing: 'easeInOutCirc'
         }).promise().done(function() {
           if (!$next.is(':visible')) {
@@ -89,8 +88,6 @@
           }
         });
       }
-
-      return false;
     });
   }
 
