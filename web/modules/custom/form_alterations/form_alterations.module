@@ -128,6 +128,19 @@ function form_alterations_form_user_form_alter(array &$form, FormStateInterface 
 }
 
 /**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * @param array $form
+ * @param FormStateInterface $form_state
+ * @param string $form_id
+ */
+function form_alterations_form_user_register_form_alter(array &$form, FormStateInterface $form_state, $form_id) {
+  // Always hide institution-specific user profile form element when creating
+  // a new user.
+  $form['#attached']['library'][] = 'form_alterations/user-profile-not-institution';
+}
+
+/**
  * Implements hook_entity_form_display_alter().
  *
  * @param EntityFormDisplayInterface $form_display
