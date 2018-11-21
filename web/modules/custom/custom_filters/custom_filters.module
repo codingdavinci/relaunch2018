@@ -4,6 +4,8 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Url;
 use Drupal\node\Entity\Node;
 use Drupal\user\Entity\User;
+use Drupal\views\ResultRow;
+use Drupal\views\ViewExecutable;
 
 /**
  * Implements hook_form_FORM_ID_alter().
@@ -69,4 +71,29 @@ function _custom_filters_overwrite_filter(array &$form, $filterId, $options) {
     '#theme' => 'bef_links',
     '#bef_path' => Url::fromRoute('view.data_sets.page_1'),
   ];
+}
+
+/**
+ * Implements hook_views_post_execute().
+ *
+ * @param ViewExecutable $view
+ */
+function custom_filters_views_post_execute(ViewExecutable $view) {
+  // Filter customisations in this module can lead to showing duplicates in the
+  // result output.
+  $resultWithoutDuplicates = [];
+  $nodeIds = [];
+
+  /** @var ResultRow $resultRow */
+  foreach ($view->result as $resultRow) {
+    /** @var Node $node */
+    $node = $resultRow->_entity;
+
+    if (!in_array($node->id(), $nodeIds)) {
+      $resultWithoutDuplicates[] = $resultRow;
+      $nodeIds[] = $node->id();
+    }
+  }
+
+  $view->result = $resultWithoutDuplicates;
 }
