@@ -9,6 +9,8 @@ dependencies:
     - field.field.paragraph.representative.field_name
     - field.field.paragraph.representative.field_phone
     - paragraphs.paragraphs_type.representative
+  module:
+    - telephone
 id: paragraph.representative.default
 targetEntityType: paragraph
 bundle: representative
@@ -48,8 +50,9 @@ content:
   field_phone:
     weight: 4
     label: above
-    settings: {  }
+    settings:
+      title: ''
     third_party_settings: {  }
-    type: basic_string
+    type: telephone_link
     region: content
 hidden: {  }

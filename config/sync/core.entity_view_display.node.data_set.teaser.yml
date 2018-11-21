@@ -22,29 +22,47 @@ dependencies:
     - field.field.node.data_set.field_metadata_standards
     - field.field.node.data_set.field_object_type
     - field.field.node.data_set.field_objects_count
+    - field.field.node.data_set.field_remarks
     - field.field.node.data_set.field_representative
     - field.field.node.data_set.field_theme
     - field.field.node.data_set.field_vocabulary
     - node.type.data_set
   module:
+    - entity_reference_revisions
     - user
 id: node.data_set.teaser
 targetEntityType: node
 bundle: data_set
 mode: teaser
 content:
-  content_moderation_control:
-    weight: -20
-    settings: {  }
+  field_attributed_image:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      view_mode: preview
+      link: ''
     third_party_settings: {  }
+  field_object_type:
+    type: entity_reference_label
+    weight: 2
     region: content
-  links:
-    weight: 100
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+  field_representative:
+    type: entity_reference_revisions_entity_view
+    weight: 1
     region: content
-    settings: {  }
+    label: hidden
+    settings:
+      view_mode: preview
+      link: ''
     third_party_settings: {  }
 hidden:
-  field_attributed_image: true
+  content_moderation_control: true
   field_description: true
   field_file_types: true
   field_georef_standard: true
@@ -60,9 +78,9 @@ hidden:
   field_metadata_format: true
   field_metadata_license: true
   field_metadata_standards: true
-  field_object_type: true
   field_objects_count: true
-  field_representative: true
+  field_remarks: true
   field_theme: true
   field_vocabulary: true
   langcode: true
+  links: true

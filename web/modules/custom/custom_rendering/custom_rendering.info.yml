@@ -1,0 +1,6 @@
+name: Custom Rendering
+version: 0.1
+type: module
+description: "Customises frontend rendering."
+package: Custom
+core: 8.x

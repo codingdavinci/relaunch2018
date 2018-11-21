@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * Implements hook_preprocess_HOOK().
+ *
+ * @param array $variables
+ */
+function custom_rendering_preprocess_node(array &$variables) {
+  /** @var \Drupal\node\Entity\Node $node */
+  $node = $variables['node'];
+
+  if ($node->bundle() === 'data_set' && $variables['view_mode'] === 'teaser') {
+    // Add institution name to template variables
+    $variables['institution_name'] = $node->getOwner()->get('field_institution_name')->value;
+
+    // For object type, show top-level taxonomy terms only
+    /** @var \Drupal\taxonomy\TermStorage $storage */
+    $storage = \Drupal::entityTypeManager()->getStorage('taxonomy_term');
+    $terms = $storage->loadTree('object_types', 0, 1);
+    $termIds = array_map(function($term) {
+      return $term->tid;
+    }, $terms);
+
+    foreach ($variables['content']['field_object_type'] as $key => $value) {
+      if (!is_int($key)) {
+        continue;
+      }
+      elseif (!in_array(explode(':', $value['#cache']['tags'][0])[1], $termIds)) {
+        unset($variables['content']['field_object_type'][$key]);
+      }
+    }
+  }
+}

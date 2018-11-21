@@ -16,6 +16,7 @@ module:
   contextual: 0
   ctools: 0
   custom_filters: 0
+  custom_rendering: 0
   datetime: 0
   datetime_range: 0
   dblog: 0
