@@ -1,0 +1,6 @@
+name: Custom Filters
+version: 0.1
+type: module
+description: "Customises view filters."
+package: Custom
+core: 8.x
