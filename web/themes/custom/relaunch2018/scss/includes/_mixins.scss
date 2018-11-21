@@ -1,3 +1,5 @@
+@import 'variables';
+
 @mixin easeOut {
   transition: all .4s cubic-bezier(0.23, 1, 0.32, 1);
 }
@@ -20,5 +22,26 @@
   &:before {
     color: $color;
     content: '{';
+  }
+}
+
+@mixin boxShadow() {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+@mixin fontSize($size) {
+  @if $size == 'small' {
+    font-size: $font-size-sm-small;
+
+    @include media-breakpoint-up(md) {
+      font-size: $font-size-md-small;
+    }
+  }
+  @else {
+    font-size: $font-size-sm;
+
+    @include media-breakpoint-up(md) {
+      font-size: $font-size-md;
+    }
   }
 }

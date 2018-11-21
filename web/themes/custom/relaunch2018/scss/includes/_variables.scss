@@ -1,3 +1,5 @@
+@import '../../lib/bootstrap/scss/bootstrap';
+
 $color-gray-1: #333333;
 $color-gray-2: #4F4F4F;
 $color-gray-3: #828282;
@@ -34,3 +36,9 @@ $font-family-icons: 'cdv_icons';
 $content-margin-bottom: 6rem;
 
 $border-radius: 4px;
+
+$font-size-base: 1.1rem;
+$font-size-sm: 1.0rem;
+$font-size-sm-small: .9rem;
+$font-size-md: 1.2rem;
+$font-size-md-small: 1rem;

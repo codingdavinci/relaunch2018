@@ -126,3 +126,11 @@ figcaption {
   background-color: transparent;
   border: none;
 }
+
+.badge {
+  @include fontSize(small);
+  display: inline;
+  font-weight: 600;
+  margin-right: .2em;
+  padding: .15em .4em .25em .4em;
+}

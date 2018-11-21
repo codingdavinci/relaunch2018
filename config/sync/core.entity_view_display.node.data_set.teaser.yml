@@ -41,7 +41,7 @@ content:
     region: content
     label: hidden
     settings:
-      view_mode: preview
+      view_mode: teaser
       link: ''
     third_party_settings: {  }
   field_object_type:

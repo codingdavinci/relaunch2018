@@ -1,0 +1,62 @@
+@import 'includes/base';
+
+.view-data-sets {
+  .view-content {
+    .card-columns {
+      @include media-breakpoint-up(sm) {
+        column-count: 2;
+      }
+
+      @include media-breakpoint-up(lg) {
+        column-count: 3;
+      }
+
+      @include media-breakpoint-up(xl) {
+        column-count: 4;
+      }
+
+      .card {
+        @include border-radius($border-radius);
+        @include boxShadow;
+        background-color: $white;
+        display: inline-block;
+        margin-bottom: 20px;
+
+        .card-img {
+          img {
+            @include border-top-radius($border-radius);
+            height: auto;
+            max-width: 100%;
+          }
+        }
+
+        .card-body {
+          .card-title {
+            border-bottom: 1px solid $color-gray-5;
+            padding-bottom: 1rem;
+          }
+
+          .field {
+            margin-top: 1rem;
+
+            &.field--name-field-representative {
+              @include fontSize(small);
+            }
+
+            &.field--name-field-object-type {
+              .badge--object-type {
+                background-color: $color-darker-green;
+                color: $white;
+              }
+            }
+
+            .field {
+              margin-top: .2rem;
+            }
+
+          }
+        }
+      }
+    }
+  }
+}
