@@ -1,0 +1,7 @@
+custom_filters.autocomplete:
+  path: '/custom_filters/{field_name}/{count}'
+  defaults:
+    _controller: '\Drupal\custom_filters\Controller\AutoCompleteController::handleAutoComplete'
+    _format: json
+  requirements:
+    _access: 'TRUE'

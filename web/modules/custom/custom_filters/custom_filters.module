@@ -3,7 +3,6 @@
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Url;
 use Drupal\node\Entity\Node;
-use Drupal\user\Entity\User;
 use Drupal\views\ResultRow;
 use Drupal\views\ViewExecutable;
 
@@ -33,44 +32,26 @@ function custom_filters_form_views_exposed_form_alter(array &$form, FormStateInt
       $options[$event->get('nid')->value] = $event->get('title')->value;
     }
 
-    _custom_filters_overwrite_filter($form, 'event_id', $options);
+    // Mimic native views filter behaviour:
+    $allValue = \Drupal::request()->query->get('event_id') !== null ? 'All' : '';
 
-    // Turn institution text input into links
-    $options = [];
-    $institutionUserIds = \Drupal::entityQuery('user')
-      ->condition('status', 1)
-      ->condition('roles', 'institution')
-      ->execute();
-    $users = User::loadMultiple($institutionUserIds);
+    $form['event_id'] = [
+      '#type' => 'select',
+      '#options' => [$allValue => t('- Any -')] + $options,
+      '#default_value' => 'All',
+      '#theme' => 'bef_links',
+      '#bef_path' => Url::fromRoute('view.data_sets.page_1'),
+    ];
 
-    /** @var User $user */
-    foreach ($users as $user) {
-      $institutionName = $user->get('field_institution_name')->value;
-      $options[$user->id()] = $institutionName;
-    }
-
-    ksort($options);
-
-    _custom_filters_overwrite_filter($form, 'institution', $options);
+    $form['institution'] = [
+      '#type' => 'textfield',
+      '#autocomplete_route_name' => 'custom_filters.autocomplete',
+      '#autocomplete_route_parameters' => [
+        'field_name' => 'institution',
+        'count' => 10
+      ],
+    ];
   }
-}
-
-/**
- * @param array $form
- * @param string $filterId
- * @param array $options
- */
-function _custom_filters_overwrite_filter(array &$form, $filterId, $options) {
-  // Mimic native views filter behaviour:
-  $allValue = \Drupal::request()->query->get($filterId) !== null ? 'All' : '';
-
-  $form[$filterId] = [
-    '#type' => 'select',
-    '#options' => [$allValue => t('- Any -')] + $options,
-    '#default_value' => 'All',
-    '#theme' => 'bef_links',
-    '#bef_path' => Url::fromRoute('view.data_sets.page_1'),
-  ];
 }
 
 /**
@@ -79,21 +60,27 @@ function _custom_filters_overwrite_filter(array &$form, $filterId, $options) {
  * @param ViewExecutable $view
  */
 function custom_filters_views_post_execute(ViewExecutable $view) {
-  // Filter customisations in this module can lead to showing duplicates in the
-  // result output.
-  $resultWithoutDuplicates = [];
-  $nodeIds = [];
+  if ($view->id() === 'data_sets') {
+    // Filter customisations in this module can lead to showing duplicates in the
+    // result output.
+    $resultWithoutDuplicates = [];
+    $nodeIds = [];
 
-  /** @var ResultRow $resultRow */
-  foreach ($view->result as $resultRow) {
-    /** @var Node $node */
-    $node = $resultRow->_entity;
+    /** @var ResultRow $resultRow */
+    foreach ($view->result as $resultRow) {
+      if ($resultRow->_entity === null) {
+        break;
+      }
 
-    if (!in_array($node->id(), $nodeIds)) {
-      $resultWithoutDuplicates[] = $resultRow;
-      $nodeIds[] = $node->id();
+      /** @var Node $node */
+      $node = $resultRow->_entity;
+
+      if (!in_array($node->id(), $nodeIds)) {
+        $resultWithoutDuplicates[] = $resultRow;
+        $nodeIds[] = $node->id();
+      }
     }
-  }
 
-  $view->result = $resultWithoutDuplicates;
+    $view->result = $resultWithoutDuplicates;
+  }
 }
