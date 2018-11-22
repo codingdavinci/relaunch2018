@@ -22,6 +22,8 @@
           .appendTo($pane.find('.form-alter--multistep--back'))
           .on('click', function() {
             $panes.eq(i - 1).data('horizontalTab').tabShow();
+            scrollToTop($panes.eq(i - 1));
+            return false;
           });
       }
 
@@ -30,10 +32,34 @@
           .appendTo($pane.find('.form-alter--multistep--next'))
           .on('click', function() {
             $panes.eq(i + 1).data('horizontalTab').tabShow();
+            scrollToTop($panes.eq(i + 1));
+            return false;
           });
       }
     });
 
   });
+
+  /**
+   * @param {jQuery} $pane
+   */
+  function scrollToTop($pane) {
+    var offsetTop = $pane.closest('.horizontal-tabs').offset().top;
+    var $toolbar = $('#toolbar-bar');
+
+    if ($toolbar.length && $toolbar.is(':visible')) {
+      offsetTop -= $toolbar.outerHeight();
+
+      var $toolbarTray = $toolbar.find('.toolbar-tray-horizontal');
+
+      if ($toolbarTray.length && $toolbarTray.is(':visible')) {
+        offsetTop -= $toolbarTray.outerHeight();
+      }
+    }
+
+    $('html, body').animate({
+      scrollTop: offsetTop - 20
+    });
+  }
 
 }(jQuery, Drupal));
