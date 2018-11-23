@@ -40,3 +40,46 @@ function relaunch2018_page_attachments_alter(array &$attachments) {
     }
   }
 }
+
+/**
+ * Implements THEME_preprocess_THEME_HOOK().
+ *
+ * @param $variables
+ */
+function relaunch2018_preprocess_form_element(array &$variables) {
+  if (in_array($variables['element']['#name'], [
+    'metadata_format',
+    'license',
+    'event_id',
+    'institution',
+    'object_type',
+    'search',
+  ])) {
+    $variables['attributes']['class'][] = 'col-12';
+  }
+}
+
+/**
+ * Implements THEME_preprocess_THEME_HOOK().
+ *
+ * @param array $variables
+ */
+function relaunch2018_preprocess_views_exposed_form__data_sets(array &$variables) {
+  $secondaryFilters = [
+    'metadata_format',
+    'license',
+    'event_id',
+    'institution',
+    'search',
+  ];
+
+  $variables['show_secondary_options'] = false;
+
+  foreach ($secondaryFilters as $filterName) {
+    $value = $variables['form'][$filterName]['#value'];
+    if (!($value === 'All' || $value === '' || is_array($value) && count($value) === 0)) {
+      $variables['show_secondary_options'] = true;
+      break;
+    }
+  }
+}

@@ -1,5 +1,9 @@
 @import 'variables';
 
+@mixin easeAll {
+  transition: all .3s ease;
+}
+
 @mixin easeOut {
   transition: all .4s cubic-bezier(0.23, 1, 0.32, 1);
 }
@@ -37,11 +41,26 @@
       font-size: $font-size-md-small;
     }
   }
+  @elseif $size == 'badge' {
+    font-size: $font-size-sm-badge;
+
+    @include media-breakpoint-up(md) {
+      font-size: $font-size-md-badge;
+    }
+  }
   @else {
     font-size: $font-size-sm;
 
     @include media-breakpoint-up(md) {
       font-size: $font-size-md;
+    }
+  }
+}
+
+@mixin linkColor($brightness) {
+  @if $brightness == 'dark' {
+    a {
+      color: $white;
     }
   }
 }

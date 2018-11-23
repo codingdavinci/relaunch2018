@@ -128,7 +128,7 @@ figcaption {
 }
 
 .badge {
-  @include fontSize(small);
+  @include fontSize(badge);
   display: inline;
   font-weight: 600;
   margin-right: .2em;

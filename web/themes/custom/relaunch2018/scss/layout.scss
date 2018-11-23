@@ -185,3 +185,36 @@ body {
     margin-bottom: $content-margin-bottom;
   }
 }
+
+.collapsible {
+  legend {
+    @include border-radius($border-radius);
+    @include easeAll;
+    @include fontSize(default);
+    background-color: $color-gray-5;
+    cursor: pointer;
+    font-weight: $font-weight-bold;
+    margin-bottom: 1em;
+    padding: .2em .5em;
+
+    &:hover {
+      background-color: darken($color-gray-5, 5%);
+    }
+
+    &:before {
+      @include easeAll;
+      content: '';
+      display: inline-block;
+      font-family: $font-family-icons;
+      margin-right: .4em;
+      transform: rotate(90deg);
+      vertical-align: middle;
+    }
+
+    &.collapsed {
+      &:before {
+        transform: rotate(0deg);
+      }
+    }
+  }
+}

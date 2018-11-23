@@ -1,0 +1,34 @@
+{#
+/**
+ * @see bef-links.html.twig
+ */
+#}
+{%
+  set classes = [
+    'bef-links',
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+  {% set current_nesting_level = 0 %}
+  {% set
+      selectedAll = children[0] == 'All' and selected[0] == 'All'
+      or children and not selected
+      or children and children[0] == '' and selected[0] == ''
+  %}
+  {% for child in children %}
+    {% set item = attribute(element, child) %}
+    {% set item = item|merge({'#attributes': {'class': 'badge'}}) %}
+    {# If nothing is selected, mark all element selected: #}
+    {% if child in selected or selectedAll %}
+      {% set item = item|merge({'#attributes': {'class': 'badge bef-link-active'}}) %}
+    {% endif %}
+    {% if isNested %}
+      {% set new_nesting_level = attribute(depth, child) %}
+      {% include '@relaunch2018/bef-nested-elements.html.twig' %}
+      {% set current_nesting_level = new_nesting_level %}
+    {# Don't render "All" links: #}
+    {% elseif child != 'All' and child != '' %}
+      {{ item }}
+    {% endif %}
+  {% endfor %}
+</div>

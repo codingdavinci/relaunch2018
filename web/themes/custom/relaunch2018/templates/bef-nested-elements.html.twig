@@ -1,0 +1,35 @@
+{#
+/**
+ * @see bef-nested-elements.html.twig
+ */
+#}
+{% spaceless %}
+  {% set delta = (current_nesting_level - new_nesting_level) | abs %}
+  {% if loop.first %}
+    <ul>
+  {% else %}
+    {% if delta %}
+      {% for i in 1..delta %}
+        {% if new_nesting_level > current_nesting_level  %}
+          {% if selectedAll %}
+            <ul class="bef-nested-hide">
+          {% else %}
+            <ul>
+          {% endif %}
+        {% else %}
+          </li></ul>
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+  {% endif %}
+
+  <li>{{ item }}
+
+  {% if loop.last %}
+    {# Close any remaining <li> tags #}
+    {% for i in new_nesting_level..0 %}
+      </li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endspaceless %}

@@ -13,10 +13,20 @@ global-js:
   js:
     js/menu.js: {}
     js/read-more.js: {}
+    js/view-data_sets.js: {}
     js/view-faq.js: {}
   dependencies:
     - core/jquery
+    - relaunch2018/bootstrap-js
     - relaunch2018/jquery-easing
+
+bootstrap-js:
+  version: 4.1
+  js:
+    lib/bootstrap/dist/js/bootstrap.js: {}
+  dependencies:
+    - core/jquery
+    - relaunch2018/popper-js
 
 cdv-font:
   version: 1.x
@@ -31,3 +41,9 @@ hammerjs:
 jquery-easing:
   js:
     lib/jquery.easing/jquery.easing.js: {}
+
+popper-js:
+  js:
+    lib/popper.js/dist/popper.js: {}
+  dependencies:
+    - core/jquery

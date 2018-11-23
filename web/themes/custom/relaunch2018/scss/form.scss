@@ -21,9 +21,14 @@ input {
   }
 
   &[type="submit"] {
+    @include easeAll;
     background-color: $color-main;
     color: $color-white;
     padding-left: 80px;
     padding-right: 80px;
+
+    &:hover {
+      background-color: $color-deep-teal;
+    }
   }
 }
