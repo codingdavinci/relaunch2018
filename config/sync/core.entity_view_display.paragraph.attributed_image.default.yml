@@ -6,6 +6,7 @@ dependencies:
     - field.field.paragraph.attributed_image.field_author
     - field.field.paragraph.attributed_image.field_inline_image
     - field.field.paragraph.attributed_image.field_license
+    - image.style.large
     - paragraphs.paragraphs_type.attributed_image
   module:
     - image
@@ -16,7 +17,7 @@ mode: default
 content:
   field_author:
     weight: 4
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -24,19 +25,20 @@ content:
     region: content
   field_inline_image:
     weight: 2
-    label: above
+    label: hidden
     settings:
-      image_style: ''
+      image_style: large
       image_link: ''
     third_party_settings: {  }
     type: image
     region: content
   field_license:
     weight: 3
-    label: above
+    label: hidden
     settings:
-      link: true
+      view_mode: default
+      link: false
     third_party_settings: {  }
-    type: entity_reference_label
+    type: entity_reference_entity_view
     region: content
 hidden: {  }

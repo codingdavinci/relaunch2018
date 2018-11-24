@@ -1,0 +1,37 @@
+uuid: 808e7a9c-ceaa-45e3-a605-12edb5b8e496
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.badge
+    - field.field.taxonomy_term.licenses.field_link
+    - taxonomy.vocabulary.licenses
+  module:
+    - link
+    - text
+id: taxonomy_term.licenses.badge
+targetEntityType: taxonomy_term
+bundle: licenses
+mode: badge
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_link:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: true
+      target: _blank
+      rel: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden:
+  langcode: true

@@ -17,24 +17,29 @@
 %}
 {{ attach_library('classy/node') }}
 <article{{ attributes.addClass(classes) }}>
-  <div class="article--main-image">
+  <div class="article--main-image d-none d-md-block">
     <div class="container">
-      {{ content.field_image }}
+      {{ content.header_image }}
     </div>
   </div>
 
-  <div class="article--content-container">
-    <div class="row">
-      <div class="article--main col-12 col-sm-10 offset-sm-1 col-md-9 offset-md-2">
+  <div class="article--content-container row">
+      <div class="article--main col-sm-10 offset-sm-1 col-md-9 offset-md-2">
         <div class="article-content">
 
-        {% if not page %}
-          {{ title_prefix }}
-          <h2{{ title_attributes }}>
-            <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-          </h2>
-          {{ title_suffix }}
-        {% endif %}
+          <div>
+            {{ content.field_attributed_image }}
+          </div>
+
+      </div>
+    </div>
+
+    <div{{ content_attributes.addClass('node__content col-sm-10 offset-sm-1 col-md-9 offset-md-2') }}>
+        {{ title_prefix }}
+        <h1{{ title_attributes }}>
+          {{ label }}
+        </h1>
+        {{ title_suffix }}
 
         {% if display_submitted %}
           <div{{ author_attributes.addClass('node__submitted').addClass('row') }}>
@@ -47,24 +52,20 @@
           </div>
         {% endif %}
 
-        {% if page %}
-          {{ title_prefix }}
-            <h1{{ title_attributes }}>{{ label }}</h1>
-          {{ title_suffix }}
-        {% endif %}
-
-        <div>
-          {{ content.field_tags }}
-        </div>
-
-      </div>
-    </div>
-
-    <div{{ content_attributes.addClass('node__content') }}>
-      {{ content|without('field_tags')|without('field_image') }}
+      {{ content.field_representative }}
+      {{ content.field_description }}
+      {{ object_type }}
+      {{
+        content
+        |without('header_image')
+        |without('field_attributed_image')
+        |without('field_representative')
+        |without('field_description')
+        |without('field_object_type')
+      }}
     </div>
 
     </div>
-  </div>
+
 
 </article>

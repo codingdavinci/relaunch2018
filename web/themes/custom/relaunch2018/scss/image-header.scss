@@ -1,0 +1,24 @@
+@import 'includes/base';
+
+.image-header {
+  .article--main-image {
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+
+    .container {
+      @include media-breakpoint-only(xs) {
+        padding: 0;
+      }
+
+      .field--name-field-image {
+        img {
+          @include media-breakpoint-down(xs) {
+            border-radius: 0;
+          }
+        }
+      }
+    }
+  }
+}

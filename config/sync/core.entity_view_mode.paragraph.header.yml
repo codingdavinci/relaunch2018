@@ -1,0 +1,10 @@
+uuid: b42f10dd-81a2-4e6a-8ba0-cb6dd2132099
+langcode: de
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.header
+label: Header
+targetEntityType: paragraph
+cache: true

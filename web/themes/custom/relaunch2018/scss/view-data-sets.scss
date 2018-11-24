@@ -1,6 +1,11 @@
 @import 'includes/base';
 
 .view-data-sets {
+
+  a.badge {
+    text-decoration: none;
+  }
+
   .view-filters {
     margin-bottom: 2rem;
 
@@ -49,9 +54,6 @@
 
             & > a {
               @include easeAll;
-              &:hover {
-                text-decoration: none;
-              }
             }
           }
 
@@ -206,7 +208,7 @@
             }
           }
 
-          &.form-item-search {
+          &.form-item-institution {
             input {
               padding-right: 20px;
             }
@@ -239,6 +241,14 @@
   }
 
   .view-content {
+    .badge a {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
     .card-columns {
       @include media-breakpoint-up(sm) {
         column-count: 2;

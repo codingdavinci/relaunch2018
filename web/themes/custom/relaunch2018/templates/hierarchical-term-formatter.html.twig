@@ -1,0 +1,14 @@
+{#
+/**
+ * @see hierarchical-term-formatter.html.twig
+ */
+#}
+{% if wrapper == 'ol' or wrapper == 'ul' %}
+  <{{ wrapper }} class="terms-hierarchy">
+{% endif %}
+{% for term in terms -%}
+  {{ term|merge({'#attributes': {'class': 'badge'}}) }}{% if loop.last == false %}{{ separator }}{% endif %}
+{%- endfor %}
+{% if wrapper == 'ol' or wrapper == 'ul' %}
+  </{{ wrapper }}>
+{% endif %}

@@ -1,15 +1,16 @@
-uuid: 4e3e6119-18e8-4782-a74d-39c9d6552868
+uuid: 7f90e705-9d40-4205-b05c-8cbe660610fa
 langcode: de
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.paragraph.preview
     - field.field.paragraph.attribution.field_author
     - field.field.paragraph.attribution.field_license
     - paragraphs.paragraphs_type.attribution
-id: paragraph.attribution.default
+id: paragraph.attribution.preview
 targetEntityType: paragraph
 bundle: attribution
-mode: default
+mode: preview
 content:
   field_author:
     weight: 1
@@ -23,7 +24,7 @@ content:
     weight: 0
     label: above
     settings:
-      view_mode: default
+      view_mode: badge
       link: false
     third_party_settings: {  }
     type: entity_reference_entity_view
