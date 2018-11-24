@@ -10,6 +10,7 @@ dependencies:
     - field.storage.paragraph.field_license
     - field.storage.user.field_institution_name
     - node.type.data_set
+    - system.menu.main
     - taxonomy.vocabulary.licenses
     - taxonomy.vocabulary.metadata_file_types
     - taxonomy.vocabulary.object_types
@@ -1804,6 +1805,15 @@ display:
           text_input_required_format: basic_html
       arguments: {  }
       css_class: container
+      menu:
+        type: normal
+        title: Daten
+        description: ''
+        expanded: false
+        parent: ''
+        weight: -46
+        context: '0'
+        menu_name: main
     cache_metadata:
       max-age: -1
       contexts:
