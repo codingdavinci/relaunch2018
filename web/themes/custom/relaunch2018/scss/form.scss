@@ -32,3 +32,18 @@ input {
     }
   }
 }
+
+ul.ui-autocomplete {
+  li.ui-menu-item {
+    a {
+      @include fontSize(small);
+      display: block;
+
+      &.ui-state-active {
+        background-color: $color-link;
+        color: $color-link-bright;
+        text-decoration: none;
+      }
+    }
+  }
+}

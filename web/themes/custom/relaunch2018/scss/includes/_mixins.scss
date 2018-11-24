@@ -60,7 +60,7 @@
 @mixin linkColor($brightness) {
   @if $brightness == 'dark' {
     a {
-      color: $white;
+      color: $color-link-bright;
     }
   }
 }
