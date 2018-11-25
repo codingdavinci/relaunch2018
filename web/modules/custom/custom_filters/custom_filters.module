@@ -41,6 +41,11 @@ function custom_filters_form_views_exposed_form_alter(array &$form, FormStateInt
       '#default_value' => 'All',
       '#theme' => 'bef_links',
       '#bef_path' => Url::fromRoute('view.data_sets.page_1'),
+      // Although native $form['event_id'] text field is overwritten,
+      // $form['event_id']['#value'] is never filled. Normally, this should be:
+      // '#value' => $form['event_id']['#value'] === '' ? 'All' : $form['event_id']['#value']
+      // Using the above line would make all specific field handling per
+      // hook_views_pre_execute and hook_views_pre_view obsolete.
     ];
 
     $form['institution'] = [
@@ -51,6 +56,50 @@ function custom_filters_form_views_exposed_form_alter(array &$form, FormStateInt
         'count' => 10
       ],
     ];
+  }
+}
+
+/**
+ * Implements hook_views_pre_execute().
+ *
+ * @param ViewExecutable $view
+ */
+function custom_filters_views_query_alter(ViewExecutable $view) {
+  if ($view->id() === 'data_sets' && $view->getDisplay()->display['id'] === 'page_1') {
+    /** @var \Drupal\views\Plugin\views\query\Sql $query */
+    $query = &$view->query;
+
+    // Rewrite condition of simulated event select field which won't handle
+    // "AlL" string value:
+    foreach ($query->where as &$conditionGroup) {
+      $conditionGroup['conditions'] = array_filter(
+        $conditionGroup['conditions'],
+        function ($condition) {
+          return
+            $condition['field'] !== 'node_field_data_paragraph__field_event.nid'
+            || $condition['value'] !== 'All';
+        }
+      );
+    }
+  }
+}
+
+/**
+ * Implements hook_views_pre_view().
+ *
+ * @param ViewExecutable $view
+ * @param string $display_id
+ * @param array $args
+ */
+function custom_filters_views_pre_view(ViewExecutable $view, $display_id, array &$args) {
+  if ($view->id() === 'data_sets' && $view->getDisplay()->display['id'] === 'page_1') {
+    $filterInput = $view->getExposedInput();
+    if (isset($filterInput['event_id']) && $filterInput['event_id'] === '') {
+      // Change processed value as an empty string causes an error on page
+      // navigation.
+      $filterInput['event_id'] = 'All';
+      $view->setExposedInput($filterInput);
+    }
   }
 }
 
