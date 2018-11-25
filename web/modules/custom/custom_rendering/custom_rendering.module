@@ -91,14 +91,45 @@ function custom_rendering_preprocess_node(array &$variables) {
 
     $tree = _custom_rendering_taxonomy_get_nested_tree('object_types');
 
-    $variables['object_type'] = [
-      '#type' => 'fieldset',
-      '#markup' => _custom_rendering_output_taxonomy_nested_tree($tree, $termIds, 'badge--object-type'),
-      '#title' => $variables['content']['field_object_type']['#title'],
-      '#attributes' => [
-        'class' => 'object-type',
-      ],
-    ];
+    if (count($termIds) > 0) {
+      $variables['object_type'] = [
+        '#type' => 'fieldset',
+        '#markup' => _custom_rendering_output_taxonomy_nested_tree($tree, $termIds, 'badge--object-type'),
+        '#title' => $variables['content']['field_object_type']['#title'],
+        '#attributes' => [
+          'class' => 'object-type',
+        ],
+      ];
+    }
+  }
+}
+
+/**
+ * Implements hook_field_group_pre_render_alter().
+ *
+ * @param array $element
+ */
+function custom_rendering_field_group_pre_render_alter(&$element) {
+  // Hide field groups if key elements are empty. Field groups are hidden
+  // automatically when they do not contain any content. However, empty
+  // paragraphs will create their content wrapper regardless of paragraph fields
+  // are empty or filled:
+  // See https://www.drupal.org/project/paragraphs/issues/2877695
+
+  // "group_links" is the #group_name assigned in the backend.
+  if (isset($element['#group_name']) && $element['#group_name'] === 'group_links') {
+    return;
+  }
+
+  if (isset($element['field_links_metadata'])) {
+    if (!isset($element['field_links_metadata'][0])) {
+      $element['#access'] = FALSE;
+    }
+  }
+  elseif (isset($element['field_links_media'])) {
+    if (!isset($element['field_links_media'][0])) {
+      $element['#access'] = FALSE;
+    }
   }
 }
 
