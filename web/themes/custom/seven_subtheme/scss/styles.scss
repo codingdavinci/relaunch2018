@@ -67,6 +67,22 @@
         border-top: none;
         padding-top: 0;
       }
+
+      &.field--name-field-tags,
+      &.field--name-field-theme,
+      &.field--name-field-metadata-format,
+      &.field--name-field-metadata-standards{
+        .form-checkboxes {
+          column-count: 2;
+
+          & > .form-type-checkbox {
+            display: inline-block;
+            margin: 0;
+            padding: .8em 0 .2em 0;
+            width: 100%;
+          }
+        }
+      }
     }
 
     .details-wrapper {
