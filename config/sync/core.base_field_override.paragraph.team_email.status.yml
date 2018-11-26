@@ -1,0 +1,22 @@
+uuid: 16141f60-57b4-4f5b-8c73-5939c3a6f164
+langcode: de
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.team_email
+id: paragraph.team_email.status
+field_name: status
+entity_type: paragraph
+bundle: team_email
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: An
+  off_label: Aus
+field_type: boolean

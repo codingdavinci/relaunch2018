@@ -14,7 +14,7 @@ bundle: data_set
 label: 'Link zu den Mediendateien'
 description: 'z.B. Wikimedia Commons, Flickr Commons, DDB, Europeana, eigene Webseite…'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

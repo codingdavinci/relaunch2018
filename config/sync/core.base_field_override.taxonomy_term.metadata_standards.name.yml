@@ -1,0 +1,18 @@
+uuid: fbca8ab1-d061-4e33-8942-6ef3e7e47e22
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.metadata_standards
+id: taxonomy_term.metadata_standards.name
+field_name: name
+entity_type: taxonomy_term
+bundle: metadata_standards
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

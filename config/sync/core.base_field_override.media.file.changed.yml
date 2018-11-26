@@ -1,0 +1,18 @@
+uuid: f1903911-15ec-4361-ad90-f4b9607b13b4
+langcode: de
+status: true
+dependencies:
+  config:
+    - media.type.file
+id: media.file.changed
+field_name: changed
+entity_type: media
+bundle: file
+label: Geändert
+description: 'Der Zeitpunkt, zu dem der Medieneintrag zuletzt bearbeitet wurde.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

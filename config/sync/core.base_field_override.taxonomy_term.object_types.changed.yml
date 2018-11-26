@@ -1,0 +1,18 @@
+uuid: d57d3af8-101f-4808-adcd-e76ff8c437fb
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.object_types
+id: taxonomy_term.object_types.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: object_types
+label: Geändert
+description: 'Der Zeitpunkt an dem der Begriff zuletzt bearbeitet wurde.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

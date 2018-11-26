@@ -1,0 +1,22 @@
+uuid: a3aa96d6-7b87-47ea-970c-1b7fb445732a
+langcode: de
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.filesize
+id: paragraph.filesize.status
+field_name: status
+entity_type: paragraph
+bundle: filesize
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: An
+  off_label: Aus
+field_type: boolean

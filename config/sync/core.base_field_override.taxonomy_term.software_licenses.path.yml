@@ -1,0 +1,20 @@
+uuid: d846f156-e727-46c2-84a5-9f016c9631ad
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.software_licenses
+  module:
+    - path
+id: taxonomy_term.software_licenses.path
+field_name: path
+entity_type: taxonomy_term
+bundle: software_licenses
+label: URL-Alias
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

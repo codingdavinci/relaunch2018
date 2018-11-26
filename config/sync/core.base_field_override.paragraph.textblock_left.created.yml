@@ -1,0 +1,18 @@
+uuid: 08974de2-0d84-454c-bd7b-74de1fe8b844
+langcode: de
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.textblock_left
+id: paragraph.textblock_left.created
+field_name: created
+entity_type: paragraph
+bundle: textblock_left
+label: 'Geschrieben am'
+description: 'Der Zeitpunkt, zu dem der Seitenabschnittstyp erstellt wurde.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

@@ -1,0 +1,18 @@
+uuid: cc522382-4995-4864-bc90-eae92a18ddfc
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.metadata_file_types
+id: taxonomy_term.metadata_file_types.name
+field_name: name
+entity_type: taxonomy_term
+bundle: metadata_file_types
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

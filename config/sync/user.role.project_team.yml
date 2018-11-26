@@ -8,10 +8,15 @@ weight: -8
 is_admin: null
 permissions:
   - 'access toolbar'
+  - 'create content translations'
   - 'create project content'
+  - 'delete content translations'
   - 'edit own project content'
+  - 'translate project node'
+  - 'update content translations'
   - 'use project transition create_new_draft'
   - 'use text format restricted_html'
+  - 'view latest version'
   - 'view own unpublished content'
   - 'view project revisions'
   - 'view the administration theme'

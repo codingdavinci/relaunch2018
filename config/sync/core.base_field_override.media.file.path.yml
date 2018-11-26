@@ -1,0 +1,20 @@
+uuid: fba38f3b-26c4-4ea7-a2a1-8009229ff27e
+langcode: de
+status: true
+dependencies:
+  config:
+    - media.type.file
+  module:
+    - path
+id: media.file.path
+field_name: path
+entity_type: media
+bundle: file
+label: URL-Alias
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

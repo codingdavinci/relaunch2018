@@ -1,0 +1,22 @@
+uuid: 92b9c290-8c6f-4878-9e30-498f2237b748
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.file_types
+id: taxonomy_term.file_types.status
+field_name: status
+entity_type: taxonomy_term
+bundle: file_types
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: An
+  off_label: Aus
+field_type: boolean

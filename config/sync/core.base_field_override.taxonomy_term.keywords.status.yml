@@ -1,0 +1,22 @@
+uuid: e1181039-6850-4da7-8c89-ced686cbdb78
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.keywords
+id: taxonomy_term.keywords.status
+field_name: status
+entity_type: taxonomy_term
+bundle: keywords
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: An
+  off_label: Aus
+field_type: boolean

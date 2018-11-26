@@ -14,7 +14,7 @@ bundle: data_set
 label: 'Link zu den Metadaten'
 description: 'z.B. DDB, Wikidata, Europeana, <a href="http://offenedaten.de" target="_blank">offenedaten.de</a>, eigene Webseite…'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

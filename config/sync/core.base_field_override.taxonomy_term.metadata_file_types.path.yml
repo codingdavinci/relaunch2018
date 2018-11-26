@@ -1,0 +1,20 @@
+uuid: 9fffd66c-e115-461c-8c8d-b1d68058d2f2
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.metadata_file_types
+  module:
+    - path
+id: taxonomy_term.metadata_file_types.path
+field_name: path
+entity_type: taxonomy_term
+bundle: metadata_file_types
+label: URL-Alias
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

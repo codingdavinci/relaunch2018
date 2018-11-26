@@ -1,0 +1,20 @@
+uuid: 4dd69e6c-2583-4e83-badc-1a88752846df
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.metadata_standards
+  module:
+    - path
+id: taxonomy_term.metadata_standards.path
+field_name: path
+entity_type: taxonomy_term
+bundle: metadata_standards
+label: URL-Alias
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

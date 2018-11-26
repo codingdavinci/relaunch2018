@@ -1,0 +1,18 @@
+uuid: 45da92b8-ea79-4159-ae10-a8affa887606
+langcode: de
+status: true
+dependencies:
+  config:
+    - media.type.audio
+id: media.audio.created
+field_name: created
+entity_type: media
+bundle: audio
+label: 'Geschrieben am'
+description: 'Der Zeitpunkt, zu dem das Medium erstellt wurde.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\media\Entity\Media::getRequestTime'
+settings: {  }
+field_type: created

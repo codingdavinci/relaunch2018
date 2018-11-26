@@ -12,7 +12,7 @@ bundle: project
 label: Kurzbeschreibung
 description: 'An wen richtet sich das Projekt und was ist die Idee dahinter?'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

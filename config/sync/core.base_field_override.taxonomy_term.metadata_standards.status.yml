@@ -1,0 +1,22 @@
+uuid: c6598605-57c4-4561-a5e7-94d7c2780cf2
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.metadata_standards
+id: taxonomy_term.metadata_standards.status
+field_name: status
+entity_type: taxonomy_term
+bundle: metadata_standards
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: An
+  off_label: Aus
+field_type: boolean

@@ -1,0 +1,20 @@
+uuid: 48d76c0c-30a1-4846-bb7a-d40a2fed47f5
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.object_types
+  module:
+    - text
+id: taxonomy_term.object_types.description
+field_name: description
+entity_type: taxonomy_term
+bundle: object_types
+label: Beschreibung
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

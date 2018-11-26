@@ -1,0 +1,22 @@
+uuid: 28a4d4a7-76d7-4b5b-abe6-d395efb832ca
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.licenses
+id: taxonomy_term.licenses.status
+field_name: status
+entity_type: taxonomy_term
+bundle: licenses
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: An
+  off_label: Aus
+field_type: boolean

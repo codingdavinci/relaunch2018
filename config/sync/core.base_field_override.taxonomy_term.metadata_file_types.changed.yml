@@ -1,0 +1,18 @@
+uuid: 66734ddc-f8fd-4788-b5ea-6d487ebd4b52
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.metadata_file_types
+id: taxonomy_term.metadata_file_types.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: metadata_file_types
+label: Geändert
+description: 'Der Zeitpunkt an dem der Begriff zuletzt bearbeitet wurde.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

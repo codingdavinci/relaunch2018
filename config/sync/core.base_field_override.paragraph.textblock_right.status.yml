@@ -1,0 +1,22 @@
+uuid: ea2f2284-a888-4792-abf6-5de1dc91e839
+langcode: de
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.textblock_right
+id: paragraph.textblock_right.status
+field_name: status
+entity_type: paragraph
+bundle: textblock_right
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: An
+  off_label: Aus
+field_type: boolean

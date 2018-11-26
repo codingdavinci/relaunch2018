@@ -1,0 +1,18 @@
+uuid: c931a2be-aaf6-4d29-be9e-fe611b796c2d
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.software_licenses
+id: taxonomy_term.software_licenses.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: software_licenses
+label: Geändert
+description: 'Der Zeitpunkt an dem der Begriff zuletzt bearbeitet wurde.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

@@ -1,0 +1,22 @@
+uuid: 11d8d1f1-4fa9-45b1-95f9-90bac6a80db6
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.theme
+id: taxonomy_term.theme.status
+field_name: status
+entity_type: taxonomy_term
+bundle: theme
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: An
+  off_label: Aus
+field_type: boolean

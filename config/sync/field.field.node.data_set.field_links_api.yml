@@ -14,7 +14,7 @@ bundle: data_set
 label: 'Link zur API'
 description: 'Falls die Metadaten (möglicherweise auch Mediendateien) zu den Objekten Ihrer Sammlung über eine Schnittstelle (API, SPARQL-Endpunkt, OAI-Server, o.ä.) öffentlich im Internet zugänglich sind, tragen Sie hier bitte die entsprechenden Informationen ein, inklusive der Dokumentation. Dabei muss es sich nicht um Ihren eigenen Webauftritt handeln; hier können Sie Datenportale mit entsprechenden Schnittstellen wie z.B. die Deutsche Digitale Bibliothek angeben.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

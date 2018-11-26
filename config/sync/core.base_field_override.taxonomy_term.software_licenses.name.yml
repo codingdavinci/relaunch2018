@@ -1,0 +1,18 @@
+uuid: 5a1f610c-0950-4ede-b516-ebd108b8e658
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.software_licenses
+id: taxonomy_term.software_licenses.name
+field_name: name
+entity_type: taxonomy_term
+bundle: software_licenses
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

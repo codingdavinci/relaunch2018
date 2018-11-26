@@ -1,0 +1,20 @@
+uuid: 5240d7a5-16b9-4a61-9078-947097a12fe8
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.file_types
+  module:
+    - text
+id: taxonomy_term.file_types.description
+field_name: description
+entity_type: taxonomy_term
+bundle: file_types
+label: Beschreibung
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

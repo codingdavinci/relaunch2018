@@ -1,0 +1,20 @@
+uuid: fbf258de-282c-4ab1-94fb-61fd38ff4662
+langcode: de
+status: true
+dependencies:
+  config:
+    - media.type.audio
+id: media.audio.uid
+field_name: uid
+entity_type: media
+bundle: audio
+label: 'Geschrieben von'
+description: 'Die Benutzer-ID des Autors'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\media\Entity\Media::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

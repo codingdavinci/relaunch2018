@@ -140,6 +140,15 @@
       & > div > h4 {
         display: none;
       }
+      
+      .paragraph-bullet {
+        display: table-cell !important;
+        width: 15px;
+        
+        &:after {
+          display: none;
+        }
+      }
     }
 
     .field--widget-paragraphs {
@@ -348,6 +357,15 @@
             &:first-child {
               vertical-align: middle;
             }
+          }
+        }
+
+        .paragraph-bullet {
+          display: table-cell !important;
+          width: 20px;
+
+          &:after {
+            display: none;
           }
         }
       }

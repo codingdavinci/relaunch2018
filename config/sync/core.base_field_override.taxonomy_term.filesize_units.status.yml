@@ -1,0 +1,22 @@
+uuid: be79de52-0db0-4d4e-aa21-0b05efde66fd
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.filesize_units
+id: taxonomy_term.filesize_units.status
+field_name: status
+entity_type: taxonomy_term
+bundle: filesize_units
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: An
+  off_label: Aus
+field_type: boolean

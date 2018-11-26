@@ -1,0 +1,20 @@
+uuid: ef005a9d-72ab-44c1-9133-623839af2e57
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.metadata_standards
+  module:
+    - text
+id: taxonomy_term.metadata_standards.description
+field_name: description
+entity_type: taxonomy_term
+bundle: metadata_standards
+label: Beschreibung
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

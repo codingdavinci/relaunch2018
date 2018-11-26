@@ -1,0 +1,18 @@
+uuid: 3212ce22-3567-424d-bd4a-4186c52183ef
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.filesize_units
+id: taxonomy_term.filesize_units.name
+field_name: name
+entity_type: taxonomy_term
+bundle: filesize_units
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

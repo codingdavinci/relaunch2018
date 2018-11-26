@@ -1,0 +1,20 @@
+uuid: d7d08fa0-809c-4917-957f-8348a7c31ea4
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.software_licenses
+  module:
+    - text
+id: taxonomy_term.software_licenses.description
+field_name: description
+entity_type: taxonomy_term
+bundle: software_licenses
+label: Beschreibung
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

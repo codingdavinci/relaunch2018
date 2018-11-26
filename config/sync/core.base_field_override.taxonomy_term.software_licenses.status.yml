@@ -1,0 +1,22 @@
+uuid: 5ef2a741-af04-41f9-ba03-cbc55e9e7903
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.software_licenses
+id: taxonomy_term.software_licenses.status
+field_name: status
+entity_type: taxonomy_term
+bundle: software_licenses
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: An
+  off_label: Aus
+field_type: boolean

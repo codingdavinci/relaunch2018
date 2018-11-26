@@ -1,0 +1,20 @@
+uuid: 31b5a643-bffe-40a0-a699-449ccd094fb2
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.metadata_file_types
+  module:
+    - text
+id: taxonomy_term.metadata_file_types.description
+field_name: description
+entity_type: taxonomy_term
+bundle: metadata_file_types
+label: Beschreibung
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

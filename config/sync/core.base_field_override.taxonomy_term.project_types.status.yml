@@ -1,0 +1,22 @@
+uuid: 96f3735e-ec24-47de-b4b3-f925bae9e59b
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.project_types
+id: taxonomy_term.project_types.status
+field_name: status
+entity_type: taxonomy_term
+bundle: project_types
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: An
+  off_label: Aus
+field_type: boolean

@@ -1,0 +1,20 @@
+uuid: 64034d1a-58e2-4fb9-a299-3a6fac6706bc
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.filesize_units
+  module:
+    - text
+id: taxonomy_term.filesize_units.description
+field_name: description
+entity_type: taxonomy_term
+bundle: filesize_units
+label: Beschreibung
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

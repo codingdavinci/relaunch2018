@@ -14,7 +14,7 @@ bundle: data_set
 label: 'Dokumentation/Legende zu den Metadaten'
 description: 'Bitte erklären Sie Metadatenfeldbezeichnungen, die sich einem normalen Nutzer nicht sofort erschließen. Erläutern Sie bitte ebenfalls Sonderzeichen mit inhaltlicher Bedeutung, Nichtsortierzeichen „¬”, usf. ; ein Beispiel finden Sie unter <a href="https://daten.berlin.de/datensaetze/liste-der-verbannten-bücher-0" target="_blank">https://daten.berlin.de/datensaetze/liste-der-verbannten-bücher-0</a>.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

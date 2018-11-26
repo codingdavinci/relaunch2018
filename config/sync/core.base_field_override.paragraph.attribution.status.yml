@@ -1,0 +1,22 @@
+uuid: e143eda5-a966-4389-be3c-b670e7f1324e
+langcode: de
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.attribution
+id: paragraph.attribution.status
+field_name: status
+entity_type: paragraph
+bundle: attribution
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: An
+  off_label: Aus
+field_type: boolean

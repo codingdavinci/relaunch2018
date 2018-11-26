@@ -1,0 +1,18 @@
+uuid: d2127553-b26a-46aa-987a-5af6871fb5da
+langcode: de
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.team_email
+id: paragraph.team_email.created
+field_name: created
+entity_type: paragraph
+bundle: team_email
+label: 'Geschrieben am'
+description: 'Der Zeitpunkt, zu dem der Seitenabschnittstyp erstellt wurde.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

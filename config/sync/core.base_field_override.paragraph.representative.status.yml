@@ -1,0 +1,22 @@
+uuid: 15c69e36-0392-4310-98d2-c7171dc1db25
+langcode: de
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.representative
+id: paragraph.representative.status
+field_name: status
+entity_type: paragraph
+bundle: representative
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: An
+  off_label: Aus
+field_type: boolean

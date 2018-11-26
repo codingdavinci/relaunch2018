@@ -1,0 +1,20 @@
+uuid: 5ddb3a69-efae-4304-8fad-92049689e02b
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.filesize_units
+  module:
+    - path
+id: taxonomy_term.filesize_units.path
+field_name: path
+entity_type: taxonomy_term
+bundle: filesize_units
+label: URL-Alias
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

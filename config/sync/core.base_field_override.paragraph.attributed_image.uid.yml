@@ -1,0 +1,20 @@
+uuid: b865855f-53f3-4c82-aea5-5c8851cd3872
+langcode: de
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.attributed_image
+id: paragraph.attributed_image.uid
+field_name: uid
+entity_type: paragraph
+bundle: attributed_image
+label: 'Geschrieben von'
+description: 'Die Benutzer-ID des Seitenabschnittsautors.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\paragraphs\Entity\Paragraph::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

@@ -1,0 +1,20 @@
+uuid: b2a777b5-b903-47e0-8e5a-88d6291287ac
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.keywords
+  module:
+    - text
+id: taxonomy_term.keywords.description
+field_name: description
+entity_type: taxonomy_term
+bundle: keywords
+label: Beschreibung
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

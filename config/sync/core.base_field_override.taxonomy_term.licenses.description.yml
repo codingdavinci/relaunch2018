@@ -1,0 +1,20 @@
+uuid: 81fea65d-ad5c-40a3-83b5-cf6e10d2a3e5
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.licenses
+  module:
+    - text
+id: taxonomy_term.licenses.description
+field_name: description
+entity_type: taxonomy_term
+bundle: licenses
+label: Beschreibung
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

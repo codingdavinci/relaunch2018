@@ -1,0 +1,20 @@
+uuid: 05adb283-cfbb-4508-8afc-1a592231cee5
+langcode: de
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.textblock_right
+id: paragraph.textblock_right.uid
+field_name: uid
+entity_type: paragraph
+bundle: textblock_right
+label: 'Geschrieben von'
+description: 'Die Benutzer-ID des Seitenabschnittsautors.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\paragraphs\Entity\Paragraph::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference
