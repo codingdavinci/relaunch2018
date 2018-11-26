@@ -80,6 +80,23 @@ function form_alterations_form_alter(array &$form, FormStateInterface $form_stat
       }
     }
   }
+
+  if (in_array($form_id, [
+    'node_project_form',
+    'node_project_edit_form',
+    'node_data_set_form',
+    'node_data_set_edit_form'
+  ])) {
+    $select2Fields = [
+      'field_datasets',
+      'field_keywords',
+    ];
+
+    foreach ($select2Fields as $fieldName) {
+      $form[$fieldName]['widget']['#select2']['theme'] = 'seven';
+      $form[$fieldName]['widget']['#select2']['placeholder'] = '';
+    }
+  }
 }
 
 /**

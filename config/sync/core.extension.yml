@@ -51,6 +51,7 @@ module:
   rdf: 0
   related_content: 0
   search: 0
+  select2: 0
   shortcut: 0
   system: 0
   taxonomy: 0

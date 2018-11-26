@@ -53,6 +53,12 @@
       }
     }
 
+    .select2-selection {
+      font-size: $font-size-large;
+      line-height: normal;
+      padding: .5em;
+    }
+
     .field--widget-options-buttons {
       border-top: 1px solid $gray;
       border-bottom: 1px solid $gray;

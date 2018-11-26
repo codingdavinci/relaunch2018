@@ -6,3 +6,15 @@ global:
       css/styles.css: {}
   dependencies:
     - core/jquery
+    - seven_subtheme/select2
+
+# Unfortunately, "Seven" theme detection is hardcoded in the select2 module, so
+# there is no way to have it detect this sub-theme to Seven. Therefore, a custom
+# library referencing the native select2 module styles for Seven is required.
+select2:
+  css:
+    theme:
+      ../../../modules/contrib/select2/css/select2.seven.css: {}
+      ../../../modules/contrib/select2/css/select2.seven-overrides.css: {}
+  dependencies:
+    - select2/select2

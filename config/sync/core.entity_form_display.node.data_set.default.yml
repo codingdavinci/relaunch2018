@@ -33,6 +33,7 @@ dependencies:
     - maxlength
     - paragraphs
     - path
+    - select2
     - text
 third_party_settings:
   field_group:
@@ -187,10 +188,10 @@ content:
     weight: 5
     settings:
       match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      autocomplete: false
+      width: 100%
     third_party_settings: {  }
-    type: entity_reference_autocomplete_tags
+    type: select2_entity_reference
     region: content
   field_links_api:
     weight: 23
