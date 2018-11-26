@@ -1,0 +1,12 @@
+{#
+/**
+ * @see user.html.twig
+ */
+#}
+{% if 'project_team' not in user.getroles and 'institution' not in user.getroles %}
+  <article{{ attributes.addClass('profile') }}>
+    {% if content %}
+      {{- content -}}
+    {% endif %}
+  </article>
+{% endif %}

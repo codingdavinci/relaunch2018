@@ -9,7 +9,7 @@ dependencies:
 id: seven_subtheme_login
 theme: seven_subtheme
 region: content
-weight: 0
+weight: -1
 provider: null
 plugin: user_login_block
 settings:

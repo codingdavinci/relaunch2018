@@ -1,4 +1,4 @@
-uuid: 820c1abd-d99e-418d-babf-014880698b47
+uuid: 22d11663-6b94-4523-892f-964556c2821a
 langcode: de
 status: true
 dependencies:
@@ -9,9 +9,9 @@ dependencies:
     - user
     - views
   theme:
-    - relaunch2018
+    - seven_subtheme
 id: views_block__data_sets_block_1
-theme: relaunch2018
+theme: seven_subtheme
 region: content
 weight: -4
 provider: null
@@ -27,7 +27,7 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: '/user/*'
+    pages: "/user/*\r\n!/user/*/edit"
     negate: false
     context_mapping: {  }
   user_role:
