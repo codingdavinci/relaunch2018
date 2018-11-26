@@ -44,6 +44,6 @@ jquery-easing:
 
 popper-js:
   js:
-    lib/popper.js/dist/popper.js: {}
+    lib/popper.js/dist/umd/popper.js: {}
   dependencies:
     - core/jquery
