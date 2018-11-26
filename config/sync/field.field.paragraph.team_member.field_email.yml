@@ -1,14 +1,14 @@
-uuid: 3716ceeb-5d40-4e55-a791-fae490f0a467
+uuid: 233472fd-0473-40ce-9045-3ec2d41e7852
 langcode: de
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_email
-    - paragraphs.paragraphs_type.team_email
-id: paragraph.team_email.field_email
+    - paragraphs.paragraphs_type.team_member
+id: paragraph.team_member.field_email
 field_name: field_email
 entity_type: paragraph
-bundle: team_email
+bundle: team_member
 label: E-Mail-Adresse
 description: ''
 required: false

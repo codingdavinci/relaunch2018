@@ -6,16 +6,15 @@ dependencies:
     - field.field.node.project.field_attributed_image
     - field.field.node.project.field_datasets
     - field.field.node.project.field_description
-    - field.field.node.project.field_emails
     - field.field.node.project.field_event
     - field.field.node.project.field_license_code
     - field.field.node.project.field_license_media
     - field.field.node.project.field_links
-    - field.field.node.project.field_links_team
     - field.field.node.project.field_other_datasets
     - field.field.node.project.field_remarks
     - field.field.node.project.field_short_description
     - field.field.node.project.field_tags
+    - field.field.node.project.field_team_members
     - node.type.project
   module:
     - content_moderation
@@ -27,21 +26,6 @@ dependencies:
     - text
 third_party_settings:
   field_group:
-    group_team_contacts:
-      children:
-        - field_emails
-        - field_links_team
-      parent_name: ''
-      weight: 6
-      format_type: fieldset
-      format_settings:
-        label: Team-Kontaktdaten
-        description: 'Wenn ihr nicht möchtet, dass wir eure Namen bzw. euren Kontakt auf unserer Webseite veröffentlichen, dann lasst diese Felder leer.'
-        id: ''
-        classes: ''
-        required_fields: false
-      label: Team-Kontaktdaten
-      region: content
     group_description:
       children:
         - field_description
@@ -62,7 +46,7 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 16
+    weight: 19
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -85,7 +69,7 @@ content:
     type: paragraphs
     region: content
   field_datasets:
-    weight: 8
+    weight: 11
     settings:
       match_operator: CONTAINS
       size: 60
@@ -106,39 +90,21 @@ content:
         maxlength_js_truncate_html: true
     type: text_textarea
     region: content
-  field_emails:
-    type: paragraphs
-    weight: 7
-    settings:
-      title: Seitenabschnitt
-      title_plural: Seitenabschnitte
-      edit_mode: open
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: ''
-      closed_mode: summary
-      autocollapse: none
-      closed_mode_threshold: 0
-      features:
-        duplicate: duplicate
-        collapse_edit_all: collapse_edit_all
-    third_party_settings: {  }
-    region: content
   field_event:
-    weight: 7
+    weight: 10
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_license_code:
-    weight: 12
+    weight: 15
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
     region: content
   field_license_media:
     type: paragraphs
-    weight: 13
+    weight: 16
     settings:
       title: Seitenabschnitt
       title_plural: Seitenabschnitte
@@ -162,16 +128,8 @@ content:
     third_party_settings: {  }
     type: link_default
     region: content
-  field_links_team:
-    weight: 8
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-    type: link_default
-    region: content
   field_other_datasets:
-    weight: 9
+    weight: 12
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -179,7 +137,7 @@ content:
     type: link_default
     region: content
   field_remarks:
-    weight: 14
+    weight: 17
     settings:
       rows: 5
       placeholder: ''
@@ -198,10 +156,28 @@ content:
     type: string_textfield
     region: content
   field_tags:
-    weight: 11
+    weight: 14
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
+    region: content
+  field_team_members:
+    type: paragraphs
+    weight: 6
+    settings:
+      title: Seitenabschnitt
+      title_plural: Seitenabschnitte
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: team_member
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
+    third_party_settings: {  }
     region: content
   langcode:
     type: language_select
@@ -212,13 +188,13 @@ content:
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 20
+    weight: 23
     settings: {  }
     region: content
     third_party_settings: {  }
   path:
     type: path
-    weight: 19
+    weight: 22
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -226,21 +202,21 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 17
+    weight: 20
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 21
+    weight: 24
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 18
+    weight: 21
     region: content
     third_party_settings: {  }
   title:
@@ -252,13 +228,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 10
+    weight: 13
     region: content
     settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 15
+    weight: 18
     settings:
       match_operator: CONTAINS
       size: 60

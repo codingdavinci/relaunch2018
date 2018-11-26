@@ -1,0 +1,9 @@
+uuid: 9fb834fe-788d-4dcd-851d-989fde5d5f71
+langcode: de
+status: true
+dependencies: {  }
+id: team_member
+label: Team-Mitglied
+icon_uuid: null
+description: 'Name, E-Mail und ein oder mehrere Links.'
+behavior_plugins: {  }

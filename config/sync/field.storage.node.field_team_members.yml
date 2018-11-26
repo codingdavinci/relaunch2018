@@ -1,4 +1,4 @@
-uuid: 218c7166-bae2-4177-8400-d1398d5f0661
+uuid: b931325d-3df0-4765-b071-f48e831902af
 langcode: de
 status: true
 dependencies:
@@ -6,8 +6,8 @@ dependencies:
     - entity_reference_revisions
     - node
     - paragraphs
-id: node.field_emails
-field_name: field_emails
+id: node.field_team_members
+field_name: field_team_members
 entity_type: node
 type: entity_reference_revisions
 settings:

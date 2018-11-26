@@ -1,0 +1,44 @@
+uuid: 050a7030-c4cd-4e46-84aa-6333e54beafa
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.team_member.field_email
+    - field.field.paragraph.team_member.field_links
+    - field.field.paragraph.team_member.field_name
+    - paragraphs.paragraphs_type.team_member
+  module:
+    - link
+id: paragraph.team_member.default
+targetEntityType: paragraph
+bundle: team_member
+mode: default
+content:
+  field_email:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_links:
+    weight: 2
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_name:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

@@ -1,13 +1,13 @@
-uuid: 22419832-fa53-4303-bf9f-999175562c51
+uuid: 5c4094b1-1717-4f16-91e1-220089d56a4d
 langcode: de
 status: true
 dependencies:
   module:
     - link
-    - node
-id: node.field_links_team
-field_name: field_links_team
-entity_type: node
+    - paragraphs
+id: paragraph.field_links
+field_name: field_links
+entity_type: paragraph
 type: link
 settings: {  }
 module: link

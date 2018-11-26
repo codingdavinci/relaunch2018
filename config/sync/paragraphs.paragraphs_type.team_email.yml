@@ -1,9 +1,0 @@
-uuid: 38db2a86-73eb-4703-94cc-450dfb1a8198
-langcode: de
-status: true
-dependencies: {  }
-id: team_email
-label: Team-Kontakt
-icon_uuid: null
-description: 'Kombination aus E-Mail- und Textfeld.'
-behavior_plugins: {  }

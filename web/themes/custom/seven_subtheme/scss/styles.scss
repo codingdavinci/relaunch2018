@@ -304,6 +304,33 @@
 
       }
 
+      &.field--name-field-team-members {
+        thead {
+          display: none;
+        }
+        
+        .paragraph-top {
+          display: grid;
+          
+          .paragraph-type-label {
+            display: none;
+          }
+
+          .paragraphs-icon-button-collapse {
+            display: none;
+          }
+        }
+
+        .field--type-link {
+          margin-right: 20px;
+          margin-top: .75em;
+
+          & > div > .form-item {
+            margin-top: 0;
+          }
+        }
+      }
+
     }
 
     .field--name-field-metadata-doc-links,
@@ -311,7 +338,6 @@
     .field--name-field-links-media,
     .field--name-field-links-metadata,
     .field--name-field-links,
-    .field--name-field-links-team,
     .field--name-field-other-datasets {
       table {
         @include border;
@@ -343,31 +369,6 @@
           }
         }
 
-      }
-    }
-
-    .field--name-field-emails {
-      table {
-        thead {
-          display: none;
-        }
-
-        tbody {
-          td {
-            &:first-child {
-              vertical-align: middle;
-            }
-          }
-        }
-
-        .paragraph-bullet {
-          display: table-cell !important;
-          width: 20px;
-
-          &:after {
-            display: none;
-          }
-        }
       }
     }
 
@@ -409,11 +410,6 @@
       }
     }
 
-    #group-team-contacts {
-      .description {
-        margin-bottom: 1em;
-      }
-    }
   }
 
   .form-type-url {

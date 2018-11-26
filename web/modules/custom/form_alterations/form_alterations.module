@@ -72,6 +72,13 @@ function form_alterations_form_alter(array &$form, FormStateInterface $form_stat
   }
   elseif (in_array($form_id, ['node_project_form', 'node_project_edit_form'])) {
     _form_alterations_project($form);
+
+    foreach ($form['field_team_members']['widget'] as $key => &$attribute) {
+      if (is_int($key)) {
+        $attribute['subform']['field_links']['widget']['add_more']['#value']
+          = t('Add another link');
+      }
+    }
   }
 }
 
