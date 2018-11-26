@@ -29,6 +29,33 @@ function form_alterations_field_widget_options_select_form_alter(array &$element
     && $context['form']['#entity_type'] === 'paragraph'
   ) {
     $element['#options']['_none'] = t('- Select -');
+
+    if (in_array('field_attributed_image', $element['#field_parents'])) {
+      // Supply info for functionality to hide attribution input field on public
+      // domain licenses.
+      /** @var \Drupal\taxonomy\TermStorage $storage */
+      $storage = \Drupal::entityTypeManager()->getStorage('taxonomy_term');
+
+      $topLevelTerms = $storage->loadTree('licenses', 0, 1);
+
+      $publicDomainGroups = array_filter($topLevelTerms, function($term) {
+        return in_array(
+          strtolower($term->name),
+          ['public domain', 'gemeinfrei']
+        );
+      });
+
+      $publicDomainTermIds = [];
+
+      foreach ($publicDomainGroups as $groupTerm) {
+        foreach ($storage->loadTree('licenses', intval($groupTerm->tid), 1) as $term) {
+          $publicDomainTermIds[] = $term->tid;
+        }
+      }
+
+      $element['#attributes']['data-public-domain']
+        = json_encode($publicDomainTermIds);
+    }
   }
 }
 

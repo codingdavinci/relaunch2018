@@ -4,7 +4,7 @@ description: Sub-theme of core's Seven theme
 core: 8.x
 base theme: seven
 libraries:
-  - seven_subtheme/global-styling
+  - seven_subtheme/global
 regions:
   header: 'Header'
   pre_content: 'Pre-content'

@@ -1,4 +1,8 @@
-global-styling:
+global:
+  js:
+    js/global.js: {}
   css:
     component:
       css/styles.css: {}
+  dependencies:
+    - core/jquery
