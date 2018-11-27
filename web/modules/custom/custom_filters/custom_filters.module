@@ -7,6 +7,21 @@ use Drupal\node\Entity\Node;
 use Drupal\views\ViewExecutable;
 
 /**
+ * Form and display ids keyed by view id.
+ * @type string[][]
+ */
+const CUSTOM_FILTERS_VIEW_IDS = [
+  'data_sets' => [
+    'form' => 'views-exposed-form-data-sets-page-1',
+    'display' => 'page_1',
+  ],
+  'projects' => [
+    'form' => 'views-exposed-form-projects-page-1',
+    'display' => 'page_1',
+  ]
+];
+
+/**
  * Implements hook_form_FORM_ID_alter().
  *
  * @param array $form
@@ -14,10 +29,8 @@ use Drupal\views\ViewExecutable;
  * @param string $form_id
  */
 function custom_filters_form_views_exposed_form_alter(array &$form, FormStateInterface $form_state, $form_id) {
-  if (in_array($form['#id'], [
-    'views-exposed-form-data-sets-page-1',
-    'views-exposed-form-projects-page-1'
-  ])) {
+  if ($currentViewId = _custom_filters_check_form($form)) {
+
     // Turn event text input into links
     $options = [];
     $events = Node::loadMultiple(
@@ -43,7 +56,9 @@ function custom_filters_form_views_exposed_form_alter(array &$form, FormStateInt
       '#options' => [$allValue => t('- Any -')] + $options,
       '#default_value' => 'All',
       '#theme' => 'bef_links',
-      '#bef_path' => Url::fromRoute('view.data_sets.page_1'),
+      '#bef_path' => Url::fromRoute(
+        'view.' . $currentViewId . '.' . CUSTOM_FILTERS_VIEW_IDS[$currentViewId]['display']
+      ),
       // Although native $form['event_id'] text field is overwritten,
       // $form['event_id']['#value'] is never filled. Normally, this should be:
       // '#value' => $form['event_id']['#value'] === '' ? 'All' : $form['event_id']['#value']
@@ -51,7 +66,7 @@ function custom_filters_form_views_exposed_form_alter(array &$form, FormStateInt
       // hook_views_pre_execute and hook_views_pre_view obsolete.
     ];
 
-    if ($form['#id'] === 'views-exposed-form-data-sets-page-1') {
+    if ($currentViewId === 'data_sets') {
       $form['institution'] = [
         '#type' => 'textfield',
         '#autocomplete_route_name' => 'custom_filters.autocomplete',
@@ -70,10 +85,7 @@ function custom_filters_form_views_exposed_form_alter(array &$form, FormStateInt
  * @param ViewExecutable $view
  */
 function custom_filters_views_query_alter(ViewExecutable $view) {
-  if (
-    in_array($view->id(), ['data_sets', 'projects'])
-    && $view->getDisplay()->display['id'] === 'page_1'
-  ) {
+  if (_custom_filters_check_display($view)) {
     /** @var \Drupal\views\Plugin\views\query\Sql $query */
     $query = &$view->query;
 
@@ -100,10 +112,7 @@ function custom_filters_views_query_alter(ViewExecutable $view) {
  * @param array $args
  */
 function custom_filters_views_pre_view(ViewExecutable $view, $display_id, array &$args) {
-  if (
-    in_array($view->id(), ['data_sets', 'projects'])
-    && $display_id === 'page_1'
-  ) {
+  if (_custom_filters_check_display($view)) {
     $filterInput = $view->getExposedInput();
     if (isset($filterInput['event_id']) && $filterInput['event_id'] === '') {
       // Change processed value as an empty string causes an error on page
@@ -120,10 +129,7 @@ function custom_filters_views_pre_view(ViewExecutable $view, $display_id, array 
  * @param ViewExecutable $view
  */
 function custom_filters_views_post_build(ViewExecutable $view) {
-  if (
-    in_array($view->id(), ['data_sets', 'projects'])
-    && $view->getDisplay()->display['id'] === 'page_1'
-  ) {
+  if (_custom_filters_check_display($view)) {
     // Remove duplicates originating from View relationships which are always
     // aggregated using LEFT JOIN.
     $select = Database::getConnection()->select('node');
@@ -149,4 +155,33 @@ function custom_filters_views_post_build(ViewExecutable $view) {
     $view->build_info['query'] = $select;
     $view->build_info['count_query'] = $select;
   }
+}
+
+/**
+ * @param array $form
+ * @return string|FALSE
+ */
+function _custom_filters_check_form($form) {
+  foreach (CUSTOM_FILTERS_VIEW_IDS as $viewId => $ids) {
+    if ($ids['form'] === $form['#id']) {
+      return $viewId;
+    }
+  }
+  return FALSE;
+}
+
+/**
+ * @param ViewExecutable $view
+ * @return string|FALSE
+ */
+function _custom_filters_check_display(ViewExecutable $view) {
+  foreach (CUSTOM_FILTERS_VIEW_IDS as $viewId => $ids) {
+    if (
+      $viewId === $view->id()
+      && $view->getDisplay()->display['id'] === $ids['display']
+    ) {
+      return $viewId;
+    }
+  }
+  return FALSE;
 }
