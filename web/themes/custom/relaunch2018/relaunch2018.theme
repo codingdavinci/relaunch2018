@@ -44,25 +44,6 @@ function relaunch2018_page_attachments_alter(array &$attachments) {
 /**
  * Implements THEME_preprocess_THEME_HOOK().
  *
- * @param $variables
- */
-function relaunch2018_preprocess_form_element(array &$variables) {
-  if (in_array($variables['element']['#name'], [
-    'metadata_format',
-    'license',
-    'event_id',
-    'institution',
-    'object_type',
-    'search',
-    'project_type',
-  ])) {
-    $variables['attributes']['class'][] = 'col-12';
-  }
-}
-
-/**
- * Implements THEME_preprocess_THEME_HOOK().
- *
  * @param array $variables
  */
 function relaunch2018_preprocess_views_exposed_form__data_sets(array &$variables) {

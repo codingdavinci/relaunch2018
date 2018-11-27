@@ -11,15 +11,27 @@
 {{ q }}
 {% endif %}
 <div class="form--inline clearfix row">
-  {{ form.object_type }}
+  <div class="col-12">
+    {{ form.object_type }}
+  </div>
   <fieldset class="col-12 collapsible">
     <legend class="{% if not show_secondary_options %}collapsed{% endif %}" role="button" data-toggle="collapse" data-target="#data-sets--secondary-filters" aria-controls="data-sets--secondary-filters">zusätzliche Filter</legend>
     <div id="data-sets--secondary-filters" class="{% if show_secondary_options %}show{% endif %} collapse row">
-      {{ form.license }}
-      {{ form.metadata_format }}
-      {{ form.event_id }}
-      {{ form.institution }}
-      {{ form.search }}
+      <div class="col-12">
+        {{ form.license }}
+      </div>
+      <div class="col-12">
+        {{ form.metadata_format }}
+      </div>
+      <div class="col-12">
+        {{ form.event_id }}
+      </div>
+      <div class="col-12">
+        {{ form.institution }}
+      </div>
+      <div class="col-12">
+        {{ form.search }}
+      </div>
     </div>
   </fieldset>
   <div class="col-12">

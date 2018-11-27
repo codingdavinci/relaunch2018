@@ -100,4 +100,27 @@
       justify-content: center;
     }
   }
+
+  &.view-projects {
+    @include media-breakpoint-up(md) {
+      form {
+        .form--inline {
+          .form-item-search {
+            margin: 0;
+          }
+
+          .form-actions {
+            margin: 0;
+
+            input {
+              margin: 0;
+              padding-bottom: .2em;
+              padding-top: .2em;
+            }
+          }
+        }
+      }
+    }
+  }
+
 }

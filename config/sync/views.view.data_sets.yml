@@ -1789,7 +1789,7 @@ display:
         fields: true
         relationships: true
         arguments: false
-        css_class: false
+        css_class: true
       path: daten
       exposed_form:
         type: bef
@@ -1858,7 +1858,6 @@ display:
                 placeholder_text: ''
           text_input_required_format: basic_html
       arguments: {  }
-      css_class: container
       menu:
         type: normal
         title: Daten
