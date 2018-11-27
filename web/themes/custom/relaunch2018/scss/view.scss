@@ -101,6 +101,56 @@
     }
   }
 
+  // TODO: Merge with data set archive styles that currently have a masonry layout
+  .view-content {
+
+    .card-columns {
+      @include media-breakpoint-up(sm) {
+        column-count: 2;
+      }
+
+      @include media-breakpoint-up(lg) {
+        column-count: 3;
+      }
+
+      .card {
+        @include border-radius($border-radius);
+        @include boxShadow;
+        background-color: $white;
+        display: inline-block;
+        margin-bottom: 20px;
+        width: 100%;
+
+        .card-img {
+          img {
+            @include border-top-radius($border-radius);
+            height: auto;
+            max-width: 100%;
+          }
+        }
+
+        .card-body {
+          .card-title {
+            border-bottom: 1px solid $color-gray-5;
+            padding-bottom: 1rem;
+          }
+
+          .field {
+            margin-top: 1rem;
+
+            &.field--name-field-event {
+              @include fontSize(small);
+            }
+
+            .field {
+              margin-top: .2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
   &.view-projects {
     @include media-breakpoint-up(md) {
       form {
@@ -120,6 +170,68 @@
           }
         }
       }
+    }
+
+    .view-content {
+      align-items: stretch;
+      display: grid;
+      grid-gap: 30px;
+      grid-template-columns: 1fr;
+      justify-items: stretch;
+      margin: 2rem 0 $content-margin-bottom 0;
+
+      @include media-breakpoint-up(sm) {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      @include media-breakpoint-up(lg) {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+
+      @include media-breakpoint-up(xl) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+
+      .card {
+        @include border-radius($border-radius);
+        @include boxShadow;
+        background-color: $white;
+        height: 100%;
+        width: 100%;
+
+        .card-img {
+          img {
+            @include img-fluid;
+            @include border-top-radius($border-radius);
+          }
+        }
+
+        .card-body {
+          .card-title {
+            border-bottom: 1px solid $color-gray-5;
+            padding-bottom: 1rem;
+          }
+
+          .node__content {
+            @include fontSize(small);
+
+            .field {
+              margin-top: 1rem;
+
+              .field {
+                margin-top: .2rem;
+              }
+
+            }
+          }
+        }
+      }
+
+      //.field--type-image {
+      //  img {
+      //    @include img-fluid;
+      //  }
+      //}
     }
   }
 

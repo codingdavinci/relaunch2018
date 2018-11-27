@@ -4,27 +4,69 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.project.field_attributed_image
     - field.field.node.project.field_datasets
+    - field.field.node.project.field_description
     - field.field.node.project.field_event
+    - field.field.node.project.field_license_code
+    - field.field.node.project.field_license_media
+    - field.field.node.project.field_links
+    - field.field.node.project.field_other_datasets
+    - field.field.node.project.field_remarks
+    - field.field.node.project.field_short_description
+    - field.field.node.project.field_tags
+    - field.field.node.project.field_team_members
     - node.type.project
   module:
+    - entity_reference_revisions
     - user
 id: node.project.teaser
 targetEntityType: node
 bundle: project
 mode: teaser
 content:
-  content_moderation_control:
-    weight: -20
-    settings: {  }
+  field_attributed_image:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      view_mode: teaser
+      link: ''
     third_party_settings: {  }
+  field_event:
+    type: entity_reference_label
+    weight: 3
     region: content
-  links:
-    weight: 100
+    label: visually_hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_short_description:
+    type: string
+    weight: 1
     region: content
-    settings: {  }
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_tags:
+    type: entity_reference_label
+    weight: 2
+    region: content
+    label: visually_hidden
+    settings:
+      link: false
     third_party_settings: {  }
 hidden:
+  content_moderation_control: true
   field_datasets: true
-  field_event: true
+  field_description: true
+  field_license_code: true
+  field_license_media: true
+  field_links: true
+  field_other_datasets: true
+  field_remarks: true
+  field_team_members: true
   langcode: true
+  links: true
