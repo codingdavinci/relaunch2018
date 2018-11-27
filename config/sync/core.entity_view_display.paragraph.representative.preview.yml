@@ -5,7 +5,6 @@ dependencies:
   config:
     - core.entity_view_mode.paragraph.preview
     - field.field.paragraph.representative.field_email
-    - field.field.paragraph.representative.field_event
     - field.field.paragraph.representative.field_function
     - field.field.paragraph.representative.field_name
     - field.field.paragraph.representative.field_phone
@@ -14,15 +13,7 @@ id: paragraph.representative.preview
 targetEntityType: paragraph
 bundle: representative
 mode: preview
-content:
-  field_event:
-    weight: 0
-    label: visually_hidden
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
+content: {  }
 hidden:
   field_email: true
   field_function: true

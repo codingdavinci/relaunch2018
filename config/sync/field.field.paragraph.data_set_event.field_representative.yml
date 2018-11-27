@@ -1,17 +1,17 @@
-uuid: 6fce77af-00b9-4744-8619-f8125e4bebad
+uuid: 6ff81c4a-9e19-4431-942e-4a3febf051da
 langcode: de
 status: true
 dependencies:
   config:
-    - field.storage.node.field_representative
-    - node.type.data_set
+    - field.storage.paragraph.field_representative
+    - paragraphs.paragraphs_type.data_set_event
     - paragraphs.paragraphs_type.representative
   module:
     - entity_reference_revisions
-id: node.data_set.field_representative
+id: paragraph.data_set_event.field_representative
 field_name: field_representative
-entity_type: node
-bundle: data_set
+entity_type: paragraph
+bundle: data_set_event
 label: 'Vertreter beim Kick-Off'
 description: ''
 required: false
@@ -25,22 +25,34 @@ settings:
     target_bundles:
       representative: representative
     target_bundles_drag_drop:
+      data_set_event:
+        weight: 11
+        enabled: false
       attributed_image:
-        weight: 7
+        weight: 12
+        enabled: false
+      attribution:
+        weight: 13
+        enabled: false
+      filesize:
+        weight: 14
         enabled: false
       image:
-        weight: 8
+        weight: 15
         enabled: false
       representative:
         enabled: true
-        weight: 9
+        weight: 16
+      team_member:
+        weight: 17
+        enabled: false
       text:
-        weight: 10
+        weight: 18
         enabled: false
       textblock_left:
-        weight: 11
+        weight: 19
         enabled: false
       textblock_right:
-        weight: 12
+        weight: 20
         enabled: false
 field_type: entity_reference_revisions

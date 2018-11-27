@@ -52,14 +52,14 @@
           </div>
         {% endif %}
 
-      {{ content.field_representative }}
+      {{ content.field_events }}
       {{ content.field_description }}
       {{ object_type }}
       {{
         content
         |without('header_image')
         |without('field_attributed_image')
-        |without('field_representative')
+        |without('field_events')
         |without('field_description')
         |without('field_object_type')
       }}

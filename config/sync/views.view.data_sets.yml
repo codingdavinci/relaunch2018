@@ -236,7 +236,7 @@ display:
           relationship: field_event
           group_type: group
           admin_label: ''
-          label: ID
+          label: ''
           exclude: false
           alter:
             alter_text: false
@@ -269,7 +269,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -1276,20 +1276,20 @@ display:
           admin_label: 'field_license_media: Seitenabschnitt'
           required: false
           plugin_id: standard
-        field_representative:
-          id: field_representative
-          table: node__field_representative
-          field: field_representative
+        field_events:
+          id: field_events
+          table: node__field_events
+          field: field_events
           relationship: none
           group_type: group
-          admin_label: 'field_representative: Seitenabschnitt'
+          admin_label: 'field_events: Seitenabschnitt'
           required: false
           plugin_id: standard
         field_event:
           id: field_event
           table: paragraph__field_event
           field: field_event
-          relationship: field_representative
+          relationship: field_events
           group_type: group
           admin_label: 'field_event: Inhalt'
           required: false

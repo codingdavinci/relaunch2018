@@ -181,13 +181,13 @@ function _notifications_get_users(EntityInterface $entity) {
     }
   }
   elseif ($entity->bundle() === 'data_set') {
-    /** @var EntityReferenceRevisionsFieldItemList $fieldRepresentative */
-    $fieldRepresentative = $entity->get('field_representative');
+    /** @var EntityReferenceRevisionsFieldItemList $fieldEvents */
+    $fieldEvents = $entity->get('field_events');
 
     $eventIds = [];
 
     /** @var Paragraph $paragraph */
-    foreach ($fieldRepresentative->referencedEntities() as $paragraph) {
+    foreach ($fieldEvents->referencedEntities() as $paragraph) {
       $eventId = $paragraph->get('field_event')->target_id;
       if ($eventId !== null) {
         $eventIds[] = $paragraph->get('field_event')->target_id;

@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.representative.field_email
-    - field.field.paragraph.representative.field_event
     - field.field.paragraph.representative.field_function
     - field.field.paragraph.representative.field_name
     - field.field.paragraph.representative.field_phone
@@ -23,12 +22,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: email_default
-    region: content
-  field_event:
-    weight: 0
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
     region: content
   field_function:
     weight: 2

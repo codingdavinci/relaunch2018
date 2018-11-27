@@ -1,19 +1,19 @@
-uuid: 8a5f63a6-e172-424c-aa26-355c5335b5c4
+uuid: 6452e087-4d68-4de0-b648-5dcf70c61884
 langcode: de
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_event
     - node.type.event
-    - paragraphs.paragraphs_type.representative
-id: paragraph.representative.field_event
+    - paragraphs.paragraphs_type.data_set_event
+id: paragraph.data_set_event.field_event
 field_name: field_event
 entity_type: paragraph
-bundle: representative
+bundle: data_set_event
 label: Veranstaltung
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
@@ -22,8 +22,7 @@ settings:
     target_bundles:
       event: event
     sort:
-      field: created
-      direction: DESC
+      field: _none
     auto_create: false
     auto_create_bundle: ''
 field_type: entity_reference

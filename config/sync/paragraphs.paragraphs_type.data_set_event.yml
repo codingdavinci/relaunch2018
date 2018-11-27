@@ -1,0 +1,9 @@
+uuid: 8653b112-0d81-4ab4-aeb1-cc4e26b444f4
+langcode: de
+status: true
+dependencies: {  }
+id: data_set_event
+label: Event
+icon_uuid: null
+description: 'Event-Referenz mit einem oder mehreren Kick-Off-Vertretern.'
+behavior_plugins: {  }

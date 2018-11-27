@@ -5,5 +5,5 @@ dependencies: {  }
 id: representative
 label: Vertreter
 icon_uuid: null
-description: 'Kontaktdaten einer Person mit Referenz zu einer Veranstaltung.'
+description: 'Kontaktdaten eines Kick-Off-Vertreters.'
 behavior_plugins: {  }

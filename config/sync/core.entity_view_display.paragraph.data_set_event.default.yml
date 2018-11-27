@@ -1,0 +1,33 @@
+uuid: a0ec3556-6d53-415c-bd8f-086501a9dc35
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.data_set_event.field_event
+    - field.field.paragraph.data_set_event.field_representative
+    - paragraphs.paragraphs_type.data_set_event
+  module:
+    - entity_reference_revisions
+id: paragraph.data_set_event.default
+targetEntityType: paragraph
+bundle: data_set_event
+mode: default
+content:
+  field_event:
+    weight: 0
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_representative:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

@@ -1,0 +1,24 @@
+uuid: d21a037e-9831-4d63-bc32-a7a22e92844b
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.data_set_event.field_event
+    - field.field.paragraph.data_set_event.field_representative
+    - paragraphs.paragraphs_type.data_set_event
+id: paragraph.data_set_event.preview
+targetEntityType: paragraph
+bundle: data_set_event
+mode: preview
+content:
+  field_event:
+    weight: 0
+    label: visually_hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden:
+  field_representative: true

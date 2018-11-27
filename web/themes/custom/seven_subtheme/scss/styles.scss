@@ -158,21 +158,6 @@
       }
     }
 
-    .field--name-field-representative {
-      & > div > h4 {
-        display: none;
-      }
-      
-      .paragraph-bullet {
-        display: table-cell !important;
-        width: 15px;
-        
-        &:after {
-          display: none;
-        }
-      }
-    }
-
     .field--widget-paragraphs {
       margin-bottom: 3em;
 
@@ -353,6 +338,45 @@
         }
       }
 
+    }
+
+    .field--name-field-events {
+      .paragraph-top {
+        display: grid;
+
+        .paragraph-type-label {
+          display: none;
+        }
+
+        .paragraphs-icon-button-collapse {
+          display: none;
+        }
+      }
+
+      & > div > h4 {
+        display: none;
+      }
+
+      .paragraph-bullet {
+        display: table-cell !important;
+        width: 15px;
+
+        &:after {
+          display: none;
+        }
+      }
+
+      .paragraphs-subform {
+        margin-right: 20px;
+
+        .field--name-field-representative {
+          margin-top: 2rem;
+
+          & > div > h4 {
+            display: none;
+          }
+        }
+      }
     }
 
     .field--name-field-metadata-doc-links,

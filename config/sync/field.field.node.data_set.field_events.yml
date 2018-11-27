@@ -1,0 +1,58 @@
+uuid: a7354d20-0ba9-45c0-91a7-75a4f250982f
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_events
+    - node.type.data_set
+    - paragraphs.paragraphs_type.data_set_event
+  module:
+    - entity_reference_revisions
+id: node.data_set.field_events
+field_name: field_events
+entity_type: node
+bundle: data_set
+label: Events
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      data_set_event: data_set_event
+    target_bundles_drag_drop:
+      data_set_event:
+        enabled: true
+        weight: 11
+      attributed_image:
+        weight: 12
+        enabled: false
+      attribution:
+        weight: 13
+        enabled: false
+      filesize:
+        weight: 14
+        enabled: false
+      image:
+        weight: 15
+        enabled: false
+      representative:
+        weight: 16
+        enabled: false
+      team_member:
+        weight: 17
+        enabled: false
+      text:
+        weight: 18
+        enabled: false
+      textblock_left:
+        weight: 19
+        enabled: false
+      textblock_right:
+        weight: 20
+        enabled: false
+field_type: entity_reference_revisions

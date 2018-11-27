@@ -241,13 +241,6 @@
   }
 
   .view-content {
-    .badge a {
-      text-decoration: none;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
 
     .card-columns {
       @include media-breakpoint-up(sm) {
@@ -283,7 +276,7 @@
           .field {
             margin-top: 1rem;
 
-            &.field--name-field-representative {
+            &.field--name-field-event {
               @include fontSize(small);
             }
 

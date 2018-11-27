@@ -1,0 +1,43 @@
+uuid: 0bd9b410-e97e-4717-bde5-06642024d9c5
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.data_set_event.field_event
+    - field.field.paragraph.data_set_event.field_representative
+    - paragraphs.paragraphs_type.data_set_event
+  module:
+    - paragraphs
+id: paragraph.data_set_event.default
+targetEntityType: paragraph
+bundle: data_set_event
+mode: default
+content:
+  field_event:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_representative:
+    type: paragraphs
+    weight: 1
+    settings:
+      title: Seitenabschnitt
+      title_plural: Seitenabschnitte
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true
