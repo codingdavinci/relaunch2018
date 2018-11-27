@@ -478,7 +478,7 @@ display:
             description: ''
             use_operator: false
             operator: field_tags_target_id_op
-            identifier: type
+            identifier: project_type
             required: false
             remember: false
             multiple: true

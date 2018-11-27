@@ -2,7 +2,7 @@
   'use strict';
 
   $(function() {
-    var $dataSets = $('.view-data-sets');
+    var $view = $('.view');
 
 
     // Since, when no filter value is selected, the effect is that all values
@@ -12,11 +12,13 @@
       '.form-item-object-type',
       '.form-item-license',
       '.form-item-metadata-format',
-      '.form-item-event-id'
+      '.form-item-event-id',
+      '.form-item-project-type'
+
     ];
 
     $.each(filterWrapperClasses, function() {
-      var $wrapper = $dataSets.find(this);
+      var $wrapper = $view.find(this);
       var $links = $wrapper.find('.bef-links');
       var $items = $links.children('ul').children('li');
       var $active = $items.children('div.bef-link-active');

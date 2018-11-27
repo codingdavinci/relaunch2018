@@ -54,6 +54,7 @@ function relaunch2018_preprocess_form_element(array &$variables) {
     'institution',
     'object_type',
     'search',
+    'project_type',
   ])) {
     $variables['attributes']['class'][] = 'col-12';
   }

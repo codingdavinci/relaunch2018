@@ -1,0 +1,103 @@
+@import 'includes/base';
+
+.view {
+
+  .view-filters {
+    margin-bottom: 2rem;
+
+    form {
+      .form--inline {
+        .form-item {
+          float: none;
+          margin-right: 0;
+          margin-top: 0;
+
+          .bef-links {
+            line-height: 1.6;
+
+            ul {
+              list-style-type: none;
+              padding: 0;
+
+              li {
+                display: inline;
+
+                ul {
+                  display: none;
+                }
+
+                > div {
+                  &.bef-link-active {
+                    & + ul {
+                      &:not(.bef-nested-hide) {
+                        display: block;
+                      }
+                    }
+                  }
+                }
+
+              }
+            }
+          }
+
+          label {
+            @include fontSize(small);
+          }
+
+          &.form-type-textfield {
+            label {
+              margin-bottom: 0;
+            }
+
+            input {
+              @include fontSize(small);
+              padding: .4em;
+              width: 100%;
+            }
+          }
+
+          &.form-type-select {
+            label {
+              border-bottom: 1px solid $color-gray-3;
+              width: 100%;
+            }
+          }
+
+          &.form-item-institution {
+            input {
+              padding-right: 20px;
+            }
+          }
+
+        }
+
+        & > fieldset {
+          @include media-breakpoint-up(lg) {
+            legend {
+              display: none;
+            }
+            .collapse:not(.show) {
+              display: block !important;
+            }
+          }
+        }
+
+        .form-actions {
+          input {
+            padding-left: .4em;
+            padding-right: .4em;
+            margin: 0 0 1rem 0;
+            width: 100%;
+          }
+        }
+
+      }
+    }
+  }
+
+  .pager {
+    .pager__items {
+      justify-content: center;
+    }
+  }
+}

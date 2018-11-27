@@ -1,0 +1,211 @@
+@import 'includes/base';
+
+.badge {
+  @include fontSize(badge);
+  @include linkColor(dark);
+  color: $white;
+  display: inline;
+  font-weight: 600;
+  margin-right: .2em;
+  padding: .15em .4em .25em .4em;
+
+  a {
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  ul {
+    display: inline;
+  }
+
+  &.badge--event {
+    background-color: $color-yellow;
+  }
+
+  &.badge--license {
+    background-color: $color-red-2;
+  }
+
+  &.badge--file-types,
+  &.badge--metadata-format {
+    background-color: lighten($color-deep-blue, 20%);;
+  }
+
+  &.badge--theme {
+    background-color: $color-gray-2;
+  }
+
+  &.badge--keywords {
+    background-color: $color-gray-3;
+  }
+
+  &.badge--object-type,
+  &.badge--project-type {
+    background-color: $color-deep-teal;
+
+    & + ul {
+      .badge--object-type {
+        background-color: $color-darker-green;
+      }
+    }
+  }
+}
+
+.view {
+
+  a.badge {
+    text-decoration: none;
+  }
+
+  .view-filters {
+
+    .form-item {
+
+      div.badge {
+        @include linkColor(dark);
+        padding: 0;
+
+        & > a {
+          @include easeAll;
+        }
+      }
+
+      &.form-item-object-type,
+      &.form-item-project-type {
+        .badge {
+          & > .badge {
+            background-color: lighten($color-deep-teal, 10%);
+
+            &:hover {
+              background-color: $color-deep-teal;
+            }
+
+            &.bef-link-active {
+              background-color: $color-deep-teal;
+
+              &:hover {
+                background-color: lighten($color-deep-teal, 10%);
+              }
+
+              &.bef-link-inactive {
+                background-color: lighten($color-deep-teal, 10%);
+              }
+
+              &.bef-link-hover {
+                background-color: $color-deep-teal;
+              }
+            }
+          }
+        }
+
+        ul ul {
+          .badge {
+            & > .badge {
+              background-color: lighten($color-darker-green, 10%);
+
+              &:hover {
+                background-color: $color-darker-green;
+              }
+
+              &.bef-link-active {
+                background-color: $color-darker-green;
+
+                &:hover {
+                  background-color: lighten($color-darker-green, 10%);
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &.form-item-license {
+        .badge {
+          & > .badge {
+            background-color: lighten($color-red-2, 10%);
+
+            &:hover {
+              background-color: $color-red-2;
+            }
+
+            &.bef-link-active {
+              background-color: $color-red-2;
+
+              &:hover {
+                background-color: lighten($color-red-2, 10%);
+              }
+
+              &.bef-link-inactive {
+                background-color: lighten($color-red-2, 10%);
+              }
+
+              &.bef-link-hover {
+                background-color: $color-red-2;
+              }
+            }
+          }
+        }
+      }
+
+      &.form-item-metadata-format {
+        .badge {
+          & > .badge {
+            background-color: lighten($color-deep-blue, 35%);
+
+            &:hover {
+              background-color: lighten($color-deep-blue, 20%);;
+            }
+
+            &.bef-link-active {
+              background-color: lighten($color-deep-blue, 20%);;
+
+              &:hover {
+                background-color: lighten($color-deep-blue, 35%);
+              }
+
+              &.bef-link-inactive {
+                background-color: lighten($color-deep-blue, 35%);
+              }
+
+              &.bef-link-hover {
+                background-color: lighten($color-deep-blue, 20%);;
+              }
+            }
+          }
+        }
+      }
+
+      &.form-item-event-id {
+        .badge {
+          & > .badge {
+            background-color: lighten($color-yellow, 10%);
+
+            &:hover {
+              background-color: $color-yellow;
+            }
+
+            &.bef-link-active {
+              background-color: $color-yellow;
+
+              &:hover {
+                background-color: lighten($color-yellow, 10%);
+              }
+
+              &.bef-link-inactive {
+                background-color: lighten($color-yellow, 10%);
+              }
+
+              &.bef-link-hover {
+                background-color: $color-yellow;
+              }
+            }
+          }
+        }
+      }
+
+    }
+  }
+}

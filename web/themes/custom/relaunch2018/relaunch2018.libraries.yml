@@ -13,8 +13,8 @@ global-js:
   js:
     js/menu.js: {}
     js/read-more.js: {}
-    js/view-data_sets.js: {}
     js/view-faq.js: {}
+    js/views.js: {}
   dependencies:
     - core/jquery
     - relaunch2018/bootstrap-js
