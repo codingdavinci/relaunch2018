@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "866aa87220c740d712e8ed3139cd9c84",
+    "content-hash": "45c0c3208a3e4946ca731a251f295770",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -4029,6 +4029,20 @@
             "type": "npm-asset",
             "license": [
                 "MIT"
+            ]
+        },
+        {
+            "name": "npm-asset/fortawesome--fontawesome-free",
+            "version": "5.5.0-patch2",
+            "dist": {
+                "type": "tar",
+                "url": "https://registry.npmjs.org/@fortawesome/fontawesome-free/-/fontawesome-free-5.5.0-2.tgz",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "npm-asset",
+            "license": [
+                "(CC-BY-4.0 AND OFL-1.1 AND MIT)"
             ]
         },
         {

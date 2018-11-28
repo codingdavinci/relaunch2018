@@ -64,3 +64,18 @@
     }
   }
 }
+
+@mixin icon {
+  font-family: $font-family-icons;
+  margin-right: .3em;
+}
+
+@mixin fa-icon {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+@mixin fa-icon-brand {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 900;
+}

@@ -175,6 +175,7 @@
     .view-content {
       align-items: stretch;
       display: grid;
+      grid-auto-rows: 1fr;
       grid-gap: 30px;
       grid-template-columns: 1fr;
       justify-items: stretch;
@@ -226,12 +227,6 @@
           }
         }
       }
-
-      //.field--type-image {
-      //  img {
-      //    @include img-fluid;
-      //  }
-      //}
     }
   }
 

@@ -1,0 +1,41 @@
+{#
+/**
+ * @see field.html.twig
+ */
+#}
+{% spaceless %}
+{%
+  set classes = [
+    'field',
+    'field--name-' ~ field_name|clean_class,
+    'field--type-' ~ field_type|clean_class,
+    'field--label-' ~ label_display,
+  ]
+%}
+{%
+  set title_classes = [
+    'field__label',
+    label_display == 'visually_hidden' ? 'visually-hidden',
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+  <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
+  {% if multiple %}
+    <div class="field__items">
+  {% endif %}
+  {% for item in items %}
+    {% set item_classes = [] %}
+    {% if item.content['#url'].toString() matches '!//[^/]*github.[^/]+/!' %}
+      {% set item_classes = ['url--github'] %}
+    {% elseif item.content['#url'].toString() matches '!//[^/]*twitter.[^/]+/!' %}
+      {% set item_classes = ['url--twitter'] %}
+    {% elseif item.content['#url'].toString() matches '!//[^/]*facebook.[^/]+/!' %}
+      {% set item_classes = ['url--facebook'] %}
+    {% endif %}
+    <div{{ item.attributes.addClass('field__item').addClass(item_classes) }}>{{ item.content }}</div>
+  {% endfor %}
+  {% if multiple %}
+    </div>
+  {% endif %}
+</div>
+{% endspaceless %}

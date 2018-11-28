@@ -1,0 +1,32 @@
+uuid: f3b01216-2eb8-47e6-9b18-46ba43550c2a
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.teaser
+    - field.field.paragraph.attribution.field_author
+    - field.field.paragraph.attribution.field_license
+    - paragraphs.paragraphs_type.attribution
+id: paragraph.attribution.teaser
+targetEntityType: paragraph
+bundle: attribution
+mode: teaser
+content:
+  field_author:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_license:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: badge
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden: {  }

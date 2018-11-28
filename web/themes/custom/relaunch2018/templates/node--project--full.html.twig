@@ -1,0 +1,65 @@
+{#
+/**
+ * @see node.html.twig
+ */
+#}
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+    'container',
+    'image-header',
+  ]
+%}
+{{ attach_library('classy/node') }}
+<article{{ attributes.addClass(classes) }}>
+  <div class="article--main-image d-none d-md-block">
+    <div class="container">
+      {{ content.header_image }}
+    </div>
+  </div>
+
+  <div class="article--content-container row">
+      <div class="article--main col-sm-10 offset-sm-1 col-md-9 offset-md-2">
+        <div class="article-content">
+
+          <div>
+            {{ content.field_attributed_image }}
+          </div>
+
+      </div>
+    </div>
+
+    <div{{ content_attributes.addClass('node__content col-sm-10 offset-sm-1 col-md-9 offset-md-2') }}>
+        {{ title_prefix }}
+        <h1{{ title_attributes }}>
+          {{ label }}
+        </h1>
+        {{ title_suffix }}
+
+        {% if display_submitted %}
+          <div{{ author_attributes.addClass('node__submitted').addClass('row') }}>
+            <div class="col-4">
+              {{ node.createdtime|format_date('date_short') }}
+            </div>
+            <div class="col-8 text-right">
+              {{ 'by'|trans }}{{ author_name }}
+            </div>
+          </div>
+        {% endif %}
+
+      {{
+        content
+        |without('header_image')
+        |without('field_attributed_image')
+      }}
+    </div>
+
+    </div>
+
+
+</article>

@@ -6,6 +6,7 @@ global-css:
       lib/fonts/barlow/index.css: {}
   dependencies:
     - relaunch2018/cdv-font
+    - relaunch2018/fontawesome
     - relaunch2018/hammerjs
 
 global-js:
@@ -33,6 +34,12 @@ cdv-font:
   css:
     theme:
       includes/cdv_icons/css/cdv_icons.css: {}
+
+fontawesome:
+  version: 5.5.0
+  css:
+    theme:
+      ../../../libraries/fortawesome--fontawesome-free/css/all.css: {}
 
 hammerjs:
   js:

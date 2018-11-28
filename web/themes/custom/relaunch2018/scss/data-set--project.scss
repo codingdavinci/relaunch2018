@@ -1,0 +1,376 @@
+@import 'includes/base';
+
+.node--type-data-set,
+.node--type-project {
+
+  .article--main-image {
+    .field--name-field-attributed-image {
+      .field--name-field-inline-image {
+        @include border-radius(10px);
+        background-color: $color-light-teal;
+
+        img {
+          @include border-radius(10px);
+          filter: brightness(200%) saturate(0%) contrast(200%);
+          height: auto;
+          max-width: 100%;
+          mix-blend-mode: multiply;
+          opacity: .2;
+        }
+      }
+    }
+  }
+
+  .article--content-container {
+    padding-top: 0;
+
+    @include media-breakpoint-up(md) {
+      padding-top: 100px;
+    }
+
+    .article--main {
+
+      .field--name-field-attributed-image {
+        text-align: center;
+
+        .paragraph--type--attributed-image {
+          display: inline-block;
+
+          .field--name-field-inline-image {
+            @include border-radius($border-radius);
+            @include boxShadow;
+            background: $white;
+            display: inline-block;
+            padding: 1rem;
+
+            img {
+              @include border-radius($border-radius);
+              @include img-fluid;
+            }
+          }
+          
+          .paragraph--type--attributed-image--attribution {
+            @include fontSize(small);
+            text-align: right;
+
+            & div {
+              display: inline;
+            }
+
+            & > div {
+              margin-right: .3em;
+
+              &:last-child {
+                margin-right: 0;
+              }
+            } 
+          }
+        }
+      }
+    }
+
+    .node__content  {
+      @include border-top-radius($border-radius);
+      background-color: $color-gray-6;
+      margin-bottom: $content-margin-bottom;
+      margin-top: 3rem;
+      padding-top: 10px;
+
+      .badge {
+        @include fontSize(normal);
+      }
+
+      .field {
+        margin-bottom: 1rem;
+
+        .field__label {
+          @include fontSize(small);
+          font-weight: normal;
+        }
+      }
+
+      .field--name-field-description {
+        margin-top: 2rem;
+      }
+
+      .paragraph--type--attribution {
+        @include media-breakpoint-up(sm) {
+          display: flex;
+        }
+
+        a {
+          color: $color-link-bright;
+          text-decoration: underline;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+
+        .field {
+          @include media-breakpoint-up(sm) {
+            margin-bottom: .5rem;
+          }
+
+          &:first-child {
+            @include media-breakpoint-up(sm) {
+              margin-right: 1rem;
+            }
+          }
+        }
+      }
+
+      fieldset {
+        &:not(.object-type) {
+          border: 1px solid $color-deep-teal;
+          padding: 0 1.5rem 0 1.5rem;
+
+          legend {
+            background-color: $color-gray-6;
+            color: $color-deep-teal;
+            margin-left: 2rem;
+            padding: 0 .5em;
+            width: auto;
+          }
+        }
+
+        &.object-type {
+          margin-top: 2rem;
+
+          legend {
+            display: none;
+          }
+
+          ul {
+            list-style-type: none;
+            padding: 0;
+
+            li {
+              display: inline;
+
+              ul {
+                display: inline;
+              }
+            }
+          }
+        }
+      }
+
+      .field--name-field-short-description {
+        font-weight: $font-weight-bold;
+      }
+
+      .group--result {
+        background-color: lighten($color-light-teal, 5%);
+        padding: 18px 20px 20px 20px;
+        margin-top: 3rem;
+        position: relative;
+
+        &:before {
+          @include fa-icon;
+          color: $color-deep-teal;
+          content: '\f108';
+          font-size: 4rem;
+          position: absolute;
+          right: -1.2rem;
+          top: -2rem;
+        }
+
+        .paragraph--type--attribution {
+          .field--name-field-license {
+            display: inline;
+            margin-right: 0;
+
+            .taxonomy-term {
+              display: inline;
+            }
+          }
+
+          .field--name-field-author {
+            display: inline;
+          }
+        }
+
+        & > .field:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      .group--team {
+        margin-top: 3rem;
+        position: relative;
+
+        &:before {
+          @include fa-icon;
+          background-color: $color-gray-6;
+          color: $color-deep-teal;
+          content: '\f0c0';
+          font-size: 4rem;
+          padding-left: 1rem;
+          position: absolute;
+          right: -1.2rem;
+          top: -2rem;
+        }
+
+        .field--name-field-team-members {
+          display: grid;
+          grid-gap: 20px;
+          grid-template-columns: 1fr;
+
+          @include media-breakpoint-up(lg) {
+            grid-template-columns: 1fr 1fr;
+          }
+
+          & > .field__item {
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            .paragraph--type--team-member {
+              margin-bottom: 20px;
+
+              &:last-child {
+                margin-bottom: 0;
+              }
+
+              .field--name-field-name {
+                font-weight: $font-weight-bold;
+                text-align: center;
+
+                &:after {
+                  border-bottom: 1px solid $color-gray-3;
+                  content: '';
+                  display: block;
+                  margin: 0 auto;
+                  margin-top: .5em;
+                  width: 33%;
+                }
+              }
+
+              .field--name-field-email {
+                .field__item {
+                  &:before {
+                    @include icon;
+                    content: '';
+                    display: inline-block;
+                    margin-right: .3em;
+                    text-align: center;
+                    width: 1.25em;
+                  }
+                }
+              }
+
+              .field--name-field-links {
+                .field__item {
+                  &:before {
+                    @include fa-icon;
+                    content: '\f015';
+                    display: inline-block;
+                    margin-right: .3em;
+                    text-align: center;
+                    width: 1.25em;
+                  }
+
+                  &.url--facebook {
+                    &:before {
+                      @include fa-icon-brand;
+                      content: '\f09a';
+                    }
+                  }
+
+                  &.url--github {
+                    &:before {
+                      @include fa-icon-brand;
+                      content: '\f09b';
+                    }
+                  }
+
+                  &.url--twitter {
+                    &:before {
+                      @include fa-icon-brand;
+                      content: '\f099';
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .group--data-sets {
+        margin: 3rem 0;
+        position: relative;
+
+        &:before {
+          @include fa-icon;
+          background-color: $color-gray-6;
+          color: $color-deep-teal;
+          content: '\f1c0';
+          font-size: 4rem;
+          padding-left: 1rem;
+          position: absolute;
+          right: -1.2rem;
+          top: -2rem;
+        }
+
+        & > h2 {
+          border-bottom: 1px solid $color-gray-3;
+        }
+
+        .field--name-field-datasets {
+          article {
+            margin-bottom: 1rem;
+            margin-top: 1rem;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            .field--name-field-attributed-image {
+              img {
+                @include img-fluid;
+              }
+            }
+
+            h2 {
+              margin-bottom: 0;
+            }
+
+            .node__content {
+              @include fontSize(small);
+              margin: 0;
+
+              .field--name-field-object-type {
+                .badge {
+                  @include fontSize(small);
+                }
+              }
+            }
+          }
+        }
+
+        .field--name-field-other-datasets {
+          .field__label {
+            border-bottom: 1px solid $color-gray-3;
+            margin-bottom: .2rem;
+          }
+        }
+      }
+
+      .field--name-field-event {
+        display: inline;
+      }
+
+      .field--name-field-tags {
+        display: inline;
+
+        .field__items {
+          display: inline;
+        }
+      }
+    }
+
+  }
+}

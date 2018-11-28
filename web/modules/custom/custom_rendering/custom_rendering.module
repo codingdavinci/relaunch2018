@@ -13,94 +13,103 @@ function custom_rendering_preprocess_node(array &$variables) {
   /** @var \Drupal\node\Entity\Node $node */
   $node = $variables['node'];
 
-  if ($node->bundle() === 'data_set' && $variables['view_mode'] === 'teaser') {
+  if ($node->bundle() === 'data_set') {
     // Add institution name to template variables
     /** @var \Drupal\user\Entity\User $user */
     $user = $node->getOwner();
     $variables['institution_name'] = $user->get('field_institution_name')->value;
 
-    // For object type, show top-level taxonomy terms only
-    /** @var \Drupal\taxonomy\TermStorage $storage */
-    $storage = \Drupal::entityTypeManager()->getStorage('taxonomy_term');
-    $terms = $storage->loadTree('object_types', 0, 1);
-    $termIds = array_map(function($term) {
-      return $term->tid;
-    }, $terms);
+    if ($variables['view_mode'] === 'teaser') {
+      // Add institution name to template variables
+      /** @var \Drupal\user\Entity\User $user */
+      $user = $node->getOwner();
+      $variables['institution_name'] = $user->get('field_institution_name')->value;
 
-    // Get filtered values:
-    $filteredValues = array_filter(
-      $variables['content']['field_object_type'],
-      function ($v, $k) use ($termIds) {
-        if (!is_int($k)) {
-          return FALSE;
-        }
-        return in_array(explode(':', $v['#cache']['tags'][0])[1], $termIds);
-      },
-      ARRAY_FILTER_USE_BOTH
-    );
+      // For object type, show top-level taxonomy terms only
+      /** @var \Drupal\taxonomy\TermStorage $storage */
+      $storage = \Drupal::entityTypeManager()->getStorage('taxonomy_term');
+      $terms = $storage->loadTree('object_types', 0, 1);
+      $termIds = array_map(function($term) {
+        return $term->tid;
+      }, $terms);
 
-    // Filter out all values from render array:
-    $variables['content']['field_object_type'] = array_filter(
-      $variables['content']['field_object_type'],
-      function ($k) {
-        return !is_int($k);
-      },
-      ARRAY_FILTER_USE_KEY
-    );
+      // Get filtered values:
+      $filteredValues = array_filter(
+        $variables['content']['field_object_type'],
+        function ($v, $k) use ($termIds) {
+          if (!is_int($k)) {
+            return FALSE;
+          }
+          return in_array(explode(':', $v['#cache']['tags'][0])[1], $termIds);
+        },
+        ARRAY_FILTER_USE_BOTH
+      );
 
-    // Reinsert filtered values with proper numeric keys:
-    $variables['content']['field_object_type'] += array_values($filteredValues);
-  }
-  elseif ($node->bundle() === 'data_set' && $variables['view_mode'] === 'full') {
+      // Filter out all values from render array:
+      $variables['content']['field_object_type'] = array_filter(
+        $variables['content']['field_object_type'],
+        function ($k) {
+          return !is_int($k);
+        },
+        ARRAY_FILTER_USE_KEY
+      );
 
-    // Don't show top-level terms on file types
-    $tree = TaxonomyParser::getNestedTree('file_types', null, 0);
-    $termIds = array_keys($tree);
-
-    // Get filtered values:
-    $filteredValues = array_filter(
-      $variables['content']['field_file_types'],
-      function ($v, $k) use ($termIds) {
-        if (!is_int($k)) {
-          return FALSE;
-        }
-        return !in_array(explode(':', $v['#cache']['tags'][0])[1], $termIds);
-      },
-      ARRAY_FILTER_USE_BOTH
-    );
-
-    // Filter out all values from render array:
-    $variables['content']['field_file_types'] = array_filter(
-      $variables['content']['field_file_types'],
-      function ($k) {
-        return !is_int($k);
-      },
-      ARRAY_FILTER_USE_KEY
-    );
-
-    // Reinsert filtered values with proper numeric keys:
-    $variables['content']['field_file_types'] += array_values($filteredValues);
-
-    // Render object type terms hierarchically
-    $termIds = [];
-
-    foreach ($variables['content']['field_object_type'] as $key => $value) {
-      if (is_int($key)) {
-        $termIds[] = $value['#plain_text'];
-      }
+      // Reinsert filtered values with proper numeric keys:
+      $variables['content']['field_object_type'] += array_values($filteredValues);
     }
+    elseif ($variables['view_mode'] === 'full') {
 
-    $tree = TaxonomyParser::getNestedTree('object_types');
+      // Don't show top-level terms on file types
+      $tree = TaxonomyParser::getNestedTree('file_types', null, 0);
+      $termIds = array_keys($tree);
 
-    if (count($termIds) > 0) {
-      $variables['object_type'] = [
-        '#type' => 'fieldset',
-        '#markup' => _custom_rendering_output_taxonomy_nested_tree($tree, $termIds, 'badge--object-type'),
-        '#title' => $variables['content']['field_object_type']['#title'],
-        '#attributes' => [
-          'class' => 'object-type',
-        ],
-      ];
+      // Get filtered values:
+      $filteredValues = array_filter(
+        $variables['content']['field_file_types'],
+        function ($v, $k) use ($termIds) {
+          if (!is_int($k)) {
+            return FALSE;
+          }
+          return !in_array(explode(':', $v['#cache']['tags'][0])[1], $termIds);
+        },
+        ARRAY_FILTER_USE_BOTH
+      );
+
+      // Filter out all values from render array:
+      $variables['content']['field_file_types'] = array_filter(
+        $variables['content']['field_file_types'],
+        function ($k) {
+          return !is_int($k);
+        },
+        ARRAY_FILTER_USE_KEY
+      );
+
+      // Reinsert filtered values with proper numeric keys:
+      $variables['content']['field_file_types'] += array_values($filteredValues);
+
+      // Render object type terms hierarchically
+      $termIds = [];
+
+      foreach ($variables['content']['field_object_type'] as $key => $value) {
+        if (is_int($key)) {
+          $termIds[] = $value['#plain_text'];
+        }
+      }
+
+      $tree = TaxonomyParser::getNestedTree('object_types');
+
+      if (count($termIds) > 0) {
+        $variables['object_type'] = [
+          '#type' => 'fieldset',
+          '#markup' => _custom_rendering_output_taxonomy_nested_tree(
+            $tree, $termIds, 'badge--object-type'
+          ),
+          '#title' => $variables['content']['field_object_type']['#title'],
+          '#attributes' => [
+            'class' => 'object-type',
+          ],
+        ];
+      }
     }
   }
 }
@@ -143,7 +152,10 @@ function custom_rendering_field_group_pre_render_alter(&$element) {
  * @param string $view_mode
  */
 function custom_rendering_node_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
-  if ($entity->bundle() === 'data_set' && $view_mode === 'full') {
+  if (
+    ($entity->bundle() === 'data_set' || $entity->bundle() === 'project')
+    && $view_mode === 'full'
+  ) {
     if (isset($build['field_attributed_image'])) {
       $build['header_image'] = $build['field_attributed_image'];
       $build['header_image'][0]['#view_mode'] = 'header';

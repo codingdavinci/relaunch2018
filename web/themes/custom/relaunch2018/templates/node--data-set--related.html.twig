@@ -1,0 +1,40 @@
+{#
+/**
+ * @see node.html.twig
+ */
+#}
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+    'row',
+  ]
+%}
+{{ attach_library('classy/node') }}
+<article{{ attributes.addClass(classes) }}>
+
+  <div class="col-4">
+    {{ content.field_attributed_image }}
+  </div>
+
+  <div class="col-8">
+    {{ title_prefix }}
+    <h2{{ title_attributes }}>
+      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+    </h2>
+    {{ title_suffix }}
+
+    <div{{ content_attributes.addClass('node__content') }}>
+      <div class="field field__items field--institution-name">
+        <div class="field__item">{{ institution_name }}</div>
+      </div>
+      {{ content.field_events }}
+      {{ content.field_object_type }}
+    </div>
+  </div>
+
+</article>

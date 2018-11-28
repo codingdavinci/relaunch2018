@@ -38,6 +38,7 @@
         "drupal/taxonomy_menu": "^3.3",
         "drupal/twig_tweak": "^2.1",
         "drush/drush": "^9.0.0",
+        "npm-asset/fortawesome--fontawesome-free": "^5.5",
         "npm-asset/select2": "^4.0",
         "oomphinc/composer-installers-extender": "^1.1",
         "vlucas/phpdotenv": "^2.4",

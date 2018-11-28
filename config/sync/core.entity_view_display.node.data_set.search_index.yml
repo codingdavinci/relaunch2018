@@ -1,0 +1,233 @@
+uuid: 5e5db31e-e356-41ba-a1f3-6d56032404a5
+langcode: de
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_index
+    - field.field.node.data_set.field_attributed_image
+    - field.field.node.data_set.field_description
+    - field.field.node.data_set.field_events
+    - field.field.node.data_set.field_file_types
+    - field.field.node.data_set.field_georef_standard
+    - field.field.node.data_set.field_keywords
+    - field.field.node.data_set.field_links_api
+    - field.field.node.data_set.field_links_media
+    - field.field.node.data_set.field_links_metadata
+    - field.field.node.data_set.field_media_count
+    - field.field.node.data_set.field_media_filesize
+    - field.field.node.data_set.field_media_license
+    - field.field.node.data_set.field_metadata_doc_links
+    - field.field.node.data_set.field_metadata_filesize
+    - field.field.node.data_set.field_metadata_format
+    - field.field.node.data_set.field_metadata_license
+    - field.field.node.data_set.field_metadata_standards
+    - field.field.node.data_set.field_object_type
+    - field.field.node.data_set.field_objects_count
+    - field.field.node.data_set.field_remarks
+    - field.field.node.data_set.field_theme
+    - field.field.node.data_set.field_vocabulary
+    - node.type.data_set
+  module:
+    - entity_reference_revisions
+    - field_group
+    - link
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_metadata:
+      children:
+        - field_links_metadata
+        - field_metadata_format
+        - field_metadata_license
+        - field_metadata_doc_links
+      parent_name: ''
+      weight: 7
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+      label: Metadaten
+      region: content
+    group_media:
+      children:
+        - field_links_media
+        - field_file_types
+        - field_media_license
+      parent_name: ''
+      weight: 6
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+      label: Mediendateien
+      region: content
+    group_api:
+      children:
+        - field_links_api
+      parent_name: ''
+      weight: 8
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+      label: API
+      region: content
+id: node.data_set.search_index
+targetEntityType: node
+bundle: data_set
+mode: search_index
+content:
+  content_moderation_control:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_attributed_image:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_description:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_events:
+    type: entity_reference_revisions_entity_view
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: preview
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_file_types:
+    weight: 8
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_keywords:
+    weight: 10
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_links_api:
+    weight: 9
+    label: hidden
+    settings:
+      trim_length: 80
+      target: _blank
+      url_only: false
+      url_plain: false
+      rel: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_links_media:
+    weight: 7
+    label: hidden
+    settings:
+      trim_length: 80
+      target: _blank
+      url_only: false
+      url_plain: false
+      rel: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_links_metadata:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 80
+      target: _blank
+      url_only: false
+      url_plain: false
+      rel: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_media_license:
+    type: entity_reference_revisions_entity_view
+    weight: 9
+    label: hidden
+    settings:
+      view_mode: preview
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_metadata_doc_links:
+    weight: 4
+    label: above
+    settings:
+      trim_length: 80
+      target: _blank
+      url_only: false
+      url_plain: false
+      rel: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_metadata_format:
+    type: entity_reference_label
+    weight: 2
+    region: content
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+  field_metadata_license:
+    type: entity_reference_revisions_entity_view
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: preview
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_object_type:
+    weight: 5
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: entity_reference_entity_id
+    region: content
+  field_theme:
+    weight: 9
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_georef_standard: true
+  field_media_count: true
+  field_media_filesize: true
+  field_metadata_filesize: true
+  field_metadata_standards: true
+  field_objects_count: true
+  field_remarks: true
+  field_vocabulary: true
+  langcode: true
