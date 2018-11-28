@@ -110,6 +110,10 @@ function custom_rendering_preprocess_node(array &$variables) {
           ],
         ];
       }
+
+      // Add projects made using this data set to template variables:
+      $variables['content']['projects'] = views_embed_view('projects', 'block_2');
+      $variables['#group_children']['projects'] = 'group_projects';
     }
   }
 }

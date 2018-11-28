@@ -62,10 +62,21 @@
         |without('field_events')
         |without('field_description')
         |without('field_object_type')
+        |without('field_theme')
+        |without('field_keywords')
+        |without('projects')
       }}
     </div>
 
+    <div{{ content_attributes.addClass('node__content node__content__section col-sm-10 offset-sm-1 col-md-9 offset-md-2') }}>
+      {{ content.projects }}
     </div>
 
+    <div{{ content_attributes.addClass('node__content node__content__section col-sm-10 offset-sm-1 col-md-9 offset-md-2') }}>
+      {{ content.field_theme }}
+      {{ content.field_keywords }}
+    </div>
+
+  </div>
 
 </article>

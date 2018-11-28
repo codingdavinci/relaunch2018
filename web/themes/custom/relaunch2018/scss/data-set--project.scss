@@ -72,9 +72,16 @@
     .node__content  {
       @include border-top-radius($border-radius);
       background-color: $color-gray-6;
-      margin-bottom: $content-margin-bottom;
       margin-top: 3rem;
-      padding-top: 10px;
+
+      &.node__content__section {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        margin-bottom: $content-margin-bottom;
+        margin-top: 3rem;
+      }
 
       .badge {
         @include fontSize(normal);
@@ -299,27 +306,20 @@
         }
       }
 
-      .group--data-sets {
-        margin: 3rem 0;
-        position: relative;
-
-        &:before {
-          @include fa-icon;
-          background-color: $color-gray-6;
-          color: $color-deep-teal;
-          content: '\f1c0';
-          font-size: 4rem;
-          padding-left: 1rem;
-          position: absolute;
-          right: -1.2rem;
-          top: -2rem;
-        }
+      .group--data-sets,
+      .view-projects.view-display-id-block_2 {
+        margin: 0;
 
         & > h2 {
           border-bottom: 1px solid $color-gray-3;
         }
 
-        .field--name-field-datasets {
+        .field--name-field-datasets,
+        .view-content {
+          .views-row {
+            margin-bottom: 20px;
+          }
+
           article {
             margin-bottom: 1rem;
             margin-top: 1rem;
@@ -342,10 +342,15 @@
               @include fontSize(small);
               margin: 0;
 
-              .field--name-field-object-type {
+              .field--name-field-object-type,
+              .field--name-field-tags {
                 .badge {
                   @include fontSize(small);
                 }
+              }
+
+              .field--name-field-short-description {
+                font-weight: $font-weight-normal;
               }
             }
           }
@@ -359,6 +364,23 @@
         }
       }
 
+      .group--data-sets {
+        margin-top: 3rem;
+        position: relative;
+
+        &:before {
+          @include fa-icon;
+          background-color: $color-gray-6;
+          color: $color-deep-teal;
+          content: '\f1c0';
+          font-size: 4rem;
+          padding-left: 1rem;
+          position: absolute;
+          right: -1.2rem;
+          top: -2rem;
+        }
+      }
+
       .field--name-field-event {
         display: inline;
       }
@@ -369,6 +391,10 @@
         .field__items {
           display: inline;
         }
+      }
+
+      .project--tags {
+        margin-top: 3rem;
       }
     }
 

@@ -56,10 +56,17 @@
         content
         |without('header_image')
         |without('field_attributed_image')
+        |without('field_event')
+        |without('field_tags')
       }}
+
+      <div class="project--tags">
+        {{ content.field_event }}
+        {{ content.field_tags }}
+      </div>
     </div>
 
-    </div>
+  </div>
 
 
 </article>

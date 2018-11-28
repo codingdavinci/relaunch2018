@@ -1,0 +1,52 @@
+{#
+/**
+ * @see views-view.html.twig
+#}
+{%
+  set classes = [
+    'view',
+    'view-' ~ id|clean_class,
+    'view-id-' ~ id,
+    'view-display-id-' ~ display_id,
+    dom_id ? 'js-view-dom-id-' ~ dom_id,
+  ]
+%}
+<fieldset{{ attributes.addClass(classes) }}>
+  {% if header %}
+    <legend>
+      {{ header }}
+    </legend>
+  {% endif %}
+  {% if attachment_before %}
+    <div class="attachment attachment-before">
+      {{ attachment_before }}
+    </div>
+  {% endif %}
+
+  {% if rows %}
+    <div class="view-content fieldset-wrapper">
+      {{ rows }}
+    </div>
+  {% elseif empty %}
+    <div class="view-empty fieldset-wrapper">
+      {{ empty }}
+    </div>
+  {% endif %}
+
+  {% if pager %}
+    {{ pager }}
+  {% endif %}
+  {% if attachment_after %}
+    <div class="attachment attachment-after">
+      {{ attachment_after }}
+    </div>
+  {% endif %}
+  {% if more %}
+    {{ more }}
+  {% endif %}
+  {% if footer %}
+    <div class="view-footer">
+      {{ footer }}
+    </div>
+  {% endif %}
+</fieldset>
