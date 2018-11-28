@@ -1,4 +1,4 @@
-uuid: dc42fb6d-17ca-49d5-b085-833ccf4d4cba
+uuid: 202c31a4-00b6-451e-b2d1-87e36d105516
 langcode: de
 status: true
 dependencies:
@@ -8,7 +8,7 @@ dependencies:
     - block_content
   theme:
     - relaunch2018
-id: relaunch2018_block_footer
+id: footer
 theme: relaunch2018
 region: footer
 weight: 0
