@@ -5,6 +5,10 @@
 #node-data-set-edit-form,
 #node-project-edit-form {
 
+  .cke_contents {
+    padding: .5rem;
+  }
+
   .layout-region-node-main {
 
     .description,
@@ -57,6 +61,10 @@
       font-size: $font-size-large;
       line-height: normal;
       padding: .5em;
+    }
+
+    .field--widget-paragraphs td {
+      padding: 10px 0 0 0;
     }
 
     .field--widget-options-buttons {
@@ -152,6 +160,12 @@
             &:hover {
               background-color: transparent;
             }
+
+            td {
+              .field--name-field-inline-image {
+                margin-bottom: 20px;
+              }
+            }
           }
         }
 
@@ -181,7 +195,6 @@
         @include border;
 
         border-collapse: separate;
-        padding-bottom: 10px;
 
         thead {
           th {
@@ -274,7 +287,7 @@
               }
 
               td {
-                padding: 20px 0;
+                padding: 10px 0 0 0;
 
                 .paragraphs-subform {
                   margin-top: 0;
@@ -284,31 +297,31 @@
           }
 
         }
+      }
 
-        .field--name-field-license {
-          display: inline-block;
+      .field--name-field-license {
+        display: inline-block;
 
-          .form-item {
-            margin-top: 0;
+        .form-item {
+          margin-bottom: 20px;
+          margin-top: 0;
 
-            select {
-              width: 10em;
-            }
+          select {
+            width: 10em;
           }
         }
+      }
 
-        .field--name-field-author {
-          display: inline-block;
+      .field--name-field-author {
+        display: inline-block;
 
-          .form-item {
-            margin-top: 0;
+        .form-item {
+          margin-top: 0;
 
-            input {
-              width: 30em;
-            }
+          input {
+            width: 25em;
           }
         }
-
       }
 
       &.field--name-field-team-members {
@@ -370,10 +383,15 @@
         margin-right: 20px;
 
         .field--name-field-representative {
+          margin-bottom: 20px;
           margin-top: 2rem;
 
           & > div > h4 {
             display: none;
+          }
+
+          .paragraphs-subform {
+            padding-bottom: 20px;
           }
         }
       }
