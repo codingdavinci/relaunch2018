@@ -1,0 +1,31 @@
+{#
+/**
+ * @see paragraph.html.twig
+ */
+#}
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+{% block paragraph %}
+  <div{{ attributes.addClass(classes) }}>
+    {% block content %}
+      {{ content }}
+    {% endblock %}
+  </div>
+  {% if
+    content.field_license[0]
+    and (
+      'CC0' in content.field_license[0]['#taxonomy_term'].name[0].value
+      or 'CC-0' in content.field_license[0]['#taxonomy_term'].name[0].value
+    )
+  %}
+    <div class="cc0-note">
+      {{ 'Crediting isn’t required, but is appreciated.'|trans }}
+    </div>
+  {% endif %}
+{% endblock paragraph %}

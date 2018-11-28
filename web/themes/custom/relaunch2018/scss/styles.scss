@@ -126,5 +126,9 @@ figcaption {
   background-color: transparent;
   border: none;
   line-height: 1.4;
+}
 
+.cc0-note {
+  @include fontSize(small);
+  font-style: italic;
 }
