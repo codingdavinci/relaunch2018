@@ -3,6 +3,10 @@
 .node--type-data-set,
 .node--type-project {
 
+  &.node--view-mode-full {
+    margin-top: 4rem;
+  }
+
   .article--main-image {
     .field--name-field-attributed-image {
       .field--name-field-inline-image {
