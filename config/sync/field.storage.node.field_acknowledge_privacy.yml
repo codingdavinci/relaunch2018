@@ -1,0 +1,18 @@
+uuid: 19d43599-7d4d-40e8-bf35-fa5d9d0eb527
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_acknowledge_privacy
+field_name: field_acknowledge_privacy
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

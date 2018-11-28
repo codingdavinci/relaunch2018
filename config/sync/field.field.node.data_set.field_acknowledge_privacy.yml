@@ -1,0 +1,23 @@
+uuid: 85e3ca31-22ea-4aeb-9bde-24733530e595
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_acknowledge_privacy
+    - node.type.data_set
+id: node.data_set.field_acknowledge_privacy
+field_name: field_acknowledge_privacy
+entity_type: node
+bundle: data_set
+label: 'Zustimmung zur Datenschutzerklärung'
+description: 'Ich habe die <a href="/impressum-datenschutz" target="_blank">Datenschutzerklärung</a> zur Kenntnis genommen.'
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Ja
+  off_label: Nein
+field_type: boolean
