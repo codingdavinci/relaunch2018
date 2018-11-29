@@ -133,6 +133,7 @@
 
       fieldset {
         &:not(.object-type) {
+          @include border-radius($border-radius);
           border: 1px solid $color-deep-teal;
           padding: 0 1.5rem 0 1.5rem;
 
@@ -172,6 +173,7 @@
       }
 
       .group--result {
+        @include border-radius($border-radius);
         background-color: lighten($color-light-teal, 5%);
         padding: 18px 20px 20px 20px;
         margin-top: 3rem;
