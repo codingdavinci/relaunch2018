@@ -61,6 +61,18 @@
   @if $brightness == 'dark' {
     a {
       color: $color-link-bright;
+
+      &:visited {
+        color: $color-link-bright;
+      }
+
+      &:hover {
+        color: $color-link-bright;
+      }
+
+      &:before {
+        color: $color-link-bright;
+      }
     }
   }
 }

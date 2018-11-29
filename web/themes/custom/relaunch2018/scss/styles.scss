@@ -84,15 +84,21 @@ p {
 }
 
 a {
-  color: $color-deep-blue;
+  color: lighten($color-deep-blue, 5%);
   text-decoration: none;
 
-  &:hover {
+  &:visited {
+    color: $color-deep-blue;
+  }
+
+  &:hover,
+  &:active {
+    color: $color-deep-blue;
     text-decoration: underline;
   }
 
   &:before {
-    color: $color-deep-blue;
+    color: lighten($color-deep-blue, 5%);
   }
 }
 
