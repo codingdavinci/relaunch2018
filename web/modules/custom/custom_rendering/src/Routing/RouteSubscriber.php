@@ -11,8 +11,15 @@ class RouteSubscriber extends RouteSubscriberBase {
    * {@inheritdoc}
    */
   protected function alterRoutes(RouteCollection $collection) {
-    if ($route = $collection->get('entity.user.canonical')) {
-      $route->setOption('_admin_route', TRUE);
+    $adminRoutes = [
+      'entity.user.canonical',
+      'view.projects.page_2',
+    ];
+
+    foreach ($collection->all() as $name => $route) {
+      if (in_array($name, $adminRoutes)) {
+        $route->setOption('_admin_route', TRUE);
+      }
     }
   }
 

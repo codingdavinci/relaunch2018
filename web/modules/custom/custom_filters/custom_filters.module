@@ -11,14 +11,8 @@ use Drupal\views\ViewExecutable;
  * @type string[][]
  */
 const CUSTOM_FILTERS_VIEW_IDS = [
-  'data_sets' => [
-    'form' => 'views-exposed-form-data-sets-page-1',
-    'display' => 'page_1',
-  ],
-  'projects' => [
-    'form' => 'views-exposed-form-projects-page-1',
-    'display' => 'page_1',
-  ]
+  'data_sets' => ['page_1'],
+  'projects' => ['page_1', 'page_2', 'data_export_1'],
 ];
 
 /**
@@ -29,7 +23,7 @@ const CUSTOM_FILTERS_VIEW_IDS = [
  * @param string $form_id
  */
 function custom_filters_form_views_exposed_form_alter(array &$form, FormStateInterface $form_state, $form_id) {
-  if ($currentViewId = _custom_filters_check_form($form)) {
+  if ($currentViewInfo = _custom_filters_check_form($form)) {
 
     // Turn event text input into links
     $options = [];
@@ -48,25 +42,22 @@ function custom_filters_form_views_exposed_form_alter(array &$form, FormStateInt
       $options[$event->get('nid')->value] = $event->get('title')->value;
     }
 
-    // Mimic native views filter behaviour:
-    $allValue = \Drupal::request()->query->get('event_id') !== null ? 'All' : '';
-
     $form['event_id'] = [
       '#type' => 'select',
-      '#options' => [$allValue => t('- Any -')] + $options,
+      '#options' => ['All' => t('- Any -')] + $options,
       '#default_value' => 'All',
-      '#theme' => 'bef_links',
-      '#bef_path' => Url::fromRoute(
-        'view.' . $currentViewId . '.' . CUSTOM_FILTERS_VIEW_IDS[$currentViewId]['display']
-      ),
-      // Although native $form['event_id'] text field is overwritten,
-      // $form['event_id']['#value'] is never filled. Normally, this should be:
-      // '#value' => $form['event_id']['#value'] === '' ? 'All' : $form['event_id']['#value']
-      // Using the above line would make all specific field handling per
-      // hook_views_pre_execute and hook_views_pre_view obsolete.
     ];
 
-    if ($currentViewId === 'data_sets') {
+    if ($currentViewInfo['display'] === 'page_1') {
+      $form['event_id'] = array_merge($form['event_id'], [
+        '#theme' => 'bef_links',
+        '#bef_path' => Url::fromRoute(
+          'view.' . $currentViewInfo['view'] . '.' . $currentViewInfo['display']
+        ),
+      ]);
+    }
+
+    if ($currentViewInfo['view'] === 'data_sets') {
       $form['institution'] = [
         '#type' => 'textfield',
         '#autocomplete_route_name' => 'custom_filters.autocomplete',
@@ -90,14 +81,17 @@ function custom_filters_views_query_alter(ViewExecutable $view) {
     $query = &$view->query;
 
     // Rewrite condition of simulated event select field which won't handle
-    // "AlL" string value:
+    // "All" string value:
     foreach ($query->where as &$conditionGroup) {
       $conditionGroup['conditions'] = array_filter(
         $conditionGroup['conditions'],
         function ($condition) {
-          return
-            $condition['field'] !== 'node_field_data_paragraph__field_event.nid'
-            || $condition['value'] !== 'All';
+          return !(
+            (
+              $condition['field'] === 'paragraphs_item_field_data_node__field_events__paragraph__field_event.field_event_target_id'
+              || $condition['field'] === 'node__field_event.field_event_target_id'
+            ) && $condition['value'] === 'All'
+          );
         }
       );
     }
@@ -114,7 +108,8 @@ function custom_filters_views_query_alter(ViewExecutable $view) {
 function custom_filters_views_pre_view(ViewExecutable $view, $display_id, array &$args) {
   if (_custom_filters_check_display($view)) {
     $filterInput = $view->getExposedInput();
-    if (isset($filterInput['event_id']) && $filterInput['event_id'] === '') {
+
+    if (!isset($filterInput['event_id'])) {
       // Change processed value as an empty string causes an error on page
       // navigation.
       $filterInput['event_id'] = 'All';
@@ -159,12 +154,17 @@ function custom_filters_views_post_build(ViewExecutable $view) {
 
 /**
  * @param array $form
- * @return string|FALSE
+ * @return string[]|FALSE
  */
 function _custom_filters_check_form($form) {
-  foreach (CUSTOM_FILTERS_VIEW_IDS as $viewId => $ids) {
-    if ($ids['form'] === $form['#id']) {
-      return $viewId;
+  foreach (CUSTOM_FILTERS_VIEW_IDS as $viewId => $displayIds) {
+    foreach ($displayIds as $displayId) {
+      $formId = 'views-exposed-form-'
+        . str_replace('_', '-', $viewId) . '-'
+        . str_replace('_', '-', $displayId);
+      if ($formId === $form['#id']) {
+        return ['view' => $viewId, 'display' => $displayId];
+      }
     }
   }
   return FALSE;
@@ -172,15 +172,17 @@ function _custom_filters_check_form($form) {
 
 /**
  * @param ViewExecutable $view
- * @return string|FALSE
+ * @return string[]|FALSE
  */
 function _custom_filters_check_display(ViewExecutable $view) {
-  foreach (CUSTOM_FILTERS_VIEW_IDS as $viewId => $ids) {
-    if (
-      $viewId === $view->id()
-      && $view->getDisplay()->display['id'] === $ids['display']
-    ) {
-      return $viewId;
+  foreach (CUSTOM_FILTERS_VIEW_IDS as $viewId => $displayIds) {
+    if ($viewId !== $view->id()) {
+      continue;
+    }
+    foreach ($displayIds as $displayId) {
+      if ($view->getDisplay()->display['id'] === $displayId) {
+        return ['view' => $viewId, 'display' => $displayId];
+      }
     }
   }
   return FALSE;
