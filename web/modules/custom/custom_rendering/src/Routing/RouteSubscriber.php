@@ -13,6 +13,7 @@ class RouteSubscriber extends RouteSubscriberBase {
   protected function alterRoutes(RouteCollection $collection) {
     $adminRoutes = [
       'entity.user.canonical',
+      'view.data_sets.page_2',
       'view.projects.page_2',
     ];
 

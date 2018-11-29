@@ -1,0 +1,48 @@
+uuid: 6676e3ca-fdb5-4e1a-ac60-d4059b500671
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.export
+    - field.field.paragraph.representative.field_email
+    - field.field.paragraph.representative.field_function
+    - field.field.paragraph.representative.field_name
+    - field.field.paragraph.representative.field_phone
+    - paragraphs.paragraphs_type.representative
+id: paragraph.representative.export
+targetEntityType: paragraph
+bundle: representative
+mode: export
+content:
+  field_email:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_function:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_name:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_phone:
+    weight: 4
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

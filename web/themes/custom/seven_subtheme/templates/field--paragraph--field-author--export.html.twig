@@ -1,0 +1,14 @@
+{#
+/**
+ * @see field.html.twig
+#}
+{% spaceless %}
+{% set i = 0 %}
+{% for item in items %}
+  {% if i > 0 %}
+    ,
+  {% endif %}
+  {{ item.content }}
+  {% set i = i + 1 %}
+{% endfor %}
+{% endspaceless %}

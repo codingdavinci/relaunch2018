@@ -1,0 +1,10 @@
+uuid: 700748bd-d48d-4ece-b84a-0a10ea2f5cf2
+langcode: de
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.export
+label: Export
+targetEntityType: paragraph
+cache: true

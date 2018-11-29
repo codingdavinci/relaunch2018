@@ -1,0 +1,15 @@
+{#
+/**
+ * @see paragraph.html.twig
+ */
+#}
+{%- set i = 0 -%}
+{%- for item in content -%}
+  {%- if item['#items'] is not empty -%}
+    {%- if i > 0 -%}
+      ,
+    {%- endif -%}
+    {{- item -}}
+    {%- set i = i + 1 -%}
+  {%- endif -%}
+{%- endfor -%}
