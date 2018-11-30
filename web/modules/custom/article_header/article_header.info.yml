@@ -1,6 +1,0 @@
-name: Article Header
-version: 0.1
-type: module
-description: "Adds information to the article header."
-package: Custom
-core: 8.x
