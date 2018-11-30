@@ -1,0 +1,27 @@
+uuid: 952c6123-bc8e-4e13-882b-9d434993806a
+langcode: de
+status: true
+dependencies:
+  module:
+    - ctools
+  theme:
+    - relaunch2018
+id: relaunch2018_page_title_blank
+theme: relaunch2018
+region: header
+weight: 0
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Seitentitel (ohne Hintergrund)'
+  provider: core
+  label_display: '0'
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      page: page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

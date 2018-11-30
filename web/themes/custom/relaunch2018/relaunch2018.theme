@@ -1,14 +1,13 @@
 <?php
 
 /**
- * Implements hook_preprocess().
+ * Implements hook_theme_preprocess().
  *
  * @param array $vars
  */
 function relaunch2018_preprocess(array &$vars) {
   $vars['theme_path'] = base_path() . $vars['directory'];
 }
-
 
 /**
  * Implements hook_theme_suggestions_HOOK_alter().
@@ -25,7 +24,7 @@ function relaunch2018_theme_suggestions_field_alter(array &$suggestions, array $
 }
 
 /**
- * Implements hook_page_attachments_alter().
+ * Implements hook_theme_page_attachments_alter().
  *
  * @param array $attachments
  */
@@ -42,7 +41,7 @@ function relaunch2018_page_attachments_alter(array &$attachments) {
 }
 
 /**
- * Implements THEME_preprocess_THEME_HOOK().
+ * Implements hook_theme_preprocess_THEME_HOOK().
  *
  * @param array $variables
  */

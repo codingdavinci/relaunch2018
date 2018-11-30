@@ -1,29 +1,5 @@
 @import 'includes/base';
 
-.path-taxonomy {
-  .region-header {
-    #block-tags {
-      .menu {
-        .menu-item {
-          @include curlyBraces($color-dull-blue);
-
-          a {
-            color: $color-dull-blue;
-          }
-
-          &.menu-item--active-trail {
-            @include curlyBraces($color-deep-teal);
-
-            a {
-              color: $color-deep-teal;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
 .view-taxonomy-term.view-display-id-page_1 {
   .view-content {
     .views-row {

@@ -87,6 +87,10 @@
         margin-top: 3rem;
       }
 
+      h1 {
+        margin-top: 10px;
+      }
+
       .badge {
         @include fontSize(normal);
       }
@@ -97,6 +101,12 @@
         .field__label {
           @include fontSize(small);
           font-weight: normal;
+        }
+      }
+
+      .field--name-field-events {
+        & > * {
+          display: inline-block;
         }
       }
 

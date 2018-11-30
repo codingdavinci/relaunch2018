@@ -13,12 +13,26 @@
       {{ page.admin_tabs }}
     {% endif %}
 
+    {% set showCustomHeader = false %}
     {% if page.header %}
-      {{ page.header }}
+      {% for key in page.header|keys %}
+        {% if not (key matches '/^#.+/') and key != 'relaunch2018_page_title_blank' %}
+          {% set showCustomHeader = true %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+
+    {% if showCustomHeader %}
+      <div class="header--custom">
+        <div class="container">
+          {{ page.header }}
+        </div>
+      </div>
     {% else %}
       {# default/fallback header #}
       <div class="container header--default">
         <img src="{{ theme_path }}/img/CDV_Logo_Line.svg">
+        {{ page.header }}
       </div>
     {% endif %}
   </header>

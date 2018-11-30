@@ -49,10 +49,29 @@ body {
 }
 
 header {
-  .region-header {
+  .header--custom {
     background-color: $color-light-blue;
-    margin-bottom: 50px;
     padding-bottom: 50px;
+    padding-top: 100px;
+
+    .block-block-content:first-child {
+      @include curlyBraces($color-dull-blue);
+      display: inline-block;
+      margin-right: .4em;
+
+      &:before,
+      &:after {
+        @include fontStyle(title);
+      }
+
+      & > .field {
+        display: inline-block;
+      }
+    }
+
+    #block-relaunch2018-page-title {
+      display: inline-block;
+    }
   }
 
   .header--default {
@@ -77,23 +96,57 @@ header {
       }
     }
   }
+
+  #block-tags {
+    .menu {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+
+      .menu-item {
+        @include curlyBraces($color-deep-teal);
+
+        display: inline;
+        font-size: 1rem;
+        margin-right: .4rem;
+
+        a {
+          color: $color-deep-teal;
+        }
+
+        &.menu-item--active-trail {
+          font-weight: $font-weight-bold;
+        }
+      }
+    }
+  }
 }
 
-.region-content {
-  .language-switcher-language-url {
-    margin-top: .5rem;
-    right: 30px;
-    z-index: 10;
+main {
+  margin-top: 50px;
 
-    @include media-breakpoint-down(xs) {
-      display: none;
+  .region-content {
+    .language-switcher-language-url {
+      margin-top: .5rem;
+      right: 30px;
+      z-index: 10;
+
+      @include media-breakpoint-down(xs) {
+        display: none;
+      }
+
+      ul {
+        @include border-radius($border-radius);
+        background-color: $white;
+        box-shadow: 0 5px 15px rgba($black, 0.1);
+        display: flex;
+      }
     }
 
-    ul {
-      @include border-radius($border-radius);
-      background-color: $white;
-      box-shadow: 0 5px 15px rgba($black, 0.1);
-      display: flex;
+    #block-relaunch2018-content {
+      & > .views-element-container {
+        margin-top: 100px;
+      }
     }
   }
 }

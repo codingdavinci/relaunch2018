@@ -3,7 +3,7 @@ langcode: de
 status: true
 dependencies:
   module:
-    - ctools
+    - system
   theme:
     - relaunch2018
 _core:
@@ -11,7 +11,7 @@ _core:
 id: relaunch2018_page_title
 theme: relaunch2018
 region: header
-weight: -12
+weight: -11
 provider: null
 plugin: page_title_block
 settings:
@@ -20,12 +20,8 @@ settings:
   provider: core
   label_display: '0'
 visibility:
-  'entity_bundle:node':
-    id: 'entity_bundle:node'
-    bundles:
-      article: article
-      data_set: data_set
-      project: project
-    negate: true
-    context_mapping:
-      node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: "/news\r\n/tags/*"
+    negate: false
+    context_mapping: {  }
