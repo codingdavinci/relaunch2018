@@ -57,6 +57,43 @@
   }
 }
 
+// TODO: Merge with fontSize()
+@mixin fontStyle($type) {
+  @if $type == 'small' {
+    font-size: $font-size-sm-small;
+
+    @include media-breakpoint-up(md) {
+      font-size: $font-size-md-small;
+    }
+  }
+  @elseif $type == 'badge' {
+    font-size: $font-size-sm-badge;
+
+    @include media-breakpoint-up(md) {
+      font-size: $font-size-md-badge;
+    }
+  }
+  @elseif $type == 'supertitle' {
+    font-size: 1.8rem;
+    font-weight: $font-weight-semi-bold;
+
+    @include media-breakpoint-up(md) {
+      font-size: 2.4rem
+    }
+
+    @include media-breakpoint-up(lg) {
+      font-size: 2.8rem
+    }
+  }
+  @else {
+    font-size: $font-size-sm;
+
+    @include media-breakpoint-up(md) {
+      font-size: $font-size-md;
+    }
+  }
+}
+
 @mixin linkColor($brightness) {
   @if $brightness == 'dark' {
     a {

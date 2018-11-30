@@ -81,6 +81,10 @@ p {
       font-size: 1.2rem;
     }
   }
+
+  &.supertitle {
+    @include fontStyle('supertitle');
+  }
 }
 
 a {
