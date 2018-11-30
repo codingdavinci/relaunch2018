@@ -48,6 +48,31 @@ body {
   }
 }
 
+.layout-header {
+  .header--default {
+    margin-bottom: 50px;
+    margin-top: 33px;
+    text-align: center;
+
+    img {
+      height: 24px;
+      width: auto;
+    }
+
+    @include media-breakpoint-up(sm) {
+      img {
+        height: 30px;
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      img {
+        height: 36px;
+      }
+    }
+  }
+}
+
 .region-content {
   .language-switcher-language-url {
     margin-top: .5rem;
