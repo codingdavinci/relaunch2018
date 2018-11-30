@@ -48,7 +48,13 @@ body {
   }
 }
 
-.layout-header {
+header {
+  .region-header {
+    background-color: $color-light-blue;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+  }
+
   .header--default {
     margin-bottom: 50px;
     margin-top: 33px;
@@ -194,12 +200,6 @@ body {
       font-weight: bold;
     }
   }
-}
-
-.region-content-header {
-  background-color: $color-light-blue;
-  margin-bottom: 50px;
-  padding-bottom: 50px;
 }
 
 .node--type-page {

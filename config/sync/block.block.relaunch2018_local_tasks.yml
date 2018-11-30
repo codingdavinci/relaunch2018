@@ -10,7 +10,7 @@ _core:
   default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
 id: relaunch2018_local_tasks
 theme: relaunch2018
-region: header
+region: admin_tabs
 weight: -12
 provider: null
 plugin: local_tasks_block

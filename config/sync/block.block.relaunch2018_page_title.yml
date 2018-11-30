@@ -11,7 +11,7 @@ _core:
 id: relaunch2018_page_title
 theme: relaunch2018
 region: header
-weight: -11
+weight: -12
 provider: null
 plugin: page_title_block
 settings:

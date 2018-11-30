@@ -7,6 +7,7 @@ libraries:
   - relaunch2018/global-js
 base theme: classy
 regions:
+  admin_tabs: 'Admin tabs'
   header: 'Header'
   primary_menu: 'Primary menu'
   secondary_menu: 'Secondary menu'
@@ -14,7 +15,6 @@ regions:
   page_bottom: 'Page bottom'
   highlighted: 'Highlighted'
   breadcrumb: 'Breadcrumb'
-  content_header: 'Content header'
   content: 'Content'
   sub_content: 'Sub-content'
   sidebar_first: 'Sidebar first'

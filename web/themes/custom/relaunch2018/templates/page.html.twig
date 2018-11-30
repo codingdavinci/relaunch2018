@@ -5,12 +5,23 @@
 #}
 <div class="layout-container">
 
-  <header role="banner" class="container">
-    {{ page.header }}
-  </header>
-
   {{ page.primary_menu }}
   {{ page.secondary_menu }}
+
+  <header role="banner">
+    {% if page.admin_tabs %}
+      {{ page.admin_tabs }}
+    {% endif %}
+
+    {% if page.header %}
+      {{ page.header }}
+    {% else %}
+      {# default/fallback header #}
+      <div class="container header--default">
+        <img src="{{ theme_path }}/img/CDV_Logo_Line.svg">
+      </div>
+    {% endif %}
+  </header>
 
   {{ page.breadcrumb }}
 
@@ -20,17 +31,6 @@
 
   <main role="main">
     <a id="main-content" tabindex="-1"></a>
-
-    <div class="layout-header">
-      {% if page.content_header %}
-        {{ page.content_header }}
-      {% else %}
-        {# default/fallback header #}
-        <div class="container header--default">
-          <img src="{{ theme_path }}/img/CDV_Logo_Line.svg">
-        </div>
-      {% endif %}
-    </div>
 
     <div class="layout-content">
       {{ page.content }}

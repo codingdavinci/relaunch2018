@@ -9,7 +9,7 @@ dependencies:
 id: page_title_2
 theme: relaunch2018
 region: header
-weight: 0
+weight: -11
 provider: null
 plugin: page_title_block
 settings:
