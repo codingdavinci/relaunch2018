@@ -1,29 +1,36 @@
 @import 'includes/base';
 
-.view-press-kits {
+.view.view-press-kits {
   font-weight: 300;
   margin-bottom: $content-margin-bottom;
 
-  .card-columns {
-    column-count: 1;
+  .view-content {
+    .card-columns {
+      column-count: 1;
 
-    .card {
-      display: inline-block;
-      margin-bottom: 40px;
+      .card {
+        background-color: transparent;
+        box-shadow: none;
+        display: inline-block;
+        margin-bottom: 40px;
+
+        .field--name-field-files {
+          margin-top: .6rem;
+        }
+      }
+
+      @include media-breakpoint-up(md) {
+        column-count: 2;
+      }
     }
 
-    @include media-breakpoint-up(md) {
-      column-count: 2;
+    h2 {
+      color: $color-deep-teal;
+      margin-bottom: 1rem;
     }
-  }
 
-  h2 {
-    color: $color-deep-teal;
-    font-size: 1.2rem;
-    margin-bottom: 0;
-  }
-
-  p {
-    margin-bottom: 0;
+    p {
+      margin-bottom: 0;
+    }
   }
 }

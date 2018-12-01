@@ -3,9 +3,8 @@
 .view-coverage {
   margin-bottom: $content-margin-bottom;
 
-  h3 {
+  h2 {
     color: $color-main;
-    margin-bottom: 1.75rem;
   }
 
   .item-list {
@@ -17,8 +16,6 @@
   }
 
   .views-field-field-date {
-    font-weight: 300;
-
     @include media-breakpoint-up(sm) {
       text-align: right;
     }
