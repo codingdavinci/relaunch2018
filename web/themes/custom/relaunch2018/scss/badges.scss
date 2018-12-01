@@ -77,7 +77,7 @@
       &.form-item-project-type {
         .badge {
           & > .badge {
-            background-color: lighten($color-deep-teal, 10%);
+            background-color: desaturate(lighten($color-deep-teal, 30%), 40%);
 
             &:hover {
               background-color: $color-deep-teal;
@@ -87,11 +87,11 @@
               background-color: $color-deep-teal;
 
               &:hover {
-                background-color: lighten($color-deep-teal, 10%);
+                background-color: desaturate(lighten($color-deep-teal, 30%), 40%);
               }
 
               &.bef-link-inactive {
-                background-color: lighten($color-deep-teal, 10%);
+                background-color: desaturate(lighten($color-deep-teal, 30%), 40%);;
               }
 
               &.bef-link-hover {
@@ -104,17 +104,17 @@
         ul ul {
           .badge {
             & > .badge {
-              background-color: lighten($color-darker-green, 10%);
+              background-color: desaturate(lighten($color-darker-green, 10%), 10%);
 
               &:hover {
-                background-color: $color-darker-green;
+                background-color: saturate($color-darker-green, 20%);
               }
 
               &.bef-link-active {
-                background-color: $color-darker-green;
+                background-color: saturate($color-darker-green, 20%);
 
                 &:hover {
-                  background-color: lighten($color-darker-green, 10%);
+                  background-color: desaturate(lighten($color-darker-green, 10%), 10%);
                 }
               }
             }
