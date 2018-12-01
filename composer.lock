@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "321e77046b654cd564ffd996b62ac416",
+    "content-hash": "71b58b4d82b1fd7e52da416e8a8d6ae9",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1769,6 +1769,9 @@
                         "status": "not-covered",
                         "message": "Alpha releases are not covered by Drupal security advisories."
                     }
+                },
+                "patches_applied": {
+                    "#2992717: Fix for toggling filter links": "https://www.drupal.org/files/issues/2018-08-15/multiple_links_filters-2992717-2.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -1885,7 +1888,7 @@
                     }
                 },
                 "patches_applied": {
-                    "Fixing RuntimeException during installation": "https://www.drupal.org/files/issues/2018-09-06/2991182-9.patch"
+                    "#2991182: Fix for RuntimeException during installation": "https://www.drupal.org/files/issues/2018-09-06/2991182-9.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
