@@ -2,36 +2,38 @@
 
 body.path-user {
   &:not(.user-logged-in) {
-    height: 100%;
 
-    & > div {
-      height: 100%;
+    header {
+      .header--custom {
+        background-color: transparent;
+        padding: 0;
+      }
+    }
+
+    main {
+      margin-top: 0;
     }
 
     .layout-container {
       display: flex;
       flex-direction: column;
-      height: 100%;
       justify-content: space-between;
-
-      .region-header {
-        margin-top: 80px;
-      }
 
       .layout-content {
         text-align: center;
 
         .region-content {
-          background-color: $color-lighter-teal;
+          background-color: $color-light-blue;
           display: inline-block;
           margin-top: 20px;
           max-width: 100%;
+          width: 100%;
 
           @include media-breakpoint-up(md) {
             @include border-radius($border-radius);
-
-            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.12);
+            @include boxShadow;
             margin: 50px 0 $content-margin-bottom 0;
+            width: auto;
           }
 
           form {
@@ -39,6 +41,10 @@ body.path-user {
 
             .form-item {
               margin-bottom: 30px;
+
+              input {
+                width: 100%;
+              }
             }
 
             p {
@@ -56,13 +62,10 @@ body.path-user {
           }
 
           .block-local-tasks-block {
-            font-size: 1.1rem;
-            letter-spacing: .04em;
             margin-bottom: 30px;
             margin-top: 50px;
 
             a {
-              color: $color-white;
               padding: 0;
 
               &:hover,
@@ -72,7 +75,7 @@ body.path-user {
 
               &.is-active {
                 background: transparent;
-                color: $color-deep-teal;
+                font-weight: $font-weight-bold;
               }
             }
 
@@ -82,13 +85,16 @@ body.path-user {
 
               li {
                 display: table-cell;
+                padding: 0 30px;
+
+                &.is-active {
+                  font-weight: $font-weight-bold;
+                }
 
                 &:first-child {
-                  padding-left: 30px;
                   text-align: left;
                 }
                 &:last-child {
-                  padding-right: 30px;
                   text-align: right;
                 }
               }

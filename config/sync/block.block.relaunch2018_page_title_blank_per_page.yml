@@ -1,0 +1,25 @@
+uuid: 176c7adc-1e3c-47e7-96cd-7eb6dac06c7e
+langcode: de
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - relaunch2018
+id: relaunch2018_page_title_blank_per_page
+theme: relaunch2018
+region: header
+weight: 0
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Seitentitel (ohne Hintergrund, per Seite)'
+  provider: core
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '/user/*'
+    negate: false
+    context_mapping: {  }

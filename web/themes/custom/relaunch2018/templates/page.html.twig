@@ -16,7 +16,7 @@
     {% set showCustomHeader = false %}
     {% if page.header %}
       {% for key in page.header|keys %}
-        {% if not (key matches '/^#.+/') and key != 'relaunch2018_page_title_blank' %}
+        {% if not (key matches '/^#.+/') and not (key matches '/^relaunch2018_page_title_blank/') %}
           {% set showCustomHeader = true %}
         {% endif %}
       {% endfor %}
