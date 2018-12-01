@@ -28,8 +28,8 @@ dependencies:
     - node.type.data_set
     - system.menu.main
     - taxonomy.vocabulary.licenses
-    - taxonomy.vocabulary.metadata_file_types
     - taxonomy.vocabulary.object_types
+    - taxonomy.vocabulary.theme
     - user.role.administrator
     - user.role.event_team
     - user.role.office
@@ -820,10 +820,10 @@ display:
           entity_type: node
           entity_field: status
           plugin_id: boolean
-        field_metadata_format_target_id:
-          id: field_metadata_format_target_id
-          table: node__field_metadata_format
-          field: field_metadata_format_target_id
+        field_theme_target_id:
+          id: field_theme_target_id
+          table: node__field_theme
+          field: field_theme_target_id
           relationship: none
           group_type: group
           admin_label: ''
@@ -832,12 +832,12 @@ display:
           group: 1
           exposed: true
           expose:
-            operator_id: field_metadata_format_target_id_op
-            label: Metadaten-Format
+            operator_id: field_theme_target_id_op
+            label: Thema
             description: ''
             use_operator: false
-            operator: field_metadata_format_target_id_op
-            identifier: metadata_format
+            operator: field_theme_target_id_op
+            identifier: theme
             required: false
             remember: false
             multiple: false
@@ -865,7 +865,7 @@ display:
           reduce_duplicates: true
           type: select
           limit: true
-          vid: metadata_file_types
+          vid: theme
           hierarchy: false
           error_message: true
           plugin_id: taxonomy_index_tid
@@ -3143,14 +3143,14 @@ display:
                 is_secondary: false
                 rewrite:
                   filter_rewrite_values: ''
-            nid:
+            field_event_target_id:
               bef_format: default
               slider_options:
                 bef_slider_min: null
                 bef_slider_max: null
                 bef_slider_step: !!float 1
                 bef_slider_animate: ''
-                bef_slider_orientation: horizontal
+                bef_slider_orientation: ''
               more_options:
                 is_secondary: false
                 placeholder_text: ''
@@ -3173,6 +3173,14 @@ display:
               more_options:
                 is_secondary: false
                 placeholder_text: ''
+            field_theme_target_id:
+              bef_format: bef_links
+              more_options:
+                bef_select_all_none: false
+                bef_collapsible: false
+                is_secondary: false
+                rewrite:
+                  filter_rewrite_values: ''
           text_input_required_format: basic_html
       arguments: {  }
       menu:

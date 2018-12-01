@@ -29,12 +29,12 @@
     background-color: $color-red-2;
   }
 
-  &.badge--file-types,
-  &.badge--metadata-format {
+  &.badge--theme {
     background-color: lighten($color-deep-blue, 20%);;
   }
 
-  &.badge--theme {
+  &.badge--file-types,
+  &.badge--metadata-format {
     background-color: $color-gray-2;
   }
 
@@ -137,7 +137,7 @@
         }
       }
 
-      &.form-item-metadata-format {
+      &.form-item-theme {
         .badge {
           & > .badge {
             background-color: lighten($color-deep-blue, 35%);
