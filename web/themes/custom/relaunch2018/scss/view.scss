@@ -152,26 +152,6 @@
   }
 
   &.view-projects.view-display-id-page_1 {
-    @include media-breakpoint-up(md) {
-      form {
-        .form--inline {
-          .form-item-search {
-            margin: 0;
-          }
-
-          .form-actions {
-            margin: 0;
-
-            input {
-              margin: 0;
-              padding-bottom: .2em;
-              padding-top: .2em;
-            }
-          }
-        }
-      }
-    }
-
     .view-content {
       align-items: stretch;
       display: grid;
@@ -179,18 +159,14 @@
       grid-gap: 30px;
       grid-template-columns: 1fr;
       justify-items: stretch;
-      margin: 2rem 0 $content-margin-bottom 0;
+      margin-bottom: $content-margin-bottom;
 
       @include media-breakpoint-up(sm) {
         grid-template-columns: 1fr 1fr;
       }
 
-      @include media-breakpoint-up(lg) {
-        grid-template-columns: 1fr 1fr 1fr;
-      }
-
       @include media-breakpoint-up(xl) {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
       }
 
       .card {
