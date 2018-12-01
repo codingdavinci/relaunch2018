@@ -2,7 +2,6 @@
 
 use Drupal\Core\Database\Database;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\Url;
 use Drupal\node\Entity\Node;
 use Drupal\views\ViewExecutable;
 
@@ -42,21 +41,6 @@ function custom_filters_form_views_exposed_form_alter(array &$form, FormStateInt
       $options[$event->get('nid')->value] = $event->get('title')->value;
     }
 
-    $form['event_id'] = [
-      '#type' => 'select',
-      '#options' => ['All' => t('- Any -')] + $options,
-      '#default_value' => 'All',
-    ];
-
-    if ($currentViewInfo['display'] === 'page_1') {
-      $form['event_id'] = array_merge($form['event_id'], [
-        '#theme' => 'bef_links',
-        '#bef_path' => Url::fromRoute(
-          'view.' . $currentViewInfo['view'] . '.' . $currentViewInfo['display']
-        ),
-      ]);
-    }
-
     if (
       $currentViewInfo['view'] === 'data_sets'
       && $currentViewInfo['display'] === 'page_1'
@@ -69,54 +53,6 @@ function custom_filters_form_views_exposed_form_alter(array &$form, FormStateInt
           'count' => 10
         ],
       ];
-    }
-  }
-}
-
-/**
- * Implements hook_views_pre_execute().
- *
- * @param ViewExecutable $view
- */
-function custom_filters_views_query_alter(ViewExecutable $view) {
-  if (_custom_filters_check_display($view)) {
-    /** @var \Drupal\views\Plugin\views\query\Sql $query */
-    $query = &$view->query;
-
-    // Rewrite condition of simulated event select field which won't handle
-    // "All" string value:
-    foreach ($query->where as &$conditionGroup) {
-      $conditionGroup['conditions'] = array_filter(
-        $conditionGroup['conditions'],
-        function ($condition) {
-          return !(
-            (
-              $condition['field'] === 'paragraphs_item_field_data_node__field_events__paragraph__field_event.field_event_target_id'
-              || $condition['field'] === 'node__field_event.field_event_target_id'
-            ) && $condition['value'] === 'All'
-          );
-        }
-      );
-    }
-  }
-}
-
-/**
- * Implements hook_views_pre_view().
- *
- * @param ViewExecutable $view
- * @param string $display_id
- * @param array $args
- */
-function custom_filters_views_pre_view(ViewExecutable $view, $display_id, array &$args) {
-  if (_custom_filters_check_display($view)) {
-    $filterInput = $view->getExposedInput();
-
-    if (!isset($filterInput['event_id'])) {
-      // Change processed value as an empty string causes an error on page
-      // navigation.
-      $filterInput['event_id'] = 'All';
-      $view->setExposedInput($filterInput);
     }
   }
 }

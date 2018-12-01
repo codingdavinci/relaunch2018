@@ -52,6 +52,7 @@ dependencies:
     - text
     - user
     - views_data_export
+    - views_entity_reference
 id: data_sets
 label: Datensätze
 module: views
@@ -922,27 +923,24 @@ display:
           hierarchy: false
           error_message: true
           plugin_id: taxonomy_index_tid
-        field_event_target_id:
-          id: field_event_target_id
+        field_event_target_id_views_entity_reference:
+          id: field_event_target_id_views_entity_reference
           table: paragraph__field_event
-          field: field_event_target_id
+          field: field_event_target_id_views_entity_reference
           relationship: field_events
           group_type: group
           admin_label: ''
-          operator: '='
-          value:
-            min: ''
-            max: ''
-            value: ''
+          operator: in
+          value: {  }
           group: 1
           exposed: true
           expose:
-            operator_id: field_event_target_id_op
+            operator_id: field_event_target_id_views_entity_reference_op
             label: Event
             description: ''
             use_operator: false
-            operator: field_event_target_id_op
-            identifier: event_id
+            operator: field_event_target_id_views_entity_reference_op
+            identifier: event
             required: false
             remember: false
             multiple: false
@@ -954,9 +952,7 @@ display:
               event_team: '0'
               office: '0'
               administrator: '0'
-            placeholder: ''
-            min_placeholder: ''
-            max_placeholder: ''
+            reduce: 0
           is_grouped: false
           group_info:
             label: ''
@@ -969,7 +965,16 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          plugin_id: numeric
+          views_entity_reference_target_bundles:
+            event: event
+            article: '0'
+            coverage: '0'
+            data_set: '0'
+            faq: '0'
+            page: '0'
+            press_kit: '0'
+            project: '0'
+          plugin_id: views_entity_reference
         field_object_type_target_id:
           id: field_object_type_target_id
           table: node__field_object_type
@@ -1277,6 +1282,8 @@ display:
         - 'config:field.storage.node.field_object_type'
         - 'config:field.storage.paragraph.field_license'
         - 'config:field.storage.user.field_institution_name'
+        - 'config:views.view.data_sets'
+        - node_list
   block_1:
     display_plugin: block
     id: block_1
@@ -3127,7 +3134,7 @@ display:
               autosubmit: false
               autosubmit_exclude_textfield: false
               autosubmit_hide: false
-            field_metadata_format_target_id:
+            field_theme_target_id:
               bef_format: bef_links
               more_options:
                 bef_select_all_none: false
@@ -3143,17 +3150,14 @@ display:
                 is_secondary: false
                 rewrite:
                   filter_rewrite_values: ''
-            field_event_target_id:
-              bef_format: default
-              slider_options:
-                bef_slider_min: null
-                bef_slider_max: null
-                bef_slider_step: !!float 1
-                bef_slider_animate: ''
-                bef_slider_orientation: ''
+            field_event_target_id_views_entity_reference:
+              bef_format: bef_links
               more_options:
+                bef_select_all_none: false
+                bef_collapsible: false
                 is_secondary: false
-                placeholder_text: ''
+                rewrite:
+                  filter_rewrite_values: ''
             field_object_type_target_id:
               bef_format: bef_ul_links
               more_options:
@@ -3173,14 +3177,6 @@ display:
               more_options:
                 is_secondary: false
                 placeholder_text: ''
-            field_theme_target_id:
-              bef_format: bef_links
-              more_options:
-                bef_select_all_none: false
-                bef_collapsible: false
-                is_secondary: false
-                rewrite:
-                  filter_rewrite_values: ''
           text_input_required_format: basic_html
       arguments: {  }
       menu:
@@ -3207,6 +3203,8 @@ display:
         - 'config:field.storage.node.field_object_type'
         - 'config:field.storage.paragraph.field_license'
         - 'config:field.storage.user.field_institution_name'
+        - 'config:views.view.data_sets'
+        - node_list
   page_2:
     display_plugin: page
     id: page_2

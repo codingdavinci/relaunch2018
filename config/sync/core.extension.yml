@@ -69,6 +69,7 @@ module:
   user: 0
   user_management: 0
   views_data_export: 0
+  views_entity_reference: 0
   views_ui: 0
   workflows: 0
   insert: 1

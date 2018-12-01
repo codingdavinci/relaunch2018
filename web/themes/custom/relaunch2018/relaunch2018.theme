@@ -48,7 +48,7 @@ function relaunch2018_page_attachments_alter(array &$attachments) {
 function relaunch2018_preprocess_views_exposed_form__data_sets(array &$variables) {
   $secondaryFilters = [
     'license',
-    'event_id',
+    'event',
     'institution',
     'search',
   ];
