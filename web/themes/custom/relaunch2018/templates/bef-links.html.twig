@@ -10,16 +10,10 @@
 %}
 <div{{ attributes.addClass(classes) }}>
   {% set current_nesting_level = 0 %}
-  {% set
-      selectedAll = children[0] == 'All' and selected[0] == 'All'
-      or children and not selected
-      or children and children[0] == '' and selected[0] == ''
-  %}
   {% for child in children %}
     {% set item = attribute(element, child) %}
     {% set item = item|merge({'#attributes': {'class': 'badge'}}) %}
-    {# If nothing is selected, mark all element selected: #}
-    {% if child in selected or selectedAll %}
+    {% if child in selected %}
       {% set item = item|merge({'#attributes': {'class': 'badge bef-link-active'}}) %}
     {% endif %}
     {% if isNested %}

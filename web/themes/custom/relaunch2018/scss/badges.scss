@@ -77,25 +77,18 @@
       &.form-item-project-type {
         .badge {
           & > .badge {
-            background-color: desaturate(lighten($color-deep-teal, 30%), 40%);
+            background-color: $color-deep-teal;
 
             &:hover {
-              background-color: $color-deep-teal;
+              background-color: lighten(saturate($color-deep-teal, 10%), 10%);
             }
 
             &.bef-link-active {
-              background-color: $color-deep-teal;
+              background-color: lighten(desaturate($color-deep-teal, 20%), 15%);
+              color: $color-gray-2;
 
               &:hover {
-                background-color: desaturate(lighten($color-deep-teal, 30%), 40%);
-              }
-
-              &.bef-link-inactive {
-                background-color: desaturate(lighten($color-deep-teal, 30%), 40%);;
-              }
-
-              &.bef-link-hover {
-                background-color: $color-deep-teal;
+                background-color: lighten(saturate($color-deep-teal, 10%), 10%);
               }
             }
           }
@@ -104,17 +97,18 @@
         ul ul {
           .badge {
             & > .badge {
-              background-color: desaturate(lighten($color-darker-green, 10%), 10%);
+              background-color: $color-darker-green;
 
               &:hover {
-                background-color: saturate($color-darker-green, 20%);
+                background-color: lighten(saturate($color-darker-green, 10%), 10%);
               }
 
               &.bef-link-active {
-                background-color: saturate($color-darker-green, 20%);
+                background-color: lighten(desaturate($color-darker-green, 0%), 20%);
+                color: $color-gray-2;
 
                 &:hover {
-                  background-color: desaturate(lighten($color-darker-green, 10%), 10%);
+                  background-color: lighten(saturate($color-darker-green, 10%), 10%);
                 }
               }
             }
@@ -125,25 +119,18 @@
       &.form-item-license {
         .badge {
           & > .badge {
-            background-color: lighten($color-red-2, 10%);
+            background-color: $color-red-2;
 
             &:hover {
-              background-color: $color-red-2;
+              background-color: lighten(saturate($color-red-2, 10%), 10%);
             }
 
             &.bef-link-active {
-              background-color: $color-red-2;
+              background-color: lighten(saturate($color-red-2, 15%), 0%);
+              color: $color-gray-2;
 
               &:hover {
-                background-color: lighten($color-red-2, 10%);
-              }
-
-              &.bef-link-inactive {
-                background-color: lighten($color-red-2, 10%);
-              }
-
-              &.bef-link-hover {
-                background-color: $color-red-2;
+                background-color: lighten(saturate($color-red-2, 10%), 10%);
               }
             }
           }
@@ -156,22 +143,15 @@
             background-color: lighten($color-deep-blue, 35%);
 
             &:hover {
-              background-color: lighten($color-deep-blue, 20%);;
+              background-color: lighten(saturate(lighten($color-deep-blue, 45%), 10%), 0%);
             }
 
             &.bef-link-active {
-              background-color: lighten($color-deep-blue, 20%);;
+              background-color: lighten(saturate(lighten($color-deep-blue, 35%), 15%), 0%);
+              color: $color-gray-2;
 
               &:hover {
-                background-color: lighten($color-deep-blue, 35%);
-              }
-
-              &.bef-link-inactive {
-                background-color: lighten($color-deep-blue, 35%);
-              }
-
-              &.bef-link-hover {
-                background-color: lighten($color-deep-blue, 20%);;
+                background-color: lighten(saturate(lighten($color-deep-blue, 45%), 10%), 0%);
               }
             }
           }
@@ -181,25 +161,18 @@
       &.form-item-event-id {
         .badge {
           & > .badge {
-            background-color: lighten($color-yellow, 10%);
+            background-color: $color-yellow;
 
             &:hover {
-              background-color: $color-yellow;
+              background-color: lighten(saturate($color-yellow, 10%), 10%);
             }
 
             &.bef-link-active {
-              background-color: $color-yellow;
+              background-color: lighten(saturate($color-yellow, 15%), 0%);
+              color: $color-gray-2;
 
               &:hover {
-                background-color: lighten($color-yellow, 10%);
-              }
-
-              &.bef-link-inactive {
-                background-color: lighten($color-yellow, 10%);
-              }
-
-              &.bef-link-hover {
-                background-color: $color-yellow;
+                background-color: lighten(saturate($color-yellow, 10%), 10%);
               }
             }
           }
