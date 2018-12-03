@@ -1,0 +1,15 @@
+uuid: a91a684f-8779-4e1e-9231-7a78ddd1d386
+langcode: de
+status: true
+dependencies: {  }
+name: tile
+label: Kachel
+effects:
+  1477b556-6880-45eb-a592-8a971c886806:
+    uuid: 1477b556-6880-45eb-a592-8a971c886806
+    id: image_scale
+    weight: 1
+    data:
+      width: 320
+      height: 320
+      upscale: false

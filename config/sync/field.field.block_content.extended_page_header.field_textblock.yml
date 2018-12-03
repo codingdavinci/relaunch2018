@@ -1,0 +1,21 @@
+uuid: 83fb170f-82d8-4813-b633-4fbe7344b950
+langcode: de
+status: true
+dependencies:
+  config:
+    - block_content.type.extended_page_header
+    - field.storage.block_content.field_textblock
+  module:
+    - text
+id: block_content.extended_page_header.field_textblock
+field_name: field_textblock
+entity_type: block_content
+bundle: extended_page_header
+label: Textblock
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

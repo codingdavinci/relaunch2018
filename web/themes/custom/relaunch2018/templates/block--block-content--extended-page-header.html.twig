@@ -1,0 +1,35 @@
+{#
+/**
+ * @see block.html.twig
+#}
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+    'row',
+  ]
+%}
+
+<div{{ attributes.addClass(classes) }}>
+  {% block content %}
+    <div class="col-sm-8 col-lg-8">
+      <div class="row">
+        <div class="col-12">
+          {#
+            Should be {{ drupal_block('page_title_block') }}, but that is not
+            supported yet:
+            https://www.drupal.org/project/twig_tweak/issues/3013136
+          #}
+          <h1 class="page-title">{{ drupal_title() }}</h1>
+        </div>
+        <div class="col-12">
+          {{ content|without('field_image') }}
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 col-lg-4 d-none d-sm-flex align-items-center">
+      {{ content.field_image }}
+    </div>
+  {% endblock %}
+</div>

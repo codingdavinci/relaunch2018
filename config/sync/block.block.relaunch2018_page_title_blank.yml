@@ -4,12 +4,13 @@ status: true
 dependencies:
   module:
     - ctools
+    - system
   theme:
     - relaunch2018
 id: relaunch2018_page_title_blank
 theme: relaunch2018
 region: header
-weight: 0
+weight: -14
 provider: null
 plugin: page_title_block
 settings:
@@ -25,3 +26,8 @@ visibility:
     negate: false
     context_mapping:
       node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: /haeufig-gestellte-fragen
+    negate: true
+    context_mapping: {  }

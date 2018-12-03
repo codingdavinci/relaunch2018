@@ -9,7 +9,7 @@ dependencies:
 id: relaunch2018_page_title_blank_per_page
 theme: relaunch2018
 region: header
-weight: 0
+weight: -13
 provider: null
 plugin: page_title_block
 settings:

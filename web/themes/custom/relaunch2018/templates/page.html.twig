@@ -13,25 +13,18 @@
       {{ page.admin_tabs }}
     {% endif %}
 
-    {% set showCustomHeader = false %}
-    {% if page.header %}
-      {% for key in page.header|keys %}
-        {% if not (key matches '/^#.+/') and not (key matches '/^relaunch2018_page_title_blank/') %}
-          {% set showCustomHeader = true %}
-        {% endif %}
-      {% endfor %}
-    {% endif %}
-
-    {% if showCustomHeader %}
-      <div class="header--custom">
+    {% if page.header_with_background %}
+      <div class="header--with-background">
         <div class="container">
-          {{ page.header }}
+          {{ page.header_with_background }}
         </div>
       </div>
-    {% else %}
-      {# default/fallback header #}
+    {% elseif page.header %}
       <div class="container header--default">
-        <img src="{{ theme_path }}/img/CDV_Logo_Line.svg">
+        <div class="header--default--brand">
+          <img src="{{ theme_path }}/img/CDV_Logo_Line.svg">
+        </div>
+
         {{ page.header }}
       </div>
     {% endif %}

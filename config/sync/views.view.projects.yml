@@ -85,7 +85,7 @@ display:
             field_tags_target_id:
               bef_format: bef_links
               more_options:
-                bef_select_all_none: false
+                bef_select_all_none: true
                 bef_collapsible: false
                 is_secondary: false
                 rewrite:
@@ -93,7 +93,7 @@ display:
             field_event_target_id_views_entity_reference:
               bef_format: bef_links
               more_options:
-                bef_select_all_none: false
+                bef_select_all_none: true
                 bef_collapsible: false
                 is_secondary: false
                 rewrite:

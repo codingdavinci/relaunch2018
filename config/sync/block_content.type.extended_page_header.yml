@@ -1,0 +1,8 @@
+uuid: 4cb3fe8f-88c4-478e-aea5-87ac5befb486
+langcode: de
+status: true
+dependencies: {  }
+id: extended_page_header
+label: 'Erweiterter Seitenkopf'
+revision: 1
+description: 'Block mit Text und/oder Bild zur Erweiterung des Seitenkopfes.'

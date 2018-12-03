@@ -9,6 +9,7 @@ base theme: classy
 regions:
   admin_tabs: 'Admin tabs'
   header: 'Header'
+  header_with_background: 'Header with background'
   primary_menu: 'Primary menu'
   secondary_menu: 'Secondary menu'
   page_top: 'Page top'
