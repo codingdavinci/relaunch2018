@@ -8,6 +8,7 @@ dependencies:
     - field.storage.node.field_files
     - field.storage.node.field_links
     - node.type.faq
+    - system.menu.main
   module:
     - file
     - link
@@ -234,7 +235,7 @@ display:
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
-          hide_empty: false
+          hide_empty: true
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
@@ -297,7 +298,7 @@ display:
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
-          hide_empty: false
+          hide_empty: true
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: uri
@@ -418,13 +419,14 @@ display:
           entity_type: node
           entity_field: sticky
           plugin_id: standard
-      title: ''
+      title: 'Häufig gestellte Fragen'
       header: {  }
       footer: {  }
       empty: {  }
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
+      css_class: container
     cache_metadata:
       max-age: -1
       contexts:
@@ -437,13 +439,23 @@ display:
         - 'config:field.storage.node.field_category'
         - 'config:field.storage.node.field_files'
         - 'config:field.storage.node.field_links'
-  block_1:
-    display_plugin: block
-    id: block_1
-    display_title: Block
-    position: 1
+  page_1:
+    display_plugin: page
+    id: page_1
+    display_title: Seite
+    position: 2
     display_options:
       display_extenders: {  }
+      path: faq
+      menu:
+        type: normal
+        title: FAQ
+        description: ''
+        expanded: false
+        parent: ''
+        weight: 0
+        context: '0'
+        menu_name: main
     cache_metadata:
       max-age: -1
       contexts:
