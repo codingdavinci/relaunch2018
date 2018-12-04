@@ -1,0 +1,21 @@
+uuid: 03490e94-a05d-452d-812b-d954dcd392dc
+langcode: de
+status: true
+dependencies:
+  config:
+    - block_content.type.extended_page_header
+    - field.storage.block_content.field_image_color
+id: block_content.extended_page_header.field_image_color
+field_name: field_image_color
+entity_type: block_content
+bundle: extended_page_header
+label: 'Bildfärbung (HEX-Code)'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: FCD9C8
+default_value_callback: ''
+settings: {  }
+field_type: string

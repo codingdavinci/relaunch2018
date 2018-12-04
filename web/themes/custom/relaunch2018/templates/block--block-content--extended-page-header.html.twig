@@ -24,12 +24,26 @@
           <h1 class="page-title">{{ drupal_title() }}</h1>
         </div>
         <div class="col-12">
-          {{ content|without('field_image') }}
+          {{ content|without('field_image')|without('field_image_color') }}
         </div>
       </div>
     </div>
     <div class="col-sm-4 col-lg-4 d-none d-sm-flex align-items-center">
       {{ content.field_image }}
+      <div class="image-mask" style="mask-image: url({{ file_url(content.field_image['#items'].entity.uri.value) }}); -webkit-mask-image: url({{ file_url(content.field_image['#items'].entity.uri.value) }}); background-color: #{{ content.field_image_color['#items'].value }}"></div>
     </div>
   {% endblock %}
 </div>
+
+<svg height="0" xmlns="http://www.w3.org/2000/svg">
+  <filter id="drop-shadow">
+    <feGaussianBlur in="SourceAlpha" stdDeviation="4"/>
+    <feOffset dx="5" dy="1" result="offsetblur"/>
+    <feFlood flood-color="rgba(0,0,0,0.15)"/>
+    <feComposite in2="offsetblur" operator="in"/>
+    <feMerge>
+      <feMergeNode/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+</svg>

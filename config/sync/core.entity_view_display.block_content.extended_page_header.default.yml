@@ -5,8 +5,8 @@ dependencies:
   config:
     - block_content.type.extended_page_header
     - field.field.block_content.extended_page_header.field_image
+    - field.field.block_content.extended_page_header.field_image_color
     - field.field.block_content.extended_page_header.field_textblock
-    - image.style.tile
   module:
     - image
     - text
@@ -19,10 +19,18 @@ content:
     weight: 1
     label: hidden
     settings:
-      image_style: tile
+      image_style: ''
       image_link: ''
     third_party_settings: {  }
     type: image
+    region: content
+  field_image_color:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
   field_textblock:
     weight: 2

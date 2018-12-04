@@ -5,6 +5,7 @@ dependencies:
   config:
     - block_content.type.extended_page_header
     - field.field.block_content.extended_page_header.field_image
+    - field.field.block_content.extended_page_header.field_image_color
     - field.field.block_content.extended_page_header.field_textblock
     - image.style.thumbnail
   module:
@@ -22,6 +23,14 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
+  field_image_color:
+    weight: 26
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   field_textblock:
     weight: 3
