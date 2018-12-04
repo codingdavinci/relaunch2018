@@ -1,72 +1,70 @@
 @import 'includes/base';
 
-.paragraph--type--winners {
-  .field--name-field-winner-projects {
-    & > .field__items {
-      display: grid;
-      grid-auto-rows: 1fr;
-      grid-gap: 30px;
-      grid-template-columns: 1fr;
+.field--name-field-winners {
+  & > .field__items {
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-gap: 30px;
+    grid-template-columns: 1fr;
 
-      @include media-breakpoint-up(sm) {
-        grid-template-columns: 1fr 1fr;
-      }
+    @include media-breakpoint-up(sm) {
+      grid-template-columns: 1fr 1fr;
+    }
 
-      @include media-breakpoint-up(md) {
-        grid-template-columns: 1fr 1fr 1fr;
-      }
+    @include media-breakpoint-up(md) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
 
-      @include media-breakpoint-up(lg) {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-      }
+    @include media-breakpoint-up(lg) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
 
-      .field__item {
-        position: relative;
+    .field__item {
+      position: relative;
 
-        .winner--info {
-          @include border-radius($border-radius);
-          @include boxShadow;
-          @include fontStyle(very-small);
-          background-color: $color-green-lighter;
-          bottom: 0;
-          color: $color-white;
-          max-width: 90%;
-          padding: .5em .6em .5em .4em;
-          position: absolute;
-          right: 0;
-          z-index: 1;
+      .winner--info {
+        @include border-radius($border-radius);
+        @include boxShadow;
+        @include fontStyle(very-small);
+        background-color: $color-green-lighter;
+        bottom: 0;
+        color: $color-white;
+        max-width: 90%;
+        padding: .5em .6em .5em .4em;
+        position: absolute;
+        right: 0;
+        z-index: 1;
 
-          .winner--info--award--wrapper {
-            &:before {
-              content: '*';
-              display: block;
-              float: left;
-              font-size: 5em;
-              font-weight: $font-weight-light;
-              margin: 1rem .05em -.1em 0;
-              line-height: 1rem;
-            }
-
-            .winner--info--award {
-              @include curlyBraces($color-white);
-              text-transform: uppercase;
-            }
+        .winner--info--award--wrapper {
+          &:before {
+            content: '*';
+            display: block;
+            float: left;
+            font-size: 5em;
+            font-weight: $font-weight-light;
+            margin: 1rem .05em -.1em 0;
+            line-height: 1rem;
           }
 
-          .winner--info--project-title {
-            clear: both;
-            text-align: center;
+          .winner--info--award {
+            @include curlyBraces($color-white);
+            text-transform: uppercase;
           }
         }
 
-        .paragraph--type--winner {
-          margin-bottom: 1.4rem;
-          margin-right: 1.4rem;
+        .winner--info--project-title {
+          clear: both;
+          text-align: center;
+        }
+      }
 
-          img {
-            @include border-radius($border-radius);
-            @include img-fluid;
-          }
+      .paragraph--type--winner {
+        margin-bottom: 1.4rem;
+        margin-right: 1.4rem;
+
+        img {
+          @include border-radius($border-radius);
+          @include img-fluid;
         }
       }
     }

@@ -1,0 +1,29 @@
+{#
+/**
+ * @see paragraph.html.twig
+ */
+#}
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+{% block paragraph %}
+  <div{{ attributes.addClass(classes) }}>
+    {% block content %}
+      <div class="winner--info">
+        <div class="winner--info--award--wrapper">
+          <span class="winner--info--award">{{ content.field_award['#items'].value }}</span>
+        </div>
+        <div class="winner--info--project-title">
+          {% set nid = content.field_project['#items'].target_id %}
+          {{ drupal_link(drupal_field('title', 'node', nid), 'node/' ~ nid) }}
+        </div>
+      </div>
+      {{ content.field_project }}
+    {% endblock %}
+  </div>
+{% endblock paragraph %}

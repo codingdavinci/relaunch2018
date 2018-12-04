@@ -5,7 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_winners
     - node.type.event
-    - paragraphs.paragraphs_type.winners
+    - paragraphs.paragraphs_type.winner
   module:
     - entity_reference_revisions
 id: node.event.field_winners
@@ -23,7 +23,7 @@ settings:
   handler_settings:
     negate: 0
     target_bundles:
-      winners: winners
+      winner: winner
     target_bundles_drag_drop:
       attributed_image:
         weight: 13
@@ -56,9 +56,9 @@ settings:
         weight: 22
         enabled: false
       winner:
-        weight: 23
-        enabled: false
-      winners:
         enabled: true
+        weight: 23
+      winners:
         weight: 24
+        enabled: false
 field_type: entity_reference_revisions
