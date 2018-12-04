@@ -52,6 +52,10 @@
       }
     }
   }
+
+  &.badge--award {
+    background-color: $color-red;
+  }
 }
 
 .view {

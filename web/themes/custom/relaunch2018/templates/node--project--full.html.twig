@@ -35,22 +35,29 @@
     </div>
 
     <div{{ content_attributes.addClass('node__content col-sm-10 offset-sm-1 col-md-9 offset-md-2') }}>
-        {{ title_prefix }}
-        <h1{{ title_attributes }}>
-          {{ label }}
-        </h1>
-        {{ title_suffix }}
+      {{ title_prefix }}
+      <h1{{ title_attributes }}>
+        {{ label }}
+      </h1>
+      {{ title_suffix }}
 
-        {% if display_submitted %}
-          <div{{ author_attributes.addClass('node__submitted').addClass('row') }}>
-            <div class="col-4">
-              {{ node.createdtime|format_date('date_short') }}
-            </div>
-            <div class="col-8 text-right">
-              {{ 'by'|trans }}{{ author_name }}
-            </div>
+      {% if display_submitted %}
+        <div{{ author_attributes.addClass('node__submitted').addClass('row') }}>
+          <div class="col-4">
+            {{ node.createdtime|format_date('date_short') }}
           </div>
+          <div class="col-8 text-right">
+            {{ 'by'|trans }}{{ author_name }}
+          </div>
+        </div>
+      {% endif %}
+
+      <div class="project--tags">
+        {% if award %}
+          <div class="badge badge--award">{{ award }}</div>
         {% endif %}
+        {{ content.field_event }}
+      </div>
 
       {{
         content
@@ -61,7 +68,6 @@
       }}
 
       <div class="project--tags">
-        {{ content.field_event }}
         {{ content.field_tags }}
       </div>
     </div>

@@ -1,6 +1,8 @@
 <?php
 
 use Drupal\block\Entity\Block;
+use Drupal\node\Entity\Node;
+use Drupal\paragraphs\Entity\Paragraph;
 
 /**
  * Implements THEME_preprocess().
@@ -38,6 +40,37 @@ function relaunch2018_preprocess_page(array &$variables) {
           break;
         }
       }
+    }
+  }
+}
+
+/**
+ * Implements THEME_preprocess_HOOK().
+ *
+ * @param array $variables
+ */
+function relaunch2018_preprocess_node(array &$variables) {
+  /** @var Node $node */
+  $node = $variables['node'];
+
+  if ($node->bundle() === 'project') {
+    // Add award title to variables if project has won an award.
+    if (($eventId = $node->get('field_event')->target_id) !== null) {
+      $nid = $node->id();
+      $award = null;
+      /** @var Node $event */
+      $event = Node::load($eventId);
+
+      foreach ($event->get('field_winners')->getValue() as $element) {
+        $winner = Paragraph::load($element['target_id']);
+
+        if ($winner->get('field_project')->target_id === $nid) {
+          $award = $winner->get('field_award')->value;
+          break;
+        }
+      }
+
+      $variables['award'] = $award;
     }
   }
 }
