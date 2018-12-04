@@ -1,0 +1,24 @@
+uuid: cdb21837-393c-48f6-848d-6090edf89a21
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.winner.field_award
+    - field.field.paragraph.winner.field_project
+    - paragraphs.paragraphs_type.winner
+id: paragraph.winner.default
+targetEntityType: paragraph
+bundle: winner
+mode: default
+content:
+  field_project:
+    weight: 0
+    label: visually_hidden
+    settings:
+      view_mode: preview
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden:
+  field_award: true

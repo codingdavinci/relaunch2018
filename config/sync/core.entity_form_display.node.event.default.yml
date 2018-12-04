@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.event.field_paragraphs
     - field.field.node.event.field_range
     - field.field.node.event.field_team
+    - field.field.node.event.field_winners
     - node.type.event
   module:
     - content_moderation
@@ -60,6 +61,24 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+    region: content
+  field_winners:
+    type: paragraphs
+    weight: 126
+    settings:
+      title: Seitenabschnitt
+      title_plural: Seitenabschnitte
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
+    third_party_settings: {  }
     region: content
   langcode:
     type: language_select

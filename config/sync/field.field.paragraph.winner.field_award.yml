@@ -1,0 +1,19 @@
+uuid: ccdc88e7-6692-4ce8-8559-0ce23babaa7a
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_award
+    - paragraphs.paragraphs_type.winner
+id: paragraph.winner.field_award
+field_name: field_award
+entity_type: paragraph
+bundle: winner
+label: Auszeichnung
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

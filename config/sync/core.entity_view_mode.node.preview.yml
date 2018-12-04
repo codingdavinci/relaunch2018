@@ -1,0 +1,10 @@
+uuid: ed8757d0-373c-437d-aa23-29e0197acf0a
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+id: node.preview
+label: Vorschau
+targetEntityType: node
+cache: true

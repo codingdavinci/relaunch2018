@@ -1,0 +1,15 @@
+uuid: 7b7afffd-a647-47fd-a2e9-1c33b2e540d3
+langcode: de
+status: true
+dependencies: {  }
+name: project_preview
+label: Projekt-Vorschau
+effects:
+  fdd9aaaf-99e0-4546-ba23-4d95d2a844bd:
+    uuid: fdd9aaaf-99e0-4546-ba23-4d95d2a844bd
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 700
+      height: 700
+      anchor: center-center

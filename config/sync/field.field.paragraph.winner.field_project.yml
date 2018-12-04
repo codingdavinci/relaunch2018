@@ -1,0 +1,28 @@
+uuid: a8111b75-d9e3-4081-89e8-fa0daf3a4f0f
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_project
+    - node.type.project
+    - paragraphs.paragraphs_type.winner
+id: paragraph.winner.field_project
+field_name: field_project
+entity_type: paragraph
+bundle: winner
+label: Projekt
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      project: project
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,64 @@
+uuid: 0140edee-f019-4346-b96a-08c55725607f
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_winner_projects
+    - paragraphs.paragraphs_type.winner
+    - paragraphs.paragraphs_type.winners
+  module:
+    - entity_reference_revisions
+id: paragraph.winners.field_winner_projects
+field_name: field_winner_projects
+entity_type: paragraph
+bundle: winners
+label: Gewinner-Projekte
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      winner: winner
+    target_bundles_drag_drop:
+      attributed_image:
+        weight: 13
+        enabled: false
+      attribution:
+        weight: 14
+        enabled: false
+      data_set_event:
+        weight: 15
+        enabled: false
+      filesize:
+        weight: 16
+        enabled: false
+      image:
+        weight: 17
+        enabled: false
+      representative:
+        weight: 18
+        enabled: false
+      team_member:
+        weight: 19
+        enabled: false
+      text:
+        weight: 20
+        enabled: false
+      textblock_left:
+        weight: 21
+        enabled: false
+      textblock_right:
+        weight: 22
+        enabled: false
+      winner:
+        enabled: true
+        weight: 23
+      winners:
+        weight: 24
+        enabled: false
+field_type: entity_reference_revisions

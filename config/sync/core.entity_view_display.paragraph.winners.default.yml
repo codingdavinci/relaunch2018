@@ -1,0 +1,24 @@
+uuid: b05b6b82-3b8b-48fd-a4a4-a19956fe1982
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.winners.field_winner_projects
+    - paragraphs.paragraphs_type.winners
+  module:
+    - entity_reference_revisions
+id: paragraph.winners.default
+targetEntityType: paragraph
+bundle: winners
+mode: default
+content:
+  field_winner_projects:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

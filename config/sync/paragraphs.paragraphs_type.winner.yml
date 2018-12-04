@@ -1,0 +1,9 @@
+uuid: a472cc71-41bf-4f60-bd4d-acc751e17656
+langcode: de
+status: true
+dependencies: {  }
+id: winner
+label: Preisträger
+icon_uuid: null
+description: 'Referenz zu einem Projekt mit Titel der Auszeichnung.'
+behavior_plugins: {  }

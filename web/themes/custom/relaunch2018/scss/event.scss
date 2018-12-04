@@ -1,19 +1,36 @@
+@import 'includes/base';
+
 .page-node-type-event {
 
-  .media--type-image {
-    &.media--view-mode-full {
-      padding: 0;
-      flex-direction: column;
+  .node--type-event {
 
-      img {
-        height: auto;
-        max-width: 100%;
+    & > .node__content {
+
+      & > .field {
+        margin-bottom: 5rem;
+
+        h2 {
+          color: $color-green;
+          font-weight: $font-weight-semi-bold;
+          margin-left: 2em;
+        }
+
+        .media--type-image {
+          &.media--view-mode-full {
+            padding: 0;
+            flex-direction: column;
+
+            img {
+              height: auto;
+              max-width: 100%;
+            }
+          }
+
+          &.media--view-mode-default {
+            padding: 0;
+          }
+        }
       }
     }
-
-    &.media--view-mode-default {
-      padding: 0;
-    }
-
   }
 }

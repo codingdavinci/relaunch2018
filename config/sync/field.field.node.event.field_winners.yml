@@ -1,0 +1,64 @@
+uuid: 07251914-64cf-42d3-a99f-bda0cea225c2
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_winners
+    - node.type.event
+    - paragraphs.paragraphs_type.winners
+  module:
+    - entity_reference_revisions
+id: node.event.field_winners
+field_name: field_winners
+entity_type: node
+bundle: event
+label: 'Die Preisträger'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      winners: winners
+    target_bundles_drag_drop:
+      attributed_image:
+        weight: 13
+        enabled: false
+      attribution:
+        weight: 14
+        enabled: false
+      data_set_event:
+        weight: 15
+        enabled: false
+      filesize:
+        weight: 16
+        enabled: false
+      image:
+        weight: 17
+        enabled: false
+      representative:
+        weight: 18
+        enabled: false
+      team_member:
+        weight: 19
+        enabled: false
+      text:
+        weight: 20
+        enabled: false
+      textblock_left:
+        weight: 21
+        enabled: false
+      textblock_right:
+        weight: 22
+        enabled: false
+      winner:
+        weight: 23
+        enabled: false
+      winners:
+        enabled: true
+        weight: 24
+field_type: entity_reference_revisions

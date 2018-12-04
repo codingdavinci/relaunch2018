@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.event.field_paragraphs
     - field.field.node.event.field_range
     - field.field.node.event.field_team
+    - field.field.node.event.field_winners
     - node.type.event
   module:
     - entity_reference_revisions
@@ -37,6 +38,15 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  field_winners:
+    type: entity_reference_revisions_entity_view
+    weight: 4
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
     region: content
   links:
     weight: 1

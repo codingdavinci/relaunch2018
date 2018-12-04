@@ -1,0 +1,10 @@
+uuid: affadb7f-49ea-4d7c-a3c5-937a8607773e
+langcode: de
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.project_preview
+label: Projekt-Vorschau
+targetEntityType: paragraph
+cache: true

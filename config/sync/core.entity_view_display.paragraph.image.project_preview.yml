@@ -1,0 +1,23 @@
+uuid: b1535ddc-168b-4954-92bc-2eb65b03ec92
+langcode: de
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.project_preview
+    - field.field.paragraph.image.field_image
+    - paragraphs.paragraphs_type.image
+id: paragraph.image.project_preview
+targetEntityType: paragraph
+bundle: image
+mode: project_preview
+content:
+  field_image:
+    type: entity_reference_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+hidden: {  }

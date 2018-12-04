@@ -1,0 +1,20 @@
+uuid: 77a2ae41-8ead-4470-b2a1-4be96ce933a7
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+    - paragraphs
+id: paragraph.field_project
+field_name: field_project
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
