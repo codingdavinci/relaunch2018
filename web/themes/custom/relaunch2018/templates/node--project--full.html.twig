@@ -17,6 +17,8 @@
 %}
 {{ attach_library('classy/node') }}
 <article{{ attributes.addClass(classes) }}>
+  {{ content.content_moderation_control }}
+
   <div class="article--main-image d-none d-md-block">
     <div class="container">
       {{ content.header_image }}
@@ -65,6 +67,7 @@
         |without('field_attributed_image')
         |without('field_event')
         |without('field_tags')
+        |without('content_moderation_control')
       }}
 
       <div class="project--tags">

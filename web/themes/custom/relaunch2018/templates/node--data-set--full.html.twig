@@ -17,6 +17,8 @@
 %}
 {{ attach_library('classy/node') }}
 <article{{ attributes.addClass(classes) }}>
+  {{ content.content_moderation_control }}
+
   <div class="article--main-image d-none d-md-block">
     <div class="container">
       {{ content.header_image }}
@@ -35,22 +37,22 @@
     </div>
 
     <div{{ content_attributes.addClass('node__content col-sm-10 offset-sm-1 col-md-9 offset-md-2') }}>
-        {{ title_prefix }}
-        <h1{{ title_attributes }}>
-          {{ label }}
-        </h1>
-        {{ title_suffix }}
+      {{ title_prefix }}
+      <h1{{ title_attributes }}>
+        {{ label }}
+      </h1>
+      {{ title_suffix }}
 
-        {% if display_submitted %}
-          <div{{ author_attributes.addClass('node__submitted').addClass('row') }}>
-            <div class="col-4">
-              {{ node.createdtime|format_date('date_short') }}
-            </div>
-            <div class="col-8 text-right">
-              {{ 'by'|trans }}{{ author_name }}
-            </div>
+      {% if display_submitted %}
+        <div{{ author_attributes.addClass('node__submitted').addClass('row') }}>
+          <div class="col-4">
+            {{ node.createdtime|format_date('date_short') }}
           </div>
-        {% endif %}
+          <div class="col-8 text-right">
+            {{ 'by'|trans }}{{ author_name }}
+          </div>
+        </div>
+      {% endif %}
 
       {{ content.field_events }}
       {{ content.field_description }}
@@ -65,6 +67,7 @@
         |without('field_theme')
         |without('field_keywords')
         |without('projects')
+        |without('content_moderation_control')
       }}
     </div>
 
