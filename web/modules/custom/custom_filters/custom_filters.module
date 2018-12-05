@@ -70,27 +70,39 @@ function custom_filters_views_post_build(ViewExecutable $view) {
       return;
     }
 
+    if ($view->id() === 'projects' && $currentViewInfo['display'] === 'page_1') {
+      /** @var \Drupal\Core\Database\Query\Select $originalSelect */
+      $originalSelect = $view->build_info['query'];
+
+      // Arrange ordering by awarded projects by limiting the JOIN with the
+      // projects awarded to the row's actual project. That results in only
+      // awarded projects being matched on the JOIN.
+      $tables =& $originalSelect->getTables();
+      $tables['node_field_data_paragraph__field_project']['condition']
+        .= ' AND node_field_data.nid = node_field_data_paragraph__field_project.nid';
+
+      $orderBy =& $originalSelect->getOrderBy();
+      $newOrderBy = [];
+
+      // Leave order of ORDER BY intact and insert winner sorting after event
+      // sorting.
+      $i = 0;
+      foreach ($orderBy as $column => $direction) {
+        $newOrderBy[$column] = $direction;
+        if ($i++ === 0) {
+          $newOrderBy['node_field_data_paragraph__field_project_nid'] = 'DESC';
+        }
+      }
+
+      $orderBy = $newOrderBy;
+    }
+
     // Remove duplicates originating from View relationships which are always
     // aggregated using LEFT JOIN.
     $select = Database::getConnection()->select('node');
     $select->innerJoin($view->build_info['query'], 'subQuery');
     $select->fields('subQuery', ['nid']);
     $select->distinct();
-
-    /** @var \Drupal\Core\Database\Query\Select $originalSelect */
-    $originalSelect = $view->build_info['query'];
-    $originalFields = $originalSelect->getFields();
-
-    // Port original SORT BY to new SELECT:
-    foreach ($originalSelect->getOrderBy() as $field => $direction) {
-      $select->orderBy($field, $direction);
-      $originalField = $originalFields[$field];
-      $select->addField(
-        'subQuery',
-        $originalField['alias'],
-        $originalField['alias']
-      );
-    }
 
     $view->build_info['query'] = $select;
     $view->build_info['count_query'] = $select;

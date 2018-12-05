@@ -26,6 +26,7 @@ dependencies:
     - entity_reference_revisions
     - link
     - node
+    - paragraphs
     - rest
     - serialization
     - taxonomy
@@ -1923,6 +1924,14 @@ display:
           quantity: 5
       defaults:
         pager: false
+        fields: true
+        style: true
+        row: true
+        relationships: false
+        sorts: false
+        arguments: true
+        filters: true
+        filter_groups: true
       path: projekte
       menu:
         type: normal
@@ -1933,6 +1942,71 @@ display:
         weight: 0
         context: '0'
         menu_name: main
+      relationships:
+        field_tags:
+          id: field_tags
+          table: node__field_tags
+          field: field_tags
+          relationship: none
+          group_type: group
+          admin_label: 'field_tags: Taxonomie-Begriff'
+          required: false
+          plugin_id: standard
+        field_event:
+          id: field_event
+          table: node__field_event
+          field: field_event
+          relationship: none
+          group_type: group
+          admin_label: 'field_event: Inhalt'
+          required: false
+          plugin_id: standard
+        field_winners:
+          id: field_winners
+          table: node__field_winners
+          field: field_winners
+          relationship: field_event
+          group_type: group
+          admin_label: 'field_winners: Seitenabschnitt'
+          required: false
+          plugin_id: standard
+        field_project:
+          id: field_project
+          table: paragraph__field_project
+          field: field_project
+          relationship: field_winners
+          group_type: group
+          admin_label: 'field_project: Inhalt'
+          required: false
+          plugin_id: standard
+      sorts:
+        field_event_target_id:
+          id: field_event_target_id
+          table: node__field_event
+          field: field_event_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: standard
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
+          granularity: second
+          entity_type: node
+          entity_field: created
+          plugin_id: date
     cache_metadata:
       max-age: -1
       contexts:
