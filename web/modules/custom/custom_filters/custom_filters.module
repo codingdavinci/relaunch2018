@@ -1,8 +1,10 @@
 <?php
 
 use Drupal\Core\Database\Database;
+use Drupal\Core\Database\Query\Condition;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\node\Entity\Node;
+use Drupal\views\Plugin\views\query\Sql;
 use Drupal\views\ViewExecutable;
 
 /**
@@ -106,6 +108,56 @@ function custom_filters_views_post_build(ViewExecutable $view) {
 
     $view->build_info['query'] = $select;
     $view->build_info['count_query'] = $select;
+  }
+}
+
+/**
+ * Implements hook_views_query_alter().
+ */
+function custom_filters_views_query_alter(ViewExecutable $view, Sql $query) {
+
+  if ($view->id() === 'data_sets' && $view->getDisplay()->display['id'] === 'page_1') {
+    // The license filter is set up to only allow selecting license groups. In
+    // order to select the data sets by their actual license, the applied filter
+    // needs to be rewritten to filter for the taxonomy term children.
+
+    /** @var \Drupal\taxonomy\TermStorage $storage */
+    $storage = \Drupal::entityTypeManager()->getStorage('taxonomy_term');
+
+    $childrenTermIds = [];
+
+    foreach ($query->where as &$conditionGroup) {
+      foreach ($conditionGroup['conditions'] as &$condition) {
+        $condition = &$condition['field'];
+
+        if ($condition instanceof Condition) {
+          $fieldConditions = &$condition->conditions();
+
+          foreach ($fieldConditions as $i => &$fieldCondition) {
+            if (!is_int($i)) {
+              continue;
+            }
+
+            $fieldName = 'paragraph__field_license_value_' . $i . '.field_license_target_id';
+
+            if ($fieldCondition['field'] === $fieldName) {
+              $childrenTermIds[$i] = array_map(function($term) {
+                /** @var \Drupal\taxonomy\Entity\Term $term */
+                return $term->id();
+              }, $storage->loadChildren($fieldCondition['value'], 'licenses'));
+              $fieldCondition['value'] = $childrenTermIds[$i];
+              $fieldCondition['operator'] = 'IN';
+            }
+          }
+        }
+      }
+    }
+
+    foreach ($childrenTermIds as $i => $childrenTermIdsPerGroup) {
+      /** @var Sql $query */
+      $table = $query->getTableInfo('paragraph__field_license_value_' . $i);
+      $table['join']->extra[0]['value'] = $childrenTermIdsPerGroup;
+    }
   }
 }
 
