@@ -1,21 +1,21 @@
-uuid: 171b1ffc-02f3-4d0a-a96b-dd182e1a2f04
+uuid: a1a8fbf8-08da-41ab-b402-8f05794e1087
 langcode: de
 status: true
 dependencies:
   config:
-    - field.field.paragraph.image.field_image
-    - paragraphs.paragraphs_type.image
-id: paragraph.image.default
+    - field.field.paragraph.slideshow.field_images
+    - paragraphs.paragraphs_type.slideshow
+id: paragraph.slideshow.default
 targetEntityType: paragraph
-bundle: image
+bundle: slideshow
 mode: default
 content:
-  field_image:
+  field_images:
     type: entity_reference_entity_view
     weight: 0
     label: hidden
     settings:
-      view_mode: full
+      view_mode: default
       link: false
     third_party_settings: {  }
     region: content

@@ -1,0 +1,10 @@
+uuid: 2536082d-b98d-4fa2-987c-b30bee4bc281
+langcode: de
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.inline
+label: Inline
+targetEntityType: paragraph
+cache: true

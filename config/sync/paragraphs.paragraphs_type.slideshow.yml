@@ -1,0 +1,9 @@
+uuid: 0a8f437c-75c9-4e93-92f1-d3bd92e95667
+langcode: de
+status: true
+dependencies: {  }
+id: slideshow
+label: Diaschau
+icon_uuid: null
+description: 'Feld zur Referenzierung mehrerer Bilder.'
+behavior_plugins: {  }

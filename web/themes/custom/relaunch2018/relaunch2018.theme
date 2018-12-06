@@ -76,6 +76,16 @@ function relaunch2018_preprocess_node(array &$variables) {
 }
 
 /**
+ * Implements THEME_preprocess_HOOK().
+ *
+ * @param array $variables
+ */
+function relaunch2018_preprocess_field(array &$variables) {
+  $uuid_service = \Drupal::service('uuid');
+  $variables['uuid'] = $uuid_service->generate();
+}
+
+/**
  * Implements THEME_suggestions_HOOK_alter().
  *
  * @param array $suggestions

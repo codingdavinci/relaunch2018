@@ -6,6 +6,7 @@ dependencies:
     - field.storage.node.field_paragraphs
     - node.type.event
     - paragraphs.paragraphs_type.image
+    - paragraphs.paragraphs_type.slideshow
     - paragraphs.paragraphs_type.text
     - paragraphs.paragraphs_type.textblock_left
     - paragraphs.paragraphs_type.textblock_right
@@ -31,6 +32,7 @@ settings:
       textblock_right: textblock_right
       image: image
       text: text
+      slideshow: slideshow
       video: video
     target_bundles_drag_drop:
       textblock_left:
@@ -48,6 +50,9 @@ settings:
       attributed_image:
         weight: 14
         enabled: false
+      slideshow:
+        enabled: true
+        weight: 15
       attribution:
         weight: 15
         enabled: false
