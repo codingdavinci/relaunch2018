@@ -10,9 +10,36 @@
         margin-bottom: 5rem;
 
         h2 {
+          @include fontStyle(large);
           color: $color-green;
           font-weight: $font-weight-semi-bold;
-          margin-left: 2em;
+        }
+
+        h3 {
+          @include fontStyle(default);
+          text-transform: uppercase;
+        }
+
+        h4 {
+          @include fontStyle(default);
+          color: $color-green;
+          line-height: 1.5;
+          margin: 0;
+        }
+
+        h5 {
+          @include fontStyle(default);
+          color: $color-gray-2;
+          font-weight: $font-weight-normal;
+          line-height: 1.5;
+          margin: 0;
+        }
+
+        h6 {
+          @include fontStyle(default);
+          font-weight: bold;
+          line-height: 1.5;
+          margin: 0;
         }
 
         &.field--name-field-text-intro {
@@ -25,6 +52,22 @@
 
             &.center {
               margin: 0 auto;
+            }
+          }
+        }
+
+        &.field--name-field-winners {
+          h2 {
+            margin-left: 2em;
+          }
+        }
+
+        &.field--name-field-paragraphs {
+          & > .field__item {
+            margin-bottom: 5rem;
+
+            &:last-child {
+              margin-bottom: 0;
             }
           }
         }
@@ -42,6 +85,10 @@
 
           &.media--view-mode-default {
             padding: 0;
+          }
+
+          .media--attribution {
+            @include fontStyle(small);
           }
         }
       }

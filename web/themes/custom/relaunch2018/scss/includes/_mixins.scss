@@ -66,7 +66,19 @@
 
 // TODO: Merge with fontSize()
 @mixin fontStyle($type) {
-  @if $type == 'small' {
+  @if $type == 'large' {
+    font-size: 1.4rem;
+    letter-spacing: .04em;
+
+    @include media-breakpoint-up(md) {
+      font-size: 1.6rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+      font-size: 1.8rem
+    }
+  }
+  @elseif $type == 'small' {
     font-size: $font-size-sm-small;
 
     @include media-breakpoint-up(md) {
