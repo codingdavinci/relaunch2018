@@ -1,0 +1,9 @@
+uuid: 3add2ff3-45a7-4bf8-9913-f90eed64739a
+langcode: de
+status: true
+dependencies: {  }
+id: video
+label: Video
+icon_uuid: null
+description: 'Ein Video-Feld.'
+behavior_plugins: {  }

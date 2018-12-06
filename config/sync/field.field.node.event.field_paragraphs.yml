@@ -9,6 +9,7 @@ dependencies:
     - paragraphs.paragraphs_type.text
     - paragraphs.paragraphs_type.textblock_left
     - paragraphs.paragraphs_type.textblock_right
+    - paragraphs.paragraphs_type.video
   module:
     - entity_reference_revisions
 id: node.event.field_paragraphs
@@ -30,6 +31,7 @@ settings:
       textblock_right: textblock_right
       image: image
       text: text
+      video: video
     target_bundles_drag_drop:
       textblock_left:
         enabled: true
@@ -43,4 +45,31 @@ settings:
       text:
         enabled: true
         weight: -6
+      attributed_image:
+        weight: 14
+        enabled: false
+      attribution:
+        weight: 15
+        enabled: false
+      data_set_event:
+        weight: 16
+        enabled: false
+      filesize:
+        weight: 17
+        enabled: false
+      introtext:
+        weight: 19
+        enabled: false
+      representative:
+        weight: 20
+        enabled: false
+      team_member:
+        weight: 21
+        enabled: false
+      video:
+        enabled: true
+        weight: 25
+      winner:
+        weight: 26
+        enabled: false
 field_type: entity_reference_revisions

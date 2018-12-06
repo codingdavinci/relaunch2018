@@ -37,6 +37,7 @@
         "drupal/select2": "^1.1",
         "drupal/taxonomy_menu": "^3.3",
         "drupal/twig_tweak": "^2.1",
+        "drupal/video_embed_field": "^2.0",
         "drupal/views_data_export": "^1.0",
         "drush/drush": "^9.0.0",
         "npm-asset/fortawesome--fontawesome-free": "^5.5",
