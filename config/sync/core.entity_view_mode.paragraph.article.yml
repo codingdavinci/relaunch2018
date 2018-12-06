@@ -1,0 +1,10 @@
+uuid: 683a4cde-155e-4366-99f4-150ba036a7de
+langcode: de
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.article
+label: Artikel
+targetEntityType: paragraph
+cache: true
