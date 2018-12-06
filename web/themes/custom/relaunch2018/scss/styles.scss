@@ -186,6 +186,87 @@ a {
   }
 }
 
+table {
+  @include border-bottom-radius($border-radius);
+  @include boxShadow;
+  background-color: $color-white;
+  border-collapse: separate;
+  border-spacing: .8em;
+  margin-bottom: 1.5rem;
+  padding-bottom: .8em;
+
+  caption {
+    @include border-top-radius($border-radius);
+    @include boxShadow;
+    background-color: $color-white;
+    caption-side: top;
+    color: $color-main;
+    font-weight: $font-weight-semi-bold;
+    padding-top: 1.2em;
+    position: relative;
+    text-align: center;
+    z-index: -1;
+  }
+
+  tr {
+    td,
+    th {
+      @include fontStyle(small);
+      border-bottom: 1px solid rgba($color-main, .4);
+      padding-bottom: .8em;
+      vertical-align: top;
+
+      &:nth-child(odd) {
+        color: $color-green
+      }
+      &:nth-child(even) {
+        color: $color-gray-1;
+      }
+
+      &:first-child {
+        border-bottom: none;
+      }
+    }
+  }
+
+  thead {
+    font-weight: bold;
+  }
+
+  tbody {
+    @include fontStyle(small);
+
+    tr {
+      &:last-child {
+        td {
+          border-bottom: none;
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &.table--red {
+    background-color: $color-red-3;
+
+    caption {
+      background-color: $color-red-3;
+      color: $color-white;
+    }
+
+    tr {
+      td,
+      th {
+        border-bottom: 1px solid $color-white;
+
+        &:nth-child(odd) {
+          color: $color-darker-green
+        }
+      }
+    }
+  }
+}
+
 figcaption {
   color: $color-gray-1;
   font-size: 1.1rem;
