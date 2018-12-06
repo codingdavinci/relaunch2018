@@ -3,10 +3,10 @@ langcode: de
 status: true
 dependencies:
   config:
-    - field.field.node.event.body
     - field.field.node.event.field_paragraphs
     - field.field.node.event.field_range
     - field.field.node.event.field_team
+    - field.field.node.event.field_text_intro
     - field.field.node.event.field_winners
     - node.type.event
   module:
@@ -23,7 +23,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_paragraphs:
-    weight: 2
+    weight: 3
     label: hidden
     settings:
       view_mode: default
@@ -32,16 +32,25 @@ content:
     type: entity_reference_revisions_entity_view
     region: content
   field_team:
-    weight: 3
+    weight: 4
     label: above
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
+  field_text_intro:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
   field_winners:
     type: entity_reference_revisions_entity_view
-    weight: 4
+    weight: 5
     label: above
     settings:
       view_mode: default
@@ -54,6 +63,5 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
-  body: true
   field_range: true
   langcode: true

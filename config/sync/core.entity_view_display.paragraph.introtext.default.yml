@@ -1,0 +1,31 @@
+uuid: 0a97fed1-0fb4-477d-93e9-a26e4d7df3f0
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.introtext.field_intro_align
+    - field.field.paragraph.introtext.field_text
+    - paragraphs.paragraphs_type.introtext
+  module:
+    - options
+    - text
+id: paragraph.introtext.default
+targetEntityType: paragraph
+bundle: introtext
+mode: default
+content:
+  field_intro_align:
+    type: list_default
+    weight: 1
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_text:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

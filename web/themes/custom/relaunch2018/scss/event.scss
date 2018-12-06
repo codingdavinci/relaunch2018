@@ -15,6 +15,20 @@
           margin-left: 2em;
         }
 
+        &.field--name-field-text-intro {
+          color: $color-deep-teal;
+
+          & > .paragraph {
+            @include media-breakpoint-up(md) {
+              width: 65%;
+            }
+
+            &.center {
+              margin: 0 auto;
+            }
+          }
+        }
+
         .media--type-image {
           &.media--view-mode-full {
             padding: 0;

@@ -1,0 +1,9 @@
+uuid: 1721dcdf-2f84-411b-8545-08c046539093
+langcode: de
+status: true
+dependencies: {  }
+id: introtext
+label: Introtext
+icon_uuid: null
+description: 'Textblock mit Option zur Ausrichtung linksbündig/zentriert.'
+behavior_plugins: {  }

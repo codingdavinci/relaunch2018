@@ -4,24 +4,18 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.event.body
+    - field.field.node.event.field_paragraphs
+    - field.field.node.event.field_range
+    - field.field.node.event.field_team
+    - field.field.node.event.field_winners
     - node.type.event
   module:
-    - text
     - user
 id: node.event.teaser
 targetEntityType: node
 bundle: event
 mode: teaser
 content:
-  body:
-    label: hidden
-    type: text_summary_or_trimmed
-    weight: 101
-    settings:
-      trim_length: 600
-    third_party_settings: {  }
-    region: content
   content_moderation_control:
     weight: -20
     settings: {  }
@@ -33,5 +27,9 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_paragraphs: true
+  field_range: true
   field_region: true
+  field_team: true
+  field_winners: true
   langcode: true

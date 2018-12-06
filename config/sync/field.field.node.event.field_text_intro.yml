@@ -1,0 +1,64 @@
+uuid: a3ccca89-e5a2-4212-947e-3e058eaaaa1c
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_text_intro
+    - node.type.event
+    - paragraphs.paragraphs_type.introtext
+  module:
+    - entity_reference_revisions
+id: node.event.field_text_intro
+field_name: field_text_intro
+entity_type: node
+bundle: event
+label: Text-Intro
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      introtext: introtext
+    target_bundles_drag_drop:
+      introtext:
+        enabled: true
+        weight: 13
+      attributed_image:
+        weight: 14
+        enabled: false
+      attribution:
+        weight: 15
+        enabled: false
+      data_set_event:
+        weight: 16
+        enabled: false
+      filesize:
+        weight: 17
+        enabled: false
+      image:
+        weight: 18
+        enabled: false
+      representative:
+        weight: 19
+        enabled: false
+      team_member:
+        weight: 20
+        enabled: false
+      text:
+        weight: 21
+        enabled: false
+      textblock_left:
+        weight: 22
+        enabled: false
+      textblock_right:
+        weight: 23
+        enabled: false
+      winner:
+        weight: 24
+        enabled: false
+field_type: entity_reference_revisions

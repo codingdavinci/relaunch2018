@@ -1,0 +1,23 @@
+uuid: b15218c9-12bf-480b-8b26-22a0177c726b
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_intro_align
+    - paragraphs.paragraphs_type.introtext
+  module:
+    - options
+id: paragraph.introtext.field_intro_align
+field_name: field_intro_align
+entity_type: paragraph
+bundle: introtext
+label: Ausrichtung
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: center
+default_value_callback: ''
+settings: {  }
+field_type: list_string
