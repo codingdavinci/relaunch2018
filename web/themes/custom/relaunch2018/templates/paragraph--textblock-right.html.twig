@@ -14,9 +14,9 @@
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
     <div class="row">
-      {% if content.field_image %}
+      {% if content.field_medium %}
         <div class="col-md-6">
-          {{ content.field_image }}
+          {{ content.field_medium }}
         </div>
       {% endif %}
       <div class="col-md-6{% if not content.field_image %} offset-md-6{% endif %}">{{ content.field_text }}</div>

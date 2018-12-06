@@ -1,0 +1,19 @@
+uuid: d7888fa1-78e0-4938-98e7-9f2f91c31632
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_caption
+    - media.type.remote_video
+id: media.remote_video.field_caption
+field_name: field_caption
+entity_type: media
+bundle: remote_video
+label: Videounterschrift
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

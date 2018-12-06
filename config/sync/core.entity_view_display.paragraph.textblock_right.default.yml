@@ -3,24 +3,25 @@ langcode: de
 status: true
 dependencies:
   config:
-    - field.field.paragraph.textblock_right.field_image
+    - field.field.paragraph.textblock_right.field_medium
     - field.field.paragraph.textblock_right.field_text
     - paragraphs.paragraphs_type.textblock_right
   module:
+    - entity_reference_revisions
     - text
 id: paragraph.textblock_right.default
 targetEntityType: paragraph
 bundle: textblock_right
 mode: default
 content:
-  field_image:
+  field_medium:
     weight: 1
     label: hidden
     settings:
-      view_mode: full
-      link: false
+      view_mode: default
+      link: ''
     third_party_settings: {  }
-    type: entity_reference_entity_view
+    type: entity_reference_revisions_entity_view
     region: content
   field_text:
     weight: 0

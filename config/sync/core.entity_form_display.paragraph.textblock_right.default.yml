@@ -3,24 +3,25 @@ langcode: de
 status: true
 dependencies:
   config:
-    - field.field.paragraph.textblock_right.field_image
+    - field.field.paragraph.textblock_right.field_medium
     - field.field.paragraph.textblock_right.field_text
     - paragraphs.paragraphs_type.textblock_right
   module:
+    - entity_reference_revisions
     - text
 id: paragraph.textblock_right.default
 targetEntityType: paragraph
 bundle: textblock_right
 mode: default
 content:
-  field_image:
+  field_medium:
     weight: 1
     settings:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: entity_reference_revisions_autocomplete
     region: content
   field_text:
     weight: 0

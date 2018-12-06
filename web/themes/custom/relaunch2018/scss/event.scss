@@ -72,7 +72,25 @@
           }
 
           .paragraph--type--video {
-            @include boxShadow;
+            .field--name-field-video {
+              .media {
+                display: flex;
+                flex-direction: column;
+
+                .field--name-field-media-oembed-video {
+                  width: 100%;
+
+                  iframe {
+                    @include boxShadow;
+                    width: 100%;
+                  }
+                }
+
+                .field--name-field-caption {
+                  @include fontSize(small);
+                }
+              }
+            }
           }
         }
 
