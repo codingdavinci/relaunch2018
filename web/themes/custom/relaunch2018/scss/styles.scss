@@ -122,6 +122,68 @@ a {
   &.curly {
     @include curlyBraces($color-gray-3);
   }
+
+  &.button {
+    @include boxShadow;
+    @include border-radius($border-radius);
+    @include easeAll;
+    color: $color-white;
+    font-weight: $font-weight-semi-bold;
+    padding: .3em 1.4em;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &:active,
+    &:focus {
+      text-decoration: none;
+    }
+
+    &.button--green {
+      background-color: $color-green-lighter;
+
+      &:hover {
+        background-color: rgba($color-green-lighter, .6);
+      }
+    }
+
+    &.button--red {
+      background-color: $color-red;
+
+      &:hover {
+        background-color: rgba($color-green-lighter, .6);
+      }
+    }
+
+    &.button--large {
+      @include fontStyle(large);
+      letter-spacing: .01em;
+    }
+
+    &.button--icon {
+      &:before {
+        @include icon;
+        color: $color-white;
+      }
+
+      &.button--arrow {
+        &:before {
+          content: '\e825';
+          display: inline-block;
+          font-size: .6em;
+          padding-bottom: .3em;
+          vertical-align: middle;
+        }
+      }
+
+      &.button--mail {
+        &:before {
+          content: '\e80b';
+        }
+      }
+    }
+  }
 }
 
 figcaption {
