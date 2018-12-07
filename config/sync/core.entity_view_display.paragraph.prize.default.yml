@@ -1,0 +1,22 @@
+uuid: 153c8338-a781-4e0a-8c50-ab0f405824b2
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.prize.field_text
+    - paragraphs.paragraphs_type.prize
+  module:
+    - text
+id: paragraph.prize.default
+targetEntityType: paragraph
+bundle: prize
+mode: default
+content:
+  field_text:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

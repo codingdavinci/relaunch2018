@@ -1,0 +1,9 @@
+uuid: f96e434d-b1a7-41fb-9578-e85383516d46
+langcode: de
+status: true
+dependencies: {  }
+id: prize
+label: Preis
+icon_uuid: null
+description: 'Abschnitt für einen Preis.'
+behavior_plugins: {  }

@@ -1,0 +1,9 @@
+uuid: 31cdba39-ae5f-43e5-a5c9-3a73aaa6e188
+langcode: de
+status: true
+dependencies: {  }
+id: prizes
+label: Preise
+icon_uuid: null
+description: 'Abschnitt zur Gruppierung von Preisen.'
+behavior_plugins: {  }

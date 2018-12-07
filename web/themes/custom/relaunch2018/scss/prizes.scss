@@ -1,0 +1,52 @@
+@import 'includes/base';
+
+.paragraph--type--prizes {
+  .field--name-field-prizes {
+    .field__label {
+      margin-bottom: 50px;
+    }
+
+    .field__items {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-auto-rows: 1fr;
+      grid-gap: 50px;
+
+      @include media-breakpoint-up(sm) {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      @include media-breakpoint-up(md) {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+
+      & > .field__item {
+        @include border-radius($border-radius);
+        background-color: $color-prize-2;
+        color: $color-white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 1rem;
+
+        .prize--number {
+          color: $color-prize-1;
+          font-size: 3rem;
+          font-weight: $font-weight-bold;
+          line-height: 1;
+          margin-bottom: 2rem;
+        }
+
+        .paragraph--type--prize {
+          .field--name-field-text {
+            p {
+              &:last-child {
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

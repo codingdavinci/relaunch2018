@@ -1,0 +1,26 @@
+uuid: 0676a8c1-3d41-4f04-9ca0-781196eb0a3d
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.prize.field_text
+    - paragraphs.paragraphs_type.prize
+  module:
+    - text
+id: paragraph.prize.default
+targetEntityType: paragraph
+bundle: prize
+mode: default
+content:
+  field_text:
+    weight: 0
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

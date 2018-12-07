@@ -1,0 +1,36 @@
+uuid: 85b28f4d-07e5-4ade-a0f0-58d9d1d6ffd7
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.prizes.field_prizes
+    - paragraphs.paragraphs_type.prizes
+  module:
+    - paragraphs
+id: paragraph.prizes.default
+targetEntityType: paragraph
+bundle: prizes
+mode: default
+content:
+  field_prizes:
+    type: paragraphs
+    weight: 0
+    settings:
+      title: Seitenabschnitt
+      title_plural: Seitenabschnitte
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true
