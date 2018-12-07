@@ -1,0 +1,23 @@
+uuid: 435828ac-917f-4383-aa58-f840d3c3c650
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.background_colors.field_hex_code
+    - taxonomy.vocabulary.background_colors
+id: taxonomy_term.background_colors.default
+targetEntityType: taxonomy_term
+bundle: background_colors
+mode: default
+content:
+  field_hex_code:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  description: true
+  langcode: true

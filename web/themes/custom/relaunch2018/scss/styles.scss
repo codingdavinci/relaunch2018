@@ -3,16 +3,12 @@
 @import '../lib/bootstrap/scss/bootstrap-grid';
 
 body {
+  @include fontStyle(default);
   color: $color-gray-3;
   font-family: $font-family-base;
-  font-size: 1.1rem;
   font-weight: 300;
   letter-spacing: .01em;
   line-height: 1.4;
-
-  @include media-breakpoint-up(md) {
-    font-size: 1.3rem;
-  }
 }
 
 h1 {

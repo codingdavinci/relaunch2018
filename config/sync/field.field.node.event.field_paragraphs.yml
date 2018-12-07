@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_paragraphs
     - node.type.event
+    - paragraphs.paragraphs_type.box
     - paragraphs.paragraphs_type.image
     - paragraphs.paragraphs_type.slideshow
     - paragraphs.paragraphs_type.text
@@ -33,6 +34,7 @@ settings:
       image: image
       text: text
       slideshow: slideshow
+      box: box
       video: video
     target_bundles_drag_drop:
       textblock_left:
@@ -50,18 +52,21 @@ settings:
       attributed_image:
         weight: 14
         enabled: false
-      slideshow:
-        enabled: true
-        weight: 15
       attribution:
         weight: 15
         enabled: false
+      slideshow:
+        enabled: true
+        weight: 15
       data_set_event:
         weight: 16
         enabled: false
       filesize:
         weight: 17
         enabled: false
+      box:
+        enabled: true
+        weight: 18
       introtext:
         weight: 19
         enabled: false

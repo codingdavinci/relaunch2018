@@ -1,0 +1,19 @@
+uuid: cd5b5f31-df80-4a86-935d-5fc06b2ab236
+langcode: de
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+id: paragraph.field_footer
+field_name: field_footer
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

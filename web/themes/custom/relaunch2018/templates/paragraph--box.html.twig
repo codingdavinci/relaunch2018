@@ -1,0 +1,36 @@
+{#
+/**
+ * @see paragraph.html.twig
+ */
+#}
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished',
+  ]
+%}
+{% set color = false %}
+{% if content.field_color['#items'] is not empty %}
+  {% set color = content.field_color[0]['#taxonomy_term'].field_hex_code[0].value %}
+{% endif %}
+{% block paragraph %}
+  <div{{ attributes.addClass(classes) }}>
+    <div class="row">
+      <div class="col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-4 offset-lg-4">
+        {% block content %}
+          <div class="card"{% if color %} style="background-color: #{{ color }};"{% endif %}>
+            {% if content.field_image['#items'] is not empty %}
+              <div class="card-img-top">{{ content.field_image }}</div>
+            {% endif %}
+            <div class="card-body">{{ content.field_text }}</div>
+            {% if content.field_footer['#items'] is not empty %}
+              <div class="card-footer"{% if color %} style="background-color: #{{ color }};"{% endif %}>{{ content.field_footer }}</div>
+            {% endif %}
+          </div>
+        {% endblock %}
+      </div>
+    </div>
+  </div>
+{% endblock paragraph %}

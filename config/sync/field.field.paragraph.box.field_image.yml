@@ -1,0 +1,28 @@
+uuid: 4b1c57fb-258e-4d46-861d-5224c302b02f
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image
+    - media.type.image
+    - paragraphs.paragraphs_type.box
+id: paragraph.box.field_image
+field_name: field_image
+entity_type: paragraph
+bundle: box
+label: Kopfbild
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

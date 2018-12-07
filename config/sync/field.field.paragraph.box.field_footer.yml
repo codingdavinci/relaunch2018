@@ -1,0 +1,21 @@
+uuid: ae367aeb-f56e-48d0-96f7-1184e8774861
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_footer
+    - paragraphs.paragraphs_type.box
+  module:
+    - text
+id: paragraph.box.field_footer
+field_name: field_footer
+entity_type: paragraph
+bundle: box
+label: Fußzeile
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

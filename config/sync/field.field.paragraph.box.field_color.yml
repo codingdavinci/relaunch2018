@@ -1,0 +1,33 @@
+uuid: e4e600ba-4756-4a21-8578-23d55d828267
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_color
+    - paragraphs.paragraphs_type.box
+    - taxonomy.vocabulary.background_colors
+  content:
+    - 'taxonomy_term:background_colors:c3b936ab-3173-41b7-b1a5-ee1ddb9c0eb2'
+id: paragraph.box.field_color
+field_name: field_color
+entity_type: paragraph
+bundle: box
+label: Farbe
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: c3b936ab-3173-41b7-b1a5-ee1ddb9c0eb2
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      background_colors: background_colors
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

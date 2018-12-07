@@ -1,0 +1,9 @@
+uuid: 690fb9d9-7cda-45b5-a9fa-440fea839570
+langcode: de
+status: true
+dependencies: {  }
+id: box
+label: Box
+icon_uuid: null
+description: 'Gruppiert ein Textfeld mit einem optionalem Kopfbild und einem optionalen Fußbereich.'
+behavior_plugins: {  }

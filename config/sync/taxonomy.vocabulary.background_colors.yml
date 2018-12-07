@@ -1,0 +1,9 @@
+uuid: 1a5ce289-fb93-4253-8a3a-0d3b91e929c8
+langcode: de
+status: true
+dependencies: {  }
+name: Hintergrundfarben
+vid: background_colors
+description: 'Für Hintergründe zur Verfügung stehende Farben.'
+hierarchy: 0
+weight: 0
