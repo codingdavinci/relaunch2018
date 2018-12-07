@@ -1,0 +1,24 @@
+uuid: c2a37849-01a0-49ab-b197-49cf2d0e6a1d
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.box_group.field_boxes
+    - paragraphs.paragraphs_type.box_group
+  module:
+    - entity_reference_revisions
+id: paragraph.box_group.default
+targetEntityType: paragraph
+bundle: box_group
+mode: default
+content:
+  field_boxes:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: inline
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

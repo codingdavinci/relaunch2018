@@ -1,0 +1,9 @@
+uuid: 2e54cb1a-b432-459e-8fb0-ce03076efd8a
+langcode: de
+status: true
+dependencies: {  }
+id: box_group
+label: Box-Gruppe
+icon_uuid: null
+description: 'Abschnitt, der mehrere einzelne Boxen in einem Container gruppiert.'
+behavior_plugins: {  }

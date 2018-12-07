@@ -1,0 +1,76 @@
+uuid: bc5ed7cf-2acf-46a2-bf77-ebc58a776902
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_boxes
+    - paragraphs.paragraphs_type.box
+    - paragraphs.paragraphs_type.box_group
+  module:
+    - entity_reference_revisions
+id: paragraph.box_group.field_boxes
+field_name: field_boxes
+entity_type: paragraph
+bundle: box_group
+label: Boxen
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      box: box
+    target_bundles_drag_drop:
+      box_group:
+        weight: 17
+        enabled: false
+      attributed_image:
+        weight: 18
+        enabled: false
+      attribution:
+        weight: 19
+        enabled: false
+      box:
+        enabled: true
+        weight: 20
+      data_set_event:
+        weight: 21
+        enabled: false
+      filesize:
+        weight: 22
+        enabled: false
+      image:
+        weight: 23
+        enabled: false
+      introtext:
+        weight: 24
+        enabled: false
+      representative:
+        weight: 25
+        enabled: false
+      slideshow:
+        weight: 26
+        enabled: false
+      team_member:
+        weight: 27
+        enabled: false
+      text:
+        weight: 28
+        enabled: false
+      textblock_left:
+        weight: 29
+        enabled: false
+      textblock_right:
+        weight: 30
+        enabled: false
+      video:
+        weight: 31
+        enabled: false
+      winner:
+        weight: 32
+        enabled: false
+field_type: entity_reference_revisions

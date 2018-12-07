@@ -6,6 +6,7 @@ dependencies:
     - field.storage.node.field_paragraphs
     - node.type.event
     - paragraphs.paragraphs_type.box
+    - paragraphs.paragraphs_type.box_group
     - paragraphs.paragraphs_type.image
     - paragraphs.paragraphs_type.slideshow
     - paragraphs.paragraphs_type.text
@@ -34,6 +35,7 @@ settings:
       image: image
       text: text
       slideshow: slideshow
+      box_group: box_group
       box: box
       video: video
     target_bundles_drag_drop:
@@ -61,6 +63,9 @@ settings:
       data_set_event:
         weight: 16
         enabled: false
+      box_group:
+        enabled: true
+        weight: 17
       filesize:
         weight: 17
         enabled: false

@@ -1,0 +1,51 @@
+uuid: 37fab8bf-b2e3-4c4a-8cc1-df50582976ca
+langcode: de
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.inline
+    - field.field.paragraph.box.field_color
+    - field.field.paragraph.box.field_footer
+    - field.field.paragraph.box.field_image
+    - field.field.paragraph.box.field_text
+    - paragraphs.paragraphs_type.box
+  module:
+    - text
+id: paragraph.box.inline
+targetEntityType: paragraph
+bundle: box
+mode: inline
+content:
+  field_color:
+    weight: 3
+    label: hidden
+    settings:
+      link: false
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_footer:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: preview
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_text:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

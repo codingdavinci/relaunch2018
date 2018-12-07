@@ -18,6 +18,7 @@ global-js:
   dependencies:
     - core/jquery
     - relaunch2018/bootstrap-js
+    - relaunch2018/boxes
     - relaunch2018/carousel
     - relaunch2018/jquery-easing
 
@@ -28,6 +29,14 @@ bootstrap-js:
   dependencies:
     - core/jquery
     - relaunch2018/popper-js
+
+boxes:
+  version: 1.x
+  js:
+    js/boxes.js: {}
+  depedencies:
+    - core/jquery
+    - relaunch2018/hammerjs
 
 carousel:
   version: 1.x
