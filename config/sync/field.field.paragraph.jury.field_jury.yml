@@ -1,0 +1,82 @@
+uuid: 17c5f36f-7686-4d46-8025-79aaece63bef
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_jury
+    - paragraphs.paragraphs_type.jury
+    - paragraphs.paragraphs_type.jury_member
+  module:
+    - entity_reference_revisions
+id: paragraph.jury.field_jury
+field_name: field_jury
+entity_type: paragraph
+bundle: jury
+label: Jury
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      jury_member: jury_member
+    target_bundles_drag_drop:
+      jury:
+        weight: 19
+        enabled: false
+      attributed_image:
+        weight: 20
+        enabled: false
+      attribution:
+        weight: 21
+        enabled: false
+      box:
+        weight: 22
+        enabled: false
+      box_group:
+        weight: 23
+        enabled: false
+      data_set_event:
+        weight: 24
+        enabled: false
+      filesize:
+        weight: 25
+        enabled: false
+      image:
+        weight: 26
+        enabled: false
+      introtext:
+        weight: 27
+        enabled: false
+      jury_member:
+        enabled: true
+        weight: 28
+      representative:
+        weight: 29
+        enabled: false
+      slideshow:
+        weight: 30
+        enabled: false
+      team_member:
+        weight: 31
+        enabled: false
+      text:
+        weight: 32
+        enabled: false
+      textblock_left:
+        weight: 33
+        enabled: false
+      textblock_right:
+        weight: 34
+        enabled: false
+      video:
+        weight: 35
+        enabled: false
+      winner:
+        weight: 36
+        enabled: false
+field_type: entity_reference_revisions

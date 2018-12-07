@@ -1,0 +1,140 @@
+@import 'includes/base';
+
+.paragraph--type--jury {
+  .field--name-field-jury {
+    & > .row {
+      & > div {
+        margin-bottom: 2rem;
+
+        .paragraph--type--jury-member {
+          position: relative;
+
+          & > .field--name-field-image {
+            @include boxShadow;
+            position: absolute;
+            top: 1.5rem;
+            width: 66%;
+
+            .media--type-image {
+              .field--name-field-media-image {
+                .field__item {
+                  img {
+                    mix-blend-mode: luminosity;
+                  }
+                }
+              }
+            }
+          }
+
+          .jury--member--info--wrapper {
+            @include fontSize(small);
+            bottom: -1rem;
+            right: 0;
+            max-width: 90%;
+
+            .field--name-field-image {
+              visibility: hidden;
+              width: 66%;
+            }
+
+            .jury--member--info {
+              @include border-radius($border-radius);
+              color: $color-gray-2;
+              float: right;
+              margin-top: .2rem;
+              padding: 4rem 1rem .8rem 1rem;
+              width: 90%;
+
+              .field {
+                margin-bottom: .5rem;
+
+                &:last-child {
+                  margin-bottom: 0;
+                }
+
+                &.field--name-field-link {
+                  &:before {
+                    @include icon;
+                    content: '\e825';
+                    display: table-cell;
+                    font-size: .6em;
+                    padding: .7em .4em 0 0;
+                    vertical-align: top;
+                  }
+
+                  a {
+                    display: table-cell;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .field--name-field-image {
+          .field__item {
+            background-color: $color-white;
+          }
+        }
+        .jury--member--info {
+          background-color: $color-white;
+        }
+
+        &.color-scheme-1 {
+          .field--name-field-image {
+            .field__item {
+              background-color: $color-scheme-1-1;
+            }
+          }
+          .jury--member--info {
+            background-color: $color-scheme-1-2;
+          }
+        }
+
+        &.color-scheme-2 {
+          .field--name-field-image {
+            .field__item {
+              background-color: $color-scheme-2-1;
+            }
+          }
+          .jury--member--info {
+            background-color: $color-scheme-2-2;
+          }
+        }
+
+        &.color-scheme-3 {
+          .field--name-field-image {
+            .field__item {
+              background-color: $color-scheme-3-1;
+            }
+          }
+          .jury--member--info {
+            background-color: $color-scheme-3-2;
+          }
+        }
+
+        &.color-scheme-4 {
+          .field--name-field-image {
+            .field__item {
+              background-color: $color-scheme-4-1;
+            }
+          }
+          .jury--member--info {
+            background-color: $color-scheme-4-2;
+          }
+        }
+
+        &.color-scheme-5 {
+          .field--name-field-image {
+            .field__item {
+              background-color: $color-scheme-5-1;
+            }
+          }
+          .jury--member--info {
+            background-color: $color-scheme-5-2;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+uuid: 25a4a649-cac2-4bd8-9d89-cc6cc4db60a2
+langcode: de
+status: true
+dependencies:
+  module:
+    - media
+id: media.jury
+label: Jury
+targetEntityType: media
+cache: true

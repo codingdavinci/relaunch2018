@@ -1,0 +1,19 @@
+uuid: 4512ae75-69bb-4be9-9b65-b5f739ae32a6
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_function
+    - paragraphs.paragraphs_type.jury_member
+id: paragraph.jury_member.field_function
+field_name: field_function
+entity_type: paragraph
+bundle: jury_member
+label: Tätigkeit
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

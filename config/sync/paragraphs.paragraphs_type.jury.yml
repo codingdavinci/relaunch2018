@@ -1,0 +1,9 @@
+uuid: 84a17a30-2a4c-4193-86d3-5fa773f7f057
+langcode: de
+status: true
+dependencies: {  }
+id: jury
+label: Jury
+icon_uuid: null
+description: 'Abschnitt, dem Jury-Mitglieder hinzugefügt werden können.'
+behavior_plugins: {  }

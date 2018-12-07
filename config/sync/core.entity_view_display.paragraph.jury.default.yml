@@ -1,0 +1,24 @@
+uuid: a0524848-8c59-428d-8bc4-6ab4ef07188e
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.jury.field_jury
+    - paragraphs.paragraphs_type.jury
+  module:
+    - entity_reference_revisions
+id: paragraph.jury.default
+targetEntityType: paragraph
+bundle: jury
+mode: default
+content:
+  field_jury:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

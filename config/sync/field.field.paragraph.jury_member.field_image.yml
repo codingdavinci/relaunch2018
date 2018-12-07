@@ -1,0 +1,28 @@
+uuid: 698032c1-a929-4b25-becf-ee5e47a1c6aa
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image
+    - media.type.image
+    - paragraphs.paragraphs_type.jury_member
+id: paragraph.jury_member.field_image
+field_name: field_image
+entity_type: paragraph
+bundle: jury_member
+label: Foto
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

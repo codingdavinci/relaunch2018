@@ -1,0 +1,9 @@
+uuid: a6d64096-d433-40b5-90f2-b92e93dad49f
+langcode: de
+status: true
+dependencies: {  }
+id: jury_member
+label: Jury-Mitglied
+icon_uuid: null
+description: 'Angaben zu einem Jury-Mitglied.'
+behavior_plugins: {  }

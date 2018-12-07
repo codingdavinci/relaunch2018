@@ -1,0 +1,61 @@
+uuid: 7d750277-a53d-427a-ae32-379245e7be91
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.jury_member.field_color
+    - field.field.paragraph.jury_member.field_function
+    - field.field.paragraph.jury_member.field_image
+    - field.field.paragraph.jury_member.field_link
+    - field.field.paragraph.jury_member.field_name
+    - paragraphs.paragraphs_type.jury_member
+  module:
+    - link
+id: paragraph.jury_member.default
+targetEntityType: paragraph
+bundle: jury_member
+mode: default
+content:
+  field_color:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_function:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_image:
+    weight: 4
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_link:
+    weight: 2
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_name:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

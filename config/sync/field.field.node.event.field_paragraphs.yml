@@ -8,6 +8,7 @@ dependencies:
     - paragraphs.paragraphs_type.box
     - paragraphs.paragraphs_type.box_group
     - paragraphs.paragraphs_type.image
+    - paragraphs.paragraphs_type.jury
     - paragraphs.paragraphs_type.slideshow
     - paragraphs.paragraphs_type.text
     - paragraphs.paragraphs_type.textblock_left
@@ -37,6 +38,7 @@ settings:
       slideshow: slideshow
       box_group: box_group
       box: box
+      jury: jury
       video: video
     target_bundles_drag_drop:
       textblock_left:
@@ -72,6 +74,9 @@ settings:
       box:
         enabled: true
         weight: 18
+      jury:
+        enabled: true
+        weight: 19
       introtext:
         weight: 19
         enabled: false
@@ -86,5 +91,8 @@ settings:
         weight: 25
       winner:
         weight: 26
+        enabled: false
+      jury_member:
+        weight: 28
         enabled: false
 field_type: entity_reference_revisions

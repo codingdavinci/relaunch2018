@@ -1,0 +1,29 @@
+uuid: c3e28dd6-a86b-4b07-bccb-912e32ece00e
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_color
+    - paragraphs.paragraphs_type.jury_member
+    - taxonomy.vocabulary.background_colors
+id: paragraph.jury_member.field_color
+field_name: field_color
+entity_type: paragraph
+bundle: jury_member
+label: Hintergrundfarbe
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      background_colors: background_colors
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
