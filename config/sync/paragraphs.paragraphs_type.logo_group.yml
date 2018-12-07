@@ -1,0 +1,9 @@
+uuid: 2c8d4bcb-f984-466b-9b3f-16688b53602b
+langcode: de
+status: true
+dependencies: {  }
+id: logo_group
+label: Logo-Gruppe
+icon_uuid: null
+description: 'Abschnitt zum Hochladen von Logos.'
+behavior_plugins: {  }

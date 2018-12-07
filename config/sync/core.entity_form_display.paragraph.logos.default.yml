@@ -1,0 +1,36 @@
+uuid: a483d8d5-2cd3-48c4-aef2-155bd8f19e75
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.logos.field_logo_groups
+    - paragraphs.paragraphs_type.logos
+  module:
+    - paragraphs
+id: paragraph.logos.default
+targetEntityType: paragraph
+bundle: logos
+mode: default
+content:
+  field_logo_groups:
+    type: paragraphs
+    weight: 0
+    settings:
+      title: Seitenabschnitt
+      title_plural: Seitenabschnitte
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

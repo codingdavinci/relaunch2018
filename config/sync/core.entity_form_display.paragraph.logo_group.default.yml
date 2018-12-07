@@ -1,0 +1,45 @@
+uuid: 788a9f13-6527-498b-9bce-bef91db40015
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.logo_group.field_group_name
+    - field.field.paragraph.logo_group.field_logos
+    - paragraphs.paragraphs_type.logo_group
+  module:
+    - paragraphs
+id: paragraph.logo_group.default
+targetEntityType: paragraph
+bundle: logo_group
+mode: default
+content:
+  field_group_name:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_logos:
+    type: paragraphs
+    weight: 1
+    settings:
+      title: Seitenabschnitt
+      title_plural: Seitenabschnitte
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

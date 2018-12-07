@@ -1,0 +1,9 @@
+uuid: ac8286da-fd40-4e45-a969-0b8fdf755973
+langcode: de
+status: true
+dependencies: {  }
+id: logos
+label: Logos
+icon_uuid: null
+description: 'Abschnitt für Logo-Gruppen.'
+behavior_plugins: {  }

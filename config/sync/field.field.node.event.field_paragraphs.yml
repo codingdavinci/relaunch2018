@@ -9,6 +9,7 @@ dependencies:
     - paragraphs.paragraphs_type.box_group
     - paragraphs.paragraphs_type.image
     - paragraphs.paragraphs_type.jury
+    - paragraphs.paragraphs_type.logos
     - paragraphs.paragraphs_type.prizes
     - paragraphs.paragraphs_type.slideshow
     - paragraphs.paragraphs_type.text
@@ -41,6 +42,7 @@ settings:
       box: box
       jury: jury
       prizes: prizes
+      logos: logos
       video: video
     target_bundles_drag_drop:
       textblock_left:
@@ -91,6 +93,12 @@ settings:
       prizes:
         enabled: true
         weight: 21
+      logo:
+        weight: 23
+        enabled: false
+      logos:
+        enabled: true
+        weight: 24
       video:
         enabled: true
         weight: 25
@@ -102,5 +110,8 @@ settings:
         enabled: false
       prize:
         weight: 32
+        enabled: false
+      logo_group:
+        weight: 34
         enabled: false
 field_type: entity_reference_revisions

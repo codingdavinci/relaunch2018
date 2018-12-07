@@ -1,0 +1,9 @@
+uuid: cccf1d8b-c315-4801-a927-5a73dccc2591
+langcode: de
+status: true
+dependencies: {  }
+id: logo
+label: Logo
+icon_uuid: null
+description: 'Abschnitt für ein Logo mit Link.'
+behavior_plugins: {  }

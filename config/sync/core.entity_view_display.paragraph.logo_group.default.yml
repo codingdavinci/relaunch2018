@@ -1,0 +1,33 @@
+uuid: 672c6a04-6822-4184-84ba-b76930bdf78a
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.logo_group.field_group_name
+    - field.field.paragraph.logo_group.field_logos
+    - paragraphs.paragraphs_type.logo_group
+  module:
+    - entity_reference_revisions
+id: paragraph.logo_group.default
+targetEntityType: paragraph
+bundle: logo_group
+mode: default
+content:
+  field_group_name:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_logos:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

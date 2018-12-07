@@ -1,0 +1,94 @@
+uuid: 2b3e5d1b-24df-4d61-8829-102d8f01d79b
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_logos
+    - paragraphs.paragraphs_type.logo
+    - paragraphs.paragraphs_type.logo_group
+  module:
+    - entity_reference_revisions
+id: paragraph.logo_group.field_logos
+field_name: field_logos
+entity_type: paragraph
+bundle: logo_group
+label: Logos
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      logo: logo
+    target_bundles_drag_drop:
+      logo:
+        enabled: true
+        weight: 23
+      attributed_image:
+        weight: 24
+        enabled: false
+      attribution:
+        weight: 25
+        enabled: false
+      box:
+        weight: 26
+        enabled: false
+      box_group:
+        weight: 27
+        enabled: false
+      data_set_event:
+        weight: 28
+        enabled: false
+      filesize:
+        weight: 29
+        enabled: false
+      image:
+        weight: 30
+        enabled: false
+      introtext:
+        weight: 31
+        enabled: false
+      jury:
+        weight: 32
+        enabled: false
+      jury_member:
+        weight: 33
+        enabled: false
+      logo_group:
+        weight: 34
+        enabled: false
+      prize:
+        weight: 35
+        enabled: false
+      prizes:
+        weight: 36
+        enabled: false
+      representative:
+        weight: 37
+        enabled: false
+      slideshow:
+        weight: 38
+        enabled: false
+      team_member:
+        weight: 39
+        enabled: false
+      text:
+        weight: 40
+        enabled: false
+      textblock_left:
+        weight: 41
+        enabled: false
+      textblock_right:
+        weight: 42
+        enabled: false
+      video:
+        weight: 43
+        enabled: false
+      winner:
+        weight: 44
+        enabled: false
+field_type: entity_reference_revisions
