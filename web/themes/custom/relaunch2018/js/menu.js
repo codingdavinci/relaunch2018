@@ -33,7 +33,7 @@
       }
     });
 
-    (new Hammer(this.$menuContainer.get(0))).on('panleft', function() {
+    (new Hammer(this.$mainMenu.find('.menu').get(0))).on('swipeleft', function(e) {
       self._changeState($context);
     });
 
