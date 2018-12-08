@@ -1,0 +1,31 @@
+uuid: 406c50e0-8005-448a-b635-3b79f6d9df75
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:extended_page_header:9a45b2b4-586f-47fc-ad90-c1c5e889b738'
+  module:
+    - block_content
+    - system
+  theme:
+    - relaunch2018
+id: extended_header_presse
+theme: relaunch2018
+region: header
+weight: 0
+provider: null
+plugin: 'block_content:9a45b2b4-586f-47fc-ad90-c1c5e889b738'
+settings:
+  id: 'block_content:9a45b2b4-586f-47fc-ad90-c1c5e889b738'
+  label: 'Erweiterter Seitenkopf: Presse'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /presse
+    negate: false
+    context_mapping: {  }

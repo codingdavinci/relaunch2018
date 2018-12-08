@@ -1,0 +1,21 @@
+{#
+/**
+ * @see views-view.html.twig
+ */
+#}
+{% if title %}
+  <h3>{{ title }}</h3>
+{% endif %}
+<div class="card-columns">
+  {% for row in rows %}
+    {%
+      set row_classes = [
+        default_row_class ? 'views-row',
+        'card',
+      ]
+    %}
+    <div{{ row.attributes.addClass(row_classes) }}>
+      {{- row.content -}}
+    </div>
+  {% endfor %}
+</div>

@@ -4,6 +4,10 @@
   font-weight: 300;
   margin-bottom: $content-margin-bottom;
 
+  h2 {
+    color: $color-deep-teal;
+  }
+
   .view-content {
     .card-columns {
       column-count: 1;
@@ -24,13 +28,28 @@
       }
     }
 
-    h2 {
-      color: $color-deep-teal;
-      margin-bottom: 1rem;
-    }
-
     p {
       margin-bottom: 0;
+    }
+  }
+
+  .attachment-after {
+    .view-press-kits {
+      margin-top: 5rem;
+
+      .item-list {
+        margin-bottom: 4rem;
+      }
+
+      ul {
+        list-style-type: none;
+      }
+
+      .views-field-field-date {
+        @include media-breakpoint-up(sm) {
+          text-align: right;
+        }
+      }
     }
   }
 }
