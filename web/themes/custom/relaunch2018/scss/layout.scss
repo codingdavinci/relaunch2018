@@ -251,6 +251,7 @@ main {
 
 .layout-container {
   overflow-x: hidden;
+  position: relative;
 
   footer {
     background-color: $color-main;

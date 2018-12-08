@@ -5,6 +5,7 @@
   font-family: $font-family-sans-serif;
   font-size: 1.6rem;
   font-weight: 500;
+  position: relative;
   user-select: none;
 
   @include media-breakpoint-up(sm) {

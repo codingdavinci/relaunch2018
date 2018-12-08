@@ -9,6 +9,8 @@
     this.$mainMenu = $context.find('.menu--main');
     this.$subMenu = $context.find('.menu--main--submenu');
 
+    this._setBurgerPosition();
+
     this.$burger.on('click', function() {
       self._changeState($context);
     });
@@ -101,6 +103,20 @@
           $parent.offset().top - this.$mainMenu.offset().top + 'px'
         );
       }
+    },
+
+    /**
+     * Shifts the burger position if the admin toolbar is present.
+     */
+    _setBurgerPosition: function() {
+      if (!$('body').hasClass('toolbar-horizontal')) {
+        return;
+      }
+
+      this.$burger
+        .css('position', 'absolute')
+        .css('top', this.$burger.position().top + this.$burger.offset().top)
+        .css('position', 'fixed');
     }
 
   });
