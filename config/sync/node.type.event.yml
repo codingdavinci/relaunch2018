@@ -8,10 +8,10 @@ third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
-name: Veranstaltung
+name: Event
 type: event
 description: 'Ein regionaler Coding-Da-Vinci-Event.'
 help: ''
 new_revision: true
-preview_mode: 1
+preview_mode: 0
 display_submitted: false

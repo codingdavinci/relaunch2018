@@ -12,7 +12,7 @@ field_name: field_range
 entity_type: node
 bundle: event
 label: Zeitspanne
-description: 'Start- und Enddatum des Events.'
+description: ''
 required: true
 translatable: false
 default_value: {  }

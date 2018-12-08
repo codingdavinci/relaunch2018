@@ -4,11 +4,6 @@
 #node-project-form,
 #node-data-set-edit-form,
 #node-project-edit-form {
-
-  .cke_contents {
-    padding: .5rem;
-  }
-
   .layout-region-node-main {
 
     .description,
@@ -481,5 +476,34 @@
       display: none;
     }
   }
+}
 
+#node-event-form,
+#node-event-edit-form {
+  .layout-region-node-main {
+    & > .form-wrapper {
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+.paragraph-type--winner {
+  .paragraph-top {
+    .paragraph-type-label {
+      display: none;
+    }
+  }
+}
+
+.field--name-field-boxes,
+.field--name-field-jury,
+.field--name-field-logos,
+.field--name-field-paragraphs,
+.field--name-field-prizes,
+.field--name-field-winners {
+  & > div {
+    & > .label {
+      display: none;
+    }
+  }
 }

@@ -3,7 +3,6 @@ langcode: de
 status: true
 dependencies:
   config:
-    - field.field.paragraph.jury_member.field_color
     - field.field.paragraph.jury_member.field_function
     - field.field.paragraph.jury_member.field_image
     - field.field.paragraph.jury_member.field_link
@@ -16,12 +15,6 @@ targetEntityType: paragraph
 bundle: jury_member
 mode: default
 content:
-  field_color:
-    weight: 3
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
   field_function:
     weight: 1
     settings:

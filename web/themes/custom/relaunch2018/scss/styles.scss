@@ -9,6 +9,10 @@ body {
   font-weight: 300;
   letter-spacing: .01em;
   line-height: 1.4;
+
+  &.cke_editable {
+    padding: .5rem;
+  }
 }
 
 h1 {
