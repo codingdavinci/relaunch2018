@@ -65,6 +65,16 @@
                   a {
                     display: table-cell;
                   }
+
+                  @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+                    &:before {
+                      display: inline-block;
+                    }
+
+                    a {
+                      display: inline;
+                    }
+                  }
                 }
               }
             }

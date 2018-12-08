@@ -47,6 +47,27 @@
                 }
               }
             }
+
+            @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+              display: inline-block;
+              width: 100%;
+
+              @include media-breakpoint-up(sm) {
+                width: 50%;
+              }
+
+              @include media-breakpoint-up(md) {
+                width: 50%;
+              }
+
+              @include media-breakpoint-up(lg) {
+                width: 33%;
+              }
+
+              @include media-breakpoint-up(xl) {
+                width: 25%;
+              }
+            }
           }
         }
       }

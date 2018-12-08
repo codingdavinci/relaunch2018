@@ -29,7 +29,11 @@
     margin-bottom: 1em;
     text-align: right;
 
-    & > a {
+    @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+      display: none;
+    }
+
+      & > a {
       &.inactive {
         opacity: .2;
       }
@@ -76,6 +80,33 @@
 
     @include media-breakpoint-up(xl) {
       width: 25%;
+    }
+
+    @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+      width: 100%;
+
+      & > .field__item {
+        display: inline-block;
+        padding: 1rem;
+        vertical-align: top;
+        width: 100%;
+
+        @include media-breakpoint-up(sm) {
+          width: 50%;
+        }
+
+        @include media-breakpoint-up(md) {
+          width: 50%;
+        }
+
+        @include media-breakpoint-up(lg) {
+          width: 33%;
+        }
+
+        @include media-breakpoint-up(xl) {
+          width: 25%;
+        }
+      }
     }
 
     .paragraph--type--box {

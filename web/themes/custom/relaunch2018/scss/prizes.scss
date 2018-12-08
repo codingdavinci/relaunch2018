@@ -21,27 +21,36 @@
       }
 
       & > .field__item {
-        @include border-radius($border-radius);
-        background-color: $color-prize-2;
-        color: $color-white;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding: 1rem;
-
-        .prize--number {
-          color: $color-prize-1;
-          font-size: 3rem;
-          font-weight: $font-weight-bold;
-          line-height: 1;
-          margin-bottom: 2rem;
+        @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+          display: inline-block;
+          padding: 1rem;
+          width: 50%;
         }
 
-        .paragraph--type--prize {
-          .field--name-field-text {
-            p {
-              &:last-child {
-                margin-bottom: 0;
+        .prize--info {
+          @include border-radius($border-radius);
+          background-color: $color-prize-2;
+          color: $color-white;
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+          justify-content: space-between;
+          padding: 1rem;
+
+          .prize--number {
+            color: $color-prize-1;
+            font-size: 3rem;
+            font-weight: $font-weight-bold;
+            line-height: 1;
+            margin-bottom: 2rem;
+          }
+
+          .paragraph--type--prize {
+            .field--name-field-text {
+              p {
+                &:last-child {
+                  margin-bottom: 0;
+                }
               }
             }
           }
