@@ -186,7 +186,8 @@ a {
   }
 }
 
-table {
+table.table--red,
+table.table--white {
   @include border-bottom-radius($border-radius);
   @include boxShadow;
   background-color: $color-white;

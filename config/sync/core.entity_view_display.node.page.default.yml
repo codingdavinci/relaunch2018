@@ -3,11 +3,11 @@ langcode: de
 status: true
 dependencies:
   config:
-    - field.field.node.page.body
     - field.field.node.page.field_inline_images
+    - field.field.node.page.field_paragraphs
     - node.type.page
   module:
-    - text
+    - entity_reference_revisions
     - user
 _core:
   default_config_hash: g1S3_GLaxq4l3I9RIca5Mlz02MxI2KmOquZpHw59akM
@@ -16,13 +16,15 @@ targetEntityType: node
 bundle: page
 mode: default
 content:
-  body:
-    label: hidden
-    type: text_default
-    weight: 0
-    region: content
-    settings: {  }
+  field_paragraphs:
+    weight: 2
+    label: above
+    settings:
+      view_mode: default
+      link: ''
     third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
   links:
     weight: 1
     region: content

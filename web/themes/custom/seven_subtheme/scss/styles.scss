@@ -479,7 +479,9 @@
 }
 
 #node-event-form,
-#node-event-edit-form {
+#node-event-edit-form,
+#node-page-form,
+#node-page-edit-form {
   .layout-region-node-main {
     & > .form-wrapper {
       margin-bottom: 3rem;
