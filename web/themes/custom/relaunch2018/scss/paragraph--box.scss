@@ -31,6 +31,14 @@
     .card-footer {
       background-color: $color-white;;
       border-top: none;
+
+      .field--name-field-footer {
+        p {
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
     }
   }
 }

@@ -1,21 +1,6 @@
 @import 'includes/base';
 
-.region-header {
-  #block-articles-header {
-    h2 {
-      color: $color-gray-2;
-      font-size: 2.4rem;
-      font-weight: 500;
-
-      a {
-        color: $color-gray-2;
-      }
-    }
-  }
-}
-
 #block-article-header {
-
   @include media-breakpoint-up(md) {
     margin-top: 40px;
   }
@@ -36,31 +21,20 @@
 
 .node--type-article {
   color: $color-gray-1;
-  font-size: .9rem;
-  letter-spacing: .01em;
-  line-height: 1.5rem;
-
-  @include media-breakpoint-up(md) {
-    font-size: 1.2rem;
-    line-height: 2.2rem;
-  }
-
-  a {
-    font-weight: 500;
-  }
 
   .media--view-mode-header {
-    color: $color-gray-4;
-    font-size: .8rem;
-    line-height: 120%;
-
-    a {
-      color: $color-gray-4;
-      font-weight: 500;
+    .media--image--header--attribution {
+      @include fontStyle(small);
+      color: $color-gray-3;
+      opacity: .6;
     }
   }
 
   .article-content {
+    a {
+      font-weight: $font-weight-semi-bold;
+    }
+
     background-color: $color-gray-6;
 
     @include media-breakpoint-up(md) {
@@ -94,42 +68,25 @@
       z-index: 1;
 
       .node__submitted {
+        @include fontStyle(small);
         color: $color-main;
-        font-size: .8rem;
-        letter-spacing: .06rem;
-        line-height: 1;
         margin-bottom: 10px;
-
-        @include media-breakpoint-up(md) {
-          font-size: .9rem;
-        }
       }
 
       h1 {
         color: $color-gray-1;
-        font-size: 1.3rem;
-        line-height: 1.9rem;
         margin-bottom: 10px;
-
-        @include media-breakpoint-up(md) {
-          font-size: 1.7rem;
-        }
       }
 
       .field--name-field-tags {
         .field__item {
+          @include fontStyle(small);
           display: inline;
-          font-size: .8rem;
-          letter-spacing: .06rem;
           margin-right: 1rem;
-
-          @include media-breakpoint-up(md) {
-            font-size: .9rem;
-          }
 
           a {
             color: $color-dull-blue;
-            font-weight: 400;
+            font-weight: $font-weight-normal;
           }
 
           &:after {
@@ -176,17 +133,12 @@
       margin: 20px 0 40px 0;
 
       .media--type-image {
+        @include fontStyle(small);
         color: $color-gray-3;
-        font-size: .75rem;
-        font-weight: 300;
-
-        @include media-breakpoint-up(md) {
-          font-size: .9rem;
-        }
 
         a {
           color: $color-gray-3;
-          font-weight: 400;
+          font-weight: $font-weight-normal;
         }
 
         img {
@@ -200,27 +152,23 @@
     color: $color-gray-1;
 
     .header {
-      line-height: 1;
       margin-bottom: 10px;
 
       .date {
-        color: $color-main;
+        @include fontStyle(small);
         display: inline;
-        font-size: .8rem;
-        letter-spacing: .06em;
         margin-right: 1rem;
       }
 
       .tags {
+        @include fontStyle(small);
         display: inline;
-        font-size: .8rem;
-        letter-spacing: .06em;
 
         a {
           @include curlyBraces($color-main);
 
           color: $color-main;
-          font-weight: 400;
+          font-weight: $font-weight-normal;
         }
 
         * {
@@ -234,7 +182,6 @@
     }
 
     h3 {
-      font-size: 1.3rem;
       margin-bottom: 10px;
 
       @include media-breakpoint-up(md) {
@@ -247,9 +194,6 @@
     }
 
     .node__content {
-      font-size: 1.1rem;
-      line-height: 170%;
-
       .field--name-field-paragraphs {
         .field__item {
           display: none;
@@ -267,10 +211,9 @@
     }
 
     .author {
+      @include fontStyle(small);
       color: $color-gray-3;
-      font-size: .8rem;
     }
-
   }
 
   &.node--view-mode-related {
