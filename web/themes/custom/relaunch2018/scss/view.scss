@@ -114,7 +114,7 @@
       }
 
       .card {
-        @include border-radius($border-radius);
+        @include rounded;
         @include boxShadow;
         background-color: $white;
         display: inline-block;
@@ -170,7 +170,7 @@
       }
 
       .card {
-        @include border-radius($border-radius);
+        @include rounded;
         @include boxShadow;
         background-color: $white;
         height: 100%;

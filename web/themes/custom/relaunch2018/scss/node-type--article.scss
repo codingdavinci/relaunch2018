@@ -142,7 +142,7 @@
         }
 
         img {
-          @include border-radius($border-radius);
+          @include rounded;
         }
       }
     }

@@ -12,12 +12,6 @@
   transition: opacity .4s ease-in-out;
 }
 
-@mixin md {
-  @media screen and (max-width: 720px) {
-    @content;
-  }
-}
-
 @mixin curlyBraces($color, $fontWeight: '') {
   &:after,
   &:before {
@@ -34,6 +28,10 @@
     color: $color;
     content: '{';
   }
+}
+
+@mixin rounded {
+  border-radius: $border-radius;
 }
 
 @mixin boxShadow() {

@@ -5,7 +5,7 @@
   margin-right: 1.4rem;
 
   img {
-    @include border-radius($border-radius);
+    @include rounded;
     @include img-fluid;
   }
 }

@@ -161,7 +161,7 @@ main {
       }
 
       ul {
-        @include border-radius($border-radius);
+        @include rounded;
         background-color: $white;
         box-shadow: 0 5px 15px rgba($black, 0.1);
         display: flex;
@@ -231,7 +231,7 @@ main {
 
 .collapsible {
   legend {
-    @include border-radius($border-radius);
+    @include rounded;
     @include easeAll;
     @include fontStyle(default);
     background-color: $color-gray-5;

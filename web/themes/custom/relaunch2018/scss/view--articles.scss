@@ -43,7 +43,7 @@
   }
 
   .article-content {
-    @include border-radius($border-radius);
+    @include rounded;
 
     padding: 7px;
 

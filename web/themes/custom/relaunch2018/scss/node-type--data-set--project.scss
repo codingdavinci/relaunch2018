@@ -38,14 +38,14 @@
         text-align: center;
 
         .field--name-field-inline-image {
-          @include border-radius($border-radius);
+          @include rounded;
           @include boxShadow;
           background: $white;
           display: inline-block;
           padding: 1rem;
 
           img {
-            @include border-radius($border-radius);
+            @include rounded;
             @include img-fluid;
           }
         }
@@ -95,7 +95,7 @@
 
       fieldset {
         &:not(.object-type) {
-          @include border-radius($border-radius);
+          @include rounded;
           border: 1px solid $color-deep-teal;
           padding: 0 1.5rem 0 1.5rem;
 
@@ -135,7 +135,7 @@
       }
 
       .group--result {
-        @include border-radius($border-radius);
+        @include rounded;
         background-color: lighten($color-light-teal, 5%);
         padding: 18px 20px 20px 20px;
         margin-top: 3rem;

@@ -42,7 +42,7 @@
       }
 
       &.is-active {
-        @include border-radius($border-radius);
+        @include rounded;
         background-color: $color-green-lighter;
         color: $white;
         font-weight: 600;

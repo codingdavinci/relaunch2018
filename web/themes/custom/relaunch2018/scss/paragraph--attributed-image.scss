@@ -4,10 +4,10 @@
   display: inline-block;
 
   .field--name-field-inline-image {
-    @include border-radius($border-radius);
+    @include rounded;
 
     img {
-      @include border-radius($border-radius);
+      @include rounded;
       @include img-fluid;
     }
   }

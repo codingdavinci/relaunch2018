@@ -125,7 +125,7 @@ a {
 
   &.button {
     @include boxShadow;
-    @include border-radius($border-radius);
+    @include rounded;
     @include easeAll;
     color: $color-white;
     font-weight: $font-weight-semi-bold;

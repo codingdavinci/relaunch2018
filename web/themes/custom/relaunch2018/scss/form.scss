@@ -1,7 +1,7 @@
 @import 'includes/base';
 
 input {
-  @include border-radius($border-radius);
+  @include rounded;
 
   border: 0;
   color: $color-gray-1;

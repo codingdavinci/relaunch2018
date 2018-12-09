@@ -73,7 +73,7 @@
               position: relative;
 
               .winner--info {
-                @include border-radius($border-radius);
+                @include rounded;
                 @include boxShadow;
                 @include fontStyle(very-small);
                 background-color: $color-green-lighter;

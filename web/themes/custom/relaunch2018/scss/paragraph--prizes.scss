@@ -28,7 +28,7 @@
         }
 
         .prize--info {
-          @include border-radius($border-radius);
+          @include rounded;
           background-color: $color-prize-2;
           color: $color-white;
           display: flex;

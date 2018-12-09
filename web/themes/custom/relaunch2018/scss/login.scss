@@ -30,7 +30,7 @@ body.path-user {
           width: 100%;
 
           @include media-breakpoint-up(md) {
-            @include border-radius($border-radius);
+            @include rounded;
             @include boxShadow;
             margin: 50px 0 $content-margin-bottom 0;
             width: auto;

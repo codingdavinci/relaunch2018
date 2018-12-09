@@ -11,7 +11,7 @@
   }
 
   img {
-    @include border-radius($border-radius);
+    @include rounded;
     height: auto;
     width: 100%
   }

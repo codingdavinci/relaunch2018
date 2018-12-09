@@ -38,7 +38,7 @@
             }
 
             .jury--member--info {
-              @include border-radius($border-radius);
+              @include rounded;
               color: $color-gray-2;
               float: right;
               margin-top: .2rem;
