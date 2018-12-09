@@ -1,0 +1,36 @@
+uuid: da3c5ed1-eb19-4c89-8044-b2078caf8d30
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.grid_element.field_image
+    - field.field.paragraph.grid_element.field_text
+    - paragraphs.paragraphs_type.grid_element
+  module:
+    - text
+id: paragraph.grid_element.default
+targetEntityType: paragraph
+bundle: grid_element
+mode: default
+content:
+  field_image:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_text:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

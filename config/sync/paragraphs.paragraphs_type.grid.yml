@@ -1,0 +1,9 @@
+uuid: d20689bd-1e7b-4c30-9bb2-5ee60386be69
+langcode: de
+status: true
+dependencies: {  }
+id: grid
+label: Raster
+icon_uuid: null
+description: 'Abschnitt, der Boxen in einem Raster angeordnet anzeigt.'
+behavior_plugins: {  }

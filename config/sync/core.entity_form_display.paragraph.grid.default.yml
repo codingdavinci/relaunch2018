@@ -1,0 +1,55 @@
+uuid: 010ca7ce-1431-43a5-864f-937f0ddfc791
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.grid.field_grid_elements
+    - field.field.paragraph.grid.field_heading
+    - field.field.paragraph.grid.field_text
+    - paragraphs.paragraphs_type.grid
+  module:
+    - paragraphs
+    - text
+id: paragraph.grid.default
+targetEntityType: paragraph
+bundle: grid
+mode: default
+content:
+  field_grid_elements:
+    type: paragraphs
+    weight: 2
+    settings:
+      title: Seitenabschnitt
+      title_plural: Seitenabschnitte
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
+    third_party_settings: {  }
+    region: content
+  field_heading:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_text:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

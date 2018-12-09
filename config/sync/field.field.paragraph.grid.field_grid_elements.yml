@@ -1,0 +1,103 @@
+uuid: 114e6389-7815-4b4b-bc24-c50c9da49f97
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_grid_elements
+    - paragraphs.paragraphs_type.grid
+    - paragraphs.paragraphs_type.grid_element
+  module:
+    - entity_reference_revisions
+id: paragraph.grid.field_grid_elements
+field_name: field_grid_elements
+entity_type: paragraph
+bundle: grid
+label: Elemente
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      grid_element: grid_element
+    target_bundles_drag_drop:
+      grid:
+        weight: 26
+        enabled: false
+      attributed_image:
+        weight: 27
+        enabled: false
+      attribution:
+        weight: 28
+        enabled: false
+      box:
+        weight: 29
+        enabled: false
+      box_group:
+        weight: 30
+        enabled: false
+      data_set_event:
+        weight: 31
+        enabled: false
+      filesize:
+        weight: 32
+        enabled: false
+      grid_element:
+        enabled: true
+        weight: 33
+      image:
+        weight: 34
+        enabled: false
+      introtext:
+        weight: 35
+        enabled: false
+      jury:
+        weight: 36
+        enabled: false
+      jury_member:
+        weight: 37
+        enabled: false
+      logo:
+        weight: 38
+        enabled: false
+      logo_group:
+        weight: 39
+        enabled: false
+      logos:
+        weight: 40
+        enabled: false
+      prize:
+        weight: 41
+        enabled: false
+      prizes:
+        weight: 42
+        enabled: false
+      representative:
+        weight: 43
+        enabled: false
+      slideshow:
+        weight: 44
+        enabled: false
+      team_member:
+        weight: 45
+        enabled: false
+      text:
+        weight: 46
+        enabled: false
+      textblock_left:
+        weight: 47
+        enabled: false
+      textblock_right:
+        weight: 48
+        enabled: false
+      video:
+        weight: 49
+        enabled: false
+      winner:
+        weight: 50
+        enabled: false
+field_type: entity_reference_revisions

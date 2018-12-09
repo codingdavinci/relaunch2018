@@ -1,0 +1,32 @@
+uuid: 25b1d1ee-7326-4ca8-80bb-f2e0799555ef
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.grid_element.field_image
+    - field.field.paragraph.grid_element.field_text
+    - paragraphs.paragraphs_type.grid_element
+  module:
+    - text
+id: paragraph.grid_element.default
+targetEntityType: paragraph
+bundle: grid_element
+mode: default
+content:
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: preview
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_text:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

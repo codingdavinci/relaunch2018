@@ -1,0 +1,21 @@
+uuid: b308d06d-1c5d-4b4d-bb35-cbc8f29d148b
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text
+    - paragraphs.paragraphs_type.grid
+  module:
+    - text
+id: paragraph.grid.field_text
+field_name: field_text
+entity_type: paragraph
+bundle: grid
+label: Text
+description: 'Über dem Raster anzuzeigender Textblock.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

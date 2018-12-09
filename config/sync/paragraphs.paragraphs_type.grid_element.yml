@@ -1,0 +1,9 @@
+uuid: a92b6192-9753-43bd-897e-20cb2cba1779
+langcode: de
+status: true
+dependencies: {  }
+id: grid_element
+label: Block
+icon_uuid: null
+description: 'Blockelement eines Rasters.'
+behavior_plugins: {  }
