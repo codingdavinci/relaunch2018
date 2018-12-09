@@ -3,6 +3,7 @@ langcode: de
 status: true
 dependencies:
   config:
+    - field.field.paragraph.textblock_left.field_heading
     - field.field.paragraph.textblock_left.field_medium
     - field.field.paragraph.textblock_left.field_text
     - paragraphs.paragraphs_type.textblock_left
@@ -14,9 +15,17 @@ targetEntityType: paragraph
 bundle: textblock_left
 mode: default
 content:
+  field_heading:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_medium:
-    type: entity_reference_paragraphs
-    weight: 1
+    type: paragraphs
+    weight: 2
     settings:
       title: Seitenabschnitt
       title_plural: Seitenabschnitte
@@ -24,10 +33,16 @@ content:
       add_mode: dropdown
       form_display_mode: default
       default_paragraph_type: ''
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
     third_party_settings: {  }
     region: content
   field_text:
-    weight: 0
+    weight: 1
     settings:
       rows: 5
       placeholder: ''

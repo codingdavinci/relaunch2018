@@ -3,6 +3,7 @@ langcode: de
 status: true
 dependencies:
   config:
+    - field.field.paragraph.textblock_left.field_heading
     - field.field.paragraph.textblock_left.field_medium
     - field.field.paragraph.textblock_left.field_text
     - paragraphs.paragraphs_type.textblock_left
@@ -14,9 +15,17 @@ targetEntityType: paragraph
 bundle: textblock_left
 mode: default
 content:
+  field_heading:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
   field_medium:
     type: entity_reference_revisions_entity_view
-    weight: 1
+    weight: 2
     label: hidden
     settings:
       view_mode: inline

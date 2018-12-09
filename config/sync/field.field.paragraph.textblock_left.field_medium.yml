@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.paragraph.field_medium
     - paragraphs.paragraphs_type.image
+    - paragraphs.paragraphs_type.text
     - paragraphs.paragraphs_type.textblock_left
     - paragraphs.paragraphs_type.video
   module:
@@ -13,7 +14,7 @@ id: paragraph.textblock_left.field_medium
 field_name: field_medium
 entity_type: paragraph
 bundle: textblock_left
-label: 'Bild oder Video'
+label: 'Rechte Spalte'
 description: ''
 required: false
 translatable: false
@@ -25,6 +26,7 @@ settings:
     negate: 0
     target_bundles:
       image: image
+      text: text
       video: video
     target_bundles_drag_drop:
       attributed_image:
@@ -52,8 +54,8 @@ settings:
         weight: 21
         enabled: false
       text:
+        enabled: true
         weight: 22
-        enabled: false
       textblock_left:
         weight: 23
         enabled: false
@@ -65,5 +67,35 @@ settings:
         weight: 25
       winner:
         weight: 26
+        enabled: false
+      box:
+        weight: 26
+        enabled: false
+      box_group:
+        weight: 27
+        enabled: false
+      jury:
+        weight: 32
+        enabled: false
+      jury_member:
+        weight: 33
+        enabled: false
+      logo:
+        weight: 34
+        enabled: false
+      logos:
+        weight: 35
+        enabled: false
+      logo_group:
+        weight: 36
+        enabled: false
+      prize:
+        weight: 37
+        enabled: false
+      prizes:
+        weight: 38
+        enabled: false
+      slideshow:
+        weight: 40
         enabled: false
 field_type: entity_reference_revisions

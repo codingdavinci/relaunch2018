@@ -14,12 +14,21 @@
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
     <div class="row">
-      {% if content.field_medium %}
+      {% if content.field_heading['#items'] is not empty or content.field_medium['#items'] is not empty %}
         <div class="col-md-6">
-          {{ content.field_medium }}
+          {% if content.field_heading['#items'] is not empty %}
+            {{ content.field_heading }}
+          {% endif %}
+          {% if content.field_medium['#items'] is not empty %}
+            {% if content.field_heading['#items'] is not empty %}
+              <div class="d-flex flex-column justify-content-center h-100">{{ content.field_medium }}</div>
+            {% else %}
+              {{ content-field_medium }}
+            {% endif %}
+          {% endif %}
         </div>
       {% endif %}
-      <div class="col-md-6{% if not content.field_image %} offset-md-6{% endif %}">{{ content.field_text }}</div>
+      <div class="col-md-6{% if content.field_heading['#items'] is empty and content.field_medium['#items'] is empty %} offset-md-6{% endif %}">{{ content.field_text }}</div>
     </div>
   </div>
 {% endblock paragraph %}
