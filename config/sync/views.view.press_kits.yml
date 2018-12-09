@@ -588,6 +588,7 @@ display:
         header: true
         relationships: false
         css_class: false
+        title: false
       menu:
         type: normal
         title: Presse
@@ -608,6 +609,7 @@ display:
           required: false
           plugin_id: standard
       css_class: container
+      title: Presse
     cache_metadata:
       max-age: -1
       contexts:
