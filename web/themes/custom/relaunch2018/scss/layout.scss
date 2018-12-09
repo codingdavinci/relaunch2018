@@ -111,7 +111,7 @@ header {
           -webkit-mask-size: contain;
 
           // Hide in IE/Edge not supporting mask-image
-          @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+          @media #{$ie} {
             display: none;
           }
           @supports (-ms-accelerator:true) {

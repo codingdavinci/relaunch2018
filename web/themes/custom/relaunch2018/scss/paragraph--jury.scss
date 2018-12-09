@@ -66,7 +66,7 @@
                     display: table-cell;
                   }
 
-                  @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+                  @media #{$ie} {
                     &:before {
                       display: inline-block;
                     }

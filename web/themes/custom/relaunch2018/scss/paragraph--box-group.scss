@@ -5,7 +5,7 @@
     margin-bottom: 1em;
     text-align: right;
 
-    @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+    @media #{$ie} {
       display: none;
     }
 
@@ -58,7 +58,7 @@
       width: 25%;
     }
 
-    @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+    @media #{$ie} {
       width: 100%;
 
       & > .field__item {

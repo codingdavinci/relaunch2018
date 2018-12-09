@@ -21,7 +21,7 @@
       }
 
       & > .field__item {
-        @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+        @media #{$ie} {
           display: inline-block;
           padding: 1rem;
           width: 50%;

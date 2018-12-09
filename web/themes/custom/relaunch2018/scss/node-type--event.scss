@@ -108,16 +108,11 @@
                 }
               }
 
-              @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+              @media #{$ie} {
                 display: inline-block;
                 padding: 1rem;
-                width: 100%;
 
                 @include media-breakpoint-up(sm) {
-                  width: 50%;
-                }
-
-                @include media-breakpoint-up(md) {
                   width: 50%;
                 }
 
@@ -127,6 +122,10 @@
 
                 @include media-breakpoint-up(xl) {
                   width: 25%;
+                }
+
+                img {
+                  width: 100%;
                 }
               }
             }
