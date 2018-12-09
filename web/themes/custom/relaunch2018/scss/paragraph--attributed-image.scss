@@ -5,10 +5,6 @@
 
   .field--name-field-inline-image {
     @include border-radius($border-radius);
-    @include boxShadow;
-    background: $white;
-    display: inline-block;
-    padding: 1rem;
 
     img {
       @include border-radius($border-radius);

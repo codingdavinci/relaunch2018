@@ -1,0 +1,57 @@
+@import 'includes/base';
+
+.language-switcher-language-url {
+  color: $color-green-lighter;
+  font-size: 1.2rem;
+  position: absolute;
+  top: 25px;
+
+  @include media-breakpoint-up(sm) {
+    font-size: 1.2rem;
+  }
+
+  @include media-breakpoint-up(md) {
+    font-size: 1.5rem;
+  }
+
+  .links {
+    padding-left: 0;
+
+    li {
+      background-color: $white;
+      display: inline;
+      padding: .3rem;
+
+      &:after {
+        content: '}';
+      }
+      &:before {
+        content: '{';
+      }
+
+      &:first-child {
+        @include border-left-radius($border-radius);
+      }
+
+      &:last-child {
+        @include border-right-radius($border-radius);
+      }
+
+      a {
+        color: $color-green;
+      }
+
+      &.is-active {
+        @include border-radius($border-radius);
+        background-color: $color-green-lighter;
+        color: $white;
+        font-weight: 600;
+
+        a {
+          color: $white;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
