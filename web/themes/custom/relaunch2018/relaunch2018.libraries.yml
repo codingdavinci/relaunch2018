@@ -3,7 +3,7 @@ global-css:
   css:
     theme:
       css/global.css: {}
-      lib/fonts/barlow/index.css: {}
+      ../../../libraries/typeface-barlow/index.css: {}
   dependencies:
     - relaunch2018/cdv-font
     - relaunch2018/fontawesome
@@ -25,7 +25,7 @@ global-js:
 bootstrap-js:
   version: 4.1
   js:
-    lib/bootstrap/dist/js/bootstrap.js: {}
+    ../../../libraries/bootstrap/dist/js/bootstrap.js: {}
   dependencies:
     - core/jquery
     - relaunch2018/popper-js
@@ -61,14 +61,14 @@ fontawesome:
 
 hammerjs:
   js:
-    lib/hammerjs/hammer.js: {}
+    ../../../libraries/hammerjs/hammer.js: {}
 
 jquery-easing:
   js:
-    lib/jquery.easing/jquery.easing.js: {}
+    ../../../libraries/jquery.easing/jquery.easing.js: {}
 
 popper-js:
   js:
-    lib/popper.js/dist/umd/popper.js: {}
+    ../../../libraries/popper.js/dist/umd/popper.js: {}
   dependencies:
     - core/jquery

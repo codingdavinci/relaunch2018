@@ -1,20 +1,14 @@
 {
   "repository": "https://github.com/codingdavinci/relaunch2018/",
   "license": "GPL-2.0-only",
-  "dependencies": {
-    "bootstrap": "^4.1.3",
-    "hammerjs": "^2.0.8",
-    "jquery": "^3.3.1",
-    "jquery.easing": "^1.4.1",
-    "popper.js": "^1.14.4",
-    "typeface-barlow": "*"
-  },
+  "dependencies": {},
   "devDependencies": {
     "del": "^3.0.0",
     "gulp": "^4.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-sass": "^4.0.0",
     "merge-stream": "^1.0.1",
-    "node-sass-import-once": "^1.2.0"
+    "node-sass-import-once": "^1.2.0",
+    "path": "^0.12.7"
   }
 }

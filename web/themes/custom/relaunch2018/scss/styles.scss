@@ -1,6 +1,6 @@
 @import 'includes/variables';
 @import 'includes/mixins';
-@import '../lib/bootstrap/scss/bootstrap-grid';
+@import '../../../../../web/libraries/bootstrap/scss/bootstrap-grid';
 
 body {
   @include fontStyle(default);

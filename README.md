@@ -12,11 +12,11 @@ Contact: lucy.patterson@wikimedia.de (@lucyWMDE)
 
 ## Installation
 
-The project was set up using the [Composer template for Drupal projects](https://github.com/drupal-composer/drupal-project). Installation requires [Composer](https://getcomposer.org/) for managing PHP packages and [npm](https://www.npmjs.com/), which is bundled with [Node.js](https://nodejs.org/), for JavaScript packages.
+The project was set up using the [Composer template for Drupal projects](https://github.com/drupal-composer/drupal-project). Installation requires [Composer](https://getcomposer.org/) for managing PHP packages and [Node.js](https://nodejs.org/), for compiling [SCSS files](https://sass-lang.com/).
 
 1. Pull the repository contents.
-2. Run `composer install` (using flag `--no-dev` in production environment) to download all required components available on [packagist.org](https://packagist.org/).
-3. Run `npm install` to download all required packages available on [npmjs.com](https://www.npmjs.com/).
+2. Run `composer install` (using flag `--no-dev` in production environment) to download the first set of required components.
+3. Run `npm install` to download the remaining set of required components.
 4. Run `gulp`, which is installed through npm, to copy files loaded by npm to appropriate directories and to compile SCSS to CSS files.
 5. Configure the web root to point to the `web` subdirectory.
 6. The CMS installation may be run by using a browser to access the web interface in the domain’s base path as configured in step 5. During the installation process, select the “Config Installer” installation profile to import configuration from `../config/sync`.
@@ -29,6 +29,7 @@ Drupal nudges administrators about available security updates. When updating Dru
 Updates should be applied in a development environment first: Run `composer update drupal/core webflo/drupal-core-require-dev --with-dependencies` for minor version updates or `composer require <component>:<new version constraint>` for major version updates. After ensuring that the update works properly, push the changes to the `composer.lock` file to the repository.
 
 Updating npm packages is similar: Run `npm update` for minor version updates or `npm install <package name>@<version constraint>` for major version updates. Run `gulp` to ensure updated files are copied to their appropriate places. After ensuring that the update works properly, push the changes to the `package-lock.json` file to the repository.
+Unless when run manually for recompiling the SCSS files, no npm package is actually invoked in production.
 
 In the production environment, pull the updated repository and run:
 1. `composer install` to synchronize composer components.
