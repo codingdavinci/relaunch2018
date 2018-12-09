@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - ctools
+    - system
   theme:
     - relaunch2018
 id: relaunch2018_page_title_blank
@@ -25,3 +26,8 @@ visibility:
     negate: false
     context_mapping:
       node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: /was-ist-coding-da-vinci
+    negate: true
+    context_mapping: {  }

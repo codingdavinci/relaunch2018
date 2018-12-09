@@ -8,4 +8,10 @@
   h3 {
     color: $color-main;
   }
+
+  .header--default {
+    .field--name-field-textblock {
+      color: $color-deep-teal;
+    }
+  }
 }

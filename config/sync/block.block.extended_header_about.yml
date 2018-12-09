@@ -1,0 +1,31 @@
+uuid: 93cb5432-2c8f-4b2f-80e4-6f6609a5ae28
+langcode: de
+status: true
+dependencies:
+  content:
+    - 'block_content:extended_page_header:b61adaa5-2426-4da7-9117-00f4c23e249b'
+  module:
+    - block_content
+    - system
+  theme:
+    - relaunch2018
+id: extended_header_about
+theme: relaunch2018
+region: header
+weight: 0
+provider: null
+plugin: 'block_content:b61adaa5-2426-4da7-9117-00f4c23e249b'
+settings:
+  id: 'block_content:b61adaa5-2426-4da7-9117-00f4c23e249b'
+  label: 'Erweiterter Seitenkopf: Über'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /was-ist-coding-da-vinci
+    negate: false
+    context_mapping: {  }
