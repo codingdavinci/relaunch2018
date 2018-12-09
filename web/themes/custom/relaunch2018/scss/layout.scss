@@ -8,23 +8,6 @@ body {
   background-color: $color-gray-6;
 }
 
-.media--type-image {
-  display: block;
-  width: 100%;
-
-  .field--name-field-caption,
-  .field--name-field-creator,
-  .field--name-field-license {
-    display: inline-block;
-  }
-
-  img {
-    @include border-radius($border-radius);
-    height: auto;
-    width: 100%
-  }
-}
-
 .node__links {
   display: none;
   margin-left: .8rem;

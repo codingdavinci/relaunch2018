@@ -1,0 +1,36 @@
+@import 'includes/base';
+
+.media--type-image {
+  display: block;
+  width: 100%;
+
+  .field--name-field-caption,
+  .field--name-field-creator,
+  .field--name-field-license {
+    display: inline-block;
+  }
+
+  img {
+    @include border-radius($border-radius);
+    height: auto;
+    width: 100%
+  }
+
+  &.media--view-mode-full {
+    padding: 0;
+    flex-direction: column;
+
+    img {
+      height: auto;
+      max-width: 100%;
+    }
+  }
+
+  &.media--view-mode-default {
+    padding: 0;
+  }
+
+  .media--attribution {
+    @include fontStyle(small);
+  }
+}

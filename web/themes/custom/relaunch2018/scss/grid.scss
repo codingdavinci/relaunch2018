@@ -1,6 +1,10 @@
 @import 'includes/base';
 
 .paragraph--type--grid {
+  .field--name-field-text {
+    margin-bottom: 50px;
+  }
+
   .field--name-field-grid-elements {
     display: grid;
     grid-template-columns: 1fr;
