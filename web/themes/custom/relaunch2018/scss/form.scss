@@ -35,7 +35,7 @@ input {
 ul.ui-autocomplete {
   li.ui-menu-item {
     a {
-      @include fontSize(small);
+      @include fontStyle(small);
       display: block;
 
       &.ui-state-active {

@@ -41,7 +41,7 @@
           }
 
           label {
-            @include fontSize(small);
+            @include fontStyle(small);
           }
 
           &.form-type-textfield {
@@ -50,7 +50,7 @@
             }
 
             input {
-              @include fontSize(small);
+              @include fontStyle(small);
               padding: .4em;
               width: 100%;
             }
@@ -139,7 +139,7 @@
             margin-top: 1rem;
 
             &.field--name-field-event {
-              @include fontSize(small);
+              @include fontStyle(small);
             }
 
             .field {
@@ -190,7 +190,7 @@
           }
 
           .node__content {
-            @include fontSize(small);
+            @include fontStyle(small);
 
             .field {
               margin-top: 1rem;

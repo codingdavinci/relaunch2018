@@ -39,7 +39,7 @@
             margin-top: 1rem;
 
             &.field--name-field-event {
-              @include fontSize(small);
+              @include fontStyle(small);
             }
 
             .field {

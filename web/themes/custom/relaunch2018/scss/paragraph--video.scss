@@ -16,7 +16,7 @@
       }
 
       .field--name-field-caption {
-        @include fontSize(small);
+        @include fontStyle(small);
       }
     }
   }

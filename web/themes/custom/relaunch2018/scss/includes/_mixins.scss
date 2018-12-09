@@ -40,31 +40,6 @@
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 }
 
-@mixin fontSize($size) {
-  @if $size == 'small' {
-    font-size: $font-size-sm-small;
-
-    @include media-breakpoint-up(md) {
-      font-size: $font-size-md-small;
-    }
-  }
-  @elseif $size == 'badge' {
-    font-size: $font-size-sm-badge;
-
-    @include media-breakpoint-up(md) {
-      font-size: $font-size-md-badge;
-    }
-  }
-  @else {
-    font-size: $font-size-sm;
-
-    @include media-breakpoint-up(md) {
-      font-size: $font-size-md;
-    }
-  }
-}
-
-// TODO: Merge with fontSize()
 @mixin fontStyle($type) {
   @if $type == 'large' {
     font-size: 1.4rem;
@@ -79,10 +54,10 @@
     }
   }
   @elseif $type == 'small' {
-    font-size: $font-size-sm-small;
+    font-size: .9rem;
 
     @include media-breakpoint-up(md) {
-      font-size: $font-size-md-small;
+      font-size: 1rem;
     }
   }
   @elseif $type == 'very-small' {
@@ -94,10 +69,10 @@
     }
   }
   @elseif $type == 'badge' {
-    font-size: $font-size-sm-badge;
+    font-size: .8rem;
 
     @include media-breakpoint-up(md) {
-      font-size: $font-size-md-badge;
+      font-size: .9rem;
     }
   }
   @elseif $type == 'title' {

@@ -301,6 +301,6 @@ figcaption {
 }
 
 .cc0-note {
-  @include fontSize(small);
+  @include fontStyle(small);
   font-style: italic;
 }

@@ -1,7 +1,7 @@
 @import 'includes/base';
 
 .badge {
-  @include fontSize(badge);
+  @include fontStyle(badge);
   @include linkColor(dark);
   color: $white;
   display: inline;

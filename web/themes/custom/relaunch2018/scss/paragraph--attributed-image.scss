@@ -13,7 +13,7 @@
   }
 
   .paragraph--type--attributed-image--attribution {
-    @include fontSize(small);
+    @include fontStyle(small);
     text-align: right;
 
     & div {

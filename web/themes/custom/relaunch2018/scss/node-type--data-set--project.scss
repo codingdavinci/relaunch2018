@@ -71,14 +71,14 @@
       }
 
       .badge {
-        @include fontSize(normal);
+        @include fontStyle(default);
       }
 
       .field {
         margin-bottom: 1rem;
 
         .field__label {
-          @include fontSize(small);
+          @include fontStyle(small);
           font-weight: normal;
         }
       }
@@ -222,13 +222,13 @@
             }
 
             .node__content {
-              @include fontSize(small);
+              @include fontStyle(small);
               margin: 0;
 
               .field--name-field-object-type,
               .field--name-field-tags {
                 .badge {
-                  @include fontSize(small);
+                  @include fontStyle(small);
                 }
               }
 

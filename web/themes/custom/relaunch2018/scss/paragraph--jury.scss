@@ -27,7 +27,7 @@
           }
 
           .jury--member--info--wrapper {
-            @include fontSize(small);
+            @include fontStyle(small);
             bottom: -1rem;
             right: 0;
             max-width: 90%;
