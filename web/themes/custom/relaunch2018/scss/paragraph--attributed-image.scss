@@ -1,0 +1,35 @@
+@import 'includes/base';
+
+.paragraph--type--attributed-image {
+  display: inline-block;
+
+  .field--name-field-inline-image {
+    @include border-radius($border-radius);
+    @include boxShadow;
+    background: $white;
+    display: inline-block;
+    padding: 1rem;
+
+    img {
+      @include border-radius($border-radius);
+      @include img-fluid;
+    }
+  }
+
+  .paragraph--type--attributed-image--attribution {
+    @include fontSize(small);
+    text-align: right;
+
+    & div {
+      display: inline;
+    }
+
+    & > div {
+      margin-right: .3em;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

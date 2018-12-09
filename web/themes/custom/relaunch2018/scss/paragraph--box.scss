@@ -1,0 +1,36 @@
+@import 'includes/base';
+
+.paragraph--type--box {
+  .card {
+    @include boxShadow;
+    background-color: $color-white;
+
+    .card-img-top {
+      img {
+        @include border-bottom-radius(0);
+      }
+    }
+
+    .card-body {
+      .field--name-field-text {
+        p {
+          &:last-child {
+            margin-bottom: 0;
+
+            .button {
+              &:last-child {
+                display: inline-block;
+                margin-bottom: 1.5rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .card-footer {
+      background-color: $color-white;;
+      border-top: none;
+    }
+  }
+}

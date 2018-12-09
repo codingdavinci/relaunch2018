@@ -1,0 +1,11 @@
+@import 'includes/base';
+
+.paragraph--type--introtext {
+  @include media-breakpoint-up(md) {
+    width: 65%;
+  }
+
+  &.center {
+    margin: 0 auto;
+  }
+}

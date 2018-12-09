@@ -1,0 +1,11 @@
+@import 'includes/base';
+
+.paragraph--type--winner {
+  margin-bottom: 1.4rem;
+  margin-right: 1.4rem;
+
+  img {
+    @include border-radius($border-radius);
+    @include img-fluid;
+  }
+}

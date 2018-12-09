@@ -1,29 +1,5 @@
 @import 'includes/base';
 
-.paragraph--type--box {
-  .card {
-    @include boxShadow;
-    background-color: $color-white;
-
-    p {
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-
-    .card-img-top {
-      img {
-        @include border-bottom-radius(0);
-      }
-    }
-
-    .card-footer {
-      background-color: $color-white;;
-      border-top: none;
-    }
-  }
-}
-
 .paragraph--type--box-group {
   .boxes--nav {
     margin-bottom: 1em;
@@ -33,7 +9,7 @@
       display: none;
     }
 
-      & > a {
+    & > a {
       &.inactive {
         opacity: .2;
       }
