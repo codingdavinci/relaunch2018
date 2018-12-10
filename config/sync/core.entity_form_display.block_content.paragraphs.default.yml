@@ -1,0 +1,55 @@
+uuid: 2919bea0-9094-42c3-ad8f-69f160771dfa
+langcode: de
+status: true
+dependencies:
+  config:
+    - block_content.type.paragraphs
+    - field.field.block_content.paragraphs.field_paragraphs
+  module:
+    - content_moderation
+    - paragraphs
+id: block_content.paragraphs.default
+targetEntityType: block_content
+bundle: paragraphs
+mode: default
+content:
+  field_paragraphs:
+    type: paragraphs
+    weight: 101
+    settings:
+      title: Seitenabschnitt
+      title_plural: Seitenabschnitte
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
+    third_party_settings: {  }
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+hidden: {  }

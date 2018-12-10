@@ -1,0 +1,9 @@
+uuid: 3bf7583d-e28a-425f-a487-42ccc424a8e2
+langcode: de
+status: true
+dependencies: {  }
+id: social_media
+label: 'Social Media'
+icon_uuid: null
+description: 'Block für die Ausgabe von Social-Media-Links.'
+behavior_plugins: {  }

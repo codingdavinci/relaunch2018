@@ -1,0 +1,8 @@
+uuid: 7aa37fef-4e8a-454e-a3ec-c0d138729f2b
+langcode: de
+status: true
+dependencies: {  }
+id: paragraphs
+label: Seitenabschnitte
+revision: 1
+description: 'Block, dem Seitenabschnitte hinzugefügt werden können.'

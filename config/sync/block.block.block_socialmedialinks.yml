@@ -1,0 +1,31 @@
+uuid: 1a925eb8-b533-4368-b531-6e0672b68585
+langcode: de
+status: true
+dependencies:
+  content:
+    - 'block_content:paragraphs:3b52ceab-0198-4a67-b9a4-c87687d13a08'
+  module:
+    - block_content
+    - system
+  theme:
+    - relaunch2018
+id: block_socialmedialinks
+theme: relaunch2018
+region: content
+weight: -8
+provider: null
+plugin: 'block_content:3b52ceab-0198-4a67-b9a4-c87687d13a08'
+settings:
+  id: 'block_content:3b52ceab-0198-4a67-b9a4-c87687d13a08'
+  label: 'Startseite: Social-Media-Links'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

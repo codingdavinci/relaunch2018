@@ -1,0 +1,124 @@
+uuid: df638dea-842c-48a2-960c-0ca82f4416c7
+langcode: de
+status: true
+dependencies:
+  config:
+    - block_content.type.paragraphs
+    - field.storage.block_content.field_paragraphs
+    - paragraphs.paragraphs_type.box
+    - paragraphs.paragraphs_type.box_group
+    - paragraphs.paragraphs_type.grid
+    - paragraphs.paragraphs_type.logo_group
+    - paragraphs.paragraphs_type.slideshow
+    - paragraphs.paragraphs_type.social_media
+    - paragraphs.paragraphs_type.text
+    - paragraphs.paragraphs_type.textblock_left
+    - paragraphs.paragraphs_type.textblock_right
+    - paragraphs.paragraphs_type.video
+  module:
+    - entity_reference_revisions
+id: block_content.paragraphs.field_paragraphs
+field_name: field_paragraphs
+entity_type: block_content
+bundle: paragraphs
+label: Abschnitte
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      box: box
+      box_group: box_group
+      grid: grid
+      logo_group: logo_group
+      slideshow: slideshow
+      social_media: social_media
+      text: text
+      textblock_left: textblock_left
+      textblock_right: textblock_right
+      video: video
+    target_bundles_drag_drop:
+      attributed_image:
+        weight: 27
+        enabled: false
+      attribution:
+        weight: 28
+        enabled: false
+      box:
+        enabled: true
+        weight: 29
+      box_group:
+        enabled: true
+        weight: 30
+      data_set_event:
+        weight: 31
+        enabled: false
+      filesize:
+        weight: 32
+        enabled: false
+      grid:
+        enabled: true
+        weight: 33
+      grid_element:
+        weight: 34
+        enabled: false
+      image:
+        weight: 35
+        enabled: false
+      introtext:
+        weight: 36
+        enabled: false
+      jury:
+        weight: 37
+        enabled: false
+      jury_member:
+        weight: 38
+        enabled: false
+      logo:
+        weight: 39
+        enabled: false
+      logo_group:
+        enabled: true
+        weight: 40
+      logos:
+        weight: 41
+        enabled: false
+      prize:
+        weight: 42
+        enabled: false
+      prizes:
+        weight: 43
+        enabled: false
+      representative:
+        weight: 44
+        enabled: false
+      slideshow:
+        enabled: true
+        weight: 45
+      social_media:
+        enabled: true
+        weight: 46
+      team_member:
+        weight: 47
+        enabled: false
+      text:
+        enabled: true
+        weight: 48
+      textblock_left:
+        enabled: true
+        weight: 49
+      textblock_right:
+        enabled: true
+        weight: 50
+      video:
+        enabled: true
+        weight: 51
+      winner:
+        weight: 52
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,21 @@
+uuid: 5b4efe61-5a3d-4bae-a082-4f26643d42dd
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text
+    - paragraphs.paragraphs_type.social_media
+  module:
+    - text
+id: paragraph.social_media.field_text
+field_name: field_text
+entity_type: paragraph
+bundle: social_media
+label: Text
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

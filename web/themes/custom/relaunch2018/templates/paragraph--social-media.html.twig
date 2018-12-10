@@ -1,0 +1,31 @@
+{#
+/**
+ * @see paragraph.html.twig
+ */
+#}
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished',
+  ]
+%}
+{% block paragraph %}
+  <div{{ attributes.addClass(classes) }}>
+    <div class="row">
+      <div class="col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-4 offset-lg-4">
+        {% block content %}
+          <div class="card">
+            {% if content.field_text['#items'] is not empty %}
+              <div class="card-body">{{ content.field_text }}</div>
+            {% endif %}
+            {% if content.field_links['#items'] is not empty %}
+              <div class="card-footer">{{ content.field_links }}</div>
+            {% endif %}
+          </div>
+        {% endblock %}
+      </div>
+    </div>
+  </div>
+{% endblock paragraph %}
