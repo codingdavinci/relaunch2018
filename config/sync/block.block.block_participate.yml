@@ -1,23 +1,23 @@
-uuid: 1a925eb8-b533-4368-b531-6e0672b68585
+uuid: a6babf96-2964-4ee2-a63a-c0a81877a426
 langcode: de
 status: true
 dependencies:
   content:
-    - 'block_content:paragraphs:3b52ceab-0198-4a67-b9a4-c87687d13a08'
+    - 'block_content:paragraphs:914825f5-0f8a-4504-a871-505a72e109a9'
   module:
     - block_content
     - system
   theme:
     - relaunch2018
-id: block_socialmedialinks
+id: block_participate
 theme: relaunch2018
 region: content
-weight: -6
+weight: -8
 provider: null
-plugin: 'block_content:3b52ceab-0198-4a67-b9a4-c87687d13a08'
+plugin: 'block_content:914825f5-0f8a-4504-a871-505a72e109a9'
 settings:
-  id: 'block_content:3b52ceab-0198-4a67-b9a4-c87687d13a08'
-  label: 'Startseite: Social-Media-Links'
+  id: 'block_content:914825f5-0f8a-4504-a871-505a72e109a9'
+  label: 'Startseite: Jetzt anmelden'
   provider: block_content
   label_display: '0'
   status: true

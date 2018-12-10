@@ -1,23 +1,23 @@
-uuid: 1a925eb8-b533-4368-b531-6e0672b68585
+uuid: b0f42963-ab6a-4ac3-acd6-b301d8c1e5fe
 langcode: de
 status: true
 dependencies:
   content:
-    - 'block_content:paragraphs:3b52ceab-0198-4a67-b9a4-c87687d13a08'
+    - 'block_content:paragraphs:8cab5d48-08a8-4994-a176-874aacb91406'
   module:
     - block_content
     - system
   theme:
     - relaunch2018
-id: block_socialmedialinks
+id: block_institutional_data
 theme: relaunch2018
 region: content
-weight: -6
+weight: -7
 provider: null
-plugin: 'block_content:3b52ceab-0198-4a67-b9a4-c87687d13a08'
+plugin: 'block_content:8cab5d48-08a8-4994-a176-874aacb91406'
 settings:
-  id: 'block_content:3b52ceab-0198-4a67-b9a4-c87687d13a08'
-  label: 'Startseite: Social-Media-Links'
+  id: 'block_content:8cab5d48-08a8-4994-a176-874aacb91406'
+  label: 'Startseite: Kulturdaten'
   provider: block_content
   label_display: '0'
   status: true

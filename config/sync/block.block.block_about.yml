@@ -1,23 +1,23 @@
-uuid: 1a925eb8-b533-4368-b531-6e0672b68585
+uuid: 00aff8ca-66ed-4e34-8c30-9cfa243ddb78
 langcode: de
 status: true
 dependencies:
   content:
-    - 'block_content:paragraphs:3b52ceab-0198-4a67-b9a4-c87687d13a08'
+    - 'block_content:paragraphs:05ef4934-46eb-4158-88cc-4374a07145de'
   module:
     - block_content
     - system
   theme:
     - relaunch2018
-id: block_socialmedialinks
+id: block_about
 theme: relaunch2018
 region: content
-weight: -6
+weight: -10
 provider: null
-plugin: 'block_content:3b52ceab-0198-4a67-b9a4-c87687d13a08'
+plugin: 'block_content:05ef4934-46eb-4158-88cc-4374a07145de'
 settings:
-  id: 'block_content:3b52ceab-0198-4a67-b9a4-c87687d13a08'
-  label: 'Startseite: Social-Media-Links'
+  id: 'block_content:05ef4934-46eb-4158-88cc-4374a07145de'
+  label: 'Startseite: Was ist Coding Da Vinci?'
   provider: block_content
   label_display: '0'
   status: true
