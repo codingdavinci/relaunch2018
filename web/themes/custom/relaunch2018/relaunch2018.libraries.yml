@@ -16,6 +16,7 @@ global-js:
     js/read-more.js: {}
     js/view-faq.js: {}
   dependencies:
+    - block_figures/block-figures
     - core/jquery
     - relaunch2018/bootstrap-js
     - relaunch2018/boxes

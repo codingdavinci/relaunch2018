@@ -1,0 +1,29 @@
+block-figures:
+  version: 0.1
+  js:
+    js/block-figures.js: {}
+  dependencies:
+    - core/jquery
+    - block_figures/jquery-countup
+    - block_figures/waypoints
+
+jquery-countup:
+  version: 1.0.1
+  license:
+    name: MIT
+    gpl-compatible: true
+  js:
+    ../../../libraries/jquery-countup/build/jquery.countUp.js: {}
+  dependencies:
+    - core/jquery
+
+waypoints:
+  version: 4.0.1
+  license:
+    name: MIT
+    url: https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
+    gpl-compatible: true
+  js:
+    ../../../libraries/waypoints/lib/jquery.waypoints.js: {}
+  dependencies:
+    - core/jquery

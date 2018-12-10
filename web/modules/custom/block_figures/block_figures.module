@@ -1,0 +1,50 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ *
+ * @param array $existing
+ * @param string $type
+ * @param string $theme
+ * @param string $path
+ * @return array
+ */
+function block_figures_theme(array $existing, $type, $theme, $path) {
+  return ['block_figures' =>
+    [
+      'variables' => [
+        'counts' => [],
+      ],
+      'template' => 'block-figures',
+    ],
+  ];
+}
+
+/**
+ * Preprocesses variables for block-figures.html.twig.
+ *
+ * @param array $variables
+ */
+function template_preprocess_block_figures(array &$variables) {
+  $variables['module_path'] = base_path() . drupal_get_path('module', 'block_figures');
+
+  $variables['counts']['datasets'] = \Drupal::entityQuery('node')
+    ->condition('status', 1)
+    ->condition('type', 'data_set')
+    ->count()
+    ->execute();
+
+  $variables['counts']['projects'] = \Drupal::entityQuery('node')
+    ->condition('status', 1)
+    ->condition('type', 'project')
+    ->count()
+    ->execute();
+
+  $variables['counts']['institutions'] = \Drupal::service('entity_type.manager')
+    ->getStorage('user')
+    ->getQuery()
+    ->condition('status', 1)
+    ->condition('roles', 'institution')
+    ->count()
+    ->execute();
+}

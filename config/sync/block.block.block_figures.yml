@@ -1,0 +1,26 @@
+uuid: a5b660da-198e-487c-b7b7-cb591b89f038
+langcode: de
+status: true
+dependencies:
+  module:
+    - block_figures
+    - system
+  theme:
+    - relaunch2018
+id: block_figures
+theme: relaunch2018
+region: content
+weight: 0
+provider: null
+plugin: block_figures
+settings:
+  id: block_figures
+  label: 'Startseite: Zahlen'
+  provider: block_figures
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

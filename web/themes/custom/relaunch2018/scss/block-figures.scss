@@ -1,0 +1,30 @@
+@import 'includes/base';
+
+.block-block-figures {
+  @include fontStyle(large);
+  font-weight: $font-weight-bold;
+
+  .block-figures--item {
+    &.block-figures--item--institutions {
+      color: $color-green-2
+    }
+
+    &.block-figures--item--datasets {
+      color: $color-red;
+    }
+
+    &.block-figures--item--projects {
+      color: $color-prize-1;
+    }
+
+    .block-figures--item--image {
+      img {
+        @include img-fluid;
+      }
+    }
+
+    .block-figures--item--number {
+      padding: 2rem;
+    }
+  }
+}
