@@ -1,5 +1,11 @@
 @import 'includes/base';
 
+.cke {
+  &.cke_combopanel {
+    min-width: 20rem;
+  }
+}
+
 #node-data-set-form,
 #node-project-form,
 #node-data-set-edit-form,
