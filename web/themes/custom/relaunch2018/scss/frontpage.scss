@@ -1,0 +1,13 @@
+@import 'includes/base';
+
+.path-frontpage {
+  .region-content {
+    & > *:not(.block-language) {
+      margin-bottom: 5rem;
+
+      &:last-child {
+        margin-bottom: $content-margin-bottom;
+      }
+    }
+  }
+}
