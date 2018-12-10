@@ -2,7 +2,7 @@
   'use strict';
 
   $(function() {
-    $('.node--type-article.node--view-mode-teaser').each(function() {
+    $('.node--type-article.node--view-mode-teaser, .node--type-article.node--view-mode-frontpage').each(function() {
       var $paragraphs = $(this).find('.field--name-field-paragraphs').find('p');
 
       if (!$paragraphs.length) {
@@ -10,6 +10,22 @@
       }
 
       var $links = $(this).find('.node__links').remove();
+
+      if (!$links.length) {
+        $links = $(this).find('.field--name-title').parent('a').clone();
+
+        if (!$links.length) {
+          return;
+        }
+
+        // TODO: Resolve when https://www.drupal.org/project/drupal/issues/2662898 is done.
+        $links = $('<div>').addClass('node__links').append(
+          $('<ul>').addClass('links inline').append(
+            $('<li class="node-readmore">').append($links.clone().text('…'))
+          )
+        );
+      }
+
       $paragraphs.last().append($links);
     });
   });

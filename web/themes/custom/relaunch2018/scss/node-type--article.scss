@@ -243,4 +243,31 @@
       padding-top: 0;
     }
   }
+
+  &.node--view-mode-frontpage {
+    .header {
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      @include fontStyle(large);
+    }
+
+    .node__content {
+      .field--name-field-paragraphs {
+        .field__item {
+          margin-bottom: 0;
+
+          .article-content > * {
+            padding-left: 0;
+            padding-right: 0;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
 }

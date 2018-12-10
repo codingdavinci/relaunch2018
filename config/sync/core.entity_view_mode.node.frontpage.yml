@@ -1,0 +1,10 @@
+uuid: 57b88410-a4c4-4cd7-99a2-db7ab2680469
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+id: node.frontpage
+label: Startseite
+targetEntityType: node
+cache: true

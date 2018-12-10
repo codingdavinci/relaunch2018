@@ -3,6 +3,7 @@ langcode: de
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.frontpage
     - core.entity_view_mode.node.teaser
     - node.type.article
     - node.type.event
@@ -61,7 +62,7 @@ display:
         type: 'entity:node'
         options:
           relationship: none
-          view_mode: teaser
+          view_mode: frontpage
       fields:
         title:
           id: title
@@ -220,6 +221,17 @@ display:
           offset: 0
       displays:
         page_1: page_1
+      style:
+        type: default
+        options: {  }
+      defaults:
+        style: false
+        row: false
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: teaser
     cache_metadata:
       max-age: -1
       contexts:
