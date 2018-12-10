@@ -1,0 +1,11 @@
+@import 'includes/base';
+
+.view-landing-page {
+  &.view-display-id-page_1 {
+    .view-content {
+      .views-row {
+        margin-bottom: 3rem;
+      }
+    }
+  }
+}
