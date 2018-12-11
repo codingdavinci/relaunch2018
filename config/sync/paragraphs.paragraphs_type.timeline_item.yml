@@ -1,0 +1,9 @@
+uuid: 444abc44-1c4f-4e10-9e0f-ac8e0230bba7
+langcode: de
+status: true
+dependencies: {  }
+id: timeline_item
+label: Zeitleisten-Element
+icon_uuid: null
+description: 'Element eines Zeitleisten-Abschnitts.'
+behavior_plugins: {  }

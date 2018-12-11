@@ -1,0 +1,44 @@
+uuid: 5aa9bbbd-1e86-4739-baf5-3945a7e01e3d
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.timeline_item.field_footer
+    - field.field.paragraph.timeline_item.field_heading
+    - field.field.paragraph.timeline_item.field_text
+    - paragraphs.paragraphs_type.timeline_item
+  module:
+    - text
+id: paragraph.timeline_item.default
+targetEntityType: paragraph
+bundle: timeline_item
+mode: default
+content:
+  field_footer:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_heading:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_text:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

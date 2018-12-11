@@ -1,0 +1,115 @@
+uuid: 88e5ac87-2dc8-40d4-a875-8b5ba8564c20
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_timeline_items
+    - paragraphs.paragraphs_type.timeline
+    - paragraphs.paragraphs_type.timeline_item
+  module:
+    - entity_reference_revisions
+id: paragraph.timeline.field_timeline_items
+field_name: field_timeline_items
+entity_type: paragraph
+bundle: timeline
+label: Elemente
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      timeline_item: timeline_item
+    target_bundles_drag_drop:
+      timeline_item:
+        enabled: true
+        weight: 30
+      attributed_audio_video:
+        weight: 31
+        enabled: false
+      attributed_image:
+        weight: 32
+        enabled: false
+      attribution:
+        weight: 33
+        enabled: false
+      box:
+        weight: 34
+        enabled: false
+      box_group:
+        weight: 35
+        enabled: false
+      data_set_event:
+        weight: 36
+        enabled: false
+      filesize:
+        weight: 37
+        enabled: false
+      grid:
+        weight: 38
+        enabled: false
+      grid_element:
+        weight: 39
+        enabled: false
+      image:
+        weight: 40
+        enabled: false
+      introtext:
+        weight: 41
+        enabled: false
+      jury:
+        weight: 42
+        enabled: false
+      jury_member:
+        weight: 43
+        enabled: false
+      logo:
+        weight: 44
+        enabled: false
+      logo_group:
+        weight: 45
+        enabled: false
+      logos:
+        weight: 46
+        enabled: false
+      prize:
+        weight: 47
+        enabled: false
+      prizes:
+        weight: 48
+        enabled: false
+      representative:
+        weight: 49
+        enabled: false
+      slideshow:
+        weight: 50
+        enabled: false
+      social_media:
+        weight: 51
+        enabled: false
+      team_member:
+        weight: 52
+        enabled: false
+      text:
+        weight: 53
+        enabled: false
+      textblock_left:
+        weight: 54
+        enabled: false
+      textblock_right:
+        weight: 55
+        enabled: false
+      timeline:
+        weight: 56
+        enabled: false
+      video:
+        weight: 57
+        enabled: false
+      winner:
+        weight: 58
+        enabled: false
+field_type: entity_reference_revisions

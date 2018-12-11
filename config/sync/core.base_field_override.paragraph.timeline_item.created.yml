@@ -1,0 +1,18 @@
+uuid: d00406a8-bb82-4487-84ec-4d4e33dfdb84
+langcode: de
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.timeline_item
+id: paragraph.timeline_item.created
+field_name: created
+entity_type: paragraph
+bundle: timeline_item
+label: 'Geschrieben am'
+description: 'Der Zeitpunkt, zu dem der Seitenabschnittstyp erstellt wurde.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

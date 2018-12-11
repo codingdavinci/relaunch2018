@@ -1,17 +1,17 @@
-uuid: bda25a08-78ad-4438-84b6-e653a511340b
+uuid: 798582c5-5569-4c3f-aadc-18e6373ff03f
 langcode: de
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_text_2
-    - paragraphs.paragraphs_type.timeline
+    - field.storage.paragraph.field_text
+    - paragraphs.paragraphs_type.timeline_item
   module:
     - text
-id: paragraph.timeline.field_text_2
-field_name: field_text_2
+id: paragraph.timeline_item.field_text
+field_name: field_text
 entity_type: paragraph
-bundle: timeline
-label: 'Text 2'
+bundle: timeline_item
+label: Text
 description: ''
 required: true
 translatable: true

@@ -1,0 +1,22 @@
+uuid: 081f8eb4-65fa-4cee-8df5-d57794a0b12c
+langcode: de
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.timeline_item
+id: paragraph.timeline_item.status
+field_name: status
+entity_type: paragraph
+bundle: timeline_item
+label: Veröffentlicht
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: An
+  off_label: Aus
+field_type: boolean

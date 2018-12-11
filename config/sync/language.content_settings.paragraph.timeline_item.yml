@@ -1,18 +1,18 @@
-uuid: af27672b-c5c3-4d0e-ac54-7ccffe4b454b
+uuid: 227c9da3-a854-4e90-b936-994d5bc14f1a
 langcode: de
 status: true
 dependencies:
   config:
-    - paragraphs.paragraphs_type.timeline
+    - paragraphs.paragraphs_type.timeline_item
   module:
     - content_translation
 third_party_settings:
   content_translation:
-    enabled: false
+    enabled: true
     bundle_settings:
       untranslatable_fields_hide: '0'
-id: paragraph.timeline
+id: paragraph.timeline_item
 target_entity_type_id: paragraph
-target_bundle: timeline
+target_bundle: timeline_item
 default_langcode: site_default
-language_alterable: false
+language_alterable: true
