@@ -1,0 +1,18 @@
+uuid: 09a127d4-87b5-433a-9c22-8ae9e7a558bd
+langcode: de
+status: true
+dependencies:
+  config:
+    - block_content.type.extended_page_header
+id: block_content.extended_page_header.moderation_state
+field_name: moderation_state
+entity_type: block_content
+bundle: extended_page_header
+label: 'Moderation state'
+description: 'Der Moderationsstatus dieses Inhalts.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

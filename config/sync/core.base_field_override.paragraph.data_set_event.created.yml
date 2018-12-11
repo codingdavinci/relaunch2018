@@ -1,0 +1,18 @@
+uuid: 1c6e1b23-85d4-4d77-bffd-9c69c9dc65e1
+langcode: de
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.data_set_event
+id: paragraph.data_set_event.created
+field_name: created
+entity_type: paragraph
+bundle: data_set_event
+label: 'Geschrieben am'
+description: 'Der Zeitpunkt, zu dem der Seitenabschnittstyp erstellt wurde.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

@@ -14,7 +14,7 @@ bundle: licenses
 label: Link
 description: 'Link zum vollständigen Lizenztext.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

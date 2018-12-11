@@ -1,0 +1,18 @@
+uuid: 7715ed7d-f476-45a8-9e8f-9774a2360a38
+langcode: de
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.prize
+id: paragraph.prize.created
+field_name: created
+entity_type: paragraph
+bundle: prize
+label: 'Geschrieben am'
+description: 'Der Zeitpunkt, zu dem der Seitenabschnittstyp erstellt wurde.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

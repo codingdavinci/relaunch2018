@@ -1,0 +1,18 @@
+uuid: 1960eafc-5405-48c0-86d9-bb3d45dc7b85
+langcode: de
+status: true
+dependencies:
+  config:
+    - block_content.type.paragraphs
+id: block_content.paragraphs.info
+field_name: info
+entity_type: block_content
+bundle: paragraphs
+label: Blockbeschreibung
+description: 'Eine kurze Beschreibung des Blocks.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,22 @@
+uuid: 46259fb9-9e8c-47b3-ae10-2affa50058e8
+langcode: de
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.introtext
+id: paragraph.introtext.status
+field_name: status
+entity_type: paragraph
+bundle: introtext
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: An
+  off_label: Aus
+field_type: boolean

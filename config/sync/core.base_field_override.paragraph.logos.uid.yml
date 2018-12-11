@@ -1,0 +1,20 @@
+uuid: 95983e80-388b-4ce2-950e-6159c05d0684
+langcode: de
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.logos
+id: paragraph.logos.uid
+field_name: uid
+entity_type: paragraph
+bundle: logos
+label: 'Geschrieben von'
+description: 'Die Benutzer-ID des Seitenabschnittsautors.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\paragraphs\Entity\Paragraph::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

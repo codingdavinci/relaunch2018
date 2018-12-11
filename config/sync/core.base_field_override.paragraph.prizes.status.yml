@@ -1,0 +1,22 @@
+uuid: 0da03008-04f8-426d-a5d3-457b9c7e8070
+langcode: de
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.prizes
+id: paragraph.prizes.status
+field_name: status
+entity_type: paragraph
+bundle: prizes
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: An
+  off_label: Aus
+field_type: boolean

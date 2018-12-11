@@ -1,0 +1,18 @@
+uuid: 6f4acfca-a8da-460a-8dea-e5bdae9db1b3
+langcode: de
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.jury_member
+id: paragraph.jury_member.created
+field_name: created
+entity_type: paragraph
+bundle: jury_member
+label: 'Geschrieben am'
+description: 'Der Zeitpunkt, zu dem der Seitenabschnittstyp erstellt wurde.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

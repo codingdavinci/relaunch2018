@@ -11,7 +11,7 @@ bundle: menu_link_content
 label: Beschreibung
 description: 'Wird beim Schweben über dem Menülink angezeigt.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

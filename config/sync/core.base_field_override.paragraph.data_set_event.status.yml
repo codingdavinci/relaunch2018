@@ -1,0 +1,22 @@
+uuid: 3e837b9f-2ea4-4898-9715-445b32eef5d4
+langcode: de
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.data_set_event
+id: paragraph.data_set_event.status
+field_name: status
+entity_type: paragraph
+bundle: data_set_event
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: An
+  off_label: Aus
+field_type: boolean

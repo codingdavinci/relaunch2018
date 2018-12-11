@@ -1,0 +1,22 @@
+uuid: 0f488044-61e0-4623-bca1-c642c71fac24
+langcode: de
+status: true
+dependencies:
+  config:
+    - block_content.type.paragraphs
+id: block_content.paragraphs.status
+field_name: status
+entity_type: block_content
+bundle: paragraphs
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: An
+  off_label: Aus
+field_type: boolean

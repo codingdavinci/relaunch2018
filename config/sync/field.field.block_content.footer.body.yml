@@ -11,10 +11,10 @@ id: block_content.footer.body
 field_name: body
 entity_type: block_content
 bundle: footer
-label: Body
+label: Inhalt
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

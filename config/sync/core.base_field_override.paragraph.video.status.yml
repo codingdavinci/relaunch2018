@@ -1,0 +1,22 @@
+uuid: dfd19d95-66f3-44c2-935b-c2518b823fef
+langcode: de
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.video
+id: paragraph.video.status
+field_name: status
+entity_type: paragraph
+bundle: video
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: An
+  off_label: Aus
+field_type: boolean

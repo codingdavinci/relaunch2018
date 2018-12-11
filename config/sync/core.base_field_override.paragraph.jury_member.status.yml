@@ -1,0 +1,22 @@
+uuid: cf461f6e-0d81-43a8-a8d7-b47de05e20de
+langcode: de
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.jury_member
+id: paragraph.jury_member.status
+field_name: status
+entity_type: paragraph
+bundle: jury_member
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: An
+  off_label: Aus
+field_type: boolean

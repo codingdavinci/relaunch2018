@@ -1,0 +1,22 @@
+uuid: 4c652728-f1ad-4b26-8428-5de53f088acf
+langcode: de
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.logos
+id: paragraph.logos.status
+field_name: status
+entity_type: paragraph
+bundle: logos
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: An
+  off_label: Aus
+field_type: boolean

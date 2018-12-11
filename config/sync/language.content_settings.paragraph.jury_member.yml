@@ -1,0 +1,18 @@
+uuid: e988f8fd-b232-46f5-be70-71a082564e19
+langcode: de
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.jury_member
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.jury_member
+target_entity_type_id: paragraph
+target_bundle: jury_member
+default_langcode: site_default
+language_alterable: true

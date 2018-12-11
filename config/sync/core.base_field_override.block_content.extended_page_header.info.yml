@@ -1,0 +1,18 @@
+uuid: b986a5b3-c92c-4775-86b5-a1959dc53a8a
+langcode: de
+status: true
+dependencies:
+  config:
+    - block_content.type.extended_page_header
+id: block_content.extended_page_header.info
+field_name: info
+entity_type: block_content
+bundle: extended_page_header
+label: Blockbeschreibung
+description: 'Eine kurze Beschreibung des Blocks.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

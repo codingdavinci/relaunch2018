@@ -1,0 +1,18 @@
+uuid: 4fe9268f-6e11-4a22-9069-1471e252f197
+langcode: de
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.prize
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.prize
+target_entity_type_id: paragraph
+target_bundle: prize
+default_langcode: site_default
+language_alterable: true

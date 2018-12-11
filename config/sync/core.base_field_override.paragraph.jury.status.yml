@@ -1,0 +1,22 @@
+uuid: 97af9cda-e602-4611-9a8b-9a6d6ba43fe9
+langcode: de
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.jury
+id: paragraph.jury.status
+field_name: status
+entity_type: paragraph
+bundle: jury
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: An
+  off_label: Aus
+field_type: boolean

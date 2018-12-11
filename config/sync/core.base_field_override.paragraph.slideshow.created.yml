@@ -1,0 +1,18 @@
+uuid: 1a39674e-a106-4842-8d63-a877ceab92b5
+langcode: de
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.slideshow
+id: paragraph.slideshow.created
+field_name: created
+entity_type: paragraph
+bundle: slideshow
+label: 'Geschrieben am'
+description: 'Der Zeitpunkt, zu dem der Seitenabschnittstyp erstellt wurde.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

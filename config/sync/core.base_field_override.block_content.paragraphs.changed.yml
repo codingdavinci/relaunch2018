@@ -1,0 +1,18 @@
+uuid: cba1c88c-96db-4708-92cf-1e62dc88d978
+langcode: de
+status: true
+dependencies:
+  config:
+    - block_content.type.paragraphs
+id: block_content.paragraphs.changed
+field_name: changed
+entity_type: block_content
+bundle: paragraphs
+label: Geändert
+description: 'Der Zeitpunkt zu dem der benutzerdefinierte Block zuletzt bearbeitet wurde.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

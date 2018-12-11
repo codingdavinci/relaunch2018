@@ -1,0 +1,20 @@
+uuid: 4c761d93-7ce4-4892-a642-429a939fba81
+langcode: de
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.data_set_event
+id: paragraph.data_set_event.uid
+field_name: uid
+entity_type: paragraph
+bundle: data_set_event
+label: 'Geschrieben von'
+description: 'Die Benutzer-ID des Seitenabschnittsautors.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\paragraphs\Entity\Paragraph::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

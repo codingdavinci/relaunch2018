@@ -1,0 +1,18 @@
+uuid: 04d3f543-f6a7-4aed-bb6d-14c7ad9320b1
+langcode: de
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.logo
+id: paragraph.logo.created
+field_name: created
+entity_type: paragraph
+bundle: logo
+label: 'Geschrieben am'
+description: 'Der Zeitpunkt, zu dem der Seitenabschnittstyp erstellt wurde.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

@@ -12,7 +12,7 @@ bundle: textblock_left
 label: Überschrift
 description: 'Optional in die rechte Spalte ausgelagerte Überschrift.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

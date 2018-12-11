@@ -1,0 +1,22 @@
+uuid: 0a0de72b-ffef-4abd-b740-ca1bc383853a
+langcode: de
+status: true
+dependencies:
+  config:
+    - block_content.type.extended_page_header
+id: block_content.extended_page_header.status
+field_name: status
+entity_type: block_content
+bundle: extended_page_header
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: An
+  off_label: Aus
+field_type: boolean

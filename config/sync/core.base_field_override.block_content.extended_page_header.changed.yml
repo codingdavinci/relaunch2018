@@ -1,0 +1,18 @@
+uuid: c2d7892e-0d9f-4e62-9285-1c51d186c2f7
+langcode: de
+status: true
+dependencies:
+  config:
+    - block_content.type.extended_page_header
+id: block_content.extended_page_header.changed
+field_name: changed
+entity_type: block_content
+bundle: extended_page_header
+label: Geändert
+description: 'Der Zeitpunkt zu dem der benutzerdefinierte Block zuletzt bearbeitet wurde.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

@@ -4,8 +4,15 @@ status: true
 dependencies:
   config:
     - block_content.type.extended_page_header
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
 id: block_content.extended_page_header
 target_entity_type_id: block_content
 target_bundle: extended_page_header
 default_langcode: site_default
-language_alterable: false
+language_alterable: true

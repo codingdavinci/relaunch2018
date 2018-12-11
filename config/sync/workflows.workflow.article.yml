@@ -12,14 +12,14 @@ type: content_moderation
 type_settings:
   states:
     draft:
-      label: Draft
       published: false
       default_revision: false
+      label: Entwurf
       weight: 0
     published:
-      label: Published
       published: true
       default_revision: true
+      label: Veröffentlicht
       weight: 1
   transitions:
     create_new_draft:

@@ -22,9 +22,9 @@ type_settings:
       default_revision: false
       weight: -5
     published:
-      label: Published
       published: true
       default_revision: true
+      label: Veröffentlicht
       weight: 0
   transitions:
     archive:

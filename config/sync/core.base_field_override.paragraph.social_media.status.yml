@@ -1,0 +1,22 @@
+uuid: 34e114d6-2d13-4aad-8e16-7af2a45372c8
+langcode: de
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.social_media
+id: paragraph.social_media.status
+field_name: status
+entity_type: paragraph
+bundle: social_media
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: An
+  off_label: Aus
+field_type: boolean

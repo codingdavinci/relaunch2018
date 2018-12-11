@@ -1,0 +1,20 @@
+uuid: 26aa4ae7-e03d-461b-95ab-bb1d38ff1da6
+langcode: de
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.timeline
+id: paragraph.timeline.uid
+field_name: uid
+entity_type: paragraph
+bundle: timeline
+label: 'Geschrieben von'
+description: 'Die Benutzer-ID des Seitenabschnittsautors.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\paragraphs\Entity\Paragraph::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

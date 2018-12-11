@@ -1,0 +1,22 @@
+uuid: 89b0d889-53e5-4b2b-a210-749cf6d4c66a
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.background_colors
+id: taxonomy_term.background_colors.status
+field_name: status
+entity_type: taxonomy_term
+bundle: background_colors
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: An
+  off_label: Aus
+field_type: boolean

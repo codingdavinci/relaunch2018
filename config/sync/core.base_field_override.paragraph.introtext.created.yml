@@ -1,0 +1,18 @@
+uuid: 5b9f5314-ac85-4992-aeaf-e7ac8e95b490
+langcode: de
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.introtext
+id: paragraph.introtext.created
+field_name: created
+entity_type: paragraph
+bundle: introtext
+label: 'Geschrieben am'
+description: 'Der Zeitpunkt, zu dem der Seitenabschnittstyp erstellt wurde.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created
