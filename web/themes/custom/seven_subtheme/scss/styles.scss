@@ -188,6 +188,48 @@
       }
     }
 
+    .field--name-field-audio-video {
+      h4 {
+        display: none;
+      }
+
+      table {
+        @include border;
+
+        border-collapse: separate;
+        padding: 0 20px;
+
+        thead {
+          display: none;
+        }
+
+        tbody {
+          tr {
+            &:hover {
+              background-color: transparent;
+            }
+
+            td {
+              .paragraph-top {
+                display: -ms-grid;
+                display: grid;
+
+                .paragraphs-icon-button-collapse {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      }
+      
+      .field--name-field-attribution {
+        .paragraph-top {
+          display: none;
+        }
+      }
+    }
+
     .field--widget-paragraphs {
       margin-bottom: 3em;
 

@@ -33,20 +33,33 @@
     }
 
     .article--main {
-
-      .field--name-field-attributed-image {
+      .article-content {
+        @include fontStyle(small);
         text-align: center;
 
-        .field--name-field-inline-image {
-          @include rounded;
-          @include boxShadow;
-          background: $white;
+        .field--name-field-attributed-image,
+        .node--type-project--audio-video {
           display: inline-block;
-          padding: 1rem;
+          text-align: right;
 
-          img {
+          .field--name-field-inline-image,
+          video {
             @include rounded;
-            @include img-fluid;
+            @include boxShadow;
+            background: $white;
+            padding: 1rem;
+            width: 480px;
+
+            img {
+              @include rounded;
+              @include img-fluid;
+            }
+          }
+
+          .field--name-field-audio-video {
+            & div {
+              display: inline;
+            }
           }
         }
       }

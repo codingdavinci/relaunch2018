@@ -1,0 +1,27 @@
+uuid: 2901937a-24ae-4f7a-bf88-4d65afa0c5e6
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_audio_video
+    - paragraphs.paragraphs_type.attributed_audio_video
+  module:
+    - file
+id: paragraph.attributed_audio_video.field_audio_video
+field_name: field_audio_video
+entity_type: paragraph
+bundle: attributed_audio_video
+label: 'Audiodatei oder Videodatei'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'mp3 mp4'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.project.field_acknowledge_privacy
     - field.field.node.project.field_attributed_image
+    - field.field.node.project.field_audio_video
     - field.field.node.project.field_datasets
     - field.field.node.project.field_description
     - field.field.node.project.field_event
@@ -31,7 +32,7 @@ third_party_settings:
         - field_license_code
         - field_license_media
       parent_name: ''
-      weight: 5
+      weight: 6
       format_type: html_element
       format_settings:
         label: Ergebnis
@@ -50,7 +51,7 @@ third_party_settings:
         - field_datasets
         - field_other_datasets
       parent_name: ''
-      weight: 7
+      weight: 8
       format_type: fieldset
       format_settings:
         label: 'Verwendete Datensätze'
@@ -69,7 +70,7 @@ third_party_settings:
       children:
         - field_team_members
       parent_name: ''
-      weight: 6
+      weight: 7
       format_type: fieldset
       format_settings:
         id: ''
@@ -96,6 +97,15 @@ content:
     third_party_settings: {  }
     type: entity_reference_revisions_entity_view
     region: content
+  field_audio_video:
+    type: entity_reference_revisions_entity_view
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
   field_datasets:
     type: entity_reference_entity_view
     weight: 8
@@ -106,14 +116,14 @@ content:
       link: false
     third_party_settings: {  }
   field_description:
-    weight: 4
+    weight: 5
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_event:
-    weight: 8
+    weight: 9
     label: visually_hidden
     settings:
       link: true
@@ -162,7 +172,7 @@ content:
     type: link
     region: content
   field_short_description:
-    weight: 3
+    weight: 4
     label: hidden
     settings:
       link_to_entity: false
@@ -170,7 +180,7 @@ content:
     type: string
     region: content
   field_tags:
-    weight: 9
+    weight: 10
     label: visually_hidden
     settings:
       link: false

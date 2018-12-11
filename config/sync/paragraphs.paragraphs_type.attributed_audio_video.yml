@@ -1,0 +1,9 @@
+uuid: 7edf990d-407e-49ba-ad5d-879f2b52577d
+langcode: de
+status: true
+dependencies: {  }
+id: attributed_audio_video
+label: Audio/Video
+icon_uuid: null
+description: 'Dateifeld zum Hochladen einer Audio- oder Videodatei mit Lizenzhinweis.'
+behavior_plugins: {  }

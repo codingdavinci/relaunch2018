@@ -1,6 +1,10 @@
 <?php
 
 use Drupal\block\Entity\Block;
+use Drupal\entity_reference_revisions\EntityReferenceRevisionsFieldItemList;
+use Drupal\entity_reference_revisions\Plugin\Field\FieldType\EntityReferenceRevisionsItem;
+use Drupal\file\Entity\File;
+use Drupal\image\Entity\ImageStyle;
 use Drupal\node\Entity\Node;
 use Drupal\paragraphs\Entity\Paragraph;
 
@@ -71,6 +75,52 @@ function relaunch2018_preprocess_node(array &$variables) {
       }
 
       $variables['award'] = $award;
+    }
+
+    /** @var EntityReferenceRevisionsFieldItemList $audioVideo */
+    $audioVideo = $node->get('field_audio_video');
+
+    if (($item = $audioVideo->get(0)) !== null) {
+      /** @var $item EntityReferenceRevisionsItem */
+      $paragraph = Paragraph::load($item->getValue()['target_id']);
+
+      $fileId = $paragraph->get('field_audio_video')->target_id;
+
+      if ($fileId === null) {
+        return;
+      }
+
+      if (($file = File::load($fileId)) === null) {
+        \Drupal::logger('relaunch2018')->error('Unable to load file with id ' . $fileId);
+      }
+      else {
+        $variables['audio_video'] = [
+          'mime_type' => $file->getMimeType(),
+          'url' => $file->url(),
+        ];
+      }
+
+      /** @var EntityReferenceRevisionsFieldItemList $image */
+      $image = $node->get('field_attributed_image');
+
+      if (($item = $image->get(0)) !== null) {
+        /** @var $item EntityReferenceRevisionsItem */
+        $paragraph = Paragraph::load($item->getValue()['target_id']);
+
+        $fileId = $paragraph->get('field_inline_image')->target_id;
+
+        if ($fileId !== null) {
+          if (($file = File::load($fileId)) === null) {
+            \Drupal::logger('relaunch2018')->error('Unable to load file with id ' . $fileId);
+          }
+          else {
+            $imageStyle = ImageStyle::load('header');
+            $imageStyle->buildUri($file->getFileUri());
+            $variables['audio_video']['poster']
+              = file_create_url($imageStyle->buildUri($file->getFileUri()));
+          }
+        }
+      }
     }
   }
 }

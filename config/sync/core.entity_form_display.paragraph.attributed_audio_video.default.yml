@@ -1,0 +1,45 @@
+uuid: bcffd362-56e1-4256-be7e-b7f07c585d8a
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.attributed_audio_video.field_attribution
+    - field.field.paragraph.attributed_audio_video.field_audio_video
+    - paragraphs.paragraphs_type.attributed_audio_video
+  module:
+    - file
+    - paragraphs
+id: paragraph.attributed_audio_video.default
+targetEntityType: paragraph
+bundle: attributed_audio_video
+mode: default
+content:
+  field_attribution:
+    type: paragraphs
+    weight: 1
+    settings:
+      title: Seitenabschnitt
+      title_plural: Seitenabschnitte
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
+    third_party_settings: {  }
+    region: content
+  field_audio_video:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

@@ -1,0 +1,26 @@
+uuid: 31d68500-aeda-4d58-ab72-7670eb3edc48
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.attributed_audio_video.field_attribution
+    - field.field.paragraph.attributed_audio_video.field_audio_video
+    - paragraphs.paragraphs_type.attributed_audio_video
+  module:
+    - entity_reference_revisions
+id: paragraph.attributed_audio_video.default
+targetEntityType: paragraph
+bundle: attributed_audio_video
+mode: default
+content:
+  field_attribution:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_audio_video: true
