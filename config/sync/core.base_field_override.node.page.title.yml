@@ -1,0 +1,18 @@
+uuid: dc20ebae-961e-490b-9056-425643b01fac
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.page
+id: node.page.title
+field_name: title
+entity_type: node
+bundle: page
+label: Titel
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

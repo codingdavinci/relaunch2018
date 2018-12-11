@@ -17,7 +17,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 2
+    weight: 3
     settings:
       rows: 9
       summary_rows: 3
@@ -25,21 +25,28 @@ content:
     third_party_settings: {  }
     region: content
   field_event:
-    weight: 1
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_files:
-    weight: 3
+    weight: 4
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
     type: file_generic
     region: content
+  langcode:
+    type: language_select
+    weight: 0
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 0
+    weight: 1
     region: content
     settings:
       size: 60
@@ -47,7 +54,6 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
-  langcode: true
   moderation_state: true
   path: true
   promote: true

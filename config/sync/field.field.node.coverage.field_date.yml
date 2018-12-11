@@ -11,7 +11,7 @@ id: node.coverage.field_date
 field_name: field_date
 entity_type: node
 bundle: coverage
-label: date
+label: Datum
 description: 'Datum der Veröffentlichung'
 required: true
 translatable: false

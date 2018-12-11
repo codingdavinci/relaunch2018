@@ -66,11 +66,12 @@ third_party_settings:
       weight: 1
       format_type: tab
       format_settings:
-        id: ''
-        classes: ''
+        label: Mediendateien
         formatter: closed
         description: ''
-        required_fields: true
+        id: ''
+        classes: ''
+        required_fields: false
       label: Mediendateien
       region: content
     group_metadata:
@@ -86,11 +87,12 @@ third_party_settings:
       weight: 2
       format_type: tab
       format_settings:
-        id: ''
-        classes: ''
+        label: Metadaten
         formatter: closed
         description: ''
-        required_fields: true
+        id: ''
+        classes: ''
+        required_fields: false
       label: Metadaten
       region: content
     group_links:
@@ -102,11 +104,12 @@ third_party_settings:
       weight: 3
       format_type: tab
       format_settings:
-        id: ''
-        classes: ''
+        label: 'Zugang/Links zu den Daten'
         formatter: closed
         description: ''
-        required_fields: true
+        id: ''
+        classes: ''
+        required_fields: false
       label: 'Zugang/Links zu den Daten'
       region: content
     group_general:

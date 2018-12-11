@@ -6,6 +6,21 @@
   }
 }
 
+.node-form {
+  .layout-region-node-main {
+    & > .form-wrapper {
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+.form-type-entity-autocomplete,
+.form-type-url {
+  & > .description {
+    display: none;
+  }
+}
+
 #node-data-set-form,
 #node-project-form,
 #node-data-set-edit-form,
@@ -476,21 +491,15 @@
     }
 
   }
-
-  .form-type-url {
-    .description {
-      display: none;
-    }
-  }
 }
 
-#node-event-form,
-#node-event-edit-form,
-#node-page-form,
-#node-page-edit-form {
-  .layout-region-node-main {
-    & > .form-wrapper {
-      margin-bottom: 3rem;
+#node-faq-form,
+#node-faq-edit-form {
+  .field--name-field-links {
+    & > div {
+      & > h4 {
+        display: none;
+      }
     }
   }
 }

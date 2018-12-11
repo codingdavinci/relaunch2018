@@ -11,7 +11,7 @@ id: node.coverage.field_link
 field_name: field_link
 entity_type: node
 bundle: coverage
-label: link
+label: Link
 description: ''
 required: true
 translatable: false
