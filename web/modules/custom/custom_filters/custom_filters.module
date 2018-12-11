@@ -13,7 +13,7 @@ use Drupal\views\ViewExecutable;
  */
 const CUSTOM_FILTERS_VIEW_IDS = [
   'data_sets' => ['page_1', 'page_2', 'data_export_1'],
-  'projects' => ['page_1', 'page_2', 'data_export_1'],
+  'projects' => ['page_1', 'page_2', 'data_export_1', 'block_3'],
 ];
 
 /**
@@ -72,7 +72,10 @@ function custom_filters_views_post_build(ViewExecutable $view) {
       return;
     }
 
-    if ($view->id() === 'projects' && $currentViewInfo['display'] === 'page_1') {
+    if ($view->id() === 'projects' && (
+      $currentViewInfo['display'] === 'page_1'
+      || $currentViewInfo['display'] === 'block_3'
+    )) {
       /** @var \Drupal\Core\Database\Query\Select $originalSelect */
       $originalSelect = $view->build_info['query'];
 
@@ -90,10 +93,14 @@ function custom_filters_views_post_build(ViewExecutable $view) {
       // sorting.
       $i = 0;
       foreach ($orderBy as $column => $direction) {
-        $newOrderBy[$column] = $direction;
-        if ($i++ === 0) {
+        if (
+          $i === 0 && $currentViewInfo['display'] === 'block_3'
+          || $i === 1 && $currentViewInfo['display'] === 'page_1'
+        ) {
           $newOrderBy['node_field_data_paragraph__field_project_nid'] = 'DESC';
         }
+        $newOrderBy[$column] = $direction;
+        $i++;
       }
 
       $orderBy = $newOrderBy;

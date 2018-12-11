@@ -2,12 +2,12 @@
   'use strict';
 
   $(function() {
-    $('.paragraph--type--box-group').each(function() {
+    $('.paragraph--type--box-group, .view-display-id-block_3').each(function() {
       var $container = $(this);
-      var $nav = $container.children('.boxes--nav');
-      var $left = $nav.children('.boxes--nav--left');
-      var $right = $nav.children('.boxes--nav--right');
-      var $boxes = $container.children('.field--name-field-boxes');
+      var $nav = $container.find('.horizontal-nav');
+      var $left = $nav.children('.horizontal-nav--left');
+      var $right = $nav.children('.horizontal-nav--right');
+      var $boxes = $container.children('.field--name-field-boxes, .view-content');
 
       $left.add($right).on('click', function() {
         navigate($container, this === $left.get(0) ? 'left' : 'right');
@@ -36,11 +36,11 @@
    * @param {string} direction
    */
   function navigate($container, direction) {
-    var $nav = $container.children('.boxes--nav');
-    var $boxes = $container.children('.field--name-field-boxes');
+    var $nav = $container.find('.horizontal-nav');
+    var $boxes = $container.children('.field--name-field-boxes, .view-content');
 
     if (
-      $nav.children('.boxes--nav--' + direction).hasClass('inactive')
+      $nav.children('.horizontal-nav--' + direction).hasClass('inactive')
       || $boxes.is(':animated')
     ) {
       // Prevent navigating too far.
@@ -73,10 +73,10 @@
    * @param {jQuery} $container
    */
   function updateNavigation($container) {
-    var $nav = $container.children('.boxes--nav');
-    var $left = $nav.children('.boxes--nav--left');
-    var $right = $nav.children('.boxes--nav--right');
-    var $boxes = $container.children('.field--name-field-boxes');
+    var $nav = $container.find('.horizontal-nav');
+    var $left = $nav.children('.horizontal-nav--left');
+    var $right = $nav.children('.horizontal-nav--right');
+    var $boxes = $container.children('.field--name-field-boxes, .view-content');
     var boxWidth = $boxes.children().first().width();
 
     $left.toggleClass(

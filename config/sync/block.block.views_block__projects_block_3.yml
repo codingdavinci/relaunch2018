@@ -1,0 +1,30 @@
+uuid: 81c9c9da-fbbf-47c3-8f83-438c8e5faba4
+langcode: de
+status: true
+dependencies:
+  config:
+    - views.view.projects
+  module:
+    - system
+    - views
+  theme:
+    - relaunch2018
+id: views_block__projects_block_3
+theme: relaunch2018
+region: content
+weight: -7
+provider: null
+plugin: 'views_block:projects-block_3'
+settings:
+  id: 'views_block:projects-block_3'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

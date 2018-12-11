@@ -189,7 +189,7 @@ display:
             label: ''
           granularity: second
           plugin_id: datetime
-      title: Events
+      title: ''
       header: {  }
       footer: {  }
       empty: {  }

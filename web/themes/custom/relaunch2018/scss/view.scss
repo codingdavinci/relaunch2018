@@ -210,4 +210,98 @@
     }
   }
 
+  &.view-projects.view-display-id-block_3 {
+    .view-header {
+      margin-bottom: 1rem;
+    }
+
+    .view-horizontal-navigation {
+      display: none;
+
+      @include media-breakpoint-up(sm) {
+        display: block;
+
+        @media #{$ie} {
+          display: none;
+        }
+      }
+    }
+
+    .view-content {
+      @include fontStyle(small);
+
+      @include media-breakpoint-up(sm) {
+        display: grid;
+        grid-auto-columns: 36%;
+        grid-auto-flow: column;
+        grid-column-gap: 30px;
+        grid-template-rows: repeat(10, 15px);
+        position: relative;
+      }
+
+      @include media-breakpoint-up(md) {
+        grid-auto-columns: 30%;
+      }
+
+      @include media-breakpoint-up(lg) {
+        grid-auto-columns: 25%;
+        grid-template-rows: repeat(10, 20px);
+      }
+
+      @include media-breakpoint-up(xl) {
+        grid-auto-columns: 20%;
+      }
+
+      .views-row {
+        grid-column-start: 2;
+        grid-row-start: 2;
+        grid-row-end: 7;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+
+        @include media-breakpoint-up(sm) {
+          margin-bottom: 0;
+        }
+
+        @media #{$ie} {
+          margin-bottom: 2rem;
+        }
+
+        .views-field-field-attributed-image {
+          height: 100%;
+
+          .field-content {
+            height: 100%;
+
+            .paragraph--type--attributed-image {
+              height: 100%;
+
+              .field--name-field-inline-image {
+                height: 100%;
+
+                img {
+                  max-height: 100%;
+                  width: auto;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .more-link {
+      margin-top: 1rem;
+      text-align: left;
+
+      a {
+        @include rounded;
+        background-color: $color-orange;
+        color: $color-white;
+        padding: .4rem 2rem;
+      }
+    }
+  }
+
 }

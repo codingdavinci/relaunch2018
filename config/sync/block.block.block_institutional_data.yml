@@ -12,7 +12,7 @@ dependencies:
 id: block_institutional_data
 theme: relaunch2018
 region: content
-weight: -7
+weight: -8
 provider: null
 plugin: 'block_content:8cab5d48-08a8-4994-a176-874aacb91406'
 settings:

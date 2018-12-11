@@ -1,0 +1,38 @@
+@import 'includes/base';
+
+.horizontal-nav {
+  margin-bottom: 1em;
+  text-align: right;
+
+  @media #{$ie} {
+    display: none;
+  }
+
+  & > a {
+    &:hover {
+      text-decoration: none;
+    }
+
+    &.inactive {
+      opacity: .2;
+    }
+
+    & > span {
+      &:before {
+        @include icon;
+        content: '\e825';
+        display: inline-block;
+        margin: 0;
+      }
+    }
+
+    &.horizontal-nav--left {
+      & > span {
+        &:before {
+          margin-right: 1em;
+          transform: scaleX(-1);
+        }
+      }
+    }
+  }
+}

@@ -19,7 +19,7 @@ global-js:
     - block_figures/block-figures
     - core/jquery
     - relaunch2018/bootstrap-js
-    - relaunch2018/boxes
+    - relaunch2018/horizontal-nav
     - relaunch2018/carousel
     - relaunch2018/jquery-easing
 
@@ -31,10 +31,10 @@ bootstrap-js:
     - core/jquery
     - relaunch2018/popper-js
 
-boxes:
+horizontal-nav:
   version: 1.x
   js:
-    js/boxes.js: {}
+    js/horizontal-nav.js: {}
   depedencies:
     - core/jquery
     - relaunch2018/hammerjs

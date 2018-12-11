@@ -12,12 +12,12 @@
     'field--label-' ~ label_display,
   ]
 %}
-<div class="boxes--nav">
-  <a href="#boxes-{{ uuid }}" class="boxes--nav--left" role="button">
-    <span class="boxes--nav--prev--icon"></span>
+<div class="horizontal-nav">
+  <a href="#boxes-{{ uuid }}" class="horizontal-nav--left" role="button">
+    <span class="horizontal-nav--prev--icon"></span>
   </a>
-  <a href="#boxes-{{ uuid }}" class="boxes--nav--right" role="button">
-    <span class="boxes--nav--next--icon"></span>
+  <a href="#boxes-{{ uuid }}" class="horizontal-nav--right" role="button">
+    <span class="horizontal-nav--next--icon"></span>
   </a>
 </div>
 <div{{ attributes.addClass(classes, 'field__items') }} id="boxes-{{ uuid }}">

@@ -1,39 +1,6 @@
 @import 'includes/base';
 
 .paragraph--type--box-group {
-  .boxes--nav {
-    margin-bottom: 1em;
-    text-align: right;
-
-    @media #{$ie} {
-      display: none;
-    }
-
-    & > a {
-      &.inactive {
-        opacity: .2;
-      }
-
-      & > span {
-        &:before {
-          @include icon;
-          content: '\e825';
-          display: inline-block;
-          margin: 0;
-        }
-      }
-
-      &.boxes--nav--left {
-        & > span {
-          &:before {
-            margin-right: 1em;
-            transform: scaleX(-1);
-          }
-        }
-      }
-    }
-  }
-
   .field--name-field-boxes {
     display: grid;
     grid-auto-columns: 100%;
