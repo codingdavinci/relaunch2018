@@ -13,6 +13,7 @@ dependencies:
     - paragraphs.paragraphs_type.text
     - paragraphs.paragraphs_type.textblock_left
     - paragraphs.paragraphs_type.textblock_right
+    - paragraphs.paragraphs_type.timeline
     - paragraphs.paragraphs_type.video
   module:
     - entity_reference_revisions
@@ -31,9 +32,10 @@ settings:
   handler_settings:
     negate: 0
     target_bundles:
-      grid: grid
       box: box
+      grid: grid
       box_group: box_group
+      timeline: timeline
       logos: logos
       slideshow: slideshow
       text: text
@@ -47,15 +49,18 @@ settings:
       attribution:
         weight: 25
         enabled: false
-      grid:
+      box:
         enabled: true
         weight: 26
-      box:
+      grid:
         enabled: true
         weight: 26
       box_group:
         enabled: true
         weight: 27
+      timeline:
+        enabled: true
+        weight: 28
       data_set_event:
         weight: 28
         enabled: false
@@ -115,5 +120,8 @@ settings:
         weight: 45
       winner:
         weight: 46
+        enabled: false
+      social_media:
+        weight: 48
         enabled: false
 field_type: entity_reference_revisions

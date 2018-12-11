@@ -1,0 +1,9 @@
+uuid: 16e97dbc-218a-4386-a7c0-699b43037d9b
+langcode: de
+status: true
+dependencies: {  }
+id: timeline
+label: Zeitleiste
+icon_uuid: null
+description: 'Als Zeitleiste arrangierter Abschnitt mit bis zu vier Blöcken.'
+behavior_plugins: {  }

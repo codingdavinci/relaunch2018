@@ -1,0 +1,193 @@
+uuid: 361cf2df-9f94-4b9d-a31f-d66e1198fbb2
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.timeline.field_footer_1
+    - field.field.paragraph.timeline.field_footer_2
+    - field.field.paragraph.timeline.field_footer_3
+    - field.field.paragraph.timeline.field_footer_4
+    - field.field.paragraph.timeline.field_heading_1
+    - field.field.paragraph.timeline.field_heading_2
+    - field.field.paragraph.timeline.field_heading_3
+    - field.field.paragraph.timeline.field_heading_4
+    - field.field.paragraph.timeline.field_text_1
+    - field.field.paragraph.timeline.field_text_2
+    - field.field.paragraph.timeline.field_text_3
+    - field.field.paragraph.timeline.field_text_4
+    - paragraphs.paragraphs_type.timeline
+  module:
+    - field_group
+    - text
+third_party_settings:
+  field_group:
+    group_box_1:
+      children:
+        - field_heading_1
+        - field_text_1
+        - field_footer_1
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: group--box-1
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Box 1'
+      region: content
+    group_box_2:
+      children:
+        - field_heading_2
+        - field_text_2
+        - field_footer_2
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: group--box-2
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Box 2'
+      region: content
+    group_box_3:
+      children:
+        - field_heading_3
+        - field_text_3
+        - field_footer_3
+      parent_name: ''
+      weight: 2
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: group--box-3
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Box 3'
+      region: content
+    group_box:
+      children:
+        - field_heading_4
+        - field_text_4
+        - field_footer_4
+      parent_name: ''
+      weight: 3
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: group--box-4
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Box 4'
+      region: content
+id: paragraph.timeline.default
+targetEntityType: paragraph
+bundle: timeline
+mode: default
+content:
+  field_footer_1:
+    weight: 6
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_footer_2:
+    weight: 7
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_footer_3:
+    weight: 8
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_footer_4:
+    weight: 9
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_heading_1:
+    weight: 4
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_heading_2:
+    weight: 5
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_heading_3:
+    weight: 6
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_heading_4:
+    weight: 7
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_text_1:
+    weight: 5
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_text_2:
+    weight: 6
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_text_3:
+    weight: 7
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_text_4:
+    weight: 8
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

@@ -1,0 +1,21 @@
+uuid: 7c5a18f3-5c05-4bb5-a54d-f07bbd3498fa
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_footer_4
+    - paragraphs.paragraphs_type.timeline
+  module:
+    - text
+id: paragraph.timeline.field_footer_4
+field_name: field_footer_4
+entity_type: paragraph
+bundle: timeline
+label: 'Fußzeile 4'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

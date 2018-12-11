@@ -1,0 +1,21 @@
+uuid: cc9ae56c-6bcc-4cb8-a7ef-8fcad3fa6640
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_1
+    - paragraphs.paragraphs_type.timeline
+  module:
+    - text
+id: paragraph.timeline.field_text_1
+field_name: field_text_1
+entity_type: paragraph
+bundle: timeline
+label: 'Text 1'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

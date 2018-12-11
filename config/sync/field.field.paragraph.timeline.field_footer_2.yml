@@ -1,0 +1,21 @@
+uuid: 431854ec-9f4f-4648-a598-59a0f8bd38e9
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_footer_2
+    - paragraphs.paragraphs_type.timeline
+  module:
+    - text
+id: paragraph.timeline.field_footer_2
+field_name: field_footer_2
+entity_type: paragraph
+bundle: timeline
+label: 'Fußzeile 2'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

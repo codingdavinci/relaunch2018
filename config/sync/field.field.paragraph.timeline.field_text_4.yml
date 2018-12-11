@@ -1,0 +1,21 @@
+uuid: f1e2f55a-f21e-4a96-90bf-24702298448e
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_4
+    - paragraphs.paragraphs_type.timeline
+  module:
+    - text
+id: paragraph.timeline.field_text_4
+field_name: field_text_4
+entity_type: paragraph
+bundle: timeline
+label: 'Text 4'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

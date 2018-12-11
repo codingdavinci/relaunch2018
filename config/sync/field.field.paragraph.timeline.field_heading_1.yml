@@ -1,0 +1,19 @@
+uuid: 85833240-a93b-46c6-b886-d9aa48e30a0c
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_heading_1
+    - paragraphs.paragraphs_type.timeline
+id: paragraph.timeline.field_heading_1
+field_name: field_heading_1
+entity_type: paragraph
+bundle: timeline
+label: 'Überschrift 1'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
