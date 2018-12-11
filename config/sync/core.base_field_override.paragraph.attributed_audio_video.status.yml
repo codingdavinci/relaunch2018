@@ -1,0 +1,22 @@
+uuid: 4157b1c2-1e37-4695-be1e-0baca90046ec
+langcode: de
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.attributed_audio_video
+id: paragraph.attributed_audio_video.status
+field_name: status
+entity_type: paragraph
+bundle: attributed_audio_video
+label: Veröffentlicht
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: An
+  off_label: Aus
+field_type: boolean

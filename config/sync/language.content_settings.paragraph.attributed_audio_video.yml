@@ -1,9 +1,9 @@
-uuid: 3d5c8ca5-559d-4d0e-a96e-b6dea054a753
+uuid: ef4887a9-d3a1-48f2-aef0-b3e9c3d9113b
 langcode: de
 status: true
 dependencies:
   config:
-    - taxonomy.vocabulary.metadata_file_types
+    - paragraphs.paragraphs_type.attributed_audio_video
   module:
     - content_translation
 third_party_settings:
@@ -11,8 +11,8 @@ third_party_settings:
     enabled: false
     bundle_settings:
       untranslatable_fields_hide: '0'
-id: taxonomy_term.metadata_file_types
-target_entity_type_id: taxonomy_term
-target_bundle: metadata_file_types
+id: paragraph.attributed_audio_video
+target_entity_type_id: paragraph
+target_bundle: attributed_audio_video
 default_langcode: site_default
-language_alterable: false
+language_alterable: true
