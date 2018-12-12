@@ -25,19 +25,15 @@ global-js:
 
 bootstrap-js:
   version: 4.1
+  license:
+    name: MIT
+    url: https://github.com/twbs/bootstrap/blob/v4.0.0/LICENSE
+    gpl-compatible: true
   js:
     ../../../libraries/bootstrap/dist/js/bootstrap.js: {}
   dependencies:
     - core/jquery
     - relaunch2018/popper-js
-
-horizontal-nav:
-  version: 1.x
-  js:
-    js/horizontal-nav.js: {}
-  depedencies:
-    - core/jquery
-    - relaunch2018/hammerjs
 
 carousel:
   version: 1.x
@@ -56,19 +52,46 @@ cdv-font:
 
 fontawesome:
   version: 5.5.0
+  license:
+    name: SIL OFL 1.1
+    url: https://scripts.sil.org/OFL
+    gpl-compatible: true
   css:
     theme:
       ../../../libraries/fortawesome--fontawesome-free/css/all.css: {}
 
 hammerjs:
+  version: 2.0.8
+  license:
+    name: MIT
+    url: https://github.com/twbs/bootstrap/blob/v4.0.0/LICENSE
+    gpl-compatible: true
   js:
     ../../../libraries/hammerjs/hammer.js: {}
 
+horizontal-nav:
+  version: 1.x
+  js:
+    js/horizontal-nav.js: {}
+  depedencies:
+    - core/jquery
+    - relaunch2018/hammerjs
+
 jquery-easing:
+  version: 1.4.1
+  license:
+    name: BSD-3-Clause
+    url: https://github.com/gdsmith/jquery.easing/blob/master/LICENSE
+    gpl-compatible: true
   js:
     ../../../libraries/jquery.easing/jquery.easing.js: {}
 
 popper-js:
+  version: 1.14.6
+  license:
+    name: MIT
+    url: https://github.com/FezVrasta/popper.js/blob/master/LICENSE.md
+    gpl-compatible: true
   js:
     ../../../libraries/popper.js/dist/umd/popper.js: {}
   dependencies:
