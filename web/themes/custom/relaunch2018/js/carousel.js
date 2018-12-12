@@ -1,3 +1,7 @@
+/**
+ * @file
+ * Enhancements for bootstrap's carousel.
+ */
 (function($, Hammer, window) {
   'use strict';
 

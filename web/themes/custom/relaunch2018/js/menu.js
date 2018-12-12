@@ -1,3 +1,7 @@
+/**
+ * @file
+ * Main menu behaviour.
+ */
 (function($, Hammer, window) {
   'use strict';
 

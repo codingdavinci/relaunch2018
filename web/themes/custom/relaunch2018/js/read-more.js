@@ -1,3 +1,8 @@
+/**
+ * @file
+ * Puts the "read more" links from below a trimmed article teaser text to the
+ * end of the article teaser text for displaying it inline with the text.
+ */
 (function($) {
   'use strict';
 

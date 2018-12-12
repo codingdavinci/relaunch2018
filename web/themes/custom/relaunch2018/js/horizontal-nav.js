@@ -1,3 +1,7 @@
+/**
+ * @file
+ * Provides horizontal navigation (left/right arrows) on grouped components.
+ */
 (function($, Hammer, window) {
   'use strict';
 

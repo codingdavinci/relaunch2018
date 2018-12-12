@@ -1,3 +1,7 @@
+/**
+ * @file
+ * FAQ view interaction behaviour.
+ */
 (function($) {
   'use strict';
 
