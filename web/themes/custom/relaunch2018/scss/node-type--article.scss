@@ -30,7 +30,7 @@
     }
   }
 
-  .article-content {
+  .article--content-block {
     a {
       font-weight: $font-weight-semi-bold;
     }
@@ -64,7 +64,7 @@
       padding-top: 500px;
     }
 
-    .article--main {
+    .article--header {
       z-index: 1;
 
       .node__submitted {
@@ -76,6 +76,10 @@
       h1 {
         color: $color-gray-1;
         margin-bottom: 10px;
+      }
+
+      h3 {
+        @include fontStyle(large);
       }
 
       .field--name-field-tags {
@@ -105,7 +109,7 @@
         }
       }
 
-      &> .article-content {
+      & > .article--content-block {
         @include border-top-radius($border-radius);
 
         padding: 20px 20px 50px 20px;
@@ -151,16 +155,16 @@
   &.node--view-mode-teaser {
     color: $color-gray-1;
 
-    .header {
+    .article--header--above {
       margin-bottom: 10px;
 
-      .date {
+      .article--date {
         @include fontStyle(small);
         display: inline;
         margin-right: 1rem;
       }
 
-      .tags {
+      .article--tags {
         @include fontStyle(small);
         display: inline;
 
@@ -220,12 +224,12 @@
     padding-top: 15px;
 
     @include media-breakpoint-up(md) {
-      .article-content {
+      .article--content-block {
         background-color: transparent;
       }
     }
 
-    .article--main-image {
+    .article--header-image {
       position: static;
 
       @include media-breakpoint-up(md) {
@@ -245,7 +249,7 @@
   }
 
   &.node--view-mode-frontpage {
-    .header {
+    .article--header--above {
       margin-bottom: 1rem;
     }
 
@@ -258,7 +262,7 @@
         .field__item {
           margin-bottom: 0;
 
-          .article-content > * {
+          .article--content-block > * {
             padding-left: 0;
             padding-right: 0;
 

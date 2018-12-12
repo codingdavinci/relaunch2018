@@ -16,18 +16,20 @@
 %}
 {{ attach_library('classy/node') }}
 <article{{ attributes.addClass(classes) }}>
-  <div class="col-12 header">
-    <div class="date">
-      {{ node.createdtime|format_date('date_short') }}
+  <div class="article--header">
+    <div class="col-12 article--header--above">
+      <div class="article--date">
+        {{ node.createdtime|format_date('date_short') }}
+      </div>
     </div>
-  </div>
 
-  <div class="col-12">
-    {{ title_prefix }}
-    <h3{{ title_attributes }}>
-      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-    </h3>
-    {{ title_suffix }}
+    <div class="col-12">
+      {{ title_prefix }}
+      <h3{{ title_attributes }}>
+        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+      </h3>
+      {{ title_suffix }}
+    </div>
   </div>
 
   <div class="col-12">

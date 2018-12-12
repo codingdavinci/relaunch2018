@@ -62,7 +62,7 @@
     </div>
   {% else %}
     {% set item = items[0] %}
-    <div{{ attributes.addClass(classes, ['field__item', 'article-content', 'd-none', 'd-md-block']) }}>
+    <div{{ attributes.addClass(classes, ['field__item', 'article--content-block', 'd-none', 'd-md-block']) }}>
       {{ item.content }}
     </div>
   {% endif %}

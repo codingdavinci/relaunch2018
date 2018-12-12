@@ -7,7 +7,7 @@
     margin-top: 4rem;
   }
 
-  .article--main-image {
+  .article--header-image {
     .field--name-field-attributed-image {
       .field--name-field-inline-image {
         @include border-radius(10px);
@@ -32,8 +32,8 @@
       padding-top: 100px;
     }
 
-    .article--main {
-      .article-content {
+    .article--header {
+      .article--content-block {
         @include fontStyle(small);
         text-align: center;
 

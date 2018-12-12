@@ -19,15 +19,15 @@
 <article{{ attributes.addClass(classes) }}>
   {{ content.content_moderation_control }}
 
-  <div class="article--main-image d-none d-md-block">
+  <div class="article--header-image d-none d-md-block">
     <div class="container">
       {{ content.header_image }}
     </div>
   </div>
 
   <div class="article--content-container row">
-    <div class="article--main col-sm-10 offset-sm-1 col-md-9 offset-md-2">
-      <div class="article-content">
+    <div class="article--header col-sm-10 offset-sm-1 col-md-9 offset-md-2">
+      <div class="article--content-block">
         <div class="node--type-project--audio-video">
           {% if content.field_audio_video['#items'] is not empty %}
             <video controls poster="{{ audio_video.poster }}">

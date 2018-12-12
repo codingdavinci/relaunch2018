@@ -12,7 +12,7 @@
     background: transparent;
   }
 
-  .date {
+  .article--date {
     @include fontStyle(small);
     color: $color-gray-1;
     line-height: 1;
@@ -28,7 +28,7 @@
     margin-bottom: 20px;
   }
 
-  .article--main {
+  .article--header {
     margin-bottom: 15px;
 
     h3 {
@@ -42,7 +42,7 @@
     }
   }
 
-  .article-content {
+  .article--content-block {
     @include rounded;
 
     padding: 7px;
