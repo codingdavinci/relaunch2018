@@ -34,7 +34,7 @@ gulp.task('scss', function() {
     importer: importOnce,
     includePaths: [
       path.resolve(__dirname + '/web/libraries/bootstrap/scss'),
-      path.resolve(__dirname + '/web/themes/custom/relaunch2018/scss')
+      path.resolve(__dirname + '/web/themes/custom/relaunch2018/scss/_includes')
     ]
   };
 
