@@ -99,7 +99,7 @@
   }
 }
 
-@mixin linkColor($brightness) {
+@mixin linkColor($brightness, $curlyBraces: false) {
   @if $brightness == 'dark' {
     a {
       color: $color-link-bright;
@@ -114,6 +114,33 @@
 
       &:before {
         color: $color-link-bright;
+      }
+    }
+    @if $curlyBraces {
+      a {
+        @include curlyBraces($color-link-bright);
+      }
+    }
+  }
+  @elseif $brightness == 'alternative' {
+    a {
+      color: $color-dull-blue;
+
+      &:visited {
+        color: $color-dull-blue;
+      }
+
+      &:hover {
+        color: $color-dull-blue;
+      }
+
+      &:before {
+        color: $color-dull-blue;
+      }
+    }
+    @if $curlyBraces {
+      a {
+        @include curlyBraces($color-dull-dark-blue);
       }
     }
   }

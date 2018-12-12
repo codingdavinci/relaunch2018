@@ -18,11 +18,7 @@ body {
 
   .links {
     li {
-      a {
-        @include curlyBraces($color-green);
-
-        color: $color-green;
-      }
+      @include linkColor(alternative, true);
 
       &:first-child {
         padding-left: 0;
