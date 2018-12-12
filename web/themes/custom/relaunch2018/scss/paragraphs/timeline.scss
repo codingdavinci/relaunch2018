@@ -1,0 +1,180 @@
+@import '../_includes/base';
+
+.paragraph--type--timeline {
+  position: relative;
+
+  .field--name-field-timeline-items {
+    display: grid;
+    grid-auto-flow: row;
+
+    & > .field__item {
+      .paragraph--type--timeline-item {
+        .field--name-field-heading {
+          @include fontStyle(large);
+        }
+      }
+    }
+
+    @include media-breakpoint-up(sm) {
+      .field--name-field-heading {
+        @include fontStyle(default);
+      }
+
+      &.field--name-field-timeline-items--grid-2 {
+        grid-auto-columns: 23%;
+        grid-auto-flow: column;
+        grid-gap: 4%;
+      }
+
+      &.field--name-field-timeline-items--grid-3 {
+        @include fontStyle(very-small);
+        grid-auto-columns: 32%;
+        grid-auto-flow: column;
+        grid-gap: 2%;
+
+        & > .field__item {
+          .paragraph--type--timeline-item {
+            .field--name-field-heading {
+              @include fontStyle(default);
+            }
+          }
+        }
+
+        @include media-breakpoint-up(md) {
+          @include fontStyle(small);
+        }
+
+        @include media-breakpoint-up(lg) {
+          @include fontStyle(default);
+          grid-auto-columns: 30%;
+          grid-gap: 5%;
+
+          & > .field__item {
+            .paragraph--type--timeline-item {
+              .field--name-field-heading {
+                @include fontStyle(large);
+              }
+            }
+          }
+
+          .field--name-field-heading {
+            @include fontStyle(large);
+          }
+        }
+      }
+
+      &.field--name-field-timeline-items--grid-4 {
+        @include media-breakpoint-up(md) {
+          @include fontStyle(very-small);
+          grid-auto-columns: 23%;
+          grid-auto-flow: column;
+          grid-gap: 2.66%;
+
+          & > .field__item {
+            .paragraph--type--timeline-item {
+              .field--name-field-heading {
+                @include fontStyle(default);
+              }
+            }
+          }
+        }
+
+        @include media-breakpoint-up(lg) {
+          @include fontStyle(default);
+
+          & > .field__item {
+            .paragraph--type--timeline-item {
+              .field--name-field-heading {
+                @include fontStyle(large);
+              }
+            }
+          }
+
+          .field--name-field-heading {
+            @include fontStyle(large);
+          }
+        }
+      }
+    }
+
+    & > .field__item {
+      @include boxShadow;
+      padding: 0 15px 15px 15px;
+
+      &:first-child {
+        @include border-top-radius($border-radius);
+      }
+
+      &:last-child {
+        @include border-bottom-radius($border-radius);
+      }
+
+      @include media-breakpoint-up(sm) {
+        @include rounded;
+      }
+
+      &:nth-child(1) {
+        background-color: $color-scheme-2-1;
+      }
+
+      &:nth-child(2) {
+        background-color: $color-scheme-1-1;
+      }
+
+      &:nth-child(3) {
+        background-color: $color-scheme-1-2;
+      }
+
+      &:nth-child(4) {
+        background-color: $color-scheme-2-1;
+      }
+
+      .paragraph--type--timeline-item {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-between;
+
+        .field--name-field-heading {
+          color: $color-white;
+          font-weight: $font-weight-bold;
+          display: flex;
+          margin: 1.5rem 0 1rem 0;
+        }
+
+        .field--name-field-text {
+          color: $color-white;
+          font-weight: $font-weight-normal;
+
+          p {
+            @include fontStyle(block);
+          }
+        }
+
+        .field--name-field-footer {
+          color: $color-gray-2;
+
+          p {
+            @include fontStyle(block);
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .paragraph--type--timeline--line {
+    position: absolute;
+    top: 45%;
+    width: 99%;
+    z-index: -1;
+
+    hr {
+      border: none;
+      border-bottom: 5px solid $color-green;
+    }
+  }
+}

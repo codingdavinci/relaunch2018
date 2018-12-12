@@ -1,0 +1,22 @@
+{#
+/**
+ * @see field.html.twig
+ */
+#}
+{% spaceless %}
+{%
+  set classes = [
+    'field',
+    'field--name-' ~ field_name|clean_class,
+    'field--type-' ~ field_type|clean_class,
+    'field--label-' ~ label_display,
+    'field--name-field-timeline-items--grid-' ~ items|length,
+  ]
+%}
+
+<div{{ attributes.addClass(classes, 'field__items') }}>
+  {% for item in items %}
+    <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
+  {% endfor %}
+</div>
+{% endspaceless %}

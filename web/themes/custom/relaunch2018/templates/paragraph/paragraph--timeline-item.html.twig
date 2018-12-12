@@ -1,0 +1,25 @@
+{#
+/**
+ * @see paragraph.html.twig
+ */
+#}
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+{% block paragraph %}
+  <div{{ attributes.addClass(classes) }}>
+    {% block content %}
+      <div class="paragraph--type--timeline-item--content">
+        {{ content|without('field_footer') }}
+      </div>
+      <div class="paragraph--type--timeline-item--footer">
+        {{ content.field_footer }}
+      </div>
+    {% endblock %}
+  </div>
+{% endblock paragraph %}
