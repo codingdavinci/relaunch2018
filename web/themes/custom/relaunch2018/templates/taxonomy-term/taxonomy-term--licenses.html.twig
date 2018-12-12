@@ -1,0 +1,18 @@
+{#
+/**
+ * @see taxonomy-term.html.twig
+ */
+#}
+{%
+  set classes = [
+    'taxonomy-term',
+    'vocabulary-' ~ term.bundle|clean_class,
+  ]
+%}
+<div{{ attributes.setAttribute('id', 'taxonomy-term-' ~ term.id).addClass(classes) }}>
+  {{ title_prefix }}
+  {% if not page %}
+    <a href="{{ content.field_link.0 }}" target="_blank">{{ name }}</a>
+  {% endif %}
+  {{ title_suffix }}
+</div>

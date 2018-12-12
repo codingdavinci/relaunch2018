@@ -1,0 +1,18 @@
+{#
+/**
+ * @see region.html.twig
+ */
+#}
+{%
+  set classes = [
+    'region',
+    'region-' ~ region|clean_class,
+  ]
+%}
+{% if content %}
+  <div{{ attributes.addClass(classes) }}>
+    <div class="container">
+      {{ content }}
+    </div>
+  </div>
+{% endif %}
