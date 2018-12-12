@@ -1,6 +1,10 @@
-@import 'includes/variables';
-@import 'includes/mixins';
-@import '../../../../../web/libraries/bootstrap/scss/bootstrap-grid';
+/**
+ * @file
+ * Apart from being included in the front-end, the styles in this file are
+ * injected into the backend's CKEditor instances.
+ */
+@import '_includes/variables';
+@import '_includes/mixins';
 
 body {
   @include fontStyle(default);
@@ -237,7 +241,7 @@ table.table--white {
   }
 
   thead {
-    font-weight: bold;
+    font-weight: $font-weight-bold;
   }
 
   tbody {

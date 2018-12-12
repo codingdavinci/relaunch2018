@@ -25,7 +25,7 @@ libraries-override:
   classy/base:
     css:
       component:
-        css/components/menu.css: css/menu.css
+        css/components/menu.css: false
 ckeditor_stylesheets:
   - css/styles.css
   - includes/cdv_icons/css/cdv_icons.css
