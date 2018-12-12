@@ -1,22 +1,22 @@
-uuid: f6d37133-1575-483f-8650-75ef382e74d0
+uuid: 6526dfc9-4da1-4184-b1e4-34a6f6ea0183
 langcode: de
 status: true
 dependencies:
   module:
     - node
-id: article
-label: Artikel
+id: data_sets
+label: Datensätze
 type: 'canonical_entities:node'
-pattern: 'news/[node:title]'
+pattern: 'daten/[node:title]'
 selection_criteria:
-  94347752-6ed5-4e23-8f53-d489ec803d8c:
+  d30a0f27-29a5-4880-ac82-8836db580d3b:
     id: node_type
     bundles:
-      article: article
+      data_set: data_set
     negate: false
     context_mapping:
       node: node
-    uuid: 94347752-6ed5-4e23-8f53-d489ec803d8c
+    uuid: d30a0f27-29a5-4880-ac82-8836db580d3b
 selection_logic: and
 weight: -5
 relationships: {  }

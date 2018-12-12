@@ -1,22 +1,22 @@
-uuid: f6d37133-1575-483f-8650-75ef382e74d0
+uuid: 9ed02a7c-8ece-4e52-9cb1-200705a9609f
 langcode: de
 status: true
 dependencies:
   module:
     - node
-id: article
-label: Artikel
+id: projects
+label: Projekte
 type: 'canonical_entities:node'
-pattern: 'news/[node:title]'
+pattern: 'projekte/[node:title]'
 selection_criteria:
-  94347752-6ed5-4e23-8f53-d489ec803d8c:
+  9ebda29c-2cf3-4cd3-8d71-73a8f1bda886:
     id: node_type
     bundles:
-      article: article
+      project: project
     negate: false
     context_mapping:
       node: node
-    uuid: 94347752-6ed5-4e23-8f53-d489ec803d8c
+    uuid: 9ebda29c-2cf3-4cd3-8d71-73a8f1bda886
 selection_logic: and
 weight: -5
 relationships: {  }
