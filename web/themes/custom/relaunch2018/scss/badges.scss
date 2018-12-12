@@ -5,7 +5,7 @@
   @include linkColor(dark);
   color: $white;
   display: inline;
-  font-weight: 600;
+  font-weight: $font-weight-bold;
   margin-right: .2em;
   padding: .15em .4em .25em .4em;
 

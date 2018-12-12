@@ -92,7 +92,7 @@
 
         .field__label {
           @include fontStyle(small);
-          font-weight: normal;
+          font-weight: $font-weight-normal;
         }
       }
 

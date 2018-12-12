@@ -45,11 +45,11 @@
         @include rounded;
         background-color: $color-green-lighter;
         color: $white;
-        font-weight: 600;
+        font-weight: $font-weight-bold;
 
         a {
           color: $white;
-          font-weight: 600;
+          font-weight: $font-weight-bold;
         }
       }
     }
