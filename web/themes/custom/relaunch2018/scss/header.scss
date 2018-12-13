@@ -27,8 +27,19 @@
     width: 100%;
     z-index: -1;
 
+    .header--tiles--overlay {
+      background: linear-gradient(180deg, rgba(101, 255, 172, 0.21) 0%, rgba(255, 197, 101, 0.38) 76.61%);
+      height: 100%;
+      mix-blend-mode: multiply;
+      opacity: 0.5;
+      pointer-events: none;
+      position: absolute;
+      width: 100%;
+    }
+
     .header--tiles--content {
       padding-top: 100px;
+      pointer-events: none;
 
       .header--tile--logo {
         @include boxShadow;
@@ -75,7 +86,9 @@
     }
 
     .tiles {
+      position: absolute;
       transform: translate3d(0, 0, 0);
+      z-index: -1;
 
       .header-tile,
       .front,
@@ -93,7 +106,7 @@
         perspective: 1000px;
         z-index: 5;
 
-        &:hover {
+        &.hover {
           .flipper {
             transform: rotateY(180deg);
           }

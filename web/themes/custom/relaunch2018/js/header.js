@@ -49,6 +49,14 @@
     }
 
     tileContainer.html(html.join(''));
+
+    $('.header-tile')
+    .on('mouseenter', function(e) {
+      $(e.target).closest('.header-tile').addClass('hover');
+    })
+    .on('mouseleave', function(e) {
+      $(e.target).closest('.header-tile').removeClass('hover');
+    });
   });
 
 })(jQuery);
