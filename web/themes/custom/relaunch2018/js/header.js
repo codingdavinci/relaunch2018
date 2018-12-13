@@ -8,47 +8,56 @@
   'use strict';
 
   $(function() {
-    var html = [], l, t;
-    var tileContainer = $('.tiles');
-    var containerWidth = tileContainer.width();
-    var maxCover = 1200;
+    var $tileContainer = $('.tiles');
     var originalTileSize = 214;
     var tileSize = Math.sqrt(originalTileSize * originalTileSize * 2);
-    var offset = containerWidth > maxCover
-      ? Math.floor(((containerWidth - maxCover) / 2) / tileSize) : 0;
-    var topEven = 39;
-    var leftEven = -113 + (offset * tileSize);
-    var topOdd = topEven - tileSize / 2;
-    var leftOdd = leftEven + (tileSize / 2);
-    var n = 0, r;
 
-    for (var i=0; i < 5; i += 1) {
-      for (var j=0; j < 6; j += 1) {
-        n += 1;
+    // Top left edge of the unrotated tile in even columns:
+    var even = {top: 39, left: -113};
+
+    // Top left edge of the unrotated tile in odd columns:
+    var odd = {top: even.top - tileSize / 2, left: even.left + tileSize / 2};
+
+    var backSideTileCount = 9;
+    var maxLines = 8;
+
+    var html = [];
+    var frontSide_i = 0;
+    var backSide_i;
+    var l;
+    var t;
+
+    for (var i = 0; i < maxLines; i++) {
+
+      // Build a line of even and odd tiles:
+      for (var j = 0; j < 6; j++) {
+
         if (j % 2 === 0) {
-          t = topEven + (j / 2) * tileSize;
-          l = leftEven + i * tileSize;
+          t = even.top + (j / 2) * tileSize;
+          l = even.left + i * tileSize;
         } else {
-          t = topOdd + Math.floor(j / 2) * tileSize;
-          l = leftOdd + i * tileSize;
+          t = odd.top + Math.floor(j / 2) * tileSize;
+          l = odd.left + i * tileSize;
         }
 
         t = Math.round(t * 10) / 10;
         l = Math.round(l * 10) / 10;
 
-        r = Math.floor(Math.random() * 9) + 1;
+        backSide_i = Math.floor(Math.random() * backSideTileCount) + 1;
 
         html.push(''
           + '<div class="header-tile" style="left:' + l + 'px;top:' + t + 'px;">'
-          + '<div class="flipper" style="transition-delay:0s;">'
-          + '<div class="front cdv-tiles'+ n + '"></div>'
-          + '<div class="back code-tile' + r + '"></div>'
+          + '<div class="flipper">'
+          + '<div class="front cdv-tiles'+ (frontSide_i % 20 + 1) + '"></div>'
+          + '<div class="back code-tile' + backSide_i + '"></div>'
           + '</div>'
           + '</div>');
+
+        frontSide_i++;
       }
     }
 
-    tileContainer.html(html.join(''));
+    $tileContainer.html(html.join(''));
 
     $('.header-tile')
     .on('mouseenter', function(e) {
