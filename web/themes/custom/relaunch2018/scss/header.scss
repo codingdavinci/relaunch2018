@@ -18,8 +18,8 @@
   width: 100%;
 
   .header--tiles--container {
-    // TODO: Add static background image
-    background: left top url('../img/header_background.jpg') repeat-x;
+    background: -9px top url('../img/header/frontpage_static.jpg') repeat-x;
+    background-size: 1208px;
     height: $tiled-header-height;
     left: 0;
     overflow: hidden;
