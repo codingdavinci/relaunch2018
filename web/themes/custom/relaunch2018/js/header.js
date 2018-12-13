@@ -44,6 +44,7 @@
         t = Math.round(t * 10) / 10;
         l = Math.round(l * 10) / 10;
 
+        frontSide_i++;
         backSide_i = Math.floor(Math.random() * backSideTileCount) + 1;
 
         html.push(''
@@ -53,8 +54,6 @@
           + '<div class="back code-tile' + backSide_i + '"></div>'
           + '</div>'
           + '</div>');
-
-        frontSide_i++;
       }
     }
 

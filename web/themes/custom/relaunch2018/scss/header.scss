@@ -217,6 +217,9 @@
 .page-node-type-event {
   .header--tiles {
     .header--tiles--container {
+      background: 21px top url("../img/header/event_static.jpg") repeat-x;
+      background-size: 790px;
+
       .header--tiles--overlay {
         background: linear-gradient(180deg, #F1ECE8 0%, #5DC4B8 100%);
         mix-blend-mode: multiply;
