@@ -6,16 +6,16 @@
 {% if is_front %}
   <header role="banner" class="header--tiles">
     <div class="header--tiles--container">
-      <div class="tiles"> </div>
-      <div class="container header-container">
-        <div class="logo-container">
+      <div class="tiles"></div>
+      <div class="container header--tiles--content">
+        <div class="header--tile--logo">
           <div class="d-flex h-100 flex-column justify-content-between align-items-center">
-          <div class="logo-image"><img src="{{ theme_path }}/img/CDV_logo.svg"></div>
-          <div class="logo-text d-flex flex-column justify-content-end text-left">
-            <h1 class="sr-only">Coding Da Vinci</h1>
-            {{ page.header }}
+            <div class="header--title--logo--image"><img src="{{ theme_path }}/img/CDV_logo.svg"></div>
+            <div class="header--title--logo--text d-flex flex-column justify-content-end text-left">
+              <h1 class="sr-only">Coding Da Vinci</h1>
+              {{ page.header }}
+            </div>
           </div>
-        </div>
         </div>
       </div>
     </div>

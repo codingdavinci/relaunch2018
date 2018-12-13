@@ -173,15 +173,32 @@ main {
 }
 
 .layout-container--wrapper {
-  background-color: $color-gray-6;
+  background-color: $background;
 }
 
 .layout-container {
   position: relative;
 
+  &.header-tiles-above {
+    margin-top: $tiled-header-height;
+    overflow-x: hidden;
+    top: -100px;
+
+    .layout-content {
+      @include rounded;
+      position: relative;
+      top: -50px;
+
+      .region-content {
+        position: relative;
+        top: 40px;
+      }
+    }
+  }
+
   main {
     .layout-content {
-      background-color: $color-gray-6;
+      background-color: $background;
     }
   }
 

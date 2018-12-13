@@ -6,28 +6,10 @@
  */
 @import '_includes/base';
 
-$header-height: 720px;
-
 .path-frontpage {
   .dialog-off-canvas-main-canvas {
+    // Conflicts with tiles hover effect.
     height: 0;
-  }
-}
-
-.header-tiles-above {
-  margin-top: $header-height;
-  overflow-x: hidden;
-  top: -100px;
-
-  .layout-content {
-    @include rounded;
-    position: relative;
-    top: -50px;
-
-    .region-content {
-      position: relative;
-      top: 40px;
-    }
   }
 }
 
@@ -37,19 +19,18 @@ $header-height: 720px;
   .header--tiles--container {
     // TODO: Add static background image
     background: left top url('../img/header_background.jpg') repeat-x;
-    height: $header-height;
+    height: $tiled-header-height;
     left: 0;
     overflow: hidden;
     position: fixed;
-    text-align: center;
     top: 0;
     width: 100%;
     z-index: -1;
 
-    .header-container {
+    .header--tiles--content {
       padding-top: 100px;
 
-      .logo-container {
+      .header--tile--logo {
         @include boxShadow;
         @include fontStyle(large);
         @include fontStyle(block);
@@ -66,7 +47,7 @@ $header-height: 720px;
           padding: 4rem 4rem 3rem 4rem;
         }
 
-        .logo-image {
+        .header--title--logo--image {
           margin-bottom: 40px;
 
           @include media-breakpoint-up(md) {
@@ -79,7 +60,11 @@ $header-height: 720px;
           }
         }
 
-        .logo-text {
+        .header--title--logo--text {
+          @media #{$ie} {
+            max-width: 100%;
+          }
+
           p {
             &:last-child {
               margin-bottom: 0;
@@ -88,180 +73,149 @@ $header-height: 720px;
         }
       }
     }
+
+    .tiles {
+      transform: translate3d(0, 0, 0);
+
+      .header-tile,
+      .front,
+      .back {
+        height: 210px;
+        width: 210px;
+      }
+
+      .header-tile {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+        position: absolute;
+        transform: rotate(45deg);
+        perspective: 1000px;
+        z-index: 5;
+
+        &:hover {
+          .flipper {
+            transform: rotateY(180deg);
+          }
+        }
+
+        .flipper {
+          position: relative;
+          transition: all 0.6s ease-in;
+          transform-style: preserve-3d;
+
+          .front,
+          .back {
+            backface-visibility: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-repeat: no-repeat;
+            background-position: center center;
+            transform: scale(1.04);
+          }
+
+          .front {
+            z-index: 10;
+          }
+
+          .back {
+            transform: scale(1.04) rotateY(180deg);
+            z-index: 9;
+          }
+
+          .cdv-tiles1,
+          .cdv-tiles10,
+          .cdv-tiles11,
+          .cdv-tiles12,
+          .cdv-tiles13,
+          .cdv-tiles14,
+          .cdv-tiles15,
+          .cdv-tiles16,
+          .cdv-tiles17,
+          .cdv-tiles18,
+          .cdv-tiles19,
+          .cdv-tiles2,
+          .cdv-tiles20,
+          .cdv-tiles21,
+          .cdv-tiles22,
+          .cdv-tiles23,
+          .cdv-tiles24,
+          .cdv-tiles25,
+          .cdv-tiles26,
+          .cdv-tiles27,
+          .cdv-tiles28,
+          .cdv-tiles29,
+          .cdv-tiles3,
+          .cdv-tiles30,
+          .cdv-tiles31,
+          .cdv-tiles4,
+          .cdv-tiles5,
+          .cdv-tiles6,
+          .cdv-tiles7,
+          .cdv-tiles8,
+          .cdv-tiles9 {
+            background: url('../img/header/Tiles_Start_small.jpg') no-repeat;
+            display: block;
+          }
+
+          .cdv-tiles1 {  background-position: 0 0; }
+          .cdv-tiles10 { background-position: -220px 0; }
+          .cdv-tiles11 { background-position: -440px 0; }
+          .cdv-tiles12 { background-position: -660px 0; }
+          .cdv-tiles13 { background-position: -880px 0; }
+          .cdv-tiles14 { background-position: 0 -220px; }
+          .cdv-tiles15 { background-position: -220px -220px; }
+          .cdv-tiles16 { background-position: -440px -220px; }
+          .cdv-tiles17 { background-position: -660px -220px; }
+          .cdv-tiles18 { background-position: -880px -220px; }
+          .cdv-tiles19 { background-position: 0 -440px; }
+          .cdv-tiles2 {  background-position: -220px -440px; }
+          .cdv-tiles20 { background-position: -440px -440px; }
+          .cdv-tiles21 { background-position: -660px -440px; }
+          .cdv-tiles22 { background-position: -880px -440px; }
+          .cdv-tiles23 { background-position: 0 -660px; }
+          .cdv-tiles24 { background-position: -220px -660px; }
+          .cdv-tiles25 { background-position: -440px -660px; }
+          .cdv-tiles26 { background-position: -660px -660px; }
+          .cdv-tiles27 { background-position: -880px -660px; }
+          .cdv-tiles28 { background-position: 0 -880px; }
+          .cdv-tiles29 { background-position: -220px -880px; }
+          .cdv-tiles3 {  background-position: -440px -880px; }
+          .cdv-tiles30 { background-position: -660px -880px; }
+          .cdv-tiles31 { background-position: -880px -880px; }
+          .cdv-tiles4 {  background-position: 0 -1100px; }
+          .cdv-tiles5 {  background-position: -220px -1100px; }
+          .cdv-tiles6 {  background-position: -440px -1100px; }
+          .cdv-tiles7 {  background-position: -660px -1100px; }
+          .cdv-tiles8 {  background-position: -880px -1100px; }
+          .cdv-tiles9 {  background-position: 0 -1320px; }
+
+          .code-tile1,
+          .code-tile2,
+          .code-tile3,
+          .code-tile4,
+          .code-tile5,
+          .code-tile6,
+          .code-tile7,
+          .code-tile8,
+          .code-tile9 {
+            display: block;
+            background: url('../img/header/Tiles_Code_small.jpg') no-repeat;
+            background-size: 1260px;
+          }
+
+          .code-tile1 { background-position: 0 0; }
+          .code-tile2 { background-position: -210px 0; }
+          .code-tile3 { background-position: -420px 0; }
+          .code-tile4 { background-position: 0 -210px; }
+          .code-tile5 { background-position: -210px -210px; }
+          .code-tile6 { background-position: -420px -210px; }
+          .code-tile7 { background-position: 0 -420px; }
+          .code-tile8 { background-position: -210px -420px; }
+          .code-tile9 { background-position: -420px -420px; }
+        }
+      }
+    }
   }
 }
-
-.tiles {
-  -webkit-transform: translate3d(0px, 0px, 0px);
-  -moz-transform: translate3d(0px, 0px, 0px);
-  -ms-transform: translate3d(0px, 0px, 0px);
-  -o-transform: translate3d(0px, 0px, 0px);
-  transform: translate3d(0px, 0px, 0px);
-}
-
-.header-tile {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-  position: absolute;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
-  -webkit-perspective: 1000;
-  perspective: 1000;
-  z-index: 5;
-}
-
-/* flip the pane when hovered */
-.header-tile:hover .flipper, .header-tile.hover .flipper {
-  /*-webkit-transform: rotateY(180deg);*/
-  /*-webkit-transform: matrix3d(-0.5984600691,0.0000000000,-0.8011526357,0.0000000000,0.6418455457,-0.5984600691,-0.4794578617,0.0000000000,-0.4794578617,-0.8011526357,0.3581544543,0.0000000000,0.0000000000,0.0000000000,0.0000000000,1.0000000000);*/
-  /*-webkit-transform: matrix(-1, 0, 0, 0, -1, 0);*/
-  /*                    matrix3d(-1, 0, 0, 0,
-                                0, -1, 0, 0,
-                                0, 0, 1, 0
-                                0, 0, 0, 1);*/
-  /*  -webkit-transform-origin: 106px 106px;
-    -moz-transform-origin: 106px 106px;
-    -webkit-transform: rotate(-45deg) rotateY(180deg) rotate(45deg);
-    -moz-transform: rotate(-45deg) rotateY(180deg) rotate(45deg);*/
-  -webkit-transform: rotateY(180deg);
-  -moz-transform: rotateY(180deg);
-  -ms-transform: rotateY(180deg);
-  -o-transform: rotateY(180deg);
-  transform: rotateY(180deg);
-}
-
-.header-tile .flipper.show-off {
-  -webkit-transform: rotateY(2880deg);
-  -moz-transform: rotateY(2880deg);
-  -ms-transform: rotateY(2880deg);
-  -o-transform: rotateY(2880deg);
-  transform: rotateY(2880deg);
-  -webkit-transition: all 2s ease-in;
-  -moz-transition: all 2s ease-in;
-  -ms-transition: all 2s ease-in;
-  -o-transition: all 2s ease-in;
-  transition: all 2s ease-in;
-}
-
-.header-tile, .front, .back {
-  width: 214px;
-  height: 214px;
-}
-
-.flipper {
-  position: relative;
-  -webkit-transition: all 0.6s ease-in;
-  -moz-transition: all 0.6s ease-in;
-  -ms-transition: all 0.6s ease-in;
-  -o-transition: all 0.6s ease-in;
-  transition: all 0.6s ease-in;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  -o-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-}
-
-/* hide back of pane during swap */
-.front, .back {
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  -o-backface-visibility: hidden;
-  backface-visibility: hidden;
-
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-repeat: no-repeat;
-  background-position: center center;
-  -webkit-transform: scale(1.04);
-  -moz-transform: scale(1.04);
-  -ms-transform: scale(1.04);
-  -o-transform: scale(1.04);
-  transform: scale(1.04);
-}
-
-/* front pane, placed above back */
-.front {
-  z-index: 10;
-}
-
-/* back, initially hidden pane */
-.back {
-  -webkit-transform: scale(1.04) rotateY(180deg);
-  -moz-transform: scale(1.04) rotateY(180deg);
-  -ms-transform: scale(1.04) rotateY(180deg);
-  -o-transform: scale(1.04) rotateY(180deg);
-  transform: scale(1.04) rotateY(180deg);
-  z-index: 9;
-}
-
-.cdv-tiles1, .cdv-tiles10, .cdv-tiles11, .cdv-tiles12, .cdv-tiles13,
-.cdv-tiles14, .cdv-tiles15, .cdv-tiles16, .cdv-tiles17, .cdv-tiles18,
-.cdv-tiles19, .cdv-tiles2, .cdv-tiles20, .cdv-tiles21, .cdv-tiles22,
-.cdv-tiles23, .cdv-tiles24, .cdv-tiles25, .cdv-tiles26, .cdv-tiles27,
-.cdv-tiles28, .cdv-tiles29, .cdv-tiles3, .cdv-tiles30, .cdv-tiles31,
-.cdv-tiles4, .cdv-tiles5, .cdv-tiles6, .cdv-tiles7, .cdv-tiles8,
-.cdv-tiles9
-{ display: block; background: url('../img/header/Tiles_Start_small.jpg') no-repeat; }
-
-.cdv-tiles1 { background-position: -0px -0px; width: 210px; height: 210px; }
-.cdv-tiles10 { background-position: -220px -0px; width: 210px; height: 210px; }
-.cdv-tiles11 { background-position: -440px -0px; width: 210px; height: 210px; }
-.cdv-tiles12 { background-position: -660px -0px; width: 210px; height: 210px; }
-.cdv-tiles13 { background-position: -880px -0px; width: 210px; height: 210px; }
-.cdv-tiles14 { background-position: -0px -220px; width: 210px; height: 210px; }
-.cdv-tiles15 { background-position: -220px -220px; width: 210px; height: 210px; }
-.cdv-tiles16 { background-position: -440px -220px; width: 210px; height: 210px; }
-.cdv-tiles17 { background-position: -660px -220px; width: 210px; height: 210px; }
-.cdv-tiles18 { background-position: -880px -220px; width: 210px; height: 210px; }
-.cdv-tiles19 { background-position: -0px -440px; width: 210px; height: 210px; }
-.cdv-tiles2 { background-position: -220px -440px; width: 210px; height: 210px; }
-.cdv-tiles20 { background-position: -440px -440px; width: 210px; height: 210px; }
-.cdv-tiles21 { background-position: -660px -440px; width: 210px; height: 210px; }
-.cdv-tiles22 { background-position: -880px -440px; width: 210px; height: 210px; }
-.cdv-tiles23 { background-position: -0px -660px; width: 210px; height: 210px; }
-.cdv-tiles24 { background-position: -220px -660px; width: 210px; height: 210px; }
-.cdv-tiles25 { background-position: -440px -660px; width: 210px; height: 210px; }
-.cdv-tiles26 { background-position: -660px -660px; width: 210px; height: 210px; }
-.cdv-tiles27 { background-position: -880px -660px; width: 210px; height: 210px; }
-.cdv-tiles28 { background-position: -0px -880px; width: 210px; height: 210px; }
-.cdv-tiles29 { background-position: -220px -880px; width: 210px; height: 210px; }
-.cdv-tiles3 { background-position: -440px -880px; width: 210px; height: 210px; }
-.cdv-tiles30 { background-position: -660px -880px; width: 210px; height: 210px; }
-.cdv-tiles31 { background-position: -880px -880px; width: 210px; height: 210px; }
-.cdv-tiles4 { background-position: -0px -1100px; width: 210px; height: 210px; }
-.cdv-tiles5 { background-position: -220px -1100px; width: 210px; height: 210px; }
-.cdv-tiles6 { background-position: -440px -1100px; width: 210px; height: 210px; }
-.cdv-tiles7 { background-position: -660px -1100px; width: 210px; height: 210px; }
-.cdv-tiles8 { background-position: -880px -1100px; width: 210px; height: 210px; }
-.cdv-tiles9 { background-position: -0px -1320px; width: 210px; height: 210px; }
-
-.code-tile1,
-.code-tile2,
-.code-tile3,
-.code-tile4,
-.code-tile5,
-.code-tile6,
-.code-tile7,
-.code-tile8,
-.code-tile9 {
-  display: block;
-  background: url('../img/header/Tiles_Code_small.jpg') no-repeat;
-  background-size: 1260px;
-}
-
-.code-tile1 { background-position: 0 0;           width: 210px; height: 210px; }
-.code-tile2 { background-position: -210px 0;      width: 210px; height: 210px; }
-.code-tile3 { background-position: -420px 0;      width: 210px; height: 210px; }
-.code-tile4 { background-position: 0 -210px;      width: 210px; height: 210px; }
-.code-tile5 { background-position: -210px -210px; width: 210px; height: 210px; }
-.code-tile6 { background-position: -420px -210px; width: 210px; height: 210px; }
-.code-tile7 { background-position: 0 -420px;      width: 210px; height: 210px; }
-.code-tile8 { background-position: -210px -420px; width: 210px; height: 210px; }
-.code-tile9 { background-position: -420px -420px; width: 210px; height: 210px; }
