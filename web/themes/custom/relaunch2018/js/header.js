@@ -18,8 +18,8 @@
     // Top left edge of the unrotated tile in odd columns:
     var odd = {top: even.top - tileSize / 2, left: even.left + tileSize / 2};
 
-    var frontSideTilesCount = $tileContainer.hasClass('tiles--frontpage') ? 31 : 20;
-    var backSideTileCount = 9;
+    var frontSideTilesCount = $tileContainer.hasClass('tiles--frontpage') ? 42 : 20;
+    var backSideTileCount = 24;
     var maxLines = $tileContainer.hasClass('tiles--frontpage') ? 8 : 6;
 
     var html = [];
