@@ -183,17 +183,6 @@ main {
     margin-top: $tiled-header-height;
     overflow-x: hidden;
     top: -100px;
-
-    .layout-content {
-      @include rounded;
-      position: relative;
-      top: -50px;
-
-      .region-content {
-        position: relative;
-        top: 40px;
-      }
-    }
   }
 
   main {

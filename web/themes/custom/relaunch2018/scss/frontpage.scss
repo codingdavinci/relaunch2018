@@ -1,6 +1,22 @@
 @import '_includes/base';
 
 .path-frontpage {
+  .layout-container {
+    &.header-tiles-above {
+
+      .layout-content {
+        @include rounded;
+        position: relative;
+        top: -50px;
+
+        .region-content {
+          position: relative;
+          top: 40px;
+        }
+      }
+    }
+  }
+
   .region-content {
     & > *:not(.block-language) {
       margin-bottom: 5rem;

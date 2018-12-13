@@ -3,8 +3,14 @@
 .page-node-type-event {
 
   .node--type-event {
+    @include rounded;
+    background: $background;
+    position: relative;
+    top: -50px;
 
     & > .node__content {
+      position: relative;
+      top: 40px;
 
       & > .field {
         margin-bottom: 5rem;

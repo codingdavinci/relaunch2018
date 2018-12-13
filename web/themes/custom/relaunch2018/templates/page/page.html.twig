@@ -3,11 +3,13 @@
  * @see page.html.twig
  */
 #}
-{% if is_front %}
+{% set tiled_header = is_front or node and node.bundle == 'event' %}
+
+{% if tiled_header %}
   <header role="banner" class="header--tiles">
     <div class="header--tiles--container">
       <div class="header--tiles--overlay"></div>
-      <div class="tiles"></div>
+      <div class="tiles{% if is_front %} tiles--frontpage{% endif %}"></div>
       <div class="container header--tiles--content">
         <div class="header--tile--logo">
           <div class="d-flex h-100 flex-column justify-content-between align-items-center">
@@ -24,12 +26,12 @@
 {% endif %}
 
 <div class="layout-container--wrapper">
-  <div class="layout-container{% if is_front %} header-tiles-above{% endif %}">
+  <div class="layout-container{% if tiled_header %} header-tiles-above{% endif %}">
 
     {{ page.primary_menu }}
     {{ page.secondary_menu }}
 
-    {% if not is_front %}
+    {% if not tiled_header %}
       <header role="banner">
         {% if page.admin_tabs %}
           {{ page.admin_tabs }}

@@ -6,7 +6,8 @@
  */
 @import '_includes/base';
 
-.path-frontpage {
+.path-frontpage,
+.page-node-type-event {
   .dialog-off-canvas-main-canvas {
     // Conflicts with tiles hover effect.
     height: 0;
@@ -31,7 +32,7 @@
       background: linear-gradient(180deg, rgba(101, 255, 172, 0.21) 0%, rgba(255, 197, 101, 0.38) 76.61%);
       height: 100%;
       mix-blend-mode: multiply;
-      opacity: 0.5;
+      opacity: .5;
       pointer-events: none;
       position: absolute;
       width: 100%;
@@ -129,47 +130,15 @@
           }
 
           .front {
+            background: url('../img/header/Tiles_Start_small.jpg') no-repeat;
             z-index: 10;
           }
 
           .back {
+            background: url('../img/header/Tiles_Code_small.jpg') no-repeat;
+            background-size: 1260px;
             transform: scale(1.04) rotateY(180deg);
             z-index: 9;
-          }
-
-          .cdv-tiles1,
-          .cdv-tiles10,
-          .cdv-tiles11,
-          .cdv-tiles12,
-          .cdv-tiles13,
-          .cdv-tiles14,
-          .cdv-tiles15,
-          .cdv-tiles16,
-          .cdv-tiles17,
-          .cdv-tiles18,
-          .cdv-tiles19,
-          .cdv-tiles2,
-          .cdv-tiles20,
-          .cdv-tiles21,
-          .cdv-tiles22,
-          .cdv-tiles23,
-          .cdv-tiles24,
-          .cdv-tiles25,
-          .cdv-tiles26,
-          .cdv-tiles27,
-          .cdv-tiles28,
-          .cdv-tiles29,
-          .cdv-tiles3,
-          .cdv-tiles30,
-          .cdv-tiles31,
-          .cdv-tiles4,
-          .cdv-tiles5,
-          .cdv-tiles6,
-          .cdv-tiles7,
-          .cdv-tiles8,
-          .cdv-tiles9 {
-            background: url('../img/header/Tiles_Start_small.jpg') no-repeat;
-            display: block;
           }
 
           .cdv-tiles1 {  background-position: 0 0; }
@@ -204,20 +173,6 @@
           .cdv-tiles8 {  background-position: -880px -1100px; }
           .cdv-tiles9 {  background-position: 0 -1320px; }
 
-          .code-tile1,
-          .code-tile2,
-          .code-tile3,
-          .code-tile4,
-          .code-tile5,
-          .code-tile6,
-          .code-tile7,
-          .code-tile8,
-          .code-tile9 {
-            display: block;
-            background: url('../img/header/Tiles_Code_small.jpg') no-repeat;
-            background-size: 1260px;
-          }
-
           .code-tile1 { background-position: 0 0; }
           .code-tile2 { background-position: -210px 0; }
           .code-tile3 { background-position: -420px 0; }
@@ -227,6 +182,72 @@
           .code-tile7 { background-position: 0 -420px; }
           .code-tile8 { background-position: -210px -420px; }
           .code-tile9 { background-position: -420px -420px; }
+        }
+      }
+    }
+  }
+}
+
+.page-node-type-event {
+  .header--tiles {
+    .header--tiles--container {
+      .header--tiles--overlay {
+        background: linear-gradient(180deg, #F1ECE8 0%, #5DC4B8 100%);
+        mix-blend-mode: multiply;
+        opacity: .75;
+      }
+
+      .tiles {
+
+        .header-tile,
+        .front,
+        .back {
+          height: 280px;
+          width: 280px;
+        }
+
+        .header-tile {
+          .flipper {
+
+            .front {
+              background: url('../img/header/Tiles_Event_small.jpg') no-repeat;
+            }
+
+            .back {
+              background-size: auto;
+            }
+
+            .cdv-tiles1 {  background-position: 0       0; }
+            .cdv-tiles10 { background-position: -400px  0; }
+            .cdv-tiles11 { background-position: -800px  0; }
+            .cdv-tiles12 { background-position: -1200px 0; }
+            .cdv-tiles13 { background-position: 0       -400px; }
+            .cdv-tiles14 { background-position: -400px  -400px; }
+            .cdv-tiles15 { background-position: -800px  -400px; }
+            .cdv-tiles16 { background-position: -1200px -400px; }
+            .cdv-tiles17 { background-position: 0       -800px; }
+            .cdv-tiles18 { background-position: -400px  -800px; }
+            .cdv-tiles19 { background-position: -800px  -800px; }
+            .cdv-tiles2 {  background-position: -1200px -800px; }
+            .cdv-tiles20 { background-position: 0       -1200px; }
+            .cdv-tiles3 {  background-position: -400px  -1200px; }
+            .cdv-tiles4 {  background-position: -800px  -1200px; }
+            .cdv-tiles5 {  background-position: -1200px -1200px; }
+            .cdv-tiles6 {  background-position: 0       -1600px; }
+            .cdv-tiles7 {  background-position: -400px  -1600px; }
+            .cdv-tiles8 {  background-position: -800px  -1600px; }
+            .cdv-tiles9 {  background-position: -1200px -1600px; }
+
+            .code-tile1 { background-position: 0 0; }
+            .code-tile2 { background-position: -400px 0; }
+            .code-tile3 { background-position: -800px 0; }
+            .code-tile4 { background-position: -1200px 0; }
+            .code-tile5 { background-position: -1600px 0; }
+            .code-tile6 { background-position: -2000px 0; }
+            .code-tile7 { background-position: 0 -400px; }
+            .code-tile8 { background-position: -400px -400px; }
+            .code-tile9 { background-position: -800px -400px; }
+          }
         }
       }
     }
