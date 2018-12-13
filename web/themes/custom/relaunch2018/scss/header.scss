@@ -78,6 +78,14 @@ $header-height: 720px;
             width: 100%;
           }
         }
+
+        .logo-text {
+          p {
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
       }
     }
   }

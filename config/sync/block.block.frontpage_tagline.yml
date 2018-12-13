@@ -1,0 +1,31 @@
+uuid: 754eb7c1-62d0-4e3d-99a6-14269dfe18ab
+langcode: de
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:13c1ac55-c621-420f-8acb-b9d7c4eb1a7e'
+  module:
+    - block_content
+    - system
+  theme:
+    - relaunch2018
+id: frontpage_tagline
+theme: relaunch2018
+region: header
+weight: 0
+provider: null
+plugin: 'block_content:13c1ac55-c621-420f-8acb-b9d7c4eb1a7e'
+settings:
+  id: 'block_content:13c1ac55-c621-420f-8acb-b9d7c4eb1a7e'
+  label: 'Startseite: Untertitel'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }
