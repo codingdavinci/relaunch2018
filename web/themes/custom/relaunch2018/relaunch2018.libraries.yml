@@ -12,6 +12,7 @@ global-css:
 global-js:
   version: 1.x
   js:
+    js/header.js: {}
     js/menu.js: {}
     js/read-more.js: {}
     js/view-faq.js: {}

@@ -3,64 +3,88 @@
  * @see page.html.twig
  */
 #}
-<div class="layout-container">
-
-  {{ page.primary_menu }}
-  {{ page.secondary_menu }}
-
-  <header role="banner">
-    {% if page.admin_tabs %}
-      {{ page.admin_tabs }}
-    {% endif %}
-
-    {% if page.header_with_background %}
-      <div class="header--with-background">
-        <div class="container">
-          {{ page.header_with_background }}
+{% if is_front %}
+  <header role="banner" class="header--tiles">
+    <div class="header--tiles--container">
+      <div class="tiles"> </div>
+      <div class="container header-container">
+        <div class="logo-container">
+          <div class="d-flex h-100 flex-column justify-content-between align-items-center">
+          <div class="logo-image"><img src="{{ theme_path }}/img/CDV_logo.svg"></div>
+          <div class="logo-text d-flex flex-column justify-content-end text-left">
+            <h1 class="sr-only">Coding Da Vinci</h1>
+            Coding Da Vinci is a culture hackathon that encourages creatives to experiment with cultural data.
+            {{ page.header }}
+          </div>
+        </div>
         </div>
       </div>
-    {% else %}
-      <div class="container header--default">
-        <div class="header--default--brand">
-          <img src="{{ theme_path }}/img/CDV_Logo_Line.svg">
-        </div>
-
-        {{ page.header }}
-      </div>
-    {% endif %}
-  </header>
-
-  {{ page.breadcrumb }}
-
-  {{ page.highlighted }}
-
-  {{ page.help }}
-
-  <main role="main">
-    <a id="main-content" tabindex="-1"></a>
-
-    <div class="layout-content{% if is_front %} container{% endif %}">
-      {{ page.content }}
     </div>
+  </header>
+{% endif %}
 
-    {% if page.sidebar_first %}
-      <aside class="layout-sidebar-first" role="complementary">
-        {{ page.sidebar_first }}
-      </aside>
+<div class="layout-container--wrapper">
+  <div class="layout-container{% if is_front %} header-tiles-above{% endif %}">
+
+    {{ page.primary_menu }}
+    {{ page.secondary_menu }}
+
+    {% if not is_front %}
+      <header role="banner">
+        {% if page.admin_tabs %}
+          {{ page.admin_tabs }}
+        {% endif %}
+
+        {% if page.header_with_background %}
+          <div class="header--with-background">
+            <div class="container">
+              {{ page.header_with_background }}
+            </div>
+          </div>
+        {% else %}
+          <div class="container header--default">
+            <div class="header--default--brand">
+              <img src="{{ theme_path }}/img/CDV_Logo_Line.svg">
+            </div>
+
+            {{ page.header }}
+          </div>
+        {% endif %}
+      </header>
     {% endif %}
 
-    {% if page.sidebar_second %}
-      <aside class="layout-sidebar-second" role="complementary">
-        {{ page.sidebar_second }}
-      </aside>
+    {{ page.breadcrumb }}
+
+    {{ page.highlighted }}
+
+    {{ page.help }}
+
+    <main role="main">
+      <a id="main-content" tabindex="-1"></a>
+
+      <div class="layout-content{% if is_front %} container{% endif %}">
+        {{ page.content }}
+      </div>
+
+      {% if page.sidebar_first %}
+        <aside class="layout-sidebar-first" role="complementary">
+          {{ page.sidebar_first }}
+        </aside>
+      {% endif %}
+
+      {% if page.sidebar_second %}
+        <aside class="layout-sidebar-second" role="complementary">
+          {{ page.sidebar_second }}
+        </aside>
+      {% endif %}
+
+    </main>
+
+    {% if page.footer %}
+      <footer role="contentinfo">
+        {{ page.footer }}
+      </footer>
     {% endif %}
 
-  </main>
-
-  {% if page.footer %}
-    <footer role="contentinfo">
-      {{ page.footer }}
-    </footer>
-  {% endif %}
-
+  </div>
 </div>

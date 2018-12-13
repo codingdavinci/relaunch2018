@@ -172,9 +172,18 @@ main {
   }
 }
 
+.layout-container--wrapper {
+  background-color: $color-gray-6;
+}
+
 .layout-container {
-  overflow-x: hidden;
   position: relative;
+
+  main {
+    .layout-content {
+      background-color: $color-gray-6;
+    }
+  }
 
   footer {
     background-color: $color-main;
