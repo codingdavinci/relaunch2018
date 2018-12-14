@@ -18,7 +18,7 @@
   width: 100%;
 
   .header--tiles--container {
-    background: -9px top url('../img/header/frontpage_static.jpg') repeat-x;
+    background: -9px top url('../img/header/tiles_frontpage_static.jpg') repeat-x;
     background-size: 1208px;
     height: $tiled-header-height;
     left: 0;
@@ -130,12 +130,12 @@
           }
 
           .front {
-            background: url('../img/header/Tiles_Start_small.jpg') no-repeat;
+            background: url('../img/header/tiles_frontpage.jpg') no-repeat;
             z-index: 10;
           }
 
           .back {
-            background: url('../img/header/Tiles_Code_small.jpg') no-repeat;
+            background: url('../img/header/tiles_code.jpg') no-repeat;
             background-size: 1260px;
             transform: scale(1.04) rotateY(180deg);
             z-index: 9;
@@ -167,7 +167,7 @@
 .page-node-type-event {
   .header--tiles {
     .header--tiles--container {
-      background: 21px top url("../img/header/event_static.jpg") repeat-x;
+      background: 21px top url("../img/header/tiles_event_static.jpg") repeat-x;
       background-size: 790px;
 
       .header--tiles--overlay {
@@ -189,7 +189,7 @@
           .flipper {
 
             .front {
-              background: url('../img/header/Tiles_Event_small.jpg') no-repeat;
+              background: url('../img/header/tiles_event_default.jpg') no-repeat;
             }
 
             .back {
