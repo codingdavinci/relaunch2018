@@ -12,15 +12,20 @@ Contact: lucy.patterson@wikimedia.de (@lucyWMDE)
 
 ## Installation
 
-The project was set up using the [Composer template for Drupal projects](https://github.com/drupal-composer/drupal-project). Installation requires [Composer](https://getcomposer.org/) for managing PHP packages and [Node.js](https://nodejs.org/), for compiling [SCSS files](https://sass-lang.com/).
+The project was set up using the [Composer template for Drupal projects](https://github.com/drupal-composer/drupal-project). Installation requires [Composer](https://getcomposer.org/) for managing PHP packages.
+
+### Production
 
 1. Pull the repository contents.
-2. Run `composer install` (using flag `--no-dev` in production environment) to download the first set of required components.
-3. Run `npm install` to download the remaining set of required components.
-4. Run `gulp`, which is installed through npm, to copy files loaded by npm to appropriate directories and to compile SCSS to CSS files.
-5. Configure the web root to point to the `web` subdirectory.
-6. The CMS installation may be run by using a browser to access the web interface in the domain’s base path as configured in step 5. During the installation process, select the “Config Installer” installation profile to import configuration from `../config/sync`.
-7. To set up [Matomo](https://matomo.org/) tracking, go to `<domain>/admin/config/system/matomo`.
+2. Run `composer install --no-dev` to download required components.
+3. Configure the web root to point to the `web` subdirectory.
+4. The CMS installation may be run by using a browser to access the web interface in the domain’s base path as configured in step 3. During the installation process, select the “Config Installer” installation profile to import configuration from `../config/sync`.
+5. To set up [Matomo](https://matomo.org/) tracking, go to `<domain>/admin/config/system/matomo`.
+
+### Development
+
+* Skip the `--no-dev` flag when running `composer install`.
+* In order to compile [SCSS files](https://sass-lang.com/) files, it is recommended to have [Node.js](https://nodejs.org/) installed. ([Gulp](https://gulpjs.com/) tasks are set up for processing the SCSS files.) Having installed Node.js run `npm install` to download required packages. Subsequently, you can run `gulp`, which is installed through [npm](https://www.npmjs.com/), every time SCSS files need to be compiled.
 
 ## Updating
 
@@ -28,17 +33,14 @@ Drupal nudges administrators about available security updates. When updating Dru
 
 Updates should be applied in a development environment first: Run `composer update drupal/core webflo/drupal-core-require-dev --with-dependencies` for minor version updates or `composer require <component>:<new version constraint>` for major version updates. After ensuring that the update works properly, push the changes to the `composer.lock` file to the repository.
 
-Updating npm packages is similar: Run `npm update` for minor version updates or `npm install <package name>@<version constraint>` for major version updates. Run `gulp` to ensure updated files are copied to their appropriate places. After ensuring that the update works properly, push the changes to the `package-lock.json` file to the repository.
-Unless when run manually for recompiling the SCSS files, no npm package is actually invoked in production.
+While just being required for development, updating npm packages is similar: Run `npm update` for minor version updates or `npm install <package name>@<version constraint>` for major version updates and push the changes to the `package-lock.json` file to the repository.
 
 In the production environment, pull the updated repository and run:
-1. `composer install` to synchronize composer components.
-2. `npm install` to synchronize npm packages.
-3. `gulp` to copy updated npm package files to their appropriate places.
-4. `vendor/bin/drush updatedb` to run potential database updates.
-5. `vendor/bin/drush cr` to rebuild the cache.
+1. `composer install --no-dev` to synchronize composer components.
+2. `vendor/bin/drush updatedb` to run potential database updates.
+3. `vendor/bin/drush cr` to rebuild the cache.
 
-*Never run composer commands other than `composer install --no-dev` and npm commands other than `npm install` in production environment!*
+*Never run composer commands other than `composer install --no-dev` in production environment!*
 
 - For detailed instructions on how to update Drupal core, see https://www.drupal.org/docs/8/update/update-core-via-composer.
 - For instructions on how to update contributed Drupal modules, see https://www.drupal.org/docs/8/update/update-modules.
