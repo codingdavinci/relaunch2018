@@ -49,7 +49,7 @@ cdv-font:
   version: 1.x
   css:
     theme:
-      includes/cdv_icons/css/cdv_icons.css: {}
+      lib/cdv_icons/css/cdv_icons.css: {}
 
 fontawesome:
   version: 5.5.0
