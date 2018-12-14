@@ -4,7 +4,7 @@
  * Original code:
  * https://github.com/codingdavinci/codingdavinci.de/blob/gh-pages/js/codingdavinci.js
  */
-(function($) {
+(function($, drupalSettings) {
   'use strict';
 
   $(function() {
@@ -50,7 +50,13 @@
         html.push(''
           + '<div class="header-tile" style="left:' + l + 'px;top:' + t + 'px;">'
           + '<div class="flipper">'
-          + '<div class="front cdv-tile-'+ (frontSide_i % frontSideTilesCount) + '"></div>'
+          + '<div class="front cdv-tile-'+ (frontSide_i % frontSideTilesCount) + '"'
+          + (
+            drupalSettings.relaunch2018 && drupalSettings.relaunch2018.tiledHeader
+            ? ' style="background-image:url(' + drupalSettings.relaunch2018.tiledHeader + ')"'
+            : ''
+          )
+          + '></div>'
           + '<div class="back code-tile-' + backSide_i + '"></div>'
           + '</div>'
           + '</div>');
@@ -68,4 +74,4 @@
     });
   });
 
-})(jQuery);
+})(jQuery, drupalSettings);

@@ -3,15 +3,18 @@ langcode: de
 status: true
 dependencies:
   config:
+    - field.field.node.event.field_header_tiles
     - field.field.node.event.field_paragraphs
     - field.field.node.event.field_range
     - field.field.node.event.field_team
     - field.field.node.event.field_text_intro
     - field.field.node.event.field_winners
+    - image.style.thumbnail
     - node.type.event
   module:
     - content_moderation
     - datetime_range
+    - image
     - paragraphs
     - path
     - select2
@@ -22,12 +25,20 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 7
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_header_tiles:
+    weight: 3
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
   field_paragraphs:
-    weight: 5
+    weight: 6
     settings:
       title: Seitenabschnitt
       title_plural: Seitenabschnitte
@@ -62,7 +73,7 @@ content:
     region: content
   field_text_intro:
     type: paragraphs
-    weight: 3
+    weight: 4
     settings:
       title: Seitenabschnitt
       title_plural: Seitenabschnitte
@@ -80,7 +91,7 @@ content:
     region: content
   field_winners:
     type: paragraphs
-    weight: 4
+    weight: 5
     settings:
       title: Seitenabschnitt
       title_plural: Seitenabschnitte
@@ -99,13 +110,13 @@ content:
     region: content
   moderation_state:
     type: moderation_state_default
-    weight: 9
+    weight: 10
     settings: {  }
     region: content
     third_party_settings: {  }
   path:
     type: path
-    weight: 8
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -113,7 +124,7 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 10
+    weight: 11
     region: content
     third_party_settings: {  }
   title:
@@ -125,13 +136,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 10
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 6
+    weight: 7
     settings:
       match_operator: CONTAINS
       size: 60
