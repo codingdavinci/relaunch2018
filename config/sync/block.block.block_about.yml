@@ -12,7 +12,7 @@ dependencies:
 id: block_about
 theme: relaunch2018
 region: content
-weight: -11
+weight: -12
 provider: null
 plugin: 'block_content:05ef4934-46eb-4158-88cc-4374a07145de'
 settings:

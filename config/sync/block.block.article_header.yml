@@ -13,7 +13,7 @@ dependencies:
 id: article_header
 theme: relaunch2018
 region: content
-weight: -15
+weight: -16
 provider: null
 plugin: 'block_content:4760c3fc-9d41-40c7-99d8-9fe5c42c1e57'
 settings:

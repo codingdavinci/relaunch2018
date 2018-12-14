@@ -10,7 +10,7 @@ dependencies:
 id: block_figures
 theme: relaunch2018
 region: content
-weight: -10
+weight: -11
 provider: null
 plugin: block_figures
 settings:

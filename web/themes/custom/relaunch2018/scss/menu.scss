@@ -94,14 +94,6 @@
       font-weight: $font-weight-semi-bold;
     }
 
-    .language-switcher-language-url {
-      left: 25px;
-
-      @include media-breakpoint-up(sm) {
-        display: none;
-      }
-    }
-
     .menu--main {
       margin-top: 25vh;
 
