@@ -45,13 +45,13 @@
         l = Math.round(l * 10) / 10;
 
         frontSide_i++;
-        backSide_i = Math.floor(Math.random() * backSideTileCount) + 1;
+        backSide_i = Math.floor(Math.random() * backSideTileCount);
 
         html.push(''
           + '<div class="header-tile" style="left:' + l + 'px;top:' + t + 'px;">'
           + '<div class="flipper">'
-          + '<div class="front cdv-tiles'+ (frontSide_i % frontSideTilesCount + 1) + '"></div>'
-          + '<div class="back code-tile' + backSide_i + '"></div>'
+          + '<div class="front cdv-tile-'+ (frontSide_i % frontSideTilesCount) + '"></div>'
+          + '<div class="back code-tile-' + backSide_i + '"></div>'
           + '</div>'
           + '</div>');
       }

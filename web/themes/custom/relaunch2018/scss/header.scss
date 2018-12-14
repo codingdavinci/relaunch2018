@@ -141,73 +141,23 @@
             z-index: 9;
           }
 
-          .cdv-tiles1 {  background-position: 0 0; }
-          .cdv-tiles10 { background-position: -220px 0; }
-          .cdv-tiles11 { background-position: -440px 0; }
-          .cdv-tiles12 { background-position: -660px 0; }
-          .cdv-tiles13 { background-position: -880px 0; }
-          .cdv-tiles14 { background-position: -1100px 0; }
-          .cdv-tiles15 { background-position: 0 -220px; }
-          .cdv-tiles16 { background-position: -220px -220px; }
-          .cdv-tiles17 { background-position: -440px -220px; }
-          .cdv-tiles18 { background-position: -660px -220px; }
-          .cdv-tiles19 { background-position: -880px -220px; }
-          .cdv-tiles2 { background-position: -1100px -220px; }
-          .cdv-tiles20 { background-position: 0 -440px; }
-          .cdv-tiles21 { background-position: -220px -440px; }
-          .cdv-tiles22 { background-position: -440px -440px; }
-          .cdv-tiles23 { background-position: -660px -440px; }
-          .cdv-tiles24 { background-position: -880px -440px; }
-          .cdv-tiles25 { background-position: -1100px -440px; }
-          .cdv-tiles26 { background-position: 0 -660px; }
-          .cdv-tiles27 { background-position: -220px -660px; }
-          .cdv-tiles28 { background-position: -440px -660px; }
-          .cdv-tiles29 { background-position: -660px -660px; }
-          .cdv-tiles3 { background-position: -880px -660px; }
-          .cdv-tiles30 { background-position: -1100px -660px; }
-          .cdv-tiles31 { background-position: 0 -880px; }
-          .cdv-tiles32 { background-position: -220px -880px; }
-          .cdv-tiles33 { background-position: -440px -880px; }
-          .cdv-tiles34 { background-position: -660px -880px; }
-          .cdv-tiles35 { background-position: -880px -880px; }
-          .cdv-tiles36 { background-position: -1100px -880px; }
-          .cdv-tiles37 { background-position: 0 -1100px; }
-          .cdv-tiles38 { background-position: -220px -1100px; }
-          .cdv-tiles39 { background-position: -440px -1100px; }
-          .cdv-tiles4 { background-position: -660px -1100px; }
-          .cdv-tiles40 { background-position: -880px -1100px; }
-          .cdv-tiles41 { background-position: -1100px -1100px; }
-          .cdv-tiles42 { background-position: 0 -1320px; }
-          .cdv-tiles5 { background-position: -220px -1320px; }
-          .cdv-tiles6 { background-position: -440px -1320px; }
-          .cdv-tiles7 { background-position: -660px -1320px; }
-          .cdv-tiles8 { background-position: -880px -1320px; }
-          .cdv-tiles9 { background-position: -1100px -1320px; }
+          $tile-size: 220px;
+          $i: 0;
+          @for $row from 0 through 6 {
+            @for $col from 0 through 5 {
+              .cdv-tile-#{$i} { background-position: ($col * $tile-size * -1) ($row * $tile-size * -1); }
+              $i: $i + 1;
+            }
+          }
 
-          .code-tile1 { background-position: 0 0; }
-          .code-tile2 { background-position: -210px 0; }
-          .code-tile3 { background-position: -420px 0; }
-          .code-tile4 { background-position: -630px 0; }
-          .code-tile5 { background-position: -840px 0; }
-          .code-tile6 { background-position: -950px 0; }
-          .code-tile7 { background-position: 0 -210px; }
-          .code-tile8 { background-position: -210px -210px; }
-          .code-tile9 { background-position: -420px -210px; }
-          .code-tile10 { background-position: -630px -210px; }
-          .code-tile11 { background-position: -840px -210px; }
-          .code-tile12 { background-position: -950px -210px; }
-          .code-tile13 { background-position: 0 -420px; }
-          .code-tile14 { background-position: -210px -420px; }
-          .code-tile15 { background-position: -420px -420px; }
-          .code-tile16 { background-position: -630px -420px; }
-          .code-tile17 { background-position: -840px -420px; }
-          .code-tile18 { background-position: -950px -420px; }
-          .code-tile19 { background-position: 0 -630px; }
-          .code-tile20 { background-position: -210px -630px; }
-          .code-tile21 { background-position: -420px -630px; }
-          .code-tile22 { background-position: -630px -630px; }
-          .code-tile23 { background-position: -840px -630px; }
-          .code-tile24 { background-position: -950px -630px; }
+          $tile-size: 210px;
+          $i: 0;
+          @for $row from 0 through 3 {
+            @for $col from 0 through 5 {
+              .code-tile-#{$i} { background-position: ($col * $tile-size * -1) ($row * $tile-size * -1); }
+              $i: $i + 1;
+            }
+          }
         }
       }
     }
@@ -246,51 +196,23 @@
               background-size: auto;
             }
 
-            .cdv-tiles1 {  background-position: 0       0; }
-            .cdv-tiles10 { background-position: -400px  0; }
-            .cdv-tiles11 { background-position: -800px  0; }
-            .cdv-tiles12 { background-position: -1200px 0; }
-            .cdv-tiles13 { background-position: 0       -400px; }
-            .cdv-tiles14 { background-position: -400px  -400px; }
-            .cdv-tiles15 { background-position: -800px  -400px; }
-            .cdv-tiles16 { background-position: -1200px -400px; }
-            .cdv-tiles17 { background-position: 0       -800px; }
-            .cdv-tiles18 { background-position: -400px  -800px; }
-            .cdv-tiles19 { background-position: -800px  -800px; }
-            .cdv-tiles2 {  background-position: -1200px -800px; }
-            .cdv-tiles20 { background-position: 0       -1200px; }
-            .cdv-tiles3 {  background-position: -400px  -1200px; }
-            .cdv-tiles4 {  background-position: -800px  -1200px; }
-            .cdv-tiles5 {  background-position: -1200px -1200px; }
-            .cdv-tiles6 {  background-position: 0       -1600px; }
-            .cdv-tiles7 {  background-position: -400px  -1600px; }
-            .cdv-tiles8 {  background-position: -800px  -1600px; }
-            .cdv-tiles9 {  background-position: -1200px -1600px; }
+            $tile-size: 400px;
 
-            .code-tile1 { background-position: 0 0; }
-            .code-tile2 { background-position: -400px 0; }
-            .code-tile3 { background-position: -800px 0; }
-            .code-tile4 { background-position: -1200px 0; }
-            .code-tile5 { background-position: -1600px 0; }
-            .code-tile6 { background-position: -2000px 0; }
-            .code-tile7 { background-position: 0 -400px; }
-            .code-tile8 { background-position: -400px -400px; }
-            .code-tile9 { background-position: -800px -400px; }
-            .code-tile10 { background-position: -1200px -400px; }
-            .code-tile11 { background-position: -1600px -400px; }
-            .code-tile12 { background-position: -2000px -400px; }
-            .code-tile13 { background-position: 0 -400px; }
-            .code-tile14 { background-position: -400px -800px; }
-            .code-tile15 { background-position: -800px -800px; }
-            .code-tile16 { background-position: -1200px -800px; }
-            .code-tile17 { background-position: -1600px -800px; }
-            .code-tile18 { background-position: -2000px -800px; }
-            .code-tile19 { background-position: 0 -1200px; }
-            .code-tile20 { background-position: -400px -1200px; }
-            .code-tile21 { background-position: -800px -1200px; }
-            .code-tile22 { background-position: -1200px -1200px; }
-            .code-tile23 { background-position: -1600px -1200px; }
-            .code-tile24 { background-position: -2000px -1200px; }
+            $i: 0;
+            @for $row from 0 through 4 {
+              @for $col from 0 through 3 {
+                .cdv-tile-#{$i} { background-position: ($col * $tile-size * -1) ($row * $tile-size * -1); }
+                $i: $i + 1;
+              }
+            }
+
+            $i: 0;
+            @for $row from 0 through 3 {
+              @for $col from 0 through 5 {
+                .code-tile-#{$i} { background-position: ($col * $tile-size * -1) ($row * $tile-size * -1); }
+                $i: $i + 1;
+              }
+            }
           }
         }
       }
