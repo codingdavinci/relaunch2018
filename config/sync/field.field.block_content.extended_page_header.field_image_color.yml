@@ -1,21 +1,29 @@
-uuid: 03490e94-a05d-452d-812b-d954dcd392dc
+uuid: fbcea7dd-dc81-47be-afd9-cf5e036e9e46
 langcode: de
 status: true
 dependencies:
   config:
     - block_content.type.extended_page_header
     - field.storage.block_content.field_image_color
+    - taxonomy.vocabulary.background_colors
 id: block_content.extended_page_header.field_image_color
 field_name: field_image_color
 entity_type: block_content
 bundle: extended_page_header
-label: 'Bildfärbung (HEX-Code)'
+label: Bildfärbung
 description: ''
-required: false
+required: true
 translatable: false
-default_value:
-  -
-    value: FCD9C8
+default_value: {  }
 default_value_callback: ''
-settings: {  }
-field_type: string
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      background_colors: background_colors
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

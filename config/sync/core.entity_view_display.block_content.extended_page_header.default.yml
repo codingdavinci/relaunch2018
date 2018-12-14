@@ -28,9 +28,10 @@ content:
     weight: 3
     label: hidden
     settings:
-      link_to_entity: false
+      link: true
+      view_mode: default
     third_party_settings: {  }
-    type: string
+    type: entity_reference_entity_view
     region: content
   field_textblock:
     weight: 2
