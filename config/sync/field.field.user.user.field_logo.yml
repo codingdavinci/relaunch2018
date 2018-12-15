@@ -5,15 +5,8 @@ dependencies:
   config:
     - field.storage.user.field_logo
   module:
-    - content_translation
     - image
     - user
-third_party_settings:
-  content_translation:
-    translation_sync:
-      alt: alt
-      title: title
-      file: '0'
 id: user.user.field_logo
 field_name: field_logo
 entity_type: user
@@ -21,7 +14,7 @@ bundle: user
 label: Logo
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
