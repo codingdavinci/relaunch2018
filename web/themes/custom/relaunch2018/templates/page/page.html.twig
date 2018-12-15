@@ -26,12 +26,11 @@
 {% endif %}
 
 {{ page.language_switcher }}
+{{ page.primary_menu }}
+{{ page.secondary_menu }}
 
 <div class="layout-container--wrapper">
   <div class="layout-container{% if tiled_header %} header-tiles-above{% endif %}">
-
-    {{ page.primary_menu }}
-    {{ page.secondary_menu }}
 
     {% if not tiled_header %}
       <header role="banner">

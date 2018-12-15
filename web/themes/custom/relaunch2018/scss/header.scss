@@ -11,6 +11,10 @@
   .dialog-off-canvas-main-canvas {
     // Conflicts with tiles hover effect.
     height: 0;
+    // Conflicts with properly aligning menu burger and language switcher when
+    // admin toolbar is visible.
+    position: absolute;
+    width: 100%;
   }
 }
 

@@ -6502,7 +6502,9 @@ ul.ui-autocomplete li.ui-menu-item a {
  */
 .path-frontpage .dialog-off-canvas-main-canvas,
 .page-node-type-event .dialog-off-canvas-main-canvas {
-  height: 0; }
+  height: 0;
+  position: absolute;
+  width: 100%; }
 
 .header--tiles {
   width: 100%; }
