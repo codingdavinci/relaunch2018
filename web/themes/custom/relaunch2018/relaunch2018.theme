@@ -47,27 +47,36 @@ function relaunch2018_preprocess_page(array &$variables) {
     }
   }
 
-  if (isset($variables['node']) && $variables['node']->bundle() === 'event') {
-    // Add custom tiled header on event page
+  if (isset($variables['node'])) {
+    $node = null;
 
-    /** @var Node $node */
-    $node = $variables['node'];
-
-    $file = null;
-
-    if ($node->get('field_header_tiles')->target_id !== null) {
-      $file = File::load($node->get('field_header_tiles')->target_id);
+    if ($variables['node'] instanceof Node) {
+      $node = $variables['node'];
     }
-    else {
-      $settings = $node->get('field_header_tiles')->getSettings();
-      $uuid = $settings = $settings['default_image']['uuid'];
-      $file = \Drupal::service('entity.repository')->loadEntityByUuid('file', $uuid);
+    if (is_string($variables['node'])) {
+      // On revision page, $variables['node'] contains the node id.
+      $node = Node::load($variables['node']);
     }
 
-    $url = file_create_url($file->getFileUri());
+    if ($node instanceof Node && $node->bundle() === 'event') {
+      // Add custom tiled header on event page
 
-    // Use JS to inject custom tiled header to not spoil caching:
-    $variables['#attached']['drupalSettings']['relaunch2018']['tiledHeader'] = $url;
+      $file = null;
+
+      if ($node->get('field_header_tiles')->target_id !== null) {
+        $file = File::load($node->get('field_header_tiles')->target_id);
+      }
+      else {
+        $settings = $node->get('field_header_tiles')->getSettings();
+        $uuid = $settings = $settings['default_image']['uuid'];
+        $file = \Drupal::service('entity.repository')->loadEntityByUuid('file', $uuid);
+      }
+
+      $url = file_create_url($file->getFileUri());
+
+      // Use JS to inject custom tiled header to not spoil caching:
+      $variables['#attached']['drupalSettings']['relaunch2018']['tiledHeader'] = $url;
+    }
   }
 }
 
