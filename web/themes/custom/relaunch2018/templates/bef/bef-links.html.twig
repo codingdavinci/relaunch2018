@@ -18,7 +18,7 @@
     {% endif %}
     {% if isNested %}
       {% set new_nesting_level = attribute(depth, child) %}
-      {% include '@relaunch2018/bef-nested-elements.html.twig' %}
+      {% include '@relaunch2018/bef/bef-nested-elements.html.twig' %}
       {% set current_nesting_level = new_nesting_level %}
     {# Don't render "All" links: #}
     {% elseif child != 'All' and child != '' %}
