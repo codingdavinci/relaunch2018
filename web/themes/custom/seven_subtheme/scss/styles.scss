@@ -32,7 +32,8 @@
       margin-bottom: .75em;
     }
 
-    .form-item {
+    .form-item,
+    .field--type-boolean {
       &:not(.form-type-checkbox) {
         margin-bottom: 3em;
       }

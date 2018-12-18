@@ -1,17 +1,14 @@
-uuid: 4734eda2-bf3b-4362-8667-de02eebbe1c1
+uuid: fdf65b21-2f5b-46ca-8da9-006ba4ce83bc
 langcode: de
 status: true
 dependencies:
   module:
     - node
-id: node.field_georef_standard
-field_name: field_georef_standard
+id: node.field_has_geo_references
+field_name: field_has_geo_references
 entity_type: node
-type: string
-settings:
-  max_length: 255
-  is_ascii: false
-  case_sensitive: false
+type: boolean
+settings: {  }
 module: core
 locked: false
 cardinality: 1

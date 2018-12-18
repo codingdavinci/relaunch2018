@@ -25,21 +25,33 @@
   margin-bottom: .75em; }
 
 #node-data-set-form .layout-region-node-main .form-item:not(.form-type-checkbox),
+#node-data-set-form .layout-region-node-main .field--type-boolean:not(.form-type-checkbox),
 #node-project-form .layout-region-node-main .form-item:not(.form-type-checkbox),
+#node-project-form .layout-region-node-main .field--type-boolean:not(.form-type-checkbox),
 #node-data-set-edit-form .layout-region-node-main .form-item:not(.form-type-checkbox),
-#node-project-edit-form .layout-region-node-main .form-item:not(.form-type-checkbox) {
+#node-data-set-edit-form .layout-region-node-main .field--type-boolean:not(.form-type-checkbox),
+#node-project-edit-form .layout-region-node-main .form-item:not(.form-type-checkbox),
+#node-project-edit-form .layout-region-node-main .field--type-boolean:not(.form-type-checkbox) {
   margin-bottom: 3em; }
 
 #node-data-set-form .layout-region-node-main .form-item.form-type-checkbox,
+#node-data-set-form .layout-region-node-main .field--type-boolean.form-type-checkbox,
 #node-project-form .layout-region-node-main .form-item.form-type-checkbox,
+#node-project-form .layout-region-node-main .field--type-boolean.form-type-checkbox,
 #node-data-set-edit-form .layout-region-node-main .form-item.form-type-checkbox,
-#node-project-edit-form .layout-region-node-main .form-item.form-type-checkbox {
+#node-data-set-edit-form .layout-region-node-main .field--type-boolean.form-type-checkbox,
+#node-project-edit-form .layout-region-node-main .form-item.form-type-checkbox,
+#node-project-edit-form .layout-region-node-main .field--type-boolean.form-type-checkbox {
   margin: 1em 0; }
 
 #node-data-set-form .layout-region-node-main .form-item .tabledrag-toggle-weight-wrapper,
+#node-data-set-form .layout-region-node-main .field--type-boolean .tabledrag-toggle-weight-wrapper,
 #node-project-form .layout-region-node-main .form-item .tabledrag-toggle-weight-wrapper,
+#node-project-form .layout-region-node-main .field--type-boolean .tabledrag-toggle-weight-wrapper,
 #node-data-set-edit-form .layout-region-node-main .form-item .tabledrag-toggle-weight-wrapper,
-#node-project-edit-form .layout-region-node-main .form-item .tabledrag-toggle-weight-wrapper {
+#node-data-set-edit-form .layout-region-node-main .field--type-boolean .tabledrag-toggle-weight-wrapper,
+#node-project-edit-form .layout-region-node-main .form-item .tabledrag-toggle-weight-wrapper,
+#node-project-edit-form .layout-region-node-main .field--type-boolean .tabledrag-toggle-weight-wrapper {
   display: none; }
 
 #node-data-set-form .layout-region-node-main .horizontal-tabs,

@@ -9,7 +9,7 @@ dependencies:
     - field.field.node.data_set.field_description
     - field.field.node.data_set.field_events
     - field.field.node.data_set.field_file_types
-    - field.field.node.data_set.field_georef_standard
+    - field.field.node.data_set.field_has_geo_references
     - field.field.node.data_set.field_keywords
     - field.field.node.data_set.field_links
     - field.field.node.data_set.field_media_count
@@ -45,7 +45,7 @@ third_party_settings:
         - group_metadata
         - group_links
       parent_name: ''
-      weight: 3
+      weight: 2
       format_type: tabs
       format_settings:
         label: Reiter
@@ -79,7 +79,7 @@ third_party_settings:
         - field_metadata_format
         - field_metadata_standards
         - field_metadata_filesize
-        - field_georef_standard
+        - field_has_geo_references
         - field_vocabulary
         - field_metadata_doc_links
         - field_metadata_license
@@ -211,13 +211,12 @@ content:
     third_party_settings: {  }
     type: options_buttons
     region: content
-  field_georef_standard:
+  field_has_geo_references:
     weight: 19
     settings:
-      size: 60
-      placeholder: ''
+      display_label: true
     third_party_settings: {  }
-    type: string_textfield
+    type: boolean_checkbox
     region: content
   field_keywords:
     weight: 6
@@ -280,7 +279,7 @@ content:
     third_party_settings: {  }
     region: content
   field_metadata_doc_links:
-    weight: 22
+    weight: 21
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -313,7 +312,7 @@ content:
     region: content
   field_metadata_license:
     type: paragraphs
-    weight: 23
+    weight: 22
     settings:
       title: Seitenabschnitt
       title_plural: Seitenabschnitte

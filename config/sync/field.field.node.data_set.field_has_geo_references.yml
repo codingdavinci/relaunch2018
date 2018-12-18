@@ -1,0 +1,23 @@
+uuid: bde1b633-8721-4f7c-b30d-c3748ce902ef
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_has_geo_references
+    - node.type.data_set
+id: node.data_set.field_has_geo_references
+field_name: field_has_geo_references
+entity_type: node
+bundle: data_set
+label: 'Datensatz enthält Georeferenzen?'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Ja
+  off_label: Nein
+field_type: boolean
