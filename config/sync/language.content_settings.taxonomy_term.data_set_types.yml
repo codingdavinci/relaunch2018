@@ -1,0 +1,16 @@
+uuid: c1aa1078-fdb6-4f2b-ad6a-9055f5fc21b9
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.data_set_types
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.data_set_types
+target_entity_type_id: taxonomy_term
+target_bundle: data_set_types
+default_langcode: site_default
+language_alterable: true

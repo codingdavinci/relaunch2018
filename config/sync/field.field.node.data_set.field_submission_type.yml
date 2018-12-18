@@ -1,0 +1,29 @@
+uuid: 0ec008bf-5da4-4309-bb22-0c2ef48b54d4
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_submission_type
+    - node.type.data_set
+    - taxonomy.vocabulary.data_set_types
+id: node.data_set.field_submission_type
+field_name: field_submission_type
+entity_type: node
+bundle: data_set
+label: Datensatztyp
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      data_set_types: data_set_types
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

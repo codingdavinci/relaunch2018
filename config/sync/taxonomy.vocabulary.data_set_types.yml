@@ -1,9 +1,9 @@
-uuid: a92bee8c-326d-4cb4-8396-2d16f9ead3d7
+uuid: 37e864a6-c613-4726-8f3d-c1b881361a74
 langcode: de
 status: true
 dependencies: {  }
-name: Datensatz-Zugriffsmodi
-vid: data_set_access_modes
+name: Datensatz-Typen
+vid: data_set_types
 description: 'Zur Kategorisierung von Datensätzen.'
 hierarchy: 0
 weight: 0

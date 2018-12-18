@@ -1,0 +1,20 @@
+uuid: 8d4076d9-2ce7-4e5e-9f15-ab09d343dff0
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_submission_type
+field_name: field_submission_type
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
