@@ -7971,6 +7971,9 @@ figcaption {
     .node--type-data-set .article--content-container .node__content .field--name-field-events > *,
     .node--type-project .article--content-container .node__content .field--name-field-events > * {
       display: inline-block; }
+    .node--type-data-set .article--content-container .node__content .field--name-field-submission-type .field__item,
+    .node--type-project .article--content-container .node__content .field--name-field-submission-type .field__item {
+      font-weight: 500; }
     .node--type-data-set .article--content-container .node__content .field--name-field-description,
     .node--type-project .article--content-container .node__content .field--name-field-description {
       margin-top: 2rem; }

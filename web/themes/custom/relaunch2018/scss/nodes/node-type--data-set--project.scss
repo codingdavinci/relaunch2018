@@ -102,6 +102,12 @@
         }
       }
 
+      .field--name-field-submission-type {
+        .field__item {
+          font-weight: $font-weight-semi-bold;
+        }
+      }
+
       .field--name-field-description {
         margin-top: 2rem;
       }
