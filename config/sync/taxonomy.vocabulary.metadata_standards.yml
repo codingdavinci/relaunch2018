@@ -2,8 +2,8 @@ uuid: 7801c485-9ee4-464a-9178-db23019e810d
 langcode: de
 status: true
 dependencies: {  }
-name: Metadaten-Standards
+name: Metadaten-Schemata
 vid: metadata_standards
-description: 'Zu den Metadaten eines Datensatzes auswählbare Standards.'
+description: 'Zu den Metadaten eines Datensatzes auswählbare Schemata.'
 hierarchy: 0
 weight: 0

@@ -2532,7 +2532,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Metadaten-Standard
+          label: Metadaten-Schema
           exclude: false
           alter:
             alter_text: false
