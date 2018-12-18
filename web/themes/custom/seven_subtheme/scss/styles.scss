@@ -102,7 +102,8 @@
       &.field--name-field-tags,
       &.field--name-field-theme,
       &.field--name-field-metadata-format,
-      &.field--name-field-metadata-standards{
+      &.field--name-field-metadata-standards,
+      &.field--name-field-controlled-vocabularies {
         .form-checkboxes {
           column-count: 2;
 

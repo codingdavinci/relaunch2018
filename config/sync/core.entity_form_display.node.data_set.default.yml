@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.data_set.field_access_mode
     - field.field.node.data_set.field_acknowledge_privacy
     - field.field.node.data_set.field_attributed_image
+    - field.field.node.data_set.field_controlled_vocabularies
     - field.field.node.data_set.field_description
     - field.field.node.data_set.field_events
     - field.field.node.data_set.field_file_types
@@ -25,7 +26,6 @@ dependencies:
     - field.field.node.data_set.field_remarks
     - field.field.node.data_set.field_submission_type
     - field.field.node.data_set.field_theme
-    - field.field.node.data_set.field_vocabulary
     - node.type.data_set
   module:
     - content_moderation
@@ -80,7 +80,7 @@ third_party_settings:
         - field_metadata_standards
         - field_metadata_filesize
         - field_has_geo_references
-        - field_vocabulary
+        - field_controlled_vocabularies
         - field_metadata_doc_links
         - field_metadata_license
       parent_name: group_tabs
@@ -173,6 +173,12 @@ content:
         collapse_edit_all: '0'
         add_above: '0'
     third_party_settings: {  }
+    region: content
+  field_controlled_vocabularies:
+    weight: 20
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
     region: content
   field_description:
     weight: 4
@@ -366,14 +372,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
-    region: content
-  field_vocabulary:
-    weight: 20
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
     region: content
   langcode:
     type: language_select

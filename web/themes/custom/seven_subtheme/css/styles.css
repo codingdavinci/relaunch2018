@@ -157,33 +157,39 @@
   #node-project-edit-form .layout-region-node-main .field--widget-options-buttons + .field--widget-options-buttons {
     border-top: none;
     padding-top: 0; }
-  #node-data-set-form .layout-region-node-main .field--widget-options-buttons.field--name-field-tags .form-checkboxes, #node-data-set-form .layout-region-node-main .field--widget-options-buttons.field--name-field-theme .form-checkboxes, #node-data-set-form .layout-region-node-main .field--widget-options-buttons.field--name-field-metadata-format .form-checkboxes, #node-data-set-form .layout-region-node-main .field--widget-options-buttons.field--name-field-metadata-standards .form-checkboxes,
+  #node-data-set-form .layout-region-node-main .field--widget-options-buttons.field--name-field-tags .form-checkboxes, #node-data-set-form .layout-region-node-main .field--widget-options-buttons.field--name-field-theme .form-checkboxes, #node-data-set-form .layout-region-node-main .field--widget-options-buttons.field--name-field-metadata-format .form-checkboxes, #node-data-set-form .layout-region-node-main .field--widget-options-buttons.field--name-field-metadata-standards .form-checkboxes, #node-data-set-form .layout-region-node-main .field--widget-options-buttons.field--name-field-controlled-vocabularies .form-checkboxes,
   #node-project-form .layout-region-node-main .field--widget-options-buttons.field--name-field-tags .form-checkboxes,
   #node-project-form .layout-region-node-main .field--widget-options-buttons.field--name-field-theme .form-checkboxes,
   #node-project-form .layout-region-node-main .field--widget-options-buttons.field--name-field-metadata-format .form-checkboxes,
   #node-project-form .layout-region-node-main .field--widget-options-buttons.field--name-field-metadata-standards .form-checkboxes,
+  #node-project-form .layout-region-node-main .field--widget-options-buttons.field--name-field-controlled-vocabularies .form-checkboxes,
   #node-data-set-edit-form .layout-region-node-main .field--widget-options-buttons.field--name-field-tags .form-checkboxes,
   #node-data-set-edit-form .layout-region-node-main .field--widget-options-buttons.field--name-field-theme .form-checkboxes,
   #node-data-set-edit-form .layout-region-node-main .field--widget-options-buttons.field--name-field-metadata-format .form-checkboxes,
   #node-data-set-edit-form .layout-region-node-main .field--widget-options-buttons.field--name-field-metadata-standards .form-checkboxes,
+  #node-data-set-edit-form .layout-region-node-main .field--widget-options-buttons.field--name-field-controlled-vocabularies .form-checkboxes,
   #node-project-edit-form .layout-region-node-main .field--widget-options-buttons.field--name-field-tags .form-checkboxes,
   #node-project-edit-form .layout-region-node-main .field--widget-options-buttons.field--name-field-theme .form-checkboxes,
   #node-project-edit-form .layout-region-node-main .field--widget-options-buttons.field--name-field-metadata-format .form-checkboxes,
-  #node-project-edit-form .layout-region-node-main .field--widget-options-buttons.field--name-field-metadata-standards .form-checkboxes {
+  #node-project-edit-form .layout-region-node-main .field--widget-options-buttons.field--name-field-metadata-standards .form-checkboxes,
+  #node-project-edit-form .layout-region-node-main .field--widget-options-buttons.field--name-field-controlled-vocabularies .form-checkboxes {
     column-count: 2; }
-    #node-data-set-form .layout-region-node-main .field--widget-options-buttons.field--name-field-tags .form-checkboxes > .form-type-checkbox, #node-data-set-form .layout-region-node-main .field--widget-options-buttons.field--name-field-theme .form-checkboxes > .form-type-checkbox, #node-data-set-form .layout-region-node-main .field--widget-options-buttons.field--name-field-metadata-format .form-checkboxes > .form-type-checkbox, #node-data-set-form .layout-region-node-main .field--widget-options-buttons.field--name-field-metadata-standards .form-checkboxes > .form-type-checkbox,
+    #node-data-set-form .layout-region-node-main .field--widget-options-buttons.field--name-field-tags .form-checkboxes > .form-type-checkbox, #node-data-set-form .layout-region-node-main .field--widget-options-buttons.field--name-field-theme .form-checkboxes > .form-type-checkbox, #node-data-set-form .layout-region-node-main .field--widget-options-buttons.field--name-field-metadata-format .form-checkboxes > .form-type-checkbox, #node-data-set-form .layout-region-node-main .field--widget-options-buttons.field--name-field-metadata-standards .form-checkboxes > .form-type-checkbox, #node-data-set-form .layout-region-node-main .field--widget-options-buttons.field--name-field-controlled-vocabularies .form-checkboxes > .form-type-checkbox,
     #node-project-form .layout-region-node-main .field--widget-options-buttons.field--name-field-tags .form-checkboxes > .form-type-checkbox,
     #node-project-form .layout-region-node-main .field--widget-options-buttons.field--name-field-theme .form-checkboxes > .form-type-checkbox,
     #node-project-form .layout-region-node-main .field--widget-options-buttons.field--name-field-metadata-format .form-checkboxes > .form-type-checkbox,
     #node-project-form .layout-region-node-main .field--widget-options-buttons.field--name-field-metadata-standards .form-checkboxes > .form-type-checkbox,
+    #node-project-form .layout-region-node-main .field--widget-options-buttons.field--name-field-controlled-vocabularies .form-checkboxes > .form-type-checkbox,
     #node-data-set-edit-form .layout-region-node-main .field--widget-options-buttons.field--name-field-tags .form-checkboxes > .form-type-checkbox,
     #node-data-set-edit-form .layout-region-node-main .field--widget-options-buttons.field--name-field-theme .form-checkboxes > .form-type-checkbox,
     #node-data-set-edit-form .layout-region-node-main .field--widget-options-buttons.field--name-field-metadata-format .form-checkboxes > .form-type-checkbox,
     #node-data-set-edit-form .layout-region-node-main .field--widget-options-buttons.field--name-field-metadata-standards .form-checkboxes > .form-type-checkbox,
+    #node-data-set-edit-form .layout-region-node-main .field--widget-options-buttons.field--name-field-controlled-vocabularies .form-checkboxes > .form-type-checkbox,
     #node-project-edit-form .layout-region-node-main .field--widget-options-buttons.field--name-field-tags .form-checkboxes > .form-type-checkbox,
     #node-project-edit-form .layout-region-node-main .field--widget-options-buttons.field--name-field-theme .form-checkboxes > .form-type-checkbox,
     #node-project-edit-form .layout-region-node-main .field--widget-options-buttons.field--name-field-metadata-format .form-checkboxes > .form-type-checkbox,
-    #node-project-edit-form .layout-region-node-main .field--widget-options-buttons.field--name-field-metadata-standards .form-checkboxes > .form-type-checkbox {
+    #node-project-edit-form .layout-region-node-main .field--widget-options-buttons.field--name-field-metadata-standards .form-checkboxes > .form-type-checkbox,
+    #node-project-edit-form .layout-region-node-main .field--widget-options-buttons.field--name-field-controlled-vocabularies .form-checkboxes > .form-type-checkbox {
       display: inline-block;
       margin: 0;
       padding: .8em 0 .2em 0;

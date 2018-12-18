@@ -1,0 +1,11 @@
+uuid: 8fa269f7-57c9-40ae-a1e7-2e6e1427f0cd
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.controlled_vocabularies
+id: taxonomy_term.controlled_vocabularies
+target_entity_type_id: taxonomy_term
+target_bundle: controlled_vocabularies
+default_langcode: site_default
+language_alterable: false

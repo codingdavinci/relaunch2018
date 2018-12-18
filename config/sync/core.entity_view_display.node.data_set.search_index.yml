@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.data_set.field_description
     - field.field.node.data_set.field_events
     - field.field.node.data_set.field_file_types
+    - field.field.node.data_set.field_has_geo_references
     - field.field.node.data_set.field_keywords
     - field.field.node.data_set.field_links
     - field.field.node.data_set.field_media_count
@@ -25,7 +26,6 @@ dependencies:
     - field.field.node.data_set.field_remarks
     - field.field.node.data_set.field_submission_type
     - field.field.node.data_set.field_theme
-    - field.field.node.data_set.field_vocabulary
     - node.type.data_set
   module:
     - entity_reference_revisions
@@ -188,6 +188,7 @@ content:
 hidden:
   field_access_mode: true
   field_acknowledge_privacy: true
+  field_has_geo_references: true
   field_links: true
   field_media_count: true
   field_media_filesize: true
@@ -196,5 +197,4 @@ hidden:
   field_objects_count: true
   field_remarks: true
   field_submission_type: true
-  field_vocabulary: true
   langcode: true

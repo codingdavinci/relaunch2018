@@ -1,0 +1,9 @@
+uuid: 7af66911-b9f8-45c4-87e4-92d111a07294
+langcode: de
+status: true
+dependencies: {  }
+name: 'Kontrollierte Vokabulare'
+vid: controlled_vocabularies
+description: 'Zur Kategorisierung von Datensätzen.'
+hierarchy: 0
+weight: 0

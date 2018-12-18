@@ -1,0 +1,20 @@
+uuid: 1b4f3e68-f150-4ee6-b336-934226cc14d2
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_controlled_vocabularies
+field_name: field_controlled_vocabularies
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

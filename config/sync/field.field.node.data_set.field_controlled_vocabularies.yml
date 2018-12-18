@@ -1,0 +1,29 @@
+uuid: 8745f318-3fc1-4ee4-b468-a57cfe462eae
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_controlled_vocabularies
+    - node.type.data_set
+    - taxonomy.vocabulary.controlled_vocabularies
+id: node.data_set.field_controlled_vocabularies
+field_name: field_controlled_vocabularies
+entity_type: node
+bundle: data_set
+label: 'Kontrollierte Vokabulare'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      controlled_vocabularies: controlled_vocabularies
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
