@@ -11,9 +11,7 @@ dependencies:
     - field.field.node.data_set.field_file_types
     - field.field.node.data_set.field_georef_standard
     - field.field.node.data_set.field_keywords
-    - field.field.node.data_set.field_links_api
-    - field.field.node.data_set.field_links_media
-    - field.field.node.data_set.field_links_metadata
+    - field.field.node.data_set.field_links
     - field.field.node.data_set.field_media_count
     - field.field.node.data_set.field_media_filesize
     - field.field.node.data_set.field_media_license
@@ -99,9 +97,7 @@ third_party_settings:
     group_links:
       children:
         - field_access_mode
-        - field_links_api
-        - field_links_media
-        - field_links_metadata
+        - field_links
       parent_name: group_tabs
       weight: 4
       format_type: tab
@@ -230,24 +226,8 @@ content:
     third_party_settings: {  }
     type: select2_entity_reference
     region: content
-  field_links_api:
+  field_links:
     weight: 4
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-    type: link_default
-    region: content
-  field_links_media:
-    weight: 5
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-    type: link_default
-    region: content
-  field_links_metadata:
-    weight: 6
     settings:
       placeholder_url: ''
       placeholder_title: ''

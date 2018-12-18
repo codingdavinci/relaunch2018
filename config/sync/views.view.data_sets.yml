@@ -4,13 +4,12 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.storage.node.field_access_mode
     - field.storage.node.field_attributed_image
     - field.storage.node.field_description
     - field.storage.node.field_file_types
     - field.storage.node.field_keywords
-    - field.storage.node.field_links_api
-    - field.storage.node.field_links_media
-    - field.storage.node.field_links_metadata
+    - field.storage.node.field_links
     - field.storage.node.field_media_count
     - field.storage.node.field_media_filesize
     - field.storage.node.field_media_license
@@ -2149,73 +2148,6 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_links_api:
-          id: field_links_api
-          table: node__field_links_api
-          field: field_links_api
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'Link zur API'
-          exclude: false
-          alter:
-            alter_text: true
-            text: '{{ field_links_api__title }} ({{ field_links_api__uri }})'
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: uri
-          type: link_separate
-          settings:
-            trim_length: 80
-            url_only: false
-            url_plain: false
-            rel: '0'
-            target: '0'
-          group_column: ''
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
         field_media_count:
           id: field_media_count
           table: node__field_media_count
@@ -2529,73 +2461,6 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_links_media:
-          id: field_links_media
-          table: node__field_links_media
-          field: field_links_media
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'Link zu den Mediendateien'
-          exclude: false
-          alter:
-            alter_text: true
-            text: '{{ field_links_media__title }} ({{ field_links_media__uri }})'
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: uri
-          type: link
-          settings:
-            trim_length: 80
-            url_only: false
-            url_plain: false
-            rel: '0'
-            target: '0'
-          group_column: ''
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
         field_metadata_standards:
           id: field_metadata_standards
           table: node__field_metadata_standards
@@ -2789,18 +2654,81 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_links_metadata:
-          id: field_links_metadata
-          table: node__field_links_metadata
-          field: field_links_metadata
+        field_access_mode:
+          id: field_access_mode
+          table: node__field_access_mode
+          field: field_access_mode
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Link zu den Metadaten'
+          label: Zugriffsmodus
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: false
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_links:
+          id: field_links
+          table: node__field_links
+          field: field_links
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Links
           exclude: false
           alter:
             alter_text: true
-            text: '{{ field_links_metadata__title }} ({{ field_links_metadata__uri }})'
+            text: '{{ field_links__title }} ({{ field_links__uri }})'
             make_link: false
             path: ''
             absolute: false
@@ -3081,12 +3009,11 @@ display:
         - 'user.node_grants:view'
         - user.roles
       tags:
+        - 'config:field.storage.node.field_access_mode'
         - 'config:field.storage.node.field_description'
         - 'config:field.storage.node.field_file_types'
         - 'config:field.storage.node.field_keywords'
-        - 'config:field.storage.node.field_links_api'
-        - 'config:field.storage.node.field_links_media'
-        - 'config:field.storage.node.field_links_metadata'
+        - 'config:field.storage.node.field_links'
         - 'config:field.storage.node.field_media_count'
         - 'config:field.storage.node.field_media_filesize'
         - 'config:field.storage.node.field_media_license'
@@ -3188,7 +3115,7 @@ display:
         description: ''
         expanded: false
         parent: ''
-        weight: -46
+        weight: -45
         context: '0'
         menu_name: main
       fields:

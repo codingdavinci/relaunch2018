@@ -4,15 +4,14 @@ status: false
 dependencies:
   config:
     - core.entity_view_mode.node.search_index
+    - field.field.node.data_set.field_access_mode
+    - field.field.node.data_set.field_acknowledge_privacy
     - field.field.node.data_set.field_attributed_image
     - field.field.node.data_set.field_description
     - field.field.node.data_set.field_events
     - field.field.node.data_set.field_file_types
     - field.field.node.data_set.field_georef_standard
     - field.field.node.data_set.field_keywords
-    - field.field.node.data_set.field_links_api
-    - field.field.node.data_set.field_links_media
-    - field.field.node.data_set.field_links_metadata
     - field.field.node.data_set.field_media_count
     - field.field.node.data_set.field_media_filesize
     - field.field.node.data_set.field_media_license
@@ -127,42 +126,6 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  field_links_api:
-    weight: 9
-    label: hidden
-    settings:
-      trim_length: 80
-      target: _blank
-      url_only: false
-      url_plain: false
-      rel: '0'
-    third_party_settings: {  }
-    type: link
-    region: content
-  field_links_media:
-    weight: 7
-    label: hidden
-    settings:
-      trim_length: 80
-      target: _blank
-      url_only: false
-      url_plain: false
-      rel: '0'
-    third_party_settings: {  }
-    type: link
-    region: content
-  field_links_metadata:
-    weight: 1
-    label: hidden
-    settings:
-      trim_length: 80
-      target: _blank
-      url_only: false
-      url_plain: false
-      rel: '0'
-    third_party_settings: {  }
-    type: link
-    region: content
   field_media_license:
     type: entity_reference_revisions_entity_view
     weight: 9
@@ -222,6 +185,8 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_access_mode: true
+  field_acknowledge_privacy: true
   field_georef_standard: true
   field_media_count: true
   field_media_filesize: true

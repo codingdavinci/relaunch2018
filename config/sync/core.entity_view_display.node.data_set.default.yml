@@ -11,9 +11,7 @@ dependencies:
     - field.field.node.data_set.field_file_types
     - field.field.node.data_set.field_georef_standard
     - field.field.node.data_set.field_keywords
-    - field.field.node.data_set.field_links_api
-    - field.field.node.data_set.field_links_media
-    - field.field.node.data_set.field_links_metadata
+    - field.field.node.data_set.field_links
     - field.field.node.data_set.field_media_count
     - field.field.node.data_set.field_media_filesize
     - field.field.node.data_set.field_media_license
@@ -38,7 +36,6 @@ third_party_settings:
   field_group:
     group_metadata:
       children:
-        - field_links_metadata
         - field_metadata_format
         - field_metadata_license
         - field_metadata_doc_links
@@ -53,7 +50,6 @@ third_party_settings:
       region: content
     group_media:
       children:
-        - field_links_media
         - field_file_types
         - field_media_license
       parent_name: ''
@@ -65,9 +61,10 @@ third_party_settings:
         description: ''
       label: Mediendateien
       region: content
-    group_api:
+    group_links:
       children:
-        - field_links_api
+        - field_access_mode
+        - field_links
       parent_name: ''
       weight: 8
       format_type: fieldset
@@ -75,7 +72,7 @@ third_party_settings:
         id: ''
         classes: ''
         description: ''
-      label: API
+      label: Links
       region: content
 id: node.data_set.default
 targetEntityType: node
@@ -88,10 +85,10 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_access_mode:
-    weight: 11
+    weight: 9
     label: above
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
     type: entity_reference_label
     region: content
@@ -129,46 +126,22 @@ content:
     type: entity_reference_label
     region: content
   field_keywords:
-    weight: 10
+    weight: 12
     label: above
     settings:
       link: false
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  field_links_api:
-    weight: 9
+  field_links:
+    weight: 10
     label: hidden
     settings:
       trim_length: 80
-      target: _blank
       url_only: false
       url_plain: false
-      rel: '0'
-    third_party_settings: {  }
-    type: link
-    region: content
-  field_links_media:
-    weight: 7
-    label: hidden
-    settings:
-      trim_length: 80
-      target: _blank
-      url_only: false
-      url_plain: false
-      rel: '0'
-    third_party_settings: {  }
-    type: link
-    region: content
-  field_links_metadata:
-    weight: 1
-    label: hidden
-    settings:
-      trim_length: 80
-      target: _blank
-      url_only: false
-      url_plain: false
-      rel: '0'
+      rel: ''
+      target: ''
     third_party_settings: {  }
     type: link
     region: content
@@ -218,7 +191,7 @@ content:
     type: entity_reference_entity_id
     region: content
   field_theme:
-    weight: 9
+    weight: 11
     label: above
     settings:
       link: false

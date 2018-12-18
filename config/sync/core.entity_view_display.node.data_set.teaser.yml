@@ -4,15 +4,14 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.data_set.field_access_mode
+    - field.field.node.data_set.field_acknowledge_privacy
     - field.field.node.data_set.field_attributed_image
     - field.field.node.data_set.field_description
     - field.field.node.data_set.field_events
     - field.field.node.data_set.field_file_types
     - field.field.node.data_set.field_georef_standard
     - field.field.node.data_set.field_keywords
-    - field.field.node.data_set.field_links_api
-    - field.field.node.data_set.field_links_media
-    - field.field.node.data_set.field_links_metadata
     - field.field.node.data_set.field_media_count
     - field.field.node.data_set.field_media_filesize
     - field.field.node.data_set.field_media_license
@@ -63,13 +62,12 @@ content:
     third_party_settings: {  }
 hidden:
   content_moderation_control: true
+  field_access_mode: true
+  field_acknowledge_privacy: true
   field_description: true
   field_file_types: true
   field_georef_standard: true
   field_keywords: true
-  field_links_api: true
-  field_links_media: true
-  field_links_metadata: true
   field_media_count: true
   field_media_filesize: true
   field_media_license: true
