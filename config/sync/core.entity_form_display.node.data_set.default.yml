@@ -3,6 +3,7 @@ langcode: de
 status: true
 dependencies:
   config:
+    - field.field.node.data_set.field_access_mode
     - field.field.node.data_set.field_acknowledge_privacy
     - field.field.node.data_set.field_attributed_image
     - field.field.node.data_set.field_description
@@ -97,11 +98,12 @@ third_party_settings:
       region: content
     group_links:
       children:
+        - field_access_mode
         - field_links_api
         - field_links_media
         - field_links_metadata
       parent_name: group_tabs
-      weight: 3
+      weight: 4
       format_type: tab
       format_settings:
         label: 'Zugang/Links zu den Daten'
@@ -142,6 +144,12 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_access_mode:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
   field_acknowledge_privacy:
     weight: 4
     settings:
@@ -223,7 +231,7 @@ content:
     type: select2_entity_reference
     region: content
   field_links_api:
-    weight: 23
+    weight: 4
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -231,7 +239,7 @@ content:
     type: link_default
     region: content
   field_links_media:
-    weight: 24
+    weight: 5
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -239,7 +247,7 @@ content:
     type: link_default
     region: content
   field_links_metadata:
-    weight: 25
+    weight: 6
     settings:
       placeholder_url: ''
       placeholder_title: ''

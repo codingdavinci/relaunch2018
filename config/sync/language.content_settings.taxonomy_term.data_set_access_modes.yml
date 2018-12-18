@@ -1,0 +1,16 @@
+uuid: f624b4fc-3805-472a-8ebb-dfb8d9140daa
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.data_set_access_modes
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.data_set_access_modes
+target_entity_type_id: taxonomy_term
+target_bundle: data_set_access_modes
+default_langcode: site_default
+language_alterable: true

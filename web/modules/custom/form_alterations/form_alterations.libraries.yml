@@ -4,6 +4,16 @@ styles:
     theme:
       css/styles.css: {}
 
+checkbox-description:
+  version: 1.x
+  js:
+    js/checkbox-description.js: {}
+  css:
+    theme:
+      css/checkbox-description.css: {}
+  dependencies:
+    - core/jquery
+
 checkbox-hierarchy:
   version: 1.x
   js:

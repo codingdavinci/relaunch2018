@@ -2,6 +2,7 @@
 
 use Drupal\Core\Entity\Display\EntityFormDisplayInterface;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\taxonomy\Entity\Term;
 
 /**
  * Implements hook_preprocess_HOOK().
@@ -110,6 +111,7 @@ function _form_alterations_data_set(array &$form) {
     'field_links_metadata',
   ]);
 
+  $form['#attached']['library'][] = 'form_alterations/checkbox-description';
   $form['#attached']['library'][] = 'form_alterations/checkbox-hierarchy';
   $form['#attached']['library'][] = 'form_alterations/multistep';
 
@@ -216,5 +218,21 @@ function form_alterations_entity_form_display_alter(EntityFormDisplayInterface &
     if ($institutionFormMode !== null) {
       $form_display = $institutionFormMode;
     }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function form_alterations_preprocess_input__checkbox(&$variables) {
+  if (
+    isset($variables['element']['#parents'][0])
+    && $variables['element']['#parents'][0] === 'field_access_mode'
+  ) {
+    // Add term description on access mode taxonomy term reference field to
+    // input element.
+    $tid = $variables['element']['#return_value'];
+    $term = Term::load($tid);
+    $variables['attributes']['data-description'] = $term->get('description')->value;
   }
 }

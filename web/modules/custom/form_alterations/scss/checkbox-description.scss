@@ -1,0 +1,13 @@
+@import 'includes/base';
+
+.form-checkboxes {
+  .form-item {
+    .form-checkbox--description {
+      p {
+        &:last-child {
+          margin: 0;
+        }
+      }
+    }
+  }
+}

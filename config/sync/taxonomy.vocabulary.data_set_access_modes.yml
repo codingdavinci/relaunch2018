@@ -1,0 +1,9 @@
+uuid: a92bee8c-326d-4cb4-8396-2d16f9ead3d7
+langcode: de
+status: true
+dependencies: {  }
+name: 'Data set access modes'
+vid: data_set_access_modes
+description: 'Zur Kategorisierung von Datensätzen.'
+hierarchy: 0
+weight: 0

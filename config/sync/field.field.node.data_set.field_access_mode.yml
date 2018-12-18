@@ -1,0 +1,29 @@
+uuid: 11f5e16c-439a-4799-a41f-bcd1d21af488
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_access_mode
+    - node.type.data_set
+    - taxonomy.vocabulary.data_set_access_modes
+id: node.data_set.field_access_mode
+field_name: field_access_mode
+entity_type: node
+bundle: data_set
+label: Zugriffsmodus
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      data_set_access_modes: data_set_access_modes
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
