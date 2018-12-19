@@ -78,14 +78,7 @@ function relaunch2018_preprocess_page(array &$variables) {
       // Use JS to inject custom tiled header to not spoil caching:
       $variables['#attached']['drupalSettings']['relaunch2018']['tiledHeader'] = $url;
 
-      // Add color scheme colors to template variables.
-      if ($node->get('field_color_scheme')->target_id !== null) {
-        $term = Term::load($node->get('field_color_scheme')->target_id);
-        $variables['color_scheme'] = [
-          $term->get('field_color1')->value,
-          $term->get('field_color2')->value,
-        ];
-      }
+      _relaunch2018_add_color_scheme($node, $variables);
     }
   }
 }
@@ -163,6 +156,24 @@ function relaunch2018_preprocess_node(array &$variables) {
           }
         }
       }
+    }
+  }
+}
+
+/**
+ * Implements THEME_preprocess_HOOK().
+ *
+ * @param array $variables
+ */
+function relaunch2018_preprocess_paragraph(array &$variables) {
+  /** @var Paragraph $paragraph */
+  $paragraph = $variables['paragraph'];
+
+  if ($paragraph->bundle() === 'winner') {
+    $parent = $paragraph->getParentEntity();
+
+    if ($parent instanceof Node) {
+      _relaunch2018_add_color_scheme($parent, $variables);
     }
   }
 }
@@ -255,6 +266,26 @@ function relaunch2018_preprocess_views_exposed_form__data_sets(array &$variables
     if (!($value === 'All' || $value === '' || is_array($value) && count($value) === 0)) {
       $variables['show_secondary_options'] = true;
       break;
+    }
+  }
+}
+
+/**
+ * @param Node $node
+ * @param array $variables
+ */
+function _relaunch2018_add_color_scheme($node, array &$variables) {
+  if (
+    $node->hasField('field_color_scheme')
+    && $node->get('field_color_scheme')->target_id !== null
+  ) {
+    $term = Term::load($node->get('field_color_scheme')->target_id);
+
+    if ($term !== null) {
+      $variables['color_scheme'] = [
+        $term->get('field_color1')->value,
+        $term->get('field_color2')->value,
+      ];
     }
   }
 }

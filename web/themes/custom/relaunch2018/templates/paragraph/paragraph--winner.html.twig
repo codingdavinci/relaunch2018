@@ -14,7 +14,7 @@
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
-      <div class="winner--info">
+      <div class="winner--info"{% if color_scheme %} style="background-color:#{{ color_scheme[1] }}"{% endif %}>
         <div class="winner--info--award--wrapper">
           <span class="winner--info--award">{{ content.field_award['#items'].value }}</span>
         </div>
