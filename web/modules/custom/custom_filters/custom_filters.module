@@ -167,6 +167,27 @@ function custom_filters_views_query_alter(ViewExecutable $view, Sql $query) {
       $table['join']->extra[0]['value'] = $childrenTermIdsPerGroup;
     }
   }
+  elseif ($view->id() === 'landing_page' && $view->getDisplay()->display['id'] === 'page_1') {
+    // On the frontpage, always show one news item more than upcoming events.
+    $nids = \Drupal::entityQuery('node')->condition('type','event')->execute();
+    $nodes =  Node::loadMultiple($nids);
+
+    $nodes = array_filter($nodes, function($node) {
+      /** @var Node $node */
+      if (($dateRange = $node->get('field_range')->get(0)) !== null) {
+        /** @var \Drupal\datetime_range\Plugin\Field\FieldType\DateRangeItem $dateRange */
+        $dateTime = $dateRange->get('end_date')->getValue();
+
+        /** @var \Drupal\Core\Datetime\DrupalDateTime $dateTime */
+        if ($dateTime->getTimestamp() > time()) {
+          return true;
+        }
+      }
+      return false;
+    });
+
+    $query->setLimit(count($nodes) === 0 ? 2 : count($nodes) + 1);
+  }
 }
 
 /**

@@ -14,7 +14,7 @@ dependencies:
 id: landing_page
 label: Startseite
 module: views
-description: 'Liste von Events.'
+description: 'Elemente für die Startseite.'
 tag: ''
 base_table: node_field_data
 base_field: nid
@@ -331,9 +331,8 @@ display:
           entity_field: created
           plugin_id: date
       pager:
-        type: some
+        type: none
         options:
-          items_per_page: 2
           offset: 0
       link_display: custom_url
       link_url: /news
