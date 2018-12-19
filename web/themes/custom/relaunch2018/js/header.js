@@ -9,7 +9,8 @@
 
   $(function() {
     var $tileContainer = $('.tiles');
-    var originalTileSize = $tileContainer.hasClass('tiles--frontpage') ? 214 : 280;
+    var isFrontPage = $tileContainer.closest('body').hasClass('path-frontpage');
+    var originalTileSize = isFrontPage ? 214 : 280;
     var tileSize = Math.sqrt(originalTileSize * originalTileSize * 2);
 
     // Top left edge of the unrotated tile in even columns:
@@ -18,9 +19,9 @@
     // Top left edge of the unrotated tile in odd columns:
     var odd = {top: even.top - tileSize / 2, left: even.left + tileSize / 2};
 
-    var frontSideTilesCount = $tileContainer.hasClass('tiles--frontpage') ? 42 : 20;
+    var frontSideTilesCount = isFrontPage ? 42 : 20;
     var backSideTileCount = 24;
-    var maxLines = $tileContainer.hasClass('tiles--frontpage') ? 8 : 6;
+    var maxLines = isFrontPage ? 8 : 6;
 
     var html = [];
     var frontSide_i = 0;
