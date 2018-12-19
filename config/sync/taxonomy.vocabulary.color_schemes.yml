@@ -1,0 +1,9 @@
+uuid: 38427061-4b21-4bc4-9067-f57a5a808a86
+langcode: de
+status: true
+dependencies: {  }
+name: Farbschemata
+vid: color_schemes
+description: 'Zur individualisierten Darstellung von Events.'
+hierarchy: 0
+weight: 0

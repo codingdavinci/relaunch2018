@@ -1,0 +1,22 @@
+{#
+/**
+ * Header template for Event nodes.
+ * @see page.html.twig
+ */
+#}
+<header role="banner" class="header--tiles">
+  <div class="header--tiles--container">
+    <div class="header--tiles--overlay"></div>
+    <div class="tiles"></div>
+    <div class="container header--tiles--content">
+      <div class="header--tile--logo"{% if color_scheme %} style="background-color:#{{ color_scheme[0] }}"{% endif %}>
+        <div class="d-flex h-100 flex-column justify-content-between">
+          <div class="header--title--logo--image"><img src="{{ theme_path }}/img/CDV_Logo_Line_white.svg"></div>
+          <div class="header--title--logo--text d-flex flex-column justify-content-end text-left">
+            {{ page.header }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

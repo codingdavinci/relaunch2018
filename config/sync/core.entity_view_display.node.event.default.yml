@@ -3,6 +3,7 @@ langcode: de
 status: true
 dependencies:
   config:
+    - field.field.node.event.field_color_scheme
     - field.field.node.event.field_header_tiles
     - field.field.node.event.field_paragraphs
     - field.field.node.event.field_range
@@ -56,6 +57,7 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_color_scheme: true
   field_header_tiles: true
   field_range: true
   field_team: true

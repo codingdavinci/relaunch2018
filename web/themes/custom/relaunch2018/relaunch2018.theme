@@ -7,6 +7,7 @@ use Drupal\file\Entity\File;
 use Drupal\image\Entity\ImageStyle;
 use Drupal\node\Entity\Node;
 use Drupal\paragraphs\Entity\Paragraph;
+use Drupal\taxonomy\Entity\Term;
 
 /**
  * Implements THEME_preprocess().
@@ -76,6 +77,15 @@ function relaunch2018_preprocess_page(array &$variables) {
 
       // Use JS to inject custom tiled header to not spoil caching:
       $variables['#attached']['drupalSettings']['relaunch2018']['tiledHeader'] = $url;
+
+      // Add color scheme colors to template variables.
+      if ($node->get('field_color_scheme')->target_id !== null) {
+        $term = Term::load($node->get('field_color_scheme')->target_id);
+        $variables['color_scheme'] = [
+          $term->get('field_color1')->value,
+          $term->get('field_color2')->value,
+        ];
+      }
     }
   }
 }

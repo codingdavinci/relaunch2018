@@ -1,0 +1,29 @@
+uuid: a020f1e5-3b7a-4bc5-b85d-b1ec4765d5a8
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_color_scheme
+    - node.type.event
+    - taxonomy.vocabulary.color_schemes
+id: node.event.field_color_scheme
+field_name: field_color_scheme
+entity_type: node
+bundle: event
+label: Farbschema
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      color_schemes: color_schemes
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

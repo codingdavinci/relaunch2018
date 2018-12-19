@@ -1,0 +1,19 @@
+uuid: 31a4382a-701b-4ac0-be6b-c35d7a13ea5b
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_color1
+    - taxonomy.vocabulary.color_schemes
+id: taxonomy_term.color_schemes.field_color1
+field_name: field_color1
+entity_type: taxonomy_term
+bundle: color_schemes
+label: Primärfarbe
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

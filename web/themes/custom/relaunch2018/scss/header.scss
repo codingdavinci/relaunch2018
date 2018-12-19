@@ -220,6 +220,33 @@
           }
         }
       }
+
+      .header--tile--logo {
+        padding: 2rem;
+        width: 500px;
+
+        .header--title--logo--image {
+          margin-bottom: 2rem;
+
+          @include media-breakpoint-only(sm) {
+            width: 80%;
+          }
+        }
+
+        .header--title--logo--text {
+          h1 {
+            color: $color-white;
+            font-size: 3rem;
+            font-weight: $font-weight-semi-bold;
+            margin: 0;
+            text-transform: uppercase;
+
+            @include media-breakpoint-up(sm) {
+              font-size: 4rem;
+            }
+          }
+        }
+      }
     }
   }
 }
