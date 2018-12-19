@@ -170,6 +170,7 @@
 
   &.node--view-mode-teaser,
   &.node--view-mode-preview {
+    @include boxShadow;
     @include easeAll;
     @include rounded;
     background-color: $color-main;
@@ -250,6 +251,13 @@
         }
       }
     }
+
+    .node--event--teaser--register {
+      font-weight: $font-weight-normal;
+      margin-top: 1rem;
+      text-align: right;
+      text-decoration: underline;
+    }
   }
 }
 
@@ -259,6 +267,10 @@
 
     .node--view-mode-teaser {
       background-color: $color-deep-teal;
+
+      .node--event--teaser--register {
+        text-decoration: none;
+      }
     }
   }
 }

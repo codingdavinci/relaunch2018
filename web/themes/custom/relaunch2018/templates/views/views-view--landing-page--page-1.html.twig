@@ -13,6 +13,9 @@
     'row',
   ]
 %}
+
+{% set have_upcoming_events = drupal_view_result('landing_page', 'attachment_1')|length > 0 %}
+
 <div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {% if title %}
@@ -30,13 +33,13 @@
     </div>
   {% endif %}
   {% if attachment_before %}
-    <div class="attachment attachment-before col-sm-5">
+    <div class="attachment attachment-before {% if have_upcoming_events %}col-sm-5{% else %}d-none{% endif %}">
       {{ attachment_before }}
     </div>
   {% endif %}
 
   {% if rows %}
-    <div class="view-content col-sm-7">
+    <div class="view-content {% if have_upcoming_events %}col-sm-7{% else %}col-sm-10 offset-sm-1 col-lg-8 offset-lg-2{% endif %}">
       {{ rows }}
     </div>
   {% elseif empty %}

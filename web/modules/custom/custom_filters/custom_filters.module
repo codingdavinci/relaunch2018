@@ -168,7 +168,8 @@ function custom_filters_views_query_alter(ViewExecutable $view, Sql $query) {
     }
   }
   elseif ($view->id() === 'landing_page' && $view->getDisplay()->display['id'] === 'page_1') {
-    // On the frontpage, always show one news item more than upcoming events.
+    // On the frontpage, sync number of news items to the number of upcoming
+    // events.
     $nids = \Drupal::entityQuery('node')->condition('type','event')->execute();
     $nodes =  Node::loadMultiple($nids);
 
@@ -186,7 +187,7 @@ function custom_filters_views_query_alter(ViewExecutable $view, Sql $query) {
       return false;
     });
 
-    $query->setLimit(count($nodes) === 0 ? 2 : count($nodes) + 1);
+    $query->setLimit(count($nodes) < 2 ? 2 : count($nodes));
   }
 }
 
