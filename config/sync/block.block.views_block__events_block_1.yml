@@ -1,0 +1,30 @@
+uuid: 8548e00b-1732-46ce-84b1-b17359ee9f97
+langcode: de
+status: true
+dependencies:
+  config:
+    - views.view.events
+  module:
+    - system
+    - views
+  theme:
+    - relaunch2018
+id: views_block__events_block_1
+theme: relaunch2018
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:events-block_1'
+settings:
+  id: 'views_block:events-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /events
+    negate: false
+    context_mapping: {  }

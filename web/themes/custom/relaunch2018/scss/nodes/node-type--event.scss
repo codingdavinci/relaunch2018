@@ -1,9 +1,11 @@
 @import '../_includes/base';
 
 .path-events {
-  h1 {
+  h1,
+  .block-views-blockevents-block-1 > h2 {
     @include fontStyle(large);
     font-weight: $font-weight-light;
+    margin-bottom: 2rem;
     padding-left: $border-radius;
     text-transform: uppercase;
   }
@@ -13,6 +15,12 @@
       #block-relaunch2018-content {
         & > .views-element-container {
           margin-top: 0;
+        }
+      }
+
+      .block-views-blockevents-block-1 {
+        .view-events {
+          margin-top: 50px;
         }
       }
     }
@@ -160,12 +168,18 @@
     }
   }
 
-  &.node--view-mode-teaser {
+  &.node--view-mode-teaser,
+  &.node--view-mode-preview {
     @include easeAll;
     @include rounded;
     background-color: $color-main;
     color: $color-white;
+    height: 100%;
     padding: 1.5rem;
+
+    @media #{$ie} {
+      margin-bottom: 2rem;
+    }
 
     .node--event--teaser--logo {
       img {
@@ -196,6 +210,46 @@
       text-transform: uppercase;
     }
 
+    &.node--view-mode-preview {
+      align-content: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+
+      .node--event--teaser--logo {
+        img {
+          @include media-breakpoint-up(sm) {
+            width: 90%;
+          }
+
+          @include media-breakpoint-up(md) {
+            width: 70%;
+          }
+
+          @include media-breakpoint-up(xl) {
+            width: 80%;
+          }
+        }
+      }
+
+      h2 {
+        @include fontStyle(large);
+      }
+
+      & > * {
+        margin-bottom: .4rem;
+        margin-top: .4rem;
+
+        &:first-child {
+          margin-top: 0;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
   }
 }
 

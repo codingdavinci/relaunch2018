@@ -6,24 +6,57 @@
   'use strict';
 
   $(function() {
-    var options = {
-      duration: 'fast'
-    };
-
     $('[data-color-scheme-hover]').hover(
       function(e) {
-        var $container = $(e.target).closest('[data-color-scheme-hover]');
-        $container.stop(true).animate({
-          backgroundColor: '#' + $container.data('color-scheme-hover')[1]
-        }, options);
+        changeColor(e, true);
       },
       function(e) {
-        var $container = $(e.target).closest('[data-color-scheme-hover]');
-        $container.stop(true).animate({
-          backgroundColor: '#' + $container.data('color-scheme-hover')[0]
-        }, options);
+        changeColor(e, false);
       }
     );
   });
+
+  /**
+   * @param {jQuery.Event} event
+   * @param {boolean} mouseOver
+   */
+  function changeColor(event, mouseOver) {
+    var $container = $(event.target).closest('[data-color-scheme-hover]');
+    var color = getColor($container, mouseOver);
+
+    if (color) {
+      $container.stop(true).animate({
+        backgroundColor: '#' + color
+      }, {
+        duration: 'fast'
+      });
+    }
+  }
+
+  /**
+   * Retrieves a color from the color scheme saved on the container node per
+   * data attribute.
+   *
+   * @param {jQuery} $container
+   * @param {boolean} mouseOver
+   * @return {string|null}
+   */
+  function getColor($container, mouseOver) {
+    var colorScheme = $container.data('color-scheme-hover');
+
+    if ($.isArray(colorScheme) && colorScheme.length === 2) {
+      return colorScheme[mouseOver ? 1 : 0];
+    }
+    else if (typeof colorScheme === 'string') {
+      // Color scheme definition features a hover color only.
+      $container.data(
+        'color-scheme-hover',
+        [$container.css('background-color'), colorScheme]
+      );
+      return colorScheme;
+    }
+
+    return null;
+  }
 
 })(jQuery);

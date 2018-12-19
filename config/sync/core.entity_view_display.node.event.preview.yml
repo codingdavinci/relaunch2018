@@ -1,0 +1,43 @@
+uuid: 21fa8c19-0247-4e53-ad7f-be21e8369b8e
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.preview
+    - field.field.node.event.field_color_scheme
+    - field.field.node.event.field_display_date
+    - field.field.node.event.field_header_tiles
+    - field.field.node.event.field_paragraphs
+    - field.field.node.event.field_range
+    - field.field.node.event.field_short_title
+    - field.field.node.event.field_team
+    - field.field.node.event.field_text_intro
+    - field.field.node.event.field_winners
+    - node.type.event
+  module:
+    - user
+id: node.event.preview
+targetEntityType: node
+bundle: event
+mode: preview
+content:
+  field_short_title:
+    type: string
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  content_moderation_control: true
+  field_color_scheme: true
+  field_display_date: true
+  field_header_tiles: true
+  field_paragraphs: true
+  field_range: true
+  field_team: true
+  field_text_intro: true
+  field_winners: true
+  langcode: true
+  links: true

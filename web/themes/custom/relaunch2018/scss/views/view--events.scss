@@ -18,4 +18,16 @@
       grid-template-columns: 1fr 1fr 1fr;
     }
   }
+
+  &.view-display-id-block_1 {
+    .view-content {
+      @include media-breakpoint-up(lg) {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+
+      @include media-breakpoint-up(xl) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+    }
+  }
 }
