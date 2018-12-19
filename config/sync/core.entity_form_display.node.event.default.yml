@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.event.field_color_scheme
+    - field.field.node.event.field_display_date
     - field.field.node.event.field_header_tiles
     - field.field.node.event.field_paragraphs
     - field.field.node.event.field_range
@@ -27,18 +28,26 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 10
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
   field_color_scheme:
-    weight: 3
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
+  field_display_date:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_header_tiles:
-    weight: 5
+    weight: 6
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -46,7 +55,7 @@ content:
     type: image_image
     region: content
   field_paragraphs:
-    weight: 8
+    weight: 9
     settings:
       title: Seitenabschnitt
       title_plural: Seitenabschnitte
@@ -65,7 +74,7 @@ content:
     type: paragraphs
     region: content
   field_range:
-    weight: 2
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     type: daterange_default
@@ -79,7 +88,7 @@ content:
     type: string_textfield
     region: content
   field_team:
-    weight: 4
+    weight: 5
     settings:
       match_operator: CONTAINS
       autocomplete: false
@@ -89,7 +98,7 @@ content:
     region: content
   field_text_intro:
     type: paragraphs
-    weight: 6
+    weight: 7
     settings:
       title: Seitenabschnitt
       title_plural: Seitenabschnitte
@@ -107,7 +116,7 @@ content:
     region: content
   field_winners:
     type: paragraphs
-    weight: 7
+    weight: 8
     settings:
       title: Seitenabschnitt
       title_plural: Seitenabschnitte
@@ -126,13 +135,13 @@ content:
     region: content
   moderation_state:
     type: moderation_state_default
-    weight: 12
+    weight: 13
     settings: {  }
     region: content
     third_party_settings: {  }
   path:
     type: path
-    weight: 11
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -140,7 +149,7 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 13
+    weight: 14
     region: content
     third_party_settings: {  }
   title:
@@ -152,13 +161,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 14
+    weight: 15
     region: content
     settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 9
+    weight: 10
     settings:
       match_operator: CONTAINS
       size: 60

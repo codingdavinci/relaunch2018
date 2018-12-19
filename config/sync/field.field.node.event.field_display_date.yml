@@ -1,0 +1,19 @@
+uuid: 8812aa7b-4511-46fe-8c0e-717f8bb44d6e
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_display_date
+    - node.type.event
+id: node.event.field_display_date
+field_name: field_display_date
+entity_type: node
+bundle: event
+label: Anzeigedatum
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -12,7 +12,7 @@ field_name: field_range
 entity_type: node
 bundle: event
 label: Zeitspanne
-description: ''
+description: 'Diese Datumsangaben werden zur Berechnung verwendet, ob ein Event noch ansteht oder bereits abgelaufen ist.'
 required: true
 translatable: false
 default_value: {  }

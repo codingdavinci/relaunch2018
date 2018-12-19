@@ -6843,10 +6843,10 @@ ul.ui-autocomplete li.ui-menu-item a {
   .page-node-type-event .header--tiles .header--tiles--container .tiles .header-tile .flipper .code-tile-23 {
     background-position: -2000px -1200px; }
   .page-node-type-event .header--tiles .header--tiles--container .header--tile--logo {
-    padding: 1.5rem 1.5rem .7rem 1.5rem;
-    width: 550px; }
+    padding: 1.5rem 1.5rem 1.3rem 1.5rem;
+    width: 520px; }
     .page-node-type-event .header--tiles .header--tiles--container .header--tile--logo .header--title--logo--image {
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
       width: 80%; }
       @media (min-width: 576px) {
         .page-node-type-event .header--tiles .header--tiles--container .header--tile--logo .header--title--logo--image {
@@ -6863,6 +6863,8 @@ ul.ui-autocomplete li.ui-menu-item a {
       @media (min-width: 992px) {
         .page-node-type-event .header--tiles .header--tiles--container .header--tile--logo .header--title--logo--text h1 {
           font-size: 5rem; } }
+    .page-node-type-event .header--tiles .header--tiles--container .header--tile--logo .header--title--logo--text .header--title--logo--text--event-date {
+      margin-top: .8rem; }
 
 .horizontal-nav {
   margin-bottom: 1em;
