@@ -222,14 +222,15 @@
       }
 
       .header--tile--logo {
-        padding: 2rem;
-        width: 500px;
+        padding: 1.5rem 1.5rem .7rem 1.5rem;
+        width: 550px;
 
         .header--title--logo--image {
           margin-bottom: 2rem;
+          width: 80%;
 
-          @include media-breakpoint-only(sm) {
-            width: 80%;
+          @include media-breakpoint-up(sm) {
+            width: 60%;
           }
         }
 
@@ -243,6 +244,10 @@
 
             @include media-breakpoint-up(sm) {
               font-size: 4rem;
+            }
+
+            @include media-breakpoint-up(lg) {
+              font-size: 5rem;
             }
           }
         }

@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.event.field_header_tiles
     - field.field.node.event.field_paragraphs
     - field.field.node.event.field_range
+    - field.field.node.event.field_short_title
     - field.field.node.event.field_team
     - field.field.node.event.field_text_intro
     - field.field.node.event.field_winners
@@ -60,5 +61,6 @@ hidden:
   field_color_scheme: true
   field_header_tiles: true
   field_range: true
+  field_short_title: true
   field_team: true
   langcode: true
