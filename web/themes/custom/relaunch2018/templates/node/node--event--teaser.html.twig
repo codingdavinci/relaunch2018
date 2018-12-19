@@ -1,0 +1,30 @@
+{#
+/**
+ * @see node.html.twig
+ */
+#}
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+{{ attach_library('classy/node') }}
+<a href="{{ url }}" rel="bookmark" class="node--link-wrapper node--link-wrapper--{{ node.bundle|clean_class }}">
+  <article{{ attributes.addClass(classes) }}{% if color_scheme %} style="background-color:#{{ color_scheme[0] }}"{% endif %} data-color-scheme-hover="{{ color_scheme|json_encode() }}">
+
+    <div class="node--event--teaser--logo"><img src="{{ theme_path }}/img/CDV_Logo_Line_white.svg"></div>
+    <h2{{ title_attributes }}>
+      {{ content.field_short_title }}
+    </h2>
+
+    <div{{ content_attributes.addClass('node__content') }}>
+      {{ content|without('field_short_title') }}
+    </div>
+
+  </article>
+</a>

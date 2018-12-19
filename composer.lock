@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "7424a3cdc63d4b12e959da7a53e39fd9",
+    "content-hash": "73618aea61ea14621404ce90da3f968b",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -4302,6 +4302,20 @@
             "dist": {
                 "type": "tar",
                 "url": "https://registry.npmjs.org/hammerjs/-/hammerjs-2.0.8.tgz",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "npm-asset",
+            "license": [
+                "MIT"
+            ]
+        },
+        {
+            "name": "npm-asset/jquery-color",
+            "version": "3.0.0-alpha.1",
+            "dist": {
+                "type": "tar",
+                "url": "https://registry.npmjs.org/jquery-color/-/jquery-color-3.0.0-alpha.1.tgz",
                 "reference": null,
                 "shasum": null
             },

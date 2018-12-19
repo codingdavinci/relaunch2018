@@ -3180,7 +3180,7 @@ display:
         description: ''
         expanded: false
         parent: ''
-        weight: -45
+        weight: -44
         context: '0'
         menu_name: main
       fields:

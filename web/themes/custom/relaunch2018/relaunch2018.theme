@@ -158,6 +158,8 @@ function relaunch2018_preprocess_node(array &$variables) {
       }
     }
   }
+
+  _relaunch2018_add_color_scheme($node, $variables);
 }
 
 /**

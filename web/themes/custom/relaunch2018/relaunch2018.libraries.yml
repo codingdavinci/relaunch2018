@@ -12,6 +12,7 @@ global-css:
 global-js:
   version: 1.x
   js:
+    js/color-scheme.js: {}
     js/menu.js: {}
     js/read-more.js: {}
     js/view-faq.js: {}
@@ -19,9 +20,10 @@ global-js:
     - block_figures/block-figures
     - core/jquery
     - relaunch2018/bootstrap-js
+    - relaunch2018/carousel
     - relaunch2018/header
     - relaunch2018/horizontal-nav
-    - relaunch2018/carousel
+    - relaunch2018/jquery-color
     - relaunch2018/jquery-easing
 
 bootstrap-js:
@@ -85,6 +87,15 @@ horizontal-nav:
   depedencies:
     - core/jquery
     - relaunch2018/hammerjs
+
+jquery-color:
+  version: 3.0.0-alpha
+  license:
+    name: CC0
+    url: https://github.com/jquery/jquery-color/blob/master/LICENSE.txt
+    gpl-compatible: true
+  js:
+    ../../../libraries/jquery-color/dist/jquery.color.js: {}
 
 jquery-easing:
   version: 1.4.1

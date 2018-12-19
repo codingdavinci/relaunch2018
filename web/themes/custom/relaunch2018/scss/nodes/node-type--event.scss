@@ -1,8 +1,27 @@
 @import '../_includes/base';
 
-.page-node-type-event {
+.path-events {
+  h1 {
+    @include fontStyle(large);
+    font-weight: $font-weight-light;
+    padding-left: $border-radius;
+    text-transform: uppercase;
+  }
 
-  .node--type-event {
+  .layout-content {
+    .region-content {
+      #block-relaunch2018-content {
+        & > .views-element-container {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}
+
+.node--type-event {
+
+  &.node--view-mode-full {
     @include rounded;
     background: $background;
     position: relative;
@@ -140,4 +159,54 @@
       }
     }
   }
+
+  &.node--view-mode-teaser {
+    @include easeAll;
+    @include rounded;
+    background-color: $color-main;
+    color: $color-white;
+    padding: 1.5rem;
+
+    .node--event--teaser--logo {
+      img {
+        @include img-fluid;
+
+        @include media-breakpoint-up(sm) {
+          width: 80%;
+        }
+
+        @include media-breakpoint-up(md) {
+          width: 70%;
+        }
+
+        @include media-breakpoint-up(lg) {
+          width: 50%;
+        }
+
+        @include media-breakpoint-up(xl) {
+          width: 70%;
+        }
+      }
+    }
+
+    h2 {
+      @include fontStyle(title);
+      color: $color-white;
+      margin-top: 1.5rem;
+      text-transform: uppercase;
+    }
+
+  }
 }
+
+.node--link-wrapper--event {
+  &:hover {
+    text-decoration: none;
+
+    .node--view-mode-teaser {
+      background-color: $color-deep-teal;
+    }
+  }
+}
+
+

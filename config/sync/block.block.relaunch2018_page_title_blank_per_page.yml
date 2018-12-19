@@ -20,6 +20,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: "/user/*\r\n/daten\r\n/projekte"
+    pages: "/user/*\r\n/daten\r\n/events\r\n/projekte"
     negate: false
     context_mapping: {  }
