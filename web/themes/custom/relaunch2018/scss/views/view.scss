@@ -104,6 +104,12 @@
   // TODO: Merge with data set archive styles that currently have a masonry layout
   .view-content {
 
+    .views-row {
+      @media #{$ie} {
+        margin-bottom: 2rem;
+      }
+    }
+
     .card-columns {
       @include media-breakpoint-up(sm) {
         column-count: 2;
@@ -120,6 +126,10 @@
         display: inline-block;
         margin-bottom: 20px;
         width: 100%;
+
+        @media #{$ie} {
+          overflow: hidden;
+        }
 
         .card-img {
           img {
