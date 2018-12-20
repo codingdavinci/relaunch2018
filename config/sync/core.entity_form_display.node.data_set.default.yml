@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.data_set.field_file_types
     - field.field.node.data_set.field_has_geo_references
     - field.field.node.data_set.field_keywords
+    - field.field.node.data_set.field_legacy
     - field.field.node.data_set.field_links
     - field.field.node.data_set.field_media_count
     - field.field.node.data_set.field_media_filesize
@@ -45,7 +46,7 @@ third_party_settings:
         - group_metadata
         - group_links
       parent_name: ''
-      weight: 2
+      weight: 3
       format_type: tabs
       format_settings:
         label: Reiter
@@ -84,7 +85,7 @@ third_party_settings:
         - field_metadata_doc_links
         - field_metadata_license
       parent_name: group_tabs
-      weight: 2
+      weight: 3
       format_type: tab
       format_settings:
         label: Metadaten
@@ -195,7 +196,7 @@ content:
     region: content
   field_events:
     type: paragraphs
-    weight: 7
+    weight: 8
     settings:
       title: Seitenabschnitt
       title_plural: Seitenabschnitte
@@ -225,13 +226,21 @@ content:
     type: boolean_checkbox
     region: content
   field_keywords:
-    weight: 6
+    weight: 7
     settings:
       match_operator: CONTAINS
       autocomplete: false
       width: 100%
     third_party_settings: {  }
     type: select2_entity_reference
+    region: content
+  field_legacy:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
     region: content
   field_links:
     weight: 4
@@ -368,7 +377,7 @@ content:
     type: options_buttons
     region: content
   field_theme:
-    weight: 5
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     type: options_buttons

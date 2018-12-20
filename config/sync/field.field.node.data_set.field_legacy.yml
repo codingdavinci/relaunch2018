@@ -1,0 +1,19 @@
+uuid: 2c6060af-85b8-47dd-96b8-1ad04bf06385
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_legacy
+    - node.type.data_set
+id: node.data_set.field_legacy
+field_name: field_legacy
+entity_type: node
+bundle: data_set
+label: Legacy
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

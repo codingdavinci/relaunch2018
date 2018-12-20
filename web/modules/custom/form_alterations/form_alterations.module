@@ -119,6 +119,15 @@ function _form_alterations_data_set(array &$form) {
   unset($form['field_metadata_filesize']['widget'][0]['subform']['field_unit']['widget']['#options']['_none']);
 
   $form['langcode']['widget'][0]['value']['#title'] = t('Language of this data set description');
+
+  if (
+    count(array_intersect(
+      \Drupal::currentUser()->getRoles(),
+      ['administrator', 'event_team', 'office']
+    )) === 0 && isset($form['field_legacy'])
+  ) {
+    $form['field_legacy']['#access'] = FALSE;
+  }
 }
 
 /**
