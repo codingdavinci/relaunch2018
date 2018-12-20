@@ -19,8 +19,9 @@ The project was set up using the [Composer template for Drupal projects](https:/
 1. Pull the repository contents.
 2. Run `composer install --no-dev` to download required components.
 3. Configure the web root to point to the `web` subdirectory.
-4. The CMS installation may be run by using a browser to access the web interface in the domain’s base path as configured in step 3. During the installation process, select the “Config Installer” installation profile to import configuration from `../config/sync`.
-5. To set up [Matomo](https://matomo.org/) tracking, go to `<domain>/admin/config/system/matomo`.
+4. The CMS installation may be run by using a browser to access the web interface in the domain’s base path as configured in step 3. During the installation process, select the “Config Installer” installation profile to import configuration from `../config/sync`. (Setup will cause an error due to [Drupal issue #2756331](https://www.drupal.org/project/drupal/issues/2756331).)
+5. In order to fill the Drupal instance with already created content, manually import the preexisting database dump to the database and customise the temp directory on `<domain>/admin/config/media/file-system` afterwards. Additionally, fill the `web/sites/default/files` directory with the files corresponding to the database dump. (Initially, database dump and file directory contents will be provided by exporting those from staging.)
+6. To set up [Matomo](https://matomo.org/) tracking, go to `<domain>/admin/config/system/matomo`.
 
 ### Development
 
