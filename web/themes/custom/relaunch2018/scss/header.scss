@@ -33,6 +33,7 @@
     .header--tiles--content {
       padding-top: 100px;
       pointer-events: none;
+      position: relative;
 
       .header--tile--logo {
         @include boxShadow;
@@ -81,6 +82,7 @@
     .tiles {
       position: absolute;
       transform: translate3d(0, 0, 0);
+      z-index: -1;
 
       .header-tile,
       .front,

@@ -19,7 +19,6 @@
   .responsive-menu-toggle {
     .toggle {
       @include boxShadow;
-      @include easeOut;
       @include rounded;
       background-color: $color-gray-6;
       color: $color-main;
@@ -30,10 +29,18 @@
       top: 25px;
       cursor: pointer;
       text-decoration: none;
-      transform: rotateY(0deg);
 
       height: auto;
       width: auto;
+
+      &.mm-sticky {
+        transform: rotateY(0deg);
+        transition: transform .3s ease;
+
+        &.is-active {
+          transform: rotate(180deg);
+        }
+      }
 
       @include media-breakpoint-up(sm) {
         padding: 0 8px 4px;
@@ -54,8 +61,7 @@
       &.is-active {
         background-color: transparent;
         box-shadow: none;
-        color: $color-white;
-        transform: rotate(180deg);
+        color: $color-deep-teal;
 
         &:hover {
           background-color: transparent;
@@ -81,6 +87,17 @@
       }
     }
   }
+}
+
+.mm-wrapper_background {
+  body {
+    background: $color-gray-6;
+  }
+}
+
+.mm-wrapper__blocker {
+  background: rgba($color-white, .4);
+  z-index: 1;
 }
 
 .mm-menu {
