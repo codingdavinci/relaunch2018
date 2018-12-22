@@ -1,5 +1,5 @@
 global-css:
-  version: 1.x
+  version: 1.0
   css:
     theme:
       css/global.css: {}
@@ -7,24 +7,23 @@ global-css:
   dependencies:
     - relaunch2018/cdv-font
     - relaunch2018/fontawesome
-    - relaunch2018/hammerjs
 
 global-js:
-  version: 1.x
+  version: 1.0
   js:
-    js/color-scheme.js: {}
-    js/read-more.js: {}
-    js/view-faq.js: {}
+    js/global.js: {}
   dependencies:
     - block_figures/block-figures
-    - core/jquery
     - relaunch2018/bootstrap-js
     - relaunch2018/carousel
+    - relaunch2018/color
     - relaunch2018/header
     - relaunch2018/horizontal-nav
     - relaunch2018/jquery-color
     - relaunch2018/jquery-easing
     - relaunch2018/menu
+    - relaunch2018/read-more
+    - relaunch2018/view-faq
 
 bootstrap-js:
   version: 4.1
@@ -52,6 +51,14 @@ cdv-font:
   css:
     theme:
       lib/cdv_icons/css/cdv_icons.css: {}
+
+color:
+  version: 1.0
+  js:
+    js/color-scheme.js: {}
+  dependencies:
+    - core/jquery
+    - relaunch2018/jquery-color
 
 fontawesome:
   version: 5.5.0
@@ -81,7 +88,7 @@ header:
     - core/drupalSettings
 
 horizontal-nav:
-  version: 1.x
+  version: 1.0
   js:
     js/horizontal-nav.js: {}
   depedencies:
@@ -124,3 +131,18 @@ popper-js:
     ../../../libraries/popper.js/dist/umd/popper.js: {}
   dependencies:
     - core/jquery
+
+read-more:
+  version: 1.0
+  js:
+    js/read-more.js: {}
+  dependencies:
+    - core/jquery
+
+view-faq:
+  version: 1.0
+  js:
+    js/view-faq.js: {}
+  dependencies:
+    - core/jquery
+    - relaunch2018/jquery-easing
