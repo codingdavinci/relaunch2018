@@ -1,10 +1,11 @@
 @import '_includes/base';
 
 .language-switcher-language-url {
-  color: $color-green-lighter;
+  color: $color-gray-4;
   font-size: 1.2rem;
   position: absolute;
   top: 25px;
+  user-select: none;
 
   @include media-breakpoint-up(sm) {
     font-size: 1.2rem;
@@ -39,17 +40,16 @@
 
       a {
         color: $color-green;
+        font-weight: $font-weight-bold;
       }
 
       &.is-active {
         @include rounded;
         background-color: $color-green-lighter;
         color: $white;
-        font-weight: $font-weight-bold;
 
         a {
           color: $white;
-          font-weight: $font-weight-bold;
         }
       }
     }
