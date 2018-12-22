@@ -6,18 +6,6 @@
  */
 @import '_includes/base';
 
-.path-frontpage,
-.page-node-type-event {
-  .dialog-off-canvas-main-canvas {
-    // Conflicts with tiles hover effect.
-    height: 0;
-    // Conflicts with properly aligning menu burger and language switcher when
-    // admin toolbar is visible.
-    position: absolute;
-    width: 100%;
-  }
-}
-
 .header--tiles {
   width: 100%;
 
@@ -93,7 +81,6 @@
     .tiles {
       position: absolute;
       transform: translate3d(0, 0, 0);
-      z-index: -1;
 
       .header-tile,
       .front,

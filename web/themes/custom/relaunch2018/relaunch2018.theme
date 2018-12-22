@@ -81,6 +81,40 @@ function relaunch2018_preprocess_page(array &$variables) {
       _relaunch2018_add_color_scheme($node, $variables);
     }
   }
+
+  $menu_parameters = new \Drupal\Core\Menu\MenuTreeParameters();
+  $menu_parameters->setMaxDepth(1);
+  $menu_parameters->excludeRoot();
+
+  /** @var \Drupal\Core\Menu\MenuLinkTree $menu_tree_service */
+  $menu_tree_service = \Drupal::service('menu.link_tree');
+  $tree = $menu_tree_service->load('account', $menu_parameters);
+  $build = $menu_tree_service->build($tree);
+
+  $langSwitcherBlock = \Drupal\block\BlockViewBuilder::lazyBuilder(
+    'languageswitcher',
+    'full'
+  );
+
+  $variables['#attached']['drupalSettings']['responsive_menu']['mmenu_settings'] = [
+    'navbars' => [
+      [
+        "position" => "top",
+        "content" => [
+          \Drupal::service('renderer')->renderPlain($langSwitcherBlock),
+        ],
+      ], [
+        "position" => "bottom",
+        "content" => [
+          \Drupal::service('renderer')->renderPlain($build),
+        ],
+      ],
+    ],
+  ];
+
+  $variables['#attached']['drupalSettings']['responsive_menu']['mmenu_options'] = [
+    'language' => \Drupal::languageManager()->getCurrentLanguage()->getId(),
+  ];
 }
 
 /**

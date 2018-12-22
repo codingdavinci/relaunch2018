@@ -143,34 +143,38 @@ header {
   }
 }
 
-main {
-  margin-top: 50px;
+.layout-container--wrapper {
+  background-color: $background;
 
-  .region-content {
-    #block-relaunch2018-content {
-      & > .views-element-container {
-        margin-top: 100px;
+  .layout-container {
+    position: relative;
+
+    main {
+      margin-top: 100px;
+
+      .layout-content {
+        background-color: $background;
       }
     }
   }
-}
-
-.layout-container--wrapper {
-  background-color: $background;
-}
-
-.layout-container {
-  position: relative;
 
   &.header-tiles-above {
-    margin-top: $tiled-header-height;
-    overflow-x: hidden;
-    top: -100px;
-  }
+    position: absolute;
+    top: 720px;
+    width: 100%;
 
-  main {
-    .layout-content {
-      background-color: $background;
+    .layout-container {
+      overflow-x: hidden;
+      top: -40px;
+
+      main {
+        margin-top: 0;
+
+        .layout-content {
+          @include rounded;
+          padding-top: 30px;
+        }
+      }
     }
   }
 

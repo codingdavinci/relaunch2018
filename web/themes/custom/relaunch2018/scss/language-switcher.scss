@@ -77,8 +77,6 @@
 
 .menu--container {
   .language-switcher-language-url {
-    left: 25px;
-
     @include media-breakpoint-up(sm) {
       display: none;
     }

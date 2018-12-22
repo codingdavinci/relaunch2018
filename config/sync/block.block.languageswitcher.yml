@@ -1,5 +1,5 @@
-uuid: 5b264d68-7dc0-4f22-9ba0-d2f303ec7aa2
-langcode: en
+uuid: d66ed805-be32-4971-b7f5-e1cd3c3ee639
+langcode: de
 status: true
 dependencies:
   module:
@@ -8,13 +8,13 @@ dependencies:
     - relaunch2018
 id: languageswitcher
 theme: relaunch2018
-region: primary_menu
-weight: -12
+region: language_switcher
+weight: -15
 provider: null
 plugin: 'language_block:language_interface'
 settings:
   id: 'language_block:language_interface'
-  label: 'Language switcher'
+  label: Sprachumschalter
   provider: language
   label_display: '0'
 visibility: {  }

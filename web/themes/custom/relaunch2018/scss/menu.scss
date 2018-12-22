@@ -5,7 +5,7 @@
   font-family: $font-family-sans-serif;
   font-size: 1.6rem;
   font-weight: $font-weight-semi-bold;
-  position: relative;
+  position: absolute;
   user-select: none;
 
   @include media-breakpoint-up(sm) {
@@ -16,211 +16,155 @@
     font-size: 2rem;
   }
 
-  ul {
-    list-style-type: none;
-  }
-
-  .burger {
-    @include rounded;
-
-    background-color: $color-gray-6;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
-    color: $color-main;
-    position: fixed;
-    z-index: 10;
-    left: 25px;
-    padding: 2px 4px 4px;
-    top: 25px;
-    cursor: pointer;
-    transform: rotateY(0deg);
-    @include easeOut;
-
-    @include media-breakpoint-up(sm) {
-      padding: 0 8px 4px;
-    }
-
-    &:hover {
-      background-color: $color-white;
-    }
-
-    .patty {
+  .responsive-menu-toggle {
+    .toggle {
+      @include boxShadow;
       @include easeOut;
+      @include rounded;
+      background-color: $color-gray-6;
+      color: $color-main;
+      position: fixed;
+      z-index: 10;
+      left: 25px;
+      padding: 2px 4px 4px;
+      top: 25px;
+      cursor: pointer;
+      text-decoration: none;
+      transform: rotateY(0deg);
 
-      &:first-child:after {
-        content: '…';
+      height: auto;
+      width: auto;
+
+      @include media-breakpoint-up(sm) {
+        padding: 0 8px 4px;
       }
-    }
-
-    &.menu--close {
-      background-color: transparent;
-      box-shadow: none;
-      color: $color-white;
-      transform: rotate(180deg);
 
       &:hover {
+        background-color: $color-white;
+      }
+
+      &:after {
+        display: none;
+      }
+
+      &:before {
+        display: none;
+      }
+
+      &.is-active {
         background-color: transparent;
+        box-shadow: none;
+        color: $color-white;
+        transform: rotate(180deg);
+
+        &:hover {
+          background-color: transparent;
+        }
+
+        .patty {
+          &:first-child:after {
+            content: '\e812';
+            font-family: $font-family-icons;
+            font-size: 1.6rem;
+            vertical-align: .2rem;
+            padding: .1rem;
+          }
+        }
       }
 
       .patty {
+        @include easeOut;
+
         &:first-child:after {
-          content: '\e812';
-          font-family: $font-family-icons;
-          font-size: 1.6rem;
-          vertical-align: .2rem;
-          padding: .1rem;
+          content: '…';
         }
       }
-      
-      @include media-breakpoint-down(xs) {
-        display: none;
+    }
+  }
+}
+
+.mm-menu {
+  --mm-color-border: transparent;
+  --mm-color-background: #{$color-red-3};
+  --mm-line-height: 40px;
+  z-index: 2;
+
+  @include media-breakpoint-up(sm) {
+    --mm-line-height: 50px;
+  }
+
+  @include media-breakpoint-up(md) {
+    --mm-line-height: 60px;
+  }
+
+  a {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .mm-navbars_top {
+    @include media-breakpoint-up(sm) {
+      display: none;
+    }
+    
+    .language-switcher-language-url {
+      padding-top: 25px;
+      position: static;
+      margin-left: 20px;
+      text-align: left;
+    }
+  }
+
+  .mm-panels {
+    @include media-breakpoint-up(sm) {
+      top: 6px;
+    }
+
+    .mm-panel {
+
+      .mm-navbar {
+        border-bottom-color: $color-gray-6;
+
+        .mm-navbar__title {
+          @include fontStyle(default);
+          color: $color-gray-2;
+          line-height: var(--mm-navbar-size);
+        }
+      }
+
+      .menu {
+        .menu-item {
+          a {
+            color: $color-deep-teal;
+            font-size: 1.6rem;
+            font-weight: $font-weight-semi-bold;
+
+            @include media-breakpoint-up(sm) {
+              font-size: 1.8rem;
+            }
+
+            @include media-breakpoint-up(md) {
+              font-size: 2rem;
+            }
+          }
+        }
       }
     }
   }
 
-  .menu--container {
-    background: $color-red-3;
-    display: flex;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    visibility: hidden;
-    z-index: 5;
+  .mm-navbars_bottom {
+    border-top: 1px solid $color-gray-6;
 
-    transform: translate3d(-100%, 0, 0);
-    @include easeOut;
+    .menu {
+      .menu-item {
+        line-height: var(--mm-navbar-size);
 
-    @include media-breakpoint-down(sm) {
-      font-weight: $font-weight-semi-bold;
-    }
-
-    .menu--main {
-      margin-top: 25vh;
-
-      a {
-        color: $color-deep-teal;
-       }
-
-      .menu {
-        align-items: left;
-        display: flex;
-        flex-flow: column;
-        float: left;
-        justify-content: flex-start;
-        line-height: 2;
-        margin: 0;
-        max-height: 65vh;
-        overflow-x: hidden;
-        overflow-y: auto;
-        padding: 0 25px 0 25px;
-
-        .menu-item {
-          transform: translate3d(500px, 0, 0);
-          @include easeOut;
-
-          &.active {
-            @include media-breakpoint-up(md) {
-              background: linear-gradient(
-                180deg, rgba(0,0,0,0) calc(55% - 2px),
-                $color-deep-teal calc(55%),
-                rgba(0,0,0,0) calc(55% + 2px)
-              );
-            }
-          }
-
-          a {
-            background-color: $color-red-3;
-            display: inline-block;
-            padding-right: 1rem;
-            position: relative;
-            @include easeOut;
-
-            &:before {
-              background: $color-white;
-              bottom: 0;
-              content: '';
-              height: 0;
-              left: 50%;
-              position: absolute;
-              transform: translateX(-50%);
-              width: 0;
-              @include easeOut;
-            }
-
-            &:hover {
-              &:before {
-                width: 100%;
-              }
-            }
-          }
-        }
-      }
-
-      // Add delay to each menu item:
-      @for $x from 1 through 6 {
-        .menu-item:nth-child(#{$x}) {
-          transition-delay: $x * .1s;
-        }
-      }
-
-      .menu--main--submenu {
-        display: inline-block;
-        font-weight: $font-weight-light;
-        @include easeOut;
-
-        .menu {
-          padding-left: 0;
-
-          .menu-item {
-            @include easeOut;
-          }
-        }
-      }
-
-    }
-
-    .menu--account {
-      bottom: 0;
-      font-size: calc(12px + .5vw);
-      opacity: 0;
-      position: absolute;
-      @include fadeInOut;
-
-      .menu {
-        padding: 0 25px 0 25px;
-
-        .menu-item {
-
-          a {
-            color: $color-gray-3;
-            font-weight: $font-weight-light;
-
-            &:after {
-              content: '}';
-              margin-left: 0.3rem;
-            }
-
-            &:before {
-              content: '{';
-              margin-right: 0.3rem;
-            }
-          }
-        }
-      }
-
-    }
-
-    &.active {
-      transform: translate3d(0, 0, 0);
-      visibility: visible;
-
-      .menu--account {
-        opacity: 1;
-      }
-
-      .menu {
-        .menu-item {
-          transform: translate3d(0, 0, 0);
+        a {
+          @include curlyBraces($color-gray-3);
+          @include fontStyle(default);
+          color: $color-gray-3;
+          font-weight: $font-weight-light;
         }
       }
     }
