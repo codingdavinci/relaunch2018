@@ -22,6 +22,20 @@
       }, 100);
     });
 
+    mmenu.bind('openPanel:start', function($panel) {
+      $panel.hide().slideDown({
+        easing: 'easeInOutCirc'
+      });
+    });
+
+    mmenu.bind('closePanel:after', function($panel) {
+      $panel.show().removeClass('mm-hidden').slideUp({
+        easing: 'easeInOutCirc'
+      }).promise().done(function() {
+        $panel.addClass('mm-hidden');
+      });
+    });
+
     setMenuElementPositions($burger.add('.language-switcher-language-url '));
   });
 

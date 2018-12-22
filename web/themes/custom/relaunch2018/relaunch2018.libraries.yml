@@ -13,7 +13,6 @@ global-js:
   version: 1.x
   js:
     js/color-scheme.js: {}
-    js/menu.js: {}
     js/read-more.js: {}
     js/view-faq.js: {}
   dependencies:
@@ -25,6 +24,7 @@ global-js:
     - relaunch2018/horizontal-nav
     - relaunch2018/jquery-color
     - relaunch2018/jquery-easing
+    - relaunch2018/menu
 
 bootstrap-js:
   version: 4.1
@@ -105,6 +105,14 @@ jquery-easing:
     gpl-compatible: true
   js:
     ../../../libraries/jquery.easing/jquery.easing.js: {}
+
+menu:
+  version: 1.0
+  js:
+    js/menu.js: {}
+  dependencies:
+    - core/jquery
+    - relaunch2018/jquery-easing
 
 popper-js:
   version: 1.14.6

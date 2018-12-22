@@ -97,6 +97,10 @@ function relaunch2018_preprocess_page(array &$variables) {
   );
 
   $variables['#attached']['drupalSettings']['responsive_menu']['mmenu_settings'] = [
+    'slidingSubmenus' => false,
+    'extensions' => [
+      'fx-listitems-slide',
+    ],
     'navbars' => [
       [
         "position" => "top",

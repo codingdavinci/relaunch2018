@@ -7303,6 +7303,7 @@ body.path-user:not(.user-logged-in) .layout-container {
         content: '…'; }
 
 .mm-menu {
+  --mm-color-background-highlight: rgba(0, 0, 0, 0);
   --mm-color-border: transparent;
   --mm-color-background: #FCD9C8;
   --mm-line-height: 40px;
@@ -7325,29 +7326,28 @@ body.path-user:not(.user-logged-in) .layout-container {
     text-align: left; }
   @media (min-width: 576px) {
     .mm-menu .mm-panels {
-      top: 6px; } }
-  .mm-menu .mm-panels .mm-panel .mm-navbar {
-    border-bottom-color: #F5F5F5; }
-    .mm-menu .mm-panels .mm-panel .mm-navbar .mm-navbar__title {
-      font-size: 1rem;
-      color: #4F4F4F;
-      line-height: var(--mm-navbar-size); }
+      top: 0; } }
+  .mm-menu .mm-panels .mm-panel {
+    padding-top: 25px; }
+    .mm-menu .mm-panels .mm-panel .mm-navbar {
+      display: none; }
+    .mm-menu .mm-panels .mm-panel .menu {
+      font-size: 1.6rem;
+      font-weight: 500; }
+      @media (min-width: 576px) {
+        .mm-menu .mm-panels .mm-panel .menu {
+          font-size: 1.8rem; } }
       @media (min-width: 768px) {
-        .mm-menu .mm-panels .mm-panel .mm-navbar .mm-navbar__title {
-          font-size: 1.1rem; } }
-      @media (min-width: 992px) {
-        .mm-menu .mm-panels .mm-panel .mm-navbar .mm-navbar__title {
-          font-size: 1.2rem; } }
-  .mm-menu .mm-panels .mm-panel .menu .menu-item a {
-    color: #099B8A;
-    font-size: 1.6rem;
-    font-weight: 500; }
-    @media (min-width: 576px) {
+        .mm-menu .mm-panels .mm-panel .menu {
+          font-size: 2rem; } }
       .mm-menu .mm-panels .mm-panel .menu .menu-item a {
-        font-size: 1.8rem; } }
-    @media (min-width: 768px) {
-      .mm-menu .mm-panels .mm-panel .menu .menu-item a {
-        font-size: 2rem; } }
+        color: #099B8A; }
+      .mm-menu .mm-panels .mm-panel .menu .menu-item .mm-panel {
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0; }
+        .mm-menu .mm-panels .mm-panel .menu .menu-item .mm-panel .menu-item {
+          font-weight: 200; }
   .mm-menu .mm-navbars_bottom {
     border-top: 1px solid #F5F5F5; }
     .mm-menu .mm-navbars_bottom .menu .menu-item {
