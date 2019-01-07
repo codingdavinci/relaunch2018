@@ -7916,8 +7916,8 @@ figcaption {
         border-radius: 4px;
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
         background: #fff;
-        padding: 1rem;
-        width: 480px; }
+        max-width: 480px;
+        padding: 1rem; }
         .node--type-data-set .article--content-container .article--header .article--content-block .field--name-field-attributed-image .field--name-field-inline-image img,
         .node--type-data-set .article--content-container .article--header .article--content-block .field--name-field-attributed-image video img,
         .node--type-data-set .article--content-container .article--header .article--content-block .node--type-project--audio-video .field--name-field-inline-image img,
@@ -9182,6 +9182,7 @@ figcaption {
   margin-bottom: 20px;
   width: 100%; }
   .view-data-sets .view-content .card-columns .card .card-img img {
+    border-radius: 0;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
     height: auto;
@@ -9418,6 +9419,7 @@ figcaption {
     height: 100%;
     width: 100%; }
     .view.view-projects.view-display-id-page_1 .view-content .card .card-img img {
+      border-radius: 0;
       max-width: 100%;
       height: auto;
       border-top-left-radius: 4px;

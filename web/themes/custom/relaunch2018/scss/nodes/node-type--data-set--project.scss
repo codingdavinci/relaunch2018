@@ -47,8 +47,8 @@
             @include rounded;
             @include boxShadow;
             background: $white;
+            max-width: 480px;
             padding: 1rem;
-            width: 480px;
 
             img {
               @include rounded;

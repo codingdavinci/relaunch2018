@@ -188,6 +188,7 @@
 
         .card-img {
           img {
+            border-radius: 0;
             @include img-fluid;
             @include border-top-radius($border-radius);
           }
