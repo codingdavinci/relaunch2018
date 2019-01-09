@@ -195,19 +195,3 @@
 
   }
 }
-
-footer {
-  .menu {
-    font-size: 1rem;
-    font-weight: $font-weight-bold;
-    list-style-type: none;
-    padding: 0;
-    margin: 0 0 15px 0;
-
-    .menu-item {
-      &:before {
-        color: $color-white;
-      }
-    }
-  }
-}

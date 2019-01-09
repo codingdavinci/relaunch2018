@@ -7114,19 +7114,29 @@ header #block-tags .menu {
       color: #FFFFFF; }
       .layout-container--wrapper footer a:hover {
         color: #FFFFFF; }
+      .layout-container--wrapper footer a:before {
+        color: #FFFFFF; }
+      .layout-container--wrapper footer a.icon-mail-1:before {
+        font-size: .7em;
+        margin-left: .4em; }
     .layout-container--wrapper footer .logos-container {
-      padding-top: 20px; }
+      font-size: .9rem; }
+      @media (min-width: 768px) {
+        .layout-container--wrapper footer .logos-container {
+          font-size: 1rem; } }
       .layout-container--wrapper footer .logos-container img {
         mix-blend-mode: multiply;
         opacity: .6; }
+      @media (min-width: 768px) {
+        .layout-container--wrapper footer .logos-container > div > div {
+          width: 20%;
+          padding: 15px; } }
     .layout-container--wrapper footer .field--name-field-textblock {
       color: #FFFFFF;
       font-size: 1.0rem; }
       .layout-container--wrapper footer .field--name-field-textblock h3 {
         color: #FFFFFF;
         font-size: 1.0rem;
-        font-weight: 600; }
-      .layout-container--wrapper footer .field--name-field-textblock a {
         font-weight: 600; }
 
 .collapsible legend {
@@ -7384,15 +7394,6 @@ body.path-user:not(.user-logged-in) .layout-container {
           .mm-menu .mm-navbars_bottom .menu .menu-item a {
             font-size: 1.2rem; } }
 
-footer .menu {
-  font-size: 1rem;
-  font-weight: 600;
-  list-style-type: none;
-  padding: 0;
-  margin: 0 0 15px 0; }
-  footer .menu .menu-item:before {
-    color: #FFFFFF; }
-
 .pager .pager__items {
   display: flex;
   justify-content: space-between;
@@ -7572,6 +7573,9 @@ a {
     a.button.button--icon.button--mail:before {
       content: '\e80b'; }
 
+strong {
+  font-weight: 600; }
+
 table.table--red,
 table.table--white {
   border-bottom-right-radius: 4px;
@@ -7674,6 +7678,15 @@ figcaption {
   font-size: .9rem;
   margin-right: .6rem !important;
   vertical-align: .05rem; }
+
+.icon-cc-by:before {
+  content: '\63\00a0\6c';
+  display: block;
+  float: left;
+  font-size: 2rem;
+  margin-right: 2em;
+  margin-top: 1em;
+  padding-bottom: 4rem; }
 
 .card {
   background-color: transparent;

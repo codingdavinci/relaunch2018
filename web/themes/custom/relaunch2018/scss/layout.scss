@@ -199,14 +199,34 @@ header {
       &:hover {
         color: $color-white;
       }
+
+      &:before {
+        color: $color-white;
+      }
+
+      &.icon-mail-1 {
+        &:before {
+          font-size: .7em;
+          margin-left: .4em;
+        }
+      }
     }
 
     .logos-container {
-      padding-top: 20px;
+      @include fontStyle(small);
 
       img {
         mix-blend-mode: multiply;
         opacity: .6;
+      }
+
+      & > div {
+        @include media-breakpoint-up(md) {
+          & > div {
+            width: 20%;
+            padding: 15px;
+          }
+        }
       }
     }
 
@@ -217,10 +237,6 @@ header {
       h3 {
         color: $color-white;
         font-size: 1.0rem;
-        font-weight: $font-weight-bold;
-      }
-
-      a {
         font-weight: $font-weight-bold;
       }
     }

@@ -19,30 +19,31 @@
   {% block content %}
     <div class="container">
       <div class="row">
-        <div class="col-md-8">
-          <div class="row">
-            <div class="col-12">{{ content['body'] }}</div>
-            <div class="col-12 logos-container">
-              <div class="row align-items-center">
-                <div class="col-md-3 mb-3 mb-md-0 text-center">
-                  <img class="img-fluid" src="{{ theme_path }}/img/footer/ddb.png">
-                </div>
-                <div class="col-md-3 mb-3 mb-md-0 text-center">
-                  <img class="img-fluid" src="{{ theme_path }}/img/footer/digis.png">
-                </div>
-                <div class="col-md-3 mb-3 mb-md-0 text-center">
-                  <img class="img-fluid" src="{{ theme_path }}/img/footer/okfde.png">
-                </div>
-                <div class="col-md-3 mb-3 mb-md-0 text-center">
-                  <img class="img-fluid" src="{{ theme_path }}/img/footer/wmde.png">
-                </div>
+        <div class="col-12">{{ content['body'] }}</div>
+        <div class="col-12 logos-container">
+          <div class="row align-items-center">
+            <div class="col-md-auto mb-3 mb-md-0 text-center">
+              <div class="text-left">
+                {{ 'Funded by:'|trans }}
+                <img class="img-fluid" src="{{ theme_path }}/img/footer/kulturstiftung.png">
               </div>
+            </div>
+            <div class="col-md-auto mb-3 mb-md-0 text-center">
+              <br class="d-none d-md-inline"><img class="img-fluid" src="{{ theme_path }}/img/footer/ddb.png">
+            </div>
+            <div class="col-md-auto mb-3 mb-md-0 text-center">
+              <br class="d-none d-md-inline"><img class="img-fluid" src="{{ theme_path }}/img/footer/digis.png">
+            </div>
+            <div class="col-md-auto mb-3 mb-md-0 text-center">
+              <br class="d-none d-md-inline"><img class="img-fluid" src="{{ theme_path }}/img/footer/okfde.png">
+            </div>
+            <div class="col-md-auto mb-3 mb-md-0 text-center">
+              <br class="d-none d-md-inline"><img class="img-fluid" src="{{ theme_path }}/img/footer/wmde.png">
             </div>
           </div>
         </div>
-        <div class="col-md-4 mt-4 mt-md-0">
+        <div class="col-md-12 mt-5">
           <div class="row">
-            <div class="col-12">{{ drupal_menu('footer') }}</div>
             <div class="col-12">{{ content['field_textblock'] }}</div>
           </div>
         </div>

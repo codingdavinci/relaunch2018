@@ -6488,6 +6488,9 @@ a {
     a.button.button--icon.button--mail:before {
       content: '\e80b'; }
 
+strong {
+  font-weight: 600; }
+
 table.table--red,
 table.table--white {
   border-bottom-right-radius: 4px;
@@ -6590,6 +6593,15 @@ figcaption {
   font-size: .9rem;
   margin-right: .6rem !important;
   vertical-align: .05rem; }
+
+.icon-cc-by:before {
+  content: '\63\00a0\6c';
+  display: block;
+  float: left;
+  font-size: 2rem;
+  margin-right: 2em;
+  margin-top: 1em;
+  padding-bottom: 4rem; }
 
 .card {
   background-color: transparent;

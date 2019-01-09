@@ -196,6 +196,10 @@ a {
   }
 }
 
+strong {
+  font-weight: $font-weight-bold;
+}
+
 table.table--red,
 table.table--white {
   @include border-bottom-radius($border-radius);
@@ -301,6 +305,18 @@ figcaption {
     font-size: .9rem;
     margin-right: .6rem !important;
     vertical-align: .05rem;
+  }
+}
+
+.icon-cc-by {
+  &:before {
+    content: '\63\00a0\6c';
+    display: block;
+    float: left;
+    font-size: 2rem;
+    margin-right: 2em;
+    margin-top: 1em;
+    padding-bottom: 4rem;
   }
 }
 
