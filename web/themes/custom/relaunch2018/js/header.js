@@ -22,6 +22,7 @@
     var frontSideTilesCount = isFrontPage ? 42 : 20;
     var backSideTileCount = 24;
     var maxLines = isFrontPage ? 8 : 6;
+    var lineLength = isFrontPage ? 8 : 6;
 
     var html = [];
     var frontSide_i = 0;
@@ -32,7 +33,7 @@
     for (var i = 0; i < maxLines; i++) {
 
       // Build a line of even and odd tiles:
-      for (var j = 0; j < 6; j++) {
+      for (var j = 0; j < lineLength; j++) {
 
         if (j % 2 === 0) {
           t = even.top + (j / 2) * tileSize;

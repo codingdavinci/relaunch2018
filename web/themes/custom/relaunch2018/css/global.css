@@ -6505,7 +6505,7 @@ ul.ui-autocomplete li.ui-menu-item a {
   .header--tiles .header--tiles--container {
     background: -9px top url("../img/header/tiles_frontpage_static.jpg") repeat-x;
     background-size: 1208px;
-    height: 720px;
+    height: 915px;
     left: 0;
     overflow: hidden;
     position: fixed;
@@ -7089,7 +7089,7 @@ header #block-tags .menu {
         background-color: #F5F5F5; }
   .layout-container--wrapper.header-tiles-above {
     position: relative;
-    top: 720px;
+    top: 915px;
     width: 100%; }
     .layout-container--wrapper.header-tiles-above .layout-container {
       overflow-x: hidden;

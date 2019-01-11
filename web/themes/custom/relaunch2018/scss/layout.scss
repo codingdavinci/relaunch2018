@@ -160,7 +160,7 @@ header {
 
   &.header-tiles-above {
     position: relative;
-    top: 720px;
+    top: $tiled-header-height;
     width: 100%;
 
     .layout-container {
