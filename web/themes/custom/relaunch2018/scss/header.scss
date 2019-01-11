@@ -49,6 +49,7 @@
         width: 600px;
 
         @include media-breakpoint-up(lg) {
+          font-size: 1.7rem;
           padding: 4rem 4rem 3rem 4rem;
         }
 
