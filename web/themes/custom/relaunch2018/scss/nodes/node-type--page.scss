@@ -1,6 +1,8 @@
 @import '../_includes/base';
 
 .page-node-type-page {
+  overflow-x: hidden;
+
   h2 {
     color: $color-main;
   }

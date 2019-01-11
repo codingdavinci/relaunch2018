@@ -8489,14 +8489,14 @@ figcaption {
     .node--link-wrapper--event:hover .node--view-mode-teaser .node--event--teaser--register {
       text-decoration: none; }
 
-.page-node-type-page h2 {
-  color: #5DC4B8; }
-
-.page-node-type-page h3 {
-  color: #5DC4B8; }
-
-.page-node-type-page .header--default .field--name-field-textblock {
-  color: #099B8A; }
+.page-node-type-page {
+  overflow-x: hidden; }
+  .page-node-type-page h2 {
+    color: #5DC4B8; }
+  .page-node-type-page h3 {
+    color: #5DC4B8; }
+  .page-node-type-page .header--default .field--name-field-textblock {
+    color: #099B8A; }
 
 .paragraph--type--attributed-image {
   display: inline-block; }
