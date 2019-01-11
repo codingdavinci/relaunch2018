@@ -17,15 +17,23 @@
       {% if content.field_heading['#items'] is not empty or content.field_medium['#items'] is not empty %}
         <div class="col-md-6">
           {% if content.field_heading['#items'] is not empty %}
-            {{ content.field_heading }}
+            <div class="row">
+              <div class="col-12">
+                {{ content.field_heading }}
+              </div>
+            </div>
           {% endif %}
-          {% if content.field_medium['#items'] is not empty %}
-            {% if content.field_heading['#items'] is not empty %}
-              <div class="d-flex flex-column justify-content-center h-100">{{ content.field_medium }}</div>
-            {% else %}
-              {{ content-field_medium }}
-            {% endif %}
-          {% endif %}
+          <div class="row">
+            <div class="col-12">
+              {% if content.field_medium['#items'] is not empty %}
+                {% if content.field_heading['#items'] is not empty %}
+                  <div class="d-flex flex-column justify-content-center h-100 mb-5 mb-md-0">{{ content.field_medium }}</div>
+                {% else %}
+                  {{ content-field_medium }}
+                {% endif %}
+              {% endif %}
+            </div>
+          </div>
         </div>
       {% endif %}
       <div class="col-md-6{% if content.field_heading['#items'] is empty and content.field_medium['#items'] is empty %} offset-md-6{% endif %}">{{ content.field_text }}</div>
