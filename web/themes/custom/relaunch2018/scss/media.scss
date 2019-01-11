@@ -8,6 +8,10 @@
   .field--name-field-creator,
   .field--name-field-license {
     display: inline-block;
+
+    &.field--name-field-caption {
+      margin-top: .9rem;
+    }
   }
 
   img {

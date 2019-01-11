@@ -7241,6 +7241,10 @@ body.path-user:not(.user-logged-in) .layout-container {
   .media--type-image .field--name-field-creator,
   .media--type-image .field--name-field-license {
     display: inline-block; }
+    .media--type-image .field--name-field-caption.field--name-field-caption,
+    .media--type-image .field--name-field-creator.field--name-field-caption,
+    .media--type-image .field--name-field-license.field--name-field-caption {
+      margin-top: .9rem; }
   .media--type-image img {
     border-radius: 4px;
     height: auto;
@@ -9117,7 +9121,8 @@ figcaption {
       box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
       width: 100%; }
   .paragraph--type--video .field--name-field-video .media .field--name-field-caption {
-    font-size: .9rem; }
+    font-size: .9rem;
+    margin-top: .9rem; }
     @media (min-width: 768px) {
       .paragraph--type--video .field--name-field-video .media .field--name-field-caption {
         font-size: 1rem; } }
