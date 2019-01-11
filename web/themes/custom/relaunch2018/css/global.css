@@ -9111,6 +9111,7 @@ figcaption {
   display: flex;
   flex-direction: column; }
   .paragraph--type--video .field--name-field-video .media .field--name-field-media-oembed-video {
+    border-radius: 4px;
     width: 100%; }
     .paragraph--type--video .field--name-field-video .media .field--name-field-media-oembed-video iframe {
       box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);

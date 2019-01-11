@@ -7,6 +7,7 @@
       flex-direction: column;
 
       .field--name-field-media-oembed-video {
+        @include rounded;
         width: 100%;
 
         iframe {
