@@ -8927,7 +8927,9 @@ figcaption {
   position: relative; }
   .paragraph--type--timeline .field--name-field-timeline-items {
     display: grid;
-    grid-auto-flow: row; }
+    grid-auto-flow: row;
+    position: relative;
+    z-index: 1; }
     .paragraph--type--timeline .field--name-field-timeline-items > .field__item .paragraph--type--timeline-item .field--name-field-heading {
       font-size: 1.4rem;
       letter-spacing: .04em; }
@@ -9105,8 +9107,7 @@ figcaption {
   .paragraph--type--timeline .paragraph--type--timeline--line {
     position: absolute;
     top: 45%;
-    width: 99%;
-    z-index: -1; }
+    width: 99%; }
     .paragraph--type--timeline .paragraph--type--timeline--line hr {
       border: none;
       border-bottom: 5px solid #1BBD7D; }

@@ -6,6 +6,8 @@
   .field--name-field-timeline-items {
     display: grid;
     grid-auto-flow: row;
+    position: relative;
+    z-index: 1;
 
     & > .field__item {
       .paragraph--type--timeline-item {
@@ -170,7 +172,6 @@
     position: absolute;
     top: 45%;
     width: 99%;
-    z-index: -1;
 
     hr {
       border: none;
