@@ -15,7 +15,7 @@
   <div{{ attributes.addClass(classes) }}>
     <div class="row">
       {% if content.field_heading['#items'] is not empty or content.field_medium['#items'] is not empty %}
-        <div class="col-md-6">
+        <div class="col-md-6 col-lg-5">
           {% if content.field_heading['#items'] is not empty %}
             <div class="row">
               <div class="col-12">
@@ -36,7 +36,11 @@
           </div>
         </div>
       {% endif %}
-      <div class="col-md-6{% if content.field_heading['#items'] is empty and content.field_medium['#items'] is empty %} offset-md-6{% endif %}">{{ content.field_text }}</div>
+      <div class="col-md-6 col-lg-7{% if content.field_heading['#items'] is empty and content.field_medium['#items'] is empty %} offset-md-6 offset-lg-5{% endif %}">
+        <div class="additional-padding--left">
+          {{ content.field_text }}
+        </div>
+      </div>
     </div>
   </div>
 {% endblock paragraph %}

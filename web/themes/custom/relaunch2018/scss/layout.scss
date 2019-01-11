@@ -281,3 +281,15 @@ header {
     margin-bottom: 4rem;
   }
 }
+
+.additional-padding--left {
+  @include media-breakpoint-up(lg) {
+    padding-left: 37px;
+  }
+}
+
+.additional-padding--right {
+  @include media-breakpoint-up(lg) {
+    padding-right: 37px;
+  }
+}

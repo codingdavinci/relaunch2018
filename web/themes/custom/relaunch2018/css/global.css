@@ -7171,6 +7171,14 @@ header #block-tags .menu {
 .field--name-field-paragraphs > .field__item {
   margin-bottom: 4rem; }
 
+@media (min-width: 992px) {
+  .additional-padding--left {
+    padding-left: 37px; } }
+
+@media (min-width: 992px) {
+  .additional-padding--right {
+    padding-right: 37px; } }
+
 body.path-user:not(.user-logged-in) header .header--with-background {
   background-color: transparent;
   padding: 0; }
