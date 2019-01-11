@@ -90,7 +90,7 @@
 
     $right.toggleClass(
       'inactive',
-      $boxes.children().first().offset().left >= 0
+      $boxes.children().first().offset().left >= $container.offset().left
     );
 
     if ($left.hasClass('inactive') && $right.hasClass('inactive')) {
