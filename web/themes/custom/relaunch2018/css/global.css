@@ -7258,7 +7258,6 @@ body.path-user:not(.user-logged-in) .layout-container {
     height: auto;
     width: 100%; }
   .media--type-image.media--view-mode-full {
-    padding: 0;
     flex-direction: column; }
     .media--type-image.media--view-mode-full img {
       height: auto;
