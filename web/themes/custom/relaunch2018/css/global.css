@@ -6322,7 +6322,7 @@ a.text-dark:hover, a.text-dark:focus {
 .badge {
   font-size: .8rem;
   color: #fff;
-  display: inline;
+  display: inline-block;
   font-weight: 600;
   margin-right: .2em;
   padding: .15em .4em .25em .4em; }
@@ -7979,20 +7979,35 @@ figcaption {
         .node--type-data-set .article--content-container .node__content .badge,
         .node--type-project .article--content-container .node__content .badge {
           font-size: 1.2rem; } }
-    .node--type-data-set .article--content-container .node__content .field,
-    .node--type-project .article--content-container .node__content .field {
+    .node--type-data-set .article--content-container .node__content .field:not(.field--name-field-events):not(.field--name-field-theme):not(.field--name-field-keywords):not(.field--name-field-license):not(.field--name-field-author),
+    .node--type-project .article--content-container .node__content .field:not(.field--name-field-events):not(.field--name-field-theme):not(.field--name-field-keywords):not(.field--name-field-license):not(.field--name-field-author) {
       margin-bottom: 1rem; }
-      .node--type-data-set .article--content-container .node__content .field .field__label,
-      .node--type-project .article--content-container .node__content .field .field__label {
-        font-size: .9rem;
-        font-weight: 400; }
-        @media (min-width: 768px) {
-          .node--type-data-set .article--content-container .node__content .field .field__label,
-          .node--type-project .article--content-container .node__content .field .field__label {
-            font-size: 1rem; } }
-    .node--type-data-set .article--content-container .node__content .field--name-field-events > *,
-    .node--type-project .article--content-container .node__content .field--name-field-events > * {
-      display: inline-block; }
+    .node--type-data-set .article--content-container .node__content .field .field__label,
+    .node--type-project .article--content-container .node__content .field .field__label {
+      font-size: .9rem;
+      font-weight: 400; }
+      @media (min-width: 768px) {
+        .node--type-data-set .article--content-container .node__content .field .field__label,
+        .node--type-project .article--content-container .node__content .field .field__label {
+          font-size: 1rem; } }
+    .node--type-data-set .article--content-container .node__content .field--name-field-events,
+    .node--type-project .article--content-container .node__content .field--name-field-events {
+      margin-bottom: .4rem; }
+      .node--type-data-set .article--content-container .node__content .field--name-field-events > *,
+      .node--type-project .article--content-container .node__content .field--name-field-events > * {
+        display: inline-block;
+        margin-bottom: .6rem; }
+    .node--type-data-set .article--content-container .node__content .field--name-field-theme,
+    .node--type-data-set .article--content-container .node__content .field--name-field-keywords,
+    .node--type-project .article--content-container .node__content .field--name-field-theme,
+    .node--type-project .article--content-container .node__content .field--name-field-keywords {
+      margin-bottom: .4rem; }
+      .node--type-data-set .article--content-container .node__content .field--name-field-theme .field__items > *,
+      .node--type-data-set .article--content-container .node__content .field--name-field-keywords .field__items > *,
+      .node--type-project .article--content-container .node__content .field--name-field-theme .field__items > *,
+      .node--type-project .article--content-container .node__content .field--name-field-keywords .field__items > * {
+        display: inline-block;
+        margin-bottom: 1rem; }
     .node--type-data-set .article--content-container .node__content .field--name-field-submission-type .field__item,
     .node--type-project .article--content-container .node__content .field--name-field-submission-type .field__item {
       font-weight: 500; }
@@ -8023,10 +8038,15 @@ figcaption {
         padding: 0; }
         .node--type-data-set .article--content-container .node__content fieldset.object-type ul li,
         .node--type-project .article--content-container .node__content fieldset.object-type ul li {
-          display: inline; }
+          display: inline-block;
+          margin-bottom: .2rem; }
           .node--type-data-set .article--content-container .node__content fieldset.object-type ul li ul,
           .node--type-project .article--content-container .node__content fieldset.object-type ul li ul {
             display: inline; }
+    .node--type-data-set .article--content-container .node__content fieldset .field--name-field-file-types .field__items .field__item,
+    .node--type-project .article--content-container .node__content fieldset .field--name-field-file-types .field__items .field__item {
+      display: inline-block;
+      margin-bottom: .2rem; }
     .node--type-data-set .article--content-container .node__content .field--name-field-short-description,
     .node--type-project .article--content-container .node__content .field--name-field-short-description {
       font-weight: 600; }
@@ -8171,7 +8191,8 @@ figcaption {
           .node--type-project .article--content-container .node__content .view-projects.view-display-id-block_2 .field--name-field-datasets article .node__content .field--name-field-tags .badge,
           .node--type-project .article--content-container .node__content .view-projects.view-display-id-block_2 .view-content article .node__content .field--name-field-object-type .badge,
           .node--type-project .article--content-container .node__content .view-projects.view-display-id-block_2 .view-content article .node__content .field--name-field-tags .badge {
-            font-size: .9rem; }
+            font-size: .9rem;
+            margin-bottom: .1rem; }
             @media (min-width: 768px) {
               .node--type-data-set .article--content-container .node__content .group--data-sets .field--name-field-datasets article .node__content .field--name-field-object-type .badge,
               .node--type-data-set .article--content-container .node__content .group--data-sets .field--name-field-datasets article .node__content .field--name-field-tags .badge,
@@ -8236,13 +8257,19 @@ figcaption {
       .node--type-data-set .article--content-container .node__content .field--name-field-tags .field__items,
       .node--type-project .article--content-container .node__content .field--name-field-tags .field__items {
         display: inline; }
+        .node--type-data-set .article--content-container .node__content .field--name-field-tags .field__items .field__item,
+        .node--type-project .article--content-container .node__content .field--name-field-tags .field__items .field__item {
+          margin-bottom: .2rem; }
     .node--type-data-set .article--content-container .node__content .project--tags,
     .node--type-project .article--content-container .node__content .project--tags {
-      margin-bottom: 2rem;
+      margin-bottom: 1.6rem;
       margin-top: 0; }
       .node--type-data-set .article--content-container .node__content .project--tags:last-child,
       .node--type-project .article--content-container .node__content .project--tags:last-child {
         margin-top: 3rem; }
+      .node--type-data-set .article--content-container .node__content .project--tags > *,
+      .node--type-project .article--content-container .node__content .project--tags > * {
+        margin-bottom: .4rem; }
 
 .path-events h1,
 .path-events .block-views-blockevents-block-1 > h2 {

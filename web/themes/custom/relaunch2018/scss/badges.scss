@@ -4,7 +4,7 @@
   @include fontStyle(badge);
   @include linkColor(dark);
   color: $white;
-  display: inline;
+  display: inline-block;
   font-weight: $font-weight-bold;
   margin-right: .2em;
   padding: .15em .4em .25em .4em;
