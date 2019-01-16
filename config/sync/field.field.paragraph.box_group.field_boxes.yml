@@ -4,8 +4,8 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_boxes
-    - paragraphs.paragraphs_type.box
     - paragraphs.paragraphs_type.box_group
+    - paragraphs.paragraphs_type.box_group_box
   module:
     - entity_reference_revisions
 id: paragraph.box_group.field_boxes
@@ -23,7 +23,7 @@ settings:
   handler_settings:
     negate: 0
     target_bundles:
-      box: box
+      box_group_box: box_group_box
     target_bundles_drag_drop:
       box_group:
         weight: 17
@@ -35,8 +35,8 @@ settings:
         weight: 19
         enabled: false
       box:
-        enabled: true
         weight: 20
+        enabled: false
       data_set_event:
         weight: 21
         enabled: false
@@ -67,10 +67,52 @@ settings:
       textblock_right:
         weight: 30
         enabled: false
+      box_group_box:
+        enabled: true
+        weight: 31
       video:
         weight: 31
         enabled: false
       winner:
         weight: 32
+        enabled: false
+      attributed_audio_video:
+        weight: 32
+        enabled: false
+      grid:
+        weight: 39
+        enabled: false
+      grid_element:
+        weight: 40
+        enabled: false
+      jury:
+        weight: 43
+        enabled: false
+      jury_member:
+        weight: 44
+        enabled: false
+      logo:
+        weight: 45
+        enabled: false
+      logo_group:
+        weight: 46
+        enabled: false
+      logos:
+        weight: 47
+        enabled: false
+      prize:
+        weight: 48
+        enabled: false
+      prizes:
+        weight: 49
+        enabled: false
+      social_media:
+        weight: 52
+        enabled: false
+      timeline:
+        weight: 57
+        enabled: false
+      timeline_item:
+        weight: 58
         enabled: false
 field_type: entity_reference_revisions

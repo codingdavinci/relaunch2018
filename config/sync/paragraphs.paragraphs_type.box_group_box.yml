@@ -1,0 +1,9 @@
+uuid: b0ea4759-7cfd-4dc0-9127-7a72a437dd8e
+langcode: de
+status: true
+dependencies: {  }
+id: box_group_box
+label: Box-Gruppen-Box
+icon_uuid: null
+description: 'Box einer Box-Gruppe.'
+behavior_plugins: {  }

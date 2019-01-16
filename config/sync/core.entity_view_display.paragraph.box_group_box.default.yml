@@ -1,0 +1,50 @@
+uuid: dba64247-9416-48aa-8a05-6180793cca7a
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.box_group_box.field_color
+    - field.field.paragraph.box_group_box.field_footer
+    - field.field.paragraph.box_group_box.field_image
+    - field.field.paragraph.box_group_box.field_text
+    - paragraphs.paragraphs_type.box_group_box
+  module:
+    - text
+id: paragraph.box_group_box.default
+targetEntityType: paragraph
+bundle: box_group_box
+mode: default
+content:
+  field_color:
+    weight: 3
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_footer:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: preview
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_text:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

@@ -1,0 +1,21 @@
+uuid: f1710331-5681-4175-8243-42a29bc96881
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_footer
+    - paragraphs.paragraphs_type.box_group_box
+  module:
+    - text
+id: paragraph.box_group_box.field_footer
+field_name: field_footer
+entity_type: paragraph
+bundle: box_group_box
+label: Fußzeile
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

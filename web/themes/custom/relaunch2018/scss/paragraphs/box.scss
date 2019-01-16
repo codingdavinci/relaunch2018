@@ -1,6 +1,7 @@
 @import '../_includes/base';
 
-.paragraph--type--box {
+.paragraph--type--box,
+.paragraph--type--box-group-box {
   .card {
     @include boxShadow;
     background-color: $color-white;

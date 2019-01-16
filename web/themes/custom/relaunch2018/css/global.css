@@ -8600,21 +8600,27 @@ figcaption {
   .paragraph--type--box-group.box-group--sync-height .paragraph--type--box .card {
     height: 100%; }
 
-.paragraph--type--box .card {
+.paragraph--type--box .card,
+.paragraph--type--box-group-box .card {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
   background-color: #FFFFFF; }
-  .paragraph--type--box .card .card-img-top img {
+  .paragraph--type--box .card .card-img-top img,
+  .paragraph--type--box-group-box .card .card-img-top img {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0; }
-  .paragraph--type--box .card .card-body .field--name-field-text p:last-child {
+  .paragraph--type--box .card .card-body .field--name-field-text p:last-child,
+  .paragraph--type--box-group-box .card .card-body .field--name-field-text p:last-child {
     margin-bottom: 0; }
-    .paragraph--type--box .card .card-body .field--name-field-text p:last-child .button:last-child {
+    .paragraph--type--box .card .card-body .field--name-field-text p:last-child .button:last-child,
+    .paragraph--type--box-group-box .card .card-body .field--name-field-text p:last-child .button:last-child {
       display: inline-block;
       margin-bottom: 1rem; }
-  .paragraph--type--box .card .card-footer {
+  .paragraph--type--box .card .card-footer,
+  .paragraph--type--box-group-box .card .card-footer {
     background-color: #FFFFFF;
     border-top: none; }
-    .paragraph--type--box .card .card-footer .field--name-field-footer p:last-child {
+    .paragraph--type--box .card .card-footer .field--name-field-footer p:last-child,
+    .paragraph--type--box-group-box .card .card-footer .field--name-field-footer p:last-child {
       margin-bottom: 0; }
 
 .paragraph--type--grid .field--name-field-text {
