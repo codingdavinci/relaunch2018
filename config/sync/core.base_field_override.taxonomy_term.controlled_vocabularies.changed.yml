@@ -1,0 +1,18 @@
+uuid: 1648a518-f300-4a45-adb1-9afafe7d847b
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.controlled_vocabularies
+id: taxonomy_term.controlled_vocabularies.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: controlled_vocabularies
+label: Geändert
+description: 'Der Zeitpunkt an dem der Begriff zuletzt bearbeitet wurde.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

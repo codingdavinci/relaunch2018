@@ -1,0 +1,22 @@
+uuid: 5642699f-2d25-430f-a0cb-61626cf574e9
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.color_schemes
+id: taxonomy_term.color_schemes.status
+field_name: status
+entity_type: taxonomy_term
+bundle: color_schemes
+label: Veröffentlicht
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: An
+  off_label: Aus
+field_type: boolean

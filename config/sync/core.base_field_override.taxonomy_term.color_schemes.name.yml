@@ -1,0 +1,18 @@
+uuid: ec80a2a8-519d-4a4d-a29c-1750962c3aba
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.color_schemes
+id: taxonomy_term.color_schemes.name
+field_name: name
+entity_type: taxonomy_term
+bundle: color_schemes
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

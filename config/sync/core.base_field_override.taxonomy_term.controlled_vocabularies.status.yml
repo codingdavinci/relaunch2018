@@ -1,0 +1,22 @@
+uuid: 4d256680-007f-4366-87e3-6a618fe61476
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.controlled_vocabularies
+id: taxonomy_term.controlled_vocabularies.status
+field_name: status
+entity_type: taxonomy_term
+bundle: controlled_vocabularies
+label: Veröffentlicht
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: An
+  off_label: Aus
+field_type: boolean

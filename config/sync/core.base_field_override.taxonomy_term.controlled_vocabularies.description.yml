@@ -1,0 +1,20 @@
+uuid: 1ba6ac52-8815-493f-b250-89905fb26c94
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.controlled_vocabularies
+  module:
+    - text
+id: taxonomy_term.controlled_vocabularies.description
+field_name: description
+entity_type: taxonomy_term
+bundle: controlled_vocabularies
+label: Beschreibung
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

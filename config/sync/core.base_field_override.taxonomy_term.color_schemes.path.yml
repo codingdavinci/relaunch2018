@@ -1,0 +1,20 @@
+uuid: b80b2af5-5147-498b-89e6-0145f5c95f33
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.color_schemes
+  module:
+    - path
+id: taxonomy_term.color_schemes.path
+field_name: path
+entity_type: taxonomy_term
+bundle: color_schemes
+label: URL-Alias
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

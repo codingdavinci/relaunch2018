@@ -1,21 +1,18 @@
-uuid: dfb2a8d1-c584-4459-8c65-928cad008ded
+uuid: 473a9c45-0753-4e25-aad4-df19f392baac
 langcode: de
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_text
     - paragraphs.paragraphs_type.box_group_box
-  module:
-    - text
-id: paragraph.box_group_box.field_text
-field_name: field_text
+id: paragraph.box_group_box.created
+field_name: created
 entity_type: paragraph
 bundle: box_group_box
-label: Text
-description: ''
+label: 'Geschrieben am'
+description: 'Der Zeitpunkt, zu dem der Seitenabschnittstyp erstellt wurde.'
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: text_long
+field_type: created

@@ -1,0 +1,20 @@
+uuid: 76eaee7c-a7d7-455e-bb3f-257303bea6cf
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.color_schemes
+  module:
+    - text
+id: taxonomy_term.color_schemes.description
+field_name: description
+entity_type: taxonomy_term
+bundle: color_schemes
+label: Beschreibung
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
