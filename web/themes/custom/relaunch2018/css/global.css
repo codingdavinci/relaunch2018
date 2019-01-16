@@ -7990,6 +7990,9 @@ figcaption {
         .node--type-data-set .article--content-container .node__content .field .field__label,
         .node--type-project .article--content-container .node__content .field .field__label {
           font-size: 1rem; } }
+    .node--type-data-set .article--content-container .node__content .data-set--badges,
+    .node--type-project .article--content-container .node__content .data-set--badges {
+      margin-bottom: 2rem; }
     .node--type-data-set .article--content-container .node__content .field--name-field-events,
     .node--type-project .article--content-container .node__content .field--name-field-events {
       margin-bottom: .4rem; }
@@ -8035,6 +8038,7 @@ figcaption {
       .node--type-data-set .article--content-container .node__content fieldset.object-type ul,
       .node--type-project .article--content-container .node__content fieldset.object-type ul {
         list-style-type: none;
+        margin: 0;
         padding: 0; }
         .node--type-data-set .article--content-container .node__content fieldset.object-type ul li,
         .node--type-project .article--content-container .node__content fieldset.object-type ul li {

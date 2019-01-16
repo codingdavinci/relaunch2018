@@ -52,7 +52,11 @@
       {{ content.field_events }}
       {{ content.field_submission_type }}
       {{ content.field_description }}
-      {{ object_type }}
+      <div class="data-set--badges">
+        {{ object_type }}
+        {{ content.field_theme }}
+        {{ content.field_keywords }}
+      </div>
       {{
         content
         |without('header_image')
@@ -70,11 +74,6 @@
 
     <div{{ content_attributes.addClass('node__content node__content__section col-sm-10 offset-sm-1 col-md-9 offset-md-2') }}>
       {{ content.projects }}
-    </div>
-
-    <div{{ content_attributes.addClass('node__content node__content__section col-sm-10 offset-sm-1 col-md-9 offset-md-2') }}>
-      {{ content.field_theme }}
-      {{ content.field_keywords }}
     </div>
 
   </div>
