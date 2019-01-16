@@ -7,8 +7,8 @@
       margin-bottom: 2rem;
 
       .view-content {
-        @include media-breakpoint-up(sm) {
-          padding-left: 20px;
+        @include media-breakpoint-up(lg) {
+          padding-right: 37px;
         }
       }
     }
