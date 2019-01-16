@@ -11,7 +11,7 @@ id: block_content.footer.field_textblock
 field_name: field_textblock
 entity_type: block_content
 bundle: footer
-label: 'Textblock (rechts)'
+label: Textblock
 description: ''
 required: false
 translatable: true
