@@ -286,6 +286,24 @@ function relaunch2018_page_attachments_alter(array &$attachments) {
   }
 }
 
+
+/**
+ * Implements THEME_preprocess_views_view().
+ *
+ * @param array $variables
+ */
+function relaunch2018_preprocess_views_view(array &$variables) {
+  if ($variables['id'] === 'landing_page' && $variables['display_id'] === 'page_1') {
+    /** @var \Drupal\views\ViewExecutable $view */
+    $view = $variables['view'];
+    $variables['title'] = $view->getTitle();
+
+    $eventsView = \Drupal\views\Views::getView('landing_page');
+    $eventsView->setDisplay('attachment_1');
+    $variables['events_title'] = $eventsView->getTitle();
+  }
+}
+
 /**
  * Implements THEME_preprocess_HOOK().
  *

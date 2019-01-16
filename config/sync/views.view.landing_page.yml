@@ -189,7 +189,7 @@ display:
             label: ''
           granularity: second
           plugin_id: datetime
-      title: ''
+      title: News
       header: {  }
       footer: {  }
       empty: {  }
@@ -227,11 +227,14 @@ display:
       defaults:
         style: false
         row: false
+        title: false
       row:
         type: 'entity:node'
         options:
           relationship: none
           view_mode: teaser
+      title: 'Nächste Events'
+      enabled: true
     cache_metadata:
       max-age: -1
       contexts:
