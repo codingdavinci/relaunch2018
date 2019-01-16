@@ -8594,10 +8594,11 @@ figcaption {
     @media screen and (-ms-high-contrast: active) and (min-width: 1200px), screen and (-ms-high-contrast: none) and (min-width: 1200px) {
       .paragraph--type--box-group .field--name-field-boxes > .field__item {
         width: 25%; } }
-  .paragraph--type--box-group .field--name-field-boxes .paragraph--type--box {
+
+.paragraph--type--box-group.box-group--sync-height .paragraph--type--box {
+  height: 100%; }
+  .paragraph--type--box-group.box-group--sync-height .paragraph--type--box .card {
     height: 100%; }
-    .paragraph--type--box-group .field--name-field-boxes .paragraph--type--box .card {
-      height: 100%; }
 
 .paragraph--type--box .card {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);

@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.box_group.field_boxes
+    - field.field.paragraph.box_group.field_sync_height
     - paragraphs.paragraphs_type.box_group
   module:
     - entity_reference_revisions
@@ -21,4 +22,14 @@ content:
       link: ''
     third_party_settings: {  }
     region: content
+  field_sync_height:
+    type: boolean
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      format: boolean
+      format_custom_true: ''
+      format_custom_false: ''
+    third_party_settings: {  }
 hidden: {  }

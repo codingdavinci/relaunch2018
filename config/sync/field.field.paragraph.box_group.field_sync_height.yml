@@ -1,0 +1,23 @@
+uuid: 809f9a8d-0117-4966-bd69-ee04089ff947
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_sync_height
+    - paragraphs.paragraphs_type.box_group
+id: paragraph.box_group.field_sync_height
+field_name: field_sync_height
+entity_type: paragraph
+bundle: box_group
+label: 'einheitliche Höhe'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: An
+  off_label: Aus
+field_type: boolean
