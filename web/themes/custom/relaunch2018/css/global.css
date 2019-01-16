@@ -8029,6 +8029,11 @@ figcaption {
         margin-left: 2rem;
         padding: 0 .5em;
         width: auto; }
+    .node--type-data-set .article--content-container .node__content fieldset .field--name-field-media-count,
+    .node--type-data-set .article--content-container .node__content fieldset .field--name-field-objects-count,
+    .node--type-project .article--content-container .node__content fieldset .field--name-field-media-count,
+    .node--type-project .article--content-container .node__content fieldset .field--name-field-objects-count {
+      display: inline-block; }
     .node--type-data-set .article--content-container .node__content fieldset.object-type,
     .node--type-project .article--content-container .node__content fieldset.object-type {
       margin-top: 2rem; }

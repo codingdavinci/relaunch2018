@@ -123,7 +123,7 @@ function custom_rendering_preprocess_node(array &$variables) {
  *
  * @param array $element
  */
-function custom_rendering_field_group_pre_render_alter(&$element) {
+function custom_rendering_field_group_pre_render_alter(array &$element) {
   // Hide field groups if key elements are empty. Field groups are hidden
   // automatically when they do not contain any content. However, empty
   // paragraphs will create their content wrapper regardless of paragraph fields
@@ -143,6 +143,19 @@ function custom_rendering_field_group_pre_render_alter(&$element) {
   elseif (isset($element['field_links_media'])) {
     if (!isset($element['field_links_media'][0])) {
       $element['#access'] = FALSE;
+    }
+  }
+
+  // Hide object count if no media count is supplied.
+  if (
+    isset($element['field_media_count'])
+    && isset($element['field_objects_count'])
+  ) {
+    if (
+      !isset($element['field_media_count']['#items'])
+      && isset($element['field_objects_count']['#items'])
+    ) {
+      unset($element['field_objects_count']);
     }
   }
 }

@@ -146,6 +146,11 @@
           }
         }
 
+        .field--name-field-media-count,
+        .field--name-field-objects-count {
+          display: inline-block;
+        }
+
         &.object-type {
           margin-top: 2rem;
 
