@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.paragraph.box_group.field_boxes
     - field.field.paragraph.box_group.field_sync_height
+    - field.field.paragraph.box_group.field_width
     - paragraphs.paragraphs_type.box_group
   module:
     - paragraphs
@@ -15,7 +16,7 @@ mode: default
 content:
   field_boxes:
     type: paragraphs
-    weight: 1
+    weight: 2
     settings:
       title: Seitenabschnitt
       title_plural: Seitenabschnitte
@@ -37,6 +38,12 @@ content:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
+    region: content
+  field_width:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
 hidden:
   created: true

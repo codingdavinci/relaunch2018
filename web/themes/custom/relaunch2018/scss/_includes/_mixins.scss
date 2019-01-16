@@ -167,3 +167,51 @@
   font-family: "Font Awesome 5 Brands";
   font-weight: 900;
 }
+
+@mixin boxWidth($width) {
+  width: 100%;
+
+  @include media-breakpoint-up(sm) {
+    @if $width == 25 {
+      width: 50%;
+
+      @include media-breakpoint-up(md) {
+        width: 50%;
+      }
+      @include media-breakpoint-up(lg) {
+        width: 33%;
+      }
+      @include media-breakpoint-up(xl) {
+        width: 25%;
+      }
+    }
+    @elseif $width == 33 {
+      width: 67%;
+
+      @include media-breakpoint-up(md) {
+        width: 50%;
+      }
+      @include media-breakpoint-up(lg) {
+        width: 40%;
+      }
+      @include media-breakpoint-up(xl) {
+        width: 33%;
+      }
+    }
+    @elseif $width == 50 {
+      width: 80%;
+
+      @include media-breakpoint-up(md) {
+        width: 67%;
+      }
+      @include media-breakpoint-up(lg) {
+        width: 50%;
+      }
+    }
+    @elseif $width == 67 {
+      @include media-breakpoint-up(lg) {
+        width: 67%;
+      }
+    }
+  }
+}

@@ -7,8 +7,10 @@ dependencies:
     - field.field.paragraph.box.field_footer
     - field.field.paragraph.box.field_image
     - field.field.paragraph.box.field_text
+    - field.field.paragraph.box.field_width
     - paragraphs.paragraphs_type.box
   module:
+    - options
     - text
 id: paragraph.box.default
 targetEntityType: paragraph
@@ -46,5 +48,12 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
+  field_width:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
     region: content
 hidden: {  }

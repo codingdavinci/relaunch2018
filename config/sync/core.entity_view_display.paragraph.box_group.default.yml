@@ -5,9 +5,11 @@ dependencies:
   config:
     - field.field.paragraph.box_group.field_boxes
     - field.field.paragraph.box_group.field_sync_height
+    - field.field.paragraph.box_group.field_width
     - paragraphs.paragraphs_type.box_group
   module:
     - entity_reference_revisions
+    - options
 id: paragraph.box_group.default
 targetEntityType: paragraph
 bundle: box_group
@@ -32,4 +34,11 @@ content:
       format_custom_true: ''
       format_custom_false: ''
     third_party_settings: {  }
+  field_width:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
 hidden: {  }

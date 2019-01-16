@@ -1,0 +1,23 @@
+uuid: e487377a-44fb-4cfa-9018-635494d8649a
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_width
+    - paragraphs.paragraphs_type.box_group
+  module:
+    - options
+id: paragraph.box_group.field_width
+field_name: field_width
+entity_type: paragraph
+bundle: box_group
+label: Box-Breite
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: '25'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

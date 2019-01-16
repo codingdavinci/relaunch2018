@@ -2,6 +2,17 @@
 
 .paragraph--type--box,
 .paragraph--type--box-group-box {
+  .box--container {
+    margin: 0 auto;
+    width: 100%;
+
+    @each $width in 25 33 50 67 {
+      &.box--width-#{$width} {
+        @include boxWidth($width);
+      }
+    }
+  }
+
   .card {
     @include boxShadow;
     background-color: $color-white;

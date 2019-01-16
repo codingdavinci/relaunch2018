@@ -8,46 +8,29 @@
     grid-gap: 20px;
     left: 0;
     position: relative;
-
-    @include media-breakpoint-up(sm) {
-      width: 50%;
-    }
-
-    @include media-breakpoint-up(md) {
-      width: 40%;
-    }
-
-    @include media-breakpoint-up(lg) {
-      width: 32%;
-    }
-
-    @include media-breakpoint-up(xl) {
-      width: 25%;
-    }
+    width: 100%;
 
     @media #{$ie} {
-      width: 100%;
-
       & > .field__item {
         display: inline-block;
         padding: 1rem;
         vertical-align: top;
         width: 100%;
+      }
+    }
+  }
 
-        @include media-breakpoint-up(sm) {
-          width: 50%;
-        }
+  @each $width in 25 33 50 67 {
+    &.box--width-#{$width} {
+      .field--name-field-boxes {
+        @include boxWidth($width);
 
-        @include media-breakpoint-up(md) {
-          width: 50%;
-        }
+        @media #{$ie} {
+          width: 100%;
 
-        @include media-breakpoint-up(lg) {
-          width: 33%;
-        }
-
-        @include media-breakpoint-up(xl) {
-          width: 25%;
+          & > .field__item {
+            @include boxWidth($width);
+          }
         }
       }
     }
