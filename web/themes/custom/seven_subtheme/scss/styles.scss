@@ -357,6 +357,12 @@
           }
 
         }
+
+        &.field--name-field-license-media {
+          table {
+            padding-bottom: 20px;
+          }
+        }
       }
 
       .field--name-field-license {
@@ -493,6 +499,12 @@
           }
         }
 
+      }
+
+      &.field--name-field-links {
+        .field-add-more-submit {
+          margin-bottom: 20px;
+        }
       }
     }
 

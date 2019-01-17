@@ -528,6 +528,20 @@
       #node-project-edit-form .layout-region-node-main .field--widget-paragraphs.field--name-field-license-code table tbody tr td .paragraphs-subform,
       #node-project-edit-form .layout-region-node-main .field--widget-paragraphs.field--name-field-license-media table tbody tr td .paragraphs-subform {
         margin-top: 0; }
+  #node-data-set-form .layout-region-node-main .field--widget-paragraphs.field--name-field-media-license.field--name-field-license-media table, #node-data-set-form .layout-region-node-main .field--widget-paragraphs.field--name-field-metadata-license.field--name-field-license-media table, #node-data-set-form .layout-region-node-main .field--widget-paragraphs.field--name-field-license-code.field--name-field-license-media table, #node-data-set-form .layout-region-node-main .field--widget-paragraphs.field--name-field-license-media.field--name-field-license-media table,
+  #node-project-form .layout-region-node-main .field--widget-paragraphs.field--name-field-media-license.field--name-field-license-media table,
+  #node-project-form .layout-region-node-main .field--widget-paragraphs.field--name-field-metadata-license.field--name-field-license-media table,
+  #node-project-form .layout-region-node-main .field--widget-paragraphs.field--name-field-license-code.field--name-field-license-media table,
+  #node-project-form .layout-region-node-main .field--widget-paragraphs.field--name-field-license-media.field--name-field-license-media table,
+  #node-data-set-edit-form .layout-region-node-main .field--widget-paragraphs.field--name-field-media-license.field--name-field-license-media table,
+  #node-data-set-edit-form .layout-region-node-main .field--widget-paragraphs.field--name-field-metadata-license.field--name-field-license-media table,
+  #node-data-set-edit-form .layout-region-node-main .field--widget-paragraphs.field--name-field-license-code.field--name-field-license-media table,
+  #node-data-set-edit-form .layout-region-node-main .field--widget-paragraphs.field--name-field-license-media.field--name-field-license-media table,
+  #node-project-edit-form .layout-region-node-main .field--widget-paragraphs.field--name-field-media-license.field--name-field-license-media table,
+  #node-project-edit-form .layout-region-node-main .field--widget-paragraphs.field--name-field-metadata-license.field--name-field-license-media table,
+  #node-project-edit-form .layout-region-node-main .field--widget-paragraphs.field--name-field-license-code.field--name-field-license-media table,
+  #node-project-edit-form .layout-region-node-main .field--widget-paragraphs.field--name-field-license-media.field--name-field-license-media table {
+    padding-bottom: 20px; }
   #node-data-set-form .layout-region-node-main .field--widget-paragraphs .field--name-field-license,
   #node-project-form .layout-region-node-main .field--widget-paragraphs .field--name-field-license,
   #node-data-set-edit-form .layout-region-node-main .field--widget-paragraphs .field--name-field-license,
@@ -776,6 +790,32 @@
   #node-project-edit-form .layout-region-node-main .field--name-field-links table tbody tr td .form-item,
   #node-project-edit-form .layout-region-node-main .field--name-field-other-datasets table tbody tr td .form-item {
     margin-bottom: 0; }
+
+#node-data-set-form .layout-region-node-main .field--name-field-metadata-doc-links.field--name-field-links .field-add-more-submit,
+#node-data-set-form .layout-region-node-main .field--name-field-links-api.field--name-field-links .field-add-more-submit,
+#node-data-set-form .layout-region-node-main .field--name-field-links-media.field--name-field-links .field-add-more-submit,
+#node-data-set-form .layout-region-node-main .field--name-field-links-metadata.field--name-field-links .field-add-more-submit,
+#node-data-set-form .layout-region-node-main .field--name-field-links.field--name-field-links .field-add-more-submit,
+#node-data-set-form .layout-region-node-main .field--name-field-other-datasets.field--name-field-links .field-add-more-submit,
+#node-project-form .layout-region-node-main .field--name-field-metadata-doc-links.field--name-field-links .field-add-more-submit,
+#node-project-form .layout-region-node-main .field--name-field-links-api.field--name-field-links .field-add-more-submit,
+#node-project-form .layout-region-node-main .field--name-field-links-media.field--name-field-links .field-add-more-submit,
+#node-project-form .layout-region-node-main .field--name-field-links-metadata.field--name-field-links .field-add-more-submit,
+#node-project-form .layout-region-node-main .field--name-field-links.field--name-field-links .field-add-more-submit,
+#node-project-form .layout-region-node-main .field--name-field-other-datasets.field--name-field-links .field-add-more-submit,
+#node-data-set-edit-form .layout-region-node-main .field--name-field-metadata-doc-links.field--name-field-links .field-add-more-submit,
+#node-data-set-edit-form .layout-region-node-main .field--name-field-links-api.field--name-field-links .field-add-more-submit,
+#node-data-set-edit-form .layout-region-node-main .field--name-field-links-media.field--name-field-links .field-add-more-submit,
+#node-data-set-edit-form .layout-region-node-main .field--name-field-links-metadata.field--name-field-links .field-add-more-submit,
+#node-data-set-edit-form .layout-region-node-main .field--name-field-links.field--name-field-links .field-add-more-submit,
+#node-data-set-edit-form .layout-region-node-main .field--name-field-other-datasets.field--name-field-links .field-add-more-submit,
+#node-project-edit-form .layout-region-node-main .field--name-field-metadata-doc-links.field--name-field-links .field-add-more-submit,
+#node-project-edit-form .layout-region-node-main .field--name-field-links-api.field--name-field-links .field-add-more-submit,
+#node-project-edit-form .layout-region-node-main .field--name-field-links-media.field--name-field-links .field-add-more-submit,
+#node-project-edit-form .layout-region-node-main .field--name-field-links-metadata.field--name-field-links .field-add-more-submit,
+#node-project-edit-form .layout-region-node-main .field--name-field-links.field--name-field-links .field-add-more-submit,
+#node-project-edit-form .layout-region-node-main .field--name-field-other-datasets.field--name-field-links .field-add-more-submit {
+  margin-bottom: 20px; }
 
 #node-data-set-form .layout-region-node-main fieldset .fieldset-wrapper > div:last-child > div .form-item:last-child,
 #node-project-form .layout-region-node-main fieldset .fieldset-wrapper > div:last-child > div .form-item:last-child,

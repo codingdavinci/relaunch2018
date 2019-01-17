@@ -42,6 +42,34 @@ third_party_settings:
         required_fields: false
       label: Beschreibung
       region: content
+    group_licenses:
+      children:
+        - field_license_code
+        - field_license_media
+      parent_name: ''
+      weight: 8
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: false
+      label: Lizenzen
+      region: content
+    group_data_sets:
+      children:
+        - field_datasets
+        - field_other_datasets
+      parent_name: ''
+      weight: 9
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: false
+      label: 'Verwendete Datensätze'
+      region: content
 id: node.project.default
 targetEntityType: node
 bundle: project
@@ -98,7 +126,7 @@ content:
     third_party_settings: {  }
     region: content
   field_datasets:
-    weight: 9
+    weight: 10
     settings:
       match_operator: CONTAINS
       autocomplete: false
@@ -120,20 +148,20 @@ content:
     type: text_textarea
     region: content
   field_event:
-    weight: 8
+    weight: 13
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_license_code:
-    weight: 13
+    weight: 9
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
     region: content
   field_license_media:
     type: paragraphs
-    weight: 14
+    weight: 10
     settings:
       title: Seitenabschnitt
       title_plural: Seitenabschnitte
@@ -150,7 +178,7 @@ content:
     third_party_settings: {  }
     region: content
   field_links:
-    weight: 6
+    weight: 7
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -158,7 +186,7 @@ content:
     type: link_default
     region: content
   field_other_datasets:
-    weight: 10
+    weight: 11
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -185,14 +213,14 @@ content:
     type: string_textfield
     region: content
   field_tags:
-    weight: 12
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
     region: content
   field_team_members:
     type: paragraphs
-    weight: 7
+    weight: 12
     settings:
       title: Seitenabschnitt
       title_plural: Seitenabschnitte
@@ -257,7 +285,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 11
+    weight: 14
     region: content
     settings: {  }
     third_party_settings: {  }
