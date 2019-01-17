@@ -44,6 +44,7 @@ module:
   maxlength: 0
   media: 0
   menu_ui: 0
+  metatag: 0
   node: 0
   notifications: 0
   options: 0
