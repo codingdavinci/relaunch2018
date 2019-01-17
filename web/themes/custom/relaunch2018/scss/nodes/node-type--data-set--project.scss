@@ -8,7 +8,7 @@
   }
 
   .field {
-    &:not(.field--name-field-license):not(.field--name-field-license):not(.field--name-field-author) {
+    &:not(.field--name-field-license):not(.field--name-field-license):not(.field--name-field-author):not(.field--name-field-email) {
       margin-bottom: 1rem;
     }
 

@@ -7889,8 +7889,8 @@ figcaption {
 .node--type-project.node--view-mode-full {
   margin-top: 4rem; }
 
-.node--type-data-set .field:not(.field--name-field-license):not(.field--name-field-license):not(.field--name-field-author),
-.node--type-project .field:not(.field--name-field-license):not(.field--name-field-license):not(.field--name-field-author) {
+.node--type-data-set .field:not(.field--name-field-license):not(.field--name-field-license):not(.field--name-field-author):not(.field--name-field-email),
+.node--type-project .field:not(.field--name-field-license):not(.field--name-field-license):not(.field--name-field-author):not(.field--name-field-email) {
   margin-bottom: 1rem; }
 
 .node--type-data-set .field .field__label,
@@ -9056,44 +9056,38 @@ figcaption {
   margin-bottom: 20px; }
   .paragraph--type--team-member:last-child {
     margin-bottom: 0; }
-  .paragraph--type--team-member .field--name-field-name {
-    font-weight: 600;
-    text-align: center; }
-    .paragraph--type--team-member .field--name-field-name:after {
-      border-bottom: 1px solid #828282;
-      content: '';
-      display: block;
-      margin: 0 auto;
-      margin-top: .5em;
-      width: 33%; }
-  .paragraph--type--team-member .field--name-field-email .field__item:before {
-    font-family: "cdv_icons";
-    margin-right: .4em;
-    content: '';
-    display: inline-block;
-    margin-right: .3em;
-    text-align: center;
-    width: 1.25em; }
-  .paragraph--type--team-member .field--name-field-links .field__item:before {
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    content: '\f015';
-    display: inline-block;
-    margin-right: .3em;
-    text-align: center;
-    width: 1.25em; }
-  .paragraph--type--team-member .field--name-field-links .field__item.url--facebook:before {
-    font-family: "Font Awesome 5 Brands";
-    font-weight: 900;
-    content: '\f09a'; }
-  .paragraph--type--team-member .field--name-field-links .field__item.url--github:before {
-    font-family: "Font Awesome 5 Brands";
-    font-weight: 900;
-    content: '\f09b'; }
-  .paragraph--type--team-member .field--name-field-links .field__item.url--twitter:before {
-    font-family: "Font Awesome 5 Brands";
-    font-weight: 900;
-    content: '\f099'; }
+  .paragraph--type--team-member .field--name-field-email {
+    word-break: break-all; }
+    .paragraph--type--team-member .field--name-field-email .field__item:before {
+      font-family: "cdv_icons";
+      margin-right: .4em;
+      content: '';
+      display: inline-block;
+      margin-right: .3em;
+      text-align: center;
+      width: 1.25em; }
+  .paragraph--type--team-member .field--name-field-links {
+    word-break: break-all; }
+    .paragraph--type--team-member .field--name-field-links .field__item:before {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      content: '\f015';
+      display: inline-block;
+      margin-right: .3em;
+      text-align: center;
+      width: 1.25em; }
+    .paragraph--type--team-member .field--name-field-links .field__item.url--facebook:before {
+      font-family: "Font Awesome 5 Brands";
+      font-weight: 900;
+      content: '\f09a'; }
+    .paragraph--type--team-member .field--name-field-links .field__item.url--github:before {
+      font-family: "Font Awesome 5 Brands";
+      font-weight: 900;
+      content: '\f09b'; }
+    .paragraph--type--team-member .field--name-field-links .field__item.url--twitter:before {
+      font-family: "Font Awesome 5 Brands";
+      font-weight: 900;
+      content: '\f099'; }
 
 .paragraph--type--textblock-left .field--name-field-medium .paragraph--type--text .field--name-field-text a.button,
 .paragraph--type--textblock-right .field--name-field-medium .paragraph--type--text .field--name-field-text a.button {

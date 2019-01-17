@@ -7,21 +7,9 @@
     margin-bottom: 0;
   }
 
-  .field--name-field-name {
-    font-weight: $font-weight-bold;
-    text-align: center;
-
-    &:after {
-      border-bottom: 1px solid $color-gray-3;
-      content: '';
-      display: block;
-      margin: 0 auto;
-      margin-top: .5em;
-      width: 33%;
-    }
-  }
-
   .field--name-field-email {
+    word-break: break-all;
+
     .field__item {
       &:before {
         @include icon;
@@ -35,6 +23,8 @@
   }
 
   .field--name-field-links {
+    word-break: break-all;
+
     .field__item {
       &:before {
         @include fa-icon;

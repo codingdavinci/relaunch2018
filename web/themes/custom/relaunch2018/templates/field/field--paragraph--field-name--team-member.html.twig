@@ -1,0 +1,18 @@
+{#
+/**
+ * @see field.html.twig
+ */
+#}
+{% spaceless %}
+{%
+  set classes = [
+    'field',
+    'field--name-' ~ field_name|clean_class,
+    'field--type-' ~ field_type|clean_class,
+    'field--label-' ~ label_display,
+  ]
+%}
+{% for item in items %}
+  <h3{{ attributes.addClass(classes, 'field__item') }}>{{ item.content }}</h3>
+{% endfor %}
+{% endspaceless %}
