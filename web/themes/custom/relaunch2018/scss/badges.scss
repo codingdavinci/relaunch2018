@@ -33,8 +33,11 @@
     background-color: lighten($color-deep-blue, 20%);;
   }
 
+  &.badge--controlled-vocabularies,
   &.badge--file-types,
-  &.badge--metadata-format {
+  &.badge--has-geo-references,
+  &.badge--metadata-format,
+  &.badge--metadata-standard {
     background-color: $color-gray-2;
   }
 
