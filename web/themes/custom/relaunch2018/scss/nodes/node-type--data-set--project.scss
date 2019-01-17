@@ -207,16 +207,6 @@
         margin-top: 3rem;
         position: relative;
 
-        &:before {
-          @include fa-icon;
-          color: $color-deep-teal;
-          content: '\f108';
-          font-size: 4rem;
-          position: absolute;
-          right: -1.2rem;
-          top: -2rem;
-        }
-
         & > .field:last-child {
           margin-bottom: 0;
         }
@@ -225,18 +215,6 @@
       .group--team {
         margin-top: 3rem;
         position: relative;
-
-        &:before {
-          @include fa-icon;
-          background-color: $color-gray-6;
-          color: $color-deep-teal;
-          content: '\f0c0';
-          font-size: 4rem;
-          padding-left: 1rem;
-          position: absolute;
-          right: -1.2rem;
-          top: -2rem;
-        }
 
         .field--name-field-team-members {
           display: grid;
@@ -317,18 +295,6 @@
       .group--data-sets {
         margin-top: 3rem;
         position: relative;
-
-        &:before {
-          @include fa-icon;
-          background-color: $color-gray-6;
-          color: $color-deep-teal;
-          content: '\f1c0';
-          font-size: 4rem;
-          padding-left: 1rem;
-          position: absolute;
-          right: -1.2rem;
-          top: -2rem;
-        }
       }
 
       .view-projects.view-display-id-block_2 {

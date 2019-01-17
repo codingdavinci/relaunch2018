@@ -8089,16 +8089,6 @@ figcaption {
       padding: 18px 20px 20px 20px;
       margin-top: 3rem;
       position: relative; }
-      .node--type-data-set .article--content-container .node__content .group--result:before,
-      .node--type-project .article--content-container .node__content .group--result:before {
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
-        color: #099B8A;
-        content: '\f108';
-        font-size: 4rem;
-        position: absolute;
-        right: -1.2rem;
-        top: -2rem; }
       .node--type-data-set .article--content-container .node__content .group--result > .field:last-child,
       .node--type-project .article--content-container .node__content .group--result > .field:last-child {
         margin-bottom: 0; }
@@ -8106,18 +8096,6 @@ figcaption {
     .node--type-project .article--content-container .node__content .group--team {
       margin-top: 3rem;
       position: relative; }
-      .node--type-data-set .article--content-container .node__content .group--team:before,
-      .node--type-project .article--content-container .node__content .group--team:before {
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
-        background-color: #F5F5F5;
-        color: #099B8A;
-        content: '\f0c0';
-        font-size: 4rem;
-        padding-left: 1rem;
-        position: absolute;
-        right: -1.2rem;
-        top: -2rem; }
       .node--type-data-set .article--content-container .node__content .group--team .field--name-field-team-members,
       .node--type-project .article--content-container .node__content .group--team .field--name-field-team-members {
         display: grid;
@@ -8262,18 +8240,6 @@ figcaption {
     .node--type-project .article--content-container .node__content .group--data-sets {
       margin-top: 3rem;
       position: relative; }
-      .node--type-data-set .article--content-container .node__content .group--data-sets:before,
-      .node--type-project .article--content-container .node__content .group--data-sets:before {
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
-        background-color: #F5F5F5;
-        color: #099B8A;
-        content: '\f1c0';
-        font-size: 4rem;
-        padding-left: 1rem;
-        position: absolute;
-        right: -1.2rem;
-        top: -2rem; }
     .node--type-data-set .article--content-container .node__content .view-projects.view-display-id-block_2 article .field--name-field-attributed-image,
     .node--type-project .article--content-container .node__content .view-projects.view-display-id-block_2 article .field--name-field-attributed-image {
       margin-bottom: 0; }
