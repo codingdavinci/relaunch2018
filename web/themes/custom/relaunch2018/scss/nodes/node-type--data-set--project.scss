@@ -149,6 +149,13 @@
         .field--name-field-media-count,
         .field--name-field-objects-count {
           display: inline-block;
+
+          &.field--name-field-media-count {
+            &:after {
+              content: ' ';
+              white-space: pre;
+            }
+          }
         }
 
         &.object-type {
