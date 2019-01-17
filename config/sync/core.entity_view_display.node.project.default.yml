@@ -32,7 +32,7 @@ third_party_settings:
         - field_license_code
         - field_license_media
       parent_name: ''
-      weight: 6
+      weight: 7
       format_type: html_element
       format_settings:
         label: Ergebnis
@@ -51,7 +51,7 @@ third_party_settings:
         - field_datasets
         - field_other_datasets
       parent_name: ''
-      weight: 8
+      weight: 9
       format_type: fieldset
       format_settings:
         label: 'Verwendete Datensätze'
@@ -70,7 +70,7 @@ third_party_settings:
       children:
         - field_team_members
       parent_name: ''
-      weight: 7
+      weight: 8
       format_type: fieldset
       format_settings:
         id: ''
@@ -123,7 +123,7 @@ content:
     type: text_default
     region: content
   field_event:
-    weight: 9
+    weight: 10
     label: visually_hidden
     settings:
       link: true
@@ -180,7 +180,7 @@ content:
     type: string
     region: content
   field_tags:
-    weight: 10
+    weight: 6
     label: visually_hidden
     settings:
       link: false
