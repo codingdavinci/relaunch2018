@@ -7889,6 +7889,19 @@ figcaption {
 .node--type-project.node--view-mode-full {
   margin-top: 4rem; }
 
+.node--type-data-set .field:not(.field--name-field-license):not(.field--name-field-license):not(.field--name-field-author),
+.node--type-project .field:not(.field--name-field-license):not(.field--name-field-license):not(.field--name-field-author) {
+  margin-bottom: 1rem; }
+
+.node--type-data-set .field .field__label,
+.node--type-project .field .field__label {
+  font-size: .9rem;
+  font-weight: 400; }
+  @media (min-width: 768px) {
+    .node--type-data-set .field .field__label,
+    .node--type-project .field .field__label {
+      font-size: 1rem; } }
+
 .node--type-data-set .article--header-image .field--name-field-attributed-image .field--name-field-inline-image,
 .node--type-project .article--header-image .field--name-field-attributed-image .field--name-field-inline-image {
   border-radius: 10px;
@@ -7979,17 +7992,6 @@ figcaption {
         .node--type-data-set .article--content-container .node__content .badge,
         .node--type-project .article--content-container .node__content .badge {
           font-size: 1.2rem; } }
-    .node--type-data-set .article--content-container .node__content .field:not(.field--name-field-events):not(.field--name-field-theme):not(.field--name-field-keywords):not(.field--name-field-license):not(.field--name-field-author),
-    .node--type-project .article--content-container .node__content .field:not(.field--name-field-events):not(.field--name-field-theme):not(.field--name-field-keywords):not(.field--name-field-license):not(.field--name-field-author) {
-      margin-bottom: 1rem; }
-    .node--type-data-set .article--content-container .node__content .field .field__label,
-    .node--type-project .article--content-container .node__content .field .field__label {
-      font-size: .9rem;
-      font-weight: 400; }
-      @media (min-width: 768px) {
-        .node--type-data-set .article--content-container .node__content .field .field__label,
-        .node--type-project .article--content-container .node__content .field .field__label {
-          font-size: 1rem; } }
     .node--type-data-set .article--content-container .node__content .data-set--badges,
     .node--type-project .article--content-container .node__content .data-set--badges {
       margin-bottom: 2rem; }
@@ -8066,7 +8068,7 @@ figcaption {
     .node--type-project .article--content-container .node__content fieldset .field--name-field-file-types,
     .node--type-project .article--content-container .node__content fieldset .field--name-field-metadata-format,
     .node--type-project .article--content-container .node__content fieldset .field--name-field-metadata-standard {
-      margin-bottom: .8rem !important; }
+      margin-bottom: .8rem; }
       .node--type-data-set .article--content-container .node__content fieldset .field--name-field-controlled-vocabularies .field__items .field__item,
       .node--type-data-set .article--content-container .node__content fieldset .field--name-field-file-types .field__items .field__item,
       .node--type-data-set .article--content-container .node__content fieldset .field--name-field-metadata-format .field__items .field__item,

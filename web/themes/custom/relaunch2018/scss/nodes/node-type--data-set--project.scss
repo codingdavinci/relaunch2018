@@ -7,6 +7,17 @@
     margin-top: 4rem;
   }
 
+  .field {
+    &:not(.field--name-field-license):not(.field--name-field-license):not(.field--name-field-author) {
+      margin-bottom: 1rem;
+    }
+
+    .field__label {
+      @include fontStyle(small);
+      font-weight: $font-weight-normal;
+    }
+  }
+
   .article--header-image {
     .field--name-field-attributed-image {
       .field--name-field-inline-image {
@@ -85,17 +96,6 @@
 
       .badge {
         @include fontStyle(default);
-      }
-
-      .field {
-        &:not(.field--name-field-events):not(.field--name-field-theme):not(.field--name-field-keywords):not(.field--name-field-license):not(.field--name-field-author) {
-          margin-bottom: 1rem;
-        }
-
-        .field__label {
-          @include fontStyle(small);
-          font-weight: $font-weight-normal;
-        }
       }
 
       .data-set--badges {
@@ -185,7 +185,7 @@
         .field--name-field-file-types,
         .field--name-field-metadata-format,
         .field--name-field-metadata-standard {
-          margin-bottom: .8rem !important;
+          margin-bottom: .8rem;
 
           .field__items {
             .field__item {
