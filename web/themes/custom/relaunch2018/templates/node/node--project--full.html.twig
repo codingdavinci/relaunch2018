@@ -70,9 +70,18 @@
         {{ content.field_event }}
       </div>
 
+      {{ content.field_short_description }}
+      {{ content.field_description }}
+
+      <div class="project--tags">
+        {{ content.field_tags }}
+      </div>
+
       {{
         content
         |without('header_image')
+        |without('field_short_description')
+        |without('field_description')
         |without('field_audio_video')
         |without('field_attributed_image')
         |without('field_event')
@@ -80,12 +89,7 @@
         |without('content_moderation_control')
       }}
 
-      <div class="project--tags">
-        {{ content.field_tags }}
-      </div>
     </div>
-
   </div>
-
 
 </article>

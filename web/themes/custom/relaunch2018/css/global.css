@@ -8295,7 +8295,7 @@ figcaption {
     .node--type-data-set .article--content-container .node__content .project--tags,
     .node--type-project .article--content-container .node__content .project--tags {
       margin-bottom: 1.6rem;
-      margin-top: 0; }
+      margin-top: 2rem; }
       .node--type-data-set .article--content-container .node__content .project--tags:last-child,
       .node--type-project .article--content-container .node__content .project--tags:last-child {
         margin-top: 3rem; }
