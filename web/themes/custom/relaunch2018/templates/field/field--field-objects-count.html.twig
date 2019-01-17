@@ -14,9 +14,9 @@
 %}
 {% for item in items %}
   <div{{ attributes.addClass(classes, 'field__item') }}>
-    {% trans %}
+    {%- trans -%}
       (of {{ item.content['#markup'] }} objects)
-    {% endtrans %}
+    {%- endtrans -%}
   </div>
 {% endfor %}
 {% endspaceless %}

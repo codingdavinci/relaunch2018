@@ -14,9 +14,9 @@
 %}
 {% for item in items %}
   <div{{ attributes.addClass(classes, 'field__item') }}>
-    {% trans %}
+    {%- trans -%}
       {{ item.content['#markup'] }} media files
-    {% endtrans %}
+    {%- endtrans -%}
   </div>
 {% endfor %}
 {% endspaceless %}
