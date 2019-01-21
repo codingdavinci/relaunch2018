@@ -29,8 +29,10 @@
       </div>
     </div>
     <div class="col-sm-4 col-lg-4 d-none d-sm-flex align-items-center">
-      {{ content.field_image }}
-      <div class="image-mask" style="mask-image: url({{ file_url(content.field_image['#items'].entity.uri.value) }}); -webkit-mask-image: url({{ file_url(content.field_image['#items'].entity.uri.value) }}); background-color: #{{ content.field_image_color[0]['#taxonomy_term'].field_hex_code[0].value }}"></div>
+      <div class="masked-image-wrapper">
+        {{ content.field_image }}
+        <div class="image-mask" style="mask-image: url({{ file_url(content.field_image['#items'].entity.uri.value) }}); -webkit-mask-image: url({{ file_url(content.field_image['#items'].entity.uri.value) }}); background-color: #{{ content.field_image_color[0]['#taxonomy_term'].field_hex_code[0].value }}"></div>
+      </div>
     </div>
   {% endblock %}
 </div>

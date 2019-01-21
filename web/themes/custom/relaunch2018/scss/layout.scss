@@ -95,23 +95,30 @@ header {
           }
         }
 
-        .image-mask {
-          background-color: $color-white;
+        .masked-image-wrapper {
           height: 100%;
-          position: absolute;
+          position: relative;
           width: 100%;
-          mask-repeat: no-repeat;
-          mask-size: contain;
-          mix-blend-mode: color;
-          -webkit-mask-repeat: no-repeat;
-          -webkit-mask-size: contain;
 
-          // Hide in IE/Edge not supporting mask-image
-          @media #{$ie} {
-            display: none;
-          }
-          @supports (-ms-accelerator:true) {
-            display: none;
+          .image-mask {
+            background-color: $color-white;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            mask-repeat: no-repeat;
+            mask-size: contain;
+            mix-blend-mode: color;
+            -webkit-mask-repeat: no-repeat;
+            -webkit-mask-size: contain;
+
+            // Hide in IE/Edge not supporting mask-image
+            @media #{$ie} {
+              display: none;
+            }
+            @supports (-ms-accelerator:true) {
+              display: none;
+            }
           }
         }
       }
