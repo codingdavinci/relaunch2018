@@ -41,7 +41,7 @@ carousel:
   version: 1.x
   js:
     js/carousel.js: {}
-  depedencies:
+  dependencies:
     - core/jquery
     - relaunch2018/bootstrap-js
     - relaunch2018/hammerjs
@@ -74,7 +74,7 @@ hammerjs:
   version: 2.0.8
   license:
     name: MIT
-    url: https://github.com/twbs/bootstrap/blob/v4.0.0/LICENSE
+    url: https://github.com/hammerjs/hammer.js/blob/master/LICENSE.md
     gpl-compatible: true
   js:
     ../../../libraries/hammerjs/hammer.js: {}
@@ -91,7 +91,7 @@ horizontal-nav:
   version: 1.0
   js:
     js/horizontal-nav.js: {}
-  depedencies:
+  dependencies:
     - core/jquery
     - relaunch2018/hammerjs
 
