@@ -13,9 +13,7 @@
   {% endif %}
 {% endif %}
 
-{{ page.language_switcher }}
 {{ page.primary_menu }}
-{{ page.secondary_menu }}
 
 <div class="layout-container--wrapper{% if tiled_header %} header-tiles-above{% endif %}">
   <div class="layout-container">
@@ -34,10 +32,6 @@
           </div>
         {% else %}
           <div class="container header--default">
-            <div class="header--default--brand">
-              <img src="{{ theme_path }}/img/CDV_Logo_Line.svg">
-            </div>
-
             {{ page.header }}
           </div>
         {% endif %}

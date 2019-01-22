@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "652bb31e4b2bb9eb2ccff1dd4d172f7e",
+    "content-hash": "c963f09372b90ec0b5f7ee7d461e4369",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -121,47 +121,6 @@
                 "stack"
             ],
             "time": "2017-12-20T14:37:45+00:00"
-        },
-        {
-            "name": "bower-asset/jquery",
-            "version": "3.3.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/jquery/jquery-dist.git",
-                "reference": "9e8ec3d10fad04748176144f108d7355662ae75e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/jquery/jquery-dist/zipball/9e8ec3d10fad04748176144f108d7355662ae75e",
-                "reference": "9e8ec3d10fad04748176144f108d7355662ae75e",
-                "shasum": null
-            },
-            "type": "bower-asset",
-            "license": [
-                "MIT"
-            ]
-        },
-        {
-            "name": "bower-asset/mmenu",
-            "version": "v7.2.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/FrDH/jQuery.mmenu.git",
-                "reference": "4a7b7f9e0988afd14aa163951a76ceb137290c7e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/FrDH/jQuery.mmenu/zipball/4a7b7f9e0988afd14aa163951a76ceb137290c7e",
-                "reference": "4a7b7f9e0988afd14aa163951a76ceb137290c7e",
-                "shasum": null
-            },
-            "require": {
-                "bower-asset/jquery": ">=1.7.0"
-            },
-            "type": "bower-asset",
-            "license": [
-                "CC-BY-NC-4.0"
-            ]
         },
         {
             "name": "chi-teck/drupal-code-generator",
@@ -3216,58 +3175,6 @@
             }
         },
         {
-            "name": "drupal/responsive_menu",
-            "version": "2.6.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/responsive_menu",
-                "reference": "8.x-2.6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/responsive_menu-8.x-2.6.zip",
-                "reference": "8.x-2.6",
-                "shasum": "8dc4f4251ada211fad52aa9d0c02d50c4752d457"
-            },
-            "require": {
-                "drupal/core": "^8.4"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-2.x": "2.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-2.6",
-                    "datestamp": "1515872884",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                },
-                "patches_applied": {
-                    "#2955215: Enable injecting custom settings": "https://www.drupal.org/files/issues/2019-01-07/responsive_menu-2955215-custom_settings_and_options-21.patch"
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Tancredi D'Onofrio (tanc)",
-                    "homepage": "https://www.drupal.org/u/tanc",
-                    "role": "Maintainer"
-                }
-            ],
-            "description": "Provides a javascript based off-canvas responsive menu with depth. At wider browser widths it provides a horizontal menu capable of drop downs and flyouts",
-            "homepage": "https://drupal.org/project/responsive_menu",
-            "support": {
-                "source": "https://cgit.drupalcode.org/responsive_menu",
-                "issues": "https://drupal.org/project/issues/responsive_menu"
-            }
-        },
-        {
             "name": "drupal/select2",
             "version": "1.1.0",
             "source": {
@@ -4669,48 +4576,6 @@
             "license": [
                 "MIT"
             ]
-        },
-        {
-            "name": "oomphinc/composer-installers-extender",
-            "version": "v1.1.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/oomphinc/composer-installers-extender.git",
-                "reference": "ca1c4b16b0905c81d1e77e608f36a2eff1a56f56"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/oomphinc/composer-installers-extender/zipball/ca1c4b16b0905c81d1e77e608f36a2eff1a56f56",
-                "reference": "ca1c4b16b0905c81d1e77e608f36a2eff1a56f56",
-                "shasum": ""
-            },
-            "require": {
-                "composer-plugin-api": "^1.0",
-                "composer/installers": "^1.0"
-            },
-            "type": "composer-plugin",
-            "extra": {
-                "class": "OomphInc\\ComposerInstallersExtender\\Plugin"
-            },
-            "autoload": {
-                "psr-4": {
-                    "OomphInc\\ComposerInstallersExtender\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Stephen Beemsterboer",
-                    "email": "stephen@oomphinc.com",
-                    "homepage": "https://github.com/balbuf"
-                }
-            ],
-            "description": "Extend the composer/installers plugin to accept any arbitrary package type.",
-            "homepage": "http://www.oomphinc.com/",
-            "time": "2017-03-31T16:57:39+00:00"
         },
         {
             "name": "paragonie/random_compat",

@@ -1,0 +1,24 @@
+uuid: 2fad3837-ebf8-4de7-87bc-cbf4d27a1a37
+langcode: de
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - relaunch2018
+id: main_menu
+theme: relaunch2018
+region: primary_menu
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: Hauptnavigation
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }

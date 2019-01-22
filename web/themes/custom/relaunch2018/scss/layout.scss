@@ -8,6 +8,11 @@ body {
   background-color: $color-gray-6;
 }
 
+.dialog-off-canvas-main-canvas {
+  // Interferes with the header tiles tilt effect.
+  height: 0;
+}
+
 .node__links {
   display: none;
   margin-left: .8rem;
@@ -56,23 +61,6 @@ header {
   .header--default {
     margin-bottom: 10px;
     padding-top: 33px;
-
-    .header--default--brand {
-      text-align: center;
-
-      img {
-        height: 24px;
-        width: auto;
-
-        @include media-breakpoint-up(sm) {
-          height: 30px;
-        }
-
-        @include media-breakpoint-up(md) {
-          height: 36px;
-        }
-      }
-    }
 
     .region {
       .block-block-content {

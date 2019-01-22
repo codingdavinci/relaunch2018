@@ -3,195 +3,139 @@
 .region-primary-menu {
   color: $color-white;
   font-family: $font-family-sans-serif;
-  font-size: 1.6rem;
   font-weight: $font-weight-semi-bold;
-  position: absolute;
   user-select: none;
 
-  @include media-breakpoint-up(sm) {
-    font-size: 1.8rem;
+  @mixin menuFontSize {
+    font-size: 1.6rem;
+
+    @include media-breakpoint-up(sm) {
+      font-size: 1.8rem;
+    }
+
+    @include media-breakpoint-up(md) {
+      font-size: 2rem;
+    }
   }
 
-  @include media-breakpoint-up(md) {
-    font-size: 2rem;
-  }
+  .navbar {
+    @include menuFontSize;
+    height: 45px;
+    padding: 0;
+    // Keep z-index below admin toolbar:
+    z-index: 250;
 
-  .responsive-menu-toggle {
-    .toggle {
-      @include boxShadow;
-      @include rounded;
-      background-color: $color-gray-6;
-      color: $color-main;
-      position: fixed;
-      z-index: 10;
-      left: 25px;
-      padding: 2px 4px 4px;
-      top: 25px;
-      cursor: pointer;
-      text-decoration: none;
+    .navbar--wrapper {
+      align-items: center;
+      background-color: $color-gray-1;
+      display: flex;
+      justify-content: space-between;
+      height: 100%;
+      width: 100%;
 
-      height: auto;
-      width: auto;
+      .navbar-toggler {
+        @include curlyBraces($color-white);
+        @include easeOut;
+        @include menuFontSize;
+        border-radius: 0;
+        outline: none;
+        transform: rotate(360deg);
+        white-space: nowrap;
 
-      &.mm-sticky {
-        transform: rotateY(0deg);
-        transition: transform .3s ease;
+        .navbar-toggler-icon {
+          height: auto;
+          vertical-align: baseline;
+          width: auto;
 
-        &.is-active {
-          transform: rotate(180deg);
+          &:after {
+            @include icon;
+            content: '\e812';
+            font-size: 1.2rem;
+            margin: 0;
+            vertical-align: .1rem;
+
+            @include media-breakpoint-up(sm) {
+              font-size: 1.4rem;
+            }
+
+            @include media-breakpoint-up(md) {
+              font-size: 1.6rem;
+            }
+          }
+        }
+
+        &.collapsed {
+          font-family: $font-family-sans-serif;
+          margin-top: 0;
+          transform: rotate(0deg);
+
+          .navbar-toggler-icon {
+            &:after {
+              content: '…';
+              font-weight: $font-weight-bold;
+            }
+
+          }
         }
       }
 
-      @include media-breakpoint-up(sm) {
-        padding: 0 8px 4px;
+      .menu--main--brand {
+        display: flex;
+        margin-top: .2rem;
+      }
+    }
+
+    .navbar--menu {
+      background: $color-red-3;
+      overflow: auto;
+      padding: 0 1.5rem 0 .75rem;
+
+      .navbar-collapse {
+        &.show {
+          display: flex;
+          flex-direction: column;
+          height: calc(100vh - 45px);
+          justify-content: space-between;
+
+          .navbar-nav {
+            flex-shrink: 0;
+
+            .menu-item {
+              .dropdown-menu {
+                background-color: transparent;
+                border: none;
+                padding-top: 0;
+
+                .menu-item {
+                  padding-left: 0;
+                  padding-right: 0;
+                }
+              }
+            }
+          }
+        }
       }
 
-      &:hover {
-        background-color: $color-white;
-      }
-
-      &:after {
-        display: none;
-      }
-
-      &:before {
-        display: none;
-      }
-
-      &.is-active {
-        background-color: transparent;
-        box-shadow: none;
+      a {
         color: $color-deep-teal;
 
         &:hover {
-          background-color: transparent;
-        }
-
-        .patty {
-          &:first-child:after {
-            content: '\e812';
-            font-family: $font-family-icons;
-            font-size: 1.6rem;
-            vertical-align: .2rem;
-            padding: .1rem;
-          }
+          text-decoration: underline;
         }
       }
 
-      .patty {
-        @include easeOut;
-
-        &:first-child:after {
-          content: '…';
-        }
-      }
-    }
-  }
-}
-
-.mm-wrapper_background {
-  body {
-    background: $color-gray-6;
-  }
-}
-
-.mm-wrapper__blocker {
-  background: rgba($color-white, .4);
-  z-index: 1;
-}
-
-.mm-menu {
-  --mm-color-background-highlight: rgba(0, 0, 0, 0);
-  --mm-color-border: transparent;
-  --mm-color-background: #{$color-red-3};
-  --mm-line-height: 40px;
-  z-index: 2;
-
-  @include media-breakpoint-up(sm) {
-    --mm-line-height: 50px;
-  }
-
-  @include media-breakpoint-up(md) {
-    --mm-line-height: 60px;
-  }
-
-  a {
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-
-  .mm-navbars_top {
-    @include media-breakpoint-up(sm) {
-      display: none;
-    }
-    
-    .language-switcher-language-url {
-      padding-top: 25px;
-      position: static;
-      margin-left: 20px;
-      text-align: left;
-    }
-  }
-
-  .mm-panels {
-    @include media-breakpoint-up(sm) {
-      top: 0;
-    }
-
-    .mm-panel {
-      padding-top: 25px;
-
-      .mm-navbar {
-        display: none;
-      }
-
-      .menu {
-        font-size: 1.6rem;
-        font-weight: $font-weight-semi-bold;
-
-        @include media-breakpoint-up(sm) {
-          font-size: 1.8rem;
-        }
-
-        @include media-breakpoint-up(md) {
-          font-size: 2rem;
-        }
-
-        .menu-item {
-          a {
-            color: $color-deep-teal;
-          }
-
-          .mm-panel {
-            padding-left: 0;
-            padding-right: 0;
-            padding-top: 0;
-
-            .menu-item {
+      .menu--acount {
+        .menu {
+          .menu-item {
+            a {
+              @include curlyBraces($color-gray-3);
+              @include fontStyle(default);
+              color: $color-gray-3;
               font-weight: $font-weight-light;
             }
           }
         }
       }
     }
-  }
-
-  .mm-navbars_bottom {
-    border-top: 1px solid $color-gray-6;
-
-    .menu {
-      .menu-item {
-        line-height: var(--mm-navbar-size);
-
-        a {
-          @include curlyBraces($color-gray-3);
-          @include fontStyle(default);
-          color: $color-gray-3;
-          font-weight: $font-weight-light;
-        }
-      }
-    }
-
   }
 }

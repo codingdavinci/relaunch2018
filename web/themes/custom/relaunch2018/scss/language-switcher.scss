@@ -1,10 +1,14 @@
 @import '_includes/base';
 
 .language-switcher-language-url {
+  @include rounded;
   color: $color-gray-4;
+  display: flex;
   font-size: 1.2rem;
-  position: absolute;
-  top: 25px;
+  font-weight: $font-weight-normal;
+  margin: 0;
+  margin-right: .75rem;
+  padding-left: 0;
   user-select: none;
 
   @include media-breakpoint-up(sm) {
@@ -15,70 +19,41 @@
     font-size: 1.5rem;
   }
 
-  .links {
-    padding-left: 0;
+  li {
+    display: inline;
 
-    li {
-      background-color: $white;
-      display: inline;
-      padding: .3rem;
-
-      &:after {
-        content: '}';
-      }
-      &:before {
-        content: '{';
-      }
-
-      &:first-child {
+    &:first-child {
+      a {
         @include border-left-radius($border-radius);
       }
+    }
 
-      &:last-child {
+    &:last-child {
+      a {
         @include border-right-radius($border-radius);
       }
+    }
+
+    span {
+      @include curlyBraces($color-gray-4);
+      padding: .1rem .3rem
+    }
+
+    a {
+      @include curlyBraces($color-white);
+      background-color: $color-white;
+      color: $color-green-lighter;
+      padding: .1rem .3rem
+    }
+
+    &.is-active {
+      color: $white;
 
       a {
-        color: $color-green;
-        font-weight: $font-weight-bold;
-      }
-
-      &.is-active {
-        @include rounded;
+        @include curlyBraces($color-white);
         background-color: $color-green-lighter;
         color: $white;
-
-        a {
-          color: $white;
-        }
       }
-    }
-  }
-}
-
-.region-language-switcher {
-  .language-switcher-language-url {
-    margin-top: .5rem;
-    right: 30px;
-    z-index: 10;
-
-    @include media-breakpoint-down(xs) {
-      display: none;
-    }
-
-    ul {
-      @include rounded;
-      background-color: $white;
-      box-shadow: 0 5px 15px rgba($black, 0.1);
-      display: flex;
-    }
-  }
-}
-
-.menu--container {
-  .language-switcher-language-url {
-    @include media-breakpoint-up(sm) {
-      display: none;
     }
   }
 }

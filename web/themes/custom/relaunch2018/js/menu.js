@@ -6,37 +6,25 @@
   'use strict';
 
   $(function() {
-    var $burger = $('.region-primary-menu').find('#toggle-icon');
-    var $menu = $('#off-canvas');
-    var mmenu = $menu.data('mmenu');
+    var $body = $('body');
+    var $primaryMenu = $('.region-primary-menu');
 
-    mmenu.bind('open:finish', function() {
-      setTimeout(function() {
-        $burger.addClass('is-active');
-      }, 100);
-    });
+    if (
+      $body.hasClass('toolbar-horizontal')
+      || $body.hasClass('toolbar-vertical')
+    ) {
 
-    mmenu.bind('close:finish', function() {
-      setTimeout(function() {
-        $burger.removeClass('is-active');
-      }, 100);
-    });
+      var $navbar = $primaryMenu.find('.navbar.fixed-top');
+      setPositions($navbar);
 
-    mmenu.bind('openPanel:start', function($panel) {
-      $panel.hide().slideDown({
-        easing: 'easeInOutCirc'
+      $(window).on(resize, function() {
+        setPositions($navbar);
       });
-    });
+    }
 
-    mmenu.bind('closePanel:after', function($panel) {
-      $panel.show().removeClass('mm-hidden').slideUp({
-        easing: 'easeInOutCirc'
-      }).promise().done(function() {
-        $panel.addClass('mm-hidden');
-      });
-    });
-
-    setMenuElementPositions($burger.add('.language-switcher-language-url '));
+    $primaryMenu.find('.dropdown-toggle').on('click', function(e) {
+      e.preventDefault();
+    })
   });
 
   /**
@@ -44,23 +32,14 @@
    *
    * @param {jQuery} $elements
    */
-  function setMenuElementPositions($elements) {
-    var $body = $('body');
-
-    if (
-      !$body.hasClass('toolbar-horizontal')
-      && !$body.hasClass('toolbar-vertical')
-    ) {
-      return;
-    }
-
+  function setPositions($elements) {
     $elements.each(function() {
       var isFixed = $(this).css('position') === 'fixed';
       var $this = $(this);
 
       $this
       .css('position', 'absolute')
-      .css('top', $this.position().top + parseFloat($('.mm-page').css('paddingTop')));
+      .css('top', $this.position().top + parseFloat($('body').css('paddingTop')));
 
       if (isFixed) {
         $this.css('position', 'fixed');
