@@ -7962,9 +7962,21 @@ body.path-user:not(.user-logged-in) .layout-container {
         margin-top: .2rem; }
     .region-primary-menu .navbar .navbar--menu {
       background: #FCD9C8;
+      min-width: 67%;
       overflow: auto;
-      padding: 0 1.5rem 0 .75rem; }
+      padding: 0 1.5rem 0 .75rem;
+      transform: translate3d(-100%, 0, 0);
+      transition: all .3s ease-in-out; }
+      @media (min-width: 576px) {
+        .region-primary-menu .navbar .navbar--menu {
+          min-width: 33%; } }
+      @media (min-width: 992px) {
+        .region-primary-menu .navbar .navbar--menu {
+          min-width: 25%; } }
+      .region-primary-menu .navbar .navbar--menu.show {
+        transform: translate3d(0, 0, 0); }
       .region-primary-menu .navbar .navbar--menu .navbar-collapse.show {
+        align-items: flex-start;
         display: flex;
         flex-direction: column;
         height: calc(100vh - 45px);

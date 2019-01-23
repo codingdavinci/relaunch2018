@@ -87,11 +87,27 @@
 
     .navbar--menu {
       background: $color-red-3;
+      min-width: 67%;
       overflow: auto;
       padding: 0 1.5rem 0 .75rem;
+      transform: translate3d(-100%, 0, 0);
+      transition: all .3s ease-in-out;
+
+      @include media-breakpoint-up(sm) {
+        min-width: 33%;
+      }
+
+      @include media-breakpoint-up(lg) {
+        min-width: 25%;
+      }
+
+      &.show {
+        transform: translate3d(0, 0, 0);
+      }
 
       .navbar-collapse {
         &.show {
+          align-items: flex-start;
           display: flex;
           flex-direction: column;
           height: calc(100vh - 45px);

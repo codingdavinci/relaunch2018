@@ -8,6 +8,9 @@
   $(function() {
     var $body = $('body');
     var $primaryMenu = $('.region-primary-menu');
+    var $toggler = $('.navbar-toggler');
+    var $menu = $('#mainMenu');
+    var $menuContainer = $menu.closest('.navbar--menu');
 
     if (
       $body.hasClass('toolbar-horizontal')
@@ -24,7 +27,19 @@
 
     $primaryMenu.find('.dropdown-toggle').on('click', function(e) {
       e.preventDefault();
-    })
+    });
+
+    $menu.on('show.bs.collapse hide.bs.collapse', function() {
+      var isShown = $menuContainer.hasClass('show');
+
+      $toggler
+      .toggleClass('collapsed', isShown)
+      .attr('aria-expanded', !isShown);
+
+      $menuContainer.toggleClass('show', !isShown);
+
+      return false;
+    });
   });
 
   /**
