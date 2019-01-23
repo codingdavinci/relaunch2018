@@ -6,24 +6,19 @@
   'use strict';
 
   $(function() {
-    var $body = $('body');
     var $primaryMenu = $('.region-primary-menu');
+
+    considerAdminToolbarOffset($primaryMenu);
+    initAnimations($primaryMenu);
+  });
+
+  /**
+   * @param {jQuery} $primaryMenu
+   */
+  function initAnimations($primaryMenu) {
     var $toggler = $('.navbar-toggler');
     var $menu = $('#mainMenu');
     var $menuContainer = $menu.closest('.navbar--menu');
-
-    if (
-      $body.hasClass('toolbar-horizontal')
-      || $body.hasClass('toolbar-vertical')
-    ) {
-
-      var $navbar = $primaryMenu.find('.navbar.fixed-top');
-      setPositions($navbar);
-
-      $(window).on(resize, function() {
-        setPositions($navbar);
-      });
-    }
 
     $primaryMenu.find('.dropdown-toggle')
     .on('click', function(e) {
@@ -51,7 +46,7 @@
     });
 
     updateMenuItemTransitionDelays($menu, false);
-  });
+  }
 
   /**
    * @param $menu
@@ -61,6 +56,26 @@
     $menu.find('.menu > li').each(function(i) {
       $(this).css('transition-delay', (isShown ? 0 : i * .05) + 's');
     });
+  }
+
+  /**
+   * @param {jQuery} $primaryMenu
+   */
+  function considerAdminToolbarOffset($primaryMenu) {
+    var $body = $('body');
+
+    if (
+      $body.hasClass('toolbar-horizontal')
+      || $body.hasClass('toolbar-vertical')
+    ) {
+
+      var $navbar = $primaryMenu.find('.navbar.fixed-top');
+      setPositions($navbar);
+
+      $(window).on(resize, function() {
+        setPositions($navbar);
+      });
+    }
   }
 
   /**
