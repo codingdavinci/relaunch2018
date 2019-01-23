@@ -102,30 +102,39 @@
       }
 
       .navbar-collapse {
-        &.show {
-          align-items: flex-start;
-          display: flex;
-          flex-direction: column;
-          height: calc(100vh - 45px);
-          justify-content: space-between;
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+        height: calc(100vh - 45px);
+        justify-content: space-between;
 
-          .navbar-nav {
-            flex-shrink: 0;
+        .navbar-nav {
+          flex-shrink: 0;
 
-            .menu-item {
-              opacity: 0;
-              transform: translate3d(100vw, 0, 0);
-              transition: transform .3s ease-in-out, opacity .3s cubic-bezier(0.6, 0.04, 0.98, 0.335);;
+          .menu-item {
+            opacity: 0;
+            transform: translate3d(100vw, 0, 0);
+            transition: transform .3s ease-in-out, opacity .3s cubic-bezier(0.6, 0.04, 0.98, 0.335);;
 
-              .dropdown-menu {
-                background-color: transparent;
-                border: none;
-                padding-top: 0;
+            &:hover {
+              background-color: transparent;
+            }
 
-                .menu-item {
-                  padding-left: 0;
-                  padding-right: 0;
-                }
+            .dropdown-toggle {
+              &:after {
+                content: none;
+              }
+            }
+
+            .dropdown-menu {
+              @include fontStyle(default);
+              background-color: transparent;
+              border: none;
+              padding-top: 0;
+
+              .menu-item {
+                padding-left: 0;
+                padding-right: 0;
               }
             }
           }
@@ -136,12 +145,10 @@
         transform: translate3d(0, 0, 0);
 
         .navbar-collapse {
-          &.show {
-            .navbar-nav {
-              .menu-item {
-                opacity: 1;
-                transform: translate3d(0, 0, 0);
-              }
+          .navbar-nav {
+            .menu-item {
+              opacity: 1;
+              transform: translate3d(0, 0, 0);
             }
           }
         }

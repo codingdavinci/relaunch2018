@@ -25,22 +25,29 @@
       });
     }
 
-    $primaryMenu.find('.dropdown-toggle').on('click', function(e) {
+    $primaryMenu.find('.dropdown-toggle')
+    .on('click', function(e) {
       e.preventDefault();
+    })
+    .parent().on('show.bs.dropdown hide.bs.dropdown', function(e) {
+      $(this)
+      .find('.dropdown-menu')
+      .stop(true)[e.type == 'show' ? 'slideDown' : 'slideUp']({
+        duration: 'fast',
+        easing: 'easeInOutCirc'
+      });
     });
 
-    $menu.on('show.bs.collapse hide.bs.collapse', function() {
-      var isShown = $menuContainer.hasClass('show');
+    $menu.on('show.bs.collapse hide.bs.collapse', function(e) {
+      var show = e.type === 'show';
 
       $toggler
-      .toggleClass('collapsed', isShown)
-      .attr('aria-expanded', !isShown);
+      .toggleClass('collapsed', !show)
+      .attr('aria-expanded', show);
 
-      $menuContainer.toggleClass('show', !isShown);
+      $menuContainer.toggleClass('show', show);
 
-      updateMenuItemTransitionDelays($menu, isShown);
-
-      return false;
+      updateMenuItemTransitionDelays($menu, !show);
     });
 
     updateMenuItemTransitionDelays($menu, false);
