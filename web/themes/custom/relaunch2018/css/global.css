@@ -7973,8 +7973,6 @@ body.path-user:not(.user-logged-in) .layout-container {
       @media (min-width: 992px) {
         .region-primary-menu .navbar .navbar--menu {
           min-width: 25%; } }
-      .region-primary-menu .navbar .navbar--menu.show {
-        transform: translate3d(0, 0, 0); }
       .region-primary-menu .navbar .navbar--menu .navbar-collapse.show {
         align-items: flex-start;
         display: flex;
@@ -7983,13 +7981,22 @@ body.path-user:not(.user-logged-in) .layout-container {
         justify-content: space-between; }
         .region-primary-menu .navbar .navbar--menu .navbar-collapse.show .navbar-nav {
           flex-shrink: 0; }
-          .region-primary-menu .navbar .navbar--menu .navbar-collapse.show .navbar-nav .menu-item .dropdown-menu {
-            background-color: transparent;
-            border: none;
-            padding-top: 0; }
-            .region-primary-menu .navbar .navbar--menu .navbar-collapse.show .navbar-nav .menu-item .dropdown-menu .menu-item {
-              padding-left: 0;
-              padding-right: 0; }
+          .region-primary-menu .navbar .navbar--menu .navbar-collapse.show .navbar-nav .menu-item {
+            opacity: 0;
+            transform: translate3d(100vw, 0, 0);
+            transition: transform 0.3s ease-in-out, opacity 0.3s cubic-bezier(0.6, 0.04, 0.98, 0.335); }
+            .region-primary-menu .navbar .navbar--menu .navbar-collapse.show .navbar-nav .menu-item .dropdown-menu {
+              background-color: transparent;
+              border: none;
+              padding-top: 0; }
+              .region-primary-menu .navbar .navbar--menu .navbar-collapse.show .navbar-nav .menu-item .dropdown-menu .menu-item {
+                padding-left: 0;
+                padding-right: 0; }
+      .region-primary-menu .navbar .navbar--menu.show {
+        transform: translate3d(0, 0, 0); }
+        .region-primary-menu .navbar .navbar--menu.show .navbar-collapse.show .navbar-nav .menu-item {
+          opacity: 1;
+          transform: translate3d(0, 0, 0); }
       .region-primary-menu .navbar .navbar--menu a {
         color: #099B8A; }
         .region-primary-menu .navbar .navbar--menu a:hover {

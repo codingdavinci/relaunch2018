@@ -101,10 +101,6 @@
         min-width: 25%;
       }
 
-      &.show {
-        transform: translate3d(0, 0, 0);
-      }
-
       .navbar-collapse {
         &.show {
           align-items: flex-start;
@@ -117,6 +113,10 @@
             flex-shrink: 0;
 
             .menu-item {
+              opacity: 0;
+              transform: translate3d(100vw, 0, 0);
+              transition: transform .3s ease-in-out, opacity .3s cubic-bezier(0.6, 0.04, 0.98, 0.335);;
+
               .dropdown-menu {
                 background-color: transparent;
                 border: none;
@@ -126,6 +126,21 @@
                   padding-left: 0;
                   padding-right: 0;
                 }
+              }
+            }
+          }
+        }
+      }
+
+      &.show {
+        transform: translate3d(0, 0, 0);
+
+        .navbar-collapse {
+          &.show {
+            .navbar-nav {
+              .menu-item {
+                opacity: 1;
+                transform: translate3d(0, 0, 0);
               }
             }
           }

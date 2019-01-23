@@ -38,9 +38,23 @@
 
       $menuContainer.toggleClass('show', !isShown);
 
+      updateMenuItemTransitionDelays($menu, isShown);
+
       return false;
     });
+
+    updateMenuItemTransitionDelays($menu, false);
   });
+
+  /**
+   * @param $menu
+   * @param isShown
+   */
+  function updateMenuItemTransitionDelays($menu, isShown) {
+    $menu.find('.menu > li').each(function(i) {
+      $(this).css('transition-delay', (isShown ? 0 : i * .05) + 's');
+    });
+  }
 
   /**
    * Shifts positions if the admin toolbar is present.
