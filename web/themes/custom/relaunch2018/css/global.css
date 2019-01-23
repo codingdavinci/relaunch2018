@@ -7911,52 +7911,63 @@ body.path-user:not(.user-logged-in) .layout-container {
       height: 100%;
       width: 100%; }
       .region-primary-menu .navbar .navbar--wrapper .navbar-toggler {
-        transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
         font-size: 1.6rem;
         border-radius: 0;
+        min-width: 75px;
         outline: none;
-        transform: rotate(360deg);
+        text-align: left;
         white-space: nowrap; }
-        .region-primary-menu .navbar .navbar--wrapper .navbar-toggler:after, .region-primary-menu .navbar .navbar--wrapper .navbar-toggler:before {
-          color: #FFFFFF; }
-        .region-primary-menu .navbar .navbar--wrapper .navbar-toggler:after {
-          color: #FFFFFF;
-          content: '}';
-          margin-left: .1em; }
-        .region-primary-menu .navbar .navbar--wrapper .navbar-toggler:before {
-          color: #FFFFFF;
-          content: '{';
-          margin-right: .1em; }
         @media (min-width: 576px) {
           .region-primary-menu .navbar .navbar--wrapper .navbar-toggler {
             font-size: 1.8rem; } }
         @media (min-width: 768px) {
           .region-primary-menu .navbar .navbar--wrapper .navbar-toggler {
             font-size: 2rem; } }
-        .region-primary-menu .navbar .navbar--wrapper .navbar-toggler .navbar-toggler-icon {
-          height: auto;
-          vertical-align: baseline;
-          width: auto; }
-          .region-primary-menu .navbar .navbar--wrapper .navbar-toggler .navbar-toggler-icon:after {
-            font-family: "cdv_icons";
-            margin-right: .4em;
-            content: '\e812';
-            font-size: 1.2rem;
-            margin: 0;
-            vertical-align: .1rem; }
-            @media (min-width: 576px) {
-              .region-primary-menu .navbar .navbar--wrapper .navbar-toggler .navbar-toggler-icon:after {
-                font-size: 1.4rem; } }
-            @media (min-width: 768px) {
-              .region-primary-menu .navbar .navbar--wrapper .navbar-toggler .navbar-toggler-icon:after {
-                font-size: 1.6rem; } }
+        @media (min-width: 576px) {
+          .region-primary-menu .navbar .navbar--wrapper .navbar-toggler {
+            min-width: 80px; } }
+        @media (min-width: 992px) {
+          .region-primary-menu .navbar .navbar--wrapper .navbar-toggler {
+            min-width: 95px; } }
+        .region-primary-menu .navbar .navbar--wrapper .navbar-toggler .navbar-toggler-icon--wrapper {
+          transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+          display: inline-block;
+          transform: rotate(359deg); }
+          .region-primary-menu .navbar .navbar--wrapper .navbar-toggler .navbar-toggler-icon--wrapper:after, .region-primary-menu .navbar .navbar--wrapper .navbar-toggler .navbar-toggler-icon--wrapper:before {
+            color: #FFFFFF; }
+          .region-primary-menu .navbar .navbar--wrapper .navbar-toggler .navbar-toggler-icon--wrapper:after {
+            color: #FFFFFF;
+            content: '}';
+            margin-left: .1em; }
+          .region-primary-menu .navbar .navbar--wrapper .navbar-toggler .navbar-toggler-icon--wrapper:before {
+            color: #FFFFFF;
+            content: '{';
+            margin-right: .1em; }
+          .region-primary-menu .navbar .navbar--wrapper .navbar-toggler .navbar-toggler-icon--wrapper .navbar-toggler-icon {
+            height: auto;
+            vertical-align: baseline;
+            width: auto; }
+            .region-primary-menu .navbar .navbar--wrapper .navbar-toggler .navbar-toggler-icon--wrapper .navbar-toggler-icon:after {
+              font-family: "cdv_icons";
+              margin-right: .4em;
+              content: '\e812';
+              font-size: 1.2rem;
+              margin: 0;
+              vertical-align: .1rem; }
+              @media (min-width: 576px) {
+                .region-primary-menu .navbar .navbar--wrapper .navbar-toggler .navbar-toggler-icon--wrapper .navbar-toggler-icon:after {
+                  font-size: 1.4rem; } }
+              @media (min-width: 768px) {
+                .region-primary-menu .navbar .navbar--wrapper .navbar-toggler .navbar-toggler-icon--wrapper .navbar-toggler-icon:after {
+                  font-size: 1.6rem; } }
         .region-primary-menu .navbar .navbar--wrapper .navbar-toggler.collapsed {
           font-family: "Barlow", sans-serif;
-          margin-top: 0;
-          transform: rotate(0deg); }
-          .region-primary-menu .navbar .navbar--wrapper .navbar-toggler.collapsed .navbar-toggler-icon:after {
-            content: '…';
-            font-weight: 600; }
+          margin-top: 0; }
+          .region-primary-menu .navbar .navbar--wrapper .navbar-toggler.collapsed .navbar-toggler-icon--wrapper {
+            transform: rotate(0deg); }
+            .region-primary-menu .navbar .navbar--wrapper .navbar-toggler.collapsed .navbar-toggler-icon--wrapper .navbar-toggler-icon:after {
+              content: '…';
+              font-weight: 600; }
       .region-primary-menu .navbar .navbar--wrapper .menu--main--brand {
         display: flex;
         margin-top: .2rem; }

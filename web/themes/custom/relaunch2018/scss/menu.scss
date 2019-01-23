@@ -34,32 +34,46 @@
       width: 100%;
 
       .navbar-toggler {
-        @include curlyBraces($color-white);
-        @include easeOut;
         @include menuFontSize;
         border-radius: 0;
+        min-width: 75px;
         outline: none;
-        transform: rotate(360deg);
+        text-align: left;
         white-space: nowrap;
 
-        .navbar-toggler-icon {
-          height: auto;
-          vertical-align: baseline;
-          width: auto;
+        @include media-breakpoint-up(sm) {
+          min-width: 80px;
+        }
 
-          &:after {
-            @include icon;
-            content: '\e812';
-            font-size: 1.2rem;
-            margin: 0;
-            vertical-align: .1rem;
+        @include media-breakpoint-up(lg) {
+          min-width: 95px;
+        }
 
-            @include media-breakpoint-up(sm) {
-              font-size: 1.4rem;
-            }
+        .navbar-toggler-icon--wrapper {
+          @include curlyBraces($color-white);
+          @include easeOut;
+          display: inline-block;
+          transform: rotate(359deg);
 
-            @include media-breakpoint-up(md) {
-              font-size: 1.6rem;
+          .navbar-toggler-icon {
+            height: auto;
+            vertical-align: baseline;
+            width: auto;
+
+            &:after {
+              @include icon;
+              content: '\e812';
+              font-size: 1.2rem;
+              margin: 0;
+              vertical-align: .1rem;
+
+              @include media-breakpoint-up(sm) {
+                font-size: 1.4rem;
+              }
+
+              @include media-breakpoint-up(md) {
+                font-size: 1.6rem;
+              }
             }
           }
         }
@@ -67,14 +81,16 @@
         &.collapsed {
           font-family: $font-family-sans-serif;
           margin-top: 0;
-          transform: rotate(0deg);
 
-          .navbar-toggler-icon {
-            &:after {
-              content: '…';
-              font-weight: $font-weight-bold;
+          .navbar-toggler-icon--wrapper {
+            transform: rotate(0deg);
+
+            .navbar-toggler-icon {
+              &:after {
+                content: '…';
+                font-weight: $font-weight-bold;
+              }
             }
-
           }
         }
       }
