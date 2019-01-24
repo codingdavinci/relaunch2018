@@ -51,6 +51,7 @@
         "npm-asset/select2": "^4.0",
         "npm-asset/typeface-barlow": "*",
         "npm-asset/waypoints": "^4.0",
+        "oomphinc/composer-installers-extender": "^1.1",
         "vlucas/phpdotenv": "^2.4",
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3"
