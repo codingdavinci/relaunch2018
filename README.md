@@ -32,7 +32,7 @@ The project was set up using the [Composer template for Drupal projects](https:/
 
 Drupal nudges administrators about available security updates. When updating Drupal core or when applying a Drupal module’s new major version, a backup of the website’s files should be created. The database may be dumped to a file by running `vendor/bin/drush sql-dump` using the [drush command line shell](http://www.drush.org/). Updating is easiest using composer in combination with drush.
 
-Updates should be applied in a development environment first: Run `composer update drupal/core webflo/drupal-core-require-dev --with-dependencies` for minor version updates or `composer require <component>:<new version constraint>` for major version updates. After ensuring that the update works properly, push the changes to the `composer.lock` file to the repository.
+Updates should be applied in a development environment first: Run `composer update` for minor version updates or `composer require <component>:<new version constraint>` for major version updates. After ensuring that the update works properly, push the changes to the `composer.lock` file to the repository.
 
 While just being required for development, updating npm packages is similar: Run `npm update` for minor version updates or `npm install <package name>@<version constraint>` for major version updates and push the changes to the `package-lock.json` file to the repository.
 
