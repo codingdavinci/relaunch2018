@@ -2,7 +2,7 @@
   "repository": "https://github.com/codingdavinci/relaunch2018/",
   "license": "GPL-2.0-only",
   "dependencies": {
-    "gulp-header": "^2.0.5",
+    "gulp-header": "^2.0.7",
     "gulp-replace": "^1.0.0"
   },
   "devDependencies": {
