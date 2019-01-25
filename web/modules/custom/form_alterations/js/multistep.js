@@ -11,33 +11,46 @@
     $panes.each(function(i) {
       var $pane = $(this);
       $pane.append(
-        '<div class="form-alter--multistep">'
-          + '<div class="form-alter--multistep--back"></div>'
-          + '<div class="form-alter--multistep--next"></div>'
-        + '</div>'
+        '<div class="form-alter--multistep">' +
+          '<div class="form-alter--multistep--back"></div>' +
+          '<div class="form-alter--multistep--next"></div>' +
+          '</div>'
       );
 
       if (this !== $panes.get(0)) {
-        $('<button class="button button--primary">' + Drupal.t('back') + '</button>')
+        $(
+          '<button class="button button--primary">' +
+            Drupal.t('back') +
+            '</button>'
+        )
           .appendTo($pane.find('.form-alter--multistep--back'))
           .on('click', function() {
-            $panes.eq(i - 1).data('horizontalTab').tabShow();
+            $panes
+              .eq(i - 1)
+              .data('horizontalTab')
+              .tabShow();
             scrollToTop($panes.eq(i - 1));
             return false;
           });
       }
 
       if (this !== $panes.get($panes.length - 1)) {
-        $('<button class="button button--primary">' + Drupal.t('next') + '</button>')
+        $(
+          '<button class="button button--primary">' +
+            Drupal.t('next') +
+            '</button>'
+        )
           .appendTo($pane.find('.form-alter--multistep--next'))
           .on('click', function() {
-            $panes.eq(i + 1).data('horizontalTab').tabShow();
+            $panes
+              .eq(i + 1)
+              .data('horizontalTab')
+              .tabShow();
             scrollToTop($panes.eq(i + 1));
             return false;
           });
       }
     });
-
   });
 
   /**
@@ -61,5 +74,4 @@
       scrollTop: offsetTop - 20
     });
   }
-
-}(jQuery, Drupal));
+})(jQuery, Drupal);

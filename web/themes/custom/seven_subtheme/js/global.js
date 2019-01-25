@@ -21,23 +21,35 @@
       var isPublicDomain = $.inArray($select.val(), licenses) !== -1;
       var animate = false;
 
-      if (isPublicDomain && ($author.is(':visible') || $author.is(':animated'))) {
-        animate = $selectWrapper.css('display') === 'inline-block'
-          ? 'fadeOut' : 'slideUp';
-      }
-      else if (!isPublicDomain && (!$author.is(':visible') || $author.is(':animated'))) {
-        animate = $selectWrapper.css('display') === 'inline-block'
-          ? 'fadeIn' : 'slideDown';
+      if (
+        isPublicDomain &&
+        ($author.is(':visible') || $author.is(':animated'))
+      ) {
+        animate =
+          $selectWrapper.css('display') === 'inline-block'
+            ? 'fadeOut'
+            : 'slideUp';
+      } else if (
+        !isPublicDomain &&
+        (!$author.is(':visible') || $author.is(':animated'))
+      ) {
+        animate =
+          $selectWrapper.css('display') === 'inline-block'
+            ? 'fadeIn'
+            : 'slideDown';
       }
 
       if (animate) {
-        $author.stop(true)[animate]().promise().done(function() {
-          if (!$author.is(':visible')) {
-            $author.find('input').val('');
-          }
-        });
+        $author
+          .stop(true)
+          [animate]()
+          .promise()
+          .done(function() {
+            if (!$author.is(':visible')) {
+              $author.find('input').val('');
+            }
+          });
       }
     });
   });
-
 })(jQuery);

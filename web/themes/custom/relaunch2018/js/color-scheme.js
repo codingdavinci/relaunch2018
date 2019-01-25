@@ -25,11 +25,14 @@
     var color = getColor($container, mouseOver);
 
     if (color) {
-      $container.stop(true).animate({
-        backgroundColor: '#' + color
-      }, {
-        duration: 'fast'
-      });
+      $container.stop(true).animate(
+        {
+          backgroundColor: '#' + color
+        },
+        {
+          duration: 'fast'
+        }
+      );
     }
   }
 
@@ -47,16 +50,16 @@
     if ($.isArray(colorScheme) && colorScheme.length === 2) {
       return colorScheme[mouseOver ? 1 : 0];
     }
-    else if (typeof colorScheme === 'string') {
+
+    if (typeof colorScheme === 'string') {
       // Color scheme definition features a hover color only.
-      $container.data(
-        'color-scheme-hover',
-        [$container.css('background-color'), colorScheme]
-      );
+      $container.data('color-scheme-hover', [
+        $container.css('background-color'),
+        colorScheme
+      ]);
       return colorScheme;
     }
 
     return null;
   }
-
 })(jQuery);

@@ -17,20 +17,25 @@
         var $nextItem = $carousel.find('.carousel-item').eq(e.to);
         var $content = $nextItem.children('article');
         setTimeout(function() {
-          $content.css('top', ($nextItem.height() / 2 - $content.height() / 2) + 'px');
+          $content.css(
+            'top',
+            $nextItem.height() / 2 - $content.height() / 2 + 'px'
+          );
         }, 0);
       });
 
-      (new Hammer(this)).on('panleft', function() {
+      new Hammer(this).on('panleft', function() {
         $carousel.carousel('next');
       });
 
-      (new Hammer(this)).on('panright', function() {
+      new Hammer(this).on('panright', function() {
         $carousel.carousel('prev');
       });
 
       $carousel.find('.carousel-item').each(function() {
-        $(this).find('img').attr('draggable', 'false');
+        $(this)
+          .find('img')
+          .attr('draggable', 'false');
       });
 
       normalizeCarouselHeights($carousel);
@@ -57,8 +62,7 @@
     });
 
     $items.each(function() {
-        $(this).css('minHeight', maxHeight + 'px');
+      $(this).css('minHeight', maxHeight + 'px');
     });
   }
-
 })(jQuery, Hammer, window);

@@ -19,7 +19,6 @@
       insertHierarchyIntoHtml($this);
       addClickBehaviour($this);
     });
-
   });
 
   /**
@@ -40,10 +39,12 @@
       $label.text($label.text().replace(/^-*/g, ''));
 
       if (level > currentLevel) {
-        html += '<div class="hierarchy hierarchy-level-' + level
-          + (currentLevelChecked ? ' hierarchy-level-visible' : '') + '">';
-      }
-      else if (level < currentLevel) {
+        html +=
+          '<div class="hierarchy hierarchy-level-' +
+          level +
+          (currentLevelChecked ? ' hierarchy-level-visible' : '') +
+          '">';
+      } else if (level < currentLevel) {
         html += '</div>';
       }
 
@@ -63,7 +64,10 @@
    * @param {jQuery} $item
    */
   function getLevel($item) {
-    return ($item.find('label').text().match(/^-*/g) || [])[0].length;
+    return ($item
+      .find('label')
+      .text()
+      .match(/^-*/g) || [])[0].length;
   }
 
   /**
@@ -82,13 +86,14 @@
         $next.stop(true);
         $next[$item.find('input').prop('checked') ? 'slideDown' : 'slideUp']({
           easing: 'easeInOutCirc'
-        }).promise().done(function() {
-          if (!$next.is(':visible')) {
-            $next.find('input').prop('checked', false);
-          }
-        });
+        })
+          .promise()
+          .done(function() {
+            if (!$next.is(':visible')) {
+              $next.find('input').prop('checked', false);
+            }
+          });
       }
     });
   }
-
-}(jQuery));
+})(jQuery);

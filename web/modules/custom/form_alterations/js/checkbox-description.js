@@ -5,7 +5,9 @@
    * Shows a description set on a checkbox when the checkbox is checked.
    */
   $(function() {
-    var $checkboxes = $('.form-checkbox[data-description]').closest('.form-checkboxes');
+    var $checkboxes = $('.form-checkbox[data-description]').closest(
+      '.form-checkboxes'
+    );
 
     $checkboxes.on('click', function(e) {
       if (e.target.tagName.toUpperCase() !== 'LABEL') {
@@ -14,9 +16,11 @@
     });
 
     $checkboxes.each(function() {
-      $(this).find('.form-type-checkbox').each(function() {
-        updateCheckboxDescription($(this), true);
-      });
+      $(this)
+        .find('.form-type-checkbox')
+        .each(function() {
+          updateCheckboxDescription($(this), true);
+        });
     });
   });
 
@@ -36,8 +40,9 @@
 
     if ($checkbox.is(':checked')) {
       if (!$description.length) {
-        $description = $('<div>')
-          .addClass('form-checkbox--description description');
+        $description = $('<div>').addClass(
+          'form-checkbox--description description'
+        );
 
         if (!init) {
           $description.hide();
@@ -48,10 +53,8 @@
         $checkboxContainer.append($description);
       }
       $description.stop(true).slideDown();
-    }
-    else if ($description.length) {
+    } else if ($description.length) {
       $description.stop(true).slideUp();
     }
   }
-
-}(jQuery));
+})(jQuery);
