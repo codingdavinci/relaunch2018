@@ -1,6 +1,4 @@
 (function($) {
-  'use strict';
-
   /**
    * Drupal flattens the taxonomy hierarchy when rendering taxonomy checkboxes.
    * This is done at an early stage in TermSelection::getReferenceableEntities.
@@ -11,11 +9,11 @@
    * TermSelection::getReferenceableEntities adds one slash to the label per
    * hierarchy level.
    */
-  $(function() {
-    var $checkboxes = $('.form-checkboxes');
+  $(() => {
+    const $checkboxes = $('.form-checkboxes');
 
     $checkboxes.each(function() {
-      var $this = $(this);
+      const $this = $(this);
       insertHierarchyIntoHtml($this);
       addClickBehaviour($this);
     });
@@ -27,23 +25,21 @@
    * @param {jQuery} $checkboxes
    */
   function insertHierarchyIntoHtml($checkboxes) {
-    var $items = $checkboxes.children();
-    var currentLevel = 0;
-    var currentLevelChecked = false;
-    var html = '';
+    const $items = $checkboxes.children();
+    let currentLevel = 0;
+    let currentLevelChecked = false;
+    let html = '';
 
     $items.each(function() {
-      var $item = $(this);
-      var level = getLevel($(this));
-      var $label = $item.find('label');
+      const $item = $(this);
+      const level = getLevel($(this));
+      const $label = $item.find('label');
       $label.text($label.text().replace(/^-*/g, ''));
 
       if (level > currentLevel) {
-        html +=
-          '<div class="hierarchy hierarchy-level-' +
-          level +
-          (currentLevelChecked ? ' hierarchy-level-visible' : '') +
-          '">';
+        html += `<div class="hierarchy hierarchy-level-${level}${
+          currentLevelChecked ? ' hierarchy-level-visible' : ''
+        }">`;
       } else if (level < currentLevel) {
         html += '</div>';
       }
@@ -76,11 +72,11 @@
    * @param $checkboxes
    */
   function addClickBehaviour($checkboxes) {
-    var $items = $checkboxes.find('div.form-item');
+    const $items = $checkboxes.find('div.form-item');
 
-    $items.on('click', function(e) {
-      var $item = $(e.target).closest('div.form-item');
-      var $next = $item.next();
+    $items.on('click', e => {
+      const $item = $(e.target).closest('div.form-item');
+      const $next = $item.next();
 
       if ($next.hasClass('hierarchy')) {
         $next.stop(true);
@@ -88,7 +84,7 @@
           easing: 'easeInOutCirc'
         })
           .promise()
-          .done(function() {
+          .done(() => {
             if (!$next.is(':visible')) {
               $next.find('input').prop('checked', false);
             }

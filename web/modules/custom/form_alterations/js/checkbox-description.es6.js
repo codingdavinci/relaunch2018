@@ -1,15 +1,13 @@
 (function($) {
-  'use strict';
-
   /**
    * Shows a description set on a checkbox when the checkbox is checked.
    */
-  $(function() {
-    var $checkboxes = $('.form-checkbox[data-description]').closest(
+  $(() => {
+    const $checkboxes = $('.form-checkbox[data-description]').closest(
       '.form-checkboxes'
     );
 
-    $checkboxes.on('click', function(e) {
+    $checkboxes.on('click', e => {
       if (e.target.tagName.toUpperCase() !== 'LABEL') {
         updateCheckboxDescription($(e.target).closest('.form-type-checkbox'));
       }
@@ -29,14 +27,14 @@
    * @param {bool} [init]
    */
   function updateCheckboxDescription($checkboxContainer, init) {
-    var $checkbox = $checkboxContainer.find('input');
-    var description = $checkbox.data('description');
+    const $checkbox = $checkboxContainer.find('input');
+    const description = $checkbox.data('description');
 
     if (!description) {
       return;
     }
 
-    var $description = $checkboxContainer.find('.form-checkbox--description');
+    let $description = $checkboxContainer.find('.form-checkbox--description');
 
     if ($checkbox.is(':checked')) {
       if (!$description.length) {

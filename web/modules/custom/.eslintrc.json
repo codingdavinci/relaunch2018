@@ -2,12 +2,8 @@
   "extends": [
     "../../core/.eslintrc.json"
   ],
-  "env": {
-    "es6": false
-  },
-  "parserOptions": {
-    "ecmaVersion": 5,
-    "sourceType": "script"
+  "globals": {
+    "Hammer": true
   },
   "rules": {
     "func-names": "off",
@@ -15,11 +11,6 @@
     "no-console": "off",
     "no-plusplus": "off",
     "no-use-before-define": "off",
-    "no-var": "off",
-    "object-shorthand": "off",
-    "prefer-arrow-callback": "off",
-    "prefer-template": "off",
-    "strict": ["error", "function"],
     "quotes": ["error", "single"],
     "valid-jsdoc": "off",
     "vars-on-top": "off"

@@ -4,13 +4,11 @@
  * end of the article teaser text for displaying it inline with the text.
  */
 (function($) {
-  'use strict';
-
-  $(function() {
+  $(() => {
     $(
       '.node--type-article.node--view-mode-teaser, .node--type-article.node--view-mode-frontpage'
     ).each(function() {
-      var $paragraphs = $(this)
+      const $paragraphs = $(this)
         .find('.field--name-field-paragraphs')
         .find('p');
 
@@ -18,7 +16,7 @@
         return;
       }
 
-      var $links = $(this)
+      let $links = $(this)
         .find('.node__links')
         .remove();
 

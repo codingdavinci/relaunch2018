@@ -7,3 +7,5 @@ profiles/**/libraries/**/*
 **/js_test_files/**/*
 **/node_modules/**/*
 modules/contrib/**/*
+*.js
+!*.es6.js

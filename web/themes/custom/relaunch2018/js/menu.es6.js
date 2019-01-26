@@ -3,10 +3,8 @@
  * Main menu behaviour.
  */
 (function($) {
-  'use strict';
-
-  $(function() {
-    var $primaryMenu = $('.region-primary-menu');
+  $(() => {
+    const $primaryMenu = $('.region-primary-menu');
 
     considerAdminToolbarOffset($primaryMenu);
     initAnimations($primaryMenu);
@@ -16,15 +14,13 @@
    * @param {jQuery} $primaryMenu
    */
   function initAnimations($primaryMenu) {
-    var $toggler = $('.navbar-toggler');
-    var $menu = $('#mainMenu');
-    var $menuContainer = $menu.closest('.navbar--menu');
+    const $toggler = $('.navbar-toggler');
+    const $menu = $('#mainMenu');
+    const $menuContainer = $menu.closest('.navbar--menu');
 
     $primaryMenu
       .find('.dropdown-toggle')
-      .on('click', function(e) {
-        e.preventDefault();
-      })
+      .on('click', e => e.preventDefault())
       .parent()
       .on('show.bs.dropdown hide.bs.dropdown', function(e) {
         $(this)
@@ -36,8 +32,8 @@
           });
       });
 
-    $menu.on('show.bs.collapse hide.bs.collapse', function(e) {
-      var show = e.type === 'show';
+    $menu.on('show.bs.collapse hide.bs.collapse', e => {
+      const show = e.type === 'show';
 
       $toggler.toggleClass('collapsed', !show).attr('aria-expanded', show);
 
@@ -55,7 +51,7 @@
    */
   function updateMenuItemTransitionDelays($menu, isShown) {
     $menu.find('.menu > li').each(function(i) {
-      $(this).css('transition-delay', (isShown ? 0 : i * 0.05) + 's');
+      $(this).css('transition-delay', `${isShown ? 0 : i * 0.05}s`);
     });
   }
 
@@ -63,18 +59,16 @@
    * @param {jQuery} $primaryMenu
    */
   function considerAdminToolbarOffset($primaryMenu) {
-    var $body = $('body');
+    const $body = $('body');
 
     if (
       $body.hasClass('toolbar-horizontal') ||
       $body.hasClass('toolbar-vertical')
     ) {
-      var $navbar = $primaryMenu.find('.navbar.fixed-top');
+      const $navbar = $primaryMenu.find('.navbar.fixed-top');
       setPositions($navbar);
 
-      $(window).on('resize', function() {
-        setPositions($navbar);
-      });
+      $(window).on('resize', () => setPositions($navbar));
     }
   }
 
@@ -85,8 +79,8 @@
    */
   function setPositions($elements) {
     $elements.each(function() {
-      var isFixed = $(this).css('position') === 'fixed';
-      var $this = $(this);
+      const isFixed = $(this).css('position') === 'fixed';
+      const $this = $(this);
 
       $this
         .css('position', 'absolute')

@@ -3,15 +3,13 @@
  * FAQ view interaction behaviour.
  */
 (function($) {
-  'use strict';
-
-  $(function() {
+  $(() => {
     $('.view-faq')
       .find('.views-field-title a')
-      .on('click', function(e) {
-        var $a = $(e.target);
-        var $li = $a.closest('li');
-        var $content = $li.find('.item-content');
+      .on('click', e => {
+        const $a = $(e.target);
+        const $li = $a.closest('li');
+        const $content = $li.find('.item-content');
 
         $content
           .stop(true)
@@ -19,9 +17,9 @@
             easing: 'easeInOutCirc'
           })
           .promise()
-          .done(function() {
-            $li[$content.is(':visible') ? 'addClass' : 'removeClass']('active');
-          });
+          .done(() =>
+            $li[$content.is(':visible') ? 'addClass' : 'removeClass']('active')
+          );
 
         return false;
       });

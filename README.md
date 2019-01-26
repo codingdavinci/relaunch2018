@@ -26,15 +26,17 @@ The project was set up using the [Composer template for Drupal projects](https:/
 ### Development
 
 * Skip the `--no-dev` flag when running `composer install`.
-* In order to compile [SCSS files](https://sass-lang.com/) files, it is recommended to have [Node.js](https://nodejs.org/) installed. ([Gulp](https://gulpjs.com/) tasks are set up for processing the SCSS files.) Having installed Node.js run `npm install` to download required packages. Subsequently, you can run `gulp`, which is installed through [npm](https://www.npmjs.com/), every time SCSS files need to be compiled.
+* In order to compile [SCSS files](https://sass-lang.com/) files and transpile ES6 JavaScript files, it is recommended to have [Node.js](https://nodejs.org/) installed. Packages are managed by the [yarn package manager](https://yarnpkg.com/). Having installed Node.js and yarn (i.e. `npm install -g yarn`), run `yarn` to download required packages.
+* [Gulp](https://gulpjs.com/) tasks are set up for processing the SCSS files. After having installed the Gulp CLI (i.e. `npm install -g gulp-cli`), you can run `gulp` every time SCSS files need to be compiled.
+* ES6 JavaScript transpiling may be done using a yarn script supplied by Drupal core: `yarn build:js`. (Watch [Drupal issue #2957390](https://www.drupal.org/project/drupal/issues/2957390) for removing duplicated in the root `package.json` file in the future.)
 
 ## Updating
 
 Drupal nudges administrators about available security updates. When updating Drupal core or when applying a Drupal module’s new major version, a backup of the website’s files should be created. The database may be dumped to a file by running `vendor/bin/drush sql-dump` using the [drush command line shell](http://www.drush.org/). Updating is easiest using composer in combination with drush.
 
-Updates should be applied in a development environment first: Run `composer update` for minor version updates or `composer require <component>:<new version constraint>` for major version updates. After ensuring that the update works properly, push the changes to the `composer.lock` file to the repository.
+Updates should be applied in a development environment first: Run `composer update` for minor version updates or `composer require <component>:<new version constraint>` for major version updates. After ensuring that the update works properly, push the changes to the `composer.lock` and `composer.json` file to the repository.
 
-While just being required for development, updating npm packages is similar: Run `npm update` for minor version updates or `npm install <package name>@<version constraint>` for major version updates and push the changes to the `package-lock.json` file to the repository.
+While just being required for development, updating yarn packages is similar: Run `yarn upgrade` for minor version updates or `yarn upgrade <package name>@<version constraint>` for major version updates and push the changes to `yarn.lock` and the `package.json` file to the repository.
 
 In the production environment, pull the updated repository and run:
 1. `composer install --no-dev` to synchronize composer components.

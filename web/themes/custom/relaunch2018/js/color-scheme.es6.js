@@ -3,16 +3,10 @@
  * Color scheme specific functionality.
  */
 (function($) {
-  'use strict';
-
-  $(function() {
+  $(() => {
     $('[data-color-scheme-hover]').hover(
-      function(e) {
-        changeColor(e, true);
-      },
-      function(e) {
-        changeColor(e, false);
-      }
+      e => changeColor(e, true),
+      e => changeColor(e, false)
     );
   });
 
@@ -21,13 +15,13 @@
    * @param {boolean} mouseOver
    */
   function changeColor(event, mouseOver) {
-    var $container = $(event.target).closest('[data-color-scheme-hover]');
-    var color = getColor($container, mouseOver);
+    const $container = $(event.target).closest('[data-color-scheme-hover]');
+    const color = getColor($container, mouseOver);
 
     if (color) {
       $container.stop(true).animate(
         {
-          backgroundColor: '#' + color
+          backgroundColor: `#${color}`
         },
         {
           duration: 'fast'
@@ -45,7 +39,7 @@
    * @return {string|null}
    */
   function getColor($container, mouseOver) {
-    var colorScheme = $container.data('color-scheme-hover');
+    const colorScheme = $container.data('color-scheme-hover');
 
     if ($.isArray(colorScheme) && colorScheme.length === 2) {
       return colorScheme[mouseOver ? 1 : 0];

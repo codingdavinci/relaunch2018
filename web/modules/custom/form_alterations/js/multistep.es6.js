@@ -1,15 +1,13 @@
 (function($, Drupal) {
-  'use strict';
-
   /**
    * Adds multi-step functionality to horizontal tabs.
    */
-  $(function() {
-    var $tabs = $('.horizontal-tabs');
-    var $panes = $tabs.find('.horizontal-tabs-panes > details');
+  $(() => {
+    const $tabs = $('.horizontal-tabs');
+    const $panes = $tabs.find('.horizontal-tabs-panes > details');
 
     $panes.each(function(i) {
-      var $pane = $(this);
+      const $pane = $(this);
       $pane.append(
         '<div class="form-alter--multistep">' +
           '<div class="form-alter--multistep--back"></div>' +
@@ -18,13 +16,9 @@
       );
 
       if (this !== $panes.get(0)) {
-        $(
-          '<button class="button button--primary">' +
-            Drupal.t('back') +
-            '</button>'
-        )
+        $(`<button class="button button--primary">${Drupal.t('back')}</button>`)
           .appendTo($pane.find('.form-alter--multistep--back'))
-          .on('click', function() {
+          .on('click', () => {
             $panes
               .eq(i - 1)
               .data('horizontalTab')
@@ -35,13 +29,9 @@
       }
 
       if (this !== $panes.get($panes.length - 1)) {
-        $(
-          '<button class="button button--primary">' +
-            Drupal.t('next') +
-            '</button>'
-        )
+        $(`<button class="button button--primary">${Drupal.t('next')}</button>`)
           .appendTo($pane.find('.form-alter--multistep--next'))
-          .on('click', function() {
+          .on('click', () => {
             $panes
               .eq(i + 1)
               .data('horizontalTab')
@@ -57,13 +47,13 @@
    * @param {jQuery} $pane
    */
   function scrollToTop($pane) {
-    var offsetTop = $pane.closest('.horizontal-tabs').offset().top;
-    var $toolbar = $('#toolbar-bar');
+    const $toolbar = $('#toolbar-bar');
+    let offsetTop = $pane.closest('.horizontal-tabs').offset().top;
 
     if ($toolbar.length && $toolbar.is(':visible')) {
       offsetTop -= $toolbar.outerHeight();
 
-      var $toolbarTray = $toolbar.find('.toolbar-tray-horizontal');
+      const $toolbarTray = $toolbar.find('.toolbar-tray-horizontal');
 
       if ($toolbarTray.length && $toolbarTray.is(':visible')) {
         offsetTop -= $toolbarTray.outerHeight();
