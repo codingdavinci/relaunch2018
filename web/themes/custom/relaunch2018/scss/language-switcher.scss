@@ -7,7 +7,7 @@
   font-size: 1.2rem;
   font-weight: $font-weight-normal;
   margin: 0;
-  margin-right: .75rem;
+  margin-right: 0.75rem;
   padding-left: 0;
   user-select: none;
 
@@ -36,14 +36,14 @@
 
     span {
       @include curlyBraces($color-gray-4);
-      padding: .1rem .3rem
+      padding: 0.1rem 0.3rem;
     }
 
     a {
       @include curlyBraces($color-white);
       background-color: $color-white;
       color: $color-green-lighter;
-      padding: .1rem .3rem
+      padding: 0.1rem 0.3rem;
     }
 
     &.is-active {

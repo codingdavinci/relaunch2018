@@ -35,7 +35,6 @@
                     }
                   }
                 }
-
               }
             }
           }
@@ -51,7 +50,7 @@
 
             input {
               @include fontStyle(small);
-              padding: .4em;
+              padding: 0.4em;
               width: 100%;
             }
           }
@@ -68,7 +67,6 @@
               padding-right: 20px;
             }
           }
-
         }
 
         & > fieldset {
@@ -84,13 +82,12 @@
 
         .form-actions {
           input {
-            padding-left: .4em;
-            padding-right: .4em;
+            padding-left: 0.4em;
+            padding-right: 0.4em;
             margin: 0 0 1rem 0;
             width: 100%;
           }
         }
-
       }
     }
   }
@@ -153,7 +150,7 @@
             }
 
             .field {
-              margin-top: .2rem;
+              margin-top: 0.2rem;
             }
           }
         }
@@ -207,9 +204,8 @@
               margin-top: 1rem;
 
               .field {
-                margin-top: .2rem;
+                margin-top: 0.2rem;
               }
-
             }
           }
         }
@@ -309,9 +305,8 @@
         @include rounded;
         background-color: $color-orange;
         color: $color-white;
-        padding: .4rem 2rem;
+        padding: 0.4rem 2rem;
       }
     }
   }
-
 }

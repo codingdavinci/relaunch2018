@@ -17,7 +17,7 @@
 
   & > .field {
     @include media-breakpoint-up(sm) {
-      margin-bottom: .5rem;
+      margin-bottom: 0.5rem;
     }
 
     &:first-child {

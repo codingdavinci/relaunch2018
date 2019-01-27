@@ -29,7 +29,7 @@
 
     .description,
     .counter {
-      margin-bottom: .75em;
+      margin-bottom: 0.75em;
     }
 
     .form-item,
@@ -69,7 +69,7 @@
       &.form-select {
         font-size: $font-size-large;
         line-height: normal;
-        padding: .5em;
+        padding: 0.5em;
         width: 25em;
       }
     }
@@ -77,7 +77,7 @@
     .select2-selection {
       font-size: $font-size-large;
       line-height: normal;
-      padding: .5em;
+      padding: 0.5em;
     }
 
     .field--widget-paragraphs td {
@@ -110,7 +110,7 @@
           & > .form-type-checkbox {
             display: inline-block;
             margin: 0;
-            padding: .8em 0 .2em 0;
+            padding: 0.8em 0 0.2em 0;
             width: 100%;
           }
         }
@@ -186,7 +186,6 @@
             }
           }
         }
-
       }
     }
 
@@ -224,7 +223,7 @@
           }
         }
       }
-      
+
       .field--name-field-attribution {
         .paragraph-top {
           display: none;
@@ -273,7 +272,6 @@
             }
           }
         }
-
       }
 
       &.field--name-field-media-filesize,
@@ -355,7 +353,6 @@
               }
             }
           }
-
         }
 
         &.field--name-field-license-media {
@@ -394,10 +391,10 @@
         thead {
           display: none;
         }
-        
+
         .paragraph-top {
           display: grid;
-          
+
           .paragraph-type-label {
             display: none;
           }
@@ -409,14 +406,13 @@
 
         .field--type-link {
           margin-right: 20px;
-          margin-top: .75em;
+          margin-top: 0.75em;
 
           & > div > .form-item {
             margin-top: 0;
           }
         }
       }
-
     }
 
     .field--name-field-events {
@@ -498,7 +494,6 @@
             }
           }
         }
-
       }
 
       &.field--name-field-links {
@@ -545,7 +540,6 @@
         display: none;
       }
     }
-
   }
 }
 

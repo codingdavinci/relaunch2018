@@ -26,7 +26,7 @@
     .media--image--header--attribution {
       @include fontStyle(small);
       color: $color-gray-3;
-      opacity: .6;
+      opacity: 0.6;
     }
   }
 
@@ -38,7 +38,7 @@
     background-color: $color-gray-6;
 
     @include media-breakpoint-up(md) {
-      &> * {
+      & > * {
         padding-left: 20px;
         padding-right: 20px;
       }

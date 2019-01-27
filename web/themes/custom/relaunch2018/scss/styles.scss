@@ -10,11 +10,11 @@ body {
   @include fontStyle(default);
   color: $color-gray-3;
   font-family: $font-family-base;
-  letter-spacing: .01em;
+  letter-spacing: 0.01em;
   line-height: 1.4;
 
   &.cke_editable {
-    padding: .5rem;
+    padding: 0.5rem;
   }
 }
 
@@ -130,7 +130,7 @@ a {
     @include easeAll;
     color: $color-white;
     font-weight: $font-weight-semi-bold;
-    padding: .3em 1.4em;
+    padding: 0.3em 1.4em;
 
     &:hover {
       text-decoration: none;
@@ -145,7 +145,7 @@ a {
       background-color: $color-green-lighter;
 
       &:hover {
-        background-color: rgba($color-green-lighter, .6);
+        background-color: rgba($color-green-lighter, 0.6);
       }
     }
 
@@ -153,13 +153,13 @@ a {
       background-color: $color-red;
 
       &:hover {
-        background-color: rgba($color-green-lighter, .6);
+        background-color: rgba($color-green-lighter, 0.6);
       }
     }
 
     &.button--large {
       @include fontStyle(large);
-      letter-spacing: .01em;
+      letter-spacing: 0.01em;
     }
 
     &.button--icon {
@@ -172,8 +172,8 @@ a {
         &:before {
           content: '\e825';
           display: inline-block;
-          font-size: .6em;
-          padding-bottom: .3em;
+          font-size: 0.6em;
+          padding-bottom: 0.3em;
           vertical-align: middle;
         }
       }
@@ -197,9 +197,9 @@ table.table--white {
   @include boxShadow;
   background-color: $color-white;
   border-collapse: separate;
-  border-spacing: .8em;
+  border-spacing: 0.8em;
   margin-bottom: 1.5rem;
-  padding-bottom: .8em;
+  padding-bottom: 0.8em;
 
   caption {
     @include border-top-radius($border-radius);
@@ -218,12 +218,12 @@ table.table--white {
     td,
     th {
       @include fontStyle(small);
-      border-bottom: 1px solid rgba($color-main, .4);
-      padding-bottom: .8em;
+      border-bottom: 1px solid rgba($color-main, 0.4);
+      padding-bottom: 0.8em;
       vertical-align: top;
 
       &:nth-child(odd) {
-        color: $color-green
+        color: $color-green;
       }
       &:nth-child(even) {
         color: $color-gray-1;
@@ -266,7 +266,7 @@ table.table--white {
         border-bottom: 1px solid $color-white;
 
         &:nth-child(odd) {
-          color: $color-darker-green
+          color: $color-darker-green;
         }
       }
     }
@@ -278,14 +278,14 @@ figcaption {
   font-size: 1.1rem;
   font-weight: $font-weight-light;
   line-height: 1.1;
-  opacity: .5;
+  opacity: 0.5;
   text-align: right;
 }
 
 .icon-arrow {
   &:before {
-    font-size: .7rem;
-    margin-right: .8rem !important;;
+    font-size: 0.7rem;
+    margin-right: 0.8rem !important;
     text-decoration: none;
     vertical-align: middle;
   }
@@ -293,9 +293,9 @@ figcaption {
 
 .icon-mail-1 {
   &:before {
-    font-size: .9rem;
-    margin-right: .6rem !important;
-    vertical-align: .05rem;
+    font-size: 0.9rem;
+    margin-right: 0.6rem !important;
+    vertical-align: 0.05rem;
   }
 }
 

@@ -10,14 +10,14 @@
     display: inline-block;
 
     &.field--name-field-caption {
-      margin-top: .9rem;
+      margin-top: 0.9rem;
     }
   }
 
   img {
     @include rounded;
     height: auto;
-    width: 100%
+    width: 100%;
   }
 
   &.media--view-mode-full {

@@ -2,15 +2,15 @@
 @import '../../../../../../web/libraries/bootstrap/scss/bootstrap';
 
 @mixin easeAll {
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 @mixin easeOut {
-  transition: all .4s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 @mixin fadeInOut {
-  transition: opacity .4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
 }
 
 @mixin curlyBraces($color, $fontWeight: '') {
@@ -24,12 +24,12 @@
   &:after {
     color: $color;
     content: '}';
-    margin-left: .1em;
+    margin-left: 0.1em;
   }
   &:before {
     color: $color;
     content: '{';
-    margin-right: .1em;
+    margin-right: 0.1em;
   }
 }
 
@@ -44,36 +44,36 @@
 @mixin fontStyle($type) {
   @if $type == 'large' {
     font-size: 1.4rem;
-    letter-spacing: .04em;
+    letter-spacing: 0.04em;
 
     @include media-breakpoint-up(md) {
       font-size: 1.6rem;
     }
 
     @include media-breakpoint-up(lg) {
-      font-size: 1.8rem
+      font-size: 1.8rem;
     }
   }
   @elseif $type == 'small' {
-    font-size: .9rem;
+    font-size: 0.9rem;
 
     @include media-breakpoint-up(md) {
       font-size: 1rem;
     }
   }
   @elseif $type == 'very-small' {
-    font-size: .8rem;
-    letter-spacing: .04em;
+    font-size: 0.8rem;
+    letter-spacing: 0.04em;
 
     @include media-breakpoint-up(md) {
-      font-size: .9rem;
+      font-size: 0.9rem;
     }
   }
   @elseif $type == 'badge' {
-    font-size: .8rem;
+    font-size: 0.8rem;
 
     @include media-breakpoint-up(md) {
-      font-size: .9rem;
+      font-size: 0.9rem;
     }
   }
   @elseif $type == 'title' {
@@ -82,15 +82,15 @@
     line-height: 1.2;
 
     @include media-breakpoint-up(md) {
-      font-size: 2.2rem
+      font-size: 2.2rem;
     }
 
     @include media-breakpoint-up(lg) {
-      font-size: 2.6rem
+      font-size: 2.6rem;
     }
   }
   @elseif $type == 'block' {
-    letter-spacing: .01rem;
+    letter-spacing: 0.01rem;
     line-height: 1.3;
   }
   @else {
@@ -155,7 +155,7 @@
 
 @mixin icon {
   font-family: $font-family-icons;
-  margin-right: .4em;
+  margin-right: 0.4em;
 }
 
 @mixin fa-icon {

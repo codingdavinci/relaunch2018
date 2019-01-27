@@ -6,8 +6,8 @@
   color: $white;
   display: inline-block;
   font-weight: $font-weight-bold;
-  margin-right: .2em;
-  padding: .15em .4em .25em .4em;
+  margin-right: 0.2em;
+  padding: 0.15em 0.4em 0.25em 0.4em;
 
   a {
     text-decoration: underline;
@@ -30,7 +30,7 @@
   }
 
   &.badge--theme {
-    background-color: lighten($color-deep-blue, 20%);;
+    background-color: lighten($color-deep-blue, 20%);
   }
 
   &.badge--controlled-vocabularies,
@@ -185,7 +185,6 @@
           }
         }
       }
-
     }
   }
 }

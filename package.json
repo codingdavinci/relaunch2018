@@ -27,11 +27,13 @@
     "minimist": "^1.2.0",
     "node-sass-import-once": "^1.2.0",
     "path": "^0.12.7",
-    "prettier": "^1.16.1"
+    "prettier": "^1.16.1",
+    "stylelint": "^9.10.1"
   },
   "scripts": {
     "build:js": "node ./web/core/scripts/js/babel-es6-build.js",
     "build:js-dev": "cross-env NODE_ENV=development node ./web/core/scripts/js/babel-es6-build.js",
+    "lint:scss": "stylelint \"web/themes/custom/**/*.scss\" \"web/modules/custom/**/*.scss\"",
     "watch:js": "node ./web/core/scripts/js/babel-es6-watch.js",
     "watch:js-dev": "cross-env NODE_ENV=development node ./web/core/scripts/js/babel-es6-watch.js"
   },

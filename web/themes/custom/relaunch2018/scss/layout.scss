@@ -15,7 +15,7 @@ body {
 
 .node__links {
   display: none;
-  margin-left: .8rem;
+  margin-left: 0.8rem;
 
   @include media-breakpoint-up(md) {
     display: inline;
@@ -41,7 +41,7 @@ header {
     .block-block-content:first-child {
       @include curlyBraces($color-dull-blue);
       display: inline-block;
-      margin-right: .4em;
+      margin-right: 0.4em;
 
       &:before,
       &:after {
@@ -76,10 +76,12 @@ header {
           img {
             @include img-fluid;
 
-            -webkit-filter: drop-shadow(5px 5px 25px rgba(0,0,0,0.15));
+            -webkit-filter: drop-shadow(5px 5px 25px rgba(0, 0, 0, 0.15));
             filter: url(#drop-shadow);
             -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=5, OffY=1, Color='#444')";
+            /* stylelint-disable declaration-block-no-duplicate-properties */
             filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=5, OffY=1, Color='#444')";
+            /* stylelint-enable */
           }
         }
 
@@ -124,7 +126,7 @@ header {
 
         display: inline;
         font-size: 1rem;
-        margin-right: .4rem;
+        margin-right: 0.4rem;
 
         a {
           color: $color-deep-teal;
@@ -201,8 +203,8 @@ header {
 
       &.icon-mail-1 {
         &:before {
-          font-size: .7em;
-          margin-left: .4em;
+          font-size: 0.7em;
+          margin-left: 0.4em;
         }
       }
     }
@@ -212,7 +214,7 @@ header {
 
       img {
         mix-blend-mode: multiply;
-        opacity: .6;
+        opacity: 0.6;
       }
 
       & > div {
@@ -227,11 +229,11 @@ header {
 
     .field--name-field-textblock {
       color: $color-white;
-      font-size: 1.0rem;
+      font-size: 1rem;
 
       h3 {
         color: $color-white;
-        font-size: 1.0rem;
+        font-size: 1rem;
         font-weight: $font-weight-bold;
       }
     }
@@ -247,7 +249,7 @@ header {
     cursor: pointer;
     font-weight: $font-weight-bold;
     margin-bottom: 1em;
-    padding: .2em .5em;
+    padding: 0.2em 0.5em;
 
     &:hover {
       background-color: darken($color-gray-5, 5%);
@@ -258,7 +260,7 @@ header {
       content: '';
       display: inline-block;
       font-family: $font-family-icons;
-      margin-right: .4em;
+      margin-right: 0.4em;
       transform: rotate(90deg);
       vertical-align: middle;
     }
