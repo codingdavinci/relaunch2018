@@ -1,4 +1,4 @@
-const gulp = require('gulp');
+const { dest, series, src } = require('gulp');
 const del = require('del');
 const merge = require('merge-stream');
 const sass = require('gulp-sass');
@@ -39,7 +39,7 @@ function scss() {
   return merge(
 
     // Frontend theme CSS
-    gulp.src([
+    src([
       root + 'scss/*.scss',
       root + 'scss/nodes/*.scss',
       root + 'scss/paragraphs/*.scss',
@@ -49,30 +49,30 @@ function scss() {
     .pipe(sass(sassOptions))
     .pipe(replace(/@charset [^;]+;/g, ''))
     .pipe(header(headerNote))
-    .pipe(gulp.dest(root + 'css')),
+    .pipe(dest(root + 'css')),
 
     // Standalone styles.css is supplied to backend CKEditor.
-    gulp.src(root + 'scss/styles.scss')
+    src(root + 'scss/styles.scss')
     .pipe(sass(sassOptions))
     .pipe(replace(/@charset [^;]+;/g, ''))
     .pipe(header(headerNote))
-    .pipe(gulp.dest(root + 'css')),
+    .pipe(dest(root + 'css')),
 
     // Admin theme CSS
-    gulp.src('web/themes/custom/seven_subtheme/scss/*.scss')
+    src('web/themes/custom/seven_subtheme/scss/*.scss')
     .pipe(concat('styles.scss'))
     .pipe(sass(sassOptions))
     .pipe(replace(/@charset [^;]+;/g, ''))
     .pipe(header(headerNote))
-    .pipe(gulp.dest('web/themes/custom/seven_subtheme/css')),
+    .pipe(dest('web/themes/custom/seven_subtheme/css')),
 
     // Custom form CSS
-    gulp.src('web/modules/custom/form_alterations/scss/*.scss')
+    src('web/modules/custom/form_alterations/scss/*.scss')
     .pipe(sass(sassOptions))
     .pipe(replace(/@charset [^;]+;/g, ''))
     .pipe(header(headerNote))
-    .pipe(gulp.dest('web/modules/custom/form_alterations/css'))
+    .pipe(dest('web/modules/custom/form_alterations/css'))
   );
 }
 
-exports.default = gulp.series(clean, scss);
+exports.default = series(clean, scss);
