@@ -33,6 +33,7 @@
   "scripts": {
     "build:js": "node ./web/core/scripts/js/babel-es6-build.js",
     "build:js-dev": "cross-env NODE_ENV=development node ./web/core/scripts/js/babel-es6-build.js",
+    "lint:js": "eslint \"web/themes/custom/**/*.es6.js\" \"web/modules/custom/**/*.es6.js\"",
     "lint:scss": "stylelint \"web/themes/custom/**/*.scss\" \"web/modules/custom/**/*.scss\"",
     "watch:js": "node ./web/core/scripts/js/babel-es6-watch.js",
     "watch:js-dev": "cross-env NODE_ENV=development node ./web/core/scripts/js/babel-es6-watch.js"

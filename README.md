@@ -51,3 +51,9 @@ In the production environment, pull the updated repository and run:
 ## Synchronizing configuration
 
 The site’s configuration is stored in the repository for having it applied when installing the project. Eventually, site maintainers will change configuration in the production environment. In order for plain development installations to be configured properly, it is recommended to sync back configuration changes made in production to the repository from time to time by exporting the configuration and pushing it to the repository. Configuration may be exported by running `vendor/bin/drush cex`, which will overwrite the files in `../config/sync`. Those files would need to be pushed to the repository.
+
+## Retaining code quality
+
+Yarn scripts are set up to lint ES6 JavaScript files and SCSS files:
+* Run `yarn lint:js` to check ES6 JavaScript files using [ESLint](https://eslint.org/).
+* Run `yarn lint:scss` to check SCSS files using [stylelint](https://stylelint.io/).
