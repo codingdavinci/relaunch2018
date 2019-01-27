@@ -22,7 +22,7 @@
 #node-data-set-edit-form .layout-region-node-main .counter,
 #node-project-edit-form .layout-region-node-main .description,
 #node-project-edit-form .layout-region-node-main .counter {
-  margin-bottom: .75em; }
+  margin-bottom: 0.75em; }
 
 #node-data-set-form .layout-region-node-main .form-item:not(.form-type-checkbox),
 #node-data-set-form .layout-region-node-main .field--type-boolean:not(.form-type-checkbox),
@@ -121,7 +121,7 @@
   #node-project-edit-form .layout-region-node-main select.form-select {
     font-size: 1rem;
     line-height: normal;
-    padding: .5em;
+    padding: 0.5em;
     width: 25em; }
 
 #node-data-set-form .layout-region-node-main .select2-selection,
@@ -130,7 +130,7 @@
 #node-project-edit-form .layout-region-node-main .select2-selection {
   font-size: 1rem;
   line-height: normal;
-  padding: .5em; }
+  padding: 0.5em; }
 
 #node-data-set-form .layout-region-node-main .field--widget-paragraphs td,
 #node-project-form .layout-region-node-main .field--widget-paragraphs td,
@@ -192,7 +192,7 @@
     #node-project-edit-form .layout-region-node-main .field--widget-options-buttons.field--name-field-controlled-vocabularies .form-checkboxes > .form-type-checkbox {
       display: inline-block;
       margin: 0;
-      padding: .8em 0 .2em 0;
+      padding: 0.8em 0 0.2em 0;
       width: 100%; }
 
 #node-data-set-form .layout-region-node-main .details-wrapper > .field--widget-options-buttons:first-child,
@@ -598,7 +598,7 @@
   #node-data-set-edit-form .layout-region-node-main .field--widget-paragraphs.field--name-field-team-members .field--type-link,
   #node-project-edit-form .layout-region-node-main .field--widget-paragraphs.field--name-field-team-members .field--type-link {
     margin-right: 20px;
-    margin-top: .75em; }
+    margin-top: 0.75em; }
     #node-data-set-form .layout-region-node-main .field--widget-paragraphs.field--name-field-team-members .field--type-link > div > .form-item,
     #node-project-form .layout-region-node-main .field--widget-paragraphs.field--name-field-team-members .field--type-link > div > .form-item,
     #node-data-set-edit-form .layout-region-node-main .field--widget-paragraphs.field--name-field-team-members .field--type-link > div > .form-item,
