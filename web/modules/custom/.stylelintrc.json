@@ -8,5 +8,8 @@
     "color-hex-length": "long",
     "plugin/no-browser-hacks": null,
     "unit-whitelist": ["fr", "deg", "em", "ex", "ms", "rem", "%", "s", "px", "vw", "vh"]
-  }
+  },
+  "ignoreFiles": [
+    "**/*.css"
+  ]
 }
