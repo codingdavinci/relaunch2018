@@ -54,6 +54,8 @@ The site’s configuration is stored in the repository for having it applied whe
 
 ## Retaining code quality
 
+Code should generally adhere to the [Drupal coding standards](https://www.drupal.org/docs/develop/standards/coding-standards).
+
 Yarn scripts are set up to lint ES6 JavaScript files and SCSS files:
 * Run `yarn lint:js` to check ES6 JavaScript files using [ESLint](https://eslint.org/).
 * Run `yarn lint:scss` to check SCSS files using [stylelint](https://stylelint.io/).
