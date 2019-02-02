@@ -43,7 +43,6 @@ function template_preprocess_block_figures(array &$variables) {
   $variables['counts']['institutions'] = \Drupal::service('entity_type.manager')
     ->getStorage('user')
     ->getQuery()
-    ->condition('status', 1)
     ->condition('roles', 'institution')
     ->count()
     ->execute();
