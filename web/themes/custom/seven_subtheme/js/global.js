@@ -8,25 +8,38 @@
 (function ($) {
   $(function () {
     $('body').on('change', function (e) {
-      if (!e.target.hasAttribute('data-public-domain')) {
-        return;
+      if (e.target.hasAttribute('data-public-domain')) {
+        hideAttributionInputOnPublicDomain(e.target);
       }
+    });
 
-      var $select = $(e.target);
-      var $selectWrapper = $select.closest('.form-wrapper');
+    hideAttributionInputOnPublicDomain();
+  });
+
+  function hideAttributionInputOnPublicDomain(select) {
+    var isPageLoad = !select;
+    var $select = select ? $(select) : $('select[data-public-domain]');
+
+    $select.each(function () {
+      var $this = $(this);
+      var $selectWrapper = $this.closest('.form-wrapper');
       var $subForm = $selectWrapper.closest('.paragraphs-subform');
       var $author = $subForm.find('.field--name-field-author');
-      var licenses = $select.data('public-domain');
+      var licenses = $this.data('public-domain');
 
       if (!$author.length) {
         return;
       }
 
-      var isPublicDomain = $.inArray($select.val(), licenses) !== -1;
+      var isPublicDomain = $.inArray($this.val(), licenses) !== -1;
       var animate = false;
 
       if (isPublicDomain && ($author.is(':visible') || $author.is(':animated'))) {
-        animate = $selectWrapper.css('display') === 'inline-block' ? 'fadeOut' : 'slideUp';
+        if (isPageLoad) {
+          animate = 'hide';
+        } else {
+          animate = $selectWrapper.css('display') === 'inline-block' ? 'fadeOut' : 'slideUp';
+        }
       } else if (!isPublicDomain && (!$author.is(':visible') || $author.is(':animated'))) {
         animate = $selectWrapper.css('display') === 'inline-block' ? 'fadeIn' : 'slideDown';
       }
@@ -39,5 +52,5 @@
         });
       }
     });
-  });
+  }
 })(jQuery);
