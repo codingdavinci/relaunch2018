@@ -149,8 +149,17 @@
               @include fontStyle(small);
             }
 
+            .field__item {
+              display: inline-block;
+            }
+
+            .paragraph {
+              display: inline-block;
+            }
+
             .field {
-              margin-top: 0.2rem;
+              display: inline-block;
+              margin: 0.2rem 0 0 0;
             }
           }
         }

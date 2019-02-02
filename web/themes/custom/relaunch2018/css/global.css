@@ -10217,8 +10217,13 @@ figcaption {
       @media (min-width: 768px) {
         .view .view-content .card-columns .card .card-body .field.field--name-field-event {
           font-size: 1rem; } }
+    .view .view-content .card-columns .card .card-body .field .field__item {
+      display: inline-block; }
+    .view .view-content .card-columns .card .card-body .field .paragraph {
+      display: inline-block; }
     .view .view-content .card-columns .card .card-body .field .field {
-      margin-top: 0.2rem; }
+      display: inline-block;
+      margin: 0.2rem 0 0 0; }
 
 .view.view-projects.view-display-id-page_1 .view-content {
   align-items: stretch;
