@@ -8736,15 +8736,9 @@ figcaption {
     .node--type-project .article--content-container .node__content .group--team {
       margin-top: 3rem;
       position: relative; }
-      .node--type-data-set .article--content-container .node__content .group--team .field--name-field-team-members,
-      .node--type-project .article--content-container .node__content .group--team .field--name-field-team-members {
-        display: grid;
-        grid-gap: 20px;
-        grid-template-columns: 1fr; }
-        @media (min-width: 992px) {
-          .node--type-data-set .article--content-container .node__content .group--team .field--name-field-team-members,
-          .node--type-project .article--content-container .node__content .group--team .field--name-field-team-members {
-            grid-template-columns: 1fr 1fr; } }
+      .node--type-data-set .article--content-container .node__content .group--team .field--name-field-team-members > .field__item,
+      .node--type-project .article--content-container .node__content .group--team .field--name-field-team-members > .field__item {
+        margin-bottom: 2rem; }
         .node--type-data-set .article--content-container .node__content .group--team .field--name-field-team-members > .field__item:last-child,
         .node--type-project .article--content-container .node__content .group--team .field--name-field-team-members > .field__item:last-child {
           margin-bottom: 0; }
