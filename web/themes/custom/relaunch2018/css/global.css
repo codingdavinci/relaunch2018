@@ -8694,12 +8694,6 @@ figcaption {
     .node--type-project .article--content-container .node__content fieldset .field--name-field-media-count,
     .node--type-project .article--content-container .node__content fieldset .field--name-field-objects-count {
       display: inline-block; }
-      .node--type-data-set .article--content-container .node__content fieldset .field--name-field-media-count.field--name-field-media-count:after,
-      .node--type-data-set .article--content-container .node__content fieldset .field--name-field-objects-count.field--name-field-media-count:after,
-      .node--type-project .article--content-container .node__content fieldset .field--name-field-media-count.field--name-field-media-count:after,
-      .node--type-project .article--content-container .node__content fieldset .field--name-field-objects-count.field--name-field-media-count:after {
-        content: ' ';
-        white-space: pre; }
     .node--type-data-set .article--content-container .node__content fieldset .field--name-field-controlled-vocabularies,
     .node--type-data-set .article--content-container .node__content fieldset .field--name-field-file-types,
     .node--type-data-set .article--content-container .node__content fieldset .field--name-field-metadata-format,

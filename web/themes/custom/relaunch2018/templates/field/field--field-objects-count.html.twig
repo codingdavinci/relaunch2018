@@ -13,9 +13,9 @@
   ]
 %}
 {% for item in items %}
-  <div{{ attributes.addClass(classes, 'field__item') }}>
+  <div{{ attributes.addClass(classes, 'field__item') }}>&nbsp;
     {%- trans -%}
-      (of {{ item.content['#markup'] }} objects)
+      (representing {{ item.content['#markup'] }} objects)
     {%- endtrans -%}
   </div>
 {% endfor %}
