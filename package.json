@@ -31,6 +31,8 @@
     "stylelint": "^9.10.1"
   },
   "scripts": {
+    "build": "yarn build:css && yarn build:js",
+    "build:css": "gulp",
     "build:js": "node ./web/core/scripts/js/babel-es6-build.js",
     "build:js-dev": "cross-env NODE_ENV=development node ./web/core/scripts/js/babel-es6-build.js",
     "lint:js": "eslint \"web/themes/custom/**/*.es6.js\" \"web/modules/custom/**/*.es6.js\"",
