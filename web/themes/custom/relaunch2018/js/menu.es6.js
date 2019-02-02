@@ -82,12 +82,17 @@
       const isFixed = $(this).css('position') === 'fixed';
       const $this = $(this);
 
-      $this
-        .css('position', 'absolute')
-        .css(
-          'top',
-          $this.position().top + parseFloat($('body').css('paddingTop'))
-        );
+      $this.css('position', 'absolute');
+
+      if (typeof $this.data('relaunch2018-menu-position-top') === 'undefined') {
+        $this.data('relaunch2018-menu-position-top', $this.position().top);
+      }
+
+      $this.css(
+        'top',
+        $this.data('relaunch2018-menu-position-top') +
+          parseFloat($('body').css('paddingTop'))
+      );
 
       if (isFixed) {
         $this.css('position', 'fixed');
