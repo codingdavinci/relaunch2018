@@ -7037,7 +7037,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 .block-block-figures {
   font-size: 1.4rem;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.01em;
   font-weight: 600; }
   @media (min-width: 768px) {
     .block-block-figures {
@@ -7136,7 +7136,7 @@ ul.ui-autocomplete li.ui-menu-item a {
       .header--tiles .header--tiles--container .header--tiles--content .header--tile--logo {
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
         font-size: 1.4rem;
-        letter-spacing: 0.04em;
+        letter-spacing: 0.01em;
         letter-spacing: 0.01rem;
         line-height: 1.3;
         border-radius: 4px;
@@ -8092,7 +8092,7 @@ h1 {
 h2 {
   color: #5dc4b8;
   font-size: 1.8rem;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.4;
   margin-bottom: 2rem; }
 
@@ -8107,7 +8107,7 @@ header h1 {
 
 h3 {
   color: #4f4f4f;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 600;
   line-height: 1.2;
   margin-bottom: 1.2rem; }
@@ -8197,7 +8197,7 @@ a {
         background-color: rgba(111, 207, 151, 0.6); }
     a.button.button--large {
       font-size: 1.4rem;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.01em;
       letter-spacing: 0.01em; }
       @media (min-width: 768px) {
         a.button.button--large {
@@ -8398,7 +8398,7 @@ figcaption {
       margin-bottom: 10px; }
     .node--type-article .article--header h3 {
       font-size: 1.4rem;
-      letter-spacing: 0.04em; }
+      letter-spacing: 0.01em; }
       @media (min-width: 768px) {
         .node--type-article .article--header h3 {
           font-size: 1.6rem; } }
@@ -8912,7 +8912,7 @@ figcaption {
 .path-events h1,
 .path-events .block-views-blockevents-block-1 > h2 {
   font-size: 1.4rem;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.01em;
   font-weight: 200;
   margin-bottom: 2rem;
   padding-left: 4px;
@@ -8943,16 +8943,7 @@ figcaption {
     .node--type-event.node--view-mode-full > .node__content > .field {
       margin-bottom: 5rem; }
       .node--type-event.node--view-mode-full > .node__content > .field h2 {
-        font-size: 1.4rem;
-        letter-spacing: 0.04em;
-        color: #1bbd7d;
         font-weight: 500; }
-        @media (min-width: 768px) {
-          .node--type-event.node--view-mode-full > .node__content > .field h2 {
-            font-size: 1.6rem; } }
-        @media (min-width: 992px) {
-          .node--type-event.node--view-mode-full > .node__content > .field h2 {
-            font-size: 1.8rem; } }
       .node--type-event.node--view-mode-full > .node__content > .field h3 {
         font-size: 1rem;
         text-transform: uppercase; }
@@ -9128,7 +9119,7 @@ figcaption {
         width: 80%; } }
     .node--type-event.node--view-mode-teaser.node--view-mode-preview h2, .node--type-event.node--view-mode-preview.node--view-mode-preview h2 {
       font-size: 1.4rem;
-      letter-spacing: 0.04em; }
+      letter-spacing: 0.01em; }
       @media (min-width: 768px) {
         .node--type-event.node--view-mode-teaser.node--view-mode-preview h2, .node--type-event.node--view-mode-preview.node--view-mode-preview h2 {
           font-size: 1.6rem; } }
@@ -9743,7 +9734,7 @@ figcaption {
     z-index: 1; }
     .paragraph--type--timeline .field--name-field-timeline-items > .field__item .paragraph--type--timeline-item .field--name-field-heading {
       font-size: 1.4rem;
-      letter-spacing: 0.04em; }
+      letter-spacing: 0.01em; }
       @media (min-width: 768px) {
         .paragraph--type--timeline .field--name-field-timeline-items > .field__item .paragraph--type--timeline-item .field--name-field-heading {
           font-size: 1.6rem; } }
@@ -9802,7 +9793,7 @@ figcaption {
   @media (min-width: 576px) and (min-width: 992px) {
       .paragraph--type--timeline .field--name-field-timeline-items.field--name-field-timeline-items--grid-3 > .field__item .paragraph--type--timeline-item .field--name-field-heading {
         font-size: 1.4rem;
-        letter-spacing: 0.04em; } }
+        letter-spacing: 0.01em; } }
     @media (min-width: 576px) and (min-width: 992px) and (min-width: 768px) {
       .paragraph--type--timeline .field--name-field-timeline-items.field--name-field-timeline-items--grid-3 > .field__item .paragraph--type--timeline-item .field--name-field-heading {
         font-size: 1.6rem; } }
@@ -9812,7 +9803,7 @@ figcaption {
   @media (min-width: 576px) and (min-width: 992px) {
       .paragraph--type--timeline .field--name-field-timeline-items.field--name-field-timeline-items--grid-3 .field--name-field-heading {
         font-size: 1.4rem;
-        letter-spacing: 0.04em; } }
+        letter-spacing: 0.01em; } }
     @media (min-width: 576px) and (min-width: 992px) and (min-width: 768px) {
       .paragraph--type--timeline .field--name-field-timeline-items.field--name-field-timeline-items--grid-3 .field--name-field-heading {
         font-size: 1.6rem; } }
@@ -9854,7 +9845,7 @@ figcaption {
 @media (min-width: 576px) and (min-width: 992px) {
     .paragraph--type--timeline .field--name-field-timeline-items.field--name-field-timeline-items--grid-4 > .field__item .paragraph--type--timeline-item .field--name-field-heading {
       font-size: 1.4rem;
-      letter-spacing: 0.04em; } }
+      letter-spacing: 0.01em; } }
     @media (min-width: 576px) and (min-width: 992px) and (min-width: 768px) {
       .paragraph--type--timeline .field--name-field-timeline-items.field--name-field-timeline-items--grid-4 > .field__item .paragraph--type--timeline-item .field--name-field-heading {
         font-size: 1.6rem; } }
@@ -9865,7 +9856,7 @@ figcaption {
 @media (min-width: 576px) and (min-width: 992px) {
     .paragraph--type--timeline .field--name-field-timeline-items.field--name-field-timeline-items--grid-4 .field--name-field-heading {
       font-size: 1.4rem;
-      letter-spacing: 0.04em; } }
+      letter-spacing: 0.01em; } }
     @media (min-width: 576px) and (min-width: 992px) and (min-width: 768px) {
       .paragraph--type--timeline .field--name-field-timeline-items.field--name-field-timeline-items--grid-4 .field--name-field-heading {
         font-size: 1.6rem; } }

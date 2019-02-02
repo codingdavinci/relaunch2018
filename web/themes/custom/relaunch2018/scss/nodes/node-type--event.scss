@@ -43,8 +43,6 @@
         margin-bottom: 5rem;
 
         h2 {
-          @include fontStyle(large);
-          color: $color-green;
           font-weight: $font-weight-semi-bold;
         }
 

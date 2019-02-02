@@ -6964,7 +6964,7 @@ h1 {
 h2 {
   color: #5dc4b8;
   font-size: 1.8rem;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.4;
   margin-bottom: 2rem; }
 
@@ -6979,7 +6979,7 @@ header h1 {
 
 h3 {
   color: #4f4f4f;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 600;
   line-height: 1.2;
   margin-bottom: 1.2rem; }
@@ -7069,7 +7069,7 @@ a {
         background-color: rgba(111, 207, 151, 0.6); }
     a.button.button--large {
       font-size: 1.4rem;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.01em;
       letter-spacing: 0.01em; }
       @media (min-width: 768px) {
         a.button.button--large {

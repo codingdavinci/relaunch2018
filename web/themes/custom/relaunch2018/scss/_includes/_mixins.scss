@@ -44,7 +44,7 @@
 @mixin fontStyle($type) {
   @if $type == 'large' {
     font-size: 1.4rem;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.01em;
 
     @include media-breakpoint-up(md) {
       font-size: 1.6rem;
