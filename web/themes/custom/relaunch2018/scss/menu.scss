@@ -76,6 +76,8 @@
 
       @include media-breakpoint-up(sm) {
         min-width: 33%;
+        padding-left: 3.75rem;
+        padding-top: 3rem;
       }
 
       @include media-breakpoint-up(lg) {
@@ -99,6 +101,10 @@
 
             &:hover {
               background-color: transparent;
+            }
+
+            .nav-link {
+              padding: 0.2rem 0;
             }
 
             .dropdown-toggle {
