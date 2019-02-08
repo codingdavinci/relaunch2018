@@ -1,6 +1,6 @@
 uuid: d66ed805-be32-4971-b7f5-e1cd3c3ee639
 langcode: de
-status: true
+status: false
 dependencies:
   module:
     - language
@@ -8,7 +8,7 @@ dependencies:
     - relaunch2018
 id: languageswitcher
 theme: relaunch2018
-region: language_switcher
+region: primary_menu
 weight: -15
 provider: null
 plugin: 'language_block:language_interface'
