@@ -7915,8 +7915,10 @@ body.path-user:not(.user-logged-in) .layout-container {
       .region-primary-menu .navbar .navbar--wrapper .navbar-toggler {
         font-size: 1.6rem;
         border-radius: 0;
+        height: 100%;
         min-width: 75px;
         outline: none;
+        padding: 0 0.8rem;
         text-align: left;
         white-space: nowrap; }
         @media (min-width: 576px) {
@@ -7931,45 +7933,13 @@ body.path-user:not(.user-logged-in) .layout-container {
         @media (min-width: 992px) {
           .region-primary-menu .navbar .navbar--wrapper .navbar-toggler {
             min-width: 95px; } }
-        .region-primary-menu .navbar .navbar--wrapper .navbar-toggler .navbar-toggler-icon--wrapper {
+        .region-primary-menu .navbar .navbar--wrapper .navbar-toggler .navbar-toggler-icon {
           transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+          background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='%23ffffff' stroke-width='5' d='M4,4 L26,26 z M4,26 L26,4 z'/%3e%3c/svg%3e");
           display: inline-block;
-          transform: rotate(359deg); }
-          .region-primary-menu .navbar .navbar--wrapper .navbar-toggler .navbar-toggler-icon--wrapper:after, .region-primary-menu .navbar .navbar--wrapper .navbar-toggler .navbar-toggler-icon--wrapper:before {
-            color: #ffffff; }
-          .region-primary-menu .navbar .navbar--wrapper .navbar-toggler .navbar-toggler-icon--wrapper:after {
-            color: #ffffff;
-            content: '}';
-            margin-left: 0.1em; }
-          .region-primary-menu .navbar .navbar--wrapper .navbar-toggler .navbar-toggler-icon--wrapper:before {
-            color: #ffffff;
-            content: '{';
-            margin-right: 0.1em; }
-          .region-primary-menu .navbar .navbar--wrapper .navbar-toggler .navbar-toggler-icon--wrapper .navbar-toggler-icon {
-            height: auto;
-            vertical-align: baseline;
-            width: auto; }
-            .region-primary-menu .navbar .navbar--wrapper .navbar-toggler .navbar-toggler-icon--wrapper .navbar-toggler-icon:after {
-              font-family: "cdv_icons";
-              margin-right: 0.4em;
-              content: '\e812';
-              font-size: 1.2rem;
-              margin: 0;
-              vertical-align: 0.1rem; }
-              @media (min-width: 576px) {
-                .region-primary-menu .navbar .navbar--wrapper .navbar-toggler .navbar-toggler-icon--wrapper .navbar-toggler-icon:after {
-                  font-size: 1.4rem; } }
-              @media (min-width: 768px) {
-                .region-primary-menu .navbar .navbar--wrapper .navbar-toggler .navbar-toggler-icon--wrapper .navbar-toggler-icon:after {
-                  font-size: 1.6rem; } }
-        .region-primary-menu .navbar .navbar--wrapper .navbar-toggler.collapsed {
-          font-family: "Barlow", sans-serif;
-          margin-top: 0; }
-          .region-primary-menu .navbar .navbar--wrapper .navbar-toggler.collapsed .navbar-toggler-icon--wrapper {
-            transform: rotate(0deg); }
-            .region-primary-menu .navbar .navbar--wrapper .navbar-toggler.collapsed .navbar-toggler-icon--wrapper .navbar-toggler-icon:after {
-              content: '…';
-              font-weight: 600; }
+          width: 1.5rem; }
+        .region-primary-menu .navbar .navbar--wrapper .navbar-toggler.collapsed .navbar-toggler-icon {
+          background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='%23ffffff' stroke-width='5' stroke-miterlimit='10' d='M1 4h27 M1 14h27 M1 24h27'/%3e%3c/svg%3e"); }
       .region-primary-menu .navbar .navbar--wrapper .menu--main--brand {
         display: flex;
         margin-top: 0.2rem; }
