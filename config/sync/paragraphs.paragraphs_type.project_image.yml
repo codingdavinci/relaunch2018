@@ -1,0 +1,9 @@
+uuid: c122d23b-9098-4175-8651-a020d11f91c1
+langcode: de
+status: true
+dependencies: {  }
+id: project_image
+label: Projektbild
+icon_uuid: null
+description: 'Bild mit Lizenzangabe und der Option zum Zuschneiden für die Ansicht in den Filterergebnissen.'
+behavior_plugins: {  }

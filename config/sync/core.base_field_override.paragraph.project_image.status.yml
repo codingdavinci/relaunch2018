@@ -1,0 +1,22 @@
+uuid: 2425589e-b0d8-4b89-b9fa-48e63ef50f52
+langcode: de
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.project_image
+id: paragraph.project_image.status
+field_name: status
+entity_type: paragraph
+bundle: project_image
+label: Veröffentlicht
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: An
+  off_label: Aus
+field_type: boolean

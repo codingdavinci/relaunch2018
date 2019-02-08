@@ -1,0 +1,45 @@
+uuid: b31670a2-05e2-4945-bea3-afe89d761e97
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_inline_image
+    - paragraphs.paragraphs_type.project_image
+  module:
+    - content_translation
+    - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: '0'
+id: paragraph.project_image.field_inline_image
+field_name: field_inline_image
+entity_type: paragraph
+bundle: project_image
+label: Bild
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: false
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

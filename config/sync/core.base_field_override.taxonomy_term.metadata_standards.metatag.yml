@@ -1,0 +1,18 @@
+uuid: ea93ad13-3bbd-4549-bc45-d66dc032d2f2
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.metadata_standards
+id: taxonomy_term.metadata_standards.metatag
+field_name: metatag
+entity_type: taxonomy_term
+bundle: metadata_standards
+label: Metatags
+description: 'Die Metatags dieser Entität.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

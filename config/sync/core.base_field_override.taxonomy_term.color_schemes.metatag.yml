@@ -1,0 +1,18 @@
+uuid: 557bc162-76e8-4e66-a35d-65949d91e1f5
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.color_schemes
+id: taxonomy_term.color_schemes.metatag
+field_name: metatag
+entity_type: taxonomy_term
+bundle: color_schemes
+label: Metatags
+description: 'Die Metatags dieser Entität.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

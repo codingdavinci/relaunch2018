@@ -1,0 +1,19 @@
+uuid: f91b1886-5dee-489f-ad85-c2c53fcfe08a
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_author
+    - paragraphs.paragraphs_type.project_image
+id: paragraph.project_image.field_author
+field_name: field_author
+entity_type: paragraph
+bundle: project_image
+label: Urheber
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

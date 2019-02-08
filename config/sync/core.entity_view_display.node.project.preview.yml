@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.preview
     - field.field.node.project.field_acknowledge_privacy
     - field.field.node.project.field_attributed_image
+    - field.field.node.project.field_audio_video
     - field.field.node.project.field_datasets
     - field.field.node.project.field_description
     - field.field.node.project.field_event
@@ -30,7 +31,7 @@ content:
     weight: 0
     label: hidden
     settings:
-      view_mode: project_preview
+      view_mode: teaser
       link: ''
     third_party_settings: {  }
     type: entity_reference_revisions_entity_view
@@ -38,6 +39,7 @@ content:
 hidden:
   content_moderation_control: true
   field_acknowledge_privacy: true
+  field_audio_video: true
   field_datasets: true
   field_description: true
   field_event: true

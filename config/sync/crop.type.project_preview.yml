@@ -1,0 +1,12 @@
+uuid: 36c01039-78b9-41c3-a0f6-cf150797b22d
+langcode: de
+status: true
+dependencies: {  }
+label: Projekt-Vorschau
+id: project_preview
+description: ''
+aspect_ratio: '4:3'
+soft_limit_width: null
+soft_limit_height: null
+hard_limit_width: null
+hard_limit_height: null

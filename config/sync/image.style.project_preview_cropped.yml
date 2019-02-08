@@ -1,0 +1,25 @@
+uuid: 8880d660-d8d7-4576-b735-04ace313a0dd
+langcode: de
+status: true
+dependencies:
+  config:
+    - crop.type.project_preview
+  module:
+    - crop
+name: project_preview_cropped
+label: 'Projekt-Vorschau (Crop)'
+effects:
+  0b866a9d-0762-4151-b559-665baebc0982:
+    uuid: 0b866a9d-0762-4151-b559-665baebc0982
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: project_preview
+  052defd7-bcd4-47e5-b9c9-77aca9c9de01:
+    uuid: 052defd7-bcd4-47e5-b9c9-77aca9c9de01
+    id: image_scale
+    weight: 2
+    data:
+      width: 480
+      height: 480
+      upscale: true

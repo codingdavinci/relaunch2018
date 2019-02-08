@@ -26,8 +26,8 @@ content:
   field_inline_image:
     weight: 2
     settings:
-      progress_indicator: throbber
       preview_image_style: thumbnail
+      progress_indicator: throbber
     third_party_settings: {  }
     type: image_image
     region: content
@@ -37,6 +37,11 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   created: true
   status: true

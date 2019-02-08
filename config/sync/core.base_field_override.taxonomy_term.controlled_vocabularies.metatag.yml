@@ -1,0 +1,18 @@
+uuid: 727f5c10-fe2a-40a6-87ac-80a93a81dd39
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.controlled_vocabularies
+id: taxonomy_term.controlled_vocabularies.metatag
+field_name: metatag
+entity_type: taxonomy_term
+bundle: controlled_vocabularies
+label: Metatags
+description: 'Die Metatags dieser Entität.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

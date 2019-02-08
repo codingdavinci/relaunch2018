@@ -1,0 +1,44 @@
+uuid: 4f0e6072-b855-4b8d-a63e-45b6c1ee6d84
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.project_image.field_author
+    - field.field.paragraph.project_image.field_inline_image
+    - field.field.paragraph.project_image.field_license
+    - image.style.large
+    - paragraphs.paragraphs_type.project_image
+  module:
+    - image
+id: paragraph.project_image.default
+targetEntityType: paragraph
+bundle: project_image
+mode: default
+content:
+  field_author:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_inline_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: large
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_license:
+    weight: 1
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden: {  }

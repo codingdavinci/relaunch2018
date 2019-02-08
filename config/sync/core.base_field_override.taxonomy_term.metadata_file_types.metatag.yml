@@ -1,0 +1,18 @@
+uuid: 186f7d75-1059-4f48-82d1-60d0171997dd
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.metadata_file_types
+id: taxonomy_term.metadata_file_types.metatag
+field_name: metatag
+entity_type: taxonomy_term
+bundle: metadata_file_types
+label: Metatags
+description: 'Die Metatags dieser Entität.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

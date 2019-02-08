@@ -1,0 +1,18 @@
+uuid: 53993fd0-3361-4713-b40f-535a708a3c86
+langcode: de
+status: true
+dependencies:
+  config:
+    - block_content.type.paragraphs
+id: block_content.paragraphs.metatag
+field_name: metatag
+entity_type: block_content
+bundle: paragraphs
+label: Metatags
+description: 'Die Metatags dieser Entität.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map
