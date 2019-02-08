@@ -36,7 +36,8 @@
 
     span {
       @include curlyBraces($color-gray-4);
-      padding: 0.1rem 0.3rem;
+      display: inline-block;
+      padding: 0 0.3rem 0.2rem 0;
     }
 
     a {

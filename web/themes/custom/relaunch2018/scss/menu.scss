@@ -33,41 +33,36 @@
       height: 100%;
       width: 100%;
 
-      .navbar-toggler {
-        @include menuFontSize;
-        border-radius: 0;
-        height: 100%;
-        min-width: 75px;
-        outline: none;
-        padding: 0 0.8rem;
-        text-align: left;
-        white-space: nowrap;
+      .navbar--left {
+        align-items: center;
+        display: flex;
 
-        @include media-breakpoint-up(sm) {
-          min-width: 80px;
-        }
+        .navbar-toggler {
+          @include menuFontSize;
+          border-radius: 0;
+          height: 100%;
+          outline: none;
+          padding: 0 1.2rem 0 0.8rem;
+          text-align: left;
+          white-space: nowrap;
 
-        @include media-breakpoint-up(lg) {
-          min-width: 95px;
-        }
-
-        .navbar-toggler-icon {
-          @include easeOut;
-          background-image: str-replace(url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='#{$color-white}' stroke-width='5' d='M4,4 L26,26 z M4,26 L26,4 z'/%3e%3c/svg%3e"), "#", "%23");
-          display: inline-block;
-          width: 1.5rem;
-        }
-
-        &.collapsed {
           .navbar-toggler-icon {
-            background-image: str-replace(url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='#{$color-white}' stroke-width='5' stroke-miterlimit='10' d='M1 4h27 M1 14h27 M1 24h27'/%3e%3c/svg%3e"), "#", "%23");
+            @include easeOut;
+            background-image: str-replace(url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='#{$color-white}' stroke-width='5' d='M4,4 L26,26 z M4,26 L26,4 z'/%3e%3c/svg%3e"), "#", "%23");
+            display: inline-block;
+            width: 1.5rem;
+          }
+
+          &.collapsed {
+            .navbar-toggler-icon {
+              background-image: str-replace(url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='#{$color-white}' stroke-width='5' stroke-miterlimit='10' d='M1 4h27 M1 14h27 M1 24h27'/%3e%3c/svg%3e"), "#", "%23");
+            }
           }
         }
-      }
 
-      .menu--main--brand {
-        display: flex;
-        margin-top: 0.2rem;
+        .menu--main--brand {
+          display: flex;
+        }
       }
     }
 

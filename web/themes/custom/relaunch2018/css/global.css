@@ -7527,7 +7527,8 @@ ul.ui-autocomplete li.ui-menu-item a {
       border-top-right-radius: 4px;
       border-bottom-right-radius: 4px; }
     .language-switcher-language-url li span {
-      padding: 0.1rem 0.3rem; }
+      display: inline-block;
+      padding: 0 0.3rem 0.2rem 0; }
       .language-switcher-language-url li span:after, .language-switcher-language-url li span:before {
         color: #c9c6c6; }
       .language-switcher-language-url li span:after {
@@ -7912,37 +7913,32 @@ body.path-user:not(.user-logged-in) .layout-container {
       justify-content: space-between;
       height: 100%;
       width: 100%; }
-      .region-primary-menu .navbar .navbar--wrapper .navbar-toggler {
-        font-size: 1.6rem;
-        border-radius: 0;
-        height: 100%;
-        min-width: 75px;
-        outline: none;
-        padding: 0 0.8rem;
-        text-align: left;
-        white-space: nowrap; }
-        @media (min-width: 576px) {
-          .region-primary-menu .navbar .navbar--wrapper .navbar-toggler {
-            font-size: 1.8rem; } }
-        @media (min-width: 768px) {
-          .region-primary-menu .navbar .navbar--wrapper .navbar-toggler {
-            font-size: 2rem; } }
-        @media (min-width: 576px) {
-          .region-primary-menu .navbar .navbar--wrapper .navbar-toggler {
-            min-width: 80px; } }
-        @media (min-width: 992px) {
-          .region-primary-menu .navbar .navbar--wrapper .navbar-toggler {
-            min-width: 95px; } }
-        .region-primary-menu .navbar .navbar--wrapper .navbar-toggler .navbar-toggler-icon {
-          transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-          background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='%23ffffff' stroke-width='5' d='M4,4 L26,26 z M4,26 L26,4 z'/%3e%3c/svg%3e");
-          display: inline-block;
-          width: 1.5rem; }
-        .region-primary-menu .navbar .navbar--wrapper .navbar-toggler.collapsed .navbar-toggler-icon {
-          background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='%23ffffff' stroke-width='5' stroke-miterlimit='10' d='M1 4h27 M1 14h27 M1 24h27'/%3e%3c/svg%3e"); }
-      .region-primary-menu .navbar .navbar--wrapper .menu--main--brand {
-        display: flex;
-        margin-top: 0.2rem; }
+      .region-primary-menu .navbar .navbar--wrapper .navbar--left {
+        align-items: center;
+        display: flex; }
+        .region-primary-menu .navbar .navbar--wrapper .navbar--left .navbar-toggler {
+          font-size: 1.6rem;
+          border-radius: 0;
+          height: 100%;
+          outline: none;
+          padding: 0 1.2rem 0 0.8rem;
+          text-align: left;
+          white-space: nowrap; }
+          @media (min-width: 576px) {
+            .region-primary-menu .navbar .navbar--wrapper .navbar--left .navbar-toggler {
+              font-size: 1.8rem; } }
+          @media (min-width: 768px) {
+            .region-primary-menu .navbar .navbar--wrapper .navbar--left .navbar-toggler {
+              font-size: 2rem; } }
+          .region-primary-menu .navbar .navbar--wrapper .navbar--left .navbar-toggler .navbar-toggler-icon {
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='%23ffffff' stroke-width='5' d='M4,4 L26,26 z M4,26 L26,4 z'/%3e%3c/svg%3e");
+            display: inline-block;
+            width: 1.5rem; }
+          .region-primary-menu .navbar .navbar--wrapper .navbar--left .navbar-toggler.collapsed .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='%23ffffff' stroke-width='5' stroke-miterlimit='10' d='M1 4h27 M1 14h27 M1 24h27'/%3e%3c/svg%3e"); }
+        .region-primary-menu .navbar .navbar--wrapper .navbar--left .menu--main--brand {
+          display: flex; }
     .region-primary-menu .navbar .navbar--menu {
       background: #fcd9c8;
       min-width: 67%;
