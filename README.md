@@ -28,7 +28,7 @@ The project was set up using the [Composer template for Drupal projects](https:/
 * Skip the `--no-dev` flag when running `composer install`.
 * In order to compile [SCSS files](https://sass-lang.com/) files and transpile ES6 JavaScript files, it is recommended to have [Node.js](https://nodejs.org/) installed. Packages are managed by the [yarn package manager](https://yarnpkg.com/). Having installed Node.js and yarn (i.e. `npm install -g yarn`), run `yarn` to download required packages.
 * [Gulp](https://gulpjs.com/) tasks are set up for processing the SCSS files. After having installed the Gulp CLI (i.e. `npm install -g gulp-cli`), you can run `gulp` every time SCSS files need to be compiled.
-* ES6 JavaScript transpiling may be done using a yarn script supplied by Drupal core: `yarn build:js`. (Watch [Drupal issue #2957390](https://www.drupal.org/project/drupal/issues/2957390) for removing duplicated in the root `package.json` file in the future.)
+* ES6 JavaScript transpiling may be done using a yarn script supplied by Drupal core: `yarn build:js`. (Watch [Drupal issue #2957390](https://www.drupal.org/project/drupal/issues/2957390) for removing the `package.json` file duplicated in the root at some point in the future.)
 
 ## Updating
 
