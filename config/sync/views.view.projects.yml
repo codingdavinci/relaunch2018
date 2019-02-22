@@ -1339,7 +1339,7 @@ display:
           click_sort_column: target_id
           type: entity_reference_revisions_entity_view
           settings:
-            view_mode: teaser
+            view_mode: preview
           group_column: ''
           group_columns: {  }
           group_rows: true

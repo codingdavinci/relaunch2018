@@ -9667,6 +9667,15 @@ figcaption {
     .paragraph--type--prizes .field--name-field-prizes .field__items > .field__item .prize--info .paragraph--type--prize .field--name-field-text p:last-child {
       margin-bottom: 0; }
 
+.paragraph--type--project-image {
+  display: inline-block; }
+  .paragraph--type--project-image .field--name-field-inline-image {
+    border-radius: 4px; }
+    .paragraph--type--project-image .field--name-field-inline-image img {
+      border-radius: 4px;
+      max-width: 100%;
+      height: auto; }
+
 .paragraph--type--slideshow .carousel {
   cursor: move;
   /* fallback if grab cursor is unsupported */
@@ -10374,16 +10383,16 @@ figcaption {
         margin-bottom: 2rem; } }
     .view.view-projects.view-display-id-block_3 .view-content .views-row .views-field-field-attributed-image .field-content {
       height: 100%; }
-      .view.view-projects.view-display-id-block_3 .view-content .views-row .views-field-field-attributed-image .field-content .paragraph--type--attributed-image {
+      .view.view-projects.view-display-id-block_3 .view-content .views-row .views-field-field-attributed-image .field-content .paragraph--type--project-image {
         height: 100%; }
-        .view.view-projects.view-display-id-block_3 .view-content .views-row .views-field-field-attributed-image .field-content .paragraph--type--attributed-image .field--name-field-inline-image {
+        .view.view-projects.view-display-id-block_3 .view-content .views-row .views-field-field-attributed-image .field-content .paragraph--type--project-image .field--name-field-inline-image {
           height: 100%; }
-          .view.view-projects.view-display-id-block_3 .view-content .views-row .views-field-field-attributed-image .field-content .paragraph--type--attributed-image .field--name-field-inline-image img {
+          .view.view-projects.view-display-id-block_3 .view-content .views-row .views-field-field-attributed-image .field-content .paragraph--type--project-image .field--name-field-inline-image img {
             max-height: 100%;
             width: auto; }
 
 .view.view-projects.view-display-id-block_3 .more-link {
-  margin-top: 1rem;
+  margin-top: 2rem;
   text-align: left; }
   .view.view-projects.view-display-id-block_3 .more-link a {
     border-radius: 4px;

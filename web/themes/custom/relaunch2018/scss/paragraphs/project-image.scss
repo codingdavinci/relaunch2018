@@ -1,0 +1,14 @@
+@import '../_includes/base';
+
+.paragraph--type--project-image {
+  display: inline-block;
+
+  .field--name-field-inline-image {
+    @include rounded;
+
+    img {
+      @include rounded;
+      @include img-fluid;
+    }
+  }
+}

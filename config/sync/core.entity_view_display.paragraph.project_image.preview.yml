@@ -1,0 +1,30 @@
+uuid: 185c8853-6a90-4746-99cf-c5432cca8fee
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.project_image.field_author
+    - field.field.paragraph.project_image.field_inline_image
+    - field.field.paragraph.project_image.field_license
+    - image.style.large
+    - paragraphs.paragraphs_type.project_image
+  module:
+    - image
+id: paragraph.project_image.preview
+targetEntityType: paragraph
+bundle: project_image
+mode: preview
+content:
+  field_inline_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: large
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  field_author: true
+  field_license: true
