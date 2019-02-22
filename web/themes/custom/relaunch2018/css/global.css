@@ -8598,8 +8598,8 @@ figcaption {
 .node--type-project.node--view-mode-full {
   margin-top: 4rem; }
 
-.node--type-data-set .field:not(.field--name-field-license):not(.field--name-field-license):not(.field--name-field-author):not(.field--name-field-email),
-.node--type-project .field:not(.field--name-field-license):not(.field--name-field-license):not(.field--name-field-author):not(.field--name-field-email) {
+.node--type-data-set .field:not(.field--name-field-license):not(.field--name-field-author):not(.field--name-field-email),
+.node--type-project .field:not(.field--name-field-license):not(.field--name-field-author):not(.field--name-field-email) {
   margin-bottom: 1rem; }
 
 .node--type-data-set .field .field__label,
@@ -8674,6 +8674,11 @@ figcaption {
       .node--type-project .article--content-container .article--header .article--content-block .field--name-field-attributed-image .field--name-field-audio-video div,
       .node--type-project .article--content-container .article--header .article--content-block .node--type-project--audio-video .field--name-field-audio-video div {
         display: inline; }
+      .node--type-data-set .article--content-container .article--header .article--content-block .field--name-field-attributed-image .field--name-field-license .field,
+      .node--type-data-set .article--content-container .article--header .article--content-block .node--type-project--audio-video .field--name-field-license .field,
+      .node--type-project .article--content-container .article--header .article--content-block .field--name-field-attributed-image .field--name-field-license .field,
+      .node--type-project .article--content-container .article--header .article--content-block .node--type-project--audio-video .field--name-field-license .field {
+        margin-bottom: 0; }
   .node--type-data-set .article--content-container .node__content,
   .node--type-project .article--content-container .node__content {
     border-top-left-radius: 4px;
@@ -8686,7 +8691,7 @@ figcaption {
     .node--type-data-set .article--content-container .node__content:last-child,
     .node--type-project .article--content-container .node__content:last-child {
       margin-bottom: 6rem;
-      margin-top: 3rem; }
+      margin-top: 1.5rem; }
     .node--type-data-set .article--content-container .node__content h1,
     .node--type-project .article--content-container .node__content h1 {
       margin-top: 10px; }
