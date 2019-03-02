@@ -15,6 +15,7 @@ permissions:
   - 'translate data_set node'
   - 'update content translations'
   - 'use data_set transition create_new_draft'
+  - 'use data_set transition submit'
   - 'use text format restricted_html'
   - 'view data_set revisions'
   - 'view latest version'

@@ -15,27 +15,41 @@ type_settings:
       published: false
       default_revision: false
       label: Entwurf
-      weight: 0
+      weight: -2
     published:
       published: true
       default_revision: true
       label: Veröffentlicht
-      weight: 1
+      weight: 0
+    submitted:
+      published: false
+      default_revision: false
+      label: Freigegeben
+      weight: -1
   transitions:
     create_new_draft:
       label: 'Create New Draft'
       to: draft
+      weight: -2
+      from:
+        - draft
+        - published
+        - submitted
+    publish:
+      label: Publish
+      to: published
       weight: 0
       from:
         - draft
         - published
-    publish:
-      label: Publish
-      to: published
-      weight: 1
+        - submitted
+    submit:
+      label: Submit
       from:
         - draft
-        - published
+        - submitted
+      to: submitted
+      weight: -1
   entity_types:
     node:
       - data_set

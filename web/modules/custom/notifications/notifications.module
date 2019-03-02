@@ -15,7 +15,7 @@ use Drupal\user\Entity\User;
  * @param array $params
  */
 function notifications_mail($key, array &$message, array $params) {
-  if ($key === 'notifications_draft') {
+  if ($key === 'notifications_submission') {
     $options = [
       'langcode' => $message['langcode'],
     ];
@@ -49,7 +49,7 @@ function notifications_node_insert(EntityInterface $entity) {
       $params = ['node_title' => $entity->label()];
 
       if ($entity->bundle() === 'project') {
-        $params['action'] = t('Project draft created');
+        $params['action'] = t('Project submitted');
 
         /** @var User $user */
         foreach (User::loadMultiple($usersIdsToNotify) as $user) {
@@ -63,12 +63,12 @@ function notifications_node_insert(EntityInterface $entity) {
             $user,
             $params,
             t('Thank you! Responsible event managers have been notified and will review your project description shortly.'),
-            t('Sorry! There was a problem notifying responsible event managers about your draft. Please inform a responsible event manager.')
+            t('Sorry! There was a problem notifying responsible event managers about your submission. Please inform a responsible event manager.')
           );
         }
       }
       elseif ($entity->bundle() === 'data_set') {
-        $params['action'] = t('Data set draft created');
+        $params['action'] = t('Data set submitted');
 
         /** @var User $user */
         foreach (User::loadMultiple($usersIdsToNotify) as $user) {
@@ -82,7 +82,7 @@ function notifications_node_insert(EntityInterface $entity) {
             $user,
             $params,
             t('Thank you! Responsible event managers have been notified and will review your data set description shortly.'),
-            t('Sorry! There was a problem notifying responsible event managers about your draft. Please inform a responsible event manager.')
+            t('Sorry! There was a problem notifying responsible event managers about your submission. Please inform a responsible event manager.')
           );
         }
       }
@@ -104,7 +104,7 @@ function notifications_node_update(EntityInterface $entity) {
       $params = ['node_title' => $entity->label()];
 
       if ($entity->bundle() === 'project') {
-        $params['action'] = t('Project draft updated');
+        $params['action'] = t('Project updated');
 
         /** @var User $user */
         foreach (User::loadMultiple($usersIdsToNotify) as $user) {
@@ -118,12 +118,12 @@ function notifications_node_update(EntityInterface $entity) {
             $user,
             $params,
             t('Thank you! Responsible event managers have been notified and will review your project description shortly.'),
-            t('Sorry! There was a problem notifying responsible event managers about your draft. Please inform a responsible event manager.')
+            t('Sorry! There was a problem notifying responsible event managers about your submission. Please inform a responsible event manager.')
           );
         }
       }
       elseif ($entity->bundle() === 'data_set') {
-        $params['action'] = t('Data set draft updated');
+        $params['action'] = t('Data set updated');
 
         /** @var User $user */
         foreach (User::loadMultiple($usersIdsToNotify) as $user) {
@@ -137,7 +137,7 @@ function notifications_node_update(EntityInterface $entity) {
             $user,
             $params,
             t('Thank you! Responsible event managers have been notified and will review your data set description shortly.'),
-            t('Sorry! There was a problem notifying responsible event managers about your draft. Please inform a responsible event manager.')
+            t('Sorry! There was a problem notifying responsible event managers about your submission. Please inform a responsible event manager.')
           );
         }
       }
@@ -154,7 +154,7 @@ function _notifications_get_users_to_notify($entity) {
   /** @var Node $entity */
   $moderationState = $entity->get('moderation_state')->value;
 
-  if ($moderationState === 'draft') {
+  if ($moderationState === 'submitted') {
     $usersIdsToNotify = _notifications_get_users($entity);
   }
 
@@ -262,7 +262,7 @@ function _notifications_send_mail($user, array $params, $successMsg, $errorMsg) 
   /** @var \Drupal\Core\Mail\MailManager $mailManager */
   $mailManager = \Drupal::service('plugin.manager.mail');
 
-  $key = 'notifications_draft';
+  $key = 'notifications_submission';
   $to = $user->get('mail')->value;
   $langCode = $user->getPreferredLangcode();
 

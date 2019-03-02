@@ -15,6 +15,7 @@ permissions:
   - 'translate project node'
   - 'update content translations'
   - 'use project transition create_new_draft'
+  - 'use project transition submit'
   - 'use text format restricted_html'
   - 'view latest version'
   - 'view own unpublished content'

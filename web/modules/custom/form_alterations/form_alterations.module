@@ -158,7 +158,6 @@ function _form_alterations_common_changes(array &$form, $linkFieldNames) {
     // create new drafts on top of published content is circumvented. Therefore,
     // #default_value needs to be set manually.
     $form['moderation_state']['widget'][0]['state']['#default_value'] = 'draft';
-    $form['moderation_state']['#access'] = FALSE;
     $form['#attached']['library'][] = 'form_alterations/styles';
   }
 
