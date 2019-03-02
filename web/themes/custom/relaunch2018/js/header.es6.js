@@ -70,12 +70,12 @@
     $tileContainer.html(html.join(''));
 
     $('.header-tile')
-      .on('mouseenter', e => {
+      .on('mouseenter touchstart', e => {
         $(e.target)
           .closest('.header-tile')
           .addClass('hover');
       })
-      .on('mouseleave', e => {
+      .on('mouseleave touchend', e => {
         $(e.target)
           .closest('.header-tile')
           .removeClass('hover');
