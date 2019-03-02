@@ -165,9 +165,8 @@
       background-size: 790px;
 
       .header--tiles--overlay {
-        background: linear-gradient(180deg, #f1ece8 0%, #5dc4b8 100%);
         mix-blend-mode: multiply;
-        opacity: 0.75;
+        opacity: 0.3;
       }
 
       .tiles {

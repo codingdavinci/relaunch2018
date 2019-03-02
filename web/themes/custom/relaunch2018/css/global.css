@@ -7446,9 +7446,8 @@ ul.ui-autocomplete li.ui-menu-item a {
   background: 21px top url("../img/header/tiles_event_static.jpg") repeat-x;
   background-size: 790px; }
   .page-node-type-event .header--tiles .header--tiles--container .header--tiles--overlay {
-    background: linear-gradient(180deg, #f1ece8 0%, #5dc4b8 100%);
     mix-blend-mode: multiply;
-    opacity: 0.75; }
+    opacity: 0.3; }
   .page-node-type-event .header--tiles .header--tiles--container .tiles .header-tile,
   .page-node-type-event .header--tiles .header--tiles--container .tiles .front,
   .page-node-type-event .header--tiles .header--tiles--container .tiles .back {

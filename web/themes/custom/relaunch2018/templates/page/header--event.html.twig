@@ -6,7 +6,7 @@
 #}
 <header role="banner" class="header--tiles">
   <div class="header--tiles--container Sticky">
-    <div class="header--tiles--overlay"></div>
+    <div class="header--tiles--overlay"{% if color_scheme %} style="background:#{{ color_scheme[1] }}"{% endif %}></div>
     <div class="tiles"></div>
     <div class="container header--tiles--content">
       <div class="header--tile--logo"{% if color_scheme %} style="background-color:#{{ color_scheme[0] }}"{% endif %}>
