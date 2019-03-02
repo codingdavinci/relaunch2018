@@ -210,38 +210,48 @@
         }
       }
 
-      .header--tile--logo {
-        padding: 1.5rem 1.5rem 1.3rem 1.5rem;
-        width: 520px;
+      .header--tiles--content {
+        text-align: center;
 
-        .header--title--logo--image {
-          margin-bottom: 1rem;
-          width: 80%;
+        .header--tile--logo {
+          padding: 1.5rem 1.5rem 1.3rem 1.5rem;
+          display: inline-block;
+          width: auto;
 
           @include media-breakpoint-up(sm) {
-            width: 60%;
+            min-width: 520px;
           }
-        }
 
-        .header--title--logo--text {
-          h1 {
-            color: $color-white;
-            font-size: 3rem;
-            font-weight: $font-weight-semi-bold;
-            margin: 0;
-            text-transform: uppercase;
+          .header--title--logo--image {
+            margin-bottom: 1rem;
+            width: 80%;
 
             @include media-breakpoint-up(sm) {
-              font-size: 4rem;
-            }
-
-            @include media-breakpoint-up(lg) {
-              font-size: 5rem;
+              width: 60%;
             }
           }
 
-          .header--title--logo--text--event-date {
-            margin-top: 0.8rem;
+          .header--title--logo--text {
+            h1 {
+              color: $color-white;
+              font-size: 3rem;
+              font-weight: $font-weight-semi-bold;
+              margin: 0;
+              text-transform: uppercase;
+              word-wrap: break-word;
+
+              @include media-breakpoint-up(sm) {
+                font-size: 4rem;
+              }
+
+              @include media-breakpoint-up(lg) {
+                font-size: 5rem;
+              }
+            }
+
+            .header--title--logo--text--event-date {
+              margin-top: 0.8rem;
+            }
           }
         }
       }
