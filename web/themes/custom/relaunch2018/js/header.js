@@ -12,7 +12,7 @@
     var originalTileSize = isFrontPage ? 214 : 280;
     var tileSize = Math.sqrt(originalTileSize * originalTileSize * 2);
 
-    var even = { top: 39, left: -113 };
+    var even = { top: 39, left: isFrontPage ? -113 : -140 };
 
     var odd = {
       top: even.top - tileSize / 2,

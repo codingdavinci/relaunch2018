@@ -14,7 +14,7 @@
     const tileSize = Math.sqrt(originalTileSize * originalTileSize * 2);
 
     // Top left edge of the unrotated tile in even columns:
-    const even = { top: 39, left: -113 };
+    const even = { top: 39, left: isFrontPage ? -113 : -140 };
 
     // Top left edge of the unrotated tile in odd columns:
     const odd = {
