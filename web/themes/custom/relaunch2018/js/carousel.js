@@ -43,10 +43,6 @@
     var maxHeight = 0;
 
     $items.each(function () {
-      $(this).css('min-height', '0');
-    });
-
-    $items.each(function () {
       var height = $(this).height();
 
       if (height > maxHeight) {
@@ -55,7 +51,7 @@
     });
 
     $items.each(function () {
-      $(this).css('minHeight', maxHeight + ' px');
+      $(this).height(maxHeight);
     });
   }
 })(jQuery, Hammer, window);
