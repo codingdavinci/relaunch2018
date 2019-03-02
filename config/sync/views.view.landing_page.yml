@@ -228,6 +228,7 @@ display:
         style: false
         row: false
         title: false
+        sorts: false
       row:
         type: 'entity:node'
         options:
@@ -235,6 +236,20 @@ display:
           view_mode: teaser
       title: 'Nächste Events'
       enabled: true
+      sorts:
+        field_range_end_value:
+          id: field_range_end_value
+          table: node__field_range
+          field: field_range_end_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          granularity: second
+          plugin_id: datetime
     cache_metadata:
       max-age: -1
       contexts:
