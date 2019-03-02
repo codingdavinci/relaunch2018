@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.user.institution
+    - field.field.user.user.field_acknowledge_privacy
     - field.field.user.user.field_institution_name
     - field.field.user.user.field_link
     - field.field.user.user.field_logo
@@ -78,6 +79,13 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_acknowledge_privacy:
+    type: boolean_checkbox
+    weight: 3
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
   field_institution_name:
     weight: 2
     settings:
@@ -134,7 +142,7 @@ content:
     type: string_textfield
     region: content
   language:
-    weight: 6
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
