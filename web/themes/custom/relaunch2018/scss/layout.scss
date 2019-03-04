@@ -192,9 +192,11 @@ header {
 
     a {
       color: $color-white;
+      text-decoration: underline;
 
       &:hover {
         color: $color-white;
+        text-decoration: none;
       }
 
       &:before {
@@ -220,8 +222,17 @@ header {
       & > div {
         @include media-breakpoint-up(md) {
           & > div {
-            width: 20%;
+            margin: 1.87%;
             padding: 15px;
+            width: 17%;
+
+            &:first-child {
+              margin-left: 0;
+            }
+
+            &:last-child {
+              margin-right: 0;
+            }
           }
         }
       }
