@@ -1,6 +1,8 @@
 @import '../_includes/base';
 
 .paragraph--type--introtext {
+  margin-top: 3rem;
+
   @include media-breakpoint-up(md) {
     width: 65%;
   }
