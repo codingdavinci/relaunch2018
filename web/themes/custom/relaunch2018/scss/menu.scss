@@ -70,14 +70,12 @@
       background: $color-red-3;
       min-width: 67%;
       overflow: auto;
-      padding: 0 1.5rem 0 0.75rem;
+      padding: 0 3rem 0 3.75rem;
       transform: translate3d(-100%, 0, 0);
       transition: all 0.3s ease-in-out;
 
       @include media-breakpoint-up(sm) {
         min-width: 33%;
-        padding-left: 3.75rem;
-        padding-top: 3rem;
       }
 
       @include media-breakpoint-up(lg) {
