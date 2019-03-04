@@ -204,6 +204,7 @@
           .card-title {
             border-bottom: 1px solid $color-gray-5;
             padding-bottom: 1rem;
+            word-break: break-word;
           }
 
           .node__content {
