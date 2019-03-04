@@ -9144,26 +9144,31 @@ figcaption {
   border-radius: 4px;
   background-color: #5dc4b8;
   color: #ffffff;
+  display: flex;
+  flex-direction: column;
   height: 100%;
   padding: 1.5rem; }
   @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
     .node--type-event.node--view-mode-teaser, .node--type-event.node--view-mode-preview {
+      display: block;
       margin-bottom: 2rem; } }
-  .node--type-event.node--view-mode-teaser .node--event--teaser--logo img, .node--type-event.node--view-mode-preview .node--event--teaser--logo img {
-    max-width: 100%;
-    height: auto; }
-    @media (min-width: 576px) {
-      .node--type-event.node--view-mode-teaser .node--event--teaser--logo img, .node--type-event.node--view-mode-preview .node--event--teaser--logo img {
-        width: 80%; } }
-    @media (min-width: 768px) {
-      .node--type-event.node--view-mode-teaser .node--event--teaser--logo img, .node--type-event.node--view-mode-preview .node--event--teaser--logo img {
-        width: 70%; } }
-    @media (min-width: 992px) {
-      .node--type-event.node--view-mode-teaser .node--event--teaser--logo img, .node--type-event.node--view-mode-preview .node--event--teaser--logo img {
-        width: 50%; } }
-    @media (min-width: 1200px) {
-      .node--type-event.node--view-mode-teaser .node--event--teaser--logo img, .node--type-event.node--view-mode-preview .node--event--teaser--logo img {
-        width: 70%; } }
+  .node--type-event.node--view-mode-teaser .node--event--teaser--content, .node--type-event.node--view-mode-preview .node--event--teaser--content {
+    flex: 1; }
+    .node--type-event.node--view-mode-teaser .node--event--teaser--content .node--event--teaser--logo img, .node--type-event.node--view-mode-preview .node--event--teaser--content .node--event--teaser--logo img {
+      max-width: 100%;
+      height: auto; }
+      @media (min-width: 576px) {
+        .node--type-event.node--view-mode-teaser .node--event--teaser--content .node--event--teaser--logo img, .node--type-event.node--view-mode-preview .node--event--teaser--content .node--event--teaser--logo img {
+          width: 80%; } }
+      @media (min-width: 768px) {
+        .node--type-event.node--view-mode-teaser .node--event--teaser--content .node--event--teaser--logo img, .node--type-event.node--view-mode-preview .node--event--teaser--content .node--event--teaser--logo img {
+          width: 70%; } }
+      @media (min-width: 992px) {
+        .node--type-event.node--view-mode-teaser .node--event--teaser--content .node--event--teaser--logo img, .node--type-event.node--view-mode-preview .node--event--teaser--content .node--event--teaser--logo img {
+          width: 50%; } }
+      @media (min-width: 1200px) {
+        .node--type-event.node--view-mode-teaser .node--event--teaser--content .node--event--teaser--logo img, .node--type-event.node--view-mode-preview .node--event--teaser--content .node--event--teaser--logo img {
+          width: 70%; } }
   .node--type-event.node--view-mode-teaser h2, .node--type-event.node--view-mode-preview h2 {
     font-size: 1.8rem;
     font-weight: 500;
