@@ -18,9 +18,14 @@
   {% endif %}
   {{ title_suffix }}
   {% if header %}
-    <div class="view-header">
-      {{ header }}
+    <div class="view-header row">
+      <div class="col-md-6 col-lg-7">
+        {{ header }}
+      </div>
     </div>
+  {% endif %}
+  {% if more %}
+    {{ more }}
   {% endif %}
   {% if exposed %}
     <div class="view-filters">
@@ -61,9 +66,6 @@
     <div class="attachment attachment-after">
       {{ attachment_after }}
     </div>
-  {% endif %}
-  {% if more %}
-    {{ more }}
   {% endif %}
   {% if footer %}
     <div class="view-footer">
