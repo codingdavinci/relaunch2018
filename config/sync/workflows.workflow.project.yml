@@ -47,6 +47,7 @@ type_settings:
       label: Submit
       from:
         - draft
+        - published
         - submitted
       to: submitted
       weight: -1
