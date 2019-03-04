@@ -7632,12 +7632,6 @@ ul.ui-autocomplete li.ui-menu-item a {
       font-size: 1.5rem; } }
   .language-switcher-language-url li {
     display: inline; }
-    .language-switcher-language-url li:first-child a {
-      border-top-left-radius: 4px;
-      border-bottom-left-radius: 4px; }
-    .language-switcher-language-url li:last-child a {
-      border-top-right-radius: 4px;
-      border-bottom-right-radius: 4px; }
     .language-switcher-language-url li span {
       display: inline-block;
       padding: 0 0.3rem 0.2rem 0; }
@@ -7652,9 +7646,10 @@ ul.ui-autocomplete li.ui-menu-item a {
         content: '{';
         margin-right: 0.1em; }
     .language-switcher-language-url li a {
-      background-color: #ffffff;
-      color: #6fcf97;
-      padding: 0.1rem 0.3rem; }
+      border-radius: 4px;
+      background-color: transparent;
+      color: #ffffff;
+      padding: 0 0.3rem 0.1rem 0.3rem; }
       .language-switcher-language-url li a:after, .language-switcher-language-url li a:before {
         color: #ffffff; }
       .language-switcher-language-url li a:after {
@@ -7666,18 +7661,18 @@ ul.ui-autocomplete li.ui-menu-item a {
         content: '{';
         margin-right: 0.1em; }
     .language-switcher-language-url li.is-active {
-      color: #fff; }
+      color: #ffffff; }
       .language-switcher-language-url li.is-active a {
-        background-color: #6fcf97;
-        color: #fff; }
+        background-color: #ffffff;
+        color: #000; }
         .language-switcher-language-url li.is-active a:after, .language-switcher-language-url li.is-active a:before {
-          color: #ffffff; }
+          color: #000; }
         .language-switcher-language-url li.is-active a:after {
-          color: #ffffff;
+          color: #000;
           content: '}';
           margin-left: 0.1em; }
         .language-switcher-language-url li.is-active a:before {
-          color: #ffffff;
+          color: #000;
           content: '{';
           margin-right: 0.1em; }
 
@@ -10424,7 +10419,6 @@ figcaption {
 
 .view.view-projects.view-display-id-block_3 .more-link {
   margin: 2rem 0;
-  text-align: left;
   text-align: left; }
   .view.view-projects.view-display-id-block_3 .more-link a {
     border-radius: 4px;

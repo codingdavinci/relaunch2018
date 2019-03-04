@@ -22,18 +22,6 @@
   li {
     display: inline;
 
-    &:first-child {
-      a {
-        @include border-left-radius($border-radius);
-      }
-    }
-
-    &:last-child {
-      a {
-        @include border-right-radius($border-radius);
-      }
-    }
-
     span {
       @include curlyBraces($color-gray-4);
       display: inline-block;
@@ -41,19 +29,20 @@
     }
 
     a {
+      @include border-radius($border-radius);
       @include curlyBraces($color-white);
-      background-color: $color-white;
-      color: $color-green-lighter;
-      padding: 0.1rem 0.3rem;
+      background-color: transparent;
+      color: $color-white;
+      padding: 0 0.3rem 0.1rem 0.3rem;
     }
 
     &.is-active {
-      color: $white;
+      color: $color-white;
 
       a {
-        @include curlyBraces($color-white);
-        background-color: $color-green-lighter;
-        color: $white;
+        @include curlyBraces($black);
+        background-color: $color-white;
+        color: $black;
       }
     }
   }
