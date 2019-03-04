@@ -207,6 +207,15 @@
       color: $color-white;
       margin-top: 1.5rem;
       text-transform: uppercase;
+      word-wrap: break-word;
+
+      @include media-breakpoint-up(md) {
+        font-size: 2.1rem;
+      }
+
+      @include media-breakpoint-up(lg) {
+        font-size: 2.5rem;
+      }
     }
 
     &.node--view-mode-preview {
