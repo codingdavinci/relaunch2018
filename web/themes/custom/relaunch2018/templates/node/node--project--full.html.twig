@@ -64,9 +64,9 @@
       {% endif %}
 
       <div class="project--tags">
-        {% if award %}
+        {% for award in awards %}
           <div class="badge badge--award">{{ award }}</div>
-        {% endif %}
+        {% endfor %}
         {{ content.field_event }}
       </div>
 

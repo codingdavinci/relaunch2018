@@ -32,9 +32,13 @@
 
     <div{{ content_attributes.addClass('node__content') }}>
       {{ content|without('field_attributed_image') }}
-      <div class="field">
-        <div class="badge badge--award">{{ award }}</div>
-      </div>
+      {% if awards|length %}
+        <div class="field">
+          {% for award in awards %}
+            <div class="badge badge--award">{{ award }}</div>
+          {% endfor %}
+        </div>
+      {% endif %}
     </div>
   </div>
 

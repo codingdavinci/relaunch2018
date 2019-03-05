@@ -134,7 +134,7 @@ function relaunch2018_preprocess_node(array &$variables) {
     // Add award title to variables if project has won an award.
     if (($eventId = $node->get('field_event')->target_id) !== null) {
       $nid = $node->id();
-      $award = null;
+      $awards = [];
       /** @var Node $event */
       $event = Node::load($eventId);
 
@@ -142,12 +142,19 @@ function relaunch2018_preprocess_node(array &$variables) {
         $winner = Paragraph::load($element['target_id']);
 
         if ($winner->get('field_project')->target_id === $nid) {
-          $award = $winner->get('field_award')->value;
-          break;
+          $awardTermId = $winner->get('field_award')->target_id;
+
+          if ($awardTermId !== null) {
+            $term = Term::load($awardTermId);
+
+            if ($term !== null) {
+              $awards[] = $term->label();
+            }
+          }
         }
       }
 
-      $variables['award'] = $award;
+      $variables['awards'] = $awards;
     }
 
     /** @var EntityReferenceRevisionsFieldItemList $audioVideo */
