@@ -12,13 +12,13 @@ bundle: winner
 mode: default
 content:
   field_award:
-    type: string
     weight: 1
-    region: content
     label: visually_hidden
     settings:
-      link_to_entity: false
+      link: false
     third_party_settings: {  }
+    type: entity_reference_label
+    region: content
   field_project:
     weight: 0
     label: visually_hidden

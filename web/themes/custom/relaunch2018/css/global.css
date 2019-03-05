@@ -10029,6 +10029,10 @@ figcaption {
 .paragraph--type--winner {
   margin-bottom: 1.4rem;
   margin-right: 1.4rem; }
+  .paragraph--type--winner .field--name-field-award {
+    display: inline; }
+    .paragraph--type--winner .field--name-field-award .field__item {
+      display: inline; }
   .paragraph--type--winner img {
     border-radius: 4px;
     max-width: 100%;

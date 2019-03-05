@@ -1,17 +1,16 @@
-uuid: b7b2cd05-4b15-45c9-977a-67fa0c20f765
+uuid: 0f86483c-71fa-43e7-a07b-19fb63bdba21
 langcode: de
 status: true
 dependencies:
   module:
     - paragraphs
+    - taxonomy
 id: paragraph.field_award
 field_name: field_award
 entity_type: paragraph
-type: string
+type: entity_reference
 settings:
-  max_length: 255
-  is_ascii: false
-  case_sensitive: false
+  target_type: taxonomy_term
 module: core
 locked: false
 cardinality: 1
