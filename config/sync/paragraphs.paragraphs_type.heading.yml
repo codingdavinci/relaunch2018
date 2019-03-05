@@ -1,0 +1,9 @@
+uuid: 61eeb03e-74c6-4114-b25a-0970b8dedbb6
+langcode: de
+status: true
+dependencies: {  }
+id: heading
+label: Überschrift
+icon_uuid: null
+description: 'Überschrift eines Seitenabschnitts'
+behavior_plugins: {  }

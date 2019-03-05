@@ -7,6 +7,7 @@ dependencies:
     - node.type.event
     - paragraphs.paragraphs_type.box
     - paragraphs.paragraphs_type.box_group
+    - paragraphs.paragraphs_type.heading
     - paragraphs.paragraphs_type.image
     - paragraphs.paragraphs_type.jury
     - paragraphs.paragraphs_type.logos
@@ -46,6 +47,7 @@ settings:
       logos: logos
       video: video
       timeline: timeline
+      heading: heading
     target_bundles_drag_drop:
       textblock_left:
         enabled: true
@@ -62,21 +64,21 @@ settings:
       attributed_image:
         weight: 14
         enabled: false
-      attribution:
-        weight: 15
-        enabled: false
       slideshow:
         enabled: true
         weight: 15
+      attribution:
+        weight: 15
+        enabled: false
       data_set_event:
         weight: 16
+        enabled: false
+      filesize:
+        weight: 17
         enabled: false
       box_group:
         enabled: true
         weight: 17
-      filesize:
-        weight: 17
-        enabled: false
       box:
         enabled: true
         weight: 18
@@ -89,12 +91,12 @@ settings:
       representative:
         weight: 20
         enabled: false
-      team_member:
-        weight: 21
-        enabled: false
       prizes:
         enabled: true
         weight: 21
+      team_member:
+        weight: 21
+        enabled: false
       logo:
         weight: 23
         enabled: false
@@ -107,14 +109,20 @@ settings:
       winner:
         weight: 26
         enabled: false
-      timeline:
-        enabled: true
-        weight: 28
       jury_member:
         weight: 28
         enabled: false
+      timeline:
+        enabled: true
+        weight: 28
       prize:
         weight: 32
+        enabled: false
+      heading:
+        enabled: true
+        weight: 33
+      attributed_audio_video:
+        weight: 34
         enabled: false
       logo_group:
         weight: 34
@@ -125,7 +133,16 @@ settings:
       grid_element:
         weight: 36
         enabled: false
+      box_group_box:
+        weight: 39
+        enabled: false
       social_media:
         weight: 48
+        enabled: false
+      project_image:
+        weight: 53
+        enabled: false
+      timeline_item:
+        weight: 62
         enabled: false
 field_type: entity_reference_revisions

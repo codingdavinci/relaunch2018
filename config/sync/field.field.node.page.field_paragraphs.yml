@@ -8,6 +8,7 @@ dependencies:
     - paragraphs.paragraphs_type.box
     - paragraphs.paragraphs_type.box_group
     - paragraphs.paragraphs_type.grid
+    - paragraphs.paragraphs_type.heading
     - paragraphs.paragraphs_type.logos
     - paragraphs.paragraphs_type.slideshow
     - paragraphs.paragraphs_type.text
@@ -36,6 +37,7 @@ settings:
       grid: grid
       box_group: box_group
       timeline: timeline
+      heading: heading
       logos: logos
       slideshow: slideshow
       text: text
@@ -76,13 +78,19 @@ settings:
       jury:
         weight: 32
         enabled: false
-      grid_element:
-        weight: 33
-        enabled: false
       jury_member:
         weight: 33
         enabled: false
+      heading:
+        enabled: true
+        weight: 33
+      grid_element:
+        weight: 33
+        enabled: false
       logo:
+        weight: 34
+        enabled: false
+      attributed_audio_video:
         weight: 34
         enabled: false
       logos:
@@ -98,6 +106,9 @@ settings:
         weight: 38
         enabled: false
       representative:
+        weight: 39
+        enabled: false
+      box_group_box:
         weight: 39
         enabled: false
       slideshow:
@@ -123,5 +134,11 @@ settings:
         enabled: false
       social_media:
         weight: 48
+        enabled: false
+      project_image:
+        weight: 53
+        enabled: false
+      timeline_item:
+        weight: 62
         enabled: false
 field_type: entity_reference_revisions
