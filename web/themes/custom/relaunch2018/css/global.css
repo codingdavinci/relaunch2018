@@ -7450,8 +7450,8 @@ ul.ui-autocomplete li.ui-menu-item a {
             background-position: -1050px -630px; }
 
 .page-node-type-event .header--tiles .header--tiles--container {
-  background: 191px top url("../img/header/tiles_event_static.jpg") repeat-x;
-  background-size: 790px; }
+  background: 190px -19px url("../img/header/tiles_event_static.jpg");
+  background-size: 1188px; }
   .page-node-type-event .header--tiles .header--tiles--container .header--tiles--overlay {
     mix-blend-mode: multiply;
     opacity: 0.3; }
