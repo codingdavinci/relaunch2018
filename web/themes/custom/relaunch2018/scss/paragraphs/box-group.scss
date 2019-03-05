@@ -1,6 +1,8 @@
 @import '../_includes/base';
 
 .paragraph--type--box-group {
+  margin-bottom: 6rem;
+
   .field--name-field-boxes {
     display: grid;
     grid-auto-columns: 100%;
