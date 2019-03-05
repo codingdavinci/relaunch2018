@@ -7758,7 +7758,6 @@ header .header--default {
       max-width: 100%;
       height: auto;
       -webkit-filter: drop-shadow(5px 5px 25px rgba(0, 0, 0, 0.15));
-      filter: url(#drop-shadow);
       -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=5, OffY=1, Color='#444')";
       /* stylelint-disable declaration-block-no-duplicate-properties */
       filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=5, OffY=1, Color='#444')";
