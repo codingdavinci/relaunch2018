@@ -18,7 +18,7 @@
 <div class="layout-container--wrapper{% if tiled_header %} header-tiles-above{% endif %}">
   <div class="layout-container">
 
-    {% if not tiled_header %}
+    {% if not tiled_header and (page.admin_tabs or page.header or page.header_with_background) %}
       <header role="banner">
         {% if page.admin_tabs %}
           {{ page.admin_tabs }}
@@ -30,7 +30,7 @@
               {{ page.header_with_background }}
             </div>
           </div>
-        {% else %}
+        {% elseif page.header %}
           <div class="container header--default">
             {{ page.header }}
           </div>
