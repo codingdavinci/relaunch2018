@@ -8453,6 +8453,10 @@ figcaption {
     @media (min-width: 768px) {
       .node--type-article .media--view-mode-header .media--image--header--attribution {
         font-size: 1rem; } }
+    .node--type-article .media--view-mode-header .media--image--header--attribution .nowrap * {
+      display: inline;
+      white-space: normal;
+      word-break: break-word; }
   .node--type-article .article--content-block {
     background-color: #f5f5f5; }
     .node--type-article .article--content-block a {

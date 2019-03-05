@@ -27,6 +27,14 @@
       @include fontStyle(small);
       color: $color-gray-3;
       opacity: 0.6;
+
+      .nowrap {
+        & * {
+          display: inline;
+          white-space: normal;
+          word-break: break-word;
+        }
+      }
     }
   }
 
