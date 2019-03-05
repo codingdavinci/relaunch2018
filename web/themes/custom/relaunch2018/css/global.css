@@ -7712,10 +7712,15 @@ body {
   .node__links .links li:first-child {
     padding-left: 0; }
 
+header .region .block-block-content {
+  margin-top: 50px; }
+  header .region .block-block-content .page-title {
+    margin-top: 30px; }
+
 header .header--with-background {
   background-color: #abe7e7;
-  padding-bottom: 50px;
-  padding-top: 100px; }
+  padding-top: 83px;
+  padding-bottom: 50px; }
   header .header--with-background .block-block-content:first-child {
     display: inline-block;
     margin-right: 0.4em; }
@@ -7747,42 +7752,38 @@ header .header--with-background {
 header .header--default {
   margin-bottom: 10px;
   padding-top: 33px; }
-  header .header--default .region .block-block-content {
-    margin-top: 50px; }
-    header .header--default .region .block-block-content .page-title {
-      margin-top: 30px; }
-    header .header--default .region .block-block-content .field--name-field-image {
-      width: 100%; }
-      header .header--default .region .block-block-content .field--name-field-image img {
-        max-width: 100%;
-        height: auto;
-        -webkit-filter: drop-shadow(5px 5px 25px rgba(0, 0, 0, 0.15));
-        filter: url(#drop-shadow);
-        -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=5, OffY=1, Color='#444')";
-        /* stylelint-disable declaration-block-no-duplicate-properties */
-        filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=5, OffY=1, Color='#444')";
-        /* stylelint-enable */ }
-    header .header--default .region .block-block-content .masked-image-wrapper {
+  header .header--default .region .block-block-content .field--name-field-image {
+    width: 100%; }
+    header .header--default .region .block-block-content .field--name-field-image img {
+      max-width: 100%;
+      height: auto;
+      -webkit-filter: drop-shadow(5px 5px 25px rgba(0, 0, 0, 0.15));
+      filter: url(#drop-shadow);
+      -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=5, OffY=1, Color='#444')";
+      /* stylelint-disable declaration-block-no-duplicate-properties */
+      filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=5, OffY=1, Color='#444')";
+      /* stylelint-enable */ }
+  header .header--default .region .block-block-content .masked-image-wrapper {
+    height: 100%;
+    position: relative;
+    width: 100%; }
+    header .header--default .region .block-block-content .masked-image-wrapper .image-mask {
+      background-color: #ffffff;
       height: 100%;
-      position: relative;
-      width: 100%; }
-      header .header--default .region .block-block-content .masked-image-wrapper .image-mask {
-        background-color: #ffffff;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        width: 100%;
-        mask-repeat: no-repeat;
-        mask-size: contain;
-        mix-blend-mode: color;
-        -webkit-mask-repeat: no-repeat;
-        -webkit-mask-size: contain; }
-        @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
-          header .header--default .region .block-block-content .masked-image-wrapper .image-mask {
-            display: none; } }
-        @supports (-ms-accelerator: true) {
-          header .header--default .region .block-block-content .masked-image-wrapper .image-mask {
-            display: none; } }
+      position: absolute;
+      top: 0;
+      width: 100%;
+      mask-repeat: no-repeat;
+      mask-size: contain;
+      mix-blend-mode: color;
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask-size: contain; }
+      @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+        header .header--default .region .block-block-content .masked-image-wrapper .image-mask {
+          display: none; } }
+      @supports (-ms-accelerator: true) {
+        header .header--default .region .block-block-content .masked-image-wrapper .image-mask {
+          display: none; } }
 
 header #block-tags .menu {
   list-style-type: none;
@@ -8181,7 +8182,7 @@ h2 {
   margin-bottom: 2rem; }
 
 header h1 {
-  margin-top: 80px; }
+  margin-top: 30px; }
 
 .header--with-background h1 {
   color: #4f4f4f; }
