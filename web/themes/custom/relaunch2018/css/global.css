@@ -7211,8 +7211,8 @@ ul.ui-autocomplete li.ui-menu-item a {
 .header--tiles {
   width: 100%; }
   .header--tiles .header--tiles--container {
-    background: -9px top url("../img/header/tiles_frontpage_static.jpg") repeat-x;
-    background-size: 1208px;
+    background: -157px -5px url("../img/header/tiles_frontpage_static.jpg");
+    background-size: 905px;
     height: 915px;
     left: 0;
     overflow: hidden;
