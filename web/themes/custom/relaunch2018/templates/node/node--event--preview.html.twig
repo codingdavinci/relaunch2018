@@ -22,7 +22,7 @@
     <div class="node--event--teaser--logo"><img src="{{ theme_path }}/img/CDV_Logo_Line_white.svg"></div>
 
     <h2{{ title_attributes }}>
-      {{ content.field_short_title }}
+      {{ node.field_short_title.value|raw }}
     </h2>
 
   </article>
