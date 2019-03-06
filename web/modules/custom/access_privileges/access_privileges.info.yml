@@ -1,0 +1,6 @@
+name: Access Privileges
+version: 0.1
+type: module
+description: "Custom access privileges."
+package: Custom
+core: 8.x

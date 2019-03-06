@@ -1,0 +1,121 @@
+<?php
+
+use Drupal\Core\Access\AccessResult;
+use Drupal\Core\Session\AccountInterface;
+use Drupal\node\Entity\Node;
+use Drupal\node\NodeInterface;
+
+/**
+ * Implements hook_node_access().
+ *
+ * @param NodeInterface $node
+ * @param string $op
+ * @param AccountInterface $account
+ */
+function access_privileges_node_access(NodeInterface $node, $op, AccountInterface $account) {
+  $user = \Drupal::currentUser();
+  $bundle = $node->bundle();
+
+  if (
+    $op === 'view'
+    || !in_array('event_team', $user->getRoles())
+    || $node->getOwnerId() === $user->id()
+  ) {
+    return AccessResult::neutral();
+  }
+
+  if ($bundle === 'event') {
+    return AccessResult::forbiddenIf(
+      !_access_privileges_is_team_member($user, $node)
+    );
+  }
+
+  if ($bundle === 'data_set') {
+    return _access_privileges_check_data_set($user, $node);
+  }
+
+  if ($bundle === 'project') {
+    return _access_privileges_check_project($user, $node);
+  }
+
+  return AccessResult::neutral();
+}
+
+/**
+ * @param AccountInterface $user
+ * @param NodeInterface $dataSetNode
+ * @return AccessResult
+ */
+function _access_privileges_check_data_set(AccountInterface $user, NodeInterface $dataSetNode) {
+  if ($dataSetNode->bundle() !== 'data_set') {
+    throw new Exception('Not a data set node: ' . $dataSetNode->id());
+  }
+
+  /** @var EntityReferenceRevisionsFieldItemList $fieldEvents */
+  $fieldEvents = $dataSetNode->get('field_events');
+
+  $eventIds = array_filter(
+    array_map(
+      /** @var Paragraph $paragraph */
+      function($paragraph) {
+        return $paragraph->get('field_event')->target_id;
+      },
+      $fieldEvents->referencedEntities()
+    ),
+    function($eventId) {
+      return $eventId !== null;
+    }
+  );
+
+  foreach ($eventIds as $eventId)  {
+    if (_access_privileges_is_team_member($user, Node::load($eventId))) {
+      return AccessResult::neutral();
+    }
+  }
+
+  return AccessResult::forbidden();
+}
+
+/**
+ * @param AccountInterface $user
+ * @param NodeInterface $projectNode
+ * @return AccessResult
+ */
+function _access_privileges_check_project(AccountInterface $user, NodeInterface $projectNode) {
+  if ($projectNode->bundle() !== 'project') {
+    throw new Exception('Not a project node: ' . $projectNode->id());
+  }
+
+  $eventId = $projectNode->get('field_event')->target_id;
+
+  if ($eventId !== null) {
+    if (_access_privileges_is_team_member($user, Node::load($eventId))) {
+      return AccessResult::neutral();
+    }
+  }
+
+  return AccessResult::forbidden();
+}
+
+/**
+ * @param AccountInterface $user
+ * @param NodeInterface $eventNode
+ * @return bool
+ */
+function _access_privileges_is_team_member(AccountInterface $user, NodeInterface $eventNode) {
+  if ($eventNode->bundle() !== 'event') {
+    throw new Exception('Not an event node: ' . $eventNode->id());
+  }
+
+  return in_array($user->id(), _access_privileges_get_event_team($eventNode));
+}
+
+/**
+ * @param NodeInterface $eventNode
+ * @return array
+ */
+function _access_privileges_get_event_team(NodeInterface $eventNode) {
+  return array_map(function($value) {
+    return $value['target_id'];
+  }, $eventNode->get('field_team')->getValue());
+}
