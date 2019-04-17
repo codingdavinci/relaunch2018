@@ -291,8 +291,10 @@ header {
   & > .field__item {
     margin-bottom: 4rem;
 
-    .field--name-field-heading {
-      margin-bottom: -2rem;
+    .paragraph--type--heading {
+      .field--name-field-heading {
+        margin-bottom: -2rem;
+      }
     }
   }
 }

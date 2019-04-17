@@ -7904,7 +7904,7 @@ header #block-tags .menu {
 
 .field--name-field-paragraphs > .field__item {
   margin-bottom: 4rem; }
-  .field--name-field-paragraphs > .field__item .field--name-field-heading {
+  .field--name-field-paragraphs > .field__item .paragraph--type--heading .field--name-field-heading {
     margin-bottom: -2rem; }
 
 @media (min-width: 992px) {
