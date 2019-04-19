@@ -21,6 +21,11 @@ function related_content_views_query_alter(ViewExecutable $view, QueryPluginBase
     /** @var Node $node */
     $node = Node::load(intval($view->args[0]));
     $snippet = '';
+
+    if (count($node->get('field_tags')->getValue()) === 0) {
+      return;
+    }
+
     foreach ($node->get('field_tags')->getValue() as $i => $value) {
       $taxonomyId = $value['target_id'];
 
@@ -39,10 +44,8 @@ function related_content_views_query_alter(ViewExecutable $view, QueryPluginBase
 
     /** @var Sql $query */
     $query->addWhereExpression($groupId, $snippet);
-
   }
   catch (Exception $exception) {
     // Ignore unexpected input.
   }
-
 }
