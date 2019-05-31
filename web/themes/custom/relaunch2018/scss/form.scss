@@ -19,7 +19,7 @@ input {
     color: $color-gray-3;
   }
 
-  &[type="submit"] {
+  &[type='submit'] {
     @include easeAll;
     background-color: $color-main;
     color: $color-white;

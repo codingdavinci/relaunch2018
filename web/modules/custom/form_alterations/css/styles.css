@@ -2495,5 +2495,5 @@ html {
         width: 1140px; } }
     .layout-node-form .layout-region table {
       box-sizing: initial; }
-  .layout-node-form .form-type-language-select select option[value="und"], .layout-node-form .form-type-language-select select option[value="zxx"] {
+  .layout-node-form .form-type-language-select select option[value='und'], .layout-node-form .form-type-language-select select option[value='zxx'] {
     display: none; }

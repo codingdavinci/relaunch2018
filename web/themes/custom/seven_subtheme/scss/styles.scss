@@ -61,11 +61,11 @@
     select {
       max-width: 100%;
 
-      &[type="text"],
-      &[type="email"],
-      &[type="number"],
-      &[type="tel"],
-      &[type="url"],
+      &[type='text'],
+      &[type='email'],
+      &[type='number'],
+      &[type='tel'],
+      &[type='url'],
       &.form-select {
         font-size: $font-size-large;
         line-height: normal;

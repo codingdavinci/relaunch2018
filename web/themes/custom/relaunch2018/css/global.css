@@ -7169,13 +7169,13 @@ input {
     color: #828282; }
   input:-ms-input-placeholder {
     color: #828282; }
-  input[type="submit"] {
+  input[type='submit'] {
     transition: all 0.3s ease;
     background-color: #5dc4b8;
     color: #ffffff;
     padding-left: 80px;
     padding-right: 80px; }
-    input[type="submit"]:hover {
+    input[type='submit']:hover {
       background-color: #099b8a; }
 
 ul.ui-autocomplete li.ui-menu-item a {
@@ -8048,11 +8048,11 @@ body.path-user:not(.user-logged-in) .layout-container {
               font-size: 2rem; } }
           .region-primary-menu .navbar .navbar--wrapper .navbar--left .navbar-toggler .navbar-toggler-icon {
             transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-            background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='%23ffffff' stroke-width='5' d='M4,4 L26,26 z M4,26 L26,4 z'/%3e%3c/svg%3e");
+            background-image: url('data:image/svg+xml,%3csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3e%3cpath stroke="%23ffffff" stroke-width="5" d="M4,4 L26,26 z M4,26 L26,4 z"/%3e%3c/svg%3e');
             display: inline-block;
             width: 1.5rem; }
           .region-primary-menu .navbar .navbar--wrapper .navbar--left .navbar-toggler.collapsed .navbar-toggler-icon {
-            background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='%23ffffff' stroke-width='5' stroke-miterlimit='10' d='M1 4h27 M1 14h27 M1 24h27'/%3e%3c/svg%3e"); }
+            background-image: url('data:image/svg+xml,%3csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3e%3cpath stroke="%23ffffff" stroke-width="5" stroke-miterlimit="10" d="M1 4h27 M1 14h27 M1 24h27"/%3e%3c/svg%3e'); }
         .region-primary-menu .navbar .navbar--wrapper .navbar--left .menu--main--brand {
           display: flex; }
     .region-primary-menu .navbar .navbar--menu {
@@ -9756,7 +9756,7 @@ figcaption {
         .paragraph--type--social-media .card .card-footer .field--name-field-links .field__items .field__item a:hover, .paragraph--type--social-media .card .card-footer .field--name-field-links .field__items .field__item a:visited, .paragraph--type--social-media .card .card-footer .field--name-field-links .field__items .field__item a:active {
           color: #ffffff; }
         .paragraph--type--social-media .card .card-footer .field--name-field-links .field__items .field__item a:before {
-          font-family: "Font Awesome 5 Free";
+          font-family: 'Font Awesome 5 Free';
           font-weight: 900;
           color: #ffffff;
           content: '\e825';
@@ -9765,15 +9765,15 @@ figcaption {
           text-align: center;
           width: 1.25em; }
       .paragraph--type--social-media .card .card-footer .field--name-field-links .field__items .field__item.url--facebook a:before {
-        font-family: "Font Awesome 5 Brands";
+        font-family: 'Font Awesome 5 Brands';
         font-weight: 900;
         content: '\f09a'; }
       .paragraph--type--social-media .card .card-footer .field--name-field-links .field__items .field__item.url--github a:before {
-        font-family: "Font Awesome 5 Brands";
+        font-family: 'Font Awesome 5 Brands';
         font-weight: 900;
         content: '\f09b'; }
       .paragraph--type--social-media .card .card-footer .field--name-field-links .field__items .field__item.url--twitter a:before {
-        font-family: "Font Awesome 5 Brands";
+        font-family: 'Font Awesome 5 Brands';
         font-weight: 900;
         content: '\f099'; }
 
@@ -9794,7 +9794,7 @@ figcaption {
   .paragraph--type--team-member .field--name-field-links {
     word-break: break-all; }
     .paragraph--type--team-member .field--name-field-links .field__item:before {
-      font-family: "Font Awesome 5 Free";
+      font-family: 'Font Awesome 5 Free';
       font-weight: 900;
       content: '\f015';
       display: inline-block;
@@ -9802,15 +9802,15 @@ figcaption {
       text-align: center;
       width: 1.25em; }
     .paragraph--type--team-member .field--name-field-links .field__item.url--facebook:before {
-      font-family: "Font Awesome 5 Brands";
+      font-family: 'Font Awesome 5 Brands';
       font-weight: 900;
       content: '\f09a'; }
     .paragraph--type--team-member .field--name-field-links .field__item.url--github:before {
-      font-family: "Font Awesome 5 Brands";
+      font-family: 'Font Awesome 5 Brands';
       font-weight: 900;
       content: '\f09b'; }
     .paragraph--type--team-member .field--name-field-links .field__item.url--twitter:before {
-      font-family: "Font Awesome 5 Brands";
+      font-family: 'Font Awesome 5 Brands';
       font-weight: 900;
       content: '\f099'; }
 

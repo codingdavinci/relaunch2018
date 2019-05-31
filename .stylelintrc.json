@@ -1,5 +1,5 @@
 {
-  "extends": "../../core/.stylelintrc.json",
+  "extends": "./web/core/.stylelintrc.json",
   "rules": {
     "declaration-empty-line-before": null,
     "font-family-no-missing-generic-family-keyword": null,
@@ -7,6 +7,7 @@
     "at-rule-no-unknown": null,
     "color-hex-length": "long",
     "plugin/no-browser-hacks": null,
+    "string-quotes": "single",
     "unit-whitelist": ["fr", "deg", "em", "ex", "ms", "rem", "%", "s", "px", "vw", "vh"]
   },
   "ignoreFiles": [

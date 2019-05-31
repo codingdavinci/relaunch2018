@@ -37,8 +37,8 @@
   .form-type-language-select {
     select {
       option {
-        &[value="und"],
-        &[value="zxx"] {
+        &[value='und'],
+        &[value='zxx'] {
           display: none;
         }
       }
