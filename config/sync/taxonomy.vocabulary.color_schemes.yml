@@ -5,5 +5,4 @@ dependencies: {  }
 name: Farbschemata
 vid: color_schemes
 description: 'Zur individualisierten Darstellung von Events.'
-hierarchy: 0
 weight: 0

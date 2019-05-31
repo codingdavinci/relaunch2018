@@ -5,5 +5,4 @@ dependencies: {  }
 name: Metadaten-Dateitypen
 vid: metadata_file_types
 description: 'Zu den Metadaten eines Datensatzes auswählbare Dateitypen.'
-hierarchy: 0
 weight: 0

@@ -5,5 +5,4 @@ dependencies: {  }
 name: Datenmengen-Einheiten
 vid: filesize_units
 description: 'Zur Angabe von Dateigrößen wählbare Einheiten.'
-hierarchy: 0
 weight: 0

@@ -5,5 +5,4 @@ dependencies: {  }
 name: Schlüsselwörter
 vid: keywords
 description: 'Zur Kategorisierung von Datensätzen.'
-hierarchy: 0
 weight: 0

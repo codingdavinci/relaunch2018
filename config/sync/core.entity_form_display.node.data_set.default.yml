@@ -28,6 +28,7 @@ dependencies:
     - field.field.node.data_set.field_submission_type
     - field.field.node.data_set.field_theme
     - node.type.data_set
+    - workflows.workflow.data_set
   module:
     - content_moderation
     - field_group

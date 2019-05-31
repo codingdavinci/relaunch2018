@@ -5,5 +5,4 @@ dependencies: {  }
 name: Hintergrundfarben
 vid: background_colors
 description: 'Für Hintergründe zur Verfügung stehende Farben.'
-hierarchy: 0
 weight: 0

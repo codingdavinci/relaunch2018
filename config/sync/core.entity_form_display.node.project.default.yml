@@ -18,6 +18,7 @@ dependencies:
     - field.field.node.project.field_tags
     - field.field.node.project.field_team_members
     - node.type.project
+    - workflows.workflow.project
   module:
     - content_moderation
     - field_group

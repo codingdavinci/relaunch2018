@@ -5,5 +5,4 @@ dependencies: {  }
 name: 'Kontrollierte Vokabulare'
 vid: controlled_vocabularies
 description: 'Zur Kategorisierung von Datensätzen.'
-hierarchy: 0
 weight: 0

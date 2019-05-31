@@ -5,5 +5,4 @@ dependencies: {  }
 name: Datensatz-Zugriffsmodi
 vid: data_set_access_modes
 description: 'Zur Kategorisierung von Datensätzen.'
-hierarchy: 0
 weight: 0

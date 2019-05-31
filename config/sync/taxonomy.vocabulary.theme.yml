@@ -5,5 +5,4 @@ dependencies: {  }
 name: Themen
 vid: theme
 description: 'Zur Kategorisierung von Datensätzen.'
-hierarchy: 0
 weight: 0

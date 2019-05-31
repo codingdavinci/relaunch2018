@@ -5,5 +5,4 @@ dependencies: {  }
 name: Dateitypen
 vid: file_types
 description: 'Zur Kategorisierung von Datensätzen.'
-hierarchy: 1
 weight: 0

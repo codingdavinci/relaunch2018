@@ -5,5 +5,4 @@ dependencies: {  }
 name: Lizenzen
 vid: licenses
 description: 'Für hochgeladene Bilder wählbare Lizenzen.'
-hierarchy: 1
 weight: 0

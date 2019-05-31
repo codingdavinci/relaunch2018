@@ -5,5 +5,4 @@ dependencies: {  }
 name: Software-Lizenzen
 vid: software_licenses
 description: 'Zur Auswahl in Projektbeschreibungen.'
-hierarchy: 0
 weight: 0

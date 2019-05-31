@@ -5,5 +5,4 @@ dependencies: {  }
 name: Auszeichnungen
 vid: awards
 description: 'An Projekte vergebene Auszeichnungen.'
-hierarchy: 0
 weight: 0

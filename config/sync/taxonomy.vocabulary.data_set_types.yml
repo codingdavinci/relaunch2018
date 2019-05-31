@@ -5,5 +5,4 @@ dependencies: {  }
 name: Datensatz-Typen
 vid: data_set_types
 description: 'Zur Kategorisierung von Datensätzen.'
-hierarchy: 0
 weight: 0

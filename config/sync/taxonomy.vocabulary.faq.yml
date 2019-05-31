@@ -5,5 +5,4 @@ dependencies: {  }
 name: FAQ
 vid: faq
 description: 'Kategorien der FAQ.'
-hierarchy: 0
 weight: 0
