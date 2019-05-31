@@ -59,7 +59,6 @@ class AutoCompleteController extends ControllerBase {
   protected function getFilteredInstitutions($typedString) {
     $options = [];
     $institutionUserIds = \Drupal::entityQuery('user')
-      ->condition('status', 1)
       ->condition('roles', 'institution')
       ->execute();
     $users = User::loadMultiple($institutionUserIds);
