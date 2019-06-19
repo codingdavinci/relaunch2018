@@ -136,19 +136,19 @@ function relaunch2018_preprocess_node(array &$variables) {
       $nid = $node->id();
       $awards = [];
       /** @var Node $event */
-      $event = Node::load($eventId);
+      if (($event = Node::load($eventId)) !== null) {
+        foreach ($event->get('field_winners')->getValue() as $element) {
+          $winner = Paragraph::load($element['target_id']);
 
-      foreach ($event->get('field_winners')->getValue() as $element) {
-        $winner = Paragraph::load($element['target_id']);
+          if ($winner->get('field_project')->target_id === $nid) {
+            $awardTermId = $winner->get('field_award')->target_id;
 
-        if ($winner->get('field_project')->target_id === $nid) {
-          $awardTermId = $winner->get('field_award')->target_id;
+            if ($awardTermId !== null) {
+              $term = Term::load($awardTermId);
 
-          if ($awardTermId !== null) {
-            $term = Term::load($awardTermId);
-
-            if ($term !== null) {
-              $awards[] = $term->label();
+              if ($term !== null) {
+                $awards[] = $term->label();
+              }
             }
           }
         }
