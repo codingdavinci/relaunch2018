@@ -193,25 +193,23 @@ strong {
 
 table.table--red,
 table.table--white {
-  @include border-bottom-radius($border-radius);
+  @include border-radius($border-radius);
   @include boxShadow;
   background-color: $color-white;
   border-collapse: separate;
   border-spacing: 0.8em;
+  display: inline-block;
   margin-bottom: 1.5rem;
   padding-bottom: 0.8em;
 
   caption {
-    @include border-top-radius($border-radius);
-    @include boxShadow;
     background-color: $color-white;
     caption-side: top;
     color: $color-main;
+    display: block;
     font-weight: $font-weight-semi-bold;
     padding-top: 1.2em;
-    position: relative;
     text-align: center;
-    z-index: -1;
   }
 
   tr {
