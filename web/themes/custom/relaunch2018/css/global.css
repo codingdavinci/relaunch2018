@@ -7229,12 +7229,12 @@ ul.ui-autocomplete li.ui-menu-item a {
       position: absolute;
       width: 100%; }
     .header--tiles .header--tiles--container .header--tiles--content {
-      padding-top: 100px;
+      padding-top: 150px;
       pointer-events: none;
       position: relative; }
       @media (min-width: 768px) {
         .header--tiles .header--tiles--container .header--tiles--content {
-          padding-top: 150px; } }
+          padding-top: 200px; } }
       .header--tiles .header--tiles--container .header--tiles--content .header--tile--logo {
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
         font-size: 1.4rem;

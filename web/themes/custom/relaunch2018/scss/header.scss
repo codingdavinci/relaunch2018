@@ -31,12 +31,12 @@
     }
 
     .header--tiles--content {
-      padding-top: 100px;
+      padding-top: 150px;
       pointer-events: none;
       position: relative;
 
       @include media-breakpoint-up(md) {
-        padding-top: 150px;
+        padding-top: 200px;
       }
 
       .header--tile--logo {
