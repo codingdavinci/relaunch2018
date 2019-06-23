@@ -2,9 +2,11 @@
 
 .paragraph--type--attributed-image {
   display: inline-block;
+  text-align: center;
 
   .field--name-field-inline-image {
     @include rounded;
+    display: inline-block;
 
     img {
       @include rounded;
