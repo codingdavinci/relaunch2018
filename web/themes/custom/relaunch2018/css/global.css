@@ -9508,6 +9508,11 @@ figcaption {
     .paragraph--type--box-group-box .card .card-footer .field--name-field-footer p:last-child {
       margin-bottom: 0; }
 
+.paragraph--type--filesize > div {
+  display: inline; }
+  .paragraph--type--filesize > div.field--name-field-unit::before {
+    content: '\00a0'; }
+
 .paragraph--type--grid .field--name-field-text {
   margin-bottom: 50px; }
 
