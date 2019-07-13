@@ -7189,13 +7189,8 @@ ul.ui-autocomplete li.ui-menu-item a {
     color: #ffffff;
     text-decoration: none; }
 
-.path-frontpage .layout-container.header-tiles-above .layout-content {
-  border-radius: 4px;
-  position: relative;
-  top: -50px; }
-  .path-frontpage .layout-container.header-tiles-above .layout-content .region-content {
-    position: relative;
-    top: 40px; }
+.path-frontpage .layout-container--wrapper.header-tiles-above .layout-container main .layout-content {
+  padding-top: 30px; }
 
 .path-frontpage .region-content > * {
   margin-bottom: 5rem; }
@@ -7826,7 +7821,7 @@ header #block-tags .menu {
         margin-top: 0; }
         .layout-container--wrapper.header-tiles-above .layout-container main .layout-content {
           border-radius: 4px;
-          padding: 30px 30px 0 30px; }
+          padding: 70px 30px 0 30px; }
   .layout-container--wrapper footer {
     background-color: #5dc4b8;
     color: #4f4f4f;

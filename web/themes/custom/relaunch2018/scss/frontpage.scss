@@ -1,17 +1,13 @@
 @import '_includes/base';
 
 .path-frontpage {
-  .layout-container {
+  .layout-container--wrapper {
     &.header-tiles-above {
-
-      .layout-content {
-        @include rounded;
-        position: relative;
-        top: -50px;
-
-        .region-content {
-          position: relative;
-          top: 40px;
+      .layout-container {
+        main {
+          .layout-content {
+            padding-top: 30px;
+          }
         }
       }
     }
