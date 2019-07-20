@@ -3,6 +3,8 @@
 use Drupal\Core\Entity\Display\EntityFormDisplayInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\taxonomy\Entity\Term;
+use Drupal\views\Plugin\views\query\QueryPluginBase;
+use Drupal\views\ViewExecutable;
 
 /**
  * Implements hook_preprocess_HOOK().
@@ -242,5 +244,23 @@ function form_alterations_preprocess_input__checkbox(&$variables) {
     $tid = $variables['element']['#return_value'];
     $term = Term::load($tid);
     $variables['attributes']['data-description'] = $term->get('description')->value;
+  }
+}
+
+/**
+ * Implements hook_views_query_alter().
+ */
+function form_alterations_views_query_alter(ViewExecutable $view, QueryPluginBase $query) {
+  $currentUser = \Drupal::currentUser();
+  $currentRoles = $currentUser->getRoles();
+
+  if (count(array_intersect(['administrator', 'office'], $currentRoles)) === 0) {
+    if ($view->id() === 'licenses') {
+      $query->where[1]['conditions'][] = [
+        'field' => 'taxonomy_term__parent.parent_target_id',
+        'value' => '',
+        'operator' => '!=',
+      ];
+    }
   }
 }

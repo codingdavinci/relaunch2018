@@ -156,7 +156,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          operator: '!='
+          operator: '>='
           value:
             min: ''
             max: ''
@@ -234,6 +234,10 @@ display:
         options:
           search_fields:
             name: name
+      pager:
+        type: none
+        options:
+          offset: 0
     cache_metadata:
       max-age: -1
       contexts:
