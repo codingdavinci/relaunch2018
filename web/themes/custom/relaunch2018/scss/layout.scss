@@ -149,6 +149,12 @@ header {
   .layout-container {
     position: relative;
 
+    header {
+      .region-admin-tabs {
+        margin-top: 45px;
+      }
+    }
+
     main {
       margin-top: 100px;
 
