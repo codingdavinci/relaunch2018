@@ -1,0 +1,67 @@
+label: Datasets
+description: 'List of datasets'
+display:
+  default:
+    display_options:
+      pager:
+        options:
+          tags:
+            previous: '‹ previous'
+            next: 'next ›'
+            first: '« Start'
+            last: 'End »'
+          expose:
+            items_per_page_options_all_label: '- All -'
+      fields:
+        field_license:
+          label: License
+        field_institution_name:
+          label: 'Institution Name'
+        field_object_type:
+          label: 'Object type'
+      filters:
+        field_theme_target_id:
+          expose:
+            label: Theme
+        field_license_target_id:
+          expose:
+            label: License
+        field_object_type_target_id:
+          expose:
+            label: 'Object type'
+        combine:
+          expose:
+            label: 'Full-text search'
+      title: Datasets
+  page_1:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: 'Apply filter'
+          reset_button_label: Reset
+          sort_asc_label: Ascending
+          sort_desc_label: Descending
+          text_input_required: 'Choose a filter and click apply to see the results'
+          bef:
+            general:
+              secondary_label: 'Advanced Filter'
+      menu:
+        title: Datasets
+      fields:
+        field_institution_name:
+          label: 'Institution name'
+        field_object_type:
+          label: 'Object type'
+      filters:
+        field_theme_target_id:
+          expose:
+            label: Theme
+        field_object_type_target_id:
+          expose:
+            label: 'Object type'
+        combine:
+          expose:
+            label: 'Full-text search'
+        field_license_target_id:
+          expose:
+            label: 'License media files'

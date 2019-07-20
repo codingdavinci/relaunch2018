@@ -50,7 +50,6 @@ third_party_settings:
       weight: 3
       format_type: tabs
       format_settings:
-        label: Reiter
         direction: horizontal
         id: ''
         classes: ''
@@ -68,7 +67,6 @@ third_party_settings:
       weight: 1
       format_type: tab
       format_settings:
-        label: Mediendateien
         formatter: closed
         description: ''
         id: ''
@@ -89,7 +87,6 @@ third_party_settings:
       weight: 3
       format_type: tab
       format_settings:
-        label: Metadaten
         formatter: closed
         description: ''
         id: ''
@@ -105,7 +102,6 @@ third_party_settings:
       weight: 4
       format_type: tab
       format_settings:
-        label: 'Zugang/Links zu den Daten'
         formatter: closed
         description: ''
         id: ''
@@ -125,7 +121,6 @@ third_party_settings:
       weight: 0
       format_type: tab
       format_settings:
-        label: 'Allgemeine Angaben'
         formatter: open
         description: ''
         id: ''
@@ -189,7 +184,7 @@ content:
       placeholder: ''
     third_party_settings:
       maxlength:
-        maxlength_js: 1500
+        maxlength_js: 2000
         maxlength_js_label: 'Begrenzt auf @limit Zeichen (<strong>@remaining</strong> verbleiben).'
         maxlength_js_enforce: true
         maxlength_js_truncate_html: true

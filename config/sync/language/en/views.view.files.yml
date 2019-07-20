@@ -1,0 +1,54 @@
+label: Dateien
+description: 'Dateien suchen und verwalten.'
+display:
+  default:
+    display_options:
+      fields:
+        filemime:
+          label: MIME-Typ
+        filesize:
+          label: Größe
+        status:
+          settings:
+            format_custom_false: Temporär
+            format_custom_true: Dauerhaft
+        created:
+          label: Upload-Datum
+        changed:
+          label: Änderungsdatum
+        count:
+          label: 'Verwendet in'
+      filters:
+        filename:
+          expose:
+            label: Dateiname
+        filemime:
+          expose:
+            label: MIME-Typ
+      title: Dateien
+      empty:
+        area_text_custom:
+          content: 'Keine Dateien verfügbar'
+  page_1:
+    display_title: Dateiübersicht
+    display_options:
+      menu:
+        title: Dateien
+  page_2:
+    display_title: Dateinutzung
+    display_options:
+      fields:
+        entity_label:
+          label: Entität
+        type:
+          label: Entitätstyp
+        module:
+          label: 'Registrierendes Modul'
+        count:
+          label: 'Anzahl der Verwendung'
+      title: Dateinutzung
+      arguments:
+        fid:
+          exception:
+            title: Alle
+          title: 'Dateiverwendungsinformationen für {{ arguments.fid }}'

@@ -1,0 +1,7 @@
+display:
+  default:
+    display_options:
+      use_more_text: 'more news'
+  attachment_1:
+    display_options:
+      title: 'Next Events'

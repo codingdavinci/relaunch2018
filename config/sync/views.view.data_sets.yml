@@ -3774,7 +3774,7 @@ display:
           relationship: field_media_license
           group_type: group
           admin_label: ''
-          label: Lizenz
+          label: 'Lizenz '
           exclude: false
           alter:
             alter_text: false
@@ -4290,7 +4290,7 @@ display:
           exposed: true
           expose:
             operator_id: field_license_target_id_op
-            label: Lizenz
+            label: 'Lizenz Mediendateien'
             description: ''
             use_operator: false
             operator: field_license_target_id_op
@@ -4330,6 +4330,7 @@ display:
         operator: AND
         groups:
           1: AND
+      rendering_language: '***LANGUAGE_entity_translation***'
     cache_metadata:
       max-age: -1
       contexts:

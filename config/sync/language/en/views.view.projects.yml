@@ -1,0 +1,27 @@
+display:
+  default:
+    display_options:
+      filters:
+        field_tags_target_id:
+          expose:
+            label: 'Project type'
+        combine:
+          expose:
+            label: 'Full-text search'
+      title: Projects
+      exposed_form:
+        options:
+          submit_button: 'Apply filter'
+          reset_button_label: Reset
+  block_2:
+    display_options:
+      header:
+        area_text_custom:
+          content: 'Projects using this dataset'
+  block_3:
+    display_options:
+      use_more_text: 'All Projects'
+  page_1:
+    display_options:
+      menu:
+        title: Projects
