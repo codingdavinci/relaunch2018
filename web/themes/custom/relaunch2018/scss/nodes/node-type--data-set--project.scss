@@ -127,7 +127,8 @@
         }
       }
 
-      .field--name-field-submission-type {
+      .field--name-field-submission-type,
+      .field--institution-name {
         .field__item {
           font-weight: $font-weight-semi-bold;
         }

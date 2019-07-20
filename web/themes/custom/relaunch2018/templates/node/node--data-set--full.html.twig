@@ -50,8 +50,13 @@
       {% endif %}
 
       {{ content.field_events }}
-      {{ content.field_submission_type }}
+      <div class="field field--institution-name">
+        <div class="field__item">
+          {{ institution_name }}
+        </div>
+      </div>
       {{ content.field_description }}
+      {{ content.field_submission_type }}
       <div class="data-set--badges">
         {{ object_type }}
         {{ content.field_theme }}

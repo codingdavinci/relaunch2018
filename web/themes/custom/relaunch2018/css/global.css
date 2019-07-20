@@ -8728,7 +8728,9 @@ figcaption {
         display: inline-block;
         margin-bottom: 1rem; }
     .node--type-data-set .article--content-container .node__content .field--name-field-submission-type .field__item,
-    .node--type-project .article--content-container .node__content .field--name-field-submission-type .field__item {
+    .node--type-data-set .article--content-container .node__content .field--institution-name .field__item,
+    .node--type-project .article--content-container .node__content .field--name-field-submission-type .field__item,
+    .node--type-project .article--content-container .node__content .field--institution-name .field__item {
       font-weight: 500; }
     .node--type-data-set .article--content-container .node__content .field--name-field-description,
     .node--type-project .article--content-container .node__content .field--name-field-description {
