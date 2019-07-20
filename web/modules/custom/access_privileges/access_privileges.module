@@ -68,7 +68,8 @@ function _access_privileges_check_data_set(AccountInterface $user, NodeInterface
   );
 
   foreach ($eventIds as $eventId)  {
-    if (_access_privileges_is_team_member($user, Node::load($eventId))) {
+    $node = Node::load($eventId);
+    if ($node !== null && _access_privileges_is_team_member($user, $node)) {
       return AccessResult::neutral();
     }
   }
@@ -89,7 +90,8 @@ function _access_privileges_check_project(AccountInterface $user, NodeInterface 
   $eventId = $projectNode->get('field_event')->target_id;
 
   if ($eventId !== null) {
-    if (_access_privileges_is_team_member($user, Node::load($eventId))) {
+    $node = Node::load($eventId);
+    if ($node !== null && _access_privileges_is_team_member($user, $node)) {
       return AccessResult::neutral();
     }
   }
