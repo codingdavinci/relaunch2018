@@ -56,6 +56,7 @@
         </div>
       </div>
       {{ content.field_description }}
+      {{ content.field_description_unconstrained }}
       {{ content.field_submission_type }}
       <div class="data-set--badges">
         {{ object_type }}
@@ -66,6 +67,7 @@
         content
         |without('header_image')
         |without('field_attributed_image')
+        |without('field_description_unconstrained')
         |without('field_events')
         |without('field_description')
         |without('field_object_type')

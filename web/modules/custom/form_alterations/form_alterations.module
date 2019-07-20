@@ -122,13 +122,21 @@ function _form_alterations_data_set(array &$form) {
 
   $form['langcode']['widget'][0]['value']['#title'] = t('Language of this data set description');
 
+  $userRoles = \Drupal::currentUser()->getRoles();
+
   if (
-    count(array_intersect(
-      \Drupal::currentUser()->getRoles(),
-      ['administrator', 'event_team', 'office']
-    )) === 0 && isset($form['field_legacy'])
+    count(
+      array_intersect($userRoles, ['administrator', 'event_team', 'office'])
+    ) === 0 && isset($form['field_legacy'])
   ) {
     $form['field_legacy']['#access'] = FALSE;
+  }
+
+  if (
+    count(array_intersect($userRoles, ['administrator', 'office'])) === 0
+    && isset($form['field_description_unconstrained'])
+  ) {
+    $form['field_description_unconstrained']['#access'] = FALSE;
   }
 }
 

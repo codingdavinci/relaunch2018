@@ -1,0 +1,21 @@
+uuid: c23d4d97-c51f-4482-86a7-87934042d42a
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description_unconstrained
+    - node.type.data_set
+  module:
+    - text
+id: node.data_set.field_description_unconstrained
+field_name: field_description_unconstrained
+entity_type: node
+bundle: data_set
+label: 'Beschreibung (ohne Zeichenbeschränkung)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
