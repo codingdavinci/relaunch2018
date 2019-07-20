@@ -3,26 +3,24 @@ langcode: de
 status: true
 dependencies:
   config:
-    - field.field.paragraph.logo.field_inline_image
+    - field.field.paragraph.logo.field_image
     - field.field.paragraph.logo.field_link
-    - image.style.medium
     - paragraphs.paragraphs_type.logo
   module:
-    - image
     - link
 id: paragraph.logo.default
 targetEntityType: paragraph
 bundle: logo
 mode: default
 content:
-  field_inline_image:
+  field_image:
     weight: 0
     label: hidden
     settings:
-      image_style: medium
-      image_link: ''
+      view_mode: logo
+      link: false
     third_party_settings: {  }
-    type: image
+    type: entity_reference_entity_view
     region: content
   field_link:
     weight: 1

@@ -20,6 +20,12 @@
     width: 100%;
   }
 
+  &.media--view-mode-logo {
+    img {
+      border-radius: 0;
+    }
+  }
+
   &.media--view-mode-full {
     flex-direction: column;
 
