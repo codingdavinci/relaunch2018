@@ -39,10 +39,20 @@
   }
 
   &.box-group--sync-height {
-    .paragraph--type--box {
+    .paragraph--type--box-group-box {
+      display: flex;
       height: 100%;
-      .card {
+
+      @media #{$ie} {
+        display: block;
+      }
+
+      .paragraph--type--box {
         height: 100%;
+
+        .card {
+          height: 100%;
+        }
       }
     }
   }

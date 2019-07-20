@@ -9407,10 +9407,16 @@ figcaption {
 @media screen and (-ms-high-contrast: active) and (min-width: 576px) and (min-width: 992px), screen and (-ms-high-contrast: none) and (min-width: 576px) and (min-width: 992px) {
   .paragraph--type--box-group.box--width-67 .field--name-field-boxes > .field__item {
     width: 67%; } }
-  .paragraph--type--box-group.box-group--sync-height .paragraph--type--box {
+  .paragraph--type--box-group.box-group--sync-height .paragraph--type--box-group-box {
+    display: flex;
     height: 100%; }
-    .paragraph--type--box-group.box-group--sync-height .paragraph--type--box .card {
+    @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+      .paragraph--type--box-group.box-group--sync-height .paragraph--type--box-group-box {
+        display: block; } }
+    .paragraph--type--box-group.box-group--sync-height .paragraph--type--box-group-box .paragraph--type--box {
       height: 100%; }
+      .paragraph--type--box-group.box-group--sync-height .paragraph--type--box-group-box .paragraph--type--box .card {
+        height: 100%; }
 
 .paragraph--type--box.paragraph--type--box,
 .paragraph--type--box-group-box.paragraph--type--box {
