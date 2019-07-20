@@ -15,7 +15,7 @@ bundle: box
 label: Farbe
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     target_uuid: c3b936ab-3173-41b7-b1a5-ee1ddb9c0eb2
