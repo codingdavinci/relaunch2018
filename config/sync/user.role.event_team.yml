@@ -15,7 +15,6 @@ permissions:
   - 'create audio media'
   - 'create content translations'
   - 'create data_set content'
-  - 'create event content'
   - 'create file media'
   - 'create image media'
   - 'create project content'
