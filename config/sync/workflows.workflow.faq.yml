@@ -1,0 +1,42 @@
+uuid: 00a1d205-e591-4985-8f63-7ba4d04bcbe1
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.faq
+  module:
+    - content_moderation
+id: faq
+label: FAQ
+type: content_moderation
+type_settings:
+  states:
+    draft:
+      published: false
+      default_revision: false
+      label: Entwurf
+      weight: 0
+    published:
+      published: true
+      default_revision: true
+      label: Veröffentlicht
+      weight: 1
+  transitions:
+    create_new_draft:
+      label: 'Create New Draft'
+      to: draft
+      weight: 0
+      from:
+        - draft
+        - published
+    publish:
+      label: Publish
+      to: published
+      weight: 1
+      from:
+        - draft
+        - published
+  entity_types:
+    node:
+      - faq
+  default_moderation_state: draft
