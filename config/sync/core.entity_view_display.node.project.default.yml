@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.project.field_audio_video
     - field.field.node.project.field_datasets
     - field.field.node.project.field_description
+    - field.field.node.project.field_description_unconstrained
     - field.field.node.project.field_event
     - field.field.node.project.field_license_code
     - field.field.node.project.field_license_media
@@ -32,10 +33,9 @@ third_party_settings:
         - field_license_code
         - field_license_media
       parent_name: ''
-      weight: 7
+      weight: 8
       format_type: html_element
       format_settings:
-        label: Ergebnis
         element: div
         show_label: false
         label_element: h3
@@ -51,10 +51,9 @@ third_party_settings:
         - field_datasets
         - field_other_datasets
       parent_name: ''
-      weight: 9
+      weight: 10
       format_type: fieldset
       format_settings:
-        label: 'Verwendete Datensätze'
         element: div
         show_label: true
         label_element: h2
@@ -70,7 +69,7 @@ third_party_settings:
       children:
         - field_team_members
       parent_name: ''
-      weight: 8
+      weight: 9
       format_type: fieldset
       format_settings:
         id: ''
@@ -122,8 +121,15 @@ content:
     third_party_settings: {  }
     type: text_default
     region: content
+  field_description_unconstrained:
+    weight: 6
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
   field_event:
-    weight: 10
+    weight: 11
     label: visually_hidden
     settings:
       link: true
@@ -180,7 +186,7 @@ content:
     type: string
     region: content
   field_tags:
-    weight: 6
+    weight: 7
     label: visually_hidden
     settings:
       link: false

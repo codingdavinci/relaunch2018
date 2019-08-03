@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.project.field_audio_video
     - field.field.node.project.field_datasets
     - field.field.node.project.field_description
+    - field.field.node.project.field_description_unconstrained
     - field.field.node.project.field_event
     - field.field.node.project.field_license_code
     - field.field.node.project.field_license_media
@@ -23,7 +24,6 @@ dependencies:
     - content_moderation
     - field_group
     - link
-    - maxlength
     - paragraphs
     - path
     - select2
@@ -33,6 +33,7 @@ third_party_settings:
     group_description:
       children:
         - field_description
+        - field_description_unconstrained
       parent_name: ''
       weight: 5
       format_type: fieldset
@@ -142,10 +143,18 @@ content:
       placeholder: ''
     third_party_settings:
       maxlength:
-        maxlength_js: 1400
+        maxlength_js: 2000
         maxlength_js_label: 'Begrenzt auf @limit Zeichen (<strong>@remaining</strong> verbleiben).'
         maxlength_js_enforce: true
         maxlength_js_truncate_html: true
+    type: text_textarea
+    region: content
+  field_description_unconstrained:
+    weight: 6
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
     type: text_textarea
     region: content
   field_event:
@@ -205,11 +214,11 @@ content:
   field_short_description:
     weight: 4
     settings:
-      size: 60
+      size: 100
       placeholder: ''
     third_party_settings:
       maxlength:
-        maxlength_js: 80
+        maxlength_js: 150
         maxlength_js_label: 'Begrenzt auf @limit Zeichen (<strong>@remaining</strong> verbleiben).'
     type: string_textfield
     region: content

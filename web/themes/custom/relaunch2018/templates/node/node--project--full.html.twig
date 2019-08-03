@@ -72,6 +72,7 @@
 
       {{ content.field_short_description }}
       {{ content.field_description }}
+      {{ content.field_description_unconstrained }}
 
       <div class="project--tags">
         {{ content.field_tags }}
@@ -82,6 +83,7 @@
         |without('header_image')
         |without('field_short_description')
         |without('field_description')
+        |without('field_description_unconstrained')
         |without('field_audio_video')
         |without('field_attributed_image')
         |without('field_event')

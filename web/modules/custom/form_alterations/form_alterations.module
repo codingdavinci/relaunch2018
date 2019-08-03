@@ -151,6 +151,15 @@ function _form_alterations_project(array &$form) {
   ]);
 
   $form['langcode']['widget'][0]['value']['#title'] = t('Language of this project description');
+
+  $userRoles = \Drupal::currentUser()->getRoles();
+
+  if (
+    count(array_intersect($userRoles, ['administrator', 'office'])) === 0
+    && isset($form['field_description_unconstrained'])
+  ) {
+    $form['field_description_unconstrained']['#access'] = FALSE;
+  }
 }
 
 /**
