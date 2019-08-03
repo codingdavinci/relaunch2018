@@ -7812,6 +7812,9 @@ header #block-tags .menu {
       margin-top: 100px; }
       .layout-container--wrapper .layout-container main .layout-content {
         background-color: #f5f5f5; }
+        .layout-container--wrapper .layout-container main .layout-content .region-admin-tabs {
+          position: relative;
+          z-index: 1; }
   .layout-container--wrapper.header-tiles-above {
     position: relative;
     top: 915px;

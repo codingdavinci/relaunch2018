@@ -160,6 +160,11 @@ header {
 
       .layout-content {
         background-color: $background;
+
+        .region-admin-tabs {
+          position: relative;
+          z-index: 1;
+        }
       }
     }
   }
