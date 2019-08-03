@@ -1,0 +1,21 @@
+uuid: b613e6da-f923-41ad-9cbe-38e18797d204
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description_unconstrained
+    - node.type.project
+  module:
+    - text
+id: node.project.field_description_unconstrained
+field_name: field_description_unconstrained
+entity_type: node
+bundle: project
+label: 'Beschreibung (ohne Zeichenbeschränkung)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

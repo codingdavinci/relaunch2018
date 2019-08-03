@@ -1,6 +1,10 @@
 @import '../_includes/base';
 
 .paragraph--type--prizes {
+  .field--name-field-description {
+    margin-bottom: 2rem;
+  }
+
   .field--name-field-prizes {
     .field__label {
       margin-bottom: 50px;

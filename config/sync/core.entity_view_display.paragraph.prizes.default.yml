@@ -3,6 +3,7 @@ langcode: de
 status: true
 dependencies:
   config:
+    - field.field.paragraph.prizes.field_description
     - field.field.paragraph.prizes.field_prizes
     - paragraphs.paragraphs_type.prizes
   module:
@@ -12,10 +13,17 @@ targetEntityType: paragraph
 bundle: prizes
 mode: default
 content:
+  field_description:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
   field_prizes:
     type: entity_reference_revisions_entity_view
-    weight: 0
-    label: above
+    weight: 1
+    label: hidden
     settings:
       view_mode: default
       link: ''

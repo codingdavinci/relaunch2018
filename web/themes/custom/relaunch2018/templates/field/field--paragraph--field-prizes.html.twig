@@ -20,7 +20,9 @@
 %}
 
 <div{{ attributes.addClass(classes) }}>
-  <h2{{ title_attributes.addClass(title_classes) }}>{{ label }}</h2>
+  {% if not label_hidden %}
+    <h2{{ title_attributes.addClass(title_classes) }}>{{ label }}</h2>
+  {% endif %}
   {% if multiple %}
     <div class="field__items">
   {% endif %}
