@@ -26,6 +26,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: /was-ist-coding-da-vinci
+    pages: "/about-coding-da-vinci\r\n/was-ist-coding-da-vinci"
     negate: false
     context_mapping: {  }
