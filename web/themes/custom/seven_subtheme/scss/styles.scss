@@ -358,6 +358,14 @@
         &.field--name-field-license-media {
           table {
             padding-bottom: 20px;
+
+            .paragraph-top {
+              display: grid;
+
+              .paragraphs-icon-button {
+                display: none;
+              }
+            }
           }
         }
       }
