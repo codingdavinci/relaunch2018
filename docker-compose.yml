@@ -1,0 +1,17 @@
+version: '2'
+services:
+  cdv:
+    image: codingsdavinci/relaunch2018:lastest
+    environment:
+      MYSQL_HOSTNAME: cdv.example.com
+      MYSQL_DATABASE: mycdvdatabase
+      MYSQL_USER: mycdvuser
+      MYSQL_PASSWORD: mycdvpassword
+      MYSQL_PORT: 3306
+      HASH_SALT: myverysecretcdvhashsalt
+      UPDATE_FREE_ACCESS: FALSE
+      FILE_PUBLIC_PATH: sites/default/files
+      TRUSTED_HOST_PATTERNS: "^localhost$, ^127.0.0.1$"
+    ports:
+      - "8080"
+    restart: always

@@ -59,3 +59,60 @@ Code should generally adhere to the [Drupal coding standards](https://www.drupal
 Yarn scripts are set up to lint ES6 JavaScript files and SCSS files:
 * Run `yarn lint:js` to check ES6 JavaScript files using [ESLint](https://eslint.org/).
 * Run `yarn lint:scss` to check SCSS files using [stylelint](https://stylelint.io/).
+
+## Docker
+
+This Dupal project is available as Docker container from Docker Hub: https://hub.docker.com/r/codingdavinci/relaunch2018
+
+To execute the pre-compiled Docker container run the following command with the variables set for your environment. An example (!) for Docker Composer can be found in [docker-composer.yml](docker-composer.yml).
+```shell
+docker run -d -p 8080:80 -P \
+  --env "MYSQL_HOSTNAME=cdv.example.com" \
+  --env "MYSQL_DATABASE=mycdvdatabase" \
+  --env "MYSQL_USER=mycdvuser" \
+  --env "MYSQL_PASSWORD=mycdvpassword" \
+  --env "MYSQL_PORT=3306" \
+  --env "HASH_SALT=myverysecretcdvhashsalt" \
+  --env "UPDATE_FREE_ACCESS=FALSE" \
+  --env "FILE_PUBLIC_PATH=sites/default/files" \
+  --env "TRUSTED_HOST_PATTERNS=\"^localhost\$, ^127.0.0.1\$\"" \
+  codingsdavinci/relaunch2018:lastest
+```
+
+### Environment variables
+
+Please see [web/sites/default/settings.php](web/sites/default/settings.php) for additional information.
+
+| Environment variable  | Description                                                             | Example                         |
+|-----------------------|-------------------------------------------------------------------------|---------------------------------|
+| MYSQL_HOSTNAME        | Database connection. Server host name.                                  | `cdv.example.com`               |
+| MYSQL_DATABASE        | Database connection. Name of the database.                              | `mycdvdatabase`                 |
+| MYSQL_USER            | Database connection. Login name for database.                           | `mycdvuser`                     |
+| MYSQL_PASSWORD        | Database connection. Password for database.                             | `mycdvpassword`                 |
+| MYSQL_PORT            | Database connection. Server Connection Port.                            | `3306`                          |
+| HASH_SALT             | Salt for Drupal's one-time login links, cancel links, form tokens, etc. | `myverysecretcdvhashsalt`       |
+| UPDATE_FREE_ACCESS    | Access control for update.php script.                                   | `FALSE`                         |
+| FILE_PUBLIC_PATH      | Public file path.                                                       | `sites/default/files`           |
+| TRUSTED_HOST_PATTERNS | Trusted host configuration.                                             | `"^localhost\$, ^127.0.0.1\$\"` |
+
+### Build and start Docker container locally
+
+Run in the folder with `Dockerfile`:
+```shell
+docker build -t cdv .
+```
+
+And start Docker Container with:
+```shell
+docker run -d -p 8080:80 -P \
+  --env "MYSQL_HOSTNAME=cdv.example.com" \
+  --env "MYSQL_DATABASE=mycdvdatabase" \
+  --env "MYSQL_USER=mycdvuser" \
+  --env "MYSQL_PASSWORD=mycdvpassword" \
+  --env "MYSQL_PORT=3306" \
+  --env "HASH_SALT=myverysecretcdvhashsalt" \
+  --env "UPDATE_FREE_ACCESS=FALSE" \
+  --env "FILE_PUBLIC_PATH=sites/default/files" \
+  --env "TRUSTED_HOST_PATTERNS=\"^localhost\$, ^127.0.0.1\$\"" \
+  cdv
+```
