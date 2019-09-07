@@ -20,6 +20,7 @@
         }
     ],
     "require": {
+        "bower-asset/fontawesome": "^5.10",
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6.5",
         "drupal-composer/drupal-scaffold": "^2.5",
@@ -43,7 +44,6 @@
         "drupal/views_data_export": "^1.0",
         "drush/drush": "^9.0.0",
         "npm-asset/bootstrap": "^4.1.3",
-        "npm-asset/fortawesome--fontawesome-free": "^5.5",
         "npm-asset/hammerjs": "^2.0.8",
         "npm-asset/jquery-color": "^3.0.0",
         "npm-asset/jquery-countup": "^1.0",

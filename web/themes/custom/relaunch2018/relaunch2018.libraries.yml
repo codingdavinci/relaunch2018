@@ -68,7 +68,7 @@ fontawesome:
     gpl-compatible: true
   css:
     theme:
-      ../../../libraries/fortawesome--fontawesome-free/css/all.css: {}
+      ../../../libraries/fontawesome/css/all.css: {}
 
 hammerjs:
   version: 2.0.8

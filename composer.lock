@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "45c4c8fd34ad7a85d046f8f3bc33d538",
+    "content-hash": "0e919a06cff91fa881fb32c2c9255cbb",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -121,6 +121,21 @@
                 "stack"
             ],
             "time": "2017-12-20T14:37:45+00:00"
+        },
+        {
+            "name": "bower-asset/fontawesome",
+            "version": "5.10.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FortAwesome/Font-Awesome.git",
+                "reference": "090e6148d3f63a45b40e7cd8679bd4d64e58d75d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FortAwesome/Font-Awesome/zipball/090e6148d3f63a45b40e7cd8679bd4d64e58d75d",
+                "reference": "090e6148d3f63a45b40e7cd8679bd4d64e58d75d"
+            },
+            "type": "bower-asset"
         },
         {
             "name": "brumann/polyfill-unserialize",
@@ -4846,9 +4861,7 @@
             "version": "4.3.1",
             "dist": {
                 "type": "tar",
-                "url": "https://registry.npmjs.org/bootstrap/-/bootstrap-4.3.1.tgz",
-                "reference": null,
-                "shasum": null
+                "url": "https://registry.npmjs.org/bootstrap/-/bootstrap-4.3.1.tgz"
             },
             "type": "npm-asset",
             "license": [
@@ -4856,27 +4869,11 @@
             ]
         },
         {
-            "name": "npm-asset/fortawesome--fontawesome-free",
-            "version": "5.10.0-patch12",
-            "dist": {
-                "type": "tar",
-                "url": "https://registry.npmjs.org/@fortawesome/fontawesome-free/-/fontawesome-free-5.10.0-12.tgz",
-                "reference": null,
-                "shasum": null
-            },
-            "type": "npm-asset",
-            "license": [
-                "(CC-BY-4.0 AND OFL-1.1 AND MIT)"
-            ]
-        },
-        {
             "name": "npm-asset/hammerjs",
             "version": "2.0.8",
             "dist": {
                 "type": "tar",
-                "url": "https://registry.npmjs.org/hammerjs/-/hammerjs-2.0.8.tgz",
-                "reference": null,
-                "shasum": null
+                "url": "https://registry.npmjs.org/hammerjs/-/hammerjs-2.0.8.tgz"
             },
             "type": "npm-asset",
             "license": [
@@ -4888,9 +4885,7 @@
             "version": "3.0.0-alpha.1",
             "dist": {
                 "type": "tar",
-                "url": "https://registry.npmjs.org/jquery-color/-/jquery-color-3.0.0-alpha.1.tgz",
-                "reference": null,
-                "shasum": null
+                "url": "https://registry.npmjs.org/jquery-color/-/jquery-color-3.0.0-alpha.1.tgz"
             },
             "type": "npm-asset",
             "license": [
@@ -4902,9 +4897,7 @@
             "version": "1.0.1",
             "dist": {
                 "type": "tar",
-                "url": "https://registry.npmjs.org/jquery-countup/-/jquery-countup-1.0.1.tgz",
-                "reference": null,
-                "shasum": null
+                "url": "https://registry.npmjs.org/jquery-countup/-/jquery-countup-1.0.1.tgz"
             },
             "type": "npm-asset",
             "license": [
@@ -4922,8 +4915,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/gdsmith/jquery.easing/zipball/df09da4048d2607c5d513681dff532dbe6680d95",
-                "reference": "df09da4048d2607c5d513681dff532dbe6680d95",
-                "shasum": null
+                "reference": "df09da4048d2607c5d513681dff532dbe6680d95"
             },
             "type": "npm-asset",
             "license": [
@@ -4935,9 +4927,7 @@
             "version": "1.15.0",
             "dist": {
                 "type": "tar",
-                "url": "https://registry.npmjs.org/popper.js/-/popper.js-1.15.0.tgz",
-                "reference": null,
-                "shasum": null
+                "url": "https://registry.npmjs.org/popper.js/-/popper.js-1.15.0.tgz"
             },
             "type": "npm-asset",
             "license": [
@@ -4949,9 +4939,7 @@
             "version": "4.0.8",
             "dist": {
                 "type": "tar",
-                "url": "https://registry.npmjs.org/select2/-/select2-4.0.8.tgz",
-                "reference": null,
-                "shasum": null
+                "url": "https://registry.npmjs.org/select2/-/select2-4.0.8.tgz"
             },
             "type": "npm-asset",
             "license": [
@@ -4963,9 +4951,7 @@
             "version": "0.0.71",
             "dist": {
                 "type": "tar",
-                "url": "https://registry.npmjs.org/typeface-barlow/-/typeface-barlow-0.0.71.tgz",
-                "reference": null,
-                "shasum": null
+                "url": "https://registry.npmjs.org/typeface-barlow/-/typeface-barlow-0.0.71.tgz"
             },
             "type": "npm-asset",
             "license": [
@@ -4977,9 +4963,7 @@
             "version": "4.0.1",
             "dist": {
                 "type": "tar",
-                "url": "https://registry.npmjs.org/waypoints/-/waypoints-4.0.1.tgz",
-                "reference": null,
-                "shasum": null
+                "url": "https://registry.npmjs.org/waypoints/-/waypoints-4.0.1.tgz"
             },
             "type": "npm-asset",
             "license": [
@@ -7855,7 +7839,7 @@
                 "testing",
                 "web"
             ],
-            "time": "2019-07-15 12:45:29"
+            "time": "2019-07-15T12:45:29+00:00"
         },
         {
             "name": "behat/mink-browserkit-driver",
@@ -8027,7 +8011,7 @@
                 "testing",
                 "webdriver"
             ],
-            "time": "2018-10-10 12:39:06"
+            "time": "2018-10-10T12:39:06+00:00"
         },
         {
             "name": "doctrine/instantiator",
@@ -8090,7 +8074,7 @@
             "version": "8.3.5",
             "source": {
                 "type": "git",
-                "url": "https://git.drupal.org/project/coder.git",
+                "url": "https://git.drupalcode.org/project/coder.git",
                 "reference": "35277fc8675b6a2cbb194f8880145a9c85c845c4"
             },
             "require": {
