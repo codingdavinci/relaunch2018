@@ -52,7 +52,8 @@ RUN { \
 
 WORKDIR /var/www/html
 COPY --from=COMPOSER_CHAIN /tmp/cdv/ .
-COPY settings.php ./web/sites/default/
+RUN find . -type d -exec chmod 755 {} \;
+RUN find . -type f -exec chmod 644 {} \;
 RUN chown -R www-data:www-data web/sites web/modules web/themes
 RUN { \
 		echo "<VirtualHost *:80>"; \
