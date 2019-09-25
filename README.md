@@ -64,7 +64,7 @@ Yarn scripts are set up to lint ES6 JavaScript files and SCSS files:
 
 This Dupal project is available as Docker container from Docker Hub: https://hub.docker.com/r/codingdavinci/relaunch2018
 
-To execute the pre-compiled Docker container run the following command with the variables set for your environment. An example (!) for Docker Composer can be found in [docker-composer.yml](docker-composer.yml).
+To execute the pre-compiled Docker container run the following command with the variables set for your environment. An example for Docker Composer can be found in [docker-compose.yml](docker-compose.yml).
 ```shell
 docker run -d -p 8080:80 -P \
   --env "MYSQL_HOSTNAME=cdv.example.com" \

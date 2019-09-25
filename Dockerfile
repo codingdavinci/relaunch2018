@@ -71,15 +71,15 @@ RUN { \
 		echo "</VirtualHost>"; \
 	} > /etc/apache2/sites-enabled/000-default.conf
 
-# Clear Drupal cache
-RUN php vendor/drush/drush/drush cache-rebuild	
-	
 # install Certbot, see https://certbot.eff.org/lets-encrypt/debianbuster-apache
 RUN apt-get -y install certbot python-certbot-apache
 # RUN certbot --apache
 
 # Clean system
 RUN rm -rf /var/lib/apt/lists/*
+
+# Clear Drupal cache
+# ENTRYPOINT ["php", "vendor/drush/drush/drush", "cache-rebuild"]
 
 HEALTHCHECK --interval=1m --timeout=3s CMD curl --fail http://localhost/ || exit 1
 
