@@ -7,7 +7,7 @@ WORKDIR /tmp/cdv
 RUN composer install --no-dev
 
 # from https://github.com/docker-library/drupal/blob/master/8.7/apache/Dockerfile
-FROM php:7.3-apache-buster
+FROM php:7.3-apache
 MAINTAINER Michael Büchner <m.buechner@dnb.de>
 RUN set -eux; \
 	if command -v a2enmod; then \
@@ -49,6 +49,13 @@ RUN { \
 		echo "opcache.revalidate_freq=60"; \
 		echo "opcache.fast_shutdown=1"; \
 	} > /usr/local/etc/php/conf.d/opcache-recommended.ini
+RUN { \
+		echo "upload_max_filesize = 128M"; \
+		echo "post_max_size = 128M"; \
+		echo "memory_limit = 1G"; \
+		echo "max_execution_time = 600"; \
+		echo "max_input_vars = 5000"; \
+	} > /usr/local/etc/php/conf.d/0-upload_large_dumps.ini
 
 WORKDIR /var/www/html
 COPY --from=COMPOSER_CHAIN /tmp/cdv/ .
@@ -64,8 +71,14 @@ RUN { \
 		echo "</VirtualHost>"; \
 	} > /etc/apache2/sites-enabled/000-default.conf
 
+# Clear Drupal cache
+RUN php vendor/drush/drush/drush cache-rebuild	
+	
 # install Certbot, see https://certbot.eff.org/lets-encrypt/debianbuster-apache
 RUN apt-get -y install certbot python-certbot-apache
+# RUN certbot --apache
+
+# Clean system
 RUN rm -rf /var/lib/apt/lists/*
 
 HEALTHCHECK --interval=1m --timeout=3s CMD curl --fail http://localhost/ || exit 1
