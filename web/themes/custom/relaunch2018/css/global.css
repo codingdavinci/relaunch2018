@@ -10130,6 +10130,8 @@ figcaption {
     padding-bottom: 1rem; }
   .view-data-sets .view-content .card-columns .card .card-body .field {
     margin-top: 1rem; }
+    .view-data-sets .view-content .card-columns .card .card-body .field.field--institution-name {
+      word-break: break-word; }
     .view-data-sets .view-content .card-columns .card .card-body .field.field--name-field-event {
       font-size: 0.9rem; }
       @media (min-width: 768px) {
