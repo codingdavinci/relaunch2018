@@ -29,6 +29,7 @@
         "drupal/config_installer": "^1.8",
         "drupal/console": "~1.0",
         "drupal/core": "~8.7.0",
+        "drupal/eu_cookie_compliance": "^1.8",
         "drupal/field_group": "^3.0",
         "drupal/image_widget_crop": "^2.2",
         "drupal/insert": "^2.0",

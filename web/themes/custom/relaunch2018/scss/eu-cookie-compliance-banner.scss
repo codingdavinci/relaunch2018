@@ -1,0 +1,75 @@
+@import '_includes/base';
+
+.eu-cookie-compliance-banner {
+  .eu-cookie-compliance-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    max-width: 100%;
+
+    @include media-breakpoint-up(md) {
+      flex-direction: row;
+    }
+
+    p,
+    h2,
+    button {
+      font-size: 16px;
+    }
+
+    p {
+      font-weight: normal;
+    }
+
+    button {
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .eu-cookie-compliance-message {
+    margin-top: 0;
+    max-width: 100%;
+    padding: 15px 30px 15px 30px;
+  }
+
+  .eu-cookie-compliance-buttons {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+    margin-top: 0;
+    max-width: 100%;
+
+    @include media-breakpoint-up(md) {
+      flex-direction: row;
+      margin-left: 1rem;
+    }
+
+    button {
+      margin: 0;
+      min-height: 40px;
+      
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .agree-button {
+      background: $color-white;
+      color: $color-gray-1;
+      font-weight: bold;
+    }
+
+    .decline-button {
+      background: black;
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+      color: $color-white;
+      font-weight: normal;
+      text-shadow: none;
+    }
+  }
+}
