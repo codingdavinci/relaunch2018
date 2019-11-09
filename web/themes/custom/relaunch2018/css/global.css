@@ -8698,19 +8698,19 @@ figcaption {
       .node--type-project .article--content-container .article--header .article--content-block {
         font-size: 1rem; } }
     .node--type-data-set .article--content-container .article--header .article--content-block .field--name-field-attributed-image,
-    .node--type-data-set .article--content-container .article--header .article--content-block .node--type-project--audio-video,
+    .node--type-data-set .article--content-container .article--header .article--content-block .field--name--field-audio-video__media,
     .node--type-project .article--content-container .article--header .article--content-block .field--name-field-attributed-image,
-    .node--type-project .article--content-container .article--header .article--content-block .node--type-project--audio-video {
+    .node--type-project .article--content-container .article--header .article--content-block .field--name--field-audio-video__media {
       display: inline-block;
       text-align: right; }
       .node--type-data-set .article--content-container .article--header .article--content-block .field--name-field-attributed-image .field--name-field-inline-image,
       .node--type-data-set .article--content-container .article--header .article--content-block .field--name-field-attributed-image video,
-      .node--type-data-set .article--content-container .article--header .article--content-block .node--type-project--audio-video .field--name-field-inline-image,
-      .node--type-data-set .article--content-container .article--header .article--content-block .node--type-project--audio-video video,
+      .node--type-data-set .article--content-container .article--header .article--content-block .field--name--field-audio-video__media .field--name-field-inline-image,
+      .node--type-data-set .article--content-container .article--header .article--content-block .field--name--field-audio-video__media video,
       .node--type-project .article--content-container .article--header .article--content-block .field--name-field-attributed-image .field--name-field-inline-image,
       .node--type-project .article--content-container .article--header .article--content-block .field--name-field-attributed-image video,
-      .node--type-project .article--content-container .article--header .article--content-block .node--type-project--audio-video .field--name-field-inline-image,
-      .node--type-project .article--content-container .article--header .article--content-block .node--type-project--audio-video video {
+      .node--type-project .article--content-container .article--header .article--content-block .field--name--field-audio-video__media .field--name-field-inline-image,
+      .node--type-project .article--content-container .article--header .article--content-block .field--name--field-audio-video__media video {
         border-radius: 4px;
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
         background: #fff;
@@ -8718,24 +8718,24 @@ figcaption {
         padding: 1rem; }
         .node--type-data-set .article--content-container .article--header .article--content-block .field--name-field-attributed-image .field--name-field-inline-image img,
         .node--type-data-set .article--content-container .article--header .article--content-block .field--name-field-attributed-image video img,
-        .node--type-data-set .article--content-container .article--header .article--content-block .node--type-project--audio-video .field--name-field-inline-image img,
-        .node--type-data-set .article--content-container .article--header .article--content-block .node--type-project--audio-video video img,
+        .node--type-data-set .article--content-container .article--header .article--content-block .field--name--field-audio-video__media .field--name-field-inline-image img,
+        .node--type-data-set .article--content-container .article--header .article--content-block .field--name--field-audio-video__media video img,
         .node--type-project .article--content-container .article--header .article--content-block .field--name-field-attributed-image .field--name-field-inline-image img,
         .node--type-project .article--content-container .article--header .article--content-block .field--name-field-attributed-image video img,
-        .node--type-project .article--content-container .article--header .article--content-block .node--type-project--audio-video .field--name-field-inline-image img,
-        .node--type-project .article--content-container .article--header .article--content-block .node--type-project--audio-video video img {
+        .node--type-project .article--content-container .article--header .article--content-block .field--name--field-audio-video__media .field--name-field-inline-image img,
+        .node--type-project .article--content-container .article--header .article--content-block .field--name--field-audio-video__media video img {
           border-radius: 4px;
           max-width: 100%;
           height: auto; }
       .node--type-data-set .article--content-container .article--header .article--content-block .field--name-field-attributed-image .field--name-field-audio-video div,
-      .node--type-data-set .article--content-container .article--header .article--content-block .node--type-project--audio-video .field--name-field-audio-video div,
+      .node--type-data-set .article--content-container .article--header .article--content-block .field--name--field-audio-video__media .field--name-field-audio-video div,
       .node--type-project .article--content-container .article--header .article--content-block .field--name-field-attributed-image .field--name-field-audio-video div,
-      .node--type-project .article--content-container .article--header .article--content-block .node--type-project--audio-video .field--name-field-audio-video div {
+      .node--type-project .article--content-container .article--header .article--content-block .field--name--field-audio-video__media .field--name-field-audio-video div {
         display: inline; }
       .node--type-data-set .article--content-container .article--header .article--content-block .field--name-field-attributed-image .field--name-field-license .field,
-      .node--type-data-set .article--content-container .article--header .article--content-block .node--type-project--audio-video .field--name-field-license .field,
+      .node--type-data-set .article--content-container .article--header .article--content-block .field--name--field-audio-video__media .field--name-field-license .field,
       .node--type-project .article--content-container .article--header .article--content-block .field--name-field-attributed-image .field--name-field-license .field,
-      .node--type-project .article--content-container .article--header .article--content-block .node--type-project--audio-video .field--name-field-license .field {
+      .node--type-project .article--content-container .article--header .article--content-block .field--name--field-audio-video__media .field--name-field-license .field {
         margin-bottom: 0; }
   .node--type-data-set .article--content-container .node__content,
   .node--type-project .article--content-container .node__content {

@@ -27,7 +27,7 @@
   <div class="article--content-container row">
     <div class="article--header col-sm-10 offset-sm-1 col-md-9 offset-md-2">
       <div class="article--content-block">
-        <div class="node--type-project--audio-video">
+        <div class="field--name--field-audio-video__media">
           {% if content.field_audio_video['#items'] is not empty %}
           <video controls poster="{{ audio_video.poster }}">
             <source src="{{ audio_video.url }}" type="{{ audio_video.mime_type }}">
@@ -82,6 +82,7 @@
         |without('header_image')
         |without('field_attributed_image')
         |without('field_description_unconstrained')
+        |without('field_audio_video')
         |without('field_events')
         |without('field_description')
         |without('field_object_type')
