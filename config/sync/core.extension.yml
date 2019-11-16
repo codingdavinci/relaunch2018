@@ -7,6 +7,7 @@ module:
   block_content: 0
   block_exclude_pages: 0
   block_figures: 0
+  blockgroup: 0
   breakpoint: 0
   ckeditor: 0
   color: 0

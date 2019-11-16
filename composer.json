@@ -26,6 +26,7 @@
         "drupal-composer/drupal-scaffold": "^2.5",
         "drupal/better_exposed_filters": "^3.0",
         "drupal/block_exclude_pages": "^1.2",
+        "drupal/blockgroup": "^1.1",
         "drupal/config_installer": "^1.8",
         "drupal/console": "~1.0",
         "drupal/core": "~8.7.0",
