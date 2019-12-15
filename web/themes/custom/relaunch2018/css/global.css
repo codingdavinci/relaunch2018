@@ -7156,6 +7156,57 @@ a.text-dark:hover, a.text-dark:focus {
   .block-block-figures .block-figures--item .block-figures--item--number {
     padding: 2rem; }
 
+.eu-cookie-compliance-banner .eu-cookie-compliance-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  max-width: 100%; }
+  @media (min-width: 768px) {
+    .eu-cookie-compliance-banner .eu-cookie-compliance-content {
+      flex-direction: row; } }
+  .eu-cookie-compliance-banner .eu-cookie-compliance-content p,
+  .eu-cookie-compliance-banner .eu-cookie-compliance-content h2,
+  .eu-cookie-compliance-banner .eu-cookie-compliance-content button {
+    font-size: 16px; }
+  .eu-cookie-compliance-banner .eu-cookie-compliance-content p {
+    font-weight: normal; }
+  .eu-cookie-compliance-banner .eu-cookie-compliance-content button:hover {
+    text-decoration: none; }
+
+.eu-cookie-compliance-banner .eu-cookie-compliance-message {
+  margin-top: 0;
+  max-width: 100%;
+  padding: 15px 30px 15px 30px; }
+
+.eu-cookie-compliance-banner .eu-cookie-compliance-buttons {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+  margin-top: 0;
+  max-width: 100%; }
+  @media (min-width: 768px) {
+    .eu-cookie-compliance-banner .eu-cookie-compliance-buttons {
+      flex-direction: row;
+      margin-left: 1rem; } }
+  .eu-cookie-compliance-banner .eu-cookie-compliance-buttons button {
+    margin: 0;
+    min-height: 40px; }
+    .eu-cookie-compliance-banner .eu-cookie-compliance-buttons button:hover {
+      text-decoration: underline; }
+  .eu-cookie-compliance-banner .eu-cookie-compliance-buttons .agree-button {
+    background: #ffffff;
+    color: #333333;
+    font-weight: bold; }
+  .eu-cookie-compliance-banner .eu-cookie-compliance-buttons .decline-button {
+    background: black;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    color: #ffffff;
+    font-weight: normal;
+    text-shadow: none; }
+
 input {
   border-radius: 4px;
   border: 0;
@@ -8647,19 +8698,19 @@ figcaption {
       .node--type-project .article--content-container .article--header .article--content-block {
         font-size: 1rem; } }
     .node--type-data-set .article--content-container .article--header .article--content-block .field--name-field-attributed-image,
-    .node--type-data-set .article--content-container .article--header .article--content-block .node--type-project--audio-video,
+    .node--type-data-set .article--content-container .article--header .article--content-block .field--name--field-audio-video__media,
     .node--type-project .article--content-container .article--header .article--content-block .field--name-field-attributed-image,
-    .node--type-project .article--content-container .article--header .article--content-block .node--type-project--audio-video {
+    .node--type-project .article--content-container .article--header .article--content-block .field--name--field-audio-video__media {
       display: inline-block;
       text-align: right; }
       .node--type-data-set .article--content-container .article--header .article--content-block .field--name-field-attributed-image .field--name-field-inline-image,
       .node--type-data-set .article--content-container .article--header .article--content-block .field--name-field-attributed-image video,
-      .node--type-data-set .article--content-container .article--header .article--content-block .node--type-project--audio-video .field--name-field-inline-image,
-      .node--type-data-set .article--content-container .article--header .article--content-block .node--type-project--audio-video video,
+      .node--type-data-set .article--content-container .article--header .article--content-block .field--name--field-audio-video__media .field--name-field-inline-image,
+      .node--type-data-set .article--content-container .article--header .article--content-block .field--name--field-audio-video__media video,
       .node--type-project .article--content-container .article--header .article--content-block .field--name-field-attributed-image .field--name-field-inline-image,
       .node--type-project .article--content-container .article--header .article--content-block .field--name-field-attributed-image video,
-      .node--type-project .article--content-container .article--header .article--content-block .node--type-project--audio-video .field--name-field-inline-image,
-      .node--type-project .article--content-container .article--header .article--content-block .node--type-project--audio-video video {
+      .node--type-project .article--content-container .article--header .article--content-block .field--name--field-audio-video__media .field--name-field-inline-image,
+      .node--type-project .article--content-container .article--header .article--content-block .field--name--field-audio-video__media video {
         border-radius: 4px;
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
         background: #fff;
@@ -8667,24 +8718,24 @@ figcaption {
         padding: 1rem; }
         .node--type-data-set .article--content-container .article--header .article--content-block .field--name-field-attributed-image .field--name-field-inline-image img,
         .node--type-data-set .article--content-container .article--header .article--content-block .field--name-field-attributed-image video img,
-        .node--type-data-set .article--content-container .article--header .article--content-block .node--type-project--audio-video .field--name-field-inline-image img,
-        .node--type-data-set .article--content-container .article--header .article--content-block .node--type-project--audio-video video img,
+        .node--type-data-set .article--content-container .article--header .article--content-block .field--name--field-audio-video__media .field--name-field-inline-image img,
+        .node--type-data-set .article--content-container .article--header .article--content-block .field--name--field-audio-video__media video img,
         .node--type-project .article--content-container .article--header .article--content-block .field--name-field-attributed-image .field--name-field-inline-image img,
         .node--type-project .article--content-container .article--header .article--content-block .field--name-field-attributed-image video img,
-        .node--type-project .article--content-container .article--header .article--content-block .node--type-project--audio-video .field--name-field-inline-image img,
-        .node--type-project .article--content-container .article--header .article--content-block .node--type-project--audio-video video img {
+        .node--type-project .article--content-container .article--header .article--content-block .field--name--field-audio-video__media .field--name-field-inline-image img,
+        .node--type-project .article--content-container .article--header .article--content-block .field--name--field-audio-video__media video img {
           border-radius: 4px;
           max-width: 100%;
           height: auto; }
       .node--type-data-set .article--content-container .article--header .article--content-block .field--name-field-attributed-image .field--name-field-audio-video div,
-      .node--type-data-set .article--content-container .article--header .article--content-block .node--type-project--audio-video .field--name-field-audio-video div,
+      .node--type-data-set .article--content-container .article--header .article--content-block .field--name--field-audio-video__media .field--name-field-audio-video div,
       .node--type-project .article--content-container .article--header .article--content-block .field--name-field-attributed-image .field--name-field-audio-video div,
-      .node--type-project .article--content-container .article--header .article--content-block .node--type-project--audio-video .field--name-field-audio-video div {
+      .node--type-project .article--content-container .article--header .article--content-block .field--name--field-audio-video__media .field--name-field-audio-video div {
         display: inline; }
       .node--type-data-set .article--content-container .article--header .article--content-block .field--name-field-attributed-image .field--name-field-license .field,
-      .node--type-data-set .article--content-container .article--header .article--content-block .node--type-project--audio-video .field--name-field-license .field,
+      .node--type-data-set .article--content-container .article--header .article--content-block .field--name--field-audio-video__media .field--name-field-license .field,
       .node--type-project .article--content-container .article--header .article--content-block .field--name-field-attributed-image .field--name-field-license .field,
-      .node--type-project .article--content-container .article--header .article--content-block .node--type-project--audio-video .field--name-field-license .field {
+      .node--type-project .article--content-container .article--header .article--content-block .field--name--field-audio-video__media .field--name-field-license .field {
         margin-bottom: 0; }
   .node--type-data-set .article--content-container .node__content,
   .node--type-project .article--content-container .node__content {
@@ -10130,6 +10181,8 @@ figcaption {
     padding-bottom: 1rem; }
   .view-data-sets .view-content .card-columns .card .card-body .field {
     margin-top: 1rem; }
+    .view-data-sets .view-content .card-columns .card .card-body .field.field--institution-name {
+      word-break: break-word; }
     .view-data-sets .view-content .card-columns .card .card-body .field.field--name-field-event {
       font-size: 0.9rem; }
       @media (min-width: 768px) {

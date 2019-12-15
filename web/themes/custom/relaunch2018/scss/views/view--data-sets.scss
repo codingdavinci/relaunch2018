@@ -40,6 +40,10 @@
           .field {
             margin-top: 1rem;
 
+            &.field--institution-name {
+              word-break: break-word;
+            }
+
             &.field--name-field-event {
               @include fontStyle(small);
             }

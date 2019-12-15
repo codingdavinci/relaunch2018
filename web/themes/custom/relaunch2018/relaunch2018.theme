@@ -156,6 +156,9 @@ function relaunch2018_preprocess_node(array &$variables) {
 
       $variables['awards'] = $awards;
     }
+  }
+
+  if (in_array($node->bundle(), ['data_set', 'project'])) {
 
     /** @var EntityReferenceRevisionsFieldItemList $audioVideo */
     $audioVideo = $node->get('field_audio_video');

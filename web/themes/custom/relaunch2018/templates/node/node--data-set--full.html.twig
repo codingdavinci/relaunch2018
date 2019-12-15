@@ -27,7 +27,21 @@
   <div class="article--content-container row">
     <div class="article--header col-sm-10 offset-sm-1 col-md-9 offset-md-2">
       <div class="article--content-block">
-        {{ content.field_attributed_image }}
+        <div class="field--name--field-audio-video__media">
+          {% if content.field_audio_video['#items'] is not empty %}
+          <video controls poster="{{ audio_video.poster }}">
+            <source src="{{ audio_video.url }}" type="{{ audio_video.mime_type }}">
+            <p>
+              {% trans %}
+              Your browser does not support HTML5 video. Here is a <a href="{{ audio_video.url }}">link to the video</a> instead.
+              {% endtrans %}
+            </p>
+          </video>
+          {{ content.field_audio_video }}
+        </div>
+        {% else %}
+          {{ content.field_attributed_image }}
+        {% endif %}
       </div>
     </div>
 
@@ -68,6 +82,7 @@
         |without('header_image')
         |without('field_attributed_image')
         |without('field_description_unconstrained')
+        |without('field_audio_video')
         |without('field_events')
         |without('field_description')
         |without('field_object_type')

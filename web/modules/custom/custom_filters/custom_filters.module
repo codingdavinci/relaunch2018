@@ -111,8 +111,7 @@ function custom_filters_views_post_build(ViewExecutable $view) {
     $select = Database::getConnection()->select('node');
     $select->distinct();
     $select->innerJoin($view->build_info['query'], 'subQuery');
-    $select->fields('subQuery', ['nid', 'node_field_data_created']);
-    $select->orderBy('node_field_data_created', 'DESC');
+    $select->fields('subQuery', ['nid']);
 
     $view->build_info['query'] = $select;
     $view->build_info['count_query'] = $select;
