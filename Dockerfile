@@ -52,7 +52,7 @@ RUN { \
 RUN { \
 		echo "upload_max_filesize = 128M"; \
 		echo "post_max_size = 128M"; \
-		echo "memory_limit = 1G"; \
+		echo "memory_limit = 512M"; \
 		echo "max_execution_time = 600"; \
 		echo "max_input_vars = 5000"; \
 	} > /usr/local/etc/php/conf.d/0-upload_large_dumps.ini
@@ -61,10 +61,10 @@ WORKDIR /var/www/html
 COPY --from=COMPOSER_CHAIN /tmp/cdv/ .
 RUN find . -type d -exec chmod 755 {} \;
 RUN find . -type f -exec chmod 644 {} \;
-RUN chown -R www-data:www-data web/sites web/modules web/themes
+RUN chown -R www-data:www-data web/sites web/modules web/themes tmp/
 RUN { \
 		echo "<VirtualHost *:80>"; \
-		echo "  ServerAdmin webmaster@localhost"; \
+		echo "  ServerAdmin mbuechner@dnb.de"; \
 		echo "  DocumentRoot /var/www/html/web"; \
 		echo "  ErrorLog ${APACHE_LOG_DIR}/error.log"; \
 		echo "  CustomLog ${APACHE_LOG_DIR}/access.log combined"; \
@@ -72,7 +72,7 @@ RUN { \
 	} > /etc/apache2/sites-enabled/000-default.conf
 
 # install Certbot, see https://certbot.eff.org/lets-encrypt/debianbuster-apache
-RUN apt-get -y install certbot python-certbot-apache
+# RUN apt-get -y install certbot python-certbot-apache
 # RUN certbot --apache
 
 # Clean system
