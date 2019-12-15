@@ -3108,7 +3108,7 @@ display:
         css_class: true
         style: true
         row: true
-        sorts: true
+        sorts: false
       path: daten
       exposed_form:
         type: bef
@@ -3180,7 +3180,7 @@ display:
         description: ''
         expanded: false
         parent: ''
-        weight: -44
+        weight: -48
         context: '0'
         menu_name: main
       fields:
@@ -4331,6 +4331,7 @@ display:
         groups:
           1: AND
       rendering_language: '***LANGUAGE_entity_translation***'
+      sorts: {  }
     cache_metadata:
       max-age: -1
       contexts:

@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "45c4c8fd34ad7a85d046f8f3bc33d538",
+    "content-hash": "2d4a6715287b90790e268a9b01b4e786",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -121,6 +121,21 @@
                 "stack"
             ],
             "time": "2017-12-20T14:37:45+00:00"
+        },
+        {
+            "name": "bower-asset/fontawesome",
+            "version": "5.10.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FortAwesome/Font-Awesome.git",
+                "reference": "090e6148d3f63a45b40e7cd8679bd4d64e58d75d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FortAwesome/Font-Awesome/zipball/090e6148d3f63a45b40e7cd8679bd4d64e58d75d",
+                "reference": "090e6148d3f63a45b40e7cd8679bd4d64e58d75d"
+            },
+            "type": "bower-asset"
         },
         {
             "name": "brumann/polyfill-unserialize",
@@ -2215,6 +2230,65 @@
             }
         },
         {
+            "name": "drupal/blockgroup",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/blockgroup.git",
+                "reference": "8.x-1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/blockgroup-8.x-1.1.zip",
+                "reference": "8.x-1.1",
+                "shasum": "c5a8424db376b10909290a601c682de2d460723c"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.1",
+                    "datestamp": "1537911480",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "axel.rutz",
+                    "homepage": "https://www.drupal.org/user/229048"
+                },
+                {
+                    "name": "kiss.jozsef",
+                    "homepage": "https://www.drupal.org/user/2848443"
+                },
+                {
+                    "name": "leymannx",
+                    "homepage": "https://www.drupal.org/user/2482808"
+                },
+                {
+                    "name": "znerol",
+                    "homepage": "https://www.drupal.org/user/63999"
+                }
+            ],
+            "description": "Add block groups to block configuration page",
+            "homepage": "https://www.drupal.org/project/blockgroup",
+            "support": {
+                "source": "https://git.drupalcode.org/project/blockgroup"
+            }
+        },
+        {
             "name": "drupal/config_installer",
             "version": "1.8.0",
             "source": {
@@ -3016,6 +3090,101 @@
             "homepage": "https://www.drupal.org/project/entity_reference_revisions",
             "support": {
                 "source": "http://cgit.drupalcode.org/entity_reference_revisions"
+            }
+        },
+        {
+            "name": "drupal/eu_cookie_compliance",
+            "version": "1.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/eu-cookie-compliance.git",
+                "reference": "8.x-1.8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/eu_cookie_compliance-8.x-1.8.zip",
+                "reference": "8.x-1.8",
+                "shasum": "f4b5c48d0d4347c414b91eaa59acad88707b5907"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.8",
+                    "datestamp": "1563997434",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Marcin Pajdzik",
+                    "homepage": "https://www.drupal.org/u/marcin-pajdzik",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Sven Berg Ryen",
+                    "homepage": "https://www.drupal.org/u/svenryen",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "See other contributors",
+                    "homepage": "https://www.drupal.org/node/1538032/committers"
+                },
+                {
+                    "name": "dakku",
+                    "homepage": "https://www.drupal.org/user/97634"
+                },
+                {
+                    "name": "grzegorz.bartman",
+                    "homepage": "https://www.drupal.org/user/363120"
+                },
+                {
+                    "name": "id.tornado",
+                    "homepage": "https://www.drupal.org/user/2754049"
+                },
+                {
+                    "name": "killua99",
+                    "homepage": "https://www.drupal.org/user/699418"
+                },
+                {
+                    "name": "mibfire",
+                    "homepage": "https://www.drupal.org/user/155136"
+                },
+                {
+                    "name": "naveenvalecha",
+                    "homepage": "https://www.drupal.org/user/2665733"
+                },
+                {
+                    "name": "svenryen",
+                    "homepage": "https://www.drupal.org/user/667244"
+                }
+            ],
+            "description": "This module aims at making the website compliant with the new EU cookie regulation.",
+            "homepage": "https://drupal.org/project/eu_cookie_compliance",
+            "keywords": [
+                "Cookie",
+                "CookieCompliance",
+                "Drupal",
+                "GDPR"
+            ],
+            "support": {
+                "source": "https://cgit.drupalcode.org/eu-cookie-compliance",
+                "docs": "https://www.drupal.org/project/eu_cookie_compliance",
+                "forum": "https://drupal.stackexchange.com/search?q=eu+cookie+compliance",
+                "issues": "https://www.drupal.org/project/issues/eu_cookie_compliance?version=8.x",
+                "irc": "irc://irc.freenode.org/drupal-contribute"
             }
         },
         {
@@ -4846,9 +5015,7 @@
             "version": "4.3.1",
             "dist": {
                 "type": "tar",
-                "url": "https://registry.npmjs.org/bootstrap/-/bootstrap-4.3.1.tgz",
-                "reference": null,
-                "shasum": null
+                "url": "https://registry.npmjs.org/bootstrap/-/bootstrap-4.3.1.tgz"
             },
             "type": "npm-asset",
             "license": [
@@ -4856,27 +5023,11 @@
             ]
         },
         {
-            "name": "npm-asset/fortawesome--fontawesome-free",
-            "version": "5.10.0-patch12",
-            "dist": {
-                "type": "tar",
-                "url": "https://registry.npmjs.org/@fortawesome/fontawesome-free/-/fontawesome-free-5.10.0-12.tgz",
-                "reference": null,
-                "shasum": null
-            },
-            "type": "npm-asset",
-            "license": [
-                "(CC-BY-4.0 AND OFL-1.1 AND MIT)"
-            ]
-        },
-        {
             "name": "npm-asset/hammerjs",
             "version": "2.0.8",
             "dist": {
                 "type": "tar",
-                "url": "https://registry.npmjs.org/hammerjs/-/hammerjs-2.0.8.tgz",
-                "reference": null,
-                "shasum": null
+                "url": "https://registry.npmjs.org/hammerjs/-/hammerjs-2.0.8.tgz"
             },
             "type": "npm-asset",
             "license": [
@@ -4888,9 +5039,7 @@
             "version": "3.0.0-alpha.1",
             "dist": {
                 "type": "tar",
-                "url": "https://registry.npmjs.org/jquery-color/-/jquery-color-3.0.0-alpha.1.tgz",
-                "reference": null,
-                "shasum": null
+                "url": "https://registry.npmjs.org/jquery-color/-/jquery-color-3.0.0-alpha.1.tgz"
             },
             "type": "npm-asset",
             "license": [
@@ -4902,9 +5051,7 @@
             "version": "1.0.1",
             "dist": {
                 "type": "tar",
-                "url": "https://registry.npmjs.org/jquery-countup/-/jquery-countup-1.0.1.tgz",
-                "reference": null,
-                "shasum": null
+                "url": "https://registry.npmjs.org/jquery-countup/-/jquery-countup-1.0.1.tgz"
             },
             "type": "npm-asset",
             "license": [
@@ -4916,14 +5063,13 @@
             "version": "1.4.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/gdsmith/jquery.easing.git",
+                "url": "git@github.com:gdsmith/jquery.easing.git",
                 "reference": "df09da4048d2607c5d513681dff532dbe6680d95"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/gdsmith/jquery.easing/zipball/df09da4048d2607c5d513681dff532dbe6680d95",
-                "reference": "df09da4048d2607c5d513681dff532dbe6680d95",
-                "shasum": null
+                "reference": "df09da4048d2607c5d513681dff532dbe6680d95"
             },
             "type": "npm-asset",
             "license": [
@@ -4935,9 +5081,7 @@
             "version": "1.15.0",
             "dist": {
                 "type": "tar",
-                "url": "https://registry.npmjs.org/popper.js/-/popper.js-1.15.0.tgz",
-                "reference": null,
-                "shasum": null
+                "url": "https://registry.npmjs.org/popper.js/-/popper.js-1.15.0.tgz"
             },
             "type": "npm-asset",
             "license": [
@@ -4949,9 +5093,7 @@
             "version": "4.0.8",
             "dist": {
                 "type": "tar",
-                "url": "https://registry.npmjs.org/select2/-/select2-4.0.8.tgz",
-                "reference": null,
-                "shasum": null
+                "url": "https://registry.npmjs.org/select2/-/select2-4.0.8.tgz"
             },
             "type": "npm-asset",
             "license": [
@@ -4963,9 +5105,7 @@
             "version": "0.0.71",
             "dist": {
                 "type": "tar",
-                "url": "https://registry.npmjs.org/typeface-barlow/-/typeface-barlow-0.0.71.tgz",
-                "reference": null,
-                "shasum": null
+                "url": "https://registry.npmjs.org/typeface-barlow/-/typeface-barlow-0.0.71.tgz"
             },
             "type": "npm-asset",
             "license": [
@@ -4977,9 +5117,7 @@
             "version": "4.0.1",
             "dist": {
                 "type": "tar",
-                "url": "https://registry.npmjs.org/waypoints/-/waypoints-4.0.1.tgz",
-                "reference": null,
-                "shasum": null
+                "url": "https://registry.npmjs.org/waypoints/-/waypoints-4.0.1.tgz"
             },
             "type": "npm-asset",
             "license": [
@@ -7855,7 +7993,7 @@
                 "testing",
                 "web"
             ],
-            "time": "2019-07-15 12:45:29"
+            "time": "2019-07-15T12:45:29+00:00"
         },
         {
             "name": "behat/mink-browserkit-driver",
@@ -8027,7 +8165,7 @@
                 "testing",
                 "webdriver"
             ],
-            "time": "2018-10-10 12:39:06"
+            "time": "2018-10-10T12:39:06+00:00"
         },
         {
             "name": "doctrine/instantiator",
@@ -8090,7 +8228,7 @@
             "version": "8.3.5",
             "source": {
                 "type": "git",
-                "url": "https://git.drupal.org/project/coder.git",
+                "url": "https://git.drupalcode.org/project/coder.git",
                 "reference": "35277fc8675b6a2cbb194f8880145a9c85c845c4"
             },
             "require": {

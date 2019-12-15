@@ -39,7 +39,7 @@ class AutoCompleteController extends ControllerBase {
 
       foreach ($options as $value => $label) {
         $results[] = [
-          'value' => $value,
+          'value' => $label,
           'label' => $label,
         ];
         if (--$count === 0) {
