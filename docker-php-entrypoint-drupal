@@ -1,0 +1,10 @@
+#!/bin/sh
+set -e
+
+/var/www/html/vendor/bin/drush --root /var/www/html/web updatedb
+/var/www/html/vendor/bin/drush --root /var/www/html/web cache-rebuild
+/var/www/html/vendor/bin/drush --root /var/www/html/web core-cron
+
+docker-php-entrypoint
+
+exec "$@"
