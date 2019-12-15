@@ -61,7 +61,7 @@ WORKDIR /var/www/html
 COPY --from=COMPOSER_CHAIN /tmp/cdv/ .
 RUN find . -type d -exec chmod 755 {} \;
 RUN find . -type f -exec chmod 644 {} \;
-RUN chown -R www-data:www-data web/sites web/modules web/themes tmp/
+RUN chown -R www-data:www-data web/sites web/modules web/themes web/tmp
 RUN { \
 		echo "<VirtualHost *:80>"; \
 		echo "  ServerAdmin mbuechner@dnb.de"; \
@@ -83,4 +83,4 @@ RUN rm -rf /var/lib/apt/lists/*
 
 HEALTHCHECK --interval=1m --timeout=3s CMD curl --fail http://localhost/ || exit 1
 
-EXPOSE 8080
+EXPOSE 80
