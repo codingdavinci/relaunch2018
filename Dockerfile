@@ -43,11 +43,13 @@ RUN set -eux; \
 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false;
 
 RUN { \
+		echo "opcache.file_update_protection=0"; \
+		echo "opcache.validate_timestamps=0"; \
+		echo "opcache.interned_strings_buffer=16"; \
 		echo "opcache.memory_consumption=128"; \
-		echo "opcache.interned_strings_buffer=8"; \
 		echo "opcache.max_accelerated_files=4000"; \
+		echo "opcache.max_wasted_percentage=10"; \
 		echo "opcache.revalidate_freq=60"; \
-		echo "opcache.fast_shutdown=1"; \
 	} > /usr/local/etc/php/conf.d/opcache-recommended.ini
 RUN { \
 		echo "upload_max_filesize = 128M"; \
@@ -60,12 +62,10 @@ RUN { \
 WORKDIR /var/www/html
 COPY --from=COMPOSER_CHAIN /tmp/cdv/ .
 COPY docker-php-entrypoint-drupal /usr/local/bin/
-RUN find . -type d -exec chmod 755 {} \;
-RUN find . -type f -exec chmod 644 {} \;
+RUN chmod 775 /usr/local/bin/docker-php-entrypoint-drupal
+#RUN find . -type d -exec chmod 755 {} \;
+#RUN find . -type f -exec chmod 644 {} \;
 RUN chown -R www-data:www-data web/sites web/modules web/themes web/tmp
-# Drush usage:  /var/www/html/vendor/bin/drush --root /var/www/html/web updatedb
-# ...and: /var/www/html/vendor/bin/drush --root /var/www/html/web cache-rebuild
-# ...and: /var/www/html/vendor/bin/drush --root /var/www/html/web core-cron
 RUN chmod +x /var/www/html/vendor/drush/drush/drush
 RUN { \
 		echo "<VirtualHost *:80>"; \
@@ -77,10 +77,11 @@ RUN { \
 	} > /etc/apache2/sites-enabled/000-default.conf
 
 # Clean system
-RUN rm -rf /var/lib/apt/lists/*
+#RUN rm -rf /var/lib/apt/lists/*
 
 ENTRYPOINT ["docker-php-entrypoint-drupal"]
 
 HEALTHCHECK --interval=1m --timeout=3s CMD curl --fail http://localhost/ || exit 1
 
 EXPOSE 80
+CMD ["apache2-foreground"]
