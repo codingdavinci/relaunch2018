@@ -31,7 +31,7 @@
 
     <div{{ content_attributes.addClass('node__content') }}>
       <div class="field field__items field--institution-name">
-        <div class="field__item">{{ institution_name }}</div>
+        <div class="field__item">{{ institution_name|raw|replace({'&shy;': '%shy%'})|escape|replace({'%shy%': '&shy;'})|raw }}</div>
       </div>
       {{ content.field_events }}
       {{ content.field_object_type }}

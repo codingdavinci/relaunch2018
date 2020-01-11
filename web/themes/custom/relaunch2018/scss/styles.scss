@@ -7,83 +7,97 @@
 @import '_includes/mixins';
 
 body {
-  @include fontStyle(default);
-  color: $color-gray-3;
-  font-family: $font-family-base;
-  letter-spacing: 0.01em;
-  line-height: 1.4;
+  @include font-size(22px);
+  color: $gray;
+  font-family: $font-family-sans-serif;
 
   &.cke_editable {
     padding: 0.5rem;
   }
 }
 
-h1 {
-  @include fontStyle(title);
-  color: $color-main;
-  margin-bottom: 2rem;
-  text-align: left;
+h1,
+.supertitle {
+  @include font-size(28px);
+  color: $green;
+  font-family: $font-family-sans-serif;
+  font-style: normal;
+  font-weight: $font-weight-semi-bold;
+  line-height: 129.6%;
+  letter-spacing: 0.02em;
+  margin-bottom: map_get($spacers, 4);
+
+  @include media-breakpoint-up(md) {
+    @include font-size(32px);
+  }
 }
 
 h2 {
-  color: $color-main;
-  font-size: 1.8rem;
+  @include font-size(24px);
+  color: $green;
+  font-family: $font-family-sans-serif;
+  font-style: normal;
   font-weight: $font-weight-semi-bold;
-  line-height: 1.4;
-  margin-bottom: 2rem;
-}
+  line-height: 115%;
+  letter-spacing: 0.02em;
+  margin-bottom: 14px;
 
-header {
-  h1 {
-    margin-top: 30px;
-  }
-}
-
-.header--with-background {
-  h1 {
-    color: $color-gray-2;
-  }
-
-  h2 {
-    color: $color-deep-teal;
+  @include media-breakpoint-up(md) {
+    @include font-size(28px);
+    margin-bottom: 36px;
   }
 }
 
 h3 {
-  color: $color-gray-2;
-  font-size: 1.2rem;
-  font-weight: $font-weight-bold;
-  line-height: 1.2;
-  margin-bottom: 1.2rem;
+  @include font-size(22px);
+  color: $gray;
+  font-family: $font-family-sans-serif;
+  font-style: normal;
+  font-weight: $font-weight-semi-bold;
+  line-height: 129.6%;
+  letter-spacing: 0.02em;
 }
 
-h4 {
-  font-size: 1rem;
-  font-weight: $font-weight-normal;
+h4,
+h5,
+h6 {
+  @include font-size(16px);
+  color: $gray;
+  font-family: $font-family-sans-serif;
+  font-style: normal;
+  font-weight: $font-weight-semi-bold;
+  line-height: 144%;
+  letter-spacing: 0.02em;
 
-  @include media-breakpoint-up(md) {
-    font-size: 1.2rem;
-  }
-}
-
-h5 {
-  font-size: 1rem;
-  font-weight: $font-weight-light;
-  line-height: 1.2;
-  margin-bottom: 15px;
-
-  @include media-breakpoint-up(md) {
-    font-size: 1.1rem;
+  &.field__label {
+    font-weight: $font-weight-semi-bold;
   }
 }
 
 p {
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
+  color: $gray;
+  font-family: $font-family-sans-serif;
+  line-height: 153%;
+  margin-bottom: 1em;
+
+  @include media-breakpoint-up(sm) {
+    line-height: 150%;
+  }
+
+  @include media-breakpoint-up(md) {
+    line-height: 144%;
+  }
+
+  @include media-breakpoint-up(lg) {
+    line-height: 165%;
+  }
+
+  @include media-breakpoint-up(xl) {
+    line-height: 153%;
+  }
 
   &.small {
-    color: $color-gray-2;
-    font-size: 1rem;
+    font-size: 0.8em;
     letter-spacing: 0.02rem;
 
     @include media-breakpoint-up(md) {
@@ -91,46 +105,31 @@ p {
     }
   }
 
-  &.supertitle {
-    @include fontStyle(title);
-  }
+  a {
+    color: $gray;
+    font-weight: $font-weight-bold;
 
-  &.supertitle.small {
-    @include fontStyle(small);
-    color: $color-yellow;
-    margin-bottom: 0;
+    &:hover {
+      color: $gray;
+    }
   }
 }
 
 a {
-  color: lighten($color-deep-blue, 5%);
-  text-decoration: none;
-
-  &:visited {
-    color: $color-deep-blue;
-  }
-
-  &:hover,
-  &:active {
-    color: $color-deep-blue;
-    text-decoration: underline;
-  }
-
   &:before {
-    color: lighten($color-deep-blue, 5%);
+    color: $green;
   }
 
   &.curly {
-    @include curlyBraces($color-gray-3);
+    @include curlyBraces($gray-5);
   }
 
   &.button {
-    @include boxShadow;
-    @include rounded;
     @include easeAll;
-    color: $color-white;
+    color: $white;
+    display: inline-block;
     font-weight: $font-weight-semi-bold;
-    padding: 0.3em 1.4em;
+    padding: 0.6em 1.4em;
 
     &:hover {
       text-decoration: none;
@@ -142,30 +141,30 @@ a {
     }
 
     &.button--green {
-      background-color: $color-green-lighter;
+      background-color: $green;
 
       &:hover {
-        background-color: rgba($color-green-lighter, 0.6);
+        background-color: rgba($green, 0.6);
       }
     }
 
     &.button--red {
-      background-color: $color-red;
+      background-color: $red;
 
       &:hover {
-        background-color: rgba($color-green-lighter, 0.6);
+        background-color: rgba($green, 0.6);
       }
     }
 
     &.button--large {
-      @include fontStyle(large);
+      @include font-size(18px);
       letter-spacing: 0.01em;
     }
 
     &.button--icon {
       &:before {
         @include icon;
-        color: $color-white;
+        color: $white;
       }
 
       &.button--arrow {
@@ -191,40 +190,58 @@ strong {
   font-weight: $font-weight-bold;
 }
 
+ol,
+ul {
+  margin-bottom: map_get($spacers, 6);
+}
+
+ul {
+  list-style-type: none;
+}
+
 table.table--red,
 table.table--white {
-  @include border-radius($border-radius);
   @include boxShadow;
-  background-color: $color-white;
+  background-color: $white;
   border-collapse: separate;
-  border-spacing: 0.8em;
+  border-spacing: map_get($spacers, 1);
   display: inline-block;
-  margin-bottom: 1.5rem;
-  padding-bottom: 0.8em;
+  line-height: 125%;
+  margin-bottom: map_get($spacers, 6);
+  padding-bottom: map_get($spacers, 2);
+
+  @include media-breakpoint-up(lg) {
+    border-spacing: map_get($spacers, 2);
+  }
 
   caption {
-    background-color: $color-white;
+    @include font-size(28px);
+    background-color: $white;
     caption-side: top;
-    color: $color-main;
+    color: $green;
     display: block;
     font-weight: $font-weight-semi-bold;
-    padding-top: 1.2em;
-    text-align: center;
+    padding: map_get($spacers, 2) map_get($spacers, 1);
+
+    @include media-breakpoint-up(lg) {
+      padding: map_get($spacers, 4) map_get($spacers, 2);
+    }
   }
 
   tr {
     td,
     th {
-      @include fontStyle(small);
-      border-bottom: 1px solid rgba($color-main, 0.4);
-      padding-bottom: 0.8em;
+      @include font-size(16px);
+      border-bottom: 1px solid $green;
+      padding-bottom: map_get($spacers, 1);
       vertical-align: top;
 
-      &:nth-child(odd) {
-        color: $color-green;
+      @include media-breakpoint-up(lg) {
+        padding-bottom: map_get($spacers, 2);
       }
-      &:nth-child(even) {
-        color: $color-gray-1;
+
+      &:nth-child(odd) {
+        color: $green;
       }
 
       &:first-child {
@@ -238,7 +255,7 @@ table.table--white {
   }
 
   tbody {
-    @include fontStyle(small);
+    @include font-size(14px);
 
     tr {
       &:last-child {
@@ -251,29 +268,35 @@ table.table--white {
   }
 
   &.table--red {
-    background-color: $color-red-3;
+    background-color: $red-light;
 
     caption {
-      background-color: $color-red-3;
-      color: $color-white;
+      background-color: $red-light;
+      color: $white;
     }
 
     tr {
       td,
       th {
-        border-bottom: 1px solid $color-white;
+        border-bottom: 1px solid $white;
 
         &:nth-child(odd) {
-          color: $color-darker-green;
+          color: $green;
         }
       }
     }
   }
 }
 
+.text-formatted {
+  ul {
+    @include ul-dashed;
+  }
+}
+
 figcaption {
-  color: $color-gray-1;
-  font-size: 1.1rem;
+  @include font-size(14px);
+  color: $gray;
   font-weight: $font-weight-light;
   line-height: 1.1;
   opacity: 0.5;
@@ -282,6 +305,7 @@ figcaption {
 
 .icon-arrow {
   &:before {
+    color: $green;
     font-size: 0.7rem;
     margin-right: 0.8rem !important;
     text-decoration: none;
@@ -291,9 +315,9 @@ figcaption {
 
 .icon-mail-1 {
   &:before {
-    font-size: 0.9rem;
+    font-size: 0.7em;
     margin-right: 0.6rem !important;
-    vertical-align: 0.05rem;
+    vertical-align: 0.11rem;
   }
 }
 
@@ -310,12 +334,34 @@ figcaption {
 }
 
 .card {
+  @include font-size(16px);
   background-color: transparent;
   border: none;
-  line-height: 1.4;
+  border-radius: 0;
+  line-height: 140%;
+
+  .card-body {
+    padding: map_get($spacers, 2);
+
+    @include media-breakpoint-up(lg) {
+      padding: map_get($spacers, 4);
+    }
+
+    h3 {
+      @include font-size(20px);
+    }
+  }
+
+  .card-footer {
+    padding: map_get($spacers, 2);
+
+    p {
+      color: $green-blue;
+    }
+  }
 }
 
 .cc0-note {
-  @include fontStyle(small);
+  @include font-size(14px);
   font-style: italic;
 }

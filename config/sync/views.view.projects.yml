@@ -1220,8 +1220,8 @@ display:
         filter_groups: false
         pager: false
         fields: false
-        style: false
-        row: false
+        style: true
+        row: true
         header: false
         use_more: false
         use_more_always: false
@@ -1416,20 +1416,6 @@ display:
           entity_type: node
           entity_field: title
           plugin_id: field
-      style:
-        type: default
-        options:
-          grouping: {  }
-          row_class: ''
-          default_row_class: true
-          uses_fields: true
-      row:
-        type: fields
-        options:
-          default_field_elements: true
-          inline: {  }
-          separator: ''
-          hide_empty: false
       display_description: ''
       header:
         area_text_custom:
@@ -2254,7 +2240,7 @@ display:
         description: ''
         expanded: false
         parent: ''
-        weight: -45
+        weight: -47
         context: '0'
         menu_name: main
       relationships:

@@ -1,33 +1,30 @@
 @import '_includes/base';
 
 input {
-  @include rounded;
-
   border: 0;
-  color: $color-gray-1;
-  letter-spacing: 0.04em;
+  color: $gray;
   max-width: 100%;
-  padding: 10px 15px;
+  padding: map_get($spacers, 1) map_get($spacers, 2);
 
   &::-webkit-input-placeholder {
-    color: $color-gray-3;
+    color: $gray-5;
   }
   &::-moz-placeholder {
-    color: $color-gray-3;
+    color: $gray-5;
   }
   &:-ms-input-placeholder {
-    color: $color-gray-3;
+    color: $gray-5;
   }
 
   &[type='submit'] {
     @include easeAll;
-    background-color: $color-main;
-    color: $color-white;
-    padding-left: 80px;
-    padding-right: 80px;
+    background-color: $green;
+    color: $white;
+    padding-left: map_get($spacers, 10);
+    padding-right: map_get($spacers, 10);
 
     &:hover {
-      background-color: $color-deep-teal;
+      background-color: $green-dark;
     }
   }
 }
@@ -35,12 +32,12 @@ input {
 ul.ui-autocomplete {
   li.ui-menu-item {
     a {
-      @include fontStyle(small);
+      @include font-size(14px);
       display: block;
 
       &.ui-state-active {
-        background-color: $color-link;
-        color: $color-link-bright;
+        background-color: $green;
+        color: $white;
         text-decoration: none;
       }
     }

@@ -3,11 +3,7 @@
 .view-taxonomy-term.view-display-id-page_1 {
   .view-content {
     .views-row {
-      margin-bottom: 30px;
-
-      @include media-breakpoint-up(md) {
-        margin-bottom: 100px;
-      }
+      margin-bottom: map_get($spacers, 3);
     }
   }
 }

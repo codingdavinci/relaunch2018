@@ -1,6 +1,6 @@
 uuid: 952c6123-bc8e-4e13-882b-9d434993806a
 langcode: de
-status: true
+status: false
 dependencies:
   module:
     - ctools
@@ -28,6 +28,6 @@ visibility:
       node: '@node.node_route_context:node'
   request_path:
     id: request_path
-    pages: "/about-coding-da-vinci\r\n/was-ist-coding-da-vinci"
+    pages: "/about-coding-da-vinci\r\n/was-ist-coding-da-vinci\r\n/dokumentationen\r\n/welche-ziele-verfolgt-coding-da-vinci\r\n/welche-chancen-bietet-das-digitale-zeitalter-fuer-kulturinstitutionen\r\n/wer-steckt-hinter-coding-da-vinci"
     negate: true
     context_mapping: {  }

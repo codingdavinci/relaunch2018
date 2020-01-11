@@ -22,7 +22,6 @@ global-js:
     - relaunch2018/jquery-color
     - relaunch2018/jquery-easing
     - relaunch2018/menu
-    - relaunch2018/read-more
     - relaunch2018/view-faq
 
 bootstrap-js:
@@ -129,13 +128,6 @@ popper-js:
     gpl-compatible: true
   js:
     ../../../libraries/popper.js/dist/umd/popper.js: {}
-  dependencies:
-    - core/jquery
-
-read-more:
-  version: 1.0
-  js:
-    js/read-more.js: {}
   dependencies:
     - core/jquery
 

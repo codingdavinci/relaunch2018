@@ -1,21 +1,21 @@
 @import '../_includes/base';
 
-.paragraph--type--attributed-image {
+.paragraph--type--attributed-image,
+.paragraph--type--project-image {
   display: inline-block;
   text-align: center;
 
   .field--name-field-inline-image {
-    @include rounded;
     display: inline-block;
 
     img {
-      @include rounded;
       @include img-fluid;
     }
   }
 
-  .paragraph--type--attributed-image--attribution {
-    @include fontStyle(small);
+  .paragraph--type--attributed-image--attribution,
+  .paragraph--type--project-image--attribution {
+    @include font-size(14px);
     text-align: right;
 
     & div {

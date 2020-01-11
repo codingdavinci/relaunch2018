@@ -22,19 +22,16 @@
 
   <div class="article--content-container col-12">
     <div class="article--header">
-      <div class="d-flex flex-column">
 
-        <div class="order-md-last article--date">
-          {{ node.createdtime|format_date('date_short') }}
-        </div>
-
-        {{ title_prefix }}
-          <h3{{ title_attributes }}>
-            <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-          </h3>
-        {{ title_suffix }}
-
+      <div class="article--date">
+        {{ node.createdtime|format_date('date_short') }}
       </div>
+
+      {{ title_prefix }}
+        <h3{{ title_attributes }}>{{ label }}</h3>
+      {{ title_suffix }}
+
+      <a href="{{ url }}" rel="bookmark">{{ 'Read article'|trans }}</a>
     </div>
   </div>
 

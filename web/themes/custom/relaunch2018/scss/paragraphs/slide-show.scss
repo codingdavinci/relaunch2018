@@ -7,8 +7,10 @@
     cursor: -moz-grab;
 
     .carousel-indicators {
+      margin-bottom: map_get($spacers, 10);
+
       li {
-        background-color: $color-white;
+        background-color: $white;
         border-radius: 50%;
         height: 20px;
         margin: 0 5px;
@@ -16,7 +18,7 @@
         width: 20px;
 
         &.active {
-          background-color: $color-main;
+          background-color: $green;
         }
       }
     }

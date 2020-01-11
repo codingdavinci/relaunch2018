@@ -1,336 +1,301 @@
 @import '../_includes/base';
 
+.page-node-type-data-set,
+.page-node-type-project {
+  .region-content {
+    padding-top: 0;
+  }
+}
+
 .node--type-data-set,
 .node--type-project {
-
   &.node--view-mode-full {
-    margin-top: 4rem;
-  }
+    .article__header {
+      background-color: $green;
+      color: $white;
 
-  .field {
-    &:not(.field--name-field-license):not(.field--name-field-author):not(.field--name-field-email) {
-      margin-bottom: 1rem;
-    }
-
-    .field__label {
-      @include fontStyle(small);
-      font-weight: $font-weight-normal;
-    }
-  }
-
-  .article--header-image {
-    .field--name-field-attributed-image {
-      .field--name-field-inline-image {
-        @include border-radius(10px);
-        background-color: $color-light-teal;
-
-        img {
-          @include border-radius(10px);
-          filter: brightness(200%) saturate(0%) contrast(200%);
-          height: auto;
-          max-width: 100%;
-          mix-blend-mode: multiply;
-          opacity: 0.2;
+      > .row {
+        @include media-breakpoint-up(lg) {
+          min-height: 480px;
         }
-      }
-    }
-  }
-
-  .article--content-container {
-    padding-top: 0;
-
-    @include media-breakpoint-up(md) {
-      padding-top: 100px;
-    }
-
-    .article--header {
-      .article--content-block {
-        @include fontStyle(small);
-        text-align: center;
-
-        .field--name-field-attributed-image,
-        .field--name--field-audio-video__media {
-          display: inline-block;
-          text-align: right;
-
-          .field--name-field-inline-image,
-          video {
-            @include rounded;
-            @include boxShadow;
-            background: $white;
-            max-width: 480px;
-            padding: 1rem;
-
-            img {
-              @include rounded;
-              @include img-fluid;
-            }
-          }
-
-          .field--name-field-audio-video {
-            & div {
-              display: inline;
-            }
-          }
-
-          .field--name-field-license {
-            .field {
-              margin-bottom: 0;
-            }
-          }
-        }
-      }
-    }
-
-    .node__content {
-      @include border-top-radius($border-radius);
-      background-color: $color-gray-6;
-      margin-top: 3rem;
-
-      &.node__content__section {
-        margin-top: 0;
-      }
-
-      &:last-child {
-        margin-bottom: $content-margin-bottom;
-        margin-top: 1.5rem;
       }
 
       h1 {
-        margin-top: 10px;
+        color: $white;
       }
 
-      .badge {
-        @include fontStyle(default);
-      }
+      .field--name-field-attributed-image,
+      .field--name-field-project-image {
+        height: 100%;
+        width: 100%;
 
-      .data-set--badges {
-        margin-bottom: 2rem;
-      }
+        .paragraph--type--attributed-image,
+        .paragraph--type--project-image {
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+          width: 100%;
 
-      .field--name-field-events {
-        margin-bottom: 0.4rem;
-
-        & > * {
-          display: inline-block;
-          margin-bottom: 0.6rem;
-        }
-      }
-
-      .field--name-field-theme,
-      .field--name-field-keywords {
-        margin-bottom: 0.4rem;
-
-        .field__items > * {
-          display: inline-block;
-          margin-bottom: 1rem;
-        }
-      }
-
-      .field--name-field-submission-type,
-      .field--institution-name {
-        .field__item {
-          font-weight: $font-weight-semi-bold;
-        }
-      }
-
-      .field--name-field-description {
-        margin-top: 2rem;
-      }
-
-      fieldset {
-        &:not(.object-type) {
-          @include rounded;
-          border: 1px solid $color-deep-teal;
-          padding: 0 1.5rem 0 1.5rem;
-
-          legend {
-            background-color: $color-gray-6;
-            color: $color-deep-teal;
-            margin-left: 2rem;
-            padding: 0 0.5em;
-            width: auto;
-          }
-        }
-
-        &.object-type {
-          margin-top: 2rem;
-
-          legend {
-            display: none;
+          @include media-breakpoint-up(lg) {
+            text-align: right;
           }
 
-          ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
+          .field--name-field-inline-image {
+            height: 100%;
+            overflow: hidden;
+            width: 100%;
 
-            li {
-              display: inline-block;
-              margin-bottom: 0.2rem;
-
-              ul {
-                display: inline;
+            img {
+              @include media-breakpoint-up(lg) {
+                height: 100%;
+                max-width: none;
+                width: auto;
               }
             }
           }
-        }
 
-        .field--name-field-media-count,
-        .field--name-field-objects-count {
-          display: inline-block;
-        }
+          .paragraph--type--attributed-image--attribution,
+          .paragraph--type--project-image--attribution {
+            color: $white;
+            padding: map_get($spacers, 1) / 2 map_get($spacers, 2) map_get($spacers, 4);
+            text-align: center;
+            width: 100%;
 
-        .field--name-field-controlled-vocabularies,
-        .field--name-field-file-types,
-        .field--name-field-metadata-format,
-        .field--name-field-metadata-standard {
-          margin-bottom: 0.8rem;
+            a {
+              @include link-underline;
+              color: $white;
+            }
 
-          .field__items {
-            .field__item {
-              display: inline-block;
-              margin-bottom: 0.2rem;
+            @include media-breakpoint-up(lg) {
+              background-color: $blue;
+              padding-bottom: map_get($spacers, 1) / 2;
+              position: absolute;
+              top: map_get($spacers, 4);
+              right: 0;
+              text-align: right;
+              width: auto;
             }
           }
         }
       }
+    }
 
-      .field--name-field-short-description {
-        font-weight: $font-weight-bold;
+    .project__tags {
+      padding-top: map_get($spacers, 3);
+
+      > div {
+        @include tag-list;
       }
 
-      .group--result {
-        @include rounded;
-        background-color: lighten($color-light-teal, 5%);
-        padding: 18px 20px 20px 20px;
-        margin-top: 3rem;
-        position: relative;
+      & + .project__tags {
+        padding-top: 0;
+      }
+    }
 
-        & > .field:last-child {
-          margin-bottom: 0;
+    .article--content-container {
+      .node__content {
+        > * {
+          margin-bottom: map_get($spacers, 10);
         }
-      }
 
-      .group--team {
-        margin-top: 3rem;
-        position: relative;
+        .data-set--badges {
+          > * {
+            margin-bottom: map_get($spacers, 4);
+          }
+        }
 
-        .field--name-field-team-members {
-          & > .field__item {
-            margin-bottom: 2rem;
+        .field--name-field-submission-type {
+          .field__item {
+            @include font-size(16px);
+          }
+        }
 
-            &:last-child {
-              margin-bottom: 0;
+        fieldset {
+          &:not(.object-type) {
+            border: 1px solid $green;
+            padding: map_get($spacers, 2) map_get($spacers, 3);
+
+            legend {
+              color: $green;
+              margin: 0 0 0 -2.5rem;
+              padding: 0 0.5em;
+              position: relative;
+              width: auto;
+
+              .fieldset-legend {
+                background: $background-color;
+                bottom: -0.3em;
+                padding-right: 0.25em;
+                position: absolute;
+                white-space: nowrap;
+              }
             }
           }
-        }
-      }
 
-      .group--data-sets,
-      .view-projects.view-display-id-block_2 {
-        margin: 0;
-
-        & > h2 {
-          border-bottom: 1px solid $color-gray-3;
-        }
-
-        .field--name-field-datasets,
-        .view-content {
-          .views-row {
-            margin-bottom: 20px;
+          a {
+            @include link-underline;
           }
 
-          article {
-            margin-bottom: 1rem;
-            margin-top: 1rem;
+          .field__item:not(.badge) {
+            @include font-size(16px);
+          }
+
+          .field--name-field-media-count,
+          .field--name-field-objects-count {
+            display: inline-block;
+          }
+
+          .field--name-field-access-mode,
+          .field--name-field-controlled-vocabularies,
+          .field--name-field-file-types,
+          .field--name-field-has-geo-references,
+          .field--name-field-license-code,
+          .field--name-field-license-media,
+          .field--name-field-links,
+          .field--name-field-metadata-format,
+          .field--name-field-metadata-license,
+          .field--name-field-metadata-standards {
+            margin-bottom: map_get($spacers, 3);
 
             &:last-child {
               margin-bottom: 0;
             }
 
-            .field--name-field-attributed-image {
-              img {
-                @include img-fluid;
-              }
-            }
-
-            h2 {
-              margin-bottom: 0;
-            }
-
-            .node__content {
-              @include fontStyle(small);
-              margin: 0;
-
-              .field--name-field-object-type,
-              .field--name-field-tags {
-                .badge {
-                  @include fontStyle(small);
-                  margin-bottom: 0.1rem;
+            &:not(.field--name-field-links) {
+              .field__items {
+                .field__item {
+                  display: inline-block;
+                  margin-bottom: map_get($spacers, 1);
                 }
               }
-
-              .field--name-field-short-description {
-                font-weight: $font-weight-normal;
-              }
             }
           }
-        }
 
-        .field--name-field-other-datasets {
-          .field__label {
-            border-bottom: 1px solid $color-gray-3;
-            margin-bottom: 0.2rem;
-          }
-        }
-      }
-
-      .group--data-sets {
-        margin-top: 3rem;
-        position: relative;
-      }
-
-      .view-projects.view-display-id-block_2 {
-        article {
-          .field--name-field-attributed-image {
-            margin-bottom: 0;
-
+          .field--name-field-license-media {
             .field {
               margin-bottom: 0;
             }
           }
-        }
-      }
 
-      .field--name-field-event {
-        display: inline;
-      }
+          .field--name-field-file-types {
+            margin-top: map_get($spacers, 3);
+          }
 
-      .field--name-field-tags {
-        display: inline;
-
-        .field__items {
-          display: inline;
-
-          .field__item {
-            margin-bottom: 0.2rem;
+          .field--name-field-media-filesize {
+            display: inline-block;
           }
         }
-      }
 
-      .project--tags {
-        margin-bottom: 1.6rem;
-        margin-top: 2rem;
+        .group--team {
+          .field--name-field-team-members {
+            > .field__item {
+              margin-bottom: map_get($spacers, 3);
 
-        &:last-child {
-          margin-top: 3rem;
+              &:last-child {
+                margin-bottom: 0;
+              }
+            }
+          }
         }
 
-        & > * {
-          margin-bottom: 0.4rem;
+        .group--data-sets,
+        .view-projects.view-display-id-block_2 {
+          margin: 0;
+
+          .field--name-field-datasets,
+          .view-content {
+            .views-row {
+              margin-bottom: map_get($spacers, 3);
+            }
+
+            article {
+              margin-bottom: map_get($spacers, 3);
+              margin-top: map_get($spacers, 3);
+
+              &:first-child {
+                margin-top: 0;
+              }
+
+              &:last-child {
+                margin-bottom: 0;
+              }
+
+              .field--name-field-attributed-image {
+                img {
+                  @include img-fluid;
+                }
+              }
+
+              h3 {
+                margin-bottom: map_get($spacers, 3);
+              }
+
+              .node__content {
+                .field {
+                  margin-bottom: 0;
+
+                  &.field--name-field-short-description {
+                    margin-bottom: map_get($spacers, 3);
+                  }
+                }
+
+                .field--name-field-short-description {
+                  font-weight: $font-weight-normal;
+                }
+              }
+            }
+          }
+
+          .field--name-field-other-datasets {
+            margin-top: map_get($spacers, 3);
+          }
+        }
+
+        .view-projects.view-display-id-block_2 {
+          article {
+            .field--name-field-attributed-image {
+              margin-bottom: 0;
+
+              .field {
+                margin-bottom: 0;
+              }
+            }
+           }
         }
       }
+    }
+  }
+
+  &.node--view-mode-teaser {
+    .field--name-field-event {
+      @include tag-list;
+    }
+  }
+
+  fieldset.object-type {
+    margin-top: 0;
+
+    legend {
+      display: none;
+    }
+
+    ul {
+      display: inline-block;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        display: inline-block;
+      }
+    }
+  }
+
+  .field {
+    .field__label {
+      @include font-size(14px);
+      font-weight: $font-weight-normal;
+      margin-bottom: map_get($spacers, 1);
     }
   }
 }

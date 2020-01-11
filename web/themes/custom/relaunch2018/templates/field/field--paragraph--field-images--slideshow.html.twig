@@ -14,28 +14,30 @@
     'slide',
   ]
 %}
-<div class="row">
-  <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3">
-<div{{ attributes.addClass(classes, 'field__items') }} id="carousel-{{ uuid }}" data-ride="carousel">
-  <ol class="carousel-indicators">
-    {% set i = 0 %}
-    {% for item in items %}
-      <li data-target="#carousel-{{ uuid }}" data-slide-to="{{ i }}"{% if i == 0 %} class="active"{% endif %}></li>
-      {% set i = i + 1 %}
-    {% endfor %}
-  </ol>
-  <div class="carousel-inner">
-    {% set i = 0 %}
-    {% for item in items %}
-      {% if i == 0 %}
-        <div{{ item.attributes.addClass('field__item carousel-item active') }}>{{ item.content }}</div>
-      {% else %}
-        <div{{ item.attributes.addClass('field__item carousel-item') }}>{{ item.content }}</div>
-      {% endif %}
-      {% set i = i + 1 %}
-    {% endfor %}
-  </div>
-</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3">
+      <div{{ attributes.addClass(classes, 'field__items') }} id="carousel-{{ uuid }}" data-ride="carousel">
+        <ol class="carousel-indicators">
+          {% set i = 0 %}
+          {% for item in items %}
+            <li data-target="#carousel-{{ uuid }}" data-slide-to="{{ i }}"{% if i == 0 %} class="active"{% endif %}></li>
+            {% set i = i + 1 %}
+          {% endfor %}
+        </ol>
+        <div class="carousel-inner">
+          {% set i = 0 %}
+          {% for item in items %}
+            {% if i == 0 %}
+              <div{{ item.attributes.addClass('field__item carousel-item active') }}>{{ item.content }}</div>
+            {% else %}
+              <div{{ item.attributes.addClass('field__item carousel-item') }}>{{ item.content }}</div>
+            {% endif %}
+            {% set i = i + 1 %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 {% endspaceless %}

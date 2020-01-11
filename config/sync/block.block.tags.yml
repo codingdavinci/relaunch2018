@@ -10,15 +10,15 @@ dependencies:
     - relaunch2018
 id: tags
 theme: relaunch2018
-region: header_with_background
-weight: -11
+region: content
+weight: -19
 provider: null
 plugin: 'system_menu_block:tags'
 settings:
   id: 'system_menu_block:tags'
-  label: Tags
+  label: 'Nach Kategorien filtern:'
   provider: system
-  label_display: '0'
+  label_display: visible
   level: 1
   depth: 0
   expand_all_items: false

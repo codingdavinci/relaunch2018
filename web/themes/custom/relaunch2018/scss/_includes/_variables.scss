@@ -1,62 +1,61 @@
-$color-gray-1: #333333;
-$color-gray-2: #4f4f4f;
-$color-gray-3: #828282;
-$color-gray-4: #c9c6c6;
-$color-gray-5: #efebe8;
-$color-gray-6: #f5f5f5;
-$color-white: #ffffff;
-$color-green: #1bbd7d;
-$color-green-lighter: #6fcf97;
-$color-green-2: #1bbd7d;
-$color-green-3: #c4e6d1;
-$color-bright-teal: #89e4c3;
-$color-light-teal: #c6e4dd;
-$color-darker-green: #72b097;
-$color-deep-teal: #099b8a;
-$color-main: #5dc4b8;
-$color-lighter-teal: #85d6d6;
-$color-light-blue: #abe7e7;
-$color-blue: #4495a7;
-$color-dull-blue: #92c3c2;
-$color-dull-dark-blue: #7aa3ab;
-$color-deep-blue: #1d5d81;
-$color-red: #fd665c;
-$color-red-2: #f29689;
-$color-red-3: #fcd9c8;
-$color-yellow: #f8cf77;
-$color-orange: #fda87e;
+@import '../../../../../../web/libraries/bootstrap/scss/functions';
+@import '../../../../../../web/libraries/bootstrap/scss/variables';
 
-$color-prize-1: $color-blue;
-$color-prize-2: $color-bright-teal;
+$background-color: #f5f5f5;
+$blue: #4495A7;
+$gray: #333333;
+$gray-2: #dcdcdc;
+$gray-3: #c4c4c4;
+$gray-4: #a2a2a2;
+$gray-5: #828282;
+$green: #1bbd7d;
+$green-light: #d8f1ec;
+$green-dark: #0A8856;
+$green-light-2: #c6e4dd;
+$green-light-3: #89e4c3;
+$green-light-4: #92c3c2;
+$green-blue: #4495a7;
+$green-footer: #92c3c2;
+$red: #fd665c;
+$red-light: #fcd9c8;
 
-$color-scheme-1-1: #abe7e7;
-$color-scheme-1-2: #ffc09c;
-$color-scheme-2-1: #f8cf77;
-$color-scheme-2-2: #c4e6d1;
-$color-scheme-3-1: #ffc09c;
-$color-scheme-3-2: #ffe79e;
-$color-scheme-4-1: #89e4c3;
-$color-scheme-4-2: #fcd9c8;
-$color-scheme-5-1: #ffe6b5;
-$color-scheme-5-2: #c6e4dd;
-
-$color-link: $color-deep-blue;
-$color-link-bright: $color-white;
-
-$background: $color-gray-6;
-
+$navbar-height: 45px;
 $tiled-header-height: 915px;
 
 $font-family-sans-serif: 'Barlow', sans-serif;
 $font-family-base: $font-family-sans-serif;
 $font-family-icons: 'cdv_icons';
 
-$content-margin-bottom: 6rem;
-
-$border-radius: 4px;
+$rfs-base-font-size: 16px;
+$rfs-font-size-unit: px;
 
 $font-weight-light: 200;
+$font-weight-normal: 400;
 $font-weight-semi-bold: 500;
 $font-weight-bold: 600;
+
+$card-columns-gap: $grid-gutter-width;
+
+$spacer: 8px;
+$spacers: (
+  0: 0,
+  1: ($spacer),
+  2: ($spacer * 2),
+  3: ($spacer * 3),
+  4: ($spacer * 4),
+  5: ($spacer * 5),
+  6: ($spacer * 6),
+  7: ($spacer * 7),
+  8: ($spacer * 8),
+  9: ($spacer * 9),
+  10: ($spacer * 10),
+);
+
+$line-height-base: 1.4;
+
+$link-color:                              $green;
+$link-decoration:                         none;
+$link-hover-color:                        $green;
+$link-hover-decoration:                   underline;
 
 $ie: 'screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none)';

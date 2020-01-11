@@ -55,23 +55,12 @@
     const boxWidth = $boxes
       .children()
       .first()
-      .width();
-
-    const gap = pxToFloat($boxes.css('grid-column-gap'));
-
-    if (Number.isNaN(gap)) {
-      console.error(
-        `Column gap is supposed to be specified in pixels: ${$container.css(
-          'grid-column-gap'
-        )}`
-      );
-    }
+      .outerWidth();
 
     $boxes
       .stop(true, true)
       .animate({
-        left:
-          direction === 'left' ? `-=${boxWidth + gap}` : `+=${boxWidth + gap}`
+        left: direction === 'left' ? `-=${boxWidth}` : `+=${boxWidth}`
       })
       .promise()
       .done(() => updateNavigation($container));
@@ -90,25 +79,23 @@
     const boxWidth = $boxes
       .children()
       .first()
-      .width();
+      .outerWidth();
+    const firstBoxOffset = $boxes
+      .children()
+      .first()
+      .offset().left;
+    const lastBoxOffset = $boxes
+      .children()
+      .last()
+      .offset().left;
 
     $left.toggleClass(
       'inactive',
-      $boxes
-        .children()
-        .last()
-        .offset().left +
-        boxWidth <
-        $container.width()
+      Math.floor(lastBoxOffset + boxWidth) <=
+        Math.ceil($container.offset().left + $container.outerWidth())
     );
 
-    $right.toggleClass(
-      'inactive',
-      $boxes
-        .children()
-        .first()
-        .offset().left >= $container.offset().left
-    );
+    $right.toggleClass('inactive', firstBoxOffset >= $container.offset().left);
 
     if ($left.hasClass('inactive') && $right.hasClass('inactive')) {
       // All blocks are already visible, no navigation is required.
@@ -116,13 +103,5 @@
     } else {
       $nav.show();
     }
-  }
-
-  /**
-   * @param {string} pixels
-   * @return {Number|NaN}
-   */
-  function pxToFloat(pixels) {
-    return parseFloat(pixels.replace(/px/, ''));
   }
 })(jQuery, Hammer, window);

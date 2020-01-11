@@ -1,91 +1,21 @@
 @import '../_includes/base';
 
-.path-events {
-  h1,
-  .block-views-blockevents-block-1 > h2 {
-    @include fontStyle(large);
-    font-weight: $font-weight-light;
-    margin-bottom: 2rem;
-    padding-left: $border-radius;
-    text-transform: uppercase;
-  }
-
-  .layout-content {
-    .region-content {
-      #block-relaunch2018-content {
-        & > .views-element-container {
-          margin-top: 0;
-        }
-      }
-
-      .block-views-blockevents-block-1 {
-        .view-events {
-          margin-top: 50px;
-        }
-      }
-    }
-  }
-}
-
 .node--type-event {
 
   &.node--view-mode-full {
-    @include rounded;
-    background: $background;
-    position: relative;
-    top: -50px;
+    > .node__content {
+      > .field {
+        margin-bottom: map_get($spacers, 10);
 
-    & > .node__content {
-      position: relative;
-      top: 40px;
-
-      & > .field {
-        margin-bottom: 5rem;
-
-        h2 {
-          font-weight: $font-weight-semi-bold;
-        }
-
-        h3 {
-          @include fontStyle(default);
-          text-transform: uppercase;
-        }
-
-        h4 {
-          @include fontStyle(default);
-          color: $color-green;
-          line-height: 1.5;
-          margin: 0;
-        }
-
-        h5 {
-          @include fontStyle(default);
-          color: $color-gray-2;
+        .field__label {
           font-weight: $font-weight-normal;
-          line-height: 1.5;
-          margin: 0;
-        }
-
-        h6 {
-          @include fontStyle(default);
-          font-weight: $font-weight-bold;
-          line-height: 1.5;
-          margin: 0;
-        }
-
-        &.field--name-field-text-intro {
-          color: $color-deep-teal;
         }
 
         &.field--name-field-winners {
-          h2 {
-            margin-left: 2em;
-          }
-
-          & > .field__items {
+          > .field__items {
             display: grid;
             grid-auto-rows: 1fr;
-            grid-gap: 30px;
+            grid-gap: map_get($spacers, 4);
             grid-template-columns: 1fr;
 
             @include media-breakpoint-up(sm) {
@@ -100,48 +30,43 @@
               grid-template-columns: 1fr 1fr 1fr 1fr;
             }
 
-            & > .field__item {
+            > .field__item {
               position: relative;
 
-              .winner--info {
-                @include rounded;
-                @include boxShadow;
-                @include fontStyle(very-small);
-                background-color: $color-green-lighter;
-                bottom: 0;
-                color: $color-white;
-                max-width: 90%;
-                padding: 0.5em 0.6em 0.5em 0.4em;
+              .field--name-field-award {
+                @include font-size(12px);
+                background-color: $blue;
+                color: $white;
+                padding: map_get($spacers, 1) / 2 map_get($spacers, 1);
                 position: absolute;
                 right: 0;
-                z-index: 1;
+                top: map_get($spacers, 2);
+              }
 
-                .winner--info--award--wrapper {
-                  &:before {
-                    content: '*';
-                    display: block;
-                    float: left;
-                    font-size: 5em;
-                    font-weight: $font-weight-light;
-                    margin: 1rem 0.05em -0.1em 0;
-                    line-height: 1rem;
+              .winner__project-title {
+                bottom: 0;
+                position: absolute;
+                text-align: right;
+                right: 0;
+                word-break: break-word;
+
+                a {
+                  @include font-size(20px);
+                  background-color: $green-light;
+                  color: $green;
+                  display: block;
+                  padding: map_get($spacers, 1) map_get($spacers, 2);
+                  text-decoration: underline;
+
+                  &:hover {
+                    color: $green-dark;
                   }
-
-                  .winner--info--award {
-                    @include curlyBraces($color-white);
-                    text-transform: uppercase;
-                  }
-                }
-
-                .winner--info--project-title {
-                  clear: both;
-                  text-align: center;
                 }
               }
 
               @media #{$ie} {
                 display: inline-block;
-                padding: 1rem;
+                padding: map_get($spacers, 2);
 
                 @include media-breakpoint-up(sm) {
                   width: 50%;
@@ -162,25 +87,37 @@
             }
           }
         }
+
+        &.field--name-field-paragraphs {
+          overflow-x: hidden;
+
+          > .field__item {
+            > .paragraph:not(.paragraph--type--heading) {
+              margin-bottom: map_get($spacers, 10);
+            }
+          }
+        }
       }
     }
   }
 
   &.node--view-mode-teaser,
   &.node--view-mode-preview {
-    @include boxShadow;
     @include easeAll;
-    @include rounded;
-    background-color: $color-main;
-    color: $color-white;
+    background-color: $green;
+    color: $white;
     display: flex;
     flex-direction: column;
     height: 100%;
-    padding: 1.5rem;
+    padding: map_get($spacers, 2);
+
+    @include media-breakpoint-up(lg) {
+      padding: map_get($spacers, 4);
+    }
 
     @media #{$ie} {
       display: block;
-      margin-bottom: 2rem;
+      margin-bottom: map_get($spacers, 4);
     }
 
     .node--event--teaser--content {
@@ -210,19 +147,10 @@
     }
 
     h2 {
-      @include fontStyle(title);
-      color: $color-white;
-      margin-top: 1.5rem;
+      color: $white;
+      margin-top: map_get($spacers, 3);
       text-transform: uppercase;
       word-wrap: break-word;
-
-      @include media-breakpoint-up(md) {
-        font-size: 2.1rem;
-      }
-
-      @include media-breakpoint-up(lg) {
-        font-size: 2.5rem;
-      }
     }
 
     &.node--view-mode-preview {
@@ -248,13 +176,9 @@
         }
       }
 
-      h2 {
-        @include fontStyle(large);
-      }
-
-      & > * {
-        margin-bottom: 0.4rem;
-        margin-top: 0.4rem;
+      > * {
+        margin-bottom: map_get($spacers, 1);
+        margin-top: map_get($spacers, 1);
 
         &:first-child {
           margin-top: 0;
@@ -267,10 +191,13 @@
     }
 
     .node--event--teaser--register {
-      font-weight: $font-weight-normal;
-      margin-top: 1rem;
+      margin-top: map_get($spacers, 2);
       text-align: right;
       text-decoration: underline;
+
+      &:before {
+        color: $white;
+      }
     }
   }
 }
@@ -280,7 +207,7 @@
     text-decoration: none;
 
     .node--view-mode-teaser {
-      background-color: $color-deep-teal;
+      background-color: $green;
 
       .node--event--teaser--register {
         text-decoration: none;

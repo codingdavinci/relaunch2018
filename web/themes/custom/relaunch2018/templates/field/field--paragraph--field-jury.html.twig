@@ -16,43 +16,21 @@
   set title_classes = [
     'field__label',
     label_display == 'visually_hidden' ? 'visually-hidden',
+    'container',
   ]
 %}
 
 <div{{ attributes.addClass(classes) }}>
   <h2{{ title_attributes.addClass(title_classes) }}>{{ label }}</h2>
-  <div class="field__items row">
-    {% set color_schemes = [1, 2, 3, 4, 5] %}
-    {% set i = 0 %}
-    {% for item in items %}
-      {% set offset = {'sm': 'offset-sm-0', 'lg': 'offset-lg-0', 'xl': 'offset-xl-0'} %}
-
-      {% if items|length % 2 != 0 %}
-        {# Does not fit into sm grid layout #}
-        {% if i == items|length - 1 %}
-          {% set offset = offset|merge({'sm': 'offset-sm-3'}) %}
-        {% endif %}
-      {% endif %}
-
-      {% if items|length % 3 != 0 %}
-        {# Does not fit into lg grid layout #}
-        {% if i % 5 == 0 %}
-          {% set offset = offset|merge({'lg': 'offset-md-2'}) %}
-        {% endif %}
-      {% endif %}
-
-      {% if items|length % 4 != 0 %}
-        {# Does not fit into xl grid layout #}
-        {% if i % 4 == 2 and i == 0 %}
-          {% set offset = offset|merge({'xl': 'offset-xl-3'}) %}
-        {% endif %}
-      {% endif %}
-
-      <div class="col-sm-6 col-lg-4 col-xl-3 {{ offset|join(' ') }} color-scheme-{{ color_schemes[i % color_schemes|length] }}">
-        <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
-      </div>
-      {% set i = i + 1 %}
-    {% endfor %}
+  <hr class="separator">
+  <div class="field__items container">
+    <div class="row">
+      {% for item in items %}
+        <div class="col-sm-6 col-lg-4 col-xl-3">
+          <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
+        </div>
+      {% endfor %}
+    </div>
   </div>
 </div>
 {% endspaceless %}

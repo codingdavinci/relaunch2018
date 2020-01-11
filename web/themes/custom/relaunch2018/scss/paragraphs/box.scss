@@ -2,11 +2,6 @@
 
 .paragraph--type--box,
 .paragraph--type--box-group-box {
-
-  &.paragraph--type--box {
-    margin-bottom: 6rem;
-  }
-
   .box--container {
     margin: 0 auto;
     width: 100%;
@@ -20,7 +15,7 @@
 
   .card {
     @include boxShadow;
-    background-color: $color-white;
+    background-color: $white;
 
     .card-img-top {
       img {
@@ -30,6 +25,12 @@
 
     .card-body {
       .field--name-field-text {
+        h2 {
+          @include font-size(22px);
+          color: $gray;
+          margin-bottom: map_get($spacers, 4);
+        }
+
         p {
           &:last-child {
             margin-bottom: 0;
@@ -37,7 +38,7 @@
             .button {
               &:last-child {
                 display: inline-block;
-                margin-bottom: 1rem;
+                margin-bottom: 0;
               }
             }
           }
@@ -46,7 +47,7 @@
     }
 
     .card-footer {
-      background-color: $color-white;
+      background-color: $white;
       border-top: none;
 
       .field--name-field-footer {

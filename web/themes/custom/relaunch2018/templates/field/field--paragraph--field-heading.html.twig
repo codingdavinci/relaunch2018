@@ -13,6 +13,8 @@
   ]
 %}
 {% for item in items %}
-  <h2{{ attributes.addClass(classes, 'field__item') }}>{{ item.content }}</h2>
+  <div{{ attributes.addClass(classes, 'field__item') }}>
+    <h2>{{ item.content }}</h2>
+  </div>
 {% endfor %}
 {% endspaceless %}

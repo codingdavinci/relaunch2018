@@ -5,7 +5,7 @@ html {
 }
 
 body {
-  background-color: $color-gray-6;
+  background-color: $background-color;
 }
 
 .dialog-off-canvas-main-canvas {
@@ -13,158 +13,67 @@ body {
   height: 0;
 }
 
-.node__links {
-  display: none;
-  margin-left: 0.8rem;
-
-  @include media-breakpoint-up(md) {
-    display: inline;
-  }
-
-  .links {
-    li {
-      @include linkColor(alternative, true);
-
-      &:first-child {
-        padding-left: 0;
-      }
-    }
-  }
-}
-
-header {
+header:not(.header--tiles) {
   .region {
-    .block-block-content {
-      margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
 
-      .page-title {
-        margin-top: 30px;
-      }
+    :last-child {
+      margin-bottom: 0;
     }
-  }
 
-  .header--with-background {
-    background-color: $color-light-blue;
-    padding-top: 83px;
-    padding-bottom: 50px;
+    .page-title {
+      @include font-size(36px);
 
-    .block-block-content:first-child {
-      @include curlyBraces($color-dull-blue);
-      display: inline-block;
-      margin-right: 0.4em;
-
-      &:before,
-      &:after {
-        @include fontStyle(title);
-      }
-
-      & > .field {
-        display: inline-block;
+      @include media-breakpoint-up(md) {
+        @include font-size(48px);
       }
     }
 
-    #block-relaunch2018-page-title {
-      display: inline-block;
-    }
-  }
+    &.region-header {
+      background-color: $green;
+      color: $white;
+      padding: $grid-gutter-width / 2;
+      padding-top: $grid-gutter-width / 2 + $navbar-height;
 
-  .header--default {
-    margin-bottom: 10px;
-    padding-top: 33px;
+      h1,
+      p {
+        color: $white;
+      }
 
-    .region {
-      .block-block-content {
-        .field--name-field-image {
-          width: 100%; // Have fluid image scale in IE
-
-          img {
-            @include img-fluid;
-
-            -webkit-filter: drop-shadow(5px 5px 25px rgba(0, 0, 0, 0.15));
-            -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=5, OffY=1, Color='#444')";
-            /* stylelint-disable declaration-block-no-duplicate-properties */
-            filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=5, OffY=1, Color='#444')";
-            /* stylelint-enable */
-          }
-        }
-
-        .masked-image-wrapper {
-          height: 100%;
-          position: relative;
-          width: 100%;
-
-          .image-mask {
-            background-color: $color-white;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            width: 100%;
-            mask-repeat: no-repeat;
-            mask-size: contain;
-            mix-blend-mode: color;
-            -webkit-mask-repeat: no-repeat;
-            -webkit-mask-size: contain;
-
-            // Hide in IE/Edge not supporting mask-image
-            @media #{$ie} {
-              display: none;
-            }
-            @supports (-ms-accelerator:true) {
-              display: none;
-            }
-          }
-        }
+      @include media-breakpoint-up(md) {
+        height: 481px;
+        padding: map_get($spacers, 10);
+        padding-top: map_get($spacers, 10);
       }
     }
-  }
 
-  #block-tags {
-    .menu {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-
-      .menu-item {
-        @include curlyBraces($color-deep-teal);
-
-        display: inline;
-        font-size: 1rem;
-        margin-right: 0.4rem;
-
-        a {
-          color: $color-deep-teal;
-        }
-
-        &.menu-item--active-trail {
-          font-weight: $font-weight-bold;
-        }
-      }
+    a {
+      color: $white;
     }
   }
 }
 
 .layout-container--wrapper {
-  background-color: $background;
+  background-color: $background-color;
 
-  .layout-container {
-    position: relative;
+  header {
+    .region-admin-tabs {
+      margin-top: $navbar-height;
 
-    header {
-      .region-admin-tabs {
-        margin-top: 45px;
+      a {
+        color: $green;
       }
     }
+  }
 
-    main {
-      margin-top: 100px;
-
-      .layout-content {
-        background-color: $background;
-
-        .region-admin-tabs {
-          position: relative;
-          z-index: 1;
-        }
+  main {
+    .layout-content {
+      .region-admin-tabs {
+        position: relative;
+        z-index: 1;
       }
     }
   }
@@ -173,48 +82,33 @@ header {
     position: relative;
     top: $tiled-header-height;
     width: 100%;
-
-    .layout-container {
-      overflow-x: hidden;
-      top: -40px;
-
-      main {
-        margin-top: 0;
-
-        .layout-content {
-          @include rounded;
-          padding: 70px 30px 0 30px;
-        }
-      }
-    }
   }
 
   footer {
-    background-color: $color-main;
-    color: $color-gray-2;
-    font-size: 1.1rem;
-    padding: 30px 0 40px 0;
+    @include font-size(16px);
+    background-color: $green-footer;
+    margin-top: 88px;
+    padding: map_get($spacers, 4) 0 map_get($spacers, 5) 0;
 
     @include media-breakpoint-up(md) {
-      padding-top: 60px;
+      padding-top: map_get($spacers, 7);
     }
 
     em {
-      color: $color-white;
+      color: $white;
       font-style: normal;
     }
 
     a {
-      color: $color-white;
-      text-decoration: underline;
+      @include link-underline;
+      color: $white;
 
       &:hover {
-        color: $color-white;
-        text-decoration: none;
+        color: $white;
       }
 
       &:before {
-        color: $color-white;
+        color: $white;
       }
 
       &.icon-mail-1 {
@@ -226,16 +120,16 @@ header {
     }
 
     .logos-container {
-      @include fontStyle(small);
+      @include font-size(14px);
 
       img {
         mix-blend-mode: multiply;
         opacity: 0.6;
       }
 
-      & > div {
+      > div {
         @include media-breakpoint-up(md) {
-          & > div {
+          > div {
             margin: 1.87%;
             padding: 15px;
             width: 17%;
@@ -253,12 +147,10 @@ header {
     }
 
     .field--name-field-textblock {
-      color: $color-white;
-      font-size: 1rem;
+      color: $white;
 
       h3 {
-        color: $color-white;
-        font-size: 1rem;
+        color: $white;
         font-weight: $font-weight-bold;
       }
     }
@@ -267,18 +159,14 @@ header {
 
 .collapsible {
   legend {
-    @include rounded;
     @include easeAll;
-    @include fontStyle(default);
-    background-color: $color-gray-5;
+    @include font-size(16px);
+    @include link-underline;
+    color: $green;
     cursor: pointer;
     font-weight: $font-weight-bold;
-    margin-bottom: 1em;
-    padding: 0.2em 0.5em;
-
-    &:hover {
-      background-color: darken($color-gray-5, 5%);
-    }
+    margin-bottom: map_get($spacers, 2);
+    padding: map_get($spacers, 2) map_get($spacers, 1);
 
     &:before {
       @include easeAll;
@@ -298,18 +186,6 @@ header {
   }
 }
 
-.field--name-field-paragraphs {
-  & > .field__item {
-    margin-bottom: 4rem;
-
-    .paragraph--type--heading {
-      .field--name-field-heading {
-        margin-bottom: -2rem;
-      }
-    }
-  }
-}
-
 .additional-padding--left {
   @include media-breakpoint-up(lg) {
     padding-left: 37px;
@@ -319,5 +195,84 @@ header {
 .additional-padding--right {
   @include media-breakpoint-up(lg) {
     padding-right: 37px;
+  }
+}
+
+.field--name-field-tags {
+  line-height: 1;
+
+  > .field__items {
+    @include tag-list;
+  }
+}
+
+
+.region-content {
+  padding-top: map_get($spacers, 10);
+
+  .field--name-field-events {
+    padding-top: map_get($spacers, 3);
+
+    h2 {
+      @include font-size(14px);
+      color: $gray;
+      margin-bottom: map_get($spacers, 1);
+    }
+
+    > .field__items,
+    > .field__item {
+      display: inline-block;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+
+      .field__item {
+        @include font-size(12px);
+        display: block;
+        float: left;
+        margin: 0 map_get($spacers, 1) map_get($spacers, 1) 0;
+
+        a {
+          border: 1px solid $green;
+          border-radius: 50px;
+          padding: 4px 12px;
+
+          &:hover {
+            background-color: $green-dark;
+            border-color: $green-dark;
+            color: $white;
+            text-decoration: none;
+          }
+        }
+
+        &.menu-item--active-trail {
+          font-weight: $font-weight-bold;
+        }
+      }
+    }
+
+    &+hr {
+      border: 0;
+      border-bottom: 1px solid $green;
+      margin-bottom: 52px;
+      margin-top: 0;
+    }
+  }
+}
+
+hr.separator {
+  border: 0;
+  border-bottom: 1px solid $green;
+  margin-bottom: map_get($spacers, 7);
+  margin-top: 0;
+}
+
+ul {
+  &.tabs {
+    li {
+      &:before {
+        display: none;
+      }
+    }
   }
 }

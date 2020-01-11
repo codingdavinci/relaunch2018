@@ -1,7 +1,7 @@
 @import '_includes/base';
 
 .region-primary-menu {
-  color: $color-white;
+  color: $white;
   font-family: $font-family-sans-serif;
   font-weight: $font-weight-semi-bold;
   user-select: none;
@@ -20,14 +20,14 @@
 
   .navbar {
     @include menuFontSize;
-    height: 45px;
+    height: $navbar-height;
     padding: 0;
     // Keep z-index below admin toolbar:
     z-index: 250;
 
     .navbar--wrapper {
       align-items: center;
-      background-color: $color-gray-1;
+      background-color: $gray;
       display: flex;
       justify-content: space-between;
       height: 100%;
@@ -48,14 +48,14 @@
 
           .navbar-toggler-icon {
             @include easeOut;
-            background-image: str-replace(url('data:image/svg+xml,%3csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3e%3cpath stroke="#{$color-white}" stroke-width="5" d="M4,4 L26,26 z M4,26 L26,4 z"/%3e%3c/svg%3e'), '#', '%23');
+            background-image: str-replace(url('data:image/svg+xml,%3csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3e%3cpath stroke="#{$white}" stroke-width="5" d="M4,4 L26,26 z M4,26 L26,4 z"/%3e%3c/svg%3e'), '#', '%23');
             display: inline-block;
             width: 1.5rem;
           }
 
           &.collapsed {
             .navbar-toggler-icon {
-              background-image: str-replace(url('data:image/svg+xml,%3csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3e%3cpath stroke="#{$color-white}" stroke-width="5" stroke-miterlimit="10" d="M1 4h27 M1 14h27 M1 24h27"/%3e%3c/svg%3e'), '#', '%23');
+              background-image: str-replace(url('data:image/svg+xml,%3csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3e%3cpath stroke="#{$white}" stroke-width="5" stroke-miterlimit="10" d="M1 4h27 M1 14h27 M1 24h27"/%3e%3c/svg%3e'), '#', '%23');
             }
           }
         }
@@ -67,7 +67,7 @@
     }
 
     .navbar--menu {
-      background: $color-red-3;
+      background: $red-light;
       min-width: 67%;
       overflow: auto;
       padding: 3rem 1.5rem 0 3.75rem;
@@ -86,7 +86,7 @@
         align-items: flex-start;
         display: flex;
         flex-direction: column;
-        height: calc(100vh - 45px);
+        height: calc(100vh - #{$navbar-height});
         justify-content: space-between;
 
         .navbar-nav {
@@ -96,6 +96,10 @@
             opacity: 0;
             transform: translate3d(100vw, 0, 0);
             transition: transform 0.3s ease-in-out, opacity 0.3s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+
+            &:before {
+              display: none;
+            }
 
             &:hover {
               background-color: transparent;
@@ -112,7 +116,7 @@
             }
 
             .dropdown-menu {
-              @include fontStyle(default);
+              @include font-size(18px);
               background-color: transparent;
               border: none;
               padding-top: 0;
@@ -140,23 +144,10 @@
       }
 
       a {
-        color: $color-deep-teal;
+        color: $green;
 
         &:hover {
           text-decoration: underline;
-        }
-      }
-
-      .menu--acount {
-        .menu {
-          .menu-item {
-            a {
-              @include curlyBraces($color-gray-3);
-              @include fontStyle(default);
-              color: $color-gray-3;
-              font-weight: $font-weight-light;
-            }
-          }
         }
       }
     }

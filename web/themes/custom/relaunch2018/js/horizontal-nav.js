@@ -43,16 +43,10 @@
       return;
     }
 
-    var boxWidth = $boxes.children().first().width();
-
-    var gap = pxToFloat($boxes.css('grid-column-gap'));
-
-    if (Number.isNaN(gap)) {
-      console.error('Column gap is supposed to be specified in pixels: ' + $container.css('grid-column-gap'));
-    }
+    var boxWidth = $boxes.children().first().outerWidth();
 
     $boxes.stop(true, true).animate({
-      left: direction === 'left' ? '-=' + (boxWidth + gap) : '+=' + (boxWidth + gap)
+      left: direction === 'left' ? '-=' + boxWidth : '+=' + boxWidth
     }).promise().done(function () {
       return updateNavigation($container);
     });
@@ -63,20 +57,18 @@
     var $left = $nav.children('.horizontal-nav--left');
     var $right = $nav.children('.horizontal-nav--right');
     var $boxes = $container.children('.field--name-field-boxes, .view-content');
-    var boxWidth = $boxes.children().first().width();
+    var boxWidth = $boxes.children().first().outerWidth();
+    var firstBoxOffset = $boxes.children().first().offset().left;
+    var lastBoxOffset = $boxes.children().last().offset().left;
 
-    $left.toggleClass('inactive', $boxes.children().last().offset().left + boxWidth < $container.width());
+    $left.toggleClass('inactive', Math.floor(lastBoxOffset + boxWidth) <= Math.ceil($container.offset().left + $container.outerWidth()));
 
-    $right.toggleClass('inactive', $boxes.children().first().offset().left >= $container.offset().left);
+    $right.toggleClass('inactive', firstBoxOffset >= $container.offset().left);
 
     if ($left.hasClass('inactive') && $right.hasClass('inactive')) {
       $nav.hide();
     } else {
       $nav.show();
     }
-  }
-
-  function pxToFloat(pixels) {
-    return parseFloat(pixels.replace(/px/, ''));
   }
 })(jQuery, Hammer, window);

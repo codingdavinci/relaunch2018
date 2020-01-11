@@ -11,14 +11,22 @@
     view_mode ? 'media--view-mode-' ~ view_mode|clean_class,
   ]
 %}
-<article{{ attributes.addClass(classes).addClass('col-12') }}>
+{% spaceless %}
+<article{{ attributes.addClass(classes) }}>
   {{ title_suffix.contextual_links }}
   {% if content %}
     {{ content.field_media_image }}
     <div class="media--attribution">
-      {{ content.field_caption }},
-      {{ content.field_creator }},
-      {{ content.field_license }}
+      {% if content.field_caption['#items'] is not empty %}
+        {{ content.field_caption }},
+      {% endif %}
+      {% if content.field_creator['#items'] is not empty %}
+        {{ content.field_creator }},
+      {% endif %}
+      {% if content.field_license['#items'] is not empty %}
+        {{ content.field_license }}
+      {% endif %}
     </div>
   {% endif %}
 </article>
+{% endspaceless %}

@@ -1,9 +1,6 @@
 @import '../_includes/base';
 
 .paragraph--type--winner {
-  margin-bottom: 1.4rem;
-  margin-right: 1.4rem;
-
   .field--name-field-award {
     display: inline;
 
@@ -13,7 +10,6 @@
   }
 
   img {
-    @include rounded;
     @include img-fluid;
   }
 }

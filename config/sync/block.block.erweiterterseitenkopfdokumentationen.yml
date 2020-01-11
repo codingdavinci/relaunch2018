@@ -1,0 +1,31 @@
+uuid: 6293b024-7cbe-4afe-aa35-421637d61d0b
+langcode: de
+status: false
+dependencies:
+  content:
+    - 'block_content:extended_page_header:d994e18f-9546-4244-b98a-6821e78c878c'
+  module:
+    - block_content
+    - system
+  theme:
+    - relaunch2018
+id: erweiterterseitenkopfdokumentationen
+theme: relaunch2018
+region: header
+weight: -11
+provider: null
+plugin: 'block_content:d994e18f-9546-4244-b98a-6821e78c878c'
+settings:
+  id: 'block_content:d994e18f-9546-4244-b98a-6821e78c878c'
+  label: 'Erweiterter Seitenkopf: Dokumentationen'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /dokumentationen
+    negate: false
+    context_mapping: {  }

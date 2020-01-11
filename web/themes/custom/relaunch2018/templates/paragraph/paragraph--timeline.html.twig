@@ -8,7 +8,8 @@
     'paragraph',
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
-    not paragraph.isPublished() ? 'paragraph--unpublished'
+    not paragraph.isPublished() ? 'paragraph--unpublished',
+    'container',
   ]
 %}
 {% block paragraph %}
@@ -16,6 +17,6 @@
     {% block content %}
       {{ content }}
     {% endblock %}
-    <div class="paragraph--type--timeline--line d-none d-sm-block"><hr></div>
+    <div class="paragraph--type--timeline--line d-none d-lg-block"><hr></div>
   </div>
 {% endblock paragraph %}

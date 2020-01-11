@@ -23,9 +23,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
+  content_moderation_control:
+    weight: -20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_files:
     weight: 2
-    label: visually_hidden
+    label: above
     settings:
       use_description_as_link_text: true
     third_party_settings: {  }

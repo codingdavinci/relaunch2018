@@ -7,16 +7,21 @@
     'block',
     'block-' ~ configuration.provider|clean_class,
     'block-' ~ plugin_id|clean_class,
-    'container',
+    'mt-10',
   ]
 %}
 <div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {% if label %}
-    <h2{{ title_attributes }}>{{ label }}</h2>
+    <div class="container">
+      <h2{{ title_attributes }}>{{ label }}</h2>
+    </div>
+    <hr class="separator">
   {% endif %}
   {{ title_suffix }}
   {% block content %}
-    {{ content }}
+    <div class="container">
+      {{ content }}
+    </div>
   {% endblock %}
 </div>

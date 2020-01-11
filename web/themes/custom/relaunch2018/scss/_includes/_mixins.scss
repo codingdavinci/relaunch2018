@@ -9,10 +9,6 @@
   transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-@mixin fadeInOut {
-  transition: opacity 0.4s ease-in-out;
-}
-
 @mixin curlyBraces($color, $fontWeight: '') {
   &:after,
   &:before {
@@ -33,124 +29,8 @@
   }
 }
 
-@mixin rounded {
-  border-radius: $border-radius;
-}
-
 @mixin boxShadow() {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
-}
-
-@mixin fontStyle($type) {
-  @if $type == 'large' {
-    font-size: 1.4rem;
-    letter-spacing: 0.01em;
-
-    @include media-breakpoint-up(md) {
-      font-size: 1.6rem;
-    }
-
-    @include media-breakpoint-up(lg) {
-      font-size: 1.8rem;
-    }
-  }
-  @elseif $type == 'small' {
-    font-size: 0.9rem;
-
-    @include media-breakpoint-up(md) {
-      font-size: 1rem;
-    }
-  }
-  @elseif $type == 'very-small' {
-    font-size: 0.8rem;
-    letter-spacing: 0.04em;
-
-    @include media-breakpoint-up(md) {
-      font-size: 0.9rem;
-    }
-  }
-  @elseif $type == 'badge' {
-    font-size: 0.8rem;
-
-    @include media-breakpoint-up(md) {
-      font-size: 0.9rem;
-    }
-  }
-  @elseif $type == 'title' {
-    font-size: 1.8rem;
-    font-weight: $font-weight-semi-bold;
-    line-height: 1.2;
-
-    @include media-breakpoint-up(md) {
-      font-size: 2.2rem;
-    }
-
-    @include media-breakpoint-up(lg) {
-      font-size: 2.6rem;
-    }
-  }
-  @elseif $type == 'block' {
-    letter-spacing: 0.01rem;
-    line-height: 1.3;
-  }
-  @else {
-    font-size: 1rem;
-
-    @include media-breakpoint-up(md) {
-      font-size: 1.1rem;
-    }
-
-    @include media-breakpoint-up(lg) {
-      font-size: 1.2rem;
-    }
-  }
-}
-
-@mixin linkColor($brightness, $curlyBraces: false) {
-  @if $brightness == 'dark' {
-    a {
-      color: $color-link-bright;
-
-      &:visited {
-        color: $color-link-bright;
-      }
-
-      &:hover {
-        color: $color-link-bright;
-      }
-
-      &:before {
-        color: $color-link-bright;
-      }
-    }
-    @if $curlyBraces {
-      a {
-        @include curlyBraces($color-link-bright);
-      }
-    }
-  }
-  @elseif $brightness == 'alternative' {
-    a {
-      color: $color-dull-blue;
-
-      &:visited {
-        color: $color-dull-blue;
-      }
-
-      &:hover {
-        color: $color-dull-blue;
-      }
-
-      &:before {
-        color: $color-dull-blue;
-      }
-    }
-    @if $curlyBraces {
-      a {
-        @include curlyBraces($color-dull-dark-blue);
-      }
-    }
-  }
 }
 
 @mixin icon {
@@ -213,5 +93,75 @@
         width: 67%;
       }
     }
+  }
+}
+
+@mixin tag-list {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    &:before {
+      display: none;
+    }
+  }
+
+  > * {
+    @include font-size(12px);
+    display: block;
+    float: left;
+    line-height: 2;
+    margin: 0 map_get($spacers, 1) map_get($spacers, 1) 0;
+
+    a,
+    span {
+      border: 1px solid $green;
+      border-radius: 50px;
+      padding: 4px 12px;
+    }
+
+    a {
+      &:hover {
+        background-color: $green-dark;
+        border-color: $green-dark;
+        color: $white;
+        text-decoration: none;
+      }
+    }
+
+    span {
+      background-color: $green-dark;
+      border-color: $green-dark;
+      color: $white;
+      opacity: .5;
+    }
+
+    &.menu-item--active-trail {
+      font-weight: $font-weight-bold;
+    }
+  }
+}
+
+@mixin link-underline {
+  text-decoration: underline;
+
+  &:active,
+  &:focus {
+    text-decoration: underline;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+@mixin ul-dashed {
+  li:before {
+    content: '—';
+    display: inline-block;
+    margin-left: -0.9em;
+    margin-right: 0.2em;
   }
 }

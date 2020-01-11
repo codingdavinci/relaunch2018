@@ -2,22 +2,23 @@
 
 .paragraph--type--jury {
   .field--name-field-jury {
-    & > .row {
-      & > div {
-        margin-bottom: 2rem;
+    & .field__items > .row {
+      > div {
+        margin-bottom: map_get($spacers, 6);
 
         .paragraph--type--jury-member {
           position: relative;
 
-          & > .field--name-field-image {
+          > .field--name-field-image {
             @include boxShadow;
             position: absolute;
-            top: 1.5rem;
             width: 66%;
 
             .media--type-image {
               .field--name-field-media-image {
                 .field__item {
+                  background-color: $white;
+
                   img {
                     mix-blend-mode: luminosity;
                   }
@@ -27,10 +28,7 @@
           }
 
           .jury--member--info--wrapper {
-            @include fontStyle(small);
-            bottom: -1rem;
-            right: 0;
-            max-width: 90%;
+            @include font-size(16px);
 
             .field--name-field-image {
               visibility: hidden;
@@ -38,32 +36,40 @@
             }
 
             .jury--member--info {
-              @include rounded;
-              color: $color-gray-2;
+              background-color: $green-light;
               float: right;
-              margin-top: 0.2rem;
-              padding: 4rem 1rem 0.8rem 1rem;
+              margin-top: -1 * map_get($spacers, 8);
+              padding: map_get($spacers, 10) map_get($spacers, 2) map_get($spacers, 2) map_get($spacers, 2);
               width: 90%;
 
               .field {
-                margin-bottom: 0.5rem;
+                margin-bottom: map_get($spacers, 2);
 
                 &:last-child {
                   margin-bottom: 0;
                 }
 
-                &.field--name-field-link {
-                  &:before {
-                    @include icon;
-                    content: '\e825';
-                    display: table-cell;
-                    font-size: 0.6em;
-                    padding: 0.7em 0.4em 0 0;
-                    vertical-align: top;
-                  }
+                &.field--name-field-name {
+                  font-weight: $font-weight-bold;
+                }
 
+                &.field--name-field-link {
                   a {
+                    color: $green;
                     display: table-cell;
+
+                    &:before {
+                      @include icon;
+                      content: '\e825';
+                      display: table-cell;
+                      font-size: 0.6em;
+                      padding: 0.7em 0.4em 0 0;
+                      vertical-align: top;
+                    }
+
+                    &:hover {
+                      color: $green-dark;
+                    }
                   }
 
                   @media #{$ie} {
@@ -78,70 +84,6 @@
                 }
               }
             }
-          }
-        }
-
-        .field--name-field-image {
-          .field__item {
-            background-color: $color-white;
-          }
-        }
-        .jury--member--info {
-          background-color: $color-white;
-        }
-
-        &.color-scheme-1 {
-          .field--name-field-image {
-            .field__item {
-              background-color: $color-scheme-1-1;
-            }
-          }
-          .jury--member--info {
-            background-color: $color-scheme-1-2;
-          }
-        }
-
-        &.color-scheme-2 {
-          .field--name-field-image {
-            .field__item {
-              background-color: $color-scheme-2-1;
-            }
-          }
-          .jury--member--info {
-            background-color: $color-scheme-2-2;
-          }
-        }
-
-        &.color-scheme-3 {
-          .field--name-field-image {
-            .field__item {
-              background-color: $color-scheme-3-1;
-            }
-          }
-          .jury--member--info {
-            background-color: $color-scheme-3-2;
-          }
-        }
-
-        &.color-scheme-4 {
-          .field--name-field-image {
-            .field__item {
-              background-color: $color-scheme-4-1;
-            }
-          }
-          .jury--member--info {
-            background-color: $color-scheme-4-2;
-          }
-        }
-
-        &.color-scheme-5 {
-          .field--name-field-image {
-            .field__item {
-              background-color: $color-scheme-5-1;
-            }
-          }
-          .jury--member--info {
-            background-color: $color-scheme-5-2;
           }
         }
       }

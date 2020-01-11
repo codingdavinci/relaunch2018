@@ -1,20 +1,20 @@
 @import '_includes/base';
 
 .block-block-figures {
-  @include fontStyle(large);
+  @include font-size(28px);
   font-weight: $font-weight-bold;
 
   .block-figures--item {
     &.block-figures--item--institutions {
-      color: $color-green-2;
+      color: $green;
     }
 
     &.block-figures--item--datasets {
-      color: $color-red;
+      color: $red;
     }
 
     &.block-figures--item--projects {
-      color: $color-prize-1;
+      color: $blue;
     }
 
     .block-figures--item--image {
@@ -24,7 +24,17 @@
     }
 
     .block-figures--item--number {
-      padding: 2rem;
+      padding: map_get($spacers, 5) $grid-gutter-width / 2;
+
+      @include media-breakpoint-up(md) {
+        padding-bottom: 0;
+      }
+    }
+
+    &:last-child {
+      .block-figures--item--number {
+        padding-bottom: 0;
+      }
     }
   }
 }

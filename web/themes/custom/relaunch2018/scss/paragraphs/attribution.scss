@@ -1,28 +1,18 @@
 @import '../_includes/base';
 
 .paragraph--type--attribution {
-  @include linkColor(dark);
-
   @include media-breakpoint-up(sm) {
     display: flex;
   }
 
   a {
-    text-decoration: underline;
-
-    &:hover {
-      text-decoration: none;
-    }
+    @include link-underline;
   }
 
-  & > .field {
-    @include media-breakpoint-up(sm) {
-      margin-bottom: 0.5rem;
-    }
-
+  > .field {
     &:first-child {
       @include media-breakpoint-up(sm) {
-        margin-right: 1rem;
+        margin-right: map_get($spacers, 2);
       }
     }
   }

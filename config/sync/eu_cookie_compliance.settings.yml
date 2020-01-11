@@ -13,7 +13,7 @@ popup_agreed:
   format: restricted_html
 popup_agree_button_message: Akzeptieren
 popup_agreed_enabled: false
-popup_bg_hex: '000000'
+popup_bg_hex: '333333'
 popup_clicking_confirmation: false
 popup_scrolling_confirmation: false
 popup_delay: 1000

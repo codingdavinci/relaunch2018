@@ -13,9 +13,12 @@
 %}
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
-    <h2>{{ 'Prizes'|trans }}</h2>
+    <h2 class="container">{{ 'Prizes'|trans }}</h2>
+    <hr class="separator">
     {% block content %}
-      {{ content }}
+      <div class="container">
+        {{ content }}
+      </div>
     {% endblock %}
   </div>
 {% endblock paragraph %}

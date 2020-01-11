@@ -1,9 +1,8 @@
 @import '../_includes/base';
 
 .view {
-
   .view-filters {
-    margin-bottom: 2rem;
+    margin-bottom: map_get($spacers, 3);
 
     form {
       .form--inline {
@@ -13,10 +12,7 @@
           margin-top: 0;
 
           .bef-links {
-            line-height: 1.6;
-
             ul {
-              list-style-type: none;
               padding: 0;
 
               li {
@@ -40,7 +36,7 @@
           }
 
           label {
-            @include fontStyle(small);
+            @include font-size(16px);
           }
 
           &.form-type-textfield {
@@ -49,15 +45,15 @@
             }
 
             input {
-              @include fontStyle(small);
-              padding: 0.4em;
+              @include font-size(16px);
+              padding: map_get($spacers, 1);
               width: 100%;
             }
           }
 
           &.form-type-select {
             label {
-              border-bottom: 1px solid $color-gray-3;
+              border-bottom: 1px solid $gray-5;
               width: 100%;
             }
           }
@@ -69,7 +65,7 @@
           }
         }
 
-        & > fieldset {
+        > fieldset {
           @include media-breakpoint-up(lg) {
             legend {
               display: none;
@@ -82,9 +78,9 @@
 
         .form-actions {
           input {
-            padding-left: 0.4em;
-            padding-right: 0.4em;
-            margin: 0 0 1rem 0;
+            padding-left: map_get($spacers, 1);
+            padding-right: map_get($spacers, 1);
+            margin: 0 0 map_get($spacers, 2) 0;
             width: 100%;
           }
         }
@@ -98,12 +94,10 @@
     }
   }
 
-  // TODO: Merge with data set archive styles that currently have a masonry layout
   .view-content {
-
     .views-row {
       @media #{$ie} {
-        margin-bottom: 2rem;
+        margin-bottom: map_get($spacers, 3);
       }
     }
 
@@ -117,37 +111,24 @@
       }
 
       .card {
-        @include rounded;
         @include boxShadow;
         background-color: $white;
         display: inline-block;
-        margin-bottom: 20px;
+        margin-bottom: $grid-gutter-width;
         width: 100%;
 
         @media #{$ie} {
           overflow: hidden;
         }
 
-        .card-img {
-          img {
-            @include border-top-radius($border-radius);
-            height: auto;
-            max-width: 100%;
-          }
-        }
-
         .card-body {
           .card-title {
-            border-bottom: 1px solid $color-gray-5;
-            padding-bottom: 1rem;
+            @include font-size(20px);
+            margin-bottom: map_get($spacers, 2);
           }
 
           .field {
-            margin-top: 1rem;
-
-            &.field--name-field-event {
-              @include fontStyle(small);
-            }
+            @include font-size(16px);
 
             .field__item {
               display: inline-block;
@@ -163,160 +144,6 @@
             }
           }
         }
-      }
-    }
-  }
-
-  &.view-projects.view-display-id-page_1 {
-    .view-content {
-      align-items: stretch;
-      display: grid;
-      grid-auto-rows: 1fr;
-      grid-gap: 30px;
-      grid-template-columns: 1fr;
-      justify-items: stretch;
-      margin-bottom: $content-margin-bottom;
-
-      @include media-breakpoint-up(sm) {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      @include media-breakpoint-up(xl) {
-        grid-template-columns: 1fr 1fr 1fr;
-      }
-
-      .card {
-        @include rounded;
-        @include boxShadow;
-        background-color: $white;
-        height: 100%;
-        width: 100%;
-
-        .card-img {
-          img {
-            border-radius: 0;
-            @include img-fluid;
-            @include border-top-radius($border-radius);
-          }
-        }
-
-        .card-body {
-          .card-title {
-            border-bottom: 1px solid $color-gray-5;
-            font-size: 1.6rem;
-            padding-bottom: 1rem;
-            word-break: break-word;
-          }
-
-          .node__content {
-            @include fontStyle(small);
-
-            .field {
-              margin-top: 1rem;
-
-              .field {
-                margin-top: 0.2rem;
-              }
-            }
-          }
-        }
-      }
-    }
-
-    .view-empty {
-      margin-bottom: $content-margin-bottom;
-    }
-  }
-
-  &.view-projects.view-display-id-block_3 {
-    .view-header {
-      margin-bottom: 1rem;
-    }
-
-    .view-horizontal-navigation {
-      display: none;
-
-      @include media-breakpoint-up(sm) {
-        display: block;
-
-        @media #{$ie} {
-          display: none;
-        }
-      }
-    }
-
-    .view-content {
-      @include fontStyle(small);
-
-      @include media-breakpoint-up(sm) {
-        display: grid;
-        grid-auto-columns: 36%;
-        grid-auto-flow: column;
-        grid-column-gap: 30px;
-        grid-template-rows: repeat(10, 15px);
-        position: relative;
-      }
-
-      @include media-breakpoint-up(md) {
-        grid-auto-columns: 30%;
-      }
-
-      @include media-breakpoint-up(lg) {
-        grid-auto-columns: 25%;
-        grid-template-rows: repeat(10, 20px);
-      }
-
-      @include media-breakpoint-up(xl) {
-        grid-auto-columns: 20%;
-      }
-
-      .views-row {
-        grid-column-start: 2;
-        grid-row-start: 2;
-        grid-row-end: 7;
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 2rem;
-
-        @include media-breakpoint-up(sm) {
-          margin-bottom: 0;
-        }
-
-        @media #{$ie} {
-          margin-bottom: 2rem;
-        }
-
-        .views-field-field-attributed-image {
-
-          .field-content {
-            height: 100%;
-
-            .paragraph--type--project-image {
-              height: 100%;
-
-              .field--name-field-inline-image {
-                height: 100%;
-
-                img {
-                  max-height: 100%;
-                  width: auto;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-
-    .more-link {
-      margin: 2rem 0;
-      text-align: left;
-
-      a {
-        @include rounded;
-        background-color: $color-orange;
-        color: $color-white;
-        padding: 0.4rem 2rem;
       }
     }
   }

@@ -6,36 +6,13 @@
 {% if title %}
   <h3>{{ title }}</h3>
 {% endif %}
-{% set row_count = 10 %}
-{% set row_spans = [6, 7, 8] %}
-{% set i = 0 %}
 {% for row in rows %}
   {%
     set row_classes = [
       default_row_class ? 'views-row',
     ]
   %}
-  {% set row_span = row_spans[random(2)] %}
-  {% set remaining_rows = row_count - rowSpan %}
-  {% set row_margin_1 = random(remaining_rows - 1) + 1 %}
-  {% set row_margin_2 = row_count - row_margin_1 %}
-  {% set row_offset = 0 %}
-  {% if i % 2 == 0 %}
-    {%  if row_margin_1 < row_margin_2 %}
-      {% set row_offset = row_margin_1 %}
-    {% else %}
-      {% set row_offset = row_margin_2 %}
-    {% endif %}
-  {% else %}
-    {%  if row_margin_1 < row_margin_2 %}
-      {% set row_offset = row_margin_2 %}
-    {% else %}
-      {% set row_offset = row_margin_1 %}
-    {% endif %}
-  {% endif %}
-  <div{{ row.attributes.addClass(row_classes) }} style="grid-column-start: {{ i + 1 }}; grid-row: {{ row_offset }} / span {{ row_span }}">
+  <div{{ row.attributes.addClass(row_classes) }}>
     {{- row.content -}}
   </div>
-
-  {% set i = i + 1 %}
 {% endfor %}

@@ -3,26 +3,15 @@
 .paragraph--type--logos {
   .field--name-field-logo-groups {
     .field__item {
-      margin-bottom: 50px;
-
-      &:last-child {
-        margin-bottom: 0;
-      }
+      margin-bottom: map_get($spacers, 6);
 
       .paragraph--type--logo-group {
-
-        .field--name-field-group-name {
-          color: $color-gray-2;
-          font-weight: $font-weight-normal;
-          margin-bottom: 50px;
-        }
-
         .field__items {
           align-items: center;
           display: grid;
           grid-template-columns: 1fr;
           grid-auto-rows: 1fr;
-          grid-gap: 50px 100px;
+          grid-gap: map_get($spacers, 6) map_get($spacers, 10);
           justify-items: center;
 
           @include media-breakpoint-up(sm) {

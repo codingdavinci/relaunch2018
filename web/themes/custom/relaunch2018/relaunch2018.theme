@@ -215,9 +215,50 @@ function relaunch2018_preprocess_node(array &$variables) {
  *
  * @param array $variables
  */
+function relaunch2018_preprocess_block(array &$variables) {
+  if (!isset($variables['attributes']['id'])) {
+    return;
+  }
+
+  $containerBlocks = [
+    'block-block-about',
+    'block-landing-page-group-possibilities',
+    'block-views-block-articles-block-1',
+    'block-views-block-events-block-2',
+    'block-views-block-data-sets-block-1',
+    'block-views-block-projects-block-3',
+    'block-views-block-projects-block-1',
+  ];
+
+  if (in_array($variables['attributes']['id'], $containerBlocks)) {
+    if (!isset($variables['attributes']['class'])) {
+      $variables['attributes']['class'] = [];
+    }
+    $variables['attributes']['class'][] = 'container';
+  }
+}
+
+/**
+ * Implements THEME_preprocess_HOOK().
+ *
+ * @param array $variables
+ */
 function relaunch2018_preprocess_paragraph(array &$variables) {
   /** @var Paragraph $paragraph */
   $paragraph = $variables['paragraph'];
+
+  $containerParagraphs = [
+    'image',
+    'text-inline',
+    'video',
+  ];
+
+  if (in_array($paragraph->bundle(), $containerParagraphs)) {
+    if (!isset($variables['attributes']['class'])) {
+      $variables['attributes']['class'] = [];
+    }
+    $variables['attributes']['class'][] = 'container';
+  }
 
   if ($paragraph->bundle() === 'winner') {
     $parent = $paragraph->getParentEntity();
@@ -236,6 +277,37 @@ function relaunch2018_preprocess_paragraph(array &$variables) {
 function relaunch2018_preprocess_field(array &$variables) {
   $uuid_service = \Drupal::service('uuid');
   $variables['uuid'] = $uuid_service->generate();
+
+  $badgeFields = [
+    'field_controlled_vocabularies',
+    'field_file_types',
+    'field_has_geo_references',
+    'field_keywords',
+    'field_metadata_format',
+    'field_metadata_standards',
+    'field_object_type',
+    'field_theme',
+  ];
+
+  if (in_array($variables['field_name'], $badgeFields)) {
+    foreach ($variables['items'] as &$item) {
+      if (!isset($item['attributes']['class'])) {
+        $item['attributes']['class'] = [];
+      }
+      $item['attributes']['class'][] = 'badge';
+    }
+  } elseif ($variables['field_name'] === 'field_text' && $variables['entity_type']) {
+    if (!isset($variables['attributes']['class'])) {
+      $variables['attributes']['class'] = [];
+    }
+    $variables['attributes']['class'][] = 'clearfix';
+    $variables['attributes']['class'][] = 'text-formated';
+  } elseif ($variables['field_name'] === 'field_tags') {
+    if (!isset($variables['attributes']['class'])) {
+      $variables['attributes']['class'] = [];
+    }
+    $variables['attributes']['class'][] = 'container';
+  }
 }
 
 /**

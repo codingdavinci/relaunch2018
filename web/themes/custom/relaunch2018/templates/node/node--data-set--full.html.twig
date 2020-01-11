@@ -18,62 +18,55 @@
 <article{{ attributes.addClass(classes) }}>
   {{ content.content_moderation_control }}
 
-  <div class="article--header-image d-none d-md-block">
-    <div class="container">
-      {{ content.header_image }}
+  <div class="article__header">
+    <div class="row m-0">
+      <div class="col-lg-5 px-8 py-7">
+        <div class="d-flex flex-column justify-content-between h-100">
+          <div>
+            {{ title_prefix }}
+            <h1{{ title_attributes }}>
+              {{ label }}
+            </h1>
+            {{ title_suffix }}
+          </div>
+          <div>
+            {{ institution_name|raw|replace({'&shy': '%shy%'})|escape|replace({'%shy%': '&shy'}) }}
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-7 p-0 text-right">
+        {{ content.field_attributed_image }}
+      </div>
     </div>
   </div>
 
-  <div class="article--content-container row">
-    <div class="article--header col-sm-10 offset-sm-1 col-md-9 offset-md-2">
-      <div class="article--content-block">
-        <div class="field--name--field-audio-video__media">
-          {% if content.field_audio_video['#items'] is not empty %}
-          <video controls poster="{{ audio_video.poster }}">
-            <source src="{{ audio_video.url }}" type="{{ audio_video.mime_type }}">
-            <p>
-              {% trans %}
-              Your browser does not support HTML5 video. Here is a <a href="{{ audio_video.url }}">link to the video</a> instead.
-              {% endtrans %}
-            </p>
-          </video>
-          {{ content.field_audio_video }}
-        </div>
-        {% else %}
-          {{ content.field_attributed_image }}
-        {% endif %}
+  <div class="container">
+    {{ content.field_events }}
+    {{ object_type }}
+  </div>
+
+  <hr class="separator">
+
+  <div class="article--content-container container mb-6">
+    {% if content.field_audio_video['#items'] is not empty %}
+      <div class="field--name--field-audio-video__media">
+        <video controls poster="{{ audio_video.poster }}" class="img-fluid">
+          <source src="{{ audio_video.url }}" type="{{ audio_video.mime_type }}">
+          <p>
+            {% trans %}
+            Your browser does not support HTML5 video. Here is a <a href="{{ audio_video.url }}">link to the video</a> instead.
+            {% endtrans %}
+          </p>
+        </video>
+        {{ content.field_audio_video }}
       </div>
-    </div>
+    {% endif %}
 
-    <div{{ content_attributes.addClass('node__content col-sm-10 offset-sm-1 col-md-9 offset-md-2') }}>
-      {{ title_prefix }}
-      <h1{{ title_attributes }}>
-        {{ label }}
-      </h1>
-      {{ title_suffix }}
-
-      {% if display_submitted %}
-        <div{{ author_attributes.addClass('node__submitted').addClass('row') }}>
-          <div class="col-4">
-            {{ node.createdtime|format_date('date_short') }}
-          </div>
-          <div class="col-8 text-right">
-            {{ 'by'|trans }}{{ author_name }}
-          </div>
-        </div>
-      {% endif %}
-
-      {{ content.field_events }}
-      <div class="field field--institution-name">
-        <div class="field__item">
-          {{ institution_name }}
-        </div>
-      </div>
+    <div{{ content_attributes.addClass('node__content mt-4') }}>
       {{ content.field_description }}
       {{ content.field_description_unconstrained }}
-      {{ content.field_submission_type }}
       <div class="data-set--badges">
-        {{ object_type }}
+        {{ content.field_submission_type }}
         {{ content.field_theme }}
         {{ content.field_keywords }}
       </div>
@@ -92,9 +85,7 @@
         |without('projects')
         |without('content_moderation_control')
       }}
-    </div>
 
-    <div{{ content_attributes.addClass('node__content node__content__section col-sm-10 offset-sm-1 col-md-9 offset-md-2') }}>
       {{ content.projects }}
     </div>
 

@@ -1,0 +1,25 @@
+uuid: 2d566327-86ca-42a6-a579-ee1b15df61f1
+langcode: de
+status: true
+dependencies:
+  content:
+    - 'block_content:paragraphs:ad1413eb-6749-40cf-b26f-85adfc0045f8'
+  module:
+    - block_content
+  theme:
+    - relaunch2018
+id: landing_page__figures
+theme: relaunch2018
+region: landing_page__figures
+weight: -17
+provider: null
+plugin: 'block_content:ad1413eb-6749-40cf-b26f-85adfc0045f8'
+settings:
+  id: 'block_content:ad1413eb-6749-40cf-b26f-85adfc0045f8'
+  label: 'Startseite: Coding da Vinci für technikaffine und kulturbegeisterte Communities'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -10,12 +10,11 @@
     display: inline-block;
 
     &.field--name-field-caption {
-      margin-top: 0.9rem;
+      margin-top: map_get($spacers, 3);
     }
   }
 
   img {
-    @include rounded;
     height: auto;
     width: 100%;
   }
@@ -40,6 +39,6 @@
   }
 
   .media--attribution {
-    @include fontStyle(small);
+    @include font-size(16px);
   }
 }

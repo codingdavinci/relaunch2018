@@ -1,34 +1,28 @@
 @import '../_includes/base';
 
 .view-faq {
-  margin-bottom: $content-margin-bottom;
-
   .view-content {
-    ul {
-      list-style-type: none;
+    > .item-list {
+      margin-bottom: map_get($spacers, 5);
 
-      li {
-        margin: 0;
-      }
-    }
-
-    & > .item-list {
-      margin-bottom: 40px;
-
-      h3 {
-        border-top: 1px solid $color-red;
-        color: $color-red;
-        padding-top: 4px;
+      h2 {
+        border-bottom: 1px solid $green;
+        padding-bottom: map_get($spacers, 2);
         text-align: right;
-        text-transform: uppercase;
       }
 
       ul {
+        margin: 0;
+
         li {
+          margin: 0;
+
           .views-field-title {
-            margin-bottom: 20px;
+            margin-bottom: map_get($spacers, 3);
 
             a {
+              color: $gray;
+
               &:active,
               &:focus {
                 text-decoration: none;
@@ -38,17 +32,8 @@
 
           .item-content {
             display: none;
-            margin-bottom: 40px;
+            margin-bottom: map_get($spacers, 5);
 
-            .views-field-body,
-            .views-field-field-files,
-            .views-field-field-links {
-              .icon-arrow {
-                &:before {
-                  color: $color-gray-3;
-                }
-              }
-            }
             .views-field-body {
               p {
                 &:last-child {
@@ -56,21 +41,46 @@
                 }
               }
 
+              ul {
+                @include ul-dashed;
+                margin-bottom: 1em;
+                padding-left: 1em;
+
+                li {
+                  margin: 0;
+                }
+              }
+
               & + * {
-                margin-top: 1rem;
+                margin-top: map_get($spacers, 3);
+              }
+            }
+
+            .views-field-field-links {
+              ul {
+                padding-left: 1em;
+
+                li {
+                  &:before {
+                    content: '';
+                    color: $green;
+                    display: inline-block;
+                    font-family: $font-family-icons;
+                    font-size: 0.7rem;
+                    margin-left: -1.8em;
+                    margin-right: 0.3rem;
+                    vertical-align: middle;
+                  }
+                }
               }
             }
           }
+
           &.active {
             .views-field-title {
               a {
-                color: $color-gray-1;
-                font-weight: $font-weight-semi-bold;
-
-                &:active,
-                &:focus {
-                  text-decoration: none;
-                }
+                @include link-underline;
+                color: $green;
               }
             }
           }

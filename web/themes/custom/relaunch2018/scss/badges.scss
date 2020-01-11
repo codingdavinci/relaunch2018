@@ -1,186 +1,68 @@
 @import '_includes/base';
 
 .badge {
-  @include fontStyle(badge);
-  @include linkColor(dark);
+  @include easeAll;
+  @include font-size(12px);
   color: $white;
+  background-color: $green-dark;
+  border: 1px solid $green-dark;
+  border-radius: 50px;
+  font-weight: $font-weight-normal;
   display: inline-block;
-  font-weight: $font-weight-bold;
-  margin-right: 0.2em;
-  padding: 0.15em 0.4em 0.25em 0.4em;
+  line-height: 1;
+  margin: 0 map_get($spacers, 1) map_get($spacers, 1) 0;
+  opacity: .5;
+  padding: 3px 12px 5px;
+  vertical-align: top;
 
   a {
-    text-decoration: underline;
+    background-color: transparent;
+    border-color: $green;
+    color: $green;
+    opacity: 1;
 
     &:hover {
-      text-decoration: none;
+      background-color: $green-dark;
+      border-color: $green-dark;
+      color: $white;
     }
-  }
-
-  ul {
-    display: inline;
-  }
-
-  &.badge--event {
-    background-color: $color-yellow;
-  }
-
-  &.badge--license {
-    background-color: $color-red-2;
-  }
-
-  &.badge--theme {
-    background-color: lighten($color-deep-blue, 20%);
-  }
-
-  &.badge--controlled-vocabularies,
-  &.badge--file-types,
-  &.badge--has-geo-references,
-  &.badge--metadata-format,
-  &.badge--metadata-standard {
-    background-color: $color-gray-2;
-  }
-
-  &.badge--keywords {
-    background-color: $color-gray-3;
-  }
-
-  &.badge--object-type,
-  &.badge--project-type {
-    background-color: $color-deep-teal;
-
-    & + ul {
-      .badge--object-type {
-        background-color: $color-darker-green;
-      }
-    }
-  }
-
-  &.badge--award {
-    background-color: $color-red;
   }
 }
 
 .view {
-
-  a.badge {
-    text-decoration: none;
-  }
-
   .view-filters {
-
     .form-item {
-
       div.badge {
-        @include linkColor(dark);
+        background: transparent;
+        border: 0;
+        margin: 0;
+        opacity: 1;
         padding: 0;
 
-        & > a {
-          @include easeAll;
-        }
-      }
+        a {
+          &.bef-link-active {
+            background-color: $green-dark;
+            border-color: $green-dark;
+            color: $white;
 
-      &.form-item-object-type,
-      &.form-item-project-type {
-        .badge {
-          & > .badge {
-            background-color: $color-deep-teal;
-
-            &:hover {
-              background-color: lighten(saturate($color-deep-teal, 10%), 10%);
-            }
-
-            &.bef-link-active {
-              background-color: lighten(desaturate($color-deep-teal, 20%), 15%);
-              color: $color-gray-2;
-
-              &:hover {
-                background-color: lighten(saturate($color-deep-teal, 10%), 10%);
-              }
-            }
-          }
-        }
-
-        ul ul {
-          .badge {
-            & > .badge {
-              background-color: $color-darker-green;
-
-              &:hover {
-                background-color: lighten(saturate($color-darker-green, 10%), 10%);
-              }
-
-              &.bef-link-active {
-                background-color: lighten(desaturate($color-darker-green, 0%), 20%);
-                color: $color-gray-2;
-
-                &:hover {
-                  background-color: lighten(saturate($color-darker-green, 10%), 10%);
-                }
-              }
+            &:after {
+              content: '✖';
+              font-weight: $font-weight-normal;
+              font-size: .8em;
+              margin-left: map_get($spacers, 1) / 2;
             }
           }
         }
       }
 
-      &.form-item-license {
+      ul ul {
         .badge {
-          & > .badge {
-            background-color: $color-red-2;
-
-            &:hover {
-              background-color: lighten(saturate($color-red-2, 10%), 10%);
-            }
+          > .badge {
+            border-color: $green-dark;
+            color: $green-dark;
 
             &.bef-link-active {
-              background-color: lighten(saturate($color-red-2, 15%), 0%);
-              color: $color-gray-2;
-
-              &:hover {
-                background-color: lighten(saturate($color-red-2, 10%), 10%);
-              }
-            }
-          }
-        }
-      }
-
-      &.form-item-theme {
-        .badge {
-          & > .badge {
-            background-color: lighten($color-deep-blue, 35%);
-
-            &:hover {
-              background-color: lighten(saturate(lighten($color-deep-blue, 45%), 10%), 0%);
-            }
-
-            &.bef-link-active {
-              background-color: lighten(saturate(lighten($color-deep-blue, 35%), 15%), 0%);
-              color: $color-gray-2;
-
-              &:hover {
-                background-color: lighten(saturate(lighten($color-deep-blue, 45%), 10%), 0%);
-              }
-            }
-          }
-        }
-      }
-
-      &.form-item-event {
-        .badge {
-          & > .badge {
-            background-color: $color-yellow;
-
-            &:hover {
-              background-color: lighten(saturate($color-yellow, 10%), 10%);
-            }
-
-            &.bef-link-active {
-              background-color: lighten(saturate($color-yellow, 15%), 0%);
-              color: $color-gray-2;
-
-              &:hover {
-                background-color: lighten(saturate($color-yellow, 10%), 10%);
-              }
+              color: $white;
             }
           }
         }

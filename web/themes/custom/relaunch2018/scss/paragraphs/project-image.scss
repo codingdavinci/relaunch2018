@@ -4,10 +4,7 @@
   display: inline-block;
 
   .field--name-field-inline-image {
-    @include rounded;
-
     img {
-      @include rounded;
       @include img-fluid;
     }
   }

@@ -1,13 +1,10 @@
 @import '_includes/base';
 
 .language-switcher-language-url {
-  @include rounded;
-  color: $color-gray-4;
+  color: $gray-3;
   display: flex;
   font-size: 1.2rem;
-  font-weight: $font-weight-normal;
-  margin: 0;
-  margin-right: 0.75rem;
+  margin: 0 0.75rem 0 0;
   padding-left: 0;
   user-select: none;
 
@@ -21,29 +18,34 @@
 
   li {
     display: inline;
+    margin-right: 0.3em;
 
     span {
-      @include curlyBraces($color-gray-4);
+      @include curlyBraces($gray-3);
       display: inline-block;
       padding: 0 0.3rem 0.2rem 0;
     }
 
     a {
-      @include border-radius($border-radius);
-      @include curlyBraces($color-white);
+      @include border-radius(4px);
+      @include curlyBraces($white);
       background-color: transparent;
-      color: $color-white;
+      color: $white;
       padding: 0 0.3rem 0.1rem 0.3rem;
     }
 
     &.is-active {
-      color: $color-white;
+      color: $white;
 
       a {
         @include curlyBraces($black);
-        background-color: $color-white;
+        background-color: $white;
         color: $black;
       }
+    }
+
+    &:last-child {
+      margin-right: 0;
     }
   }
 }

@@ -11,59 +11,36 @@
     node.isSticky() ? 'node--sticky',
     not node.isPublished() ? 'node--unpublished',
     view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
-    'image-header',
   ]
 %}
 {{ attach_library('classy/node') }}
 <article{{ attributes.addClass(classes) }}>
-  <div class="article--header-image">
-    <div class="container">
-      {{ content.field_image }}
-    </div>
+  {{ content.field_image }}
+
+  <div class="mt-3 mb-2">
+    {{ content.field_tags }}
   </div>
+  <hr class="separator">
 
-  <div class="article--content-container">
-    <div class="row">
-      <div class="article--header col-12 col-sm-10 offset-sm-1 col-md-9 offset-md-2">
-        <div class="article--content-block">
-
-          {% if not page %}
-            {{ title_prefix }}
-            <h2{{ title_attributes }}>
-              <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-            </h2>
-            {{ title_suffix }}
-          {% endif %}
-
-          {% if display_submitted %}
-            <div{{ author_attributes.addClass('node__submitted').addClass('row') }}>
-              <div class="col-4">
-                {{ node.createdtime|format_date('date_short') }}
-              </div>
-              <div class="col-8 text-right">
-                {{ 'by'|trans }} {{ author_name }}
-              </div>
-            </div>
-          {% endif %}
-
-          {% if page %}
-            {{ title_prefix }}
-              <h1{{ title_attributes }}>{{ label }}</h1>
-            {{ title_suffix }}
-          {% endif %}
-
-          <div>
-            {{ content.field_tags }}
+  <div class="container">
+    {% if display_submitted %}
+      <div class="row">
+        <div class="col-12">
+          <div{{ author_attributes.addClass('node__submitted').addClass('mb-4') }}>
+            {{ node.createdtime|format_date('date_short') }}, {{ author_name }}
           </div>
-
         </div>
       </div>
+    {% endif %}
 
-      <div{{ content_attributes.addClass('node__content') }}>
-        {{ content|without('field_tags')|without('field_image') }}
-      </div>
+    {{ title_prefix }}
+      <h1{{ title_attributes }}>{{ label }}</h1>
+    {{ title_suffix }}
 
+    <div{{ content_attributes.addClass('node__content') }}>
+      {{ content|without('field_tags')|without('field_image') }}
     </div>
+
   </div>
 
 </article>

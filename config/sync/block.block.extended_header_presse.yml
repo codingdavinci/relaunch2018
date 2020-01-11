@@ -1,9 +1,9 @@
-uuid: 406c50e0-8005-448a-b635-3b79f6d9df75
-langcode: en
+uuid: d1cfd553-cf47-4f6e-a0ce-e432e27508c4
+langcode: de
 status: true
 dependencies:
   content:
-    - 'block_content:extended_page_header:9a45b2b4-586f-47fc-ad90-c1c5e889b738'
+    - 'block_content:extended_header:451895ca-12bd-4543-98ad-6bb46fec1eaf'
   module:
     - block_content
     - system
@@ -12,11 +12,11 @@ dependencies:
 id: extended_header_presse
 theme: relaunch2018
 region: header
-weight: 0
+weight: -16
 provider: null
-plugin: 'block_content:9a45b2b4-586f-47fc-ad90-c1c5e889b738'
+plugin: 'block_content:451895ca-12bd-4543-98ad-6bb46fec1eaf'
 settings:
-  id: 'block_content:9a45b2b4-586f-47fc-ad90-c1c5e889b738'
+  id: 'block_content:451895ca-12bd-4543-98ad-6bb46fec1eaf'
   label: 'Erweiterter Seitenkopf: Presse'
   provider: block_content
   label_display: '0'

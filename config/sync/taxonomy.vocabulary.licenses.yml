@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 name: Lizenzen
 vid: licenses
-description: 'Für hochgeladene Bilder wählbare Lizenzen.'
+description: 'Für hochgeladene Bilder oder andere Mediendateien wählbare Lizenzen.'
 weight: 0

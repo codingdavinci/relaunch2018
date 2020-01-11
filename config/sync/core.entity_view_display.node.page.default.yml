@@ -3,6 +3,7 @@ langcode: de
 status: true
 dependencies:
   config:
+    - field.field.node.page.field_content_teaser
     - field.field.node.page.field_inline_images
     - field.field.node.page.field_paragraphs
     - node.type.page
@@ -16,17 +17,29 @@ targetEntityType: node
 bundle: page
 mode: default
 content:
+  content_moderation_control:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_content_teaser:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
   field_paragraphs:
-    weight: 2
+    weight: 3
     label: hidden
     settings:
-      view_mode: default
+      view_mode: inline
       link: ''
     third_party_settings: {  }
     type: entity_reference_revisions_entity_view
     region: content
   links:
-    weight: 1
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }

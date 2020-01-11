@@ -1,0 +1,16 @@
+@import '../_includes/base';
+
+.node--type-press-kit {
+  h3 {
+    margin-bottom: 32px;
+    border-bottom: 1px solid $green;
+    color: $green;
+    padding-bottom: 8px;
+  }
+
+  p {
+    .icon-mail-1 {
+      font-weight: $font-weight-normal;
+    }
+  }
+}

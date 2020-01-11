@@ -11,54 +11,39 @@
     node.isSticky() ? 'node--sticky',
     not node.isPublished() ? 'node--unpublished',
     view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+    'row',
   ]
 %}
 {{ attach_library('classy/node') }}
 <article{{ attributes.addClass(classes) }}>
-  <div class="row">
-
-    <div class="col-md-4">
-      {{ content.field_image }}
+  <div class="col-md-4">{{ content.field_image }}</div>
+  <div class="col-md-8">
+    <div class="row mt-1 mt-md-0">
+      <div class="col-12 col-lg-auto mb-1 mb-lg-0">
+        <div{{ author_attributes.addClass('node__submitted') }}>
+          {{ node.createdtime|format_date('date_short') }}, {{ author_name }}
+        </div>
+      </div>
+      <div class="col d-flex flex-column justify-content-center">
+        {{ content.field_tags }}
+      </div>
     </div>
-    <div class="col-md-8 mt-3 mt-md-0">
-
-      <div class="article--header">
-
-        <div class="row">
-          <div class="col-12 article--header--above">
-            <div class="article--date">
-              {{ node.createdtime|format_date('date_short') }}
-            </div>
-            {{ content.field_tags }}
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-12">
-            {{ title_prefix }}
-            <h3{{ title_attributes }}>
-              <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-            </h3>
-            {{ title_suffix }}
-          </div>
-        </div>
-
+    <div class="row">
+      <div class="col-12">
+        {{ title_prefix }}
+          <h3{{ title_attributes.addClass('mt-2') }}>{{ label }}</h3>
+        {{ title_suffix }}
       </div>
-
-      <div class="row">
-        <div class="col-12">
-          <div{{ content_attributes.addClass('node__content') }}>
-            {{ content|without('field_tags')|without('field_image') }}
-          </div>
+    </div>
+    <div class="row">
+      <div class="col-12"><hr class="mt-1 mb-1"></div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div{{ content_attributes.addClass('node__content') }}>
+          {{ content|without('field_image')|without('field_tags') }}
         </div>
       </div>
-
-      <div class="row">
-        <div class="col-12 author">
-          {{ 'by'|trans }} {{ author_name }}
-        </div>
-      </div>
-
     </div>
   </div>
 </article>

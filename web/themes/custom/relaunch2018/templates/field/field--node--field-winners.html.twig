@@ -16,6 +16,7 @@
   set title_classes = [
     'field__label',
     label_display == 'visually_hidden' ? 'visually-hidden',
+    'container',
   ]
 %}
 
@@ -34,8 +35,9 @@
 {% else %}
   <div{{ attributes.addClass(classes) }}>
     <h2{{ title_attributes.addClass(title_classes) }}>{{ label }}</h2>
+    <hr class="separator">
     {% if multiple %}
-      <div class="field__items">
+      <div class="field__items container">
     {% endif %}
     {% for item in items %}
       <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>

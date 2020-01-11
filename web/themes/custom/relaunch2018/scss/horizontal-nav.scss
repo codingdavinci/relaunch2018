@@ -1,14 +1,14 @@
 @import '_includes/base';
 
 .horizontal-nav {
-  margin-bottom: 1em;
+  margin-bottom: map_get($spacers, 2);
   text-align: right;
 
   @media #{$ie} {
     display: none;
   }
 
-  & > a {
+  > a {
     &:hover {
       text-decoration: none;
     }
@@ -17,7 +17,7 @@
       opacity: 0.2;
     }
 
-    & > span {
+    > span {
       &:before {
         @include icon;
         content: '\e825';
@@ -27,9 +27,9 @@
     }
 
     &.horizontal-nav--left {
-      & > span {
+      > span {
         &:before {
-          margin-right: 1em;
+          margin-right: map_get($spacers, 2);
           transform: scaleX(-1);
         }
       }

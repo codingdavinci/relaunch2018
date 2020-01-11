@@ -1,21 +1,21 @@
 @import '../_includes/base';
 
 .paragraph--type--box-group {
-  margin-bottom: 6rem;
+  padding: 0;
 
   .field--name-field-boxes {
     display: grid;
     grid-auto-columns: 100%;
     grid-auto-flow: column;
-    grid-gap: 20px;
     left: 0;
+    margin-right: -1 * $grid-gutter-width / 2;
     position: relative;
     width: 100%;
 
     @media #{$ie} {
-      & > .field__item {
+      > .field__item {
         display: inline-block;
-        padding: 1rem;
+        padding: map_get($spacers, 2);
         vertical-align: top;
         width: 100%;
       }
@@ -25,12 +25,18 @@
   @each $width in 25 33 50 67 {
     &.box--width-#{$width} {
       .field--name-field-boxes {
+        margin-right: -1 * $grid-gutter-width / 2;
+
         @include boxWidth($width);
+
+        > .field__item {
+          padding: $grid-gutter-width / 2;
+        }
 
         @media #{$ie} {
           width: 100%;
 
-          & > .field__item {
+          > .field__item {
             @include boxWidth($width);
           }
         }

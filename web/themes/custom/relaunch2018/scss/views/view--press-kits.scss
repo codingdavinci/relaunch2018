@@ -1,11 +1,8 @@
 @import '../_includes/base';
 
 .view.view-press-kits {
-  font-weight: $font-weight-light;
-  margin-bottom: $content-margin-bottom;
-
-  h2 {
-    color: $color-deep-teal;
+  &.view-display-id-page_1 {
+    margin-top: map_get($spacers, 10);
   }
 
   .view-content {
@@ -16,10 +13,10 @@
         background-color: transparent;
         box-shadow: none;
         display: inline-block;
-        margin-bottom: 40px;
+        margin-bottom: map_get($spacers, 7);
 
         .field--name-field-files {
-          margin-top: 0.6rem;
+          nargin-top: 24px;
         }
       }
 
@@ -35,10 +32,8 @@
 
   .attachment-after {
     .view-press-kits {
-      margin-top: 5rem;
-
       .item-list {
-        margin-bottom: 4rem;
+        margin-bottom: map_get($spacers, 7);
       }
 
       ul {

@@ -1,6 +1,6 @@
 uuid: 93cb5432-2c8f-4b2f-80e4-6f6609a5ae28
 langcode: de
-status: true
+status: false
 dependencies:
   content:
     - 'block_content:extended_page_header:b61adaa5-2426-4da7-9117-00f4c23e249b'
@@ -12,7 +12,7 @@ dependencies:
 id: extended_header_about
 theme: relaunch2018
 region: header
-weight: 0
+weight: -8
 provider: null
 plugin: 'block_content:b61adaa5-2426-4da7-9117-00f4c23e249b'
 settings:

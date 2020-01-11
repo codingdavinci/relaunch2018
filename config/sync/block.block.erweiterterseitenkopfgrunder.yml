@@ -1,0 +1,31 @@
+uuid: 6fa12659-a7cb-490b-b31f-3077af85acfb
+langcode: de
+status: false
+dependencies:
+  content:
+    - 'block_content:extended_page_header:b5c4a9f4-44e6-4a88-ac65-cab87eaba20d'
+  module:
+    - block_content
+    - system
+  theme:
+    - relaunch2018
+id: erweiterterseitenkopfgrunder
+theme: relaunch2018
+region: header
+weight: -10
+provider: null
+plugin: 'block_content:b5c4a9f4-44e6-4a88-ac65-cab87eaba20d'
+settings:
+  id: 'block_content:b5c4a9f4-44e6-4a88-ac65-cab87eaba20d'
+  label: 'Erweiterter Seitenkopf: Gründer'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /wer-steckt-hinter-coding-da-vinci
+    negate: false
+    context_mapping: {  }

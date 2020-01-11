@@ -1,9 +1,7 @@
 @import '../_includes/base';
 
 .view-data-sets {
-
   .view-content {
-
     .card-columns {
       @include media-breakpoint-up(sm) {
         column-count: 2;
@@ -14,50 +12,21 @@
       }
 
       .card {
-        @include rounded;
-        @include boxShadow;
-        background-color: $white;
-        display: inline-block;
-        margin-bottom: 20px;
-        width: 100%;
-
         .card-img {
           img {
-            border-radius: 0;
-            @include border-top-radius($border-radius);
             height: auto;
             max-width: 100%;
           }
         }
 
         .card-body {
-          .card-title {
-            border-bottom: 1px solid $color-gray-5;
-            font-size: 1.6rem;
-            padding-bottom: 1rem;
-          }
-
           .field {
-            margin-top: 1rem;
-
             &.field--institution-name {
               word-break: break-word;
-            }
-
-            &.field--name-field-event {
-              @include fontStyle(small);
-            }
-
-            .field {
-              margin-top: 0.2rem;
             }
           }
         }
       }
     }
-  }
-
-  .view-empty {
-    margin-bottom: $content-margin-bottom;
   }
 }

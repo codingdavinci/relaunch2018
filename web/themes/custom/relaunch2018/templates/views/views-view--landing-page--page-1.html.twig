@@ -10,13 +10,14 @@
     'view-id-' ~ id,
     'view-display-id-' ~ display_id,
     dom_id ? 'js-view-dom-id-' ~ dom_id,
-    'row',
+    'container',
   ]
 %}
 
 {% set have_upcoming_events = drupal_view_result('landing_page', 'attachment_1')|length > 0 %}
 
 <div{{ attributes.addClass(classes) }}>
+  <div class="row">
   {% if header %}
     <div class="view-header">
       {{ header }}
@@ -28,28 +29,28 @@
     </div>
   {% endif %}
   {% if have_upcoming_events %}
-    <div class="attachment attachment-before {% if have_upcoming_events %}col-sm-5{% else %}d-none{% endif %}">
-      {% if events_title %}
-        <h2>{{ events_title }}</h2>
-      {% endif %}
+      <div class="attachment attachment-before col-12">
+        {% if events_title %}
+          <h2>{{ events_title }}</h2>
+        {% endif %}
 
-      {{ drupal_view('landing_page', 'attachment_1') }}
-    </div>
+        {{ drupal_view('landing_page', 'attachment_1') }}
+      </div>
   {% endif %}
 
-  <div class="view-content {% if have_upcoming_events %}col-sm-7{% else %}col-sm-10 offset-sm-1 col-lg-8 offset-lg-2{% endif %}">
-    {% if title %}
-      <h2>{{ title }}</h2>
-    {% endif %}
+    <div class="view-content col-12">
+      {% if title %}
+        <h2>{{ title }}</h2>
+      {% endif %}
 
-    {% if rows %}
-      {{ rows }}
-    {% elseif empty %}
-      <div class="view-empty">
-        {{ empty }}
-      </div>
-    {% endif %}
-  </div>
+      {% if rows %}
+        {{ rows }}
+      {% elseif empty %}
+        <div class="view-empty">
+          {{ empty }}
+        </div>
+      {% endif %}
+    </div>
 
   {% if pager %}
     {{ pager }}
@@ -72,4 +73,5 @@
       {{ feed_icons }}
     </div>
   {% endif %}
+</div>
 </div>

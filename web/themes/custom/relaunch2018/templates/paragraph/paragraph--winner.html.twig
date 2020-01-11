@@ -14,14 +14,10 @@
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
-      <div class="winner--info"{% if color_scheme %} style="background-color:#{{ color_scheme[1] }}"{% endif %}>
-        <div class="winner--info--award--wrapper">
-          <span class="winner--info--award">{{ content.field_award }}</span>
-        </div>
-        <div class="winner--info--project-title">
-          {% set nid = content.field_project['#items'].target_id %}
-          {{ drupal_link(drupal_field('title', 'node', nid), 'node/' ~ nid) }}
-        </div>
+      {{ content.field_award }}
+      <div class="winner__project-title">
+        {% set nid = content.field_project['#items'].target_id %}
+        {{ drupal_link(drupal_field('title', 'node', nid), 'node/' ~ nid) }}
       </div>
       {{ content.field_project }}
     {% endblock %}

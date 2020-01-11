@@ -2,19 +2,15 @@
 
 .paragraph--type--prizes {
   .field--name-field-description {
-    margin-bottom: 2rem;
+    margin-bottom: map_get($spacers, 6);
   }
 
   .field--name-field-prizes {
-    .field__label {
-      margin-bottom: 50px;
-    }
-
     .field__items {
       display: grid;
       grid-template-columns: 1fr;
       grid-auto-rows: 1fr;
-      grid-gap: 50px;
+      grid-gap: map_get($spacers, 6);
 
       @include media-breakpoint-up(sm) {
         grid-template-columns: 1fr 1fr;
@@ -24,36 +20,42 @@
         grid-template-columns: 1fr 1fr 1fr;
       }
 
-      & > .field__item {
+      > .field__item {
         @media #{$ie} {
           display: inline-block;
-          padding: 1rem;
+          padding: map_get($spacers, 4);
           width: 50%;
         }
 
         .prize--info {
-          @include rounded;
-          background-color: $color-prize-2;
-          color: $color-white;
+          background-color: $green-light;
+          color: $green;
           display: flex;
           flex-direction: column;
           height: 100%;
           justify-content: space-between;
-          padding: 1rem;
+          padding: map_get($spacers, 4);
 
           .prize--number {
-            color: $color-prize-1;
             font-size: 3rem;
             font-weight: $font-weight-bold;
             line-height: 1;
-            margin-bottom: 2rem;
+            margin-bottom: map_get($spacers, 6);
           }
 
           .paragraph--type--prize {
             .field--name-field-text {
               p {
+                @include font-size(16px);
+                color: $green;
+
                 &:last-child {
                   margin-bottom: 0;
+                }
+
+                a {
+                  color: $green;
+                  font-weight: $font-weight-bold;
                 }
               }
             }

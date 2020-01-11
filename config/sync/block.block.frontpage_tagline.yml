@@ -12,7 +12,7 @@ dependencies:
 id: frontpage_tagline
 theme: relaunch2018
 region: header
-weight: 0
+weight: -19
 provider: null
 plugin: 'block_content:13c1ac55-c621-420f-8acb-b9d7c4eb1a7e'
 settings:

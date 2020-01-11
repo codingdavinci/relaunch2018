@@ -1,0 +1,31 @@
+uuid: d7881bb0-3ce5-4db9-9fbf-84c511c47c33
+langcode: de
+status: false
+dependencies:
+  content:
+    - 'block_content:extended_page_header:51a2fd2e-14c5-4e5f-a644-472b2eb847cc'
+  module:
+    - block_content
+    - system
+  theme:
+    - relaunch2018
+id: erweiterterseitenkopfziele
+theme: relaunch2018
+region: header
+weight: -9
+provider: null
+plugin: 'block_content:51a2fd2e-14c5-4e5f-a644-472b2eb847cc'
+settings:
+  id: 'block_content:51a2fd2e-14c5-4e5f-a644-472b2eb847cc'
+  label: 'Erweiterter Seitenkopf: Ziele'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /welche-ziele-verfolgt-coding-da-vinci
+    negate: false
+    context_mapping: {  }

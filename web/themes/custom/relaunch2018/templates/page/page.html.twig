@@ -16,24 +16,15 @@
 {{ page.primary_menu }}
 
 <div class="layout-container--wrapper{% if tiled_header %} header-tiles-above{% endif %}">
-  <div class="layout-container">
 
-    {% if not tiled_header and (page.admin_tabs or page.header or page.header_with_background) %}
+    {% if not tiled_header and (page.admin_tabs or page.header) %}
       <header role="banner">
         {% if page.admin_tabs %}
           {{ page.admin_tabs }}
         {% endif %}
 
-        {% if page.header_with_background %}
-          <div class="header--with-background">
-            <div class="container">
-              {{ page.header_with_background }}
-            </div>
-          </div>
-        {% elseif page.header %}
-          <div class="container header--default">
-            {{ page.header }}
-          </div>
+        {% if page.header %}
+          {{ page.header }}
         {% endif %}
       </header>
     {% endif %}
@@ -46,28 +37,11 @@
 
     <main role="main">
       <a id="main-content" tabindex="-1"></a>
-
-      <div class="layout-content container">
         {% if tiled_header and page.admin_tabs %}
           {{ page.admin_tabs }}
         {% endif %}
         {{ page.content }}
-      </div>
-
-      {% if page.sidebar_first %}
-        <aside class="layout-sidebar-first" role="complementary">
-          {{ page.sidebar_first }}
-        </aside>
-      {% endif %}
-
-      {% if page.sidebar_second %}
-        <aside class="layout-sidebar-second" role="complementary">
-          {{ page.sidebar_second }}
-        </aside>
-      {% endif %}
-
     </main>
-  </div>
 
   {% if page.footer %}
     <footer role="contentinfo">

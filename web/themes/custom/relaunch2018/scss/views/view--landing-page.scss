@@ -3,23 +3,9 @@
 .view-landing-page {
 
   &.view-display-id-page_1 {
-    .attachment-before {
-      margin-bottom: 2rem;
-
-      .view-content {
-        @include media-breakpoint-up(lg) {
-          padding-right: 37px;
-        }
-      }
-    }
-
     .view-content {
       .views-row {
-        margin-bottom: 1rem;
-
-        @include media-breakpoint-up(sm) {
-          margin-bottom: 3rem;
-        }
+        margin-bottom: map_get($spacers, 3);
       }
     }
   }

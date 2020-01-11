@@ -7,7 +7,6 @@
       flex-direction: column;
 
       .field--name-field-media-oembed-video {
-        @include rounded;
         width: 100%;
 
         iframe {
@@ -17,8 +16,8 @@
       }
 
       .field--name-field-caption {
-        @include fontStyle(small);
-        margin-top: 0.9rem;
+        @include font-size(14px);
+        margin-top: map_get($spacers, 3);
       }
     }
   }

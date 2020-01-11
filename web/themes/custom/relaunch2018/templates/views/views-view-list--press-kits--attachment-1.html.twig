@@ -7,18 +7,22 @@
   <div{{ attributes }}>
 {% endif %}
   {% if title %}
-    <h2>{{ title }}</h2>
+    <div class="h2">
+      <div class="container">
+        <h2>{{ title }}</h2>
+      </div>
+    </div>
   {% endif %}
 
-  <{{ list.type }}{{ list.attributes }}>
-
-    {% for row in rows %}
-      <li{{ row.attributes }}>
-        {{- row.content -}}
-      </li>
-    {% endfor %}
-
-  </{{ list.type }}>
+  <div class="container">
+    <{{ list.type }}{{ list.attributes }}>
+      {% for row in rows %}
+        <li{{ row.attributes }}>
+          {{- row.content -}}
+        </li>
+      {% endfor %}
+    </{{ list.type }}>
+  </div>
 
 {% if attributes -%}
   </div>

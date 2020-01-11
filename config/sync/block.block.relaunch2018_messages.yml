@@ -11,7 +11,7 @@ _core:
 id: relaunch2018_messages
 theme: relaunch2018
 region: highlighted
-weight: -10
+weight: -15
 provider: null
 plugin: system_messages_block
 settings:

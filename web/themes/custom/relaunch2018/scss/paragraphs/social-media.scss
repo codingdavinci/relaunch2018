@@ -2,8 +2,7 @@
 
 .paragraph--type--social-media {
   .card {
-    background-color: $color-yellow;
-    color: $color-gray-2;
+    background-color: $green-light;
 
     .card-body {
       .field--name-field-text {
@@ -23,7 +22,7 @@
     }
 
     .card-footer {
-      background-color: $color-yellow;
+      background-color: $green-light;
       border-top: none;
       padding: 0 0 2rem 0;
 
@@ -48,9 +47,8 @@
 
             a {
               @include boxShadow;
-              @include rounded;
-              background-color: $color-lighter-teal;
-              color: $color-white;
+              background-color: $green;
+              color: $white;
               display: inline-block;
               font-weight: $font-weight-semi-bold;
               padding: 0.4rem;
@@ -60,12 +58,12 @@
               &:hover,
               &:visited,
               &:active {
-                color: $color-white;
+                color: $white;
               }
 
               &:before {
                 @include fa-icon;
-                color: $color-white;
+                color: $white;
                 content: '\e825';
                 display: inline-block;
                 margin-right: 0.8em;

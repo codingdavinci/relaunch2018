@@ -15,11 +15,11 @@
     p,
     h2,
     button {
-      font-size: 16px;
+      @include font-size(16px);
     }
 
     p {
-      font-weight: normal;
+      font-weight: $font-weight-normal;
     }
 
     button {
@@ -32,7 +32,7 @@
   .eu-cookie-compliance-message {
     margin-top: 0;
     max-width: 100%;
-    padding: 15px 30px 15px 30px;
+    padding: map_get($spacers, 2) map_get($spacers, 4);
   }
 
   .eu-cookie-compliance-buttons {
@@ -49,26 +49,26 @@
 
     button {
       margin: 0;
-      min-height: 40px;
-      
+      min-height: map_get($spacers, 5);
+
       &:hover {
         text-decoration: underline;
       }
     }
 
     .agree-button {
-      background: $color-white;
-      color: $color-gray-1;
-      font-weight: bold;
+      background: $white;
+      color: $gray;
+      font-weight: $font-weight-bold;
     }
 
     .decline-button {
-      background: black;
+      background: $gray;
       border: none;
       border-radius: 0;
       box-shadow: none;
-      color: $color-white;
-      font-weight: normal;
+      color: $white;
+      font-weight: $font-weight-normal;
       text-shadow: none;
     }
   }

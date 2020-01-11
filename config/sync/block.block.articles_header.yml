@@ -11,8 +11,8 @@ dependencies:
     - relaunch2018
 id: articles_header
 theme: relaunch2018
-region: header_with_background
-weight: -13
+region: header
+weight: -18
 provider: null
 plugin: 'block_content:97ea7aba-196d-4466-afdf-3e354e9f82a7'
 settings:

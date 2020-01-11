@@ -245,6 +245,7 @@ display:
       display_extenders: {  }
       link_url: ''
       link_display: page_1
+      css_class: container
     cache_metadata:
       contexts:
         - 'languages:language_interface'

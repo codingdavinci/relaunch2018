@@ -12,21 +12,31 @@
   ]
 %}
 <div{{ attributes.addClass(classes) }}>
-  {{ title_prefix }}
-  {% if title %}
-    {{ title }}
-  {% endif %}
-  {{ title_suffix }}
-  {% if header %}
-    <div class="view-header row">
-      <div class="col-md-6 col-lg-7">
-        {{ header }}
+  <div>
+    <div class="row">
+      <div class="col-md-9">
+        {{ title_prefix }}
+        <div class="row">
+          <div class="col-12">
+            <h2>{{ view.title }}</h2>
+          </div>
+        </div>
+        {{ title_suffix }}
+        {% if header %}
+          <div class="row">
+            <div class="col-12">
+              <p>{{ header }}</p>
+            </div>
+          </div>
+        {% endif %}
+      </div>
+      <div class="col-md-3">
+        {% if more %}
+          {{ more }}
+        {% endif %}
       </div>
     </div>
-  {% endif %}
-  {% if more %}
-    {{ more }}
-  {% endif %}
+  </div>
   {% if exposed %}
     <div class="view-filters">
       {{ exposed }}

@@ -9,13 +9,17 @@
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
     not paragraph.isPublished() ? 'paragraph--unpublished',
-    content.field_intro_align['#items'][0].value,
+    'container',
   ]
 %}
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
-      {{ content.field_text }}
+      <div class="row">
+        <div class="col-lg-8{% if content.field_intro_align['#items'][0].value == 'center' %} offset-lg-2{% endif %}">
+          {{ content.field_text }}
+        </div>
+      </div>
     {% endblock %}
   </div>
 {% endblock paragraph %}

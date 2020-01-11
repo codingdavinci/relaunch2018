@@ -1,24 +1,136 @@
 @import '_includes/base';
 
 .path-frontpage {
-  .layout-container--wrapper {
-    &.header-tiles-above {
-      .layout-container {
-        main {
-          .layout-content {
-            padding-top: 30px;
+  .region-content {
+    overflow-x: hidden;
+
+    p {
+      color: $green;
+    }
+
+    #block-block-about {
+      .field--name-field-paragraphs {
+        margin-top: map_get($spacers, 5);
+
+        @include media-breakpoint-up(md) {
+          background-color: $white;
+          margin-top: map_get($spacers, 10);
+          padding-top: map_get($spacers, 6);
+        }
+
+        > .field__item {
+          @include media-breakpoint-up(md) {
+            padding: 0 $grid-gutter-width;
+            padding: 0 $grid-gutter-width;
+          }
+
+          &:last-child {
+            margin-top: map_get($spacers, 5);
+            padding: 0;
+
+            @include media-breakpoint-up(md) {
+              margin-top: map_get($spacers, 6);
+            }
+          }
+
+          .paragraph {
+            padding: 0;
+
+            .separator {
+              display: none;
+            }
+
+            &.paragraph--type--video {
+              .field--name-field-video {
+                article {
+                  .field--name-field-caption {
+                    display: none;
+                  }
+                }
+              }
+            }
+
+            .container {
+              padding: 0;
+            }
           }
         }
       }
     }
-  }
 
-  .region-content {
-    & > * {
-      margin-bottom: 5rem;
+    #block-landing-page-group-possibilities {
+      margin-top: map_get($spacers, 5);
 
-      &:last-child {
-        margin-bottom: $content-margin-bottom;
+      .block {
+        background-color: $white;
+        padding: map_get($spacers, 5) $grid-gutter-width / 2 0 $grid-gutter-width / 2;
+
+        @include media-breakpoint-up(md) {
+          padding: map_get($spacers, 5) $grid-gutter-width 0 $grid-gutter-width;
+        }
+
+        &:last-child {
+          padding-bottom: map_get($spacers, 5);
+        }
+
+        &#block-landing-page-institutions {
+          background-color: $green;
+          padding-bottom: map_get($spacers, 5);
+
+          h2,
+          p,
+          a {
+            color: $white;
+          }
+        }
+
+        p {
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+
+        &.block-block-figures {
+          padding-bottom: map_get($spacers, 5);
+        }
+      }
+
+      .container {
+        padding: 0;
+      }
+
+      .separator {
+        display: none;
+      }
+    }
+
+    #block-views-block-projects-block-3 {
+      display: none;
+      margin-top: map_get($spacers, 10);
+
+      @include media-breakpoint-up(lg) {
+        display: block;
+      }
+
+      > div {
+        background-color: rgba($gray-2, 0.75);
+        padding: map_get($spacers, 6) 0;
+
+        .view-projects {
+          > div:not(.view-content) {
+            padding-left: $grid-gutter-width;
+            padding-right: $grid-gutter-width;
+          }
+        }
+      }
+    }
+
+    #block-relaunch2018-content {
+      display: none;
+      margin-top: map_get($spacers, 10);
+
+      @include media-breakpoint-up(md) {
+        display: block;
       }
     }
   }
