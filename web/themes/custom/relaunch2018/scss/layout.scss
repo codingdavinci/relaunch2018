@@ -87,6 +87,7 @@ header:not(.header--tiles) {
   footer {
     @include font-size(16px);
     background-color: $green-footer;
+    letter-spacing: 0.02em;
     margin-top: 88px;
     padding: map_get($spacers, 4) 0 map_get($spacers, 5) 0;
 
@@ -94,13 +95,21 @@ header:not(.header--tiles) {
       padding-top: map_get($spacers, 7);
     }
 
-    em {
+    p {
       color: $white;
-      font-style: normal;
+
+      a {
+        font-weight: $font-weight-normal;
+      }
+
+      strong {
+        a {
+          font-weight: $font-weight-bold;
+        }
+      }
     }
 
     a {
-      @include link-underline;
       color: $white;
 
       &:hover {
@@ -130,7 +139,7 @@ header:not(.header--tiles) {
       > div {
         @include media-breakpoint-up(md) {
           > div {
-            margin: 1.87%;
+            margin: 0 1.87%;
             padding: 15px;
             width: 17%;
 

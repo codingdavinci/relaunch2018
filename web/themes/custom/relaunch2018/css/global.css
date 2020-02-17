@@ -8878,21 +8878,20 @@ header:not(.header--tiles) .region {
   .layout-container--wrapper footer {
     font-size: 16px;
     background-color: #92c3c2;
+    letter-spacing: 0.02em;
     margin-top: 88px;
     padding: 32px 0 40px 0; }
     @media (min-width: 768px) {
       .layout-container--wrapper footer {
         padding-top: 56px; } }
-    .layout-container--wrapper footer em {
-      color: #fff;
-      font-style: normal; }
-    .layout-container--wrapper footer a {
-      text-decoration: underline;
+    .layout-container--wrapper footer p {
       color: #fff; }
-      .layout-container--wrapper footer a:active, .layout-container--wrapper footer a:focus {
-        text-decoration: underline; }
-      .layout-container--wrapper footer a:hover {
-        text-decoration: none; }
+      .layout-container--wrapper footer p a {
+        font-weight: 400; }
+      .layout-container--wrapper footer p strong a {
+        font-weight: 600; }
+    .layout-container--wrapper footer a {
+      color: #fff; }
       .layout-container--wrapper footer a:hover {
         color: #fff; }
       .layout-container--wrapper footer a:before {
@@ -8907,7 +8906,7 @@ header:not(.header--tiles) .region {
         opacity: 0.6; }
       @media (min-width: 768px) {
         .layout-container--wrapper footer .logos-container > div > div {
-          margin: 1.87%;
+          margin: 0 1.87%;
           padding: 15px;
           width: 17%; }
           .layout-container--wrapper footer .logos-container > div > div:first-child {
@@ -9490,6 +9489,12 @@ figcaption {
   margin-right: 2em;
   margin-top: 1em;
   padding-bottom: 4rem; }
+
+.icon-twitter:before {
+  content: '';
+  font-size: 1.3em;
+  margin-right: 0.8rem !important;
+  vertical-align: -0.1em; }
 
 .card {
   font-size: 16px;

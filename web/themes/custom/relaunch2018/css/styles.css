@@ -8420,6 +8420,12 @@ figcaption {
   margin-top: 1em;
   padding-bottom: 4rem; }
 
+.icon-twitter:before {
+  content: '';
+  font-size: 1.3em;
+  margin-right: 0.8rem !important;
+  vertical-align: -0.1em; }
+
 .card {
   font-size: 16px;
   background-color: transparent;

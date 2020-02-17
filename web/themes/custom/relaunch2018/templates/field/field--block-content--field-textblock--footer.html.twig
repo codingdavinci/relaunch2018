@@ -18,7 +18,13 @@
 <div{{ attributes.addClass(classes, 'field__items') }}>
   {% set i = 0 %}
   {% for item in items %}
-    <div{{ item.attributes.addClass('field__item col-lg-4') }}>{% if i == items|length - 1 %}<br class="d-none d-md-inline">{% endif %}{{ item.content }}</div>
+    {% set item_attributes = item.attributes.addClass('field__item') %}
+    {% if items|length % 3 == 2 and i == items|length - 1 %}
+      {% set item_attributes = item.attributes.addClass('col-8') %}
+    {% else %}
+      {% set item_attributes = item.attributes.addClass('col-4') %}
+    {% endif %}
+    <div{{ item_attributes }}>{{ item.content }}</div>
     {% set i = i + 1 %}
   {% endfor %}
 </div>
