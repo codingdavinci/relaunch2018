@@ -104,6 +104,7 @@
   &.node--view-mode-teaser,
   &.node--view-mode-preview {
     @include easeAll;
+    @include font-size(28px);
     background-color: $green;
     color: $white;
     display: flex;
@@ -126,29 +127,24 @@
       .node--event--teaser--logo {
         img {
           @include img-fluid;
-
-          @include media-breakpoint-up(sm) {
-            width: 80%;
-          }
-
-          @include media-breakpoint-up(md) {
-            width: 70%;
-          }
+          width: 33%;
 
           @include media-breakpoint-up(lg) {
             width: 50%;
           }
 
           @include media-breakpoint-up(xl) {
-            width: 70%;
+            width: 33%;
           }
         }
       }
     }
 
     h2 {
+      @include font-size(36px);
       color: $white;
-      margin-top: map_get($spacers, 3);
+      margin-bottom: map_get($spacers, 3);
+      margin-top: map_get($spacers, 1);
       text-transform: uppercase;
       word-wrap: break-word;
     }
@@ -191,12 +187,13 @@
     }
 
     .node--event--teaser--register {
-      margin-top: map_get($spacers, 2);
-      text-align: right;
+      margin-top: map_get($spacers, 10);
       text-decoration: underline;
 
       &:before {
         color: $white;
+        font-size: 0.8em;
+        margin-right: 1.3em !important;
       }
     }
   }

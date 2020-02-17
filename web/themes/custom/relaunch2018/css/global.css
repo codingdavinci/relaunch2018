@@ -10176,6 +10176,7 @@ figcaption {
 
 .node--type-event.node--view-mode-teaser, .node--type-event.node--view-mode-preview {
   transition: all 0.3s ease;
+  font-size: 28px;
   background-color: #1bbd7d;
   color: #fff;
   display: flex;
@@ -10193,22 +10194,19 @@ figcaption {
     flex: 1; }
     .node--type-event.node--view-mode-teaser .node--event--teaser--content .node--event--teaser--logo img, .node--type-event.node--view-mode-preview .node--event--teaser--content .node--event--teaser--logo img {
       max-width: 100%;
-      height: auto; }
-      @media (min-width: 576px) {
-        .node--type-event.node--view-mode-teaser .node--event--teaser--content .node--event--teaser--logo img, .node--type-event.node--view-mode-preview .node--event--teaser--content .node--event--teaser--logo img {
-          width: 80%; } }
-      @media (min-width: 768px) {
-        .node--type-event.node--view-mode-teaser .node--event--teaser--content .node--event--teaser--logo img, .node--type-event.node--view-mode-preview .node--event--teaser--content .node--event--teaser--logo img {
-          width: 70%; } }
+      height: auto;
+      width: 33%; }
       @media (min-width: 992px) {
         .node--type-event.node--view-mode-teaser .node--event--teaser--content .node--event--teaser--logo img, .node--type-event.node--view-mode-preview .node--event--teaser--content .node--event--teaser--logo img {
           width: 50%; } }
       @media (min-width: 1200px) {
         .node--type-event.node--view-mode-teaser .node--event--teaser--content .node--event--teaser--logo img, .node--type-event.node--view-mode-preview .node--event--teaser--content .node--event--teaser--logo img {
-          width: 70%; } }
+          width: 33%; } }
   .node--type-event.node--view-mode-teaser h2, .node--type-event.node--view-mode-preview h2 {
+    font-size: 36px;
     color: #fff;
-    margin-top: 24px;
+    margin-bottom: 24px;
+    margin-top: 8px;
     text-transform: uppercase;
     word-wrap: break-word; }
   .node--type-event.node--view-mode-teaser.node--view-mode-preview, .node--type-event.node--view-mode-preview.node--view-mode-preview {
@@ -10234,11 +10232,12 @@ figcaption {
       .node--type-event.node--view-mode-teaser.node--view-mode-preview > *:last-child, .node--type-event.node--view-mode-preview.node--view-mode-preview > *:last-child {
         margin-bottom: 0; }
   .node--type-event.node--view-mode-teaser .node--event--teaser--register, .node--type-event.node--view-mode-preview .node--event--teaser--register {
-    margin-top: 16px;
-    text-align: right;
+    margin-top: 80px;
     text-decoration: underline; }
     .node--type-event.node--view-mode-teaser .node--event--teaser--register:before, .node--type-event.node--view-mode-preview .node--event--teaser--register:before {
-      color: #fff; }
+      color: #fff;
+      font-size: 0.8em;
+      margin-right: 1.3em !important; }
 
 .node--link-wrapper--event:hover {
   text-decoration: none; }
@@ -10987,7 +10986,7 @@ figcaption {
   grid-gap: 30px;
   grid-template-columns: 1fr;
   justify-items: stretch; }
-  @media (min-width: 576px) {
+  @media (min-width: 992px) {
     .view-events .view-content {
       grid-template-columns: 1fr 1fr; } }
 

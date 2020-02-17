@@ -9,7 +9,7 @@
     grid-template-columns: 1fr;
     justify-items: stretch;
 
-    @include media-breakpoint-up(sm) {
+    @include media-breakpoint-up(lg) {
       grid-template-columns: 1fr 1fr;
     }
   }
