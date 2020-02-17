@@ -105,6 +105,10 @@ p {
     }
   }
 
+  &.w-75 {
+    width: 75%;
+  }
+
   a {
     color: $gray;
     font-weight: $font-weight-bold;
