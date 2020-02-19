@@ -46,7 +46,7 @@
     var boxWidth = $boxes.children().first().outerWidth();
 
     $boxes.stop(true, true).animate({
-      left: direction === 'left' ? '-=' + boxWidth : '+=' + boxWidth
+      left: direction === 'left' ? '+=' + boxWidth : '-=' + boxWidth
     }).promise().done(function () {
       return updateNavigation($container);
     });
@@ -61,9 +61,9 @@
     var firstBoxOffset = $boxes.children().first().offset().left;
     var lastBoxOffset = $boxes.children().last().offset().left;
 
-    $left.toggleClass('inactive', Math.floor(lastBoxOffset + boxWidth) <= Math.ceil($container.offset().left + $container.outerWidth()));
+    $left.toggleClass('inactive', firstBoxOffset >= $container.offset().left);
 
-    $right.toggleClass('inactive', firstBoxOffset >= $container.offset().left);
+    $right.toggleClass('inactive', Math.floor(lastBoxOffset + boxWidth) <= Math.ceil($container.offset().left + $container.outerWidth()));
 
     if ($left.hasClass('inactive') && $right.hasClass('inactive')) {
       $nav.hide();
