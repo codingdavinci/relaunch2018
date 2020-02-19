@@ -18,6 +18,9 @@
 <article{{ attributes.addClass(classes) }}>
 
   <div class="card-img card-img-top">
+    {% if awards|length %}
+      <div class="field field--awards">{{ awards|join(', ') }}</div>
+    {% endif %}
     <a href="{{ url }}">
       {{ content.field_attributed_image }}
     </a>
@@ -32,13 +35,6 @@
 
     <div{{ content_attributes.addClass('node__content') }}>
       {{ content|without('field_attributed_image') }}
-      {% if awards|length %}
-        <div class="field field--awards">
-          {% for award in awards %}
-            <div class="badge badge--award">{{ award }}</div>
-          {% endfor %}
-        </div>
-      {% endif %}
     </div>
   </div>
 

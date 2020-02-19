@@ -273,6 +273,16 @@
     width: 100%;
 
     .card-img {
+      .field--awards {
+        @include font-size(12px);
+        background: $blue;
+        color: $white;
+        padding: 0px 12px;
+        position: absolute;
+        right: 0;
+        top: map_get($spacers, 2);
+      }
+
       img {
         @include img-fluid;
       }
@@ -295,11 +305,6 @@
         .field {
           &.field--name-field-short-description {
             margin-bottom: map_get($spacers, 2);
-          }
-
-          &.field--name-field-event,
-          &.field--awards {
-            display: inline;
           }
         }
       }

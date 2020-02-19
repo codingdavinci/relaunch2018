@@ -10057,6 +10057,15 @@ figcaption {
   background-color: #fff;
   height: 100%;
   width: 100%; }
+  .node--type-data-set.node--view-mode-teaser .card-img .field--awards,
+  .node--type-project.node--view-mode-teaser .card-img .field--awards {
+    font-size: 12px;
+    background: #4495A7;
+    color: #fff;
+    padding: 0px 12px;
+    position: absolute;
+    right: 0;
+    top: 16px; }
   .node--type-data-set.node--view-mode-teaser .card-img img,
   .node--type-project.node--view-mode-teaser .card-img img {
     max-width: 100%;
@@ -10075,10 +10084,6 @@ figcaption {
     .node--type-data-set.node--view-mode-teaser .card-body .node__content .field.field--name-field-short-description,
     .node--type-project.node--view-mode-teaser .card-body .node__content .field.field--name-field-short-description {
       margin-bottom: 16px; }
-    .node--type-data-set.node--view-mode-teaser .card-body .node__content .field.field--name-field-event, .node--type-data-set.node--view-mode-teaser .card-body .node__content .field.field--awards,
-    .node--type-project.node--view-mode-teaser .card-body .node__content .field.field--name-field-event,
-    .node--type-project.node--view-mode-teaser .card-body .node__content .field.field--awards {
-      display: inline; }
   .node--type-data-set.node--view-mode-teaser .field--name-field-event,
   .node--type-project.node--view-mode-teaser .field--name-field-event {
     display: inline-block;
