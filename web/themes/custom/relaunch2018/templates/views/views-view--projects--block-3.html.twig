@@ -12,16 +12,16 @@
   ]
 %}
 <div{{ attributes.addClass(classes) }}>
-  <div>
+  <div class="view-header">
+    {{ title_prefix }}
+    <div class="row">
+      <div class="col-12">
+        <h2>{{ view.title }}</h2>
+      </div>
+    </div>
+    {{ title_suffix }}
     <div class="row">
       <div class="col-md-9">
-        {{ title_prefix }}
-        <div class="row">
-          <div class="col-12">
-            <h2>{{ view.title }}</h2>
-          </div>
-        </div>
-        {{ title_suffix }}
         {% if header %}
           <div class="row">
             <div class="col-12">

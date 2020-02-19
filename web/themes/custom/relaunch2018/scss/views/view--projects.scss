@@ -51,6 +51,23 @@
   }
 
   &.view-display-id-block_3 {
+    .view-header {
+      p {
+        &:last-child {
+          margin-bottom: map_get($spacers, 2);
+        }
+      }
+
+      .more-link {
+        a {
+          background-color: $green;
+          color: $white;
+          display: inline-block;
+          padding: 0.6em 1.4em;
+        }
+      }
+    }
+
     .view-horizontal-navigation {
       display: none;
 
@@ -60,15 +77,6 @@
         @media #{$ie} {
           display: none;
         }
-      }
-    }
-
-    .more-link {
-      a {
-        background-color: $green;
-        border-radius: 50px;
-        color: $white;
-        padding: map_get($spacers, 1) map_get($spacers, 3);
       }
     }
 

@@ -11112,6 +11112,15 @@ figcaption {
     .view-projects.view-display-id-page_1 .view-content {
       grid-template-columns: 1fr 1fr; } }
 
+.view-projects.view-display-id-block_3 .view-header p:last-child {
+  margin-bottom: 16px; }
+
+.view-projects.view-display-id-block_3 .view-header .more-link a {
+  background-color: #1bbd7d;
+  color: #fff;
+  display: inline-block;
+  padding: 0.6em 1.4em; }
+
 .view-projects.view-display-id-block_3 .view-horizontal-navigation {
   display: none; }
   @media (min-width: 576px) {
@@ -11120,12 +11129,6 @@ figcaption {
   @media screen and (min-width: 576px) and (-ms-high-contrast: active), screen and (min-width: 576px) and (-ms-high-contrast: none) {
     .view-projects.view-display-id-block_3 .view-horizontal-navigation {
       display: none; } }
-
-.view-projects.view-display-id-block_3 .more-link a {
-  background-color: #1bbd7d;
-  border-radius: 50px;
-  color: #fff;
-  padding: 8px 24px; }
 
 @media (min-width: 576px) {
   .view-projects.view-display-id-block_3 .view-content {
