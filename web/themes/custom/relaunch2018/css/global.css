@@ -8352,13 +8352,13 @@ ul.ui-autocomplete li.ui-menu-item a {
     .path-frontpage .region-content #block-landing-page-group-possibilities .separator {
       display: none; }
   .path-frontpage .region-content #block-views-block-projects-block-3 {
+    background-color: rgba(220, 220, 220, 0.75);
     display: none;
     margin-top: 80px; }
     @media (min-width: 992px) {
       .path-frontpage .region-content #block-views-block-projects-block-3 {
         display: block; } }
     .path-frontpage .region-content #block-views-block-projects-block-3 > div {
-      background-color: rgba(220, 220, 220, 0.75);
       padding: 48px 0; }
       .path-frontpage .region-content #block-views-block-projects-block-3 > div .view-projects > div:not(.view-content) {
         padding-left: 30px;

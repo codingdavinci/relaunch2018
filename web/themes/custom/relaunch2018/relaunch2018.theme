@@ -226,7 +226,6 @@ function relaunch2018_preprocess_block(array &$variables) {
     'block-views-block-articles-block-1',
     'block-views-block-events-block-2',
     'block-views-block-data-sets-block-1',
-    'block-views-block-projects-block-3',
     'block-views-block-projects-block-1',
   ];
 
