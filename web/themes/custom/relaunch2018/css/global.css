@@ -9228,7 +9228,7 @@ body.path-user:not(.user-logged-in) main {
  * injected into the backend's CKEditor instances.
  */
 body {
-  font-size: 22px;
+  font-size: 20px;
   color: #333333;
   font-family: "Barlow", sans-serif; }
   body.cke_editable {
@@ -9264,7 +9264,7 @@ h2 {
       margin-bottom: 36px; } }
 
 h3 {
-  font-size: 22px;
+  font-size: 20px;
   color: #333333;
   font-family: "Barlow", sans-serif;
   font-style: normal;
@@ -10550,7 +10550,7 @@ figcaption {
     border-bottom-left-radius: 0; }
   .paragraph--type--box .card .card-body .field--name-field-text h2,
   .paragraph--type--box-group-box .card .card-body .field--name-field-text h2 {
-    font-size: 22px;
+    font-size: 20px;
     color: #333333;
     margin-bottom: 32px; }
   .paragraph--type--box .card .card-body .field--name-field-text p:last-child,

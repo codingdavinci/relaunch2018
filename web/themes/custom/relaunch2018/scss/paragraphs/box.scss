@@ -26,7 +26,7 @@
     .card-body {
       .field--name-field-text {
         h2 {
-          @include font-size(22px);
+          @include font-size(20px);
           color: $gray;
           margin-bottom: map_get($spacers, 4);
         }
