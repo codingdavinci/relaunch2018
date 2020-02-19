@@ -1,40 +1,6 @@
 @import '../_includes/base';
 
 .view-projects {
-  &.view-display-id-page_1,
-  &.view-display-id-block_3 {
-    .view-content {
-      .card {
-        @include boxShadow;
-        background-color: $white;
-        height: 100%;
-        width: 100%;
-
-        .card-img {
-          img {
-            @include img-fluid;
-          }
-        }
-
-        .card-body {
-          .card-title {
-            @include font-size(20px);
-            margin-bottom: map_get($spacers, 3);
-            word-break: break-word;
-          }
-
-          .node__content {
-            @include font-size(16px);
-
-            .field {
-              margin-top: map_get($spacers, 3);
-            }
-          }
-        }
-      }
-    }
-  }
-
   &.view-display-id-page_1 {
     .view-content {
       align-items: stretch;
