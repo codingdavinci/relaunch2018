@@ -8836,32 +8836,35 @@ body {
 .dialog-off-canvas-main-canvas {
   height: 0; }
 
-header:not(.header--tiles) .region {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  justify-content: space-between; }
-  header:not(.header--tiles) .region :last-child {
-    margin-bottom: 0; }
-  header:not(.header--tiles) .region .page-title {
-    font-size: 36px; }
-    @media (min-width: 768px) {
-      header:not(.header--tiles) .region .page-title {
-        font-size: 48px; } }
-  header:not(.header--tiles) .region.region-header {
-    background-color: #1bbd7d;
-    color: #fff;
+header:not(.header--tiles) .region-header {
+  background-color: #1bbd7d;
+  color: #fff; }
+  header:not(.header--tiles) .region-header h1,
+  header:not(.header--tiles) .region-header p {
+    color: #fff; }
+  @media (min-width: 768px) {
+    header:not(.header--tiles) .region-header {
+      height: 481px; } }
+  header:not(.header--tiles) .region-header .header--content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
     padding: 15px;
     padding-top: 60px; }
-    header:not(.header--tiles) .region.region-header h1,
-    header:not(.header--tiles) .region.region-header p {
-      color: #fff; }
+    header:not(.header--tiles) .region-header .header--content :last-child {
+      margin-bottom: 0; }
     @media (min-width: 768px) {
-      header:not(.header--tiles) .region.region-header {
-        height: 481px;
+      header:not(.header--tiles) .region-header .header--content {
         padding: 80px;
-        padding-top: 80px; } }
-  header:not(.header--tiles) .region a {
+        padding-top: 80px;
+        width: 50%; } }
+    header:not(.header--tiles) .region-header .header--content .page-title {
+      font-size: 36px; }
+      @media (min-width: 768px) {
+        header:not(.header--tiles) .region-header .header--content .page-title {
+          font-size: 48px; } }
+  header:not(.header--tiles) .region-header a {
     color: #fff; }
 
 .layout-container--wrapper {
