@@ -62,6 +62,10 @@
     background-color: $white;
     padding: $grid-gutter-width $grid-gutter-width / 2;
 
+    .node__submitted {
+      color: $gray-4;
+    }
+
     hr {
       border: none;
       border-top: 1px solid $green;
@@ -96,6 +100,10 @@
 
             > * {
               padding: 0;
+            }
+
+            p {
+              color: $gray;
             }
           }
         }

@@ -133,5 +133,11 @@
         display: block;
       }
     }
+
+    .view-id-landing_page {
+      .field--name-field-tags {
+        display: none;
+      }
+    }
   }
 }
