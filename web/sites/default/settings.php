@@ -260,7 +260,7 @@ $databases['default']['default'] = array (
  *   ];
  * @endcode
  */
-$config_directories = [];
+$config_directories[CONFIG_SYNC_DIRECTORY] = DRUPAL_ROOT . '/../config/sync';
 
 /**
  * Settings:
@@ -765,6 +765,15 @@ $settings['file_scan_ignore_directories'] = [
 $settings['entity_update_batch_size'] = 50;
 
 /**
+ * Entity update backup.
+ *
+ * This is used to inform the entity storage handler that the backup tables as
+ * well as the original entity type and field storage definitions should be
+ * retained after a successful entity update process.
+ */
+$settings['entity_update_backup'] = TRUE;
+
+/**
  * Load local development override configuration, if available.
  *
  * Use settings.local.php to override variables on secondary (staging,
@@ -777,5 +786,3 @@ $settings['entity_update_batch_size'] = 50;
 if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
   include $app_root . '/' . $site_path . '/settings.local.php';
 }
-
-$config_directories['sync'] = '../config/sync';
