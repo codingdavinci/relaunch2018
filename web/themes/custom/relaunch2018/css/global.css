@@ -9315,8 +9315,9 @@ p {
     @media (min-width: 768px) {
       p.small {
         font-size: 1.2rem; } }
-  p.w-75 {
-    width: 75%; }
+  @media (min-width: 768px) {
+    p.w-75 {
+      width: 75%; } }
   p a {
     color: #333333;
     font-weight: 600; }

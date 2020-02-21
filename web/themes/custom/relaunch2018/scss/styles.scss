@@ -106,7 +106,9 @@ p {
   }
 
   &.w-75 {
-    width: 75%;
+    @include media-breakpoint-up(md) {
+      width: 75%;
+    }
   }
 
   a {
