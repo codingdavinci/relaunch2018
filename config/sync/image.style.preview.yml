@@ -5,10 +5,11 @@ dependencies: {  }
 name: preview
 label: Vorschau
 effects:
-  383beab2-6d02-45c6-965e-01d65841ac6f:
-    uuid: 383beab2-6d02-45c6-965e-01d65841ac6f
-    id: image_resize
-    weight: 1
+  489435bb-ad3f-4508-a4bf-799faecd8890:
+    uuid: 489435bb-ad3f-4508-a4bf-799faecd8890
+    id: image_scale_and_crop
+    weight: 2
     data:
       width: 360
       height: 226
+      anchor: center-center
