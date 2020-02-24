@@ -247,8 +247,9 @@ function relaunch2018_preprocess_paragraph(array &$variables) {
   $paragraph = $variables['paragraph'];
 
   $containerParagraphs = [
+    'grid',
     'image',
-    'text-inline',
+    'text',
     'video',
   ];
 
