@@ -1,6 +1,24 @@
 @import 'variables';
 @import '../../../../../../web/libraries/bootstrap/scss/bootstrap';
 
+@mixin grayLink {
+  color: $gray;
+  font-weight: $font-weight-semi-bold;
+
+  &:hover {
+    color: $black;
+  }
+}
+
+@mixin greenLink {
+  color: $green;
+
+  &:hover {
+    color: $green-dark;
+    text-decoration: none;
+  }
+}
+
 @mixin easeAll {
   transition: all 0.3s ease;
 }
@@ -147,13 +165,10 @@
 @mixin link-underline {
   text-decoration: underline;
 
+  &:hover,
   &:active,
   &:focus {
     text-decoration: underline;
-  }
-
-  &:hover {
-    text-decoration: none;
   }
 }
 

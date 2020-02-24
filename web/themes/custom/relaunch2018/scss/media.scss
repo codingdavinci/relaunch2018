@@ -4,6 +4,10 @@
   display: block;
   width: 100%;
 
+  a {
+    @include grayLink;
+  }
+
   .field--name-field-caption,
   .field--name-field-creator,
   .field--name-field-license {

@@ -8245,9 +8245,9 @@ p {
       width: 75%; } }
   p a {
     color: #333333;
-    font-weight: 600; }
+    font-weight: 500; }
     p a:hover {
-      color: #333333; }
+      color: #000; }
 
 a:before {
   color: #1bbd7d; }
@@ -8278,11 +8278,13 @@ a.button {
   a.button.button--green {
     background-color: #1bbd7d; }
     a.button.button--green:hover {
-      background-color: rgba(27, 189, 125, 0.6); }
+      background-color: #0A8856;
+      color: #fff; }
   a.button.button--red {
     background-color: #fd665c; }
     a.button.button--red:hover {
-      background-color: rgba(27, 189, 125, 0.6); }
+      background-color: #f01203;
+      color: #fff; }
   a.button.button--large {
     font-size: 18px;
     letter-spacing: 0.01em; }
@@ -8305,6 +8307,13 @@ strong {
 ol,
 ul {
   margin-bottom: 48px; }
+  ol a,
+  ul a {
+    color: #333333;
+    font-weight: 500; }
+    ol a:hover,
+    ul a:hover {
+      color: #000; }
 
 ul {
   list-style-type: none; }
@@ -8409,10 +8418,22 @@ figcaption {
   text-decoration: none;
   vertical-align: middle; }
 
+a.icon-arrow {
+  color: #1bbd7d; }
+  a.icon-arrow:hover {
+    color: #0A8856;
+    text-decoration: none; }
+
 .icon-mail-1:before {
   font-size: 0.7em;
   margin-right: 0.6rem !important;
   vertical-align: 0.11rem; }
+
+a.icon-mail-1 {
+  color: #1bbd7d; }
+  a.icon-mail-1:hover {
+    color: #0A8856;
+    text-decoration: none; }
 
 .icon-cc-by:before {
   content: '\63\00a0\6c';

@@ -17,6 +17,10 @@
 
   .node__submitted {
     @include font-size(14px);
+
+    a {
+      @include grayLink;
+    }
   }
 
   .paragraph--type--image {
@@ -115,8 +119,8 @@
             padding-left: 0;
 
             a {
+              @include greenLink;
               @include link-underline;
-              color: $green;
             }
           }
         }

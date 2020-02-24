@@ -8933,10 +8933,8 @@ header:not(.header--tiles) .region-header {
   font-weight: 600;
   margin-bottom: 16px;
   padding: 16px 8px; }
-  .collapsible legend:active, .collapsible legend:focus {
+  .collapsible legend:hover, .collapsible legend:active, .collapsible legend:focus {
     text-decoration: underline; }
-  .collapsible legend:hover {
-    text-decoration: none; }
   .collapsible legend:before {
     transition: all 0.3s ease;
     content: '';
@@ -9095,6 +9093,11 @@ body.path-user:not(.user-logged-in) main {
 .media--type-image {
   display: block;
   width: 100%; }
+  .media--type-image a {
+    color: #333333;
+    font-weight: 500; }
+    .media--type-image a:hover {
+      color: #000; }
   .media--type-image .field--name-field-caption,
   .media--type-image .field--name-field-creator,
   .media--type-image .field--name-field-license {
@@ -9320,9 +9323,9 @@ p {
       width: 75%; } }
   p a {
     color: #333333;
-    font-weight: 600; }
+    font-weight: 500; }
     p a:hover {
-      color: #333333; }
+      color: #000; }
 
 a:before {
   color: #1bbd7d; }
@@ -9353,11 +9356,13 @@ a.button {
   a.button.button--green {
     background-color: #1bbd7d; }
     a.button.button--green:hover {
-      background-color: rgba(27, 189, 125, 0.6); }
+      background-color: #0A8856;
+      color: #fff; }
   a.button.button--red {
     background-color: #fd665c; }
     a.button.button--red:hover {
-      background-color: rgba(27, 189, 125, 0.6); }
+      background-color: #f01203;
+      color: #fff; }
   a.button.button--large {
     font-size: 18px;
     letter-spacing: 0.01em; }
@@ -9380,6 +9385,13 @@ strong {
 ol,
 ul {
   margin-bottom: 48px; }
+  ol a,
+  ul a {
+    color: #333333;
+    font-weight: 500; }
+    ol a:hover,
+    ul a:hover {
+      color: #000; }
 
 ul {
   list-style-type: none; }
@@ -9484,10 +9496,22 @@ figcaption {
   text-decoration: none;
   vertical-align: middle; }
 
+a.icon-arrow {
+  color: #1bbd7d; }
+  a.icon-arrow:hover {
+    color: #0A8856;
+    text-decoration: none; }
+
 .icon-mail-1:before {
   font-size: 0.7em;
   margin-right: 0.6rem !important;
   vertical-align: 0.11rem; }
+
+a.icon-mail-1 {
+  color: #1bbd7d; }
+  a.icon-mail-1:hover {
+    color: #0A8856;
+    text-decoration: none; }
 
 .icon-cc-by:before {
   content: '\63\00a0\6c';
@@ -9534,6 +9558,11 @@ figcaption {
 
 .node--type-article .node__submitted {
   font-size: 14px; }
+  .node--type-article .node__submitted a {
+    color: #333333;
+    font-weight: 500; }
+    .node--type-article .node__submitted a:hover {
+      color: #000; }
 
 .node--type-article .paragraph--type--image {
   margin: 56px 0; }
@@ -9559,10 +9588,8 @@ figcaption {
 .node--type-article.node--view-mode-related a {
   font-size: 16px;
   text-decoration: underline; }
-  .node--type-article.node--view-mode-related a:active, .node--type-article.node--view-mode-related a:focus {
+  .node--type-article.node--view-mode-related a:hover, .node--type-article.node--view-mode-related a:active, .node--type-article.node--view-mode-related a:focus {
     text-decoration: underline; }
-  .node--type-article.node--view-mode-related a:hover {
-    text-decoration: none; }
 
 .node--type-article.node--view-mode-teaser {
   background-color: #fff;
@@ -9594,12 +9621,13 @@ figcaption {
     .node--type-article.node--view-mode-teaser .node__content .node__links .links li {
       padding-left: 0; }
       .node--type-article.node--view-mode-teaser .node__content .node__links .links li a {
-        text-decoration: underline;
-        color: #1bbd7d; }
-        .node--type-article.node--view-mode-teaser .node__content .node__links .links li a:active, .node--type-article.node--view-mode-teaser .node__content .node__links .links li a:focus {
-          text-decoration: underline; }
+        color: #1bbd7d;
+        text-decoration: underline; }
         .node--type-article.node--view-mode-teaser .node__content .node__links .links li a:hover {
+          color: #0A8856;
           text-decoration: none; }
+        .node--type-article.node--view-mode-teaser .node__content .node__links .links li a:hover, .node--type-article.node--view-mode-teaser .node__content .node__links .links li a:active, .node--type-article.node--view-mode-teaser .node__content .node__links .links li a:focus {
+          text-decoration: underline; }
 
 .page-node-type-data-set .region-content,
 .page-node-type-project .region-content {
@@ -9705,55 +9733,53 @@ figcaption {
         .node--type-project.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--project-image .paragraph--type--project-image--attribution a {
           text-decoration: underline;
           color: #fff; }
-          .node--type-data-set.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution a:active, .node--type-data-set.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution a:focus,
+          .node--type-data-set.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution a:hover, .node--type-data-set.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution a:active, .node--type-data-set.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution a:focus,
+          .node--type-data-set.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution a:hover,
           .node--type-data-set.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution a:active,
           .node--type-data-set.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution a:focus,
+          .node--type-data-set.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution a:hover,
           .node--type-data-set.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution a:active,
           .node--type-data-set.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution a:focus,
+          .node--type-data-set.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--project-image--attribution a:hover,
           .node--type-data-set.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--project-image--attribution a:active,
           .node--type-data-set.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--project-image--attribution a:focus,
+          .node--type-data-set.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution a:hover,
           .node--type-data-set.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution a:active,
           .node--type-data-set.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution a:focus,
+          .node--type-data-set.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution a:hover,
           .node--type-data-set.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution a:active,
           .node--type-data-set.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution a:focus,
+          .node--type-data-set.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution a:hover,
           .node--type-data-set.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution a:active,
           .node--type-data-set.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution a:focus,
+          .node--type-data-set.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--project-image .paragraph--type--project-image--attribution a:hover,
           .node--type-data-set.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--project-image .paragraph--type--project-image--attribution a:active,
           .node--type-data-set.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--project-image .paragraph--type--project-image--attribution a:focus,
+          .node--type-project.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution a:hover,
           .node--type-project.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution a:active,
           .node--type-project.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution a:focus,
+          .node--type-project.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution a:hover,
           .node--type-project.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution a:active,
           .node--type-project.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution a:focus,
+          .node--type-project.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution a:hover,
           .node--type-project.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution a:active,
           .node--type-project.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution a:focus,
+          .node--type-project.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--project-image--attribution a:hover,
           .node--type-project.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--project-image--attribution a:active,
           .node--type-project.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--project-image--attribution a:focus,
+          .node--type-project.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution a:hover,
           .node--type-project.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution a:active,
           .node--type-project.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution a:focus,
+          .node--type-project.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution a:hover,
           .node--type-project.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution a:active,
           .node--type-project.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution a:focus,
+          .node--type-project.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution a:hover,
           .node--type-project.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution a:active,
           .node--type-project.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution a:focus,
+          .node--type-project.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--project-image .paragraph--type--project-image--attribution a:hover,
           .node--type-project.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--project-image .paragraph--type--project-image--attribution a:active,
           .node--type-project.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--project-image .paragraph--type--project-image--attribution a:focus {
             text-decoration: underline; }
-          .node--type-data-set.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution a:hover,
-          .node--type-data-set.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution a:hover,
-          .node--type-data-set.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution a:hover,
-          .node--type-data-set.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--project-image--attribution a:hover,
-          .node--type-data-set.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution a:hover,
-          .node--type-data-set.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution a:hover,
-          .node--type-data-set.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution a:hover,
-          .node--type-data-set.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--project-image .paragraph--type--project-image--attribution a:hover,
-          .node--type-project.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution a:hover,
-          .node--type-project.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution a:hover,
-          .node--type-project.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution a:hover,
-          .node--type-project.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--project-image--attribution a:hover,
-          .node--type-project.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution a:hover,
-          .node--type-project.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution a:hover,
-          .node--type-project.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution a:hover,
-          .node--type-project.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--project-image .paragraph--type--project-image--attribution a:hover {
-            text-decoration: none; }
         @media (min-width: 992px) {
           .node--type-data-set.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution,
           .node--type-data-set.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution,
@@ -9858,13 +9884,11 @@ figcaption {
 .node--type-data-set.node--view-mode-full .article--content-container .node__content fieldset a,
 .node--type-project.node--view-mode-full .article--content-container .node__content fieldset a {
   text-decoration: underline; }
-  .node--type-data-set.node--view-mode-full .article--content-container .node__content fieldset a:active, .node--type-data-set.node--view-mode-full .article--content-container .node__content fieldset a:focus,
+  .node--type-data-set.node--view-mode-full .article--content-container .node__content fieldset a:hover, .node--type-data-set.node--view-mode-full .article--content-container .node__content fieldset a:active, .node--type-data-set.node--view-mode-full .article--content-container .node__content fieldset a:focus,
+  .node--type-project.node--view-mode-full .article--content-container .node__content fieldset a:hover,
   .node--type-project.node--view-mode-full .article--content-container .node__content fieldset a:active,
   .node--type-project.node--view-mode-full .article--content-container .node__content fieldset a:focus {
     text-decoration: underline; }
-  .node--type-data-set.node--view-mode-full .article--content-container .node__content fieldset a:hover,
-  .node--type-project.node--view-mode-full .article--content-container .node__content fieldset a:hover {
-    text-decoration: none; }
 
 .node--type-data-set.node--view-mode-full .article--content-container .node__content fieldset .field__item:not(.badge),
 .node--type-project.node--view-mode-full .article--content-container .node__content fieldset .field__item:not(.badge) {
@@ -10358,10 +10382,8 @@ figcaption {
 
 .paragraph--type--attribution a {
   text-decoration: underline; }
-  .paragraph--type--attribution a:active, .paragraph--type--attribution a:focus {
+  .paragraph--type--attribution a:hover, .paragraph--type--attribution a:active, .paragraph--type--attribution a:focus {
     text-decoration: underline; }
-  .paragraph--type--attribution a:hover {
-    text-decoration: none; }
 
 @media (min-width: 576px) {
   .paragraph--type--attribution > .field:first-child {
@@ -11090,10 +11112,8 @@ figcaption {
       .view-faq .view-content > .item-list ul li.active .views-field-title a {
         text-decoration: underline;
         color: #1bbd7d; }
-        .view-faq .view-content > .item-list ul li.active .views-field-title a:active, .view-faq .view-content > .item-list ul li.active .views-field-title a:focus {
+        .view-faq .view-content > .item-list ul li.active .views-field-title a:hover, .view-faq .view-content > .item-list ul li.active .views-field-title a:active, .view-faq .view-content > .item-list ul li.active .views-field-title a:focus {
           text-decoration: underline; }
-        .view-faq .view-content > .item-list ul li.active .views-field-title a:hover {
-          text-decoration: none; }
 
 .view-landing-page.view-display-id-page_1 .view-content .views-row {
   margin-bottom: 24px; }
