@@ -9544,6 +9544,9 @@ a.icon-mail-1 {
       font-size: 20px; }
   .card .card-footer {
     padding: 16px; }
+    @media (min-width: 992px) {
+      .card .card-footer {
+        padding: 32px; } }
     .card .card-footer p {
       color: #4495a7; }
 

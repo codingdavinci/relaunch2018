@@ -377,6 +377,10 @@ a.icon-mail-1 {
   .card-footer {
     padding: map_get($spacers, 2);
 
+    @include media-breakpoint-up(lg) {
+      padding: map_get($spacers, 4);
+    }
+
     p {
       color: $green-blue;
     }
