@@ -9105,7 +9105,7 @@ body.path-user:not(.user-logged-in) main {
     .media--type-image .field--name-field-caption.field--name-field-caption,
     .media--type-image .field--name-field-creator.field--name-field-caption,
     .media--type-image .field--name-field-license.field--name-field-caption {
-      margin-top: 24px; }
+      margin-top: 16px; }
   .media--type-image img {
     height: auto;
     width: 100%; }
@@ -9119,7 +9119,8 @@ body.path-user:not(.user-logged-in) main {
   .media--type-image.media--view-mode-default {
     padding: 0; }
   .media--type-image .media--attribution {
-    font-size: 16px; }
+    font-size: 16px;
+    margin-top: 16px; }
 
 .region-primary-menu {
   color: #fff;
@@ -10981,7 +10982,7 @@ a.icon-mail-1 {
       width: 100%; }
   .paragraph--type--video .field--name-field-video .media .field--name-field-caption {
     font-size: 14px;
-    margin-top: 24px; }
+    margin-top: 16px; }
 
 .paragraph--type--winner .field--name-field-award {
   display: inline; }

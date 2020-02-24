@@ -14,7 +14,7 @@
     display: inline-block;
 
     &.field--name-field-caption {
-      margin-top: map_get($spacers, 3);
+      margin-top: map_get($spacers, 2);
     }
   }
 
@@ -44,5 +44,6 @@
 
   .media--attribution {
     @include font-size(16px);
+    margin-top: map_get($spacers, 2);
   }
 }
