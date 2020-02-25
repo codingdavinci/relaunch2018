@@ -36,11 +36,10 @@
     {{ title_prefix }}
       <h1{{ title_attributes }}>{{ label }}</h1>
     {{ title_suffix }}
+  </div>
 
-    <div{{ content_attributes.addClass('node__content') }}>
-      {{ content|without('field_tags')|without('field_image') }}
-    </div>
-
+  <div{{ content_attributes.addClass('node__content') }}>
+    {{ content|without('field_tags')|without('field_image') }}
   </div>
 
 </article>
