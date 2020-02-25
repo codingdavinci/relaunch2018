@@ -9274,7 +9274,7 @@ h2 {
 
 h3 {
   font-size: 20px;
-  color: #333333;
+  color: #1bbd7d;
   font-family: "Barlow", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -9572,6 +9572,7 @@ a.icon-mail-1 {
   margin: 56px 0; }
 
 .node--type-article h3 {
+  color: #333333;
   margin-top: 56px; }
 
 .node--type-article.node--view-mode-related .article--header-image {
@@ -10048,6 +10049,7 @@ a.icon-mail-1 {
     .node--type-project.node--view-mode-full .article--content-container .node__content .group--data-sets .view-content article h3,
     .node--type-project.node--view-mode-full .article--content-container .node__content .view-projects.view-display-id-block_2 .field--name-field-datasets article h3,
     .node--type-project.node--view-mode-full .article--content-container .node__content .view-projects.view-display-id-block_2 .view-content article h3 {
+      color: #333333;
       margin-bottom: 24px; }
     .node--type-data-set.node--view-mode-full .article--content-container .node__content .group--data-sets .field--name-field-datasets article .node__content .field,
     .node--type-data-set.node--view-mode-full .article--content-container .node__content .group--data-sets .view-content article .node__content .field,
@@ -10341,7 +10343,6 @@ a.icon-mail-1 {
 .node--type-press-kit h3 {
   margin-bottom: 32px;
   border-bottom: 1px solid #1bbd7d;
-  color: #1bbd7d;
   padding-bottom: 8px; }
 
 .node--type-press-kit p .icon-mail-1 {
