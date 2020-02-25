@@ -8325,7 +8325,6 @@ table.table--white {
   border-collapse: separate;
   border-spacing: 8px;
   display: inline-block;
-  line-height: 125%;
   margin-bottom: 48px;
   padding-bottom: 16px; }
   @media (min-width: 992px) {
