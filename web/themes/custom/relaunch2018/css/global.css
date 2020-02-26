@@ -10694,15 +10694,17 @@ a.icon-mail-1 {
             font-weight: 600; }
           .paragraph--type--jury .field--name-field-jury .field__items > .row > div .paragraph--type--jury-member .jury--member--info--wrapper .jury--member--info .field.field--name-field-link a {
             color: #1bbd7d;
-            display: table-cell; }
+            display: block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 100%; }
             .paragraph--type--jury .field--name-field-jury .field__items > .row > div .paragraph--type--jury-member .jury--member--info--wrapper .jury--member--info .field.field--name-field-link a:before {
               font-family: "cdv_icons";
               margin-right: 0.4em;
               content: '\e825';
-              display: table-cell;
+              display: inline;
               font-size: 0.6em;
-              padding: 0.7em 0.4em 0 0;
-              vertical-align: top; }
+              vertical-align: middle; }
             .paragraph--type--jury .field--name-field-jury .field__items > .row > div .paragraph--type--jury-member .jury--member--info--wrapper .jury--member--info .field.field--name-field-link a:hover {
               color: #0A8856; }
           @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {

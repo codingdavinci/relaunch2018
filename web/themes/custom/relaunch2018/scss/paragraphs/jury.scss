@@ -56,15 +56,17 @@
                 &.field--name-field-link {
                   a {
                     color: $green;
-                    display: table-cell;
+                    display: block;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    width: 100%;
 
                     &:before {
                       @include icon;
                       content: '\e825';
-                      display: table-cell;
+                      display: inline;
                       font-size: 0.6em;
-                      padding: 0.7em 0.4em 0 0;
-                      vertical-align: top;
+                      vertical-align: middle;
                     }
 
                     &:hover {
