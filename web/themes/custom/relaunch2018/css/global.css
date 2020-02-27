@@ -10670,7 +10670,7 @@ a.icon-mail-1 {
     .paragraph--type--jury .field--name-field-jury .field__items > .row > div .paragraph--type--jury-member > .field--name-field-image {
       box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
       position: absolute;
-      width: 66%; }
+      width: 90%; }
       .paragraph--type--jury .field--name-field-jury .field__items > .row > div .paragraph--type--jury-member > .field--name-field-image .media--type-image .field--name-field-media-image .field__item {
         background-color: #fff; }
         .paragraph--type--jury .field--name-field-jury .field__items > .row > div .paragraph--type--jury-member > .field--name-field-image .media--type-image .field--name-field-media-image .field__item img {
@@ -10679,7 +10679,7 @@ a.icon-mail-1 {
       font-size: 16px; }
       .paragraph--type--jury .field--name-field-jury .field__items > .row > div .paragraph--type--jury-member .jury--member--info--wrapper .field--name-field-image {
         visibility: hidden;
-        width: 66%; }
+        width: 90%; }
       .paragraph--type--jury .field--name-field-jury .field__items > .row > div .paragraph--type--jury-member .jury--member--info--wrapper .jury--member--info {
         background-color: #d8f1ec;
         float: right;

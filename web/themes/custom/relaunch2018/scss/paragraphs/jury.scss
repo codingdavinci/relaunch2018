@@ -12,7 +12,7 @@
           > .field--name-field-image {
             @include boxShadow;
             position: absolute;
-            width: 66%;
+            width: 90%;
 
             .media--type-image {
               .field--name-field-media-image {
@@ -32,7 +32,7 @@
 
             .field--name-field-image {
               visibility: hidden;
-              width: 66%;
+              width: 90%;
             }
 
             .jury--member--info {
