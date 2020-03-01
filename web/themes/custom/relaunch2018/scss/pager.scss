@@ -8,11 +8,14 @@
 
     .pager__item {
       a {
-        color: $green;
+        @include greenLink;
       }
 
       &.is-active {
-        display: none;
+        a {
+          @include link-underline;
+          color: $green-dark;
+        }
       }
     }
   }

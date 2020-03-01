@@ -9228,8 +9228,14 @@ body.path-user:not(.user-logged-in) main {
   padding: 0; }
   .pager .pager__items .pager__item a {
     color: #1bbd7d; }
-  .pager .pager__items .pager__item.is-active {
-    display: none; }
+    .pager .pager__items .pager__item a:hover {
+      color: #0A8856;
+      text-decoration: none; }
+  .pager .pager__items .pager__item.is-active a {
+    text-decoration: underline;
+    color: #0A8856; }
+    .pager .pager__items .pager__item.is-active a:hover, .pager .pager__items .pager__item.is-active a:active, .pager .pager__items .pager__item.is-active a:focus {
+      text-decoration: underline; }
 
 /**
  * @file
