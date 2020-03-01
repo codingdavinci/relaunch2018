@@ -6,7 +6,10 @@ dependencies:
     - field.storage.node.field_paragraphs
     - node.type.article
     - paragraphs.paragraphs_type.image
+    - paragraphs.paragraphs_type.slideshow
     - paragraphs.paragraphs_type.text
+    - paragraphs.paragraphs_type.textblock_left
+    - paragraphs.paragraphs_type.textblock_right
   module:
     - entity_reference_revisions
 id: node.article.field_paragraphs
@@ -26,6 +29,9 @@ settings:
     target_bundles:
       image: image
       text: text
+      slideshow: slideshow
+      textblock_left: textblock_left
+      textblock_right: textblock_right
     target_bundles_drag_drop:
       image:
         enabled: true
@@ -33,4 +39,94 @@ settings:
       text:
         enabled: true
         weight: 4
+      attributed_audio_video:
+        weight: 33
+        enabled: false
+      attributed_image:
+        weight: 34
+        enabled: false
+      attribution:
+        weight: 35
+        enabled: false
+      box:
+        weight: 36
+        enabled: false
+      box_group:
+        weight: 37
+        enabled: false
+      box_group_box:
+        weight: 38
+        enabled: false
+      data_set_event:
+        weight: 39
+        enabled: false
+      filesize:
+        weight: 40
+        enabled: false
+      grid:
+        weight: 41
+        enabled: false
+      grid_element:
+        weight: 42
+        enabled: false
+      heading:
+        weight: 43
+        enabled: false
+      introtext:
+        weight: 45
+        enabled: false
+      jury:
+        weight: 46
+        enabled: false
+      jury_member:
+        weight: 47
+        enabled: false
+      logo:
+        weight: 48
+        enabled: false
+      logo_group:
+        weight: 49
+        enabled: false
+      logos:
+        weight: 50
+        enabled: false
+      prize:
+        weight: 51
+        enabled: false
+      prizes:
+        weight: 52
+        enabled: false
+      project_image:
+        weight: 53
+        enabled: false
+      representative:
+        weight: 54
+        enabled: false
+      slideshow:
+        enabled: true
+        weight: 55
+      social_media:
+        weight: 56
+        enabled: false
+      team_member:
+        weight: 57
+        enabled: false
+      textblock_left:
+        enabled: true
+        weight: 59
+      textblock_right:
+        enabled: true
+        weight: 60
+      timeline:
+        weight: 61
+        enabled: false
+      timeline_item:
+        weight: 62
+        enabled: false
+      video:
+        weight: 63
+        enabled: false
+      winner:
+        weight: 64
+        enabled: false
 field_type: entity_reference_revisions
