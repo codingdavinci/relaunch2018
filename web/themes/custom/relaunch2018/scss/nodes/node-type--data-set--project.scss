@@ -24,56 +24,66 @@
         color: $white;
       }
 
-      .field--name-field-attributed-image,
-      .field--name-field-project-image {
+      .article__header__image {
         height: 100%;
-        width: 100%;
+        position: relative;
 
-        .paragraph--type--attributed-image,
-        .paragraph--type--project-image {
-          display: flex;
-          flex-direction: column;
+        .field--awards {
+          @include font-size(14px);
+          background: $blue;
+          color: $white;
+          padding: 6px map_get($spacers, 2);
+          position: absolute;
+          right: 0;
+          top: map_get($spacers, 3);
+        }
+
+        .field--name-field-attributed-image,
+        .field--name-field-project-image {
           height: 100%;
           width: 100%;
 
-          @include media-breakpoint-up(lg) {
-            text-align: right;
-          }
-
-          .field--name-field-inline-image {
+          .paragraph--type--attributed-image,
+          .paragraph--type--project-image {
+            display: inline-flex;
+            flex-direction: column;
             height: 100%;
-            overflow: hidden;
             width: 100%;
-
-            img {
-              @include media-breakpoint-up(lg) {
-                height: 100%;
-                max-width: none;
-                width: auto;
-              }
-            }
-          }
-
-          .paragraph--type--attributed-image--attribution,
-          .paragraph--type--project-image--attribution {
-            color: $white;
-            padding: map_get($spacers, 1) / 2 map_get($spacers, 2) map_get($spacers, 4);
-            text-align: center;
-            width: 100%;
-
-            a {
-              @include link-underline;
-              color: $white;
-            }
 
             @include media-breakpoint-up(lg) {
-              background-color: $blue;
-              padding-bottom: map_get($spacers, 1) / 2;
-              position: absolute;
-              top: map_get($spacers, 4);
-              right: 0;
-              text-align: right;
               width: auto;
+            }
+
+            .field--name-field-inline-image {
+              height: 100%;
+              overflow: hidden;
+              width: 100%;
+
+              img {
+                @include media-breakpoint-up(lg) {
+                  height: 100%;
+                  max-width: none;
+                  width: auto;
+                }
+              }
+            }
+
+            .paragraph--type--attributed-image--attribution,
+            .paragraph--type--project-image--attribution {
+              color: $white;
+              padding: map_get($spacers, 1) / 2 map_get($spacers, 2) 0;
+              text-align: center;
+              width: 100%;
+
+              a {
+                @include link-underline;
+                color: $white;
+              }
+
+              @include media-breakpoint-up(lg) {
+                padding-left: 0;
+                text-align: left;
+              }
             }
           }
         }

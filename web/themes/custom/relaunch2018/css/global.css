@@ -9658,166 +9658,174 @@ a.icon-mail-1 {
   .node--type-data-set.node--view-mode-full .article__header h1,
   .node--type-project.node--view-mode-full .article__header h1 {
     color: #fff; }
-  .node--type-data-set.node--view-mode-full .article__header .field--name-field-attributed-image,
-  .node--type-data-set.node--view-mode-full .article__header .field--name-field-project-image,
-  .node--type-project.node--view-mode-full .article__header .field--name-field-attributed-image,
-  .node--type-project.node--view-mode-full .article__header .field--name-field-project-image {
+  .node--type-data-set.node--view-mode-full .article__header .article__header__image,
+  .node--type-project.node--view-mode-full .article__header .article__header__image {
     height: 100%;
-    width: 100%; }
-    .node--type-data-set.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--attributed-image,
-    .node--type-data-set.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--project-image,
-    .node--type-data-set.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--attributed-image,
-    .node--type-data-set.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--project-image,
-    .node--type-project.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--attributed-image,
-    .node--type-project.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--project-image,
-    .node--type-project.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--attributed-image,
-    .node--type-project.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--project-image {
-      display: flex;
-      flex-direction: column;
+    position: relative; }
+    .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--awards,
+    .node--type-project.node--view-mode-full .article__header .article__header__image .field--awards {
+      font-size: 14px;
+      background: #4495A7;
+      color: #fff;
+      padding: 6px 16px;
+      position: absolute;
+      right: 0;
+      top: 24px; }
+    .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image,
+    .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-project-image,
+    .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image,
+    .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-project-image {
       height: 100%;
       width: 100%; }
-      @media (min-width: 992px) {
-        .node--type-data-set.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--attributed-image,
-        .node--type-data-set.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--project-image,
-        .node--type-data-set.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--attributed-image,
-        .node--type-data-set.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--project-image,
-        .node--type-project.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--attributed-image,
-        .node--type-project.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--project-image,
-        .node--type-project.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--attributed-image,
-        .node--type-project.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--project-image {
-          text-align: right; } }
-      .node--type-data-set.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--attributed-image .field--name-field-inline-image,
-      .node--type-data-set.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--project-image .field--name-field-inline-image,
-      .node--type-data-set.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--attributed-image .field--name-field-inline-image,
-      .node--type-data-set.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--project-image .field--name-field-inline-image,
-      .node--type-project.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--attributed-image .field--name-field-inline-image,
-      .node--type-project.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--project-image .field--name-field-inline-image,
-      .node--type-project.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--attributed-image .field--name-field-inline-image,
-      .node--type-project.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--project-image .field--name-field-inline-image {
+      .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--attributed-image,
+      .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--project-image,
+      .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--attributed-image,
+      .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--project-image,
+      .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--attributed-image,
+      .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--project-image,
+      .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--attributed-image,
+      .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--project-image {
+        display: inline-flex;
+        flex-direction: column;
         height: 100%;
-        overflow: hidden;
         width: 100%; }
         @media (min-width: 992px) {
-          .node--type-data-set.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--attributed-image .field--name-field-inline-image img,
-          .node--type-data-set.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--project-image .field--name-field-inline-image img,
-          .node--type-data-set.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--attributed-image .field--name-field-inline-image img,
-          .node--type-data-set.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--project-image .field--name-field-inline-image img,
-          .node--type-project.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--attributed-image .field--name-field-inline-image img,
-          .node--type-project.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--project-image .field--name-field-inline-image img,
-          .node--type-project.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--attributed-image .field--name-field-inline-image img,
-          .node--type-project.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--project-image .field--name-field-inline-image img {
-            height: 100%;
-            max-width: none;
+          .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--attributed-image,
+          .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--project-image,
+          .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--attributed-image,
+          .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--project-image,
+          .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--attributed-image,
+          .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--project-image,
+          .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--attributed-image,
+          .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--project-image {
             width: auto; } }
-      .node--type-data-set.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution,
-      .node--type-data-set.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution,
-      .node--type-data-set.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution,
-      .node--type-data-set.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--project-image--attribution,
-      .node--type-data-set.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution,
-      .node--type-data-set.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution,
-      .node--type-data-set.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution,
-      .node--type-data-set.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--project-image .paragraph--type--project-image--attribution,
-      .node--type-project.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution,
-      .node--type-project.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution,
-      .node--type-project.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution,
-      .node--type-project.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--project-image--attribution,
-      .node--type-project.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution,
-      .node--type-project.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution,
-      .node--type-project.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution,
-      .node--type-project.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--project-image .paragraph--type--project-image--attribution {
-        color: #fff;
-        padding: 4px 16px 32px;
-        text-align: center;
-        width: 100%; }
-        .node--type-data-set.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution a,
-        .node--type-data-set.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution a,
-        .node--type-data-set.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution a,
-        .node--type-data-set.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--project-image--attribution a,
-        .node--type-data-set.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution a,
-        .node--type-data-set.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution a,
-        .node--type-data-set.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution a,
-        .node--type-data-set.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--project-image .paragraph--type--project-image--attribution a,
-        .node--type-project.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution a,
-        .node--type-project.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution a,
-        .node--type-project.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution a,
-        .node--type-project.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--project-image--attribution a,
-        .node--type-project.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution a,
-        .node--type-project.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution a,
-        .node--type-project.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution a,
-        .node--type-project.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--project-image .paragraph--type--project-image--attribution a {
-          text-decoration: underline;
-          color: #fff; }
-          .node--type-data-set.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution a:hover, .node--type-data-set.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution a:active, .node--type-data-set.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution a:focus,
-          .node--type-data-set.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution a:hover,
-          .node--type-data-set.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution a:active,
-          .node--type-data-set.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution a:focus,
-          .node--type-data-set.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution a:hover,
-          .node--type-data-set.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution a:active,
-          .node--type-data-set.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution a:focus,
-          .node--type-data-set.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--project-image--attribution a:hover,
-          .node--type-data-set.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--project-image--attribution a:active,
-          .node--type-data-set.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--project-image--attribution a:focus,
-          .node--type-data-set.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution a:hover,
-          .node--type-data-set.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution a:active,
-          .node--type-data-set.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution a:focus,
-          .node--type-data-set.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution a:hover,
-          .node--type-data-set.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution a:active,
-          .node--type-data-set.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution a:focus,
-          .node--type-data-set.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution a:hover,
-          .node--type-data-set.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution a:active,
-          .node--type-data-set.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution a:focus,
-          .node--type-data-set.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--project-image .paragraph--type--project-image--attribution a:hover,
-          .node--type-data-set.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--project-image .paragraph--type--project-image--attribution a:active,
-          .node--type-data-set.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--project-image .paragraph--type--project-image--attribution a:focus,
-          .node--type-project.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution a:hover,
-          .node--type-project.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution a:active,
-          .node--type-project.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution a:focus,
-          .node--type-project.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution a:hover,
-          .node--type-project.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution a:active,
-          .node--type-project.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution a:focus,
-          .node--type-project.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution a:hover,
-          .node--type-project.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution a:active,
-          .node--type-project.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution a:focus,
-          .node--type-project.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--project-image--attribution a:hover,
-          .node--type-project.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--project-image--attribution a:active,
-          .node--type-project.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--project-image--attribution a:focus,
-          .node--type-project.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution a:hover,
-          .node--type-project.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution a:active,
-          .node--type-project.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution a:focus,
-          .node--type-project.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution a:hover,
-          .node--type-project.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution a:active,
-          .node--type-project.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution a:focus,
-          .node--type-project.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution a:hover,
-          .node--type-project.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution a:active,
-          .node--type-project.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution a:focus,
-          .node--type-project.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--project-image .paragraph--type--project-image--attribution a:hover,
-          .node--type-project.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--project-image .paragraph--type--project-image--attribution a:active,
-          .node--type-project.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--project-image .paragraph--type--project-image--attribution a:focus {
-            text-decoration: underline; }
-        @media (min-width: 992px) {
-          .node--type-data-set.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution,
-          .node--type-data-set.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution,
-          .node--type-data-set.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution,
-          .node--type-data-set.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--project-image--attribution,
-          .node--type-data-set.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution,
-          .node--type-data-set.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution,
-          .node--type-data-set.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution,
-          .node--type-data-set.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--project-image .paragraph--type--project-image--attribution,
-          .node--type-project.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution,
-          .node--type-project.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution,
-          .node--type-project.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution,
-          .node--type-project.node--view-mode-full .article__header .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--project-image--attribution,
-          .node--type-project.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution,
-          .node--type-project.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution,
-          .node--type-project.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution,
-          .node--type-project.node--view-mode-full .article__header .field--name-field-project-image .paragraph--type--project-image .paragraph--type--project-image--attribution {
-            background-color: #4495A7;
-            padding-bottom: 4px;
-            position: absolute;
-            top: 32px;
-            right: 0;
-            text-align: right;
-            width: auto; } }
+        .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--attributed-image .field--name-field-inline-image,
+        .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--project-image .field--name-field-inline-image,
+        .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--attributed-image .field--name-field-inline-image,
+        .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--project-image .field--name-field-inline-image,
+        .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--attributed-image .field--name-field-inline-image,
+        .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--project-image .field--name-field-inline-image,
+        .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--attributed-image .field--name-field-inline-image,
+        .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--project-image .field--name-field-inline-image {
+          height: 100%;
+          overflow: hidden;
+          width: 100%; }
+          @media (min-width: 992px) {
+            .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--attributed-image .field--name-field-inline-image img,
+            .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--project-image .field--name-field-inline-image img,
+            .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--attributed-image .field--name-field-inline-image img,
+            .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--project-image .field--name-field-inline-image img,
+            .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--attributed-image .field--name-field-inline-image img,
+            .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--project-image .field--name-field-inline-image img,
+            .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--attributed-image .field--name-field-inline-image img,
+            .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--project-image .field--name-field-inline-image img {
+              height: 100%;
+              max-width: none;
+              width: auto; } }
+        .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution,
+        .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution,
+        .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution,
+        .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--project-image--attribution,
+        .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution,
+        .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution,
+        .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution,
+        .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--project-image .paragraph--type--project-image--attribution,
+        .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution,
+        .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution,
+        .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution,
+        .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--project-image--attribution,
+        .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution,
+        .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution,
+        .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution,
+        .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--project-image .paragraph--type--project-image--attribution {
+          color: #fff;
+          padding: 4px 16px 0;
+          text-align: center;
+          width: 100%; }
+          .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution a,
+          .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution a,
+          .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution a,
+          .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--project-image--attribution a,
+          .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution a,
+          .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution a,
+          .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution a,
+          .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--project-image .paragraph--type--project-image--attribution a,
+          .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution a,
+          .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution a,
+          .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution a,
+          .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--project-image--attribution a,
+          .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution a,
+          .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution a,
+          .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution a,
+          .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--project-image .paragraph--type--project-image--attribution a {
+            text-decoration: underline;
+            color: #fff; }
+            .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution a:hover, .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution a:active, .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution a:focus,
+            .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution a:hover,
+            .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution a:active,
+            .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution a:focus,
+            .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution a:hover,
+            .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution a:active,
+            .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution a:focus,
+            .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--project-image--attribution a:hover,
+            .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--project-image--attribution a:active,
+            .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--project-image--attribution a:focus,
+            .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution a:hover,
+            .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution a:active,
+            .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution a:focus,
+            .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution a:hover,
+            .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution a:active,
+            .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution a:focus,
+            .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution a:hover,
+            .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution a:active,
+            .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution a:focus,
+            .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--project-image .paragraph--type--project-image--attribution a:hover,
+            .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--project-image .paragraph--type--project-image--attribution a:active,
+            .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--project-image .paragraph--type--project-image--attribution a:focus,
+            .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution a:hover,
+            .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution a:active,
+            .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution a:focus,
+            .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution a:hover,
+            .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution a:active,
+            .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution a:focus,
+            .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution a:hover,
+            .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution a:active,
+            .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution a:focus,
+            .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--project-image--attribution a:hover,
+            .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--project-image--attribution a:active,
+            .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--project-image--attribution a:focus,
+            .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution a:hover,
+            .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution a:active,
+            .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution a:focus,
+            .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution a:hover,
+            .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution a:active,
+            .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution a:focus,
+            .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution a:hover,
+            .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution a:active,
+            .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution a:focus,
+            .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--project-image .paragraph--type--project-image--attribution a:hover,
+            .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--project-image .paragraph--type--project-image--attribution a:active,
+            .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--project-image .paragraph--type--project-image--attribution a:focus {
+              text-decoration: underline; }
+          @media (min-width: 992px) {
+            .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution,
+            .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution,
+            .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution,
+            .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--project-image--attribution,
+            .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution,
+            .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution,
+            .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution,
+            .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--project-image .paragraph--type--project-image--attribution,
+            .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution,
+            .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution,
+            .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution,
+            .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-attributed-image .paragraph--type--project-image .paragraph--type--project-image--attribution,
+            .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--attributed-image--attribution,
+            .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--attributed-image .paragraph--type--project-image--attribution,
+            .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--project-image .paragraph--type--attributed-image--attribution,
+            .node--type-project.node--view-mode-full .article__header .article__header__image .field--name-field-project-image .paragraph--type--project-image .paragraph--type--project-image--attribution {
+              padding-left: 0;
+              text-align: left; } }
 
 .node--type-data-set.node--view-mode-full .project__tags,
 .node--type-project.node--view-mode-full .project__tags {
