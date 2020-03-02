@@ -239,6 +239,11 @@
               h3 {
                 color: $gray;
                 margin-bottom: map_get($spacers, 3);
+
+                a {
+                  @include grayLink;
+                  text-decoration: none;
+                }
               }
 
               .node__content {

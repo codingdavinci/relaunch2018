@@ -10068,6 +10068,26 @@ a.icon-mail-1 {
     .node--type-project.node--view-mode-full .article--content-container .node__content .view-projects.view-display-id-block_2 .view-content article h3 {
       color: #333333;
       margin-bottom: 24px; }
+      .node--type-data-set.node--view-mode-full .article--content-container .node__content .group--data-sets .field--name-field-datasets article h3 a,
+      .node--type-data-set.node--view-mode-full .article--content-container .node__content .group--data-sets .view-content article h3 a,
+      .node--type-data-set.node--view-mode-full .article--content-container .node__content .view-projects.view-display-id-block_2 .field--name-field-datasets article h3 a,
+      .node--type-data-set.node--view-mode-full .article--content-container .node__content .view-projects.view-display-id-block_2 .view-content article h3 a,
+      .node--type-project.node--view-mode-full .article--content-container .node__content .group--data-sets .field--name-field-datasets article h3 a,
+      .node--type-project.node--view-mode-full .article--content-container .node__content .group--data-sets .view-content article h3 a,
+      .node--type-project.node--view-mode-full .article--content-container .node__content .view-projects.view-display-id-block_2 .field--name-field-datasets article h3 a,
+      .node--type-project.node--view-mode-full .article--content-container .node__content .view-projects.view-display-id-block_2 .view-content article h3 a {
+        color: #333333;
+        font-weight: 500;
+        text-decoration: none; }
+        .node--type-data-set.node--view-mode-full .article--content-container .node__content .group--data-sets .field--name-field-datasets article h3 a:hover,
+        .node--type-data-set.node--view-mode-full .article--content-container .node__content .group--data-sets .view-content article h3 a:hover,
+        .node--type-data-set.node--view-mode-full .article--content-container .node__content .view-projects.view-display-id-block_2 .field--name-field-datasets article h3 a:hover,
+        .node--type-data-set.node--view-mode-full .article--content-container .node__content .view-projects.view-display-id-block_2 .view-content article h3 a:hover,
+        .node--type-project.node--view-mode-full .article--content-container .node__content .group--data-sets .field--name-field-datasets article h3 a:hover,
+        .node--type-project.node--view-mode-full .article--content-container .node__content .group--data-sets .view-content article h3 a:hover,
+        .node--type-project.node--view-mode-full .article--content-container .node__content .view-projects.view-display-id-block_2 .field--name-field-datasets article h3 a:hover,
+        .node--type-project.node--view-mode-full .article--content-container .node__content .view-projects.view-display-id-block_2 .view-content article h3 a:hover {
+          color: #000; }
     .node--type-data-set.node--view-mode-full .article--content-container .node__content .group--data-sets .field--name-field-datasets article .node__content .field,
     .node--type-data-set.node--view-mode-full .article--content-container .node__content .group--data-sets .view-content article .node__content .field,
     .node--type-data-set.node--view-mode-full .article--content-container .node__content .view-projects.view-display-id-block_2 .field--name-field-datasets article .node__content .field,
