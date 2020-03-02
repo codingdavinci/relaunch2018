@@ -123,7 +123,7 @@
         fieldset {
           &:not(.object-type) {
             border: 1px solid $green;
-            padding: map_get($spacers, 2) map_get($spacers, 3);
+            padding: map_get($spacers, 2) map_get($spacers, 3) map_get($spacers, 3) map_get($spacers, 3);
 
             legend {
               color: $green;
@@ -214,8 +214,13 @@
 
           .field--name-field-datasets,
           .view-content {
-            .views-row {
+            > .field__item,
+            > .views-row {
               margin-bottom: map_get($spacers, 3);
+
+              &:last-child {
+                margin-bottom: 0;
+              }
             }
 
             article {

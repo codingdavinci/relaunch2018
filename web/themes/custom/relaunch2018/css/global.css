@@ -9887,7 +9887,7 @@ a.icon-mail-1 {
 .node--type-data-set.node--view-mode-full .article--content-container .node__content fieldset:not(.object-type),
 .node--type-project.node--view-mode-full .article--content-container .node__content fieldset:not(.object-type) {
   border: 1px solid #1bbd7d;
-  padding: 16px 24px; }
+  padding: 16px 24px 24px 24px; }
   .node--type-data-set.node--view-mode-full .article--content-container .node__content fieldset:not(.object-type) legend,
   .node--type-project.node--view-mode-full .article--content-container .node__content fieldset:not(.object-type) legend {
     color: #1bbd7d;
@@ -10011,15 +10011,40 @@ a.icon-mail-1 {
 .node--type-project.node--view-mode-full .article--content-container .node__content .group--data-sets,
 .node--type-project.node--view-mode-full .article--content-container .node__content .view-projects.view-display-id-block_2 {
   margin: 0; }
-  .node--type-data-set.node--view-mode-full .article--content-container .node__content .group--data-sets .field--name-field-datasets .views-row,
-  .node--type-data-set.node--view-mode-full .article--content-container .node__content .group--data-sets .view-content .views-row,
-  .node--type-data-set.node--view-mode-full .article--content-container .node__content .view-projects.view-display-id-block_2 .field--name-field-datasets .views-row,
-  .node--type-data-set.node--view-mode-full .article--content-container .node__content .view-projects.view-display-id-block_2 .view-content .views-row,
-  .node--type-project.node--view-mode-full .article--content-container .node__content .group--data-sets .field--name-field-datasets .views-row,
-  .node--type-project.node--view-mode-full .article--content-container .node__content .group--data-sets .view-content .views-row,
-  .node--type-project.node--view-mode-full .article--content-container .node__content .view-projects.view-display-id-block_2 .field--name-field-datasets .views-row,
-  .node--type-project.node--view-mode-full .article--content-container .node__content .view-projects.view-display-id-block_2 .view-content .views-row {
+  .node--type-data-set.node--view-mode-full .article--content-container .node__content .group--data-sets .field--name-field-datasets > .field__item,
+  .node--type-data-set.node--view-mode-full .article--content-container .node__content .group--data-sets .field--name-field-datasets > .views-row,
+  .node--type-data-set.node--view-mode-full .article--content-container .node__content .group--data-sets .view-content > .field__item,
+  .node--type-data-set.node--view-mode-full .article--content-container .node__content .group--data-sets .view-content > .views-row,
+  .node--type-data-set.node--view-mode-full .article--content-container .node__content .view-projects.view-display-id-block_2 .field--name-field-datasets > .field__item,
+  .node--type-data-set.node--view-mode-full .article--content-container .node__content .view-projects.view-display-id-block_2 .field--name-field-datasets > .views-row,
+  .node--type-data-set.node--view-mode-full .article--content-container .node__content .view-projects.view-display-id-block_2 .view-content > .field__item,
+  .node--type-data-set.node--view-mode-full .article--content-container .node__content .view-projects.view-display-id-block_2 .view-content > .views-row,
+  .node--type-project.node--view-mode-full .article--content-container .node__content .group--data-sets .field--name-field-datasets > .field__item,
+  .node--type-project.node--view-mode-full .article--content-container .node__content .group--data-sets .field--name-field-datasets > .views-row,
+  .node--type-project.node--view-mode-full .article--content-container .node__content .group--data-sets .view-content > .field__item,
+  .node--type-project.node--view-mode-full .article--content-container .node__content .group--data-sets .view-content > .views-row,
+  .node--type-project.node--view-mode-full .article--content-container .node__content .view-projects.view-display-id-block_2 .field--name-field-datasets > .field__item,
+  .node--type-project.node--view-mode-full .article--content-container .node__content .view-projects.view-display-id-block_2 .field--name-field-datasets > .views-row,
+  .node--type-project.node--view-mode-full .article--content-container .node__content .view-projects.view-display-id-block_2 .view-content > .field__item,
+  .node--type-project.node--view-mode-full .article--content-container .node__content .view-projects.view-display-id-block_2 .view-content > .views-row {
     margin-bottom: 24px; }
+    .node--type-data-set.node--view-mode-full .article--content-container .node__content .group--data-sets .field--name-field-datasets > .field__item:last-child,
+    .node--type-data-set.node--view-mode-full .article--content-container .node__content .group--data-sets .field--name-field-datasets > .views-row:last-child,
+    .node--type-data-set.node--view-mode-full .article--content-container .node__content .group--data-sets .view-content > .field__item:last-child,
+    .node--type-data-set.node--view-mode-full .article--content-container .node__content .group--data-sets .view-content > .views-row:last-child,
+    .node--type-data-set.node--view-mode-full .article--content-container .node__content .view-projects.view-display-id-block_2 .field--name-field-datasets > .field__item:last-child,
+    .node--type-data-set.node--view-mode-full .article--content-container .node__content .view-projects.view-display-id-block_2 .field--name-field-datasets > .views-row:last-child,
+    .node--type-data-set.node--view-mode-full .article--content-container .node__content .view-projects.view-display-id-block_2 .view-content > .field__item:last-child,
+    .node--type-data-set.node--view-mode-full .article--content-container .node__content .view-projects.view-display-id-block_2 .view-content > .views-row:last-child,
+    .node--type-project.node--view-mode-full .article--content-container .node__content .group--data-sets .field--name-field-datasets > .field__item:last-child,
+    .node--type-project.node--view-mode-full .article--content-container .node__content .group--data-sets .field--name-field-datasets > .views-row:last-child,
+    .node--type-project.node--view-mode-full .article--content-container .node__content .group--data-sets .view-content > .field__item:last-child,
+    .node--type-project.node--view-mode-full .article--content-container .node__content .group--data-sets .view-content > .views-row:last-child,
+    .node--type-project.node--view-mode-full .article--content-container .node__content .view-projects.view-display-id-block_2 .field--name-field-datasets > .field__item:last-child,
+    .node--type-project.node--view-mode-full .article--content-container .node__content .view-projects.view-display-id-block_2 .field--name-field-datasets > .views-row:last-child,
+    .node--type-project.node--view-mode-full .article--content-container .node__content .view-projects.view-display-id-block_2 .view-content > .field__item:last-child,
+    .node--type-project.node--view-mode-full .article--content-container .node__content .view-projects.view-display-id-block_2 .view-content > .views-row:last-child {
+      margin-bottom: 0; }
   .node--type-data-set.node--view-mode-full .article--content-container .node__content .group--data-sets .field--name-field-datasets article,
   .node--type-data-set.node--view-mode-full .article--content-container .node__content .group--data-sets .view-content article,
   .node--type-data-set.node--view-mode-full .article--content-container .node__content .view-projects.view-display-id-block_2 .field--name-field-datasets article,
