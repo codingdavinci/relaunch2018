@@ -253,6 +253,10 @@
                   &.field--name-field-short-description {
                     margin-bottom: map_get($spacers, 3);
                   }
+
+                  &.field--institution-name {
+                    margin-bottom: map_get($spacers, 2);
+                  }
                 }
 
                 .field--name-field-short-description {

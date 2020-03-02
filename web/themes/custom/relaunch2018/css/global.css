@@ -10106,6 +10106,15 @@ a.icon-mail-1 {
       .node--type-project.node--view-mode-full .article--content-container .node__content .view-projects.view-display-id-block_2 .field--name-field-datasets article .node__content .field.field--name-field-short-description,
       .node--type-project.node--view-mode-full .article--content-container .node__content .view-projects.view-display-id-block_2 .view-content article .node__content .field.field--name-field-short-description {
         margin-bottom: 24px; }
+      .node--type-data-set.node--view-mode-full .article--content-container .node__content .group--data-sets .field--name-field-datasets article .node__content .field.field--institution-name,
+      .node--type-data-set.node--view-mode-full .article--content-container .node__content .group--data-sets .view-content article .node__content .field.field--institution-name,
+      .node--type-data-set.node--view-mode-full .article--content-container .node__content .view-projects.view-display-id-block_2 .field--name-field-datasets article .node__content .field.field--institution-name,
+      .node--type-data-set.node--view-mode-full .article--content-container .node__content .view-projects.view-display-id-block_2 .view-content article .node__content .field.field--institution-name,
+      .node--type-project.node--view-mode-full .article--content-container .node__content .group--data-sets .field--name-field-datasets article .node__content .field.field--institution-name,
+      .node--type-project.node--view-mode-full .article--content-container .node__content .group--data-sets .view-content article .node__content .field.field--institution-name,
+      .node--type-project.node--view-mode-full .article--content-container .node__content .view-projects.view-display-id-block_2 .field--name-field-datasets article .node__content .field.field--institution-name,
+      .node--type-project.node--view-mode-full .article--content-container .node__content .view-projects.view-display-id-block_2 .view-content article .node__content .field.field--institution-name {
+        margin-bottom: 16px; }
     .node--type-data-set.node--view-mode-full .article--content-container .node__content .group--data-sets .field--name-field-datasets article .node__content .field--name-field-short-description,
     .node--type-data-set.node--view-mode-full .article--content-container .node__content .group--data-sets .view-content article .node__content .field--name-field-short-description,
     .node--type-data-set.node--view-mode-full .article--content-container .node__content .view-projects.view-display-id-block_2 .field--name-field-datasets article .node__content .field--name-field-short-description,
