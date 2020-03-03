@@ -37,10 +37,14 @@
                 @include font-size(12px);
                 background-color: $blue;
                 color: $white;
-                padding: map_get($spacers, 1) / 2 map_get($spacers, 1);
+                display: flex;
+                align-items: center;
+                min-height: 22px;
+                padding: 3px map_get($spacers, 1);
                 position: absolute;
                 right: 0;
                 top: map_get($spacers, 2);
+                word-break: break-all;
               }
 
               .winner__project-title {

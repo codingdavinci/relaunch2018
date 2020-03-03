@@ -10280,10 +10280,14 @@ a.icon-mail-1 {
         font-size: 12px;
         background-color: #4495A7;
         color: #fff;
-        padding: 4px 8px;
+        display: flex;
+        align-items: center;
+        min-height: 22px;
+        padding: 3px 8px;
         position: absolute;
         right: 0;
-        top: 16px; }
+        top: 16px;
+        word-break: break-all; }
       .node--type-event.node--view-mode-full > .node__content > .field.field--name-field-winners > .field__items > .field__item .winner__project-title {
         bottom: 0;
         position: absolute;
