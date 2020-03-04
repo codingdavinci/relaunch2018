@@ -33,41 +33,6 @@
             > .field__item {
               position: relative;
 
-              .field--name-field-award {
-                @include font-size(12px);
-                background-color: $blue;
-                color: $white;
-                display: flex;
-                align-items: center;
-                min-height: 22px;
-                padding: 3px map_get($spacers, 1);
-                position: absolute;
-                right: 0;
-                top: map_get($spacers, 2);
-                word-break: break-all;
-              }
-
-              .winner__project-title {
-                bottom: 0;
-                position: absolute;
-                text-align: right;
-                right: 0;
-                word-break: break-word;
-
-                a {
-                  @include font-size(20px);
-                  background-color: $green-light;
-                  color: $green;
-                  display: block;
-                  padding: map_get($spacers, 1) map_get($spacers, 2);
-                  text-decoration: underline;
-
-                  &:hover {
-                    color: $green-dark;
-                  }
-                }
-              }
-
               @media #{$ie} {
                 display: inline-block;
                 padding: map_get($spacers, 2);

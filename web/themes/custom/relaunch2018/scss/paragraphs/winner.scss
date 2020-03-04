@@ -1,15 +1,59 @@
 @import '../_includes/base';
 
 .paragraph--type--winner {
+  img {
+    @include img-fluid;
+  }
+
   .field--name-field-award {
-    display: inline;
+    @include font-size(12px);
+    background-color: $blue;
+    color: $white;
+    display: flex;
+    align-items: center;
+    min-height: 22px;
+    padding: 3px map_get($spacers, 1);
+    position: absolute;
+    right: 0;
+    top: map_get($spacers, 2);
+    word-break: break-all;
 
     .field__item {
       display: inline;
     }
   }
 
-  img {
-    @include img-fluid;
+  > .winner__project--image {
+    position: absolute;
+    width: 90%;
+  }
+
+  .winner__project-title--wrapper {
+    > .field--name-field-project {
+      visibility: hidden;
+      width: 90%;
+    }
+
+    .winner__project-title {
+      @include boxShadow;
+      bottom: 0;
+      position: absolute;
+      right: 0;
+      width: 90%;
+      word-break: break-word;
+
+      a {
+        @include font-size(16px);
+        background-color: $green-light;
+        color: $green;
+        display: block;
+        padding: map_get($spacers, 1) map_get($spacers, 2);
+        text-decoration: underline;
+
+        &:hover {
+          color: $green-dark;
+        }
+      }
+    }
   }
 }

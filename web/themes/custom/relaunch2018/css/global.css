@@ -10276,33 +10276,6 @@ a.icon-mail-1 {
         grid-template-columns: 1fr 1fr 1fr 1fr; } }
     .node--type-event.node--view-mode-full > .node__content > .field.field--name-field-winners > .field__items > .field__item {
       position: relative; }
-      .node--type-event.node--view-mode-full > .node__content > .field.field--name-field-winners > .field__items > .field__item .field--name-field-award {
-        font-size: 12px;
-        background-color: #4495A7;
-        color: #fff;
-        display: flex;
-        align-items: center;
-        min-height: 22px;
-        padding: 3px 8px;
-        position: absolute;
-        right: 0;
-        top: 16px;
-        word-break: break-all; }
-      .node--type-event.node--view-mode-full > .node__content > .field.field--name-field-winners > .field__items > .field__item .winner__project-title {
-        bottom: 0;
-        position: absolute;
-        text-align: right;
-        right: 0;
-        word-break: break-word; }
-        .node--type-event.node--view-mode-full > .node__content > .field.field--name-field-winners > .field__items > .field__item .winner__project-title a {
-          font-size: 20px;
-          background-color: #d8f1ec;
-          color: #1bbd7d;
-          display: block;
-          padding: 8px 16px;
-          text-decoration: underline; }
-          .node--type-event.node--view-mode-full > .node__content > .field.field--name-field-winners > .field__items > .field__item .winner__project-title a:hover {
-            color: #0A8856; }
       @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
         .node--type-event.node--view-mode-full > .node__content > .field.field--name-field-winners > .field__items > .field__item {
           display: inline-block;
@@ -11065,14 +11038,49 @@ a.icon-mail-1 {
     font-size: 14px;
     margin-top: 16px; }
 
-.paragraph--type--winner .field--name-field-award {
-  display: inline; }
-  .paragraph--type--winner .field--name-field-award .field__item {
-    display: inline; }
-
 .paragraph--type--winner img {
   max-width: 100%;
   height: auto; }
+
+.paragraph--type--winner .field--name-field-award {
+  font-size: 12px;
+  background-color: #4495A7;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  min-height: 22px;
+  padding: 3px 8px;
+  position: absolute;
+  right: 0;
+  top: 16px;
+  word-break: break-all; }
+  .paragraph--type--winner .field--name-field-award .field__item {
+    display: inline; }
+
+.paragraph--type--winner > .winner__project--image {
+  position: absolute;
+  width: 90%; }
+
+.paragraph--type--winner .winner__project-title--wrapper > .field--name-field-project {
+  visibility: hidden;
+  width: 90%; }
+
+.paragraph--type--winner .winner__project-title--wrapper .winner__project-title {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  bottom: 0;
+  position: absolute;
+  right: 0;
+  width: 90%;
+  word-break: break-word; }
+  .paragraph--type--winner .winner__project-title--wrapper .winner__project-title a {
+    font-size: 16px;
+    background-color: #d8f1ec;
+    color: #1bbd7d;
+    display: block;
+    padding: 8px 16px;
+    text-decoration: underline; }
+    .paragraph--type--winner .winner__project-title--wrapper .winner__project-title a:hover {
+      color: #0A8856; }
 
 #block-tags .menu {
   display: inline-block;
