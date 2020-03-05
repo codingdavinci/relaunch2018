@@ -48,19 +48,13 @@
       return;
     }
 
-    // Get the box size every time, because a viewport change might have
-    // happened.
-    // Since the grid is styled for every box having the same width, the
-    // first box can always be used for calculating the new offset.
-    const boxWidth = $boxes
-      .children()
-      .first()
-      .outerWidth();
-
     $boxes
       .stop(true, true)
       .animate({
-        left: direction === 'left' ? `+=${boxWidth}` : `-=${boxWidth}`
+        left:
+          direction === 'left'
+            ? `+=${$container.width()}`
+            : `-=${$container.width()}`
       })
       .promise()
       .done(() => updateNavigation($container));

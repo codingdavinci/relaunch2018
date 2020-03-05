@@ -43,10 +43,8 @@
       return;
     }
 
-    var boxWidth = $boxes.children().first().outerWidth();
-
     $boxes.stop(true, true).animate({
-      left: direction === 'left' ? '+=' + boxWidth : '-=' + boxWidth
+      left: direction === 'left' ? '+=' + $container.width() : '-=' + $container.width()
     }).promise().done(function () {
       return updateNavigation($container);
     });

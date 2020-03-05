@@ -8360,9 +8360,6 @@ ul.ui-autocomplete li.ui-menu-item a {
         display: block; } }
     .path-frontpage .region-content #block-views-block-projects-block-3 > div {
       padding: 48px 0; }
-      .path-frontpage .region-content #block-views-block-projects-block-3 > div .view-projects > div:not(.view-content) {
-        padding-left: 30px;
-        padding-right: 30px; }
   .path-frontpage .region-content #block-relaunch2018-content {
     display: none;
     margin-top: 80px; }
@@ -11271,8 +11268,6 @@ a.icon-mail-1 {
     display: grid;
     grid-auto-columns: 36%;
     grid-auto-flow: column;
-    margin-right: -15px;
-    padding: 0 15px;
     position: relative;
     width: 100%; } }
 

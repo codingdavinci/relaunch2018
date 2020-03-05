@@ -115,13 +115,6 @@
 
       > div {
         padding: map_get($spacers, 6) 0;
-
-        .view-projects {
-          > div:not(.view-content) {
-            padding-left: $grid-gutter-width;
-            padding-right: $grid-gutter-width;
-          }
-        }
       }
     }
 
