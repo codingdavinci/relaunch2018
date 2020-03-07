@@ -9865,10 +9865,6 @@ a.icon-mail-1 {
 .node--type-project.node--view-mode-full .article--content-container .node__content .data-set--badges > * {
   margin-bottom: 32px; }
 
-.node--type-data-set.node--view-mode-full .article--content-container .node__content .field--name-field-submission-type .field__item,
-.node--type-project.node--view-mode-full .article--content-container .node__content .field--name-field-submission-type .field__item {
-  font-size: 16px; }
-
 .node--type-data-set.node--view-mode-full .article--content-container .node__content fieldset:not(.object-type),
 .node--type-project.node--view-mode-full .article--content-container .node__content fieldset:not(.object-type) {
   border: 1px solid #1bbd7d;

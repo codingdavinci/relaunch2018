@@ -117,12 +117,6 @@
           }
         }
 
-        .field--name-field-submission-type {
-          .field__item {
-            @include font-size(16px);
-          }
-        }
-
         fieldset {
           &:not(.object-type) {
             border: 1px solid $green;

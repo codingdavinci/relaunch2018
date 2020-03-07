@@ -279,13 +279,16 @@ function relaunch2018_preprocess_field(array &$variables) {
   $variables['uuid'] = $uuid_service->generate();
 
   $badgeFields = [
+    'field_access_mode',
     'field_controlled_vocabularies',
     'field_file_types',
     'field_has_geo_references',
     'field_keywords',
+    'field_license_code',
     'field_metadata_format',
     'field_metadata_standards',
     'field_object_type',
+    'field_submission_type',
     'field_theme',
   ];
 
