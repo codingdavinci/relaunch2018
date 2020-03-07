@@ -17,6 +17,7 @@
 
   .node__submitted {
     @include font-size(14px);
+    display: inline-block;
 
     a {
       @include grayLink;

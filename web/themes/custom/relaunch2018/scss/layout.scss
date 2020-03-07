@@ -219,6 +219,10 @@ header:not(.header--tiles) {
   }
 }
 
+.field--name-field-event {
+  @include tag-list;
+}
+
 
 .region-content {
   padding-top: map_get($spacers, 10);
@@ -230,38 +234,6 @@ header:not(.header--tiles) {
       @include font-size(14px);
       color: $gray;
       margin-bottom: map_get($spacers, 1);
-    }
-
-    > .field__items,
-    > .field__item {
-      display: inline-block;
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-
-      .field__item {
-        @include font-size(12px);
-        display: block;
-        float: left;
-        margin: 0 map_get($spacers, 1) map_get($spacers, 1) 0;
-
-        a {
-          border: 1px solid $green;
-          border-radius: 50px;
-          padding: 4px 12px;
-
-          &:hover {
-            background-color: $green-dark;
-            border-color: $green-dark;
-            color: $white;
-            text-decoration: none;
-          }
-        }
-
-        &.menu-item--active-trail {
-          font-weight: $font-weight-bold;
-        }
-      }
     }
 
     &+hr {

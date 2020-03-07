@@ -302,11 +302,6 @@ function relaunch2018_preprocess_field(array &$variables) {
     }
     $variables['attributes']['class'][] = 'clearfix';
     $variables['attributes']['class'][] = 'text-formated';
-  } elseif ($variables['field_name'] === 'field_tags') {
-    if (!isset($variables['attributes']['class'])) {
-      $variables['attributes']['class'] = [];
-    }
-    $variables['attributes']['class'][] = 'container';
   }
 }
 

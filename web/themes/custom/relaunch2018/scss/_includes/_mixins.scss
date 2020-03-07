@@ -116,15 +116,10 @@
 
 @mixin tag-list {
   display: inline-block;
+  font-weight: $font-weight-semi-bold;
   list-style-type: none;
   margin: 0;
   padding: 0;
-
-  li {
-    &:before {
-      display: none;
-    }
-  }
 
   > * {
     @include font-size(12px);
@@ -137,10 +132,15 @@
     span {
       border: 1px solid $green;
       border-radius: 50px;
-      padding: 4px 12px;
+      display: inline-block;
+      line-height: 18px;
+      padding: 0 12px 2px 12px;
     }
 
     a {
+      @include easeAll;
+      color: $green;
+
       &:hover {
         background-color: $green-dark;
         border-color: $green-dark;
@@ -153,11 +153,16 @@
       background-color: $green-dark;
       border-color: $green-dark;
       color: $white;
+      cursor: default;
       opacity: .5;
     }
 
     &.menu-item--active-trail {
-      font-weight: $font-weight-bold;
+      a {
+        background-color: $green-dark;
+        border-color: $green-dark;
+        color: $white;
+      }
     }
   }
 }

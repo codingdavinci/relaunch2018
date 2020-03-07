@@ -93,10 +93,6 @@
     .project__tags {
       padding-top: map_get($spacers, 3);
 
-      > div {
-        @include tag-list;
-      }
-
       & + .project__tags {
         padding-top: 0;
       }
