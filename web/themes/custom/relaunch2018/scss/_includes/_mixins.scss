@@ -120,6 +120,7 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
+  vertical-align: bottom;
 
   > * {
     @include font-size(12px);

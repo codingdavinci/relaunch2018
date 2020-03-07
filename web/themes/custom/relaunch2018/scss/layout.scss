@@ -212,7 +212,7 @@ header:not(.header--tiles) {
 }
 
 .field--name-field-tags {
-  line-height: 1;
+  line-height: 16px;
 
   > .field__items {
     @include tag-list;
@@ -228,8 +228,6 @@ header:not(.header--tiles) {
   padding-top: map_get($spacers, 10);
 
   .field--name-field-events {
-    padding-top: map_get($spacers, 3);
-
     h2 {
       @include font-size(14px);
       color: $gray;
