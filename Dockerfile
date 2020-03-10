@@ -58,10 +58,11 @@ RUN { \
 		echo "max_execution_time = 600"; \
 		echo "max_input_vars = 5000"; \
 	} > /usr/local/etc/php/conf.d/0-upload_large_dumps.ini
+RUN a2enmod http2
 
 WORKDIR /var/www/html
 COPY --from=COMPOSER_CHAIN /tmp/cdv/ .
-COPY docker-php-entrypoint-drupal /usr/local/bin/
+COPY docker-php-entrypoint-drupal.sh /usr/local/bin/docker-php-entrypoint-drupal
 RUN chmod 775 /usr/local/bin/docker-php-entrypoint-drupal
 RUN find . -type d -exec chmod 755 {} \;
 RUN find . -type f -exec chmod 644 {} \;
@@ -73,10 +74,12 @@ RUN { \
 		echo "  DocumentRoot /var/www/html/web"; \
 		echo "  ErrorLog ${APACHE_LOG_DIR}/error.log"; \
 		echo "  CustomLog ${APACHE_LOG_DIR}/access.log combined"; \
+		echo "  Protocols h2 http/1.1"; \
 		echo "</VirtualHost>"; \
 	} > /etc/apache2/sites-enabled/000-default.conf
 
 # Clean system
+RUN apt-get clean
 RUN rm -rf /var/lib/apt/lists/*
 
 ENTRYPOINT ["docker-php-entrypoint-drupal"]

@@ -5,7 +5,7 @@ echo "Start Drupal Update DB..."
 echo "Start Drupal Cache Rebuild..."
 /var/www/html/vendor/bin/drush --root /var/www/html/web cache-rebuild
 echo "Start Drupal Core Cron..."
-/var/www/html/vendor/bin/drush --root /var/www/html/web core-cron
+/var/www/html/vendor/bin/drush --root /var/www/html/web --quiet cron
 
 set -e
 docker-php-entrypoint

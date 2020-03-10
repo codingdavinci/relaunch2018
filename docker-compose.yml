@@ -1,21 +1,36 @@
-version: '2'
+version: 2
 services:
-  cdv:
-    image: codingsdavinci/relaunch2018:latest
-    container_name: "cdv_drupal"
+  drupaldb:
+    image: mariadb:10
+    restart: always
+    volumes:
+      - cdvdb:/var/lib/mysql
+    environment:
+      - MYSQL_RANDOM_ROOT_PASSWORD=yes
+      - MYSQL_PASSWORD=cdvpw
+      - MYSQL_DATABASE=cdv
+      - MYSQL_USER=cdv
+    networks:
+      - cdv
+  drupalapp:
+    image: codingdavinci/relaunch2018:latest
     restart: always
     environment:
-      MYSQL_HOSTNAME: "cdv.example.com"
-      MYSQL_DATABASE: "mycdvdatabase"
-      MYSQL_USER: "mycdvuser"
-      MYSQL_PASSWORD: "mycdvpassword"
+      MYSQL_HOSTNAME: "drupaldb"
+      MYSQL_DATABASE: "cdv"
+      MYSQL_USER: "cdv"
+      MYSQL_PASSWORD: "cdvpw"
       MYSQL_PORT: "3306"
-      HASH_SALT: "myverysecretcdvhashsalt"
+      HASH_SALT: "MY_SALT"
       UPDATE_FREE_ACCESS: "FALSE"
       FILE_PUBLIC_PATH: "sites/default/files"
       TRUSTED_HOST_PATTERNS: "^localhost$$, ^127.0.0.1$$, ^test.codingdavinci.de$$"
       APACHE_LOG_DIR: "/var/www/html/web/sites/default/files/logs"
     volumes:
       - cdv:/var/www/html/web/sites/default/files
-    ports:
-      - "80:80"
+    networks:
+      - cdv
+networks:
+  cdv:
+    external:
+      name: cdv
