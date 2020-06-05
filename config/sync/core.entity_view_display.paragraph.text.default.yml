@@ -3,7 +3,6 @@ langcode: de
 status: true
 dependencies:
   config:
-    - field.field.paragraph.text.field_heading
     - field.field.paragraph.text.field_text
     - paragraphs.paragraphs_type.text
   module:
@@ -13,16 +12,8 @@ targetEntityType: paragraph
 bundle: text
 mode: default
 content:
-  field_heading:
-    weight: 0
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
   field_text:
-    weight: 1
+    weight: 0
     label: hidden
     settings: {  }
     third_party_settings: {  }

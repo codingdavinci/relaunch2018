@@ -20,7 +20,6 @@ description: 'Liste von Events.'
 tag: ''
 base_table: node_field_data
 base_field: nid
-core: 8.x
 display:
   default:
     display_plugin: default
@@ -124,6 +123,8 @@ display:
           id: status
           expose:
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
           group: 1
         type:
           id: type
@@ -134,6 +135,9 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: bundle
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
         field_range_end_value:
           id: field_range_end_value
           table: node__field_range
@@ -164,6 +168,8 @@ display:
             placeholder: ''
             min_placeholder: ''
             max_placeholder: ''
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -225,6 +231,8 @@ display:
           id: status
           expose:
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
           group: 1
         type:
           id: type
@@ -235,6 +243,9 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: bundle
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
         field_range_end_value:
           id: field_range_end_value
           table: node__field_range
@@ -265,6 +276,8 @@ display:
             placeholder: ''
             min_placeholder: ''
             max_placeholder: ''
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -502,27 +515,6 @@ display:
       tags:
         - 'config:field.storage.node.field_display_date'
         - 'config:field.storage.node.field_short_title'
-  block_2:
-    display_plugin: block
-    id: block_2
-    display_title: 'Bevorstehende Events'
-    position: 1
-    display_options:
-      display_extenders: {  }
-      css_class: ''
-      defaults:
-        css_class: false
-        title: false
-      display_description: ''
-      title: 'Bevorstehende Events'
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - 'user.node_grants:view'
-        - user.permissions
-      tags: {  }
   page_1:
     display_plugin: page
     id: page_1

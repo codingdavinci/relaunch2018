@@ -1,23 +1,23 @@
-uuid: 0356c431-f275-4fc1-9c63-bf0c580759ba
+uuid: a6babf96-2964-4ee2-a63a-c0a81877a426
 langcode: de
 status: true
 dependencies:
   content:
-    - 'block_content:paragraphs:7977c636-36a6-4db3-b5ff-fdadc8a69fd0'
+    - 'block_content:paragraphs:914825f5-0f8a-4504-a871-505a72e109a9'
   module:
     - block_content
     - system
   theme:
     - relaunch2018
-id: intro_presse
+id: block_participate
 theme: relaunch2018
 region: content
-weight: -18
+weight: -10
 provider: null
-plugin: 'block_content:7977c636-36a6-4db3-b5ff-fdadc8a69fd0'
+plugin: 'block_content:914825f5-0f8a-4504-a871-505a72e109a9'
 settings:
-  id: 'block_content:7977c636-36a6-4db3-b5ff-fdadc8a69fd0'
-  label: 'Einleitung: Presse'
+  id: 'block_content:914825f5-0f8a-4504-a871-505a72e109a9'
+  label: 'Startseite: Jetzt anmelden'
   provider: block_content
   label_display: '0'
   status: true
@@ -26,6 +26,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: /presse
+    pages: '<front>'
     negate: false
     context_mapping: {  }

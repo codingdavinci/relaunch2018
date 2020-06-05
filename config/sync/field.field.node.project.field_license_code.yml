@@ -10,7 +10,7 @@ id: node.project.field_license_code
 field_name: field_license_code
 entity_type: node
 bundle: project
-label: 'Lizenz des Quelltexts (falls vorhanden)'
+label: 'Lizenz des Quelltexts'
 description: ''
 required: false
 translatable: false

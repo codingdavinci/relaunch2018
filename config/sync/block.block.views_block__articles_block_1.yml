@@ -13,7 +13,7 @@ dependencies:
 id: views_block__articles_block_1
 theme: relaunch2018
 region: content
-weight: -11
+weight: -14
 provider: null
 plugin: 'views_block:articles-block_1'
 settings:

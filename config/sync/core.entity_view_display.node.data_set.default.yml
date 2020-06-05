@@ -6,7 +6,6 @@ dependencies:
     - field.field.node.data_set.field_access_mode
     - field.field.node.data_set.field_acknowledge_privacy
     - field.field.node.data_set.field_attributed_image
-    - field.field.node.data_set.field_audio_video
     - field.field.node.data_set.field_controlled_vocabularies
     - field.field.node.data_set.field_description
     - field.field.node.data_set.field_description_unconstrained
@@ -47,7 +46,7 @@ third_party_settings:
         - field_metadata_license
         - field_metadata_doc_links
       parent_name: ''
-      weight: 12
+      weight: 11
       format_type: fieldset
       format_settings:
         id: ''
@@ -63,7 +62,7 @@ third_party_settings:
         - field_file_types
         - field_media_license
       parent_name: ''
-      weight: 11
+      weight: 10
       format_type: fieldset
       format_settings:
         id: ''
@@ -76,7 +75,7 @@ third_party_settings:
         - field_access_mode
         - field_links
       parent_name: ''
-      weight: 13
+      weight: 12
       format_type: fieldset
       format_settings:
         id: ''
@@ -111,15 +110,6 @@ content:
       link: ''
     third_party_settings: {  }
     region: content
-  field_audio_video:
-    weight: 3
-    label: hidden
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    type: entity_reference_revisions_entity_view
-    region: content
   field_controlled_vocabularies:
     type: entity_reference_label
     weight: 6
@@ -129,14 +119,14 @@ content:
       link: false
     third_party_settings: {  }
   field_description:
-    weight: 6
+    weight: 5
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_description_unconstrained:
-    weight: 7
+    weight: 6
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -144,7 +134,7 @@ content:
     region: content
   field_events:
     type: entity_reference_revisions_entity_view
-    weight: 4
+    weight: 3
     label: hidden
     settings:
       view_mode: preview
@@ -170,7 +160,7 @@ content:
       format_custom_false: ''
     third_party_settings: {  }
   field_keywords:
-    weight: 10
+    weight: 9
     label: above
     settings:
       link: false
@@ -254,7 +244,7 @@ content:
       link: false
     third_party_settings: {  }
   field_object_type:
-    weight: 8
+    weight: 7
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -271,14 +261,14 @@ content:
     third_party_settings: {  }
   field_submission_type:
     type: entity_reference_label
-    weight: 5
+    weight: 4
     region: content
     label: above
     settings:
       link: false
     third_party_settings: {  }
   field_theme:
-    weight: 9
+    weight: 8
     label: above
     settings:
       link: false

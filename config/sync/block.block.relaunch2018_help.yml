@@ -10,8 +10,8 @@ _core:
   default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
 id: relaunch2018_help
 theme: relaunch2018
-region: footer
-weight: -16
+region: admin_tabs
+weight: -9
 provider: null
 plugin: help_block
 settings:

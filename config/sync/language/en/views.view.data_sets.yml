@@ -8,6 +8,8 @@ display:
           tags:
             previous: '‹ previous'
             next: 'next ›'
+            first: '« Start'
+            last: 'End »'
           expose:
             items_per_page_options_all_label: '- All -'
       fields:

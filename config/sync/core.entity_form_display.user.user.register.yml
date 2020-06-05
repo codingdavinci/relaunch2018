@@ -4,7 +4,16 @@ status: false
 dependencies:
   config:
     - core.entity_form_mode.user.register
+    - field.field.user.user.field_acknowledge_privacy
+    - field.field.user.user.field_institution_name
+    - field.field.user.user.field_link
+    - field.field.user.user.field_logo
+    - field.field.user.user.field_representative_email
+    - field.field.user.user.field_representative_name
+    - field.field.user.user.field_representative_phone
+    - field.field.user.user.field_representative_responsible
   module:
+    - path
     - user
 _core:
   default_config_hash: K-1rBM8mTIkFp9RqOC2tMRUukOQ1xbRCfSKK8dEddnA
@@ -23,7 +32,26 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  matomo:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   contact: true
+  field_acknowledge_privacy: true
+  field_institution_name: true
+  field_link: true
+  field_logo: true
+  field_representative_email: true
+  field_representative_name: true
+  field_representative_phone: true
+  field_representative_responsible: true
   langcode: true
   timezone: true

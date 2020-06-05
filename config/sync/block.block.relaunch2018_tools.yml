@@ -12,8 +12,8 @@ _core:
   default_config_hash: NeHSoqm4XFqA7_0bDmR429ZZQt3LRbZMNRJTMsFyOfI
 id: relaunch2018_tools
 theme: relaunch2018
-region: footer
-weight: -15
+region: admin_tabs
+weight: -4
 provider: null
 plugin: 'system_menu_block:tools'
 settings:

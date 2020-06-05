@@ -4,12 +4,13 @@ status: true
 dependencies:
   module:
     - block_figures
+    - system
   theme:
     - relaunch2018
 id: block_figures
 theme: relaunch2018
-region: landing_page__figures
-weight: -19
+region: content
+weight: -11
 provider: null
 plugin: block_figures
 settings:
@@ -17,4 +18,9 @@ settings:
   label: 'Startseite: Zahlen'
   provider: block_figures
   label_display: '0'
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

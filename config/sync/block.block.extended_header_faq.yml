@@ -1,9 +1,9 @@
-uuid: 699bedff-886a-4905-8019-1878944ea3c7
+uuid: 77b5e412-4966-4d65-90fb-3d95e9dd5082
 langcode: de
 status: true
 dependencies:
   content:
-    - 'block_content:extended_header:c267e082-2a40-4286-bf35-d123c24afaeb'
+    - 'block_content:extended_page_header:eae49010-470f-4cc1-a3cd-76e70a5987d0'
   module:
     - block_content
     - system
@@ -12,11 +12,11 @@ dependencies:
 id: extended_header_faq
 theme: relaunch2018
 region: header
-weight: -15
+weight: 0
 provider: null
-plugin: 'block_content:c267e082-2a40-4286-bf35-d123c24afaeb'
+plugin: 'block_content:eae49010-470f-4cc1-a3cd-76e70a5987d0'
 settings:
-  id: 'block_content:c267e082-2a40-4286-bf35-d123c24afaeb'
+  id: 'block_content:eae49010-470f-4cc1-a3cd-76e70a5987d0'
   label: 'Erweiterter Seitenkopf: FAQ'
   provider: block_content
   label_display: '0'

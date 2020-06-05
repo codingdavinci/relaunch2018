@@ -34,12 +34,17 @@ third_party_settings:
         - field_license_media
       parent_name: ''
       weight: 8
-      format_type: fieldset
+      format_type: html_element
       format_settings:
-        description: ''
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
         id: ''
         classes: group--result
-      label: Links
+      label: Ergebnis
       region: content
     group_data_sets:
       children:
@@ -150,7 +155,7 @@ content:
     region: content
   field_links:
     weight: 6
-    label: hidden
+    label: above
     settings:
       trim_length: 80
       url_only: false

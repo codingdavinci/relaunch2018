@@ -11,7 +11,7 @@ dependencies:
 id: footer
 theme: relaunch2018
 region: footer
-weight: -19
+weight: 0
 provider: null
 plugin: 'block_content:27c2c182-f477-435d-a043-d5ca9ece1dcb'
 settings:

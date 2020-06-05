@@ -48,12 +48,6 @@ type_settings:
         - draft
         - published
         - submitted
-    republish:
-      label: Republish
-      from:
-        - unpublished
-      to: published
-      weight: 2
     submit:
       label: Submit
       from:

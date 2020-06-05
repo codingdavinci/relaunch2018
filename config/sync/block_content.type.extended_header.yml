@@ -1,8 +1,0 @@
-uuid: 5cabdb6d-a2a1-438d-a03a-5438e28d0649
-langcode: de
-status: true
-dependencies: {  }
-id: extended_header
-label: 'Erweiterter Seitenkopf'
-revision: 1
-description: ''

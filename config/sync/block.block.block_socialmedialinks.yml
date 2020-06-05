@@ -1,23 +1,23 @@
-uuid: 754eb7c1-62d0-4e3d-99a6-14269dfe18ab
+uuid: 1a925eb8-b533-4368-b531-6e0672b68585
 langcode: de
 status: true
 dependencies:
   content:
-    - 'block_content:basic:13c1ac55-c621-420f-8acb-b9d7c4eb1a7e'
+    - 'block_content:paragraphs:3b52ceab-0198-4a67-b9a4-c87687d13a08'
   module:
     - block_content
     - system
   theme:
     - relaunch2018
-id: frontpage_tagline
+id: block_socialmedialinks
 theme: relaunch2018
-region: header
-weight: 0
+region: content
+weight: -7
 provider: null
-plugin: 'block_content:13c1ac55-c621-420f-8acb-b9d7c4eb1a7e'
+plugin: 'block_content:3b52ceab-0198-4a67-b9a4-c87687d13a08'
 settings:
-  id: 'block_content:13c1ac55-c621-420f-8acb-b9d7c4eb1a7e'
-  label: 'Startseite: Untertitel'
+  id: 'block_content:3b52ceab-0198-4a67-b9a4-c87687d13a08'
+  label: 'Startseite: Social-Media-Links'
   provider: block_content
   label_display: '0'
   status: true

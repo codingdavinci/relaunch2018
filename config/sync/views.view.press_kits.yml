@@ -21,7 +21,6 @@ description: 'Liste von Pressemappen.'
 tag: ''
 base_table: node_field_data
 base_field: nid
-core: 8.x
 display:
   default:
     display_plugin: default
@@ -142,6 +141,8 @@ display:
           id: status
           expose:
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
           group: 1
         type:
           id: type
@@ -152,6 +153,9 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: bundle
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
       sorts:
         field_range_value:
           id: field_range_value
@@ -240,6 +244,8 @@ display:
           id: status
           expose:
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
           group: 1
         type:
           id: type
@@ -266,6 +272,8 @@ display:
             remember_roles:
               authenticated: authenticated
             reduce: false
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -587,7 +595,7 @@ display:
       defaults:
         header: true
         relationships: false
-        css_class: true
+        css_class: false
         title: false
       menu:
         type: normal
@@ -608,6 +616,7 @@ display:
           admin_label: 'field_event: Inhalt'
           required: false
           plugin_id: standard
+      css_class: container
       title: Presse
     cache_metadata:
       max-age: -1

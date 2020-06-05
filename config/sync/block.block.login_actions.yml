@@ -10,7 +10,7 @@ dependencies:
 id: login_actions
 theme: relaunch2018
 region: content
-weight: -10
+weight: -13
 provider: null
 plugin: local_tasks_block
 settings:

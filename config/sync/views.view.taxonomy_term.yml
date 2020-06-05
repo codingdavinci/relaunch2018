@@ -17,7 +17,6 @@ description: 'Inhalt, der zu einem bestimmten Taxonomie-Begriff gehört.'
 tag: default
 base_table: node_field_data
 base_field: nid
-core: '8'
 display:
   default:
     id: default
@@ -162,6 +161,8 @@ display:
             remember_roles:
               authenticated: authenticated
             reduce: false
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -200,6 +201,8 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -245,7 +248,6 @@ display:
       display_extenders: {  }
       link_url: ''
       link_display: page_1
-      css_class: container
     cache_metadata:
       contexts:
         - 'languages:language_interface'
