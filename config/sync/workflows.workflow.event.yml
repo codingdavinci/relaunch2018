@@ -45,6 +45,7 @@ type_settings:
       weight: 1
       from:
         - draft
+        - unpublished
     unpublish:
       label: Unpublish
       from:
