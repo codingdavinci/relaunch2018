@@ -9396,6 +9396,9 @@ body.path-user:not(.user-logged-in) main {
       .pager .pager__items .pager__item.is-active a:hover, .pager .pager__items .pager__item.is-active a:active, .pager .pager__items .pager__item.is-active a:focus {
         text-decoration: underline; }
 
+body.path-user .user-register-form #edit-group-institution {
+  display: none; }
+
 /**
  * @file
  * Apart from being included in the front-end, the styles in this file are
