@@ -6,4 +6,16 @@ body.path-user {
       display: none;
     }
   }
+
+  #block-forgot-password {
+    margin: 48px 0 32px 0;
+    padding: 0 32px;
+    text-align: right;
+
+    p {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
 }

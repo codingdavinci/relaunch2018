@@ -9399,6 +9399,13 @@ body.path-user:not(.user-logged-in) main {
 body.path-user .user-register-form #edit-group-institution {
   display: none; }
 
+body.path-user #block-forgot-password {
+  margin: 48px 0 32px 0;
+  padding: 0 32px;
+  text-align: right; }
+  body.path-user #block-forgot-password p:last-child {
+    margin-bottom: 0; }
+
 /**
  * @file
  * Apart from being included in the front-end, the styles in this file are
