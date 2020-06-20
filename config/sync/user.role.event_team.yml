@@ -49,6 +49,7 @@ permissions:
   - 'edit own video media'
   - 'revert data_set revisions'
   - 'translate data_set node'
+  - 'translate event node'
   - 'translate project node'
   - 'update content translations'
   - 'use article transition create_new_draft'
