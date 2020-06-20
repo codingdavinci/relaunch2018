@@ -29,7 +29,7 @@
         "drupal/config_installer": "^1.8",
         "drupal/console": "~1.0",
         "drupal/core-composer-scaffold": "^8.8",
-        "drupal/core-recommended": "^8.8",
+        "drupal/core-recommended": "^8.9",
         "drupal/db_maintenance": "^1.4",
         "drupal/eu_cookie_compliance": "^1.8",
         "drupal/field_group": "^3.0",
