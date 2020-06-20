@@ -15,7 +15,7 @@ bundle: event
 label: Text-Intro
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
@@ -25,14 +25,23 @@ settings:
     target_bundles:
       introtext: introtext
     target_bundles_drag_drop:
-      introtext:
-        enabled: true
-        weight: 13
+      attributed_audio_video:
+        weight: 33
+        enabled: false
       attributed_image:
         weight: 14
         enabled: false
       attribution:
         weight: 15
+        enabled: false
+      box:
+        weight: 36
+        enabled: false
+      box_group:
+        weight: 37
+        enabled: false
+      box_group_box:
+        weight: 38
         enabled: false
       data_set_event:
         weight: 16
@@ -40,11 +49,53 @@ settings:
       filesize:
         weight: 17
         enabled: false
+      grid:
+        weight: 41
+        enabled: false
+      grid_element:
+        weight: 42
+        enabled: false
+      heading:
+        weight: 43
+        enabled: false
       image:
         weight: 18
         enabled: false
+      introtext:
+        enabled: true
+        weight: 13
+      jury:
+        weight: 46
+        enabled: false
+      jury_member:
+        weight: 47
+        enabled: false
+      logo:
+        weight: 48
+        enabled: false
+      logo_group:
+        weight: 49
+        enabled: false
+      logos:
+        weight: 50
+        enabled: false
+      prize:
+        weight: 51
+        enabled: false
+      prizes:
+        weight: 52
+        enabled: false
+      project_image:
+        weight: 53
+        enabled: false
       representative:
         weight: 19
+        enabled: false
+      slideshow:
+        weight: 55
+        enabled: false
+      social_media:
+        weight: 56
         enabled: false
       team_member:
         weight: 20
@@ -57,6 +108,15 @@ settings:
         enabled: false
       textblock_right:
         weight: 23
+        enabled: false
+      timeline:
+        weight: 61
+        enabled: false
+      timeline_item:
+        weight: 62
+        enabled: false
+      video:
+        weight: 63
         enabled: false
       winner:
         weight: 24

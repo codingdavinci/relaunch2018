@@ -1,0 +1,22 @@
+uuid: 72aee277-2e06-48df-94a9-66fdc9885fdf
+langcode: de
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.heading
+id: paragraph.heading.status
+field_name: status
+entity_type: paragraph
+bundle: heading
+label: Veröffentlicht
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: An
+  off_label: Aus
+field_type: boolean
