@@ -4,6 +4,7 @@ use Drupal\Core\Entity\ContentEntityInterface;
 
 const LANGUAGE_SWITCHER_LANGUAGES = [
   'Englisch' => 'En',
+  'Französisch' => 'Fr',
   'Deutsch' => 'De',
 ];
 
@@ -20,7 +21,10 @@ function language_switcher_language_switch_links_alter(array &$links) {
       $link['title'] = LANGUAGE_SWITCHER_LANGUAGES[$link['title']];
     }
 
-    if (_language_switcher_is_view_route()) {
+    if (
+      _language_switcher_is_view_route()
+      || _language_switcher_is_registration_route()
+    ) {
       continue;
     }
 
@@ -47,6 +51,16 @@ function language_switcher_language_switch_links_alter(array &$links) {
  */
 function _language_switcher_is_view_route() {
   return strpos(\Drupal::routeMatch()->getRouteName(), 'view.') !== FALSE;
+}
+
+/**
+ * @return bool
+ */
+function _language_switcher_is_registration_route() {
+  return !!preg_match(
+    '/^user\.(login|pass|register)$/',
+    \Drupal::routeMatch()->getRouteName()
+  );
 }
 
 /**
