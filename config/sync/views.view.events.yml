@@ -515,6 +515,27 @@ display:
       tags:
         - 'config:field.storage.node.field_display_date'
         - 'config:field.storage.node.field_short_title'
+  block_2:
+    display_plugin: block
+    id: block_2
+    display_title: 'Bevorstehende Events'
+    position: 1
+    display_options:
+      display_extenders: {  }
+      css_class: ''
+      defaults:
+        css_class: false
+        title: false
+      display_description: ''
+      title: 'Bevorstehende Events'
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
   page_1:
     display_plugin: page
     id: page_1

@@ -11,7 +11,7 @@ dependencies:
 id: main_menu
 theme: relaunch2018
 region: primary_menu
-weight: -16
+weight: -19
 provider: null
 plugin: 'system_menu_block:main'
 settings:

@@ -1,6 +1,6 @@
 uuid: c2977418-628e-4c8f-9458-8280e4584c7c
 langcode: de
-status: false
+status: true
 dependencies:
   module:
     - system
@@ -10,8 +10,8 @@ _core:
   default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
 id: relaunch2018_page_title
 theme: relaunch2018
-region: admin_tabs
-weight: -12
+region: header
+weight: -17
 provider: null
 plugin: page_title_block
 settings:
@@ -22,6 +22,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: "/news\r\n/tags/*"
-    negate: false
+    pages: "<front>\r\n/news/*\r\n!/news\r\n/user/*\r\n!/user/login\r\n!/user/register\r\n!/user/password\r\n/daten/*\r\n/events/*\r\n/projects/*\r\n/projekte/*"
+    negate: true
     context_mapping: {  }

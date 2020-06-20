@@ -3,7 +3,6 @@ langcode: de
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.frontpage
     - core.entity_view_mode.node.teaser
     - node.type.article
     - node.type.event
@@ -61,7 +60,7 @@ display:
         type: 'entity:node'
         options:
           relationship: none
-          view_mode: frontpage
+          view_mode: teaser
       fields:
         title:
           id: title
@@ -241,7 +240,7 @@ display:
           relationship: none
           view_mode: teaser
       title: 'Nächste Events'
-      enabled: true
+      enabled: false
       sorts:
         field_range_end_value:
           id: field_range_end_value
@@ -366,18 +365,7 @@ display:
       link_url: /news
       display_description: ''
       path: node
-      footer:
-        area_text_custom:
-          id: area_text_custom
-          table: views
-          field: area_text_custom
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: false
-          tokenize: false
-          content: '<a href="/news" class="icon icon-arrow">weitere News</a>'
-          plugin_id: text_custom
+      footer: {  }
     cache_metadata:
       max-age: -1
       contexts:

@@ -262,7 +262,7 @@ display:
           label: ''
           exclude: false
           alter:
-            alter_text: true
+            alter_text: false
             text: '<span class="icon-arrow">{{ field_links }}</span>'
             make_link: false
             path: ''
@@ -456,8 +456,8 @@ display:
         title: FAQ
         description: ''
         expanded: false
-        parent: 'menu_link_content:b44559be-a326-4847-b5c1-79a3eb8556be'
-        weight: -44
+        parent: ''
+        weight: 10
         context: '0'
         menu_name: main
         enabled: true

@@ -7,5 +7,5 @@ _core:
 id: und
 label: 'Nicht angegeben'
 direction: ltr
-weight: 2
+weight: 3
 locked: true

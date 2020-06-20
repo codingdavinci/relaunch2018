@@ -17,7 +17,13 @@ settings:
           items:
             - Bold
             - Italic
+            - Superscript
+            - Subscript
+            - '-'
             - Format
+            - RemoveFormat
+            - '-'
+            - '-'
         -
           name: Listen
           items:
@@ -31,8 +37,15 @@ settings:
         -
           name: Einfügen
           items:
+            - Copy
+            - Cut
+            - Paste
             - PasteText
             - PasteFromWord
+        -
+          name: source
+          items:
+            - Source
   plugins:
     language:
       language_list: un

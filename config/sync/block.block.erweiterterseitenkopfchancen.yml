@@ -1,6 +1,6 @@
 uuid: 1f22d77e-6d2a-4db3-9574-5217a3aae51b
 langcode: de
-status: true
+status: false
 dependencies:
   content:
     - 'block_content:extended_page_header:aa4b8db4-e57c-4aee-a123-7503dc317079'
@@ -12,7 +12,7 @@ dependencies:
 id: erweiterterseitenkopfchancen
 theme: relaunch2018
 region: header
-weight: 0
+weight: -12
 provider: null
 plugin: 'block_content:aa4b8db4-e57c-4aee-a123-7503dc317079'
 settings:

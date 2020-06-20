@@ -11,7 +11,7 @@ id: node.press_kit.field_files
 field_name: field_files
 entity_type: node
 bundle: press_kit
-label: Dateien
+label: Pressematerial
 description: ''
 required: false
 translatable: true

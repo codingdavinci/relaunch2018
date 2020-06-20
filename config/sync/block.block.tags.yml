@@ -1,6 +1,6 @@
 uuid: 99c3d94f-562c-48e1-852e-429720713479
 langcode: de
-status: false
+status: true
 dependencies:
   config:
     - system.menu.tags
@@ -10,15 +10,15 @@ dependencies:
     - relaunch2018
 id: tags
 theme: relaunch2018
-region: admin_tabs
-weight: -11
+region: content
+weight: -19
 provider: null
 plugin: 'system_menu_block:tags'
 settings:
   id: 'system_menu_block:tags'
-  label: Tags
+  label: 'Nach Kategorien filtern:'
   provider: system
-  label_display: '0'
+  label_display: visible
   level: 1
   depth: 0
   expand_all_items: false

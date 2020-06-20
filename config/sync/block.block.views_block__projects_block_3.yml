@@ -12,16 +12,17 @@ dependencies:
 id: views_block__projects_block_3
 theme: relaunch2018
 region: content
-weight: -8
+weight: -13
 provider: null
 plugin: 'views_block:projects-block_3'
 settings:
   id: 'views_block:projects-block_3'
   label: ''
   provider: views
-  label_display: visible
+  label_display: '0'
   views_label: ''
   items_per_page: none
+  context_mapping: {  }
 visibility:
   request_path:
     id: request_path

@@ -1,0 +1,15 @@
+uuid: 95385eac-853b-4d7a-a46e-65dbe3a28bbf
+langcode: de
+status: true
+dependencies: {  }
+name: preview
+label: Vorschau
+effects:
+  489435bb-ad3f-4508-a4bf-799faecd8890:
+    uuid: 489435bb-ad3f-4508-a4bf-799faecd8890
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 360
+      height: 226
+      anchor: center-center

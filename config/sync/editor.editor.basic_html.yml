@@ -19,32 +19,35 @@ settings:
           items:
             - Bold
             - Italic
+            - Strike
+            - Superscript
+            - Subscript
+            - '-'
+            - RemoveFormat
         -
-          name: Linking
+          name: 'Block Formatting'
+          items:
+            - Format
+            - Styles
+        -
+          name: Links
           items:
             - DrupalLink
             - DrupalUnlink
         -
-          name: Alignment
+          name: Einfügen
           items:
-            - JustifyLeft
-            - JustifyCenter
-            - JustifyRight
+            - Copy
+            - Cut
+            - Paste
+            - PasteText
+            - PasteFromWord
         -
           name: Lists
           items:
             - BulletedList
             - NumberedList
             - Table
-        -
-          name: Media
-          items:
-            - Blockquote
-        -
-          name: 'Block Formatting'
-          items:
-            - Format
-            - Styles
         -
           name: Tools
           items:
@@ -53,7 +56,7 @@ settings:
     language:
       language_list: un
     stylescombo:
-      styles: "table.table--white|Weiße Tabelle\r\ntable.table--red|Rote Tabelle\r\na.icon-arrow|Link mit Pfeil\r\na.icon-mail-1|verlinkte E-Mail-Adresse\r\na.curly|{Link}\r\np.small|kleiner Text\r\np.icon-mail-1|E-Mail-Adresse\r\np.supertitle|Seiten-Übertitel\r\np.supertitle.small|kleine Titelüberschrift\r\na.button.button--green|Grüner Button\r\na.button.button--green.button--icon.button--arrow|Grüner Button mit Pfeil\r\na.button.button--green.button--icon.button--mail|Grüner Button mit Mail\r\na.button.button--green.button--large|Großer grüner Button\r\na.button.button--green.button--large.button--icon.button--arrow|Großer grüner Button mit Pfeil\r\na.button.button--green.button--large.button--icon.button--mail|Großer grüner Button mit Mail\r\na.button.button--red|Roter Button\r\na.button.button--red.button--icon.button--arrow|Roter Button mit Pfeil\r\na.button.button--red.button--icon.button--mail|Roter Button mit Mail\r\na.button.button--red.button--large|Großer roter Button\r\na.button.button--red.button--large.button--icon.button--arrow|Großer roter Button mit Pfeil\r\na.button.button--red.button--large.button--icon.button--mail|Großer roter Button mit Mail\r\np.icon-cc-by|CC-BY-Icon"
+      styles: "p.icon-mail-1|E-Mail-Adresse\r\ntable.table--white|Weiße Tabelle\r\ntable.table--red|Rote Tabelle\r\na.icon-arrow|Link mit Pfeil\r\na.icon-mail-1|verlinkte E-Mail-Adresse\r\na.icon-twitter|Twitter-Link\r\na.button.button--green|Grüner Button\r\na.button.button--green.button--icon.button--arrow|Grüner Button mit Pfeil\r\na.button.button--green.button--icon.button--mail|Grüner Button mit Mail\r\na.button.button--green.button--large|Großer grüner Button\r\na.button.button--green.button--large.button--icon.button--arrow|Großer grüner Button mit Pfeil\r\na.button.button--green.button--large.button--icon.button--mail|Großer grüner Button mit Mail\r\na.button.button--red|Roter Button\r\na.button.button--red.button--icon.button--arrow|Roter Button mit Pfeil\r\na.button.button--red.button--icon.button--mail|Roter Button mit Mail\r\na.button.button--red.button--large|Großer roter Button\r\na.button.button--red.button--large.button--icon.button--arrow|Großer roter Button mit Pfeil\r\na.button.button--red.button--large.button--icon.button--mail|Großer roter Button mit Mail"
 image_upload:
   status: true
   scheme: public

@@ -11,7 +11,7 @@ field_name: field_tags
 entity_type: node
 bundle: project
 label: Projekttyp
-description: ''
+description: 'What kind of project is this? Feel free to choose more than one Project-type, but don''t go crazy. If you don''t find anything appropriate in the list below please get in touch.'
 required: false
 translatable: false
 default_value: {  }

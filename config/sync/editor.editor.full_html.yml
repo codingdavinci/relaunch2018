@@ -25,6 +25,11 @@ settings:
             - '-'
             - RemoveFormat
         -
+          name: 'Block Formatting'
+          items:
+            - Format
+            - Styles
+        -
           name: Linking
           items:
             - DrupalLink
@@ -37,27 +42,32 @@ settings:
         -
           name: Media
           items:
-            - Blockquote
             - DrupalImage
             - Table
             - HorizontalRule
-        -
-          name: 'Block Formatting'
-          items:
-            - Format
         -
           name: Tools
           items:
             - ShowBlocks
             - Source
+        -
+          name: einfugen
+          items:
+            - Copy
+            - Cut
+            - Paste
+            - PasteText
+            - PasteFromWord
   plugins:
+    language:
+      language_list: un
     stylescombo:
-      styles: ''
+      styles: "table.table--white|Weiße Tabelle\r\ntable.table--red|Rote Tabelle\r\na.icon-arrow|Link mit Pfeil\r\na.icon-mail-1|verlinkte E-Mail-Adresse\r\na.icon-twitter|Twitter-Link\r\np.icon-mail-1|E-Mail-Adresse\r\na.button.button--green|Grüner Button\r\na.button.button--green.button--icon.button--arrow|Grüner Button mit Pfeil\r\na.button.button--green.button--icon.button--mail|Grüner Button mit Mail\r\na.button.button--green.button--large|Großer grüner Button\r\na.button.button--green.button--large.button--icon.button--arrow|Großer grüner Button mit Pfeil\r\na.button.button--green.button--large.button--icon.button--mail|Großer grüner Button mit Mail\r\na.button.button--red|Roter Button\r\na.button.button--red.button--icon.button--arrow|Roter Button mit Pfeil\r\na.button.button--red.button--icon.button--mail|Roter Button mit Mail\r\na.button.button--red.button--large|Großer roter Button\r\na.button.button--red.button--large.button--icon.button--arrow|Großer roter Button mit Pfeil\r\na.button.button--red.button--large.button--icon.button--mail|Großer roter Button mit Mail"
 image_upload:
   status: true
   scheme: public
   directory: inline-images
   max_size: ''
   max_dimensions:
-    width: 0
-    height: 0
+    width: null
+    height: null

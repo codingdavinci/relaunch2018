@@ -1,6 +1,6 @@
 uuid: d7881bb0-3ce5-4db9-9fbf-84c511c47c33
 langcode: de
-status: true
+status: false
 dependencies:
   content:
     - 'block_content:extended_page_header:51a2fd2e-14c5-4e5f-a644-472b2eb847cc'
@@ -12,7 +12,7 @@ dependencies:
 id: erweiterterseitenkopfziele
 theme: relaunch2018
 region: header
-weight: 0
+weight: -9
 provider: null
 plugin: 'block_content:51a2fd2e-14c5-4e5f-a644-472b2eb847cc'
 settings:

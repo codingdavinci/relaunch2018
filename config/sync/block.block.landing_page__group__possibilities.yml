@@ -1,0 +1,28 @@
+uuid: 8465ad42-f850-484b-b690-8500225355c1
+langcode: de
+status: true
+dependencies:
+  config:
+    - blockgroup.block_group_content.landing_page__figures
+  module:
+    - blockgroup
+    - system
+  theme:
+    - relaunch2018
+id: landing_page__group__possibilities
+theme: relaunch2018
+region: content
+weight: -14
+provider: null
+plugin: 'block_group:landing_page__figures'
+settings:
+  id: 'block_group:landing_page__figures'
+  label: 'Startseite: Was mit Kulturdaten möglich ist'
+  provider: blockgroup
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

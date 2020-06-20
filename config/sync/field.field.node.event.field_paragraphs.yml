@@ -7,6 +7,7 @@ dependencies:
     - node.type.event
     - paragraphs.paragraphs_type.box
     - paragraphs.paragraphs_type.box_group
+    - paragraphs.paragraphs_type.grid
     - paragraphs.paragraphs_type.heading
     - paragraphs.paragraphs_type.image
     - paragraphs.paragraphs_type.jury
@@ -48,6 +49,7 @@ settings:
       video: video
       timeline: timeline
       heading: heading
+      grid: grid
     target_bundles_drag_drop:
       textblock_left:
         enabled: true
@@ -64,30 +66,30 @@ settings:
       attributed_image:
         weight: 14
         enabled: false
-      slideshow:
-        enabled: true
-        weight: 15
       attribution:
         weight: 15
         enabled: false
+      slideshow:
+        enabled: true
+        weight: 15
       data_set_event:
         weight: 16
-        enabled: false
-      filesize:
-        weight: 17
         enabled: false
       box_group:
         enabled: true
         weight: 17
+      filesize:
+        weight: 17
+        enabled: false
       box:
         enabled: true
         weight: 18
-      introtext:
-        weight: 19
-        enabled: false
       jury:
         enabled: true
         weight: 19
+      introtext:
+        weight: 19
+        enabled: false
       representative:
         weight: 20
         enabled: false
@@ -128,8 +130,8 @@ settings:
         weight: 34
         enabled: false
       grid:
+        enabled: true
         weight: 35
-        enabled: false
       grid_element:
         weight: 36
         enabled: false

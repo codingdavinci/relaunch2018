@@ -1238,8 +1238,8 @@ display:
         filter_groups: false
         pager: false
         fields: false
-        style: false
-        row: false
+        style: true
+        row: true
         header: false
         use_more: false
         use_more_always: false
@@ -1439,20 +1439,6 @@ display:
           entity_type: node
           entity_field: title
           plugin_id: field
-      style:
-        type: default
-        options:
-          grouping: {  }
-          row_class: ''
-          default_row_class: true
-          uses_fields: true
-      row:
-        type: fields
-        options:
-          default_field_elements: true
-          inline: {  }
-          separator: ''
-          hide_empty: false
       display_description: ''
       header:
         area_text_custom:
@@ -1464,7 +1450,7 @@ display:
           admin_label: ''
           empty: false
           tokenize: false
-          content: 'Offene Kulturdaten sind in der Regel Daten, die von Kulturinstitutionen wie z.B. Museen, Archiven, Bibliotheken u.a. geschaffen werden.'
+          content: 'Alle Apps, Webseiten, Datenvisualisierungen, Spiele, interaktive Installationen und sogar Hardware, die bei Coding da Vinci auf Basis offener Kulturdaten entwickelt werden, stehen hier dauerhaft und unter offenen Lizenzen zur Verfügung.'
           plugin_id: text_custom
       use_more: true
       use_more_always: true
@@ -2252,15 +2238,15 @@ display:
           id: 0
           total_pages: null
           tags:
-            previous: '‹ zurück'
-            next: 'weiter ›'
+            previous: ‹
+            next: ›
             first: '« Anfang'
             last: 'Ende »'
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
             items_per_page_options: '5, 10, 25, 50'
-            items_per_page_options_all: true
+            items_per_page_options_all: false
             items_per_page_options_all_label: '- Alle -'
             offset: false
             offset_label: Offset

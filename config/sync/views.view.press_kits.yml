@@ -595,7 +595,7 @@ display:
       defaults:
         header: true
         relationships: false
-        css_class: false
+        css_class: true
         title: false
       menu:
         type: normal
@@ -616,7 +616,6 @@ display:
           admin_label: 'field_event: Inhalt'
           required: false
           plugin_id: standard
-      css_class: container
       title: Presse
     cache_metadata:
       max-age: -1

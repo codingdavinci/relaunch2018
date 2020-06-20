@@ -1,0 +1,23 @@
+uuid: 0a483ea0-385c-4402-b465-1055b9cd15f4
+langcode: de
+status: true
+dependencies:
+  config:
+    - block_content.type.extended_header
+    - field.field.block_content.extended_header.body
+  module:
+    - text
+id: block_content.extended_header.default
+targetEntityType: block_content
+bundle: extended_header
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

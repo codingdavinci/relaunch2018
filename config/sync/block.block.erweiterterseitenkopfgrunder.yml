@@ -1,6 +1,6 @@
 uuid: 6fa12659-a7cb-490b-b31f-3077af85acfb
 langcode: de
-status: true
+status: false
 dependencies:
   content:
     - 'block_content:extended_page_header:b5c4a9f4-44e6-4a88-ac65-cab87eaba20d'
@@ -12,7 +12,7 @@ dependencies:
 id: erweiterterseitenkopfgrunder
 theme: relaunch2018
 region: header
-weight: 0
+weight: -10
 provider: null
 plugin: 'block_content:b5c4a9f4-44e6-4a88-ac65-cab87eaba20d'
 settings:
