@@ -13,13 +13,11 @@ const USER_MANAGEMENT_SELECTABLE_ROLE_IDS = ['institution', 'project_team'];
  */
 function user_management_preprocess_html(array &$variables) {
   if (\Drupal::service('path.current')->getPath() === '/user/register') {
-    if (($role = \Drupal::request()->query->get('role')) !== null) {
-      if ($role === 'institution') {
-        $variables['head_title']['title'] = t('Create new institution account');
-      }
-      else {
-        $variables['head_title']['title'] = t('Create new participant account');
-      }
+    if (($role = \Drupal::request()->query->get('role')) === 'institution') {
+      $variables['head_title']['title'] = t('Create new institution account');
+    }
+    else {
+      $variables['head_title']['title'] = t('Create new participant account');
     }
   }
 }
@@ -31,13 +29,11 @@ function user_management_preprocess_html(array &$variables) {
  */
 function user_management_preprocess_block__page_title_block(array &$variables) {
   if (\Drupal::service('path.current')->getPath() === '/user/register') {
-    if (($role = \Drupal::request()->query->get('role')) !== null) {
-      if ($role === 'institution') {
-        $variables['content']['#title'] = t('Create new institution account');
-      }
-      else {
-        $variables['content']['#title'] = t('Create new participant account');
-      }
+    if (($role = \Drupal::request()->query->get('role')) === 'institution') {
+      $variables['content']['#title'] = t('Create new institution account');
+    }
+    else {
+      $variables['content']['#title'] = t('Create new participant account');
     }
   }
 }
@@ -66,12 +62,14 @@ function user_management_preprocess_block__login_actions(array &$variables) {
 function user_management_form_user_register_form_alter(array &$form) {
   $role = \Drupal::request()->query->get('role');
 
-  if (in_array($role, USER_MANAGEMENT_SELECTABLE_ROLE_IDS)) {
-    $form['user_management__role'] = [
-      '#type' => 'hidden',
-      '#value' => $role,
-    ];
+  if ($role !== 'institution') {
+    $role = USER_MANAGEMENT_DEFAULT_ROLE_ID;
   }
+
+  $form['user_management__role'] = [
+    '#type' => 'hidden',
+    '#value' => $role,
+  ];
 
   $form['actions']['submit']['#submit'][] = '_user_management_submit';
 }
