@@ -4436,12 +4436,11 @@ display:
         operator: AND
         groups:
           1: AND
-      rendering_language: '***LANGUAGE_entity_translation***'
+      rendering_language: '***LANGUAGE_language_interface***'
       sorts: {  }
     cache_metadata:
       max-age: -1
       contexts:
-        - 'languages:language_content'
         - 'languages:language_interface'
         - url
         - url.query_args
