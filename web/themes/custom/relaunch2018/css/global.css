@@ -10897,7 +10897,8 @@ a.icon-mail-1 {
               font-size: 0.6em;
               vertical-align: middle; }
             .paragraph--type--jury .field--name-field-jury .field__items > .row > div .paragraph--type--jury-member .jury--member--info--wrapper .jury--member--info .field.field--name-field-link a:hover {
-              color: #0A8856; }
+              color: #0A8856;
+              text-decoration: none; }
           @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
             .paragraph--type--jury .field--name-field-jury .field__items > .row > div .paragraph--type--jury-member .jury--member--info--wrapper .jury--member--info .field.field--name-field-link:before {
               display: inline-block; }
