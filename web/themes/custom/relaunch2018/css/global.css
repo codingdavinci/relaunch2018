@@ -8947,6 +8947,8 @@ ul.ui-autocomplete li.ui-menu-item a {
         color: #fff;
         content: '{';
         margin-right: 0.1em; }
+      .language-switcher-language-url li a:hover {
+        color: #fff; }
     .language-switcher-language-url li.is-active {
       color: #fff; }
       .language-switcher-language-url li.is-active a {
