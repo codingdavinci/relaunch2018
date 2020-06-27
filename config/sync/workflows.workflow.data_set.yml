@@ -24,7 +24,7 @@ type_settings:
     submitted:
       published: false
       default_revision: false
-      label: Freigegeben
+      label: 'request review'
       weight: -1
     unpublished:
       published: false

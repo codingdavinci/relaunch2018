@@ -3,7 +3,13 @@ langcode: de
 status: true
 dependencies:
   config:
-    - workflows.workflow.editorial
+    - workflows.workflow.article
+    - workflows.workflow.data_set
+    - workflows.workflow.event
+    - workflows.workflow.faq
+    - workflows.workflow.page
+    - workflows.workflow.press_kit
+    - workflows.workflow.project
   module:
     - content_moderation
     - node
@@ -725,7 +731,13 @@ display:
           admin_label: ''
           operator: 'not in'
           value:
-            editorial-published: editorial-published
+            article-published: article-published
+            data_set-published: data_set-published
+            event-published: event-published
+            faq-published: faq-published
+            page-published: page-published
+            press_kit-published: press_kit-published
+            project-published: project-published
           group: 1
           exposed: false
           expose:
@@ -734,6 +746,8 @@ display:
             description: ''
             use_operator: false
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: ''
             required: false
             remember: false
@@ -741,8 +755,6 @@ display:
             remember_roles:
               authenticated: authenticated
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
