@@ -60,6 +60,10 @@ function user_management_preprocess_block__login_actions(array &$variables) {
  * @param array $form
  */
 function user_management_form_user_register_form_alter(array &$form) {
+  if (\Drupal::routeMatch()->getRouteName() !== 'user.register') {
+    return;
+  }
+
   $role = \Drupal::request()->query->get('role');
 
   if ($role !== 'institution') {
@@ -84,13 +88,16 @@ function user_management_form_user_register_form_alter(array &$form) {
  * @param FormStateInterface $form_state
  */
 function _user_management_submit(array $form, FormStateInterface &$form_state) {
-  $roleId = USER_MANAGEMENT_DEFAULT_ROLE_ID;
-
   if ($form_state->hasValue('user_management__role')) {
     $roleId = $form_state->getValue('user_management__role');
 
-    $roleId = in_array($roleId, USER_MANAGEMENT_SELECTABLE_ROLE_IDS)
-      ? $roleId : USER_MANAGEMENT_DEFAULT_ROLE_ID;
+    if ($roleId === null) {
+      return;
+    }
+
+    if (!in_array($roleId, USER_MANAGEMENT_SELECTABLE_ROLE_IDS)) {
+      throw new Exception('user_management module: invalid operation');
+    }
   }
 
   $role = \Drupal::entityTypeManager()->getStorage('user_role')->load($roleId);
