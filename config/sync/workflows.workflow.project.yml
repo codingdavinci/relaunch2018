@@ -40,6 +40,7 @@ type_settings:
         - draft
         - published
         - submitted
+        - unpublished
     publish:
       label: Publish
       to: published
@@ -60,6 +61,7 @@ type_settings:
         - draft
         - published
         - submitted
+        - unpublished
       to: submitted
       weight: -1
     unpublish:
