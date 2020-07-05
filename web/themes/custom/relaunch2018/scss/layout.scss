@@ -23,10 +23,6 @@ header:not(.header--tiles) {
       color: $white;
     }
 
-    @include media-breakpoint-up(md) {
-      height: 481px;
-    }
-
     .header--content {
       display: flex;
       flex-direction: column;
@@ -39,12 +35,6 @@ header:not(.header--tiles) {
         margin-bottom: 0;
       }
 
-      @include media-breakpoint-up(md) {
-        padding: map_get($spacers, 10);
-        padding-top: map_get($spacers, 10);
-        width: 50%;
-      }
-
       .page-title {
         @include font-size(36px);
 
@@ -52,10 +42,40 @@ header:not(.header--tiles) {
           @include font-size(48px);
         }
       }
+
+      .block-block-content {
+        margin-top: $grid-gutter-width;
+      }
+
+      @include media-breakpoint-up(md) {
+        padding: map_get($spacers, 8) + $navbar-height map_get($spacers, 9) map_get($spacers, 8) map_get($spacers, 9);
+      }
+
+      @include media-breakpoint-up(lg) {
+        padding-right: 0;
+
+        .page-title {
+          padding-right: map_get($spacers, 9);
+        }
+
+        .block-block-content {
+          width: 50%;
+        }
+      }
     }
 
     a {
       color: $white;
+    }
+  }
+}
+
+.page-node-type-page {
+  header {
+    .region-header {
+      .header--content {
+        width: 100%;
+      }
     }
   }
 }
