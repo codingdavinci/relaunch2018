@@ -11148,6 +11148,10 @@ a.icon-mail-1 {
     .paragraph--type--timeline .field--name-field-timeline-items > .field__item {
       box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15); }
       .paragraph--type--timeline .field--name-field-timeline-items > .field__item .paragraph--type--timeline-item {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-between;
         padding: 24px 24px 16px 24px; }
         @media (min-width: 1200px) {
           .paragraph--type--timeline .field--name-field-timeline-items > .field__item .paragraph--type--timeline-item {
