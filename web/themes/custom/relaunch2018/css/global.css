@@ -8442,6 +8442,12 @@ ul.ui-autocomplete li.ui-menu-item a {
   overflow-x: hidden; }
   .path-frontpage .region-content p {
     color: #1bbd7d; }
+    .path-frontpage .region-content p a {
+      color: #1bbd7d;
+      text-decoration: underline; }
+      .path-frontpage .region-content p a:hover {
+        color: #0A8856;
+        text-decoration: none; }
   .path-frontpage .region-content #block-block-about .field--name-field-paragraphs {
     margin-top: 40px; }
     @media (min-width: 768px) {
@@ -8484,6 +8490,10 @@ ul.ui-autocomplete li.ui-menu-item a {
         .path-frontpage .region-content #block-landing-page-group-possibilities .block#block-landing-page-institutions p,
         .path-frontpage .region-content #block-landing-page-group-possibilities .block#block-landing-page-institutions a {
           color: #fff; }
+          .path-frontpage .region-content #block-landing-page-group-possibilities .block#block-landing-page-institutions h2:hover,
+          .path-frontpage .region-content #block-landing-page-group-possibilities .block#block-landing-page-institutions p:hover,
+          .path-frontpage .region-content #block-landing-page-group-possibilities .block#block-landing-page-institutions a:hover {
+            text-decoration: none; }
       .path-frontpage .region-content #block-landing-page-group-possibilities .block p:last-child {
         margin-bottom: 0; }
       .path-frontpage .region-content #block-landing-page-group-possibilities .block.block-block-figures {

@@ -6,6 +6,11 @@
 
     p {
       color: $green;
+
+      a {
+        @include greenLink;
+        text-decoration: underline;
+      }
     }
 
     #block-block-about {
@@ -81,6 +86,10 @@
           p,
           a {
             color: $white;
+
+            &:hover {
+              text-decoration: none;
+            }
           }
         }
 
