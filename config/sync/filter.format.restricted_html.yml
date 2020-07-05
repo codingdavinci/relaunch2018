@@ -1,7 +1,10 @@
 uuid: b313528a-da6e-47bc-a0d8-544dc0347642
 langcode: de
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - media
+    - spamspan
 _core:
   default_config_hash: KUjJ8Ti_ZJSlhGM88E_mhJP-8mmQRNUB6RFof615Kt0
 name: 'Eingeschränktes HTML'
@@ -36,3 +39,26 @@ filters:
     status: true
     weight: 10
     settings: {  }
+  media_embed:
+    id: media_embed
+    provider: media
+    status: false
+    weight: 100
+    settings:
+      default_view_mode: default
+      allowed_media_types: {  }
+      allowed_view_modes: {  }
+  filter_spamspan:
+    id: filter_spamspan
+    provider: spamspan
+    status: true
+    weight: 0
+    settings:
+      spamspan_at: ' [at] '
+      spamspan_use_graphic: '0'
+      spamspan_dot_enable: '0'
+      spamspan_dot: ' [dot] '
+      spamspan_use_form: '0'
+      spamspan_form_pattern: '<a href="%url?goto=%email">%displaytext</a>'
+      spamspan_form_default_url: contact
+      spamspan_form_default_displaytext: 'contact form'

@@ -63,6 +63,7 @@ module:
   select2: 0
   serialization: 0
   shortcut: 0
+  spamspan: 0
   system: 0
   taxonomy: 0
   taxonomy_menu: 0

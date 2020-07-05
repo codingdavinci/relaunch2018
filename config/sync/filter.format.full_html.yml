@@ -4,6 +4,8 @@ status: true
 dependencies:
   module:
     - editor
+    - media
+    - spamspan
 _core:
   default_config_hash: hewPmBgni9jlDK_IjLxUx1HsTbinK-hdl0lOwjbteIY
 name: 'Vollständiges HTML'
@@ -43,3 +45,26 @@ filters:
       allowed_html: '<em> <strong> <cite> <blockquote cite> <code> <ul type> <ol type start> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <s> <sup> <sub> <a href hreflang class="icon-arrow icon-mail-1 icon-twitter curly button button--green button--icon button--arrow button--mail button--large button--red"> <img src alt data-entity-type data-entity-uuid data-align data-caption> <table class="table--white table--red"> <caption> <tbody> <thead> <tfoot> <th> <td> <tr> <hr> <p class="w-75 small icon-mail-1 supertitle icon-cc-by"> <h1> <pre>'
       filter_html_help: true
       filter_html_nofollow: false
+  media_embed:
+    id: media_embed
+    provider: media
+    status: false
+    weight: 100
+    settings:
+      default_view_mode: default
+      allowed_media_types: {  }
+      allowed_view_modes: {  }
+  filter_spamspan:
+    id: filter_spamspan
+    provider: spamspan
+    status: true
+    weight: 0
+    settings:
+      spamspan_at: ' [at] '
+      spamspan_use_graphic: '0'
+      spamspan_dot_enable: '0'
+      spamspan_dot: ' [dot] '
+      spamspan_use_form: '0'
+      spamspan_form_pattern: '<a href="%url?goto=%email">%displaytext</a>'
+      spamspan_form_default_url: contact
+      spamspan_form_default_displaytext: 'contact form'
