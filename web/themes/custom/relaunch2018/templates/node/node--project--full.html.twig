@@ -20,7 +20,7 @@
 
   <div class="article__header">
     <div class="row m-0">
-      <div class="col-lg-5 px-8 py-7">
+      <div class="col-lg-5 px-8 article__header__left-column">
         <div class="d-flex flex-column justify-content-between h-100">
           <div>
             {{ title_prefix }}
@@ -34,7 +34,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-7 py-7 px-0 pr-md-7 text-right">
+      <div class="col-lg-7 px-0 pr-md-7 text-right">
         <div class="article__header__image">
           {% if awards|length %}
             <div class="field field--awards">{{ awards|join(', ') }}</div>
@@ -46,9 +46,11 @@
   </div>
 
   <div class="container">
-    <div class="project__tags">
-      {{ content.field_event }}
-    </div>
+    {% if content.field_events['#items'] is not empty %}
+      <div class="project__tags">
+        {{ content.field_event }}
+      </div>
+    {% endif %}
     <div class="project__tags">
       {{ content.field_tags }}
     </div>

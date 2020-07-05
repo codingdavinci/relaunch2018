@@ -20,12 +20,19 @@
         }
       }
 
-      h1 {
-        color: $white;
+      .article__header__left-column {
+        padding-bottom: map_get($spacers, 6);
+        padding-top: map_get($spacers, 6) + $navbar-height;
+
+        h1 {
+          color: $white;
+        }
       }
 
       .article__header__image {
         height: 100%;
+        padding-bottom: map_get($spacers, 6);
+        padding-top: map_get($spacers, 6) + $navbar-height;
         position: relative;
 
         .field--awards {
@@ -97,11 +104,18 @@
       > * {
         display: inline-block;
         vertical-align: bottom;
+
+        .field__item {
+          display: inline-block;
+        }
       }
 
       & + .project__tags {
-        padding-bottom: map_get($spacers, 2);
         padding-top: 0;
+      }
+
+      &:last-child {
+        padding-bottom: map_get($spacers, 2);
       }
     }
 

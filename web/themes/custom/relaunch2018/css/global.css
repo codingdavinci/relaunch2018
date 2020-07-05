@@ -9842,12 +9842,18 @@ a.icon-mail-1 {
     .node--type-data-set.node--view-mode-full .article__header > .row,
     .node--type-project.node--view-mode-full .article__header > .row {
       min-height: 480px; } }
-  .node--type-data-set.node--view-mode-full .article__header h1,
-  .node--type-project.node--view-mode-full .article__header h1 {
-    color: #fff; }
+  .node--type-data-set.node--view-mode-full .article__header .article__header__left-column,
+  .node--type-project.node--view-mode-full .article__header .article__header__left-column {
+    padding-bottom: 48px;
+    padding-top: 93px; }
+    .node--type-data-set.node--view-mode-full .article__header .article__header__left-column h1,
+    .node--type-project.node--view-mode-full .article__header .article__header__left-column h1 {
+      color: #fff; }
   .node--type-data-set.node--view-mode-full .article__header .article__header__image,
   .node--type-project.node--view-mode-full .article__header .article__header__image {
     height: 100%;
+    padding-bottom: 48px;
+    padding-top: 93px;
     position: relative; }
     .node--type-data-set.node--view-mode-full .article__header .article__header__image .field--awards,
     .node--type-project.node--view-mode-full .article__header .article__header__image .field--awards {
@@ -10022,10 +10028,15 @@ a.icon-mail-1 {
   .node--type-project.node--view-mode-full .project__tags > * {
     display: inline-block;
     vertical-align: bottom; }
+    .node--type-data-set.node--view-mode-full .project__tags > * .field__item,
+    .node--type-project.node--view-mode-full .project__tags > * .field__item {
+      display: inline-block; }
   .node--type-data-set.node--view-mode-full .project__tags + .project__tags,
   .node--type-project.node--view-mode-full .project__tags + .project__tags {
-    padding-bottom: 16px;
     padding-top: 0; }
+  .node--type-data-set.node--view-mode-full .project__tags:last-child,
+  .node--type-project.node--view-mode-full .project__tags:last-child {
+    padding-bottom: 16px; }
 
 .node--type-data-set.node--view-mode-full .article--content-container .node__content > *,
 .node--type-project.node--view-mode-full .article--content-container .node__content > * {
