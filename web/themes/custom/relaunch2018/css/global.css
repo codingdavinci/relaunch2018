@@ -11432,6 +11432,9 @@ a.icon-mail-1 {
   @media (min-width: 576px) {
     .view-projects.view-display-id-page_1 .view-content {
       grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 992px) {
+    .view-projects.view-display-id-page_1 .view-content {
+      grid-template-columns: 1fr 1fr 1fr; } }
 
 .view-projects.view-display-id-block_3 .view-header p:last-child {
   margin-bottom: 16px; }
