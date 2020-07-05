@@ -10412,13 +10412,13 @@ a.icon-mail-1 {
     display: none; }
   .node--type-data-set fieldset.object-type ul,
   .node--type-project fieldset.object-type ul {
-    display: inline-block;
+    display: inline;
     list-style-type: none;
     margin: 0;
     padding: 0; }
     .node--type-data-set fieldset.object-type ul li,
     .node--type-project fieldset.object-type ul li {
-      display: inline-block; }
+      display: inline; }
 
 .node--type-data-set .field .field__label,
 .node--type-project .field .field__label {
