@@ -8442,10 +8442,10 @@ ul.ui-autocomplete li.ui-menu-item a {
   overflow-x: hidden; }
   .path-frontpage .region-content p {
     color: #1bbd7d; }
-    .path-frontpage .region-content p a {
+    .path-frontpage .region-content p a:not(.button) {
       color: #1bbd7d;
       text-decoration: underline; }
-      .path-frontpage .region-content p a:hover {
+      .path-frontpage .region-content p a:not(.button):hover {
         color: #0A8856;
         text-decoration: none; }
   .path-frontpage .region-content #block-block-about .field--name-field-paragraphs {
@@ -9513,9 +9513,11 @@ p {
     @media (min-width: 768px) {
       p.small {
         font-size: 1.2rem; } }
-  @media (min-width: 768px) {
-    p.w-75 {
-      width: 75%; } }
+  p.w-75 {
+    width: 100% !important; }
+    @media (min-width: 768px) {
+      p.w-75 {
+        width: 75% !important; } }
   p a {
     color: #333333;
     font-weight: 500; }

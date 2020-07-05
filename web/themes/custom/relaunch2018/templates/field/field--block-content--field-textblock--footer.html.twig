@@ -20,9 +20,9 @@
   {% for item in items %}
     {% set item_attributes = item.attributes.addClass('field__item') %}
     {% if items|length % 3 == 2 and i == items|length - 1 %}
-      {% set item_attributes = item.attributes.addClass('col-8') %}
+      {% set item_attributes = item.attributes.addClass('col-lg-8') %}
     {% else %}
-      {% set item_attributes = item.attributes.addClass('col-4') %}
+      {% set item_attributes = item.attributes.addClass('col-lg-4') %}
     {% endif %}
     <div{{ item_attributes }}>{{ item.content }}</div>
     {% set i = i + 1 %}

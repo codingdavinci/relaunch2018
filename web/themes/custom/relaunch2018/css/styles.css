@@ -8381,9 +8381,11 @@ p {
     @media (min-width: 768px) {
       p.small {
         font-size: 1.2rem; } }
-  @media (min-width: 768px) {
-    p.w-75 {
-      width: 75%; } }
+  p.w-75 {
+    width: 100% !important; }
+    @media (min-width: 768px) {
+      p.w-75 {
+        width: 75% !important; } }
   p a {
     color: #333333;
     font-weight: 500; }

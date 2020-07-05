@@ -7,7 +7,7 @@
     p {
       color: $green;
 
-      a {
+      a:not(.button) {
         @include greenLink;
         text-decoration: underline;
       }
