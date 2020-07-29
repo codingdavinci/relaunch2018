@@ -1,4 +1,4 @@
-![Docker Image CI](https://github.com/codingdavinci/relaunch2018/workflows/Docker%20Image%20CI/badge.svg)
+![PHP Composer](https://github.com/codingdavinci/relaunch2018/workflows/PHP%20Composer/badge.svg) ![Docker](https://github.com/codingdavinci/relaunch2018/workflows/Docker/badge.svg)
 # codingdavinci.de relaunch 2018
 
 ## About
