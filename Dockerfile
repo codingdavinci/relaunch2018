@@ -1,4 +1,4 @@
-FROM composer:1.9 AS COMPOSER_CHAIN
+FROM composer:1.10 AS COMPOSER_CHAIN
 MAINTAINER Michael Büchner <m.buechner@dnb.de>
 RUN apk add --no-cache libpng libpng-dev libjpeg-turbo-dev libwebp-dev zlib-dev libxpm-dev
 RUN docker-php-ext-install gd
@@ -7,7 +7,7 @@ WORKDIR /tmp/cdv
 RUN composer install --no-dev
 
 # from https://github.com/docker-library/drupal/blob/master/8.7/apache/Dockerfile
-FROM php:7.3-apache
+FROM php:7.4-apache
 MAINTAINER Michael Büchner <m.buechner@dnb.de>
 RUN set -eux; \
 	if command -v a2enmod; then \
@@ -22,15 +22,16 @@ RUN set -eux; \
 		libpq-dev \
 		libzip-dev; \
 	docker-php-ext-configure gd \
-		--with-freetype-dir=/usr \
-		--with-jpeg-dir=/usr \
-		--with-png-dir=/usr; \
+		--with-freetype \
+		--with-jpeg; \
 	docker-php-ext-install -j "$(nproc)" \
 		gd \
 		opcache \
 		pdo_mysql \
 		pdo_pgsql \
 		zip; \
+	pecl install uploadprogress apcu; \
+	docker-php-ext-enable uploadprogress apcu; \
 	apt-mark auto '.*' > /dev/null; \
 	apt-mark manual $savedAptMark; \
 	ldd "$(php -r 'echo ini_get("extension_dir");')"/*.so \
@@ -52,13 +53,41 @@ RUN { \
 		echo "opcache.revalidate_freq=60"; \
 	} > /usr/local/etc/php/conf.d/opcache-recommended.ini
 RUN { \
+		echo "apc.enabled=1"; \
+		echo "apc.file_update_protection=2"; \ 
+		echo "apc.optimization=0"; \ 
+		echo "apc.shm_size=256M"; \ 
+		echo "apc.include_once_override=0"; \ 
+		echo "apc.shm_segments=1"; \ 
+		echo "apc.ttl=7200"; \ 
+		echo "apc.user_ttl=7200"; \ 
+		echo "apc.gc_ttl=3600"; \ 
+		echo "apc.num_files_hint=1024"; \ 
+		echo "apc.enable_cli=0"; \ 
+		echo "apc.max_file_size=5M"; \ 
+		echo "apc.cache_by_default=1"; \ 
+		echo "apc.use_request_time=1"; \ 
+		echo "apc.slam_defense=0"; \ 
+		echo "apc.mmap_file_mask=/tmp/apc.XXXXXX"; \ 
+		echo "apc.stat_ctime=0"; \ 
+		echo "apc.canonicalize=1"; \ 
+		echo "apc.write_lock=1"; \ 
+		echo "apc.report_autofilter=0"; \ 
+		echo "apc.rfc1867=0"; \ 
+		echo "apc.rfc1867_prefix =upload_"; \ 
+		echo "apc.rfc1867_name=APC_UPLOAD_PROGRESS"; \ 
+		echo "apc.rfc1867_freq=0"; \ 
+		echo "apc.rfc1867_ttl=3600"; \ 
+		echo "apc.lazy_classes=0"; \ 
+		echo "apc.lazy_functions=0"; \
+	} > /usr/local/etc/php/conf.d/apcu-caching.ini
+RUN { \
 		echo "upload_max_filesize = 128M"; \
 		echo "post_max_size = 128M"; \
 		echo "memory_limit = 512M"; \
 		echo "max_execution_time = 600"; \
 		echo "max_input_vars = 5000"; \
 	} > /usr/local/etc/php/conf.d/0-upload_large_dumps.ini
-RUN a2enmod http2
 
 WORKDIR /var/www/html
 COPY --from=COMPOSER_CHAIN /tmp/cdv/ .
@@ -74,7 +103,6 @@ RUN { \
 		echo "  DocumentRoot /var/www/html/web"; \
 		echo "  ErrorLog ${APACHE_LOG_DIR}/error.log"; \
 		echo "  CustomLog ${APACHE_LOG_DIR}/access.log combined"; \
-		echo "  Protocols h2 http/1.1"; \
 		echo "</VirtualHost>"; \
 	} > /etc/apache2/sites-enabled/000-default.conf
 
@@ -88,3 +116,4 @@ HEALTHCHECK --interval=1m --timeout=3s CMD curl --fail http://localhost/ || exit
 
 EXPOSE 80
 CMD ["apache2-foreground"]
+
