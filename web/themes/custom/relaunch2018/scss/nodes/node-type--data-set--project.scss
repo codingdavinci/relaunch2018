@@ -327,7 +327,7 @@
     .card-body {
       .card-title {
         @include font-size(20px);
-        margin-bottom: map_get($spacers, 1);
+        margin-bottom: map_get($spacers, 1) !important;
         word-break: break-word;
 
         a {
@@ -339,6 +339,7 @@
         @include font-size(16px);
 
         .field {
+          &.field--institution-name,
           &.field--name-field-short-description {
             margin-bottom: map_get($spacers, 2);
           }

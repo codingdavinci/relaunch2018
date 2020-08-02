@@ -9118,7 +9118,7 @@ header:not(.header--tiles) .region-header {
     display: inline-block;
     font-weight: 500;
     list-style-type: none;
-    margin: 0;
+    margin: 0 !important;
     padding: 0;
     vertical-align: bottom; }
     .field--name-field-tags > .field__items > * {
@@ -9157,7 +9157,7 @@ header:not(.header--tiles) .region-header {
   display: inline-block;
   font-weight: 500;
   list-style-type: none;
-  margin: 0;
+  margin: 0 !important;
   padding: 0;
   vertical-align: bottom; }
   .field--name-field-event > * {
@@ -10349,7 +10349,7 @@ a.icon-mail-1 {
   .node--type-data-set.node--view-mode-teaser .card-body .card-title,
   .node--type-project.node--view-mode-teaser .card-body .card-title {
     font-size: 20px;
-    margin-bottom: 8px;
+    margin-bottom: 8px !important;
     word-break: break-word; }
     .node--type-data-set.node--view-mode-teaser .card-body .card-title a,
     .node--type-project.node--view-mode-teaser .card-body .card-title a {
@@ -10357,7 +10357,8 @@ a.icon-mail-1 {
   .node--type-data-set.node--view-mode-teaser .card-body .node__content,
   .node--type-project.node--view-mode-teaser .card-body .node__content {
     font-size: 16px; }
-    .node--type-data-set.node--view-mode-teaser .card-body .node__content .field.field--name-field-short-description,
+    .node--type-data-set.node--view-mode-teaser .card-body .node__content .field.field--institution-name, .node--type-data-set.node--view-mode-teaser .card-body .node__content .field.field--name-field-short-description,
+    .node--type-project.node--view-mode-teaser .card-body .node__content .field.field--institution-name,
     .node--type-project.node--view-mode-teaser .card-body .node__content .field.field--name-field-short-description {
       margin-bottom: 16px; }
   .node--type-data-set.node--view-mode-teaser .field--name-field-event,
@@ -10365,7 +10366,7 @@ a.icon-mail-1 {
     display: inline-block;
     font-weight: 500;
     list-style-type: none;
-    margin: 0;
+    margin: 0 !important;
     padding: 0;
     vertical-align: bottom; }
     .node--type-data-set.node--view-mode-teaser .field--name-field-event > *,
@@ -11270,7 +11271,7 @@ a.icon-mail-1 {
   display: inline-block;
   font-weight: 500;
   list-style-type: none;
-  margin: 0;
+  margin: 0 !important;
   padding: 0;
   vertical-align: bottom; }
   #block-tags .menu > * {
@@ -11555,7 +11556,7 @@ a.icon-mail-1 {
   .view .view-content .card-columns .card .card-body .field {
     font-size: 16px; }
     .view .view-content .card-columns .card .card-body .field .field__item {
-      display: inline-block; }
+      display: inline-flex; }
     .view .view-content .card-columns .card .card-body .field .paragraph {
       display: inline-block; }
     .view .view-content .card-columns .card .card-body .field .field {
