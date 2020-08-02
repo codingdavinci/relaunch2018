@@ -4,8 +4,6 @@
   color: $gray-3;
   display: flex;
   font-size: 1.2rem;
-  margin: 0 0.75rem 0 0;
-  padding-left: 0;
   user-select: none;
 
   @include media-breakpoint-up(sm) {
@@ -16,40 +14,45 @@
     font-size: 1.5rem;
   }
 
-  li {
-    display: inline;
-    margin-right: 0.3em;
+  ul {
+    margin: 0 0.75rem 0 0;
+    padding-left: 0;
 
-    span {
-      @include curlyBraces($gray-3);
-      display: inline-block;
-      padding: 0 0.3rem 0.2rem 0;
-    }
+    li {
+      display: inline;
+      margin-right: 0.3em;
 
-    a {
-      @include border-radius(4px);
-      @include curlyBraces($white);
-      background-color: transparent;
-      color: $white;
-      padding: 0 0.3rem 0.1rem 0.3rem;
-
-      &:hover {
-        color: $white;
+      span {
+        @include curlyBraces($gray-3);
+        display: inline-block;
+        padding: 0 0.3rem 0.2rem 0.3rem;
       }
-    }
-
-    &.is-active {
-      color: $white;
 
       a {
-        @include curlyBraces($black);
-        background-color: $white;
-        color: $black;
-      }
-    }
+        @include border-radius(4px);
+        @include curlyBraces($white);
+        background-color: transparent;
+        color: $white;
+        padding: 0 0.3rem 0.1rem 0.3rem;
 
-    &:last-child {
-      margin-right: 0;
+        &:hover {
+          color: $white;
+        }
+      }
+
+      &.is-active {
+        color: $white;
+
+        a {
+          @include curlyBraces($black);
+          background-color: $white;
+          color: $black;
+        }
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
 }

@@ -126,6 +126,18 @@ function relaunch2018_preprocess_page(array &$variables) {
  *
  * @param array $variables
  */
+function relaunch2018_preprocess_menu__main(array &$variables) {
+  $block = \Drupal\block\Entity\Block::load('languageswitcher');
+  $variables['language_switcher'] = \Drupal::entityTypeManager()
+    ->getViewBuilder('block')
+    ->view($block);
+}
+
+/**
+ * Implements THEME_preprocess_HOOK().
+ *
+ * @param array $variables
+ */
 function relaunch2018_preprocess_node(array &$variables) {
   /** @var Node $node */
   $node = $variables['node'];

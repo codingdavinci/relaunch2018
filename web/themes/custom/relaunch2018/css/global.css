@@ -8917,8 +8917,6 @@ ul.ui-autocomplete li.ui-menu-item a {
   color: #c4c4c4;
   display: flex;
   font-size: 1.2rem;
-  margin: 0 0.75rem 0 0;
-  padding-left: 0;
   user-select: none; }
   @media (min-width: 576px) {
     .language-switcher-language-url {
@@ -8926,56 +8924,59 @@ ul.ui-autocomplete li.ui-menu-item a {
   @media (min-width: 768px) {
     .language-switcher-language-url {
       font-size: 1.5rem; } }
-  .language-switcher-language-url li {
-    display: inline;
-    margin-right: 0.3em; }
-    .language-switcher-language-url li span {
-      display: inline-block;
-      padding: 0 0.3rem 0.2rem 0; }
-      .language-switcher-language-url li span:after, .language-switcher-language-url li span:before {
-        color: #c4c4c4; }
-      .language-switcher-language-url li span:after {
-        color: #c4c4c4;
-        content: '}';
-        margin-left: 0.1em; }
-      .language-switcher-language-url li span:before {
-        color: #c4c4c4;
-        content: '{';
-        margin-right: 0.1em; }
-    .language-switcher-language-url li a {
-      border-radius: 4px;
-      background-color: transparent;
-      color: #fff;
-      padding: 0 0.3rem 0.1rem 0.3rem; }
-      .language-switcher-language-url li a:after, .language-switcher-language-url li a:before {
-        color: #fff; }
-      .language-switcher-language-url li a:after {
-        color: #fff;
-        content: '}';
-        margin-left: 0.1em; }
-      .language-switcher-language-url li a:before {
-        color: #fff;
-        content: '{';
-        margin-right: 0.1em; }
-      .language-switcher-language-url li a:hover {
-        color: #fff; }
-    .language-switcher-language-url li.is-active {
-      color: #fff; }
-      .language-switcher-language-url li.is-active a {
-        background-color: #fff;
-        color: #000; }
-        .language-switcher-language-url li.is-active a:after, .language-switcher-language-url li.is-active a:before {
-          color: #000; }
-        .language-switcher-language-url li.is-active a:after {
-          color: #000;
+  .language-switcher-language-url ul {
+    margin: 0 0.75rem 0 0;
+    padding-left: 0; }
+    .language-switcher-language-url ul li {
+      display: inline;
+      margin-right: 0.3em; }
+      .language-switcher-language-url ul li span {
+        display: inline-block;
+        padding: 0 0.3rem 0.2rem 0.3rem; }
+        .language-switcher-language-url ul li span:after, .language-switcher-language-url ul li span:before {
+          color: #c4c4c4; }
+        .language-switcher-language-url ul li span:after {
+          color: #c4c4c4;
           content: '}';
           margin-left: 0.1em; }
-        .language-switcher-language-url li.is-active a:before {
-          color: #000;
+        .language-switcher-language-url ul li span:before {
+          color: #c4c4c4;
           content: '{';
           margin-right: 0.1em; }
-    .language-switcher-language-url li:last-child {
-      margin-right: 0; }
+      .language-switcher-language-url ul li a {
+        border-radius: 4px;
+        background-color: transparent;
+        color: #fff;
+        padding: 0 0.3rem 0.1rem 0.3rem; }
+        .language-switcher-language-url ul li a:after, .language-switcher-language-url ul li a:before {
+          color: #fff; }
+        .language-switcher-language-url ul li a:after {
+          color: #fff;
+          content: '}';
+          margin-left: 0.1em; }
+        .language-switcher-language-url ul li a:before {
+          color: #fff;
+          content: '{';
+          margin-right: 0.1em; }
+        .language-switcher-language-url ul li a:hover {
+          color: #fff; }
+      .language-switcher-language-url ul li.is-active {
+        color: #fff; }
+        .language-switcher-language-url ul li.is-active a {
+          background-color: #fff;
+          color: #000; }
+          .language-switcher-language-url ul li.is-active a:after, .language-switcher-language-url ul li.is-active a:before {
+            color: #000; }
+          .language-switcher-language-url ul li.is-active a:after {
+            color: #000;
+            content: '}';
+            margin-left: 0.1em; }
+          .language-switcher-language-url ul li.is-active a:before {
+            color: #000;
+            content: '{';
+            margin-right: 0.1em; }
+      .language-switcher-language-url ul li:last-child {
+        margin-right: 0; }
 
 html {
   height: 100%; }
