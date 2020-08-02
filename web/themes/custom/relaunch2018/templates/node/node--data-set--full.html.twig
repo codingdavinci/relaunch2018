@@ -30,7 +30,7 @@
             {{ title_suffix }}
           </div>
           <div>
-            {{ institution_name|raw|replace({'&shy': '%shy%'})|escape|replace({'%shy%': '&shy'}) }}
+            {{ institution_name|raw|replace({'&shy': '%shy%'})|escape|replace({'%shy%': '&shy'})|raw }}
           </div>
         </div>
       </div>
