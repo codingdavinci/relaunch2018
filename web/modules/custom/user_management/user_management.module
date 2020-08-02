@@ -19,6 +19,7 @@ function user_management_preprocess_html(array &$variables) {
     else {
       $variables['head_title']['title'] = t('Create new participant account');
     }
+    \Drupal::service('page_cache_kill_switch')->trigger();
   }
 }
 
