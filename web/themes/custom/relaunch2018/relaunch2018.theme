@@ -5,6 +5,7 @@ use Drupal\entity_reference_revisions\EntityReferenceRevisionsFieldItemList;
 use Drupal\entity_reference_revisions\Plugin\Field\FieldType\EntityReferenceRevisionsItem;
 use Drupal\file\Entity\File;
 use Drupal\image\Entity\ImageStyle;
+use Drupal\media\IFrameMarkup;
 use Drupal\node\Entity\Node;
 use Drupal\paragraphs\Entity\Paragraph;
 use Drupal\taxonomy\Entity\Term;
@@ -563,4 +564,21 @@ function relaunch2018_preprocess_pager(&$variables) {
   // on the page, like exposed filters, so for the cacheability all query
   // parameters matter.
   $variables['#cache']['contexts'][] = 'url.query_args';
+}
+
+/**
+ * Implements THEME_preprocess_HOOK().
+ * This matches the original hook implementation, but adds the variable
+ * $pager_max to detect the last page number.
+ *
+ * NOTE: This is a work-around suggested on
+ * https://www.drupal.org/project/drupal/issues/3043821. At some point, the core
+ * media module is supposed to support privacy settings as to the issue ticket.
+ *
+ * @param array $variables
+ */
+function relaunch2018_preprocess_media_oembed_iframe(&$variables) {
+  if (strpos((string) $variables['media'], 'youtube.com') !== FALSE) {
+    $variables['media'] = IFrameMarkup::create(str_replace('youtube.com/', 'youtube-nocookie.com/', $variables['media']));
+  }
 }
