@@ -42,7 +42,7 @@
           padding: 6px map_get($spacers, 2);
           position: absolute;
           right: 0;
-          top: map_get($spacers, 3);
+          top: map_get($spacers, 4) + $navbar-height;
         }
 
         .field--name-field-attributed-image,
