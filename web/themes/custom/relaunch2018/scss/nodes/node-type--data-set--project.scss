@@ -11,8 +11,8 @@
 .node--type-project {
   &.node--view-mode-full {
     .article__header {
-      background-color: $green;
       color: $white;
+      background-color: $green;
 
       > .row {
         @include media-breakpoint-up(lg) {
@@ -21,8 +21,8 @@
       }
 
       .article__header__left-column {
-        padding-bottom: map_get($spacers, 6);
         padding-top: map_get($spacers, 6) + $navbar-height;
+        padding-bottom: map_get($spacers, 6);
 
         h1 {
           color: $white;
@@ -30,57 +30,53 @@
       }
 
       .article__header__image {
-        height: 100%;
-        padding-bottom: map_get($spacers, 6);
-        padding-top: map_get($spacers, 6) + $navbar-height;
         position: relative;
+        height: 100%;
+        padding-top: map_get($spacers, 6) + $navbar-height;
+        padding-bottom: map_get($spacers, 6);
 
         .field--awards {
           @include font-size(14px);
-          background: $blue;
-          color: $white;
-          padding: 6px map_get($spacers, 2);
           position: absolute;
-          right: 0;
           top: map_get($spacers, 4) + $navbar-height;
+          right: 0;
+          padding: 6px map_get($spacers, 2);
+          color: $white;
+          background: $blue;
         }
 
         .field--name-field-attributed-image,
         .field--name-field-project-image {
-          height: 100%;
           width: 100%;
+          height: 100%;
 
           .paragraph--type--attributed-image,
           .paragraph--type--project-image {
             display: inline-flex;
             flex-direction: column;
-            height: 100%;
             width: 100%;
-
-            @include media-breakpoint-up(lg) {
-              width: auto;
-            }
+            height: 100%;
 
             .field--name-field-inline-image {
-              height: 100%;
               overflow: hidden;
               width: 100%;
+              height: 100%;
 
               img {
                 @include media-breakpoint-up(lg) {
-                  height: 100%;
-                  max-width: none;
                   width: auto;
+                  max-width: none;
+                  height: 100%;
                 }
               }
             }
 
             .paragraph--type--attributed-image--attribution,
             .paragraph--type--project-image--attribution {
-              color: $white;
+              width: 100%;
               padding: map_get($spacers, 1) / 2 map_get($spacers, 2) 0;
               text-align: center;
-              width: 100%;
+              color: $white;
 
               a {
                 @include link-underline;
@@ -91,6 +87,10 @@
                 padding-left: 0;
                 text-align: left;
               }
+            }
+
+            @include media-breakpoint-up(lg) {
+              width: auto;
             }
           }
         }
@@ -133,22 +133,22 @@
 
         fieldset {
           &:not(.object-type) {
-            border: 1px solid $green;
             padding: map_get($spacers, 2) map_get($spacers, 3) map_get($spacers, 3) map_get($spacers, 3);
+            border: 1px solid $green;
 
             legend {
-              color: $green;
-              margin: 0 0 0 -2.5rem;
-              padding: 0 0.5em;
               position: relative;
               width: auto;
+              margin: 0 0 0 -2.5rem;
+              padding: 0 0.5em;
+              color: $green;
 
               .fieldset-legend {
-                background: $background-color;
+                position: absolute;
                 bottom: -0.3em;
                 padding-right: 0.25em;
-                position: absolute;
                 white-space: nowrap;
+                background: $background-color;
               }
             }
           }
@@ -235,8 +235,8 @@
             }
 
             article {
-              margin-bottom: map_get($spacers, 3);
               margin-top: map_get($spacers, 3);
+              margin-bottom: map_get($spacers, 3);
 
               &:first-child {
                 margin-top: 0;
@@ -253,8 +253,8 @@
               }
 
               h3 {
-                color: $gray;
                 margin-bottom: map_get($spacers, 3);
+                color: $gray;
 
                 a {
                   @include grayLink;
@@ -296,7 +296,7 @@
                 margin-bottom: 0;
               }
             }
-           }
+          }
         }
       }
     }
@@ -304,19 +304,19 @@
 
   &.node--view-mode-teaser {
     @include boxShadow;
-    background-color: $white;
-    height: 100%;
     width: 100%;
+    height: 100%;
+    background-color: $white;
 
     .card-img {
       .field--awards {
         @include font-size(12px);
-        background: $blue;
-        color: $white;
-        padding: 0px 12px;
         position: absolute;
-        right: 0;
         top: map_get($spacers, 2);
+        right: 0;
+        padding: 0 12px;
+        color: $white;
+        background: $blue;
       }
 
       img {
@@ -361,9 +361,9 @@
 
     ul {
       display: inline;
-      list-style-type: none;
       margin: 0;
       padding: 0;
+      list-style-type: none;
 
       li {
         display: inline;
@@ -374,8 +374,8 @@
   .field {
     .field__label {
       @include font-size(14px);
-      font-weight: $font-weight-normal;
       margin-bottom: map_get($spacers, 1);
+      font-weight: $font-weight-normal;
     }
   }
 }

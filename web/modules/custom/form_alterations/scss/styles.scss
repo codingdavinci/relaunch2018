@@ -1,9 +1,9 @@
 @import 'includes/base';
 
 .layout-node-form {
-  align-items: center;
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   .layout-region {
     width: 100%;
@@ -14,6 +14,10 @@
 
     &.layout-region-node-footer {
       text-align: center;
+    }
+
+    table {
+      box-sizing: initial;
     }
 
     @include media-breakpoint-up(sm) {
@@ -27,10 +31,6 @@
     }
     @include media-breakpoint-up(xl) {
       width: 1140px;
-    }
-
-    table {
-      box-sizing: initial;
     }
   }
 

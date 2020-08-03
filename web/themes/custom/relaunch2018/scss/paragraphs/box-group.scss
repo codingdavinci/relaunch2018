@@ -4,20 +4,39 @@
   padding: 0;
 
   .field--name-field-boxes {
+    position: relative;
+    left: 0;
     display: grid;
     grid-auto-columns: 100%;
     grid-auto-flow: column;
-    left: 0;
-    margin-right: -1 * $grid-gutter-width / 2;
-    position: relative;
     width: 100%;
+    margin-right: -1 * $grid-gutter-width / 2;
 
     @media #{$ie} {
       > .field__item {
         display: inline-block;
+        width: 100%;
         padding: map_get($spacers, 2);
         vertical-align: top;
-        width: 100%;
+      }
+    }
+  }
+
+  &.box-group--sync-height {
+    .paragraph--type--box-group-box {
+      display: flex;
+      height: 100%;
+
+      .paragraph--type--box {
+        height: 100%;
+
+        .card {
+          height: 100%;
+        }
+      }
+
+      @media #{$ie} {
+        display: block;
       }
     }
   }
@@ -25,9 +44,8 @@
   @each $width in 25 33 50 67 {
     &.box--width-#{$width} {
       .field--name-field-boxes {
-        margin-right: -1 * $grid-gutter-width / 2;
-
         @include boxWidth($width);
+        margin-right: -1 * $grid-gutter-width / 2;
 
         > .field__item {
           padding: $grid-gutter-width / 2;
@@ -39,25 +57,6 @@
           > .field__item {
             @include boxWidth($width);
           }
-        }
-      }
-    }
-  }
-
-  &.box-group--sync-height {
-    .paragraph--type--box-group-box {
-      display: flex;
-      height: 100%;
-
-      @media #{$ie} {
-        display: block;
-      }
-
-      .paragraph--type--box {
-        height: 100%;
-
-        .card {
-          height: 100%;
         }
       }
     }

@@ -4,10 +4,6 @@
   margin-bottom: map_get($spacers, 2);
   text-align: right;
 
-  @media #{$ie} {
-    display: none;
-  }
-
   > a {
     &:hover {
       text-decoration: none;
@@ -20,9 +16,9 @@
     > span {
       &:before {
         @include icon;
-        content: '\e825';
         display: inline-block;
         margin: 0;
+        content: '\e825';
       }
     }
 
@@ -34,5 +30,9 @@
         }
       }
     }
+  }
+
+  @media #{$ie} {
+    display: none;
   }
 }

@@ -1,18 +1,10 @@
 @import '_includes/base';
 
 .language-switcher-language-url {
-  color: $gray-3;
   display: flex;
-  font-size: 1.2rem;
   user-select: none;
-
-  @include media-breakpoint-up(sm) {
-    font-size: 1.2rem;
-  }
-
-  @include media-breakpoint-up(md) {
-    font-size: 1.5rem;
-  }
+  color: $gray-3;
+  font-size: 1.2rem;
 
   ul {
     margin: 0 0.75rem 0 0;
@@ -31,9 +23,9 @@
       a {
         @include border-radius(4px);
         @include curlyBraces($white);
-        background-color: transparent;
-        color: $white;
         padding: 0 0.3rem 0.1rem 0.3rem;
+        color: $white;
+        background-color: transparent;
 
         &:hover {
           color: $white;
@@ -45,8 +37,8 @@
 
         a {
           @include curlyBraces($black);
-          background-color: $white;
           color: $black;
+          background-color: $white;
         }
       }
 
@@ -54,5 +46,13 @@
         margin-right: 0;
       }
     }
+  }
+
+  @include media-breakpoint-up(sm) {
+    font-size: 1.2rem;
+  }
+
+  @include media-breakpoint-up(md) {
+    font-size: 1.5rem;
   }
 }

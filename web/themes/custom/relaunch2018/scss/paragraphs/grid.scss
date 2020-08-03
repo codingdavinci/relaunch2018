@@ -11,16 +11,7 @@
     grid-auto-rows: 1fr;
     grid-gap: map_get($spacers, 6);
 
-    @include media-breakpoint-up(md) {
-      grid-template-columns: 1fr 1fr;
-    }
-
     > .field__item {
-      @media #{$ie} {
-        display: inline-block;
-        padding: map_get($spacers, 2);
-        width: 50%;
-      }
 
       .paragraph--type--grid-element {
         .field--name-field-image {
@@ -31,6 +22,16 @@
           }
         }
       }
+
+      @media #{$ie} {
+        display: inline-block;
+        width: 50%;
+        padding: map_get($spacers, 2);
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      grid-template-columns: 1fr 1fr;
     }
   }
 }

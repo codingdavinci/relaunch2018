@@ -36,11 +36,11 @@
             }
 
             .jury--member--info {
-              background-color: $green-light;
               float: right;
+              width: 90%;
               margin-top: -1 * map_get($spacers, 8);
               padding: map_get($spacers, 10) map_get($spacers, 2) map_get($spacers, 2) map_get($spacers, 2);
-              width: 90%;
+              background-color: $green-light;
 
               .field {
                 margin-bottom: map_get($spacers, 2);
@@ -55,23 +55,23 @@
 
                 &.field--name-field-link {
                   a {
-                    color: $green;
                     display: block;
                     overflow: hidden;
-                    text-overflow: ellipsis;
                     width: 100%;
+                    text-overflow: ellipsis;
+                    color: $green;
 
                     &:before {
                       @include icon;
-                      content: '\e825';
                       display: inline;
-                      font-size: 0.6em;
+                      content: '\e825';
                       vertical-align: middle;
+                      font-size: 0.6em;
                     }
 
                     &:hover {
-                      color: $green-dark;
                       text-decoration: none;
+                      color: $green-dark;
                     }
                   }
 

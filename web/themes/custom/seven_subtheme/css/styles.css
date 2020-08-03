@@ -63,9 +63,9 @@
   #node-project-form .layout-region-node-main .horizontal-tabs .horizontal-tabs-pane,
   #node-data-set-edit-form .layout-region-node-main .horizontal-tabs .horizontal-tabs-pane,
   #node-project-edit-form .layout-region-node-main .horizontal-tabs .horizontal-tabs-pane {
-    background: transparent;
+    padding-top: 1em;
     border: none;
-    padding-top: 1em; }
+    background: transparent; }
 
 #node-data-set-form .layout-region-node-main input,
 #node-data-set-form .layout-region-node-main select,
@@ -119,18 +119,18 @@
   #node-project-edit-form .layout-region-node-main select[type='tel'],
   #node-project-edit-form .layout-region-node-main select[type='url'],
   #node-project-edit-form .layout-region-node-main select.form-select {
-    font-size: 1rem;
-    line-height: normal;
+    width: 25em;
     padding: 0.5em;
-    width: 25em; }
+    font-size: 1rem;
+    line-height: normal; }
 
 #node-data-set-form .layout-region-node-main .select2-selection,
 #node-project-form .layout-region-node-main .select2-selection,
 #node-data-set-edit-form .layout-region-node-main .select2-selection,
 #node-project-edit-form .layout-region-node-main .select2-selection {
+  padding: 0.5em;
   font-size: 1rem;
-  line-height: normal;
-  padding: 0.5em; }
+  line-height: normal; }
 
 #node-data-set-form .layout-region-node-main .field--widget-paragraphs td,
 #node-project-form .layout-region-node-main .field--widget-paragraphs td,
@@ -142,10 +142,10 @@
 #node-project-form .layout-region-node-main .field--widget-options-buttons,
 #node-data-set-edit-form .layout-region-node-main .field--widget-options-buttons,
 #node-project-edit-form .layout-region-node-main .field--widget-options-buttons {
-  border-top: 1px solid #bfbfbf;
-  border-bottom: 1px solid #bfbfbf;
   margin-bottom: 3rem;
-  padding: 2rem 0; }
+  padding: 2rem 0;
+  border-top: 1px solid #bfbfbf;
+  border-bottom: 1px solid #bfbfbf; }
   #node-data-set-form .layout-region-node-main .field--widget-options-buttons > .form-item,
   #node-project-form .layout-region-node-main .field--widget-options-buttons > .form-item,
   #node-data-set-edit-form .layout-region-node-main .field--widget-options-buttons > .form-item,
@@ -155,8 +155,8 @@
   #node-project-form .layout-region-node-main .field--widget-options-buttons + .field--widget-options-buttons,
   #node-data-set-edit-form .layout-region-node-main .field--widget-options-buttons + .field--widget-options-buttons,
   #node-project-edit-form .layout-region-node-main .field--widget-options-buttons + .field--widget-options-buttons {
-    border-top: none;
-    padding-top: 0; }
+    padding-top: 0;
+    border-top: none; }
   #node-data-set-form .layout-region-node-main .field--widget-options-buttons.field--name-field-tags .form-checkboxes, #node-data-set-form .layout-region-node-main .field--widget-options-buttons.field--name-field-theme .form-checkboxes, #node-data-set-form .layout-region-node-main .field--widget-options-buttons.field--name-field-metadata-format .form-checkboxes, #node-data-set-form .layout-region-node-main .field--widget-options-buttons.field--name-field-metadata-standards .form-checkboxes, #node-data-set-form .layout-region-node-main .field--widget-options-buttons.field--name-field-controlled-vocabularies .form-checkboxes,
   #node-project-form .layout-region-node-main .field--widget-options-buttons.field--name-field-tags .form-checkboxes,
   #node-project-form .layout-region-node-main .field--widget-options-buttons.field--name-field-theme .form-checkboxes,
@@ -191,16 +191,16 @@
     #node-project-edit-form .layout-region-node-main .field--widget-options-buttons.field--name-field-metadata-standards .form-checkboxes > .form-type-checkbox,
     #node-project-edit-form .layout-region-node-main .field--widget-options-buttons.field--name-field-controlled-vocabularies .form-checkboxes > .form-type-checkbox {
       display: inline-block;
+      width: 100%;
       margin: 0;
-      padding: 0.8em 0 0.2em 0;
-      width: 100%; }
+      padding: 0.8em 0 0.2em 0; }
 
 #node-data-set-form .layout-region-node-main .details-wrapper > .field--widget-options-buttons:first-child,
 #node-project-form .layout-region-node-main .details-wrapper > .field--widget-options-buttons:first-child,
 #node-data-set-edit-form .layout-region-node-main .details-wrapper > .field--widget-options-buttons:first-child,
 #node-project-edit-form .layout-region-node-main .details-wrapper > .field--widget-options-buttons:first-child {
-  border-top: none;
-  padding-top: 0; }
+  padding-top: 0;
+  border-top: none; }
 
 #node-data-set-form .layout-region-node-main .field--name-title input,
 #node-data-set-form .layout-region-node-main .field--name-field-keywords input,
@@ -260,8 +260,8 @@
 #node-data-set-edit-form .layout-region-node-main .field--name-field-attributed-image table,
 #node-project-edit-form .layout-region-node-main .field--name-field-attributed-image table {
   border: 1px solid #bfbfbf;
-  border-collapse: separate;
-  padding: 0 20px; }
+  padding: 0 20px;
+  border-collapse: separate; }
   #node-data-set-form .layout-region-node-main .field--name-field-attributed-image table thead,
   #node-project-form .layout-region-node-main .field--name-field-attributed-image table thead,
   #node-data-set-edit-form .layout-region-node-main .field--name-field-attributed-image table thead,
@@ -289,8 +289,8 @@
 #node-data-set-edit-form .layout-region-node-main .field--name-field-audio-video table,
 #node-project-edit-form .layout-region-node-main .field--name-field-audio-video table {
   border: 1px solid #bfbfbf;
-  border-collapse: separate;
-  padding: 0 20px; }
+  padding: 0 20px;
+  border-collapse: separate; }
   #node-data-set-form .layout-region-node-main .field--name-field-audio-video table thead,
   #node-project-form .layout-region-node-main .field--name-field-audio-video table thead,
   #node-data-set-edit-form .layout-region-node-main .field--name-field-audio-video table thead,
@@ -388,10 +388,10 @@
     #node-data-set-edit-form .layout-region-node-main .field--widget-paragraphs.field--name-field-metadata-filesize table th,
     #node-project-edit-form .layout-region-node-main .field--widget-paragraphs.field--name-field-media-filesize table th,
     #node-project-edit-form .layout-region-node-main .field--widget-paragraphs.field--name-field-metadata-filesize table th {
-      background: transparent;
-      border: none;
       padding: 0;
-      text-transform: none; }
+      text-transform: none;
+      border: none;
+      background: transparent; }
     #node-data-set-form .layout-region-node-main .field--widget-paragraphs.field--name-field-media-filesize table td, #node-data-set-form .layout-region-node-main .field--widget-paragraphs.field--name-field-metadata-filesize table td,
     #node-project-form .layout-region-node-main .field--widget-paragraphs.field--name-field-media-filesize table td,
     #node-project-form .layout-region-node-main .field--widget-paragraphs.field--name-field-metadata-filesize table td,
@@ -470,8 +470,8 @@
   #node-project-edit-form .layout-region-node-main .field--widget-paragraphs.field--name-field-license-code table,
   #node-project-edit-form .layout-region-node-main .field--widget-paragraphs.field--name-field-license-media table {
     border: 1px solid #bfbfbf;
-    border-collapse: separate;
-    padding: 0 20px; }
+    padding: 0 20px;
+    border-collapse: separate; }
     #node-data-set-form .layout-region-node-main .field--widget-paragraphs.field--name-field-media-license table thead, #node-data-set-form .layout-region-node-main .field--widget-paragraphs.field--name-field-metadata-license table thead, #node-data-set-form .layout-region-node-main .field--widget-paragraphs.field--name-field-license-code table thead, #node-data-set-form .layout-region-node-main .field--widget-paragraphs.field--name-field-license-media table thead,
     #node-project-form .layout-region-node-main .field--widget-paragraphs.field--name-field-media-license table thead,
     #node-project-form .layout-region-node-main .field--widget-paragraphs.field--name-field-metadata-license table thead,
@@ -615,8 +615,8 @@
     #node-project-form .layout-region-node-main .field--widget-paragraphs .field--name-field-license .form-item,
     #node-data-set-edit-form .layout-region-node-main .field--widget-paragraphs .field--name-field-license .form-item,
     #node-project-edit-form .layout-region-node-main .field--widget-paragraphs .field--name-field-license .form-item {
-      margin-bottom: 20px;
-      margin-top: 0; }
+      margin-top: 0;
+      margin-bottom: 20px; }
       #node-data-set-form .layout-region-node-main .field--widget-paragraphs .field--name-field-license .form-item select,
       #node-project-form .layout-region-node-main .field--widget-paragraphs .field--name-field-license .form-item select,
       #node-data-set-edit-form .layout-region-node-main .field--widget-paragraphs .field--name-field-license .form-item select,
@@ -661,8 +661,8 @@
   #node-project-form .layout-region-node-main .field--widget-paragraphs.field--name-field-team-members .field--type-link,
   #node-data-set-edit-form .layout-region-node-main .field--widget-paragraphs.field--name-field-team-members .field--type-link,
   #node-project-edit-form .layout-region-node-main .field--widget-paragraphs.field--name-field-team-members .field--type-link {
-    margin-right: 20px;
-    margin-top: 0.75em; }
+    margin-top: 0.75em;
+    margin-right: 20px; }
     #node-data-set-form .layout-region-node-main .field--widget-paragraphs.field--name-field-team-members .field--type-link > div > .form-item,
     #node-project-form .layout-region-node-main .field--widget-paragraphs.field--name-field-team-members .field--type-link > div > .form-item,
     #node-data-set-edit-form .layout-region-node-main .field--widget-paragraphs.field--name-field-team-members .field--type-link > div > .form-item,
@@ -712,8 +712,8 @@
   #node-project-form .layout-region-node-main .field--name-field-events .paragraphs-subform .field--name-field-representative,
   #node-data-set-edit-form .layout-region-node-main .field--name-field-events .paragraphs-subform .field--name-field-representative,
   #node-project-edit-form .layout-region-node-main .field--name-field-events .paragraphs-subform .field--name-field-representative {
-    margin-bottom: 20px;
-    margin-top: 2rem; }
+    margin-top: 2rem;
+    margin-bottom: 20px; }
     #node-data-set-form .layout-region-node-main .field--name-field-events .paragraphs-subform .field--name-field-representative > div > h4,
     #node-project-form .layout-region-node-main .field--name-field-events .paragraphs-subform .field--name-field-representative > div > h4,
     #node-data-set-edit-form .layout-region-node-main .field--name-field-events .paragraphs-subform .field--name-field-representative > div > h4,
@@ -750,9 +750,9 @@
 #node-project-edit-form .layout-region-node-main .field--name-field-links table,
 #node-project-edit-form .layout-region-node-main .field--name-field-other-datasets table {
   border: 1px solid #bfbfbf;
-  border-collapse: separate;
   margin-bottom: 10px;
-  padding-bottom: 10px; }
+  padding-bottom: 10px;
+  border-collapse: separate; }
   #node-data-set-form .layout-region-node-main .field--name-field-metadata-doc-links table thead,
   #node-data-set-form .layout-region-node-main .field--name-field-links-api table thead,
   #node-data-set-form .layout-region-node-main .field--name-field-links-media table thead,
@@ -827,8 +827,8 @@
   #node-project-edit-form .layout-region-node-main .field--name-field-links-metadata table tbody tr td:not(:first-child),
   #node-project-edit-form .layout-region-node-main .field--name-field-links table tbody tr td:not(:first-child),
   #node-project-edit-form .layout-region-node-main .field--name-field-other-datasets table tbody tr td:not(:first-child) {
-    padding-left: 0;
-    padding-right: 0; }
+    padding-right: 0;
+    padding-left: 0; }
   #node-data-set-form .layout-region-node-main .field--name-field-metadata-doc-links table tbody tr td .form-item,
   #node-data-set-form .layout-region-node-main .field--name-field-links-api table tbody tr td .form-item,
   #node-data-set-form .layout-region-node-main .field--name-field-links-media table tbody tr td .form-item,
@@ -897,12 +897,12 @@
 #node-project-form .layout-region-node-main #group-description,
 #node-data-set-edit-form .layout-region-node-main #group-description,
 #node-project-edit-form .layout-region-node-main #group-description {
-  background: transparent;
-  border: none;
   margin: 0;
+  padding-right: 0;
   padding-bottom: 0;
   padding-left: 0;
-  padding-right: 0; }
+  border: none;
+  background: transparent; }
   #node-data-set-form .layout-region-node-main #group-description legend,
   #node-project-form .layout-region-node-main #group-description legend,
   #node-data-set-edit-form .layout-region-node-main #group-description legend,

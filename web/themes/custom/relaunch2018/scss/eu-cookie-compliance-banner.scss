@@ -5,12 +5,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 0;
     max-width: 100%;
-
-    @include media-breakpoint-up(md) {
-      flex-direction: row;
-    }
+    margin: 0;
 
     p,
     h2,
@@ -27,29 +23,28 @@
         text-decoration: none;
       }
     }
+
+    @include media-breakpoint-up(md) {
+      flex-direction: row;
+    }
   }
 
   .eu-cookie-compliance-message {
-    margin-top: 0;
     max-width: 100%;
+    margin-top: 0;
     padding: map_get($spacers, 2) map_get($spacers, 4);
   }
 
   .eu-cookie-compliance-buttons {
     display: flex;
     flex-direction: column;
-    margin-bottom: 0;
-    margin-top: 0;
     max-width: 100%;
-
-    @include media-breakpoint-up(md) {
-      flex-direction: row;
-      margin-left: 1rem;
-    }
+    margin-top: 0;
+    margin-bottom: 0;
 
     button {
-      margin: 0;
       min-height: map_get($spacers, 5);
+      margin: 0;
 
       &:hover {
         text-decoration: underline;
@@ -57,19 +52,24 @@
     }
 
     .agree-button {
-      background: $white;
       color: $gray;
+      background: $white;
       font-weight: $font-weight-bold;
     }
 
     .decline-button {
-      background: $gray;
+      color: $white;
       border: none;
       border-radius: 0;
+      background: $gray;
       box-shadow: none;
-      color: $white;
-      font-weight: $font-weight-normal;
       text-shadow: none;
+      font-weight: $font-weight-normal;
+    }
+
+    @include media-breakpoint-up(md) {
+      flex-direction: row;
+      margin-left: 1rem;
     }
   }
 }

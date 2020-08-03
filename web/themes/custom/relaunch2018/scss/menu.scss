@@ -1,56 +1,44 @@
 @import '_includes/base';
 
 .region-primary-menu {
+  user-select: none;
   color: $white;
   font-family: $font-family-sans-serif;
   font-weight: $font-weight-semi-bold;
-  user-select: none;
-
-  @mixin menuFontSize {
-    font-size: 1.6rem;
-
-    @include media-breakpoint-up(sm) {
-      font-size: 1.8rem;
-    }
-
-    @include media-breakpoint-up(md) {
-      font-size: 2rem;
-    }
-  }
 
   .navbar {
     @include menuFontSize;
-    height: $navbar-height;
-    padding: 0;
     // Keep z-index below admin toolbar:
     z-index: 250;
+    height: $navbar-height;
+    padding: 0;
 
     .navbar--wrapper {
-      align-items: center;
-      background-color: $gray;
       display: flex;
+      align-items: center;
       justify-content: space-between;
-      height: 100%;
       width: 100%;
+      height: 100%;
+      background-color: $gray;
 
       .navbar--left {
-        align-items: center;
         display: flex;
+        align-items: center;
 
         .navbar-toggler {
           @include menuFontSize;
-          border-radius: 0;
           height: 100%;
-          outline: none;
           padding: 0 1.2rem 0 0.8rem;
           text-align: left;
           white-space: nowrap;
+          border-radius: 0;
+          outline: none;
 
           .navbar-toggler-icon {
             @include easeOut;
-            background-image: str-replace(url('data:image/svg+xml,%3csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3e%3cpath stroke="#{$white}" stroke-width="5" d="M4,4 L26,26 z M4,26 L26,4 z"/%3e%3c/svg%3e'), '#', '%23');
             display: inline-block;
             width: 1.5rem;
+            background-image: str-replace(url('data:image/svg+xml,%3csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3e%3cpath stroke="#{$white}" stroke-width="5" d="M4,4 L26,26 z M4,26 L26,4 z"/%3e%3c/svg%3e'), '#', '%23');
           }
 
           &.collapsed {
@@ -67,35 +55,27 @@
     }
 
     .navbar--menu {
-      background: $red-light;
-      min-width: 67%;
       overflow: auto;
+      min-width: 67%;
       padding: 3rem 1.5rem 0 3.75rem;
-      transform: translate3d(-100%, 0, 0);
       transition: all 0.3s ease-in-out;
-
-      @include media-breakpoint-up(sm) {
-        min-width: 33%;
-      }
-
-      @include media-breakpoint-up(lg) {
-        min-width: 25%;
-      }
+      transform: translate3d(-100%, 0, 0);
+      background: $red-light;
 
       .navbar-collapse {
-        align-items: flex-start;
         display: flex;
         flex-direction: column;
-        height: calc(100vh - #{$navbar-height});
+        align-items: flex-start;
         justify-content: space-between;
+        height: calc(100vh - #{$navbar-height});
 
         .navbar-nav {
           flex-shrink: 0;
 
           .menu-item {
-            opacity: 0;
-            transform: translate3d(100vw, 0, 0);
             transition: transform 0.3s ease-in-out, opacity 0.3s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+            transform: translate3d(100vw, 0, 0);
+            opacity: 0;
 
             &:before {
               display: none;
@@ -117,13 +97,13 @@
 
             .dropdown-menu {
               @include font-size(18px);
-              background-color: transparent;
-              border: none;
               padding-top: 0;
+              border: none;
+              background-color: transparent;
 
               .menu-item {
-                padding-left: 0;
                 padding-right: 0;
+                padding-left: 0;
               }
             }
           }
@@ -136,8 +116,8 @@
         .navbar-collapse {
           .navbar-nav {
             .menu-item {
-              opacity: 1;
               transform: translate3d(0, 0, 0);
+              opacity: 1;
             }
           }
         }
@@ -149,6 +129,14 @@
         &:hover {
           text-decoration: underline;
         }
+      }
+
+      @include media-breakpoint-up(sm) {
+        min-width: 33%;
+      }
+
+      @include media-breakpoint-up(lg) {
+        min-width: 25%;
       }
     }
   }

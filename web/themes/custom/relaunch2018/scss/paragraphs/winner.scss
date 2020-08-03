@@ -7,16 +7,16 @@
 
   .field--name-field-award {
     @include font-size(12px);
-    background-color: $blue;
-    color: $white;
+    position: absolute;
+    top: map_get($spacers, 2);
+    right: 0;
     display: flex;
     align-items: center;
     min-height: 22px;
     padding: 3px map_get($spacers, 1);
-    position: absolute;
-    right: 0;
-    top: map_get($spacers, 2);
     word-break: break-all;
+    color: $white;
+    background-color: $blue;
 
     .field__item {
       display: inline;
@@ -36,19 +36,19 @@
 
     .winner__project-title {
       @include boxShadow;
-      bottom: 0;
       position: absolute;
       right: 0;
+      bottom: 0;
       width: 90%;
       word-break: break-word;
 
       a {
         @include font-size(16px);
-        background-color: $green-light;
-        color: $green;
         display: block;
         padding: map_get($spacers, 1) map_get($spacers, 2);
         text-decoration: underline;
+        color: $green;
+        background-color: $green-light;
 
         &:hover {
           color: $green-dark;

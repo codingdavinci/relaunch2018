@@ -22,24 +22,16 @@
     }
 
     .card-footer {
-      background-color: $green-light;
-      border-top: none;
       padding: 0 0 2rem 0;
+      border-top: none;
+      background-color: $green-light;
 
       .field--name-field-links {
-        @include media-breakpoint-up(sm) {
-          position: relative;
-          right: -4rem;
-        }
 
         .field__items {
           .field__item {
             margin-bottom: 1rem;
             text-align: center;
-
-            @include media-breakpoint-up(sm) {
-              text-align: right;
-            }
 
             &:last-child {
               margin-bottom: 0;
@@ -47,13 +39,13 @@
 
             a {
               @include boxShadow;
-              background-color: $green;
-              color: $white;
               display: inline-block;
-              font-weight: $font-weight-semi-bold;
+              width: 90%;
               padding: 0.4rem;
               text-align: center;
-              width: 90%;
+              color: $white;
+              background-color: $green;
+              font-weight: $font-weight-semi-bold;
 
               &:hover,
               &:visited,
@@ -63,12 +55,12 @@
 
               &:before {
                 @include fa-icon;
-                color: $white;
-                content: '\e825';
                 display: inline-block;
-                margin-right: 0.8em;
-                text-align: center;
                 width: 1.25em;
+                margin-right: 0.8em;
+                content: '\e825';
+                text-align: center;
+                color: $white;
               }
             }
 
@@ -98,7 +90,16 @@
                 }
               }
             }
+
+            @include media-breakpoint-up(sm) {
+              text-align: right;
+            }
           }
+        }
+
+        @include media-breakpoint-up(sm) {
+          position: relative;
+          right: -4rem;
         }
       }
     }

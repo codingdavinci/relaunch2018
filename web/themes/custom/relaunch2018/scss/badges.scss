@@ -3,28 +3,28 @@
 .badge {
   @include easeAll;
   @include font-size(12px);
-  color: $white;
-  background-color: $green-dark;
-  border: 1px solid $green-dark;
-  border-radius: 50px;
-  font-weight: $font-weight-normal;
   display: inline-block;
-  line-height: 1;
   margin: 0 map_get($spacers, 1) map_get($spacers, 1) 0;
-  opacity: .5;
   padding: 3px 12px 5px;
   vertical-align: top;
+  opacity: 0.5;
+  color: $white;
+  border: 1px solid $green-dark;
+  border-radius: 50px;
+  background-color: $green-dark;
+  font-weight: $font-weight-normal;
+  line-height: 1;
 
   a {
-    background-color: transparent;
-    border-color: $green;
-    color: $green;
     opacity: 1;
+    color: $green;
+    border-color: $green;
+    background-color: transparent;
 
     &:hover {
-      background-color: $green-dark;
-      border-color: $green-dark;
       color: $white;
+      border-color: $green-dark;
+      background-color: $green-dark;
     }
   }
 }
@@ -33,23 +33,23 @@
   .view-filters {
     .form-item {
       div.badge {
-        background: transparent;
-        border: 0;
         margin: 0;
-        opacity: 1;
         padding: 0;
+        opacity: 1;
+        border: 0;
+        background: transparent;
 
         a {
           &.bef-link-active {
-            background-color: $green-dark;
-            border-color: $green-dark;
             color: $white;
+            border-color: $green-dark;
+            background-color: $green-dark;
 
             &:after {
-              content: '✖';
-              font-weight: $font-weight-normal;
-              font-size: .8em;
               margin-left: map_get($spacers, 1) / 2;
+              content: '✖';
+              font-size: 0.8em;
+              font-weight: $font-weight-normal;
             }
           }
         }
@@ -58,8 +58,8 @@
       ul ul {
         .badge {
           > .badge {
-            border-color: $green-dark;
             color: $green-dark;
+            border-color: $green-dark;
 
             &.bef-link-active {
               color: $white;

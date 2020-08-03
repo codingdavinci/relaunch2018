@@ -3,8 +3,8 @@
 .paragraph--type--box,
 .paragraph--type--box-group-box {
   .box--container {
-    margin: 0 auto;
     width: 100%;
+    margin: 0 auto;
 
     @each $width in 25 33 50 67 {
       &.box--width-#{$width} {
@@ -27,8 +27,8 @@
       .field--name-field-text {
         h2 {
           @include font-size(20px);
-          color: $gray;
           margin-bottom: map_get($spacers, 4);
+          color: $gray;
         }
 
         p {
@@ -47,8 +47,8 @@
     }
 
     .card-footer {
-      background-color: $white;
       border-top: none;
+      background-color: $white;
 
       .field--name-field-footer {
         p {

@@ -10,10 +10,10 @@
       column-count: 1;
 
       .card {
-        background-color: transparent;
-        box-shadow: none;
         display: inline-block;
         margin-bottom: map_get($spacers, 7);
+        background-color: transparent;
+        box-shadow: none;
 
         .field--name-field-files {
           nargin-top: 24px;

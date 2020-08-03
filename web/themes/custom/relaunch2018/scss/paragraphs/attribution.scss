@@ -1,10 +1,6 @@
 @import '../_includes/base';
 
 .paragraph--type--attribution {
-  @include media-breakpoint-up(sm) {
-    display: flex;
-  }
-
   a {
     @include link-underline;
   }
@@ -28,5 +24,9 @@
 
   .field--name-field-author {
     display: inline;
+  }
+
+  @include media-breakpoint-up(sm) {
+    display: flex;
   }
 }

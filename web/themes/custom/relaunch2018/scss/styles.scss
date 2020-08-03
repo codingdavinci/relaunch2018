@@ -19,13 +19,13 @@ body {
 h1,
 .supertitle {
   @include font-size(28px);
+  margin-bottom: map_get($spacers, 4);
+  letter-spacing: 0.02em;
   color: $green;
   font-family: $font-family-sans-serif;
-  font-style: normal;
   font-weight: $font-weight-semi-bold;
+  font-style: normal;
   line-height: 129.6%;
-  letter-spacing: 0.02em;
-  margin-bottom: map_get($spacers, 4);
 
   @include media-breakpoint-up(md) {
     @include font-size(32px);
@@ -34,13 +34,13 @@ h1,
 
 h2 {
   @include font-size(24px);
+  margin-bottom: 14px;
+  letter-spacing: 0.02em;
   color: $green;
   font-family: $font-family-sans-serif;
-  font-style: normal;
   font-weight: $font-weight-semi-bold;
+  font-style: normal;
   line-height: 115%;
-  letter-spacing: 0.02em;
-  margin-bottom: 14px;
 
   @include media-breakpoint-up(md) {
     @include font-size(28px);
@@ -50,24 +50,24 @@ h2 {
 
 h3 {
   @include font-size(20px);
+  letter-spacing: 0.02em;
   color: $green;
   font-family: $font-family-sans-serif;
-  font-style: normal;
   font-weight: $font-weight-semi-bold;
+  font-style: normal;
   line-height: 129.6%;
-  letter-spacing: 0.02em;
 }
 
 h4,
 h5,
 h6 {
   @include font-size(16px);
+  letter-spacing: 0.02em;
   color: $gray;
   font-family: $font-family-sans-serif;
-  font-style: normal;
   font-weight: $font-weight-semi-bold;
+  font-style: normal;
   line-height: 144%;
-  letter-spacing: 0.02em;
 
   &.field__label {
     font-weight: $font-weight-semi-bold;
@@ -75,30 +75,14 @@ h6 {
 }
 
 p {
+  margin-bottom: 1em;
   color: $gray;
   font-family: $font-family-sans-serif;
   line-height: 153%;
-  margin-bottom: 1em;
-
-  @include media-breakpoint-up(sm) {
-    line-height: 150%;
-  }
-
-  @include media-breakpoint-up(md) {
-    line-height: 144%;
-  }
-
-  @include media-breakpoint-up(lg) {
-    line-height: 165%;
-  }
-
-  @include media-breakpoint-up(xl) {
-    line-height: 153%;
-  }
 
   &.small {
-    font-size: 0.8em;
     letter-spacing: 0.02rem;
+    font-size: 0.8em;
 
     @include media-breakpoint-up(md) {
       font-size: 1.2rem;
@@ -116,6 +100,22 @@ p {
   a {
     @include grayLink;
   }
+
+  @include media-breakpoint-up(sm) {
+    line-height: 150%;
+  }
+
+  @include media-breakpoint-up(md) {
+    line-height: 144%;
+  }
+
+  @include media-breakpoint-up(lg) {
+    line-height: 165%;
+  }
+
+  @include media-breakpoint-up(xl) {
+    line-height: 153%;
+  }
 }
 
 a {
@@ -129,10 +129,10 @@ a {
 
   &.button {
     @include easeAll;
-    color: $white;
     display: inline-block;
-    font-weight: $font-weight-semi-bold;
     padding: 0.6em 1.4em;
+    color: $white;
+    font-weight: $font-weight-semi-bold;
 
     &:hover {
       text-decoration: none;
@@ -147,8 +147,8 @@ a {
       background-color: $green;
 
       &:hover {
-        background-color: $green-dark;
         color: $white;
+        background-color: $green-dark;
       }
     }
 
@@ -156,8 +156,8 @@ a {
       background-color: $red;
 
       &:hover {
-        background-color: darken($red, 20%);
         color: $white;
+        background-color: darken($red, 20%);
       }
     }
 
@@ -174,11 +174,11 @@ a {
 
       &.button--arrow {
         &:before {
-          content: '\e825';
           display: inline-block;
-          font-size: 0.6em;
           padding-bottom: 0.3em;
+          content: '\e825';
           vertical-align: middle;
+          font-size: 0.6em;
         }
       }
 
@@ -211,25 +211,21 @@ ul {
 table.table--red,
 table.table--white {
   @include boxShadow;
-  background-color: $white;
-  border-collapse: separate;
-  border-spacing: map_get($spacers, 1);
   display: inline-block;
   margin-bottom: map_get($spacers, 6);
   padding-bottom: map_get($spacers, 2);
-
-  @include media-breakpoint-up(lg) {
-    border-spacing: map_get($spacers, 2);
-  }
+  border-spacing: map_get($spacers, 1);
+  border-collapse: separate;
+  background-color: $white;
 
   caption {
     @include font-size(28px);
-    background-color: $white;
+    display: block;
+    padding: map_get($spacers, 2) map_get($spacers, 1);
     caption-side: top;
     color: $green;
-    display: block;
+    background-color: $white;
     font-weight: $font-weight-semi-bold;
-    padding: map_get($spacers, 2) map_get($spacers, 1);
 
     @include media-breakpoint-up(lg) {
       padding: map_get($spacers, 4) map_get($spacers, 2);
@@ -240,13 +236,9 @@ table.table--white {
     td,
     th {
       @include font-size(16px);
-      border-bottom: 1px solid $green;
       padding-bottom: map_get($spacers, 1);
       vertical-align: top;
-
-      @include media-breakpoint-up(lg) {
-        padding-bottom: map_get($spacers, 2);
-      }
+      border-bottom: 1px solid $green;
 
       &:nth-child(odd) {
         color: $green;
@@ -254,6 +246,10 @@ table.table--white {
 
       &:first-child {
         border-bottom: none;
+      }
+
+      @include media-breakpoint-up(lg) {
+        padding-bottom: map_get($spacers, 2);
       }
     }
   }
@@ -268,8 +264,8 @@ table.table--white {
     tr {
       &:last-child {
         td {
-          border-bottom: none;
           padding-bottom: 0;
+          border-bottom: none;
         }
       }
     }
@@ -279,8 +275,8 @@ table.table--white {
     background-color: $red-light;
 
     caption {
-      background-color: $red-light;
       color: $white;
+      background-color: $red-light;
     }
 
     tr {
@@ -294,6 +290,10 @@ table.table--white {
       }
     }
   }
+
+  @include media-breakpoint-up(lg) {
+    border-spacing: map_get($spacers, 2);
+  }
 }
 
 .text-formatted {
@@ -304,20 +304,20 @@ table.table--white {
 
 figcaption {
   @include font-size(14px);
+  text-align: right;
+  opacity: 0.5;
   color: $gray;
   font-weight: $font-weight-light;
   line-height: 1.1;
-  opacity: 0.5;
-  text-align: right;
 }
 
 .icon-arrow {
   &:before {
+    margin-right: 0.8rem !important;
+    vertical-align: middle;
+    text-decoration: none;
     color: $green;
     font-size: 0.7rem;
-    margin-right: 0.8rem !important;
-    text-decoration: none;
-    vertical-align: middle;
   }
 }
 a.icon-arrow {
@@ -326,9 +326,9 @@ a.icon-arrow {
 
 .icon-mail-1 {
   &:before {
-    font-size: 0.7em;
     margin-right: 0.6rem !important;
     vertical-align: 0.11rem;
+    font-size: 0.7em;
   }
 }
 a.icon-mail-1 {
@@ -337,53 +337,53 @@ a.icon-mail-1 {
 
 .icon-cc-by {
   &:before {
-    content: '\63\00a0\6c';
     display: block;
     float: left;
-    font-size: 2rem;
-    margin-right: 2em;
     margin-top: 1em;
+    margin-right: 2em;
     padding-bottom: 4rem;
+    content: '\63\00a0\6c';
+    font-size: 2rem;
   }
 }
 
 .icon-twitter {
   &:before {
-    content: '';
-    font-size: 1.3em;
     margin-right: 0.8rem !important;
+    content: '';
     vertical-align: -0.1em;
+    font-size: 1.3em;
   }
 }
 
 .card {
   @include font-size(16px);
-  background-color: transparent;
   border: none;
   border-radius: 0;
+  background-color: transparent;
   line-height: 140%;
 
   .card-body {
     padding: map_get($spacers, 2);
 
-    @include media-breakpoint-up(lg) {
-      padding: map_get($spacers, 4);
-    }
-
     h3 {
       @include font-size(20px);
+    }
+
+    @include media-breakpoint-up(lg) {
+      padding: map_get($spacers, 4);
     }
   }
 
   .card-footer {
     padding: map_get($spacers, 2);
 
-    @include media-breakpoint-up(lg) {
-      padding: map_get($spacers, 4);
-    }
-
     p {
       color: $green-blue;
+    }
+
+    @include media-breakpoint-up(lg) {
+      padding: map_get($spacers, 4);
     }
   }
 }

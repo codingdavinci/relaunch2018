@@ -8,8 +8,8 @@
       .form--inline {
         .form-item {
           float: none;
-          margin-right: 0;
           margin-top: 0;
+          margin-right: 0;
 
           .bef-links {
             ul {
@@ -46,15 +46,15 @@
 
             input {
               @include font-size(16px);
-              padding: map_get($spacers, 1);
               width: 100%;
+              padding: map_get($spacers, 1);
             }
           }
 
           &.form-type-select {
             label {
-              border-bottom: 1px solid $gray-5;
               width: 100%;
+              border-bottom: 1px solid $gray-5;
             }
           }
 
@@ -78,10 +78,10 @@
 
         .form-actions {
           input {
-            padding-left: map_get($spacers, 1);
-            padding-right: map_get($spacers, 1);
-            margin: 0 0 map_get($spacers, 2) 0;
             width: 100%;
+            margin: 0 0 map_get($spacers, 2) 0;
+            padding-right: map_get($spacers, 1);
+            padding-left: map_get($spacers, 1);
           }
         }
       }
@@ -102,24 +102,13 @@
     }
 
     .card-columns {
-      @include media-breakpoint-up(sm) {
-        column-count: 2;
-      }
-
-      @include media-breakpoint-up(lg) {
-        column-count: 3;
-      }
 
       .card {
         @include boxShadow;
-        background-color: $white;
         display: inline-block;
-        margin-bottom: $grid-gutter-width;
         width: 100%;
-
-        @media #{$ie} {
-          overflow: hidden;
-        }
+        margin-bottom: $grid-gutter-width;
+        background-color: $white;
 
         .card-body {
           .card-title {
@@ -144,6 +133,18 @@
             }
           }
         }
+
+        @media #{$ie} {
+          overflow: hidden;
+        }
+      }
+
+      @include media-breakpoint-up(sm) {
+        column-count: 2;
+      }
+
+      @include media-breakpoint-up(lg) {
+        column-count: 3;
       }
     }
   }

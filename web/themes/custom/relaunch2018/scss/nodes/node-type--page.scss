@@ -15,28 +15,28 @@
 
       .node__content {
         .field--name-field-content-teaser {
-          background-color: $green;
           color: $white;
+          background-color: $green;
 
           div {
+            width: 100%;
             padding: $grid-gutter-width / 2;
             padding-top: $grid-gutter-width / 2;
-            width: 100%;
 
             @include media-breakpoint-up(md) {
               padding: 0 map_get($spacers, 10) map_get($spacers, 10) map_get($spacers, 10);
             }
 
             @include media-breakpoint-up(lg) {
-              padding-right: 0;
               width: 50%;
+              padding-right: 0;
             }
           }
         }
 
         .field--name-field-paragraphs {
-          margin-top: map_get($spacers, 10);
           overflow-x: hidden;
+          margin-top: map_get($spacers, 10);
 
           > .field__item {
             margin-bottom: map_get($spacers, 10);

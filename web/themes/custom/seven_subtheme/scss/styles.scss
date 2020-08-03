@@ -51,9 +51,9 @@
       margin-bottom: 3rem;
 
       .horizontal-tabs-pane {
-        background: transparent;
-        border: none;
         padding-top: 1em;
+        border: none;
+        background: transparent;
       }
     }
 
@@ -67,17 +67,17 @@
       &[type='tel'],
       &[type='url'],
       &.form-select {
+        width: 25em;
+        padding: 0.5em;
         font-size: $font-size-large;
         line-height: normal;
-        padding: 0.5em;
-        width: 25em;
       }
     }
 
     .select2-selection {
+      padding: 0.5em;
       font-size: $font-size-large;
       line-height: normal;
-      padding: 0.5em;
     }
 
     .field--widget-paragraphs td {
@@ -85,18 +85,18 @@
     }
 
     .field--widget-options-buttons {
-      border-top: 1px solid $gray;
-      border-bottom: 1px solid $gray;
       margin-bottom: 3rem;
       padding: 2rem 0;
+      border-top: 1px solid $gray;
+      border-bottom: 1px solid $gray;
 
       & > .form-item {
         margin-bottom: 0;
       }
 
       & + .field--widget-options-buttons {
-        border-top: none;
         padding-top: 0;
+        border-top: none;
       }
 
       &.field--name-field-tags,
@@ -109,9 +109,9 @@
 
           & > .form-type-checkbox {
             display: inline-block;
+            width: 100%;
             margin: 0;
             padding: 0.8em 0 0.2em 0;
-            width: 100%;
           }
         }
       }
@@ -119,8 +119,8 @@
 
     .details-wrapper {
       > .field--widget-options-buttons:first-child {
-        border-top: none;
         padding-top: 0;
+        border-top: none;
       }
     }
 
@@ -165,9 +165,8 @@
 
       table {
         @include border;
-
-        border-collapse: separate;
         padding: 0 20px;
+        border-collapse: separate;
 
         thead {
           display: none;
@@ -196,9 +195,8 @@
 
       table {
         @include border;
-
-        border-collapse: separate;
         padding: 0 20px;
+        border-collapse: separate;
 
         thead {
           display: none;
@@ -284,10 +282,10 @@
           }
 
           th {
-            background: transparent;
-            border: none;
             padding: 0;
             text-transform: none;
+            border: none;
+            background: transparent;
           }
 
           td {
@@ -330,9 +328,8 @@
       &.field--name-field-license-media {
         table {
           @include border;
-
-          border-collapse: separate;
           padding: 0 20px;
+          border-collapse: separate;
 
           thead {
             display: none;
@@ -375,8 +372,8 @@
         display: inline-block;
 
         .form-item {
-          margin-bottom: 20px;
           margin-top: 0;
+          margin-bottom: 20px;
 
           select {
             width: 10em;
@@ -414,8 +411,8 @@
         }
 
         .field--type-link {
-          margin-right: 20px;
           margin-top: 0.75em;
+          margin-right: 20px;
 
           & > div > .form-item {
             margin-top: 0;
@@ -454,8 +451,8 @@
         margin-right: 20px;
 
         .field--name-field-representative {
-          margin-bottom: 20px;
           margin-top: 2rem;
+          margin-bottom: 20px;
 
           & > div > h4 {
             display: none;
@@ -476,10 +473,9 @@
     .field--name-field-other-datasets {
       table {
         @include border;
-
-        border-collapse: separate;
         margin-bottom: 10px;
         padding-bottom: 10px;
+        border-collapse: separate;
 
         thead {
           display: none;
@@ -493,8 +489,8 @@
 
             td {
               &:not(:first-child) {
-                padding-left: 0;
                 padding-right: 0;
+                padding-left: 0;
               }
 
               .form-item {
@@ -533,12 +529,12 @@
     }
 
     #group-description {
-      background: transparent;
-      border: none;
       margin: 0;
+      padding-right: 0;
       padding-bottom: 0;
       padding-left: 0;
-      padding-right: 0;
+      border: none;
+      background: transparent;
 
       legend {
         letter-spacing: inherit;

@@ -3,19 +3,11 @@
 .view-data-sets {
   .view-content {
     .card-columns {
-      @include media-breakpoint-up(sm) {
-        column-count: 2;
-      }
-
-      @include media-breakpoint-up(lg) {
-        column-count: 3;
-      }
-
       .card {
         .card-img {
           img {
-            height: auto;
             max-width: 100%;
+            height: auto;
           }
         }
 
@@ -26,6 +18,14 @@
             }
           }
         }
+      }
+
+      @include media-breakpoint-up(sm) {
+        column-count: 2;
+      }
+
+      @include media-breakpoint-up(lg) {
+        column-count: 3;
       }
     }
   }

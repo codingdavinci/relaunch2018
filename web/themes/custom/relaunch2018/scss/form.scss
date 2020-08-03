@@ -1,10 +1,10 @@
 @import '_includes/base';
 
 input {
-  border: 0;
-  color: $gray;
   max-width: 100%;
   padding: map_get($spacers, 1) map_get($spacers, 2);
+  color: $gray;
+  border: 0;
 
   &::-webkit-input-placeholder {
     color: $gray-5;
@@ -18,10 +18,10 @@ input {
 
   &[type='submit'] {
     @include easeAll;
-    background-color: $green;
-    color: $white;
-    padding-left: map_get($spacers, 10);
     padding-right: map_get($spacers, 10);
+    padding-left: map_get($spacers, 10);
+    color: $white;
+    background-color: $green;
 
     &:hover {
       background-color: $green-dark;
@@ -36,9 +36,9 @@ ul.ui-autocomplete {
       display: block;
 
       &.ui-state-active {
-        background-color: $green;
-        color: $white;
         text-decoration: none;
+        color: $white;
+        background-color: $green;
       }
     }
   }

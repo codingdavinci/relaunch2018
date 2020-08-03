@@ -7,11 +7,11 @@
     .field__item {
       &:before {
         @include icon;
-        content: '';
         display: inline-block;
-        margin-right: 0.3em;
-        text-align: center;
         width: 1.25em;
+        margin-right: 0.3em;
+        content: '';
+        text-align: center;
       }
     }
   }
@@ -22,11 +22,11 @@
     .field__item {
       &:before {
         @include fa-icon;
-        content: '\f015';
         display: inline-block;
-        margin-right: 0.3em;
-        text-align: center;
         width: 1.25em;
+        margin-right: 0.3em;
+        content: '\f015';
+        text-align: center;
       }
 
       &.url--facebook {

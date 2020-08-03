@@ -10,55 +10,42 @@
   width: 100%;
 
   .header--tiles--container {
-    background: -157px -5px url('../img/header/tiles_frontpage_static.jpg');
-    background-size: 905px;
-    height: $tiled-header-height;
+    position: fixed;
+    z-index: -1;
+    top: 0;
     left: 0;
     overflow: hidden;
-    position: fixed;
-    top: 0;
     width: 100%;
-    z-index: -1;
+    height: $tiled-header-height;
+    background: -157px -5px url('../img/header/tiles_frontpage_static.jpg');
+    background-size: 905px;
 
     .header--tiles--overlay {
-      background: linear-gradient(180deg, rgba(101, 255, 172, 0.21) 0%, rgba(255, 197, 101, 0.38) 76.61%);
-      height: 100%;
-      mix-blend-mode: multiply;
-      opacity: 0.5;
-      pointer-events: none;
       position: absolute;
       width: 100%;
+      height: 100%;
+      pointer-events: none;
+      opacity: 0.5;
+      background: linear-gradient(180deg, rgba(101, 255, 172, 0.21) 0%, rgba(255, 197, 101, 0.38) 76.61%);
+      mix-blend-mode: multiply;
     }
 
     .header--tiles--content {
+      position: relative;
       padding-top: 150px;
       pointer-events: none;
-      position: relative;
-
-      @include media-breakpoint-up(md) {
-        padding-top: 200px;
-      }
 
       .header--tile--logo {
         @include boxShadow;
         @include font-size(24px);
-        background: $green;
-        color: $white;
-        font-size: 1.2rem;
-        margin: 0 auto;
-        max-width: 100%;
-        padding: 3rem 3rem 2rem 3rem;
         position: relative;
         width: 600px;
-
-        @include media-breakpoint-up(md) {
-          font-size: 1.4rem;
-        }
-
-        @include media-breakpoint-up(lg) {
-          font-size: 1.5rem;
-          padding: 4rem 4rem 3rem 4rem;
-        }
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 3rem 3rem 2rem 3rem;
+        color: $white;
+        background: $green;
+        font-size: 1.2rem;
 
         p {
           color: $white;
@@ -67,50 +54,62 @@
         .header--title--logo--image {
           margin-bottom: map_get($spacers, 5);
 
-          @include media-breakpoint-up(md) {
-            width: 70%;
+          img {
+            width: 100%;
+            height: auto;
           }
 
-          img {
-            height: auto;
-            width: 100%;
+          @include media-breakpoint-up(md) {
+            width: 70%;
           }
         }
 
         .header--title--logo--text {
-          @media #{$ie} {
-            max-width: 100%;
-          }
-
           p {
             &:last-child {
               margin-bottom: 0;
             }
           }
+          @media #{$ie} {
+            max-width: 100%;
+          }
         }
+
+        @include media-breakpoint-up(md) {
+          font-size: 1.4rem;
+        }
+
+        @include media-breakpoint-up(lg) {
+          padding: 4rem 4rem 3rem 4rem;
+          font-size: 1.5rem;
+        }
+      }
+
+      @include media-breakpoint-up(md) {
+        padding-top: 200px;
       }
     }
 
     .tiles {
       position: absolute;
-      transform: translate3d(0, 0, 0);
       z-index: -1;
+      transform: translate3d(0, 0, 0);
 
       .header-tile,
       .front,
       .back {
-        height: 210px;
         width: 210px;
+        height: 210px;
       }
 
       .header-tile {
+        position: absolute;
+        z-index: 5;
         -webkit-user-select: none;
         -moz-user-select: none;
         user-select: none;
-        position: absolute;
         transform: rotate(45deg);
         perspective: 1000px;
-        z-index: 5;
 
         &.hover {
           .flipper {
@@ -125,27 +124,28 @@
 
           .front,
           .back {
-            backface-visibility: hidden;
             position: absolute;
             top: 0;
             left: 0;
+            transform: scale(1.04);
             background-repeat: no-repeat;
             background-position: center center;
-            transform: scale(1.04);
+            backface-visibility: hidden;
           }
 
           .front {
-            background: url('../img/header/tiles_frontpage.jpg') no-repeat;
             z-index: 10;
+            background: url('../img/header/tiles_frontpage.jpg') no-repeat;
           }
 
           .back {
+            z-index: 9;
+            transform: scale(1.04) rotateY(180deg);
             background: url('../img/header/tiles_code.jpg') no-repeat;
             background-size: 1260px;
-            transform: scale(1.04) rotateY(180deg);
-            z-index: 9;
           }
 
+          /* stylelint-disable order/order */
           $tile-size: 220px;
           $i: 0;
           @for $row from 0 through 6 {
@@ -163,6 +163,7 @@
               $i: $i + 1;
             }
           }
+          /* stylelint-enable order/order */
         }
       }
     }
@@ -185,8 +186,8 @@
         .header-tile,
         .front,
         .back {
-          height: 280px;
           width: 280px;
+          height: 280px;
         }
 
         .header-tile {
@@ -200,6 +201,7 @@
               background-size: auto;
             }
 
+            /* stylelint-disable order/order */
             $tile-size: 400px;
 
             $i: 0;
@@ -217,6 +219,7 @@
                 $i: $i + 1;
               }
             }
+            /* stylelint-enable order/order */
           }
         }
       }
@@ -225,17 +228,13 @@
         text-align: center;
 
         .header--tile--logo {
-          padding: 1.5rem 1.5rem 1.3rem 1.5rem;
           display: inline-block;
           width: auto;
-
-          @include media-breakpoint-up(sm) {
-            min-width: 520px;
-          }
+          padding: 1.5rem 1.5rem 1.3rem 1.5rem;
 
           .header--title--logo--image {
-            margin-bottom: 1rem;
             width: 80%;
+            margin-bottom: 1rem;
 
             @include media-breakpoint-up(sm) {
               width: 60%;
@@ -244,12 +243,12 @@
 
           .header--title--logo--text {
             h1 {
-              color: $white;
-              font-size: 2.6rem;
-              font-weight: $font-weight-semi-bold;
               margin: 0;
               text-transform: uppercase;
               word-wrap: break-word;
+              color: $white;
+              font-size: 2.6rem;
+              font-weight: $font-weight-semi-bold;
 
               @include media-breakpoint-up(sm) {
                 font-size: 4rem;
@@ -263,6 +262,10 @@
             .header--title--logo--text--event-date {
               margin-top: 0.8rem;
             }
+          }
+
+          @include media-breakpoint-up(sm) {
+            min-width: 520px;
           }
         }
       }

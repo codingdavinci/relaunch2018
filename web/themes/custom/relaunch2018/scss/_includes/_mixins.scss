@@ -1,6 +1,18 @@
 @import 'variables';
 @import '../../../../../../web/libraries/bootstrap/scss/bootstrap';
 
+@mixin menuFontSize {
+  font-size: 1.6rem;
+
+  @include media-breakpoint-up(sm) {
+    font-size: 1.8rem;
+  }
+
+  @include media-breakpoint-up(md) {
+    font-size: 2rem;
+  }
+}
+
 @mixin grayLink {
   color: $gray;
   font-weight: $font-weight-semi-bold;
@@ -14,8 +26,8 @@
   color: $green;
 
   &:hover {
-    color: $green-dark;
     text-decoration: none;
+    color: $green-dark;
   }
 }
 
@@ -36,14 +48,14 @@
     }
   }
   &:after {
-    color: $color;
-    content: '}';
     margin-left: 0.1em;
+    content: '}';
+    color: $color;
   }
   &:before {
-    color: $color;
-    content: '{';
     margin-right: 0.1em;
+    content: '{';
+    color: $color;
   }
 }
 
@@ -52,8 +64,8 @@
 }
 
 @mixin icon {
-  font-family: $font-family-icons;
   margin-right: 0.4em;
+  font-family: $font-family-icons;
 }
 
 @mixin fa-icon {
@@ -116,26 +128,26 @@
 
 @mixin tag-list {
   display: inline-block;
-  font-weight: $font-weight-semi-bold;
-  list-style-type: none;
   margin: 0 !important;
   padding: 0;
+  list-style-type: none;
   vertical-align: bottom;
+  font-weight: $font-weight-semi-bold;
 
   > * {
     @include font-size(12px);
     display: block;
     float: left;
-    line-height: 2;
     margin: 0 map_get($spacers, 1) map_get($spacers, 1) 0;
+    line-height: 2;
 
     a,
     span {
+      display: inline-block;
+      padding: 0 12px 2px 12px;
       border: 1px solid $green;
       border-radius: 50px;
-      display: inline-block;
       line-height: 18px;
-      padding: 0 12px 2px 12px;
     }
 
     a {
@@ -143,26 +155,26 @@
       color: $green;
 
       &:hover {
-        background-color: $green-dark;
-        border-color: $green-dark;
-        color: $white;
         text-decoration: none;
+        color: $white;
+        border-color: $green-dark;
+        background-color: $green-dark;
       }
     }
 
     span {
-      background-color: $green-dark;
-      border-color: $green-dark;
-      color: $white;
       cursor: default;
-      opacity: .5;
+      opacity: 0.5;
+      color: $white;
+      border-color: $green-dark;
+      background-color: $green-dark;
     }
 
     &.menu-item--active-trail {
       a {
-        background-color: $green-dark;
-        border-color: $green-dark;
         color: $white;
+        border-color: $green-dark;
+        background-color: $green-dark;
       }
     }
   }
@@ -180,9 +192,9 @@
 
 @mixin ul-dashed {
   li:before {
-    content: '—';
     display: inline-block;
-    margin-left: -0.9em;
     margin-right: 0.2em;
+    margin-left: -0.9em;
+    content: '—';
   }
 }

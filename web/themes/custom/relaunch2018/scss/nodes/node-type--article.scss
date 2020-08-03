@@ -29,19 +29,13 @@
   }
 
   h3 {
-    color: $gray;
     margin-top: map_get($spacers, 7);
+    color: $gray;
   }
 
   &.node--view-mode-related {
     .article--header-image {
       padding: 0 $grid-gutter-width / 2;
-    }
-
-    @include media-breakpoint-up(md) {
-      .article--content-block {
-        background-color: transparent;
-      }
     }
 
     .article--content-container {
@@ -62,21 +56,27 @@
       @include font-size(16px);
       @include link-underline;
     }
+
+    @include media-breakpoint-up(md) {
+      .article--content-block {
+        background-color: transparent;
+      }
+    }
   }
 
   &.node--view-mode-teaser {
-    background-color: $white;
     padding: $grid-gutter-width $grid-gutter-width / 2;
+    background-color: $white;
 
     .node__submitted {
       color: $gray-4;
     }
 
     hr {
-      border: none;
-      border-top: 1px solid $green;
       float: left;
       width: 40px;
+      border: none;
+      border-top: 1px solid $green;
     }
 
     .field--name-field-tags {

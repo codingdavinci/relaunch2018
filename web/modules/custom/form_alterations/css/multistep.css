@@ -2591,14 +2591,14 @@ html {
     margin-left: auto !important; } }
 
 .form-alter--multistep {
-  border-top: 1px solid #bfbfbf;
   display: flex;
   justify-content: space-between;
   margin: 1.5em;
-  padding-top: 1em; }
+  padding-top: 1em;
+  border-top: 1px solid #bfbfbf; }
   .form-alter--multistep .form-alter--multistep--back button {
-    border-bottom-right-radius: 0;
-    border-top-right-radius: 0; }
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0; }
   .form-alter--multistep .form-alter--multistep--next button {
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 0; }
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0; }

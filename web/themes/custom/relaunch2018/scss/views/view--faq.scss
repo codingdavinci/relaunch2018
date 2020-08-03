@@ -6,9 +6,9 @@
       margin-bottom: map_get($spacers, 5);
 
       h2 {
-        border-bottom: 1px solid $green;
         padding-bottom: map_get($spacers, 2);
         text-align: right;
+        border-bottom: 1px solid $green;
       }
 
       ul {
@@ -62,14 +62,14 @@
 
                 li {
                   &:before {
-                    content: '';
-                    color: $green;
                     display: inline-block;
+                    margin-right: 0.3rem;
+                    margin-left: -1.8em;
+                    content: '';
+                    vertical-align: middle;
+                    color: $green;
                     font-family: $font-family-icons;
                     font-size: 0.7rem;
-                    margin-left: -1.8em;
-                    margin-right: 0.3rem;
-                    vertical-align: middle;
                   }
                 }
               }
