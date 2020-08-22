@@ -211,9 +211,11 @@ function relaunch2018_preprocess_node(array &$variables) {
           }
           else {
             $imageStyle = ImageStyle::load('header');
-            $imageStyle->buildUri($file->getFileUri());
-            $variables['audio_video']['poster']
-              = file_create_url($imageStyle->buildUri($file->getFileUri()));
+            $derivativeUri = $imageStyle->buildUri($file->getFileUri());
+            if (!file_exists($derivativeUri)) {
+              $imageStyle->createDerivative($file->getFileUri(), $derivativeUri);
+            }
+            $variables['audio_video']['poster'] = file_create_url($derivativeUri);
           }
         }
       }
