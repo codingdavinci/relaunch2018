@@ -5,7 +5,11 @@
 /web/modules/contrib/
 /web/themes/contrib/
 /web/profiles/contrib/
-/web/libraries/
+/web/libraries/*
+
+# Required for anchor_link modules
+!/web/libraries/fakeobjects/
+!/web/libraries/link/
 
 # Ignore sensitive information
 /web/sites/*/settings.php

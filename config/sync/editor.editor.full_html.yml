@@ -34,6 +34,7 @@ settings:
           items:
             - DrupalLink
             - DrupalUnlink
+            - Anchor
         -
           name: Lists
           items:
