@@ -3209,59 +3209,61 @@ display:
           expose_sort_order: true
           sort_asc_label: Asc
           sort_desc_label: Desc
-          input_required: false
           text_input_required: 'Wählen Sie einen beliebigen Filter und klicken Sie auf Anwenden, um Ergebnisse zu sehen'
+          text_input_required_format: restricted_html
           bef:
             general:
-              allow_secondary: false
-              secondary_label: 'Erweiterte Filter'
               autosubmit: false
               autosubmit_exclude_textfield: false
+              autosubmit_textfield_delay: 500
               autosubmit_hide: false
-            field_theme_target_id:
-              bef_format: bef_links
-              more_options:
-                bef_select_all_none: false
-                bef_collapsible: false
-                is_secondary: false
-                rewrite:
-                  filter_rewrite_values: ''
-            field_event_target_id_views_entity_reference:
-              bef_format: bef_links
-              more_options:
-                bef_select_all_none: false
-                bef_collapsible: false
-                is_secondary: false
-                rewrite:
-                  filter_rewrite_values: ''
-            field_object_type_target_id:
-              bef_format: bef_ul_links
-              more_options:
-                bef_select_all_none: false
-                bef_select_all_none_nested: false
-                bef_collapsible: false
-                is_secondary: false
-                rewrite:
-                  filter_rewrite_values: ''
-            combine:
-              bef_format: default
-              more_options:
-                is_secondary: false
-                placeholder_text: ''
-            field_institution_name_value:
-              bef_format: default
-              more_options:
-                is_secondary: false
-                placeholder_text: ''
-            field_license_target_id:
-              bef_format: bef_links
-              more_options:
-                bef_select_all_none: false
-                bef_collapsible: false
-                is_secondary: false
-                rewrite:
-                  filter_rewrite_values: ''
-          text_input_required_format: basic_html
+              input_required: false
+              allow_secondary: false
+              secondary_label: 'Advanced options'
+              secondary_open: false
+            filter:
+              field_theme_target_id:
+                plugin_id: bef_links
+                advanced:
+                  rewrite:
+                    filter_rewrite_values: ''
+                  collapsible: false
+                  is_secondary: false
+                select_all_none: false
+              field_event_target_id_views_entity_reference:
+                plugin_id: bef_links
+                advanced:
+                  rewrite:
+                    filter_rewrite_values: ''
+                  collapsible: false
+                  is_secondary: false
+                select_all_none: false
+              field_object_type_target_id:
+                plugin_id: bef_links
+                advanced:
+                  rewrite:
+                    filter_rewrite_values: ''
+                  collapsible: false
+                  is_secondary: false
+                select_all_none: false
+              combine:
+                plugin_id: default
+                advanced:
+                  collapsible: false
+                  is_secondary: false
+              field_institution_name_value:
+                plugin_id: default
+                advanced:
+                  collapsible: false
+                  is_secondary: false
+              field_license_target_id:
+                plugin_id: bef_links
+                advanced:
+                  rewrite:
+                    filter_rewrite_values: ''
+                  collapsible: false
+                  is_secondary: false
+                select_all_none: false
       arguments: {  }
       menu:
         type: normal
@@ -4912,22 +4914,24 @@ display:
           text_input_required: 'Wählen Sie einen beliebigen Filter und klicken Sie auf Anwenden, um Ergebnisse zu sehen'
           bef:
             general:
-              allow_secondary: false
-              secondary_label: 'Advanced options'
               autosubmit: true
               autosubmit_exclude_textfield: false
               autosubmit_hide: true
-            field_event_target_id:
-              bef_format: default
-              slider_options:
-                bef_slider_min: null
-                bef_slider_max: null
-                bef_slider_step: !!float 1
-                bef_slider_animate: ''
-                bef_slider_orientation: ''
-              more_options:
-                is_secondary: false
-                placeholder_text: ''
+              input_required: false
+              text_input_required: 'Wählen Sie einen beliebigen Filter und klicken Sie auf Anwenden, um Ergebnisse zu sehen'
+              text_input_required_format: basic_html
+              allow_secondary: false
+              secondary_label: 'Advanced options'
+            filter:
+              field_event_target_id:
+                plugin_id: default
+                advanced:
+                  collapsible: false
+                  is_secondary: false
+                  placeholder_text: ''
+                  rewrite:
+                    filter_rewrite_values: ''
+                  sort_options: false
           text_input_required_format: basic_html
     cache_metadata:
       max-age: -1
