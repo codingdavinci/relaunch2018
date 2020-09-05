@@ -8315,11 +8315,11 @@ a.text-dark:hover, a.text-dark:focus {
   opacity: 1;
   border: 0;
   background: transparent; }
-  .view .view-filters .form-item div.badge a.bef-link-active {
+  .view .view-filters .form-item div.badge a.bef-link--selected {
     color: #fff;
     border-color: #0a8856;
     background-color: #0a8856; }
-    .view .view-filters .form-item div.badge a.bef-link-active:after {
+    .view .view-filters .form-item div.badge a.bef-link--selected:after {
       margin-left: 4px;
       content: '✖';
       font-size: 0.8em;
@@ -8328,7 +8328,7 @@ a.text-dark:hover, a.text-dark:focus {
 .view .view-filters .form-item ul ul .badge > .badge {
   color: #0a8856;
   border-color: #0a8856; }
-  .view .view-filters .form-item ul ul .badge > .badge.bef-link-active {
+  .view .view-filters .form-item ul ul .badge > .badge.bef-link--selected {
     color: #fff; }
 
 .block-block-figures {
@@ -11495,7 +11495,7 @@ a.icon-mail-1 {
         display: inline; }
         .view .view-filters form .form--inline .form-item .bef-links ul li ul {
           display: none; }
-        .view .view-filters form .form--inline .form-item .bef-links ul li > div.bef-link-active + ul:not(.bef-nested-hide) {
+        .view .view-filters form .form--inline .form-item .bef-links ul li > a.bef-link--selected + ul {
           display: block; }
     .view .view-filters form .form--inline .form-item label {
       font-size: 16px; }

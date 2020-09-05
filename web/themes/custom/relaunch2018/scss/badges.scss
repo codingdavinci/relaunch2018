@@ -40,7 +40,7 @@
         background: transparent;
 
         a {
-          &.bef-link-active {
+          &.bef-link--selected {
             color: $white;
             border-color: $green-dark;
             background-color: $green-dark;
@@ -61,7 +61,7 @@
             color: $green-dark;
             border-color: $green-dark;
 
-            &.bef-link-active {
+            &.bef-link--selected {
               color: $white;
             }
           }

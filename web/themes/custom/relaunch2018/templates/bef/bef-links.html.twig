@@ -6,19 +6,20 @@
 {%
   set classes = [
     'bef-links',
+    is_nested ? 'bef-nested'
   ]
+%}
+{%
+  set is_nested = true
 %}
 <div{{ attributes.addClass(classes) }}>
   {% set current_nesting_level = 0 %}
   {% for child in children %}
     {% set item = attribute(element, child) %}
-    {% set item = item|merge({'#attributes': {'class': 'badge'}}) %}
-    {% if child in selected %}
-      {% set item = item|merge({'#attributes': {'class': 'badge bef-link-active'}}) %}
-    {% endif %}
-    {% if isNested %}
+    {% set item = item|merge({'#attributes': {'class': item['#attributes']['class']|merge(['badge'])}}) %}
+    {% if is_nested %}
       {% set new_nesting_level = attribute(depth, child) %}
-      {% include '@relaunch2018/bef/bef-nested-elements.html.twig' %}
+      {% include '@better_exposed_filters/bef-nested-elements.html.twig' %}
       {% set current_nesting_level = new_nesting_level %}
     {# Don't render "All" links: #}
     {% elseif child != 'All' and child != '' %}

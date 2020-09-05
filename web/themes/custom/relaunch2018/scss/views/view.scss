@@ -22,12 +22,10 @@
                   display: none;
                 }
 
-                > div {
-                  &.bef-link-active {
+                > a {
+                  &.bef-link--selected {
                     & + ul {
-                      &:not(.bef-nested-hide) {
-                        display: block;
-                      }
+                      display: block;
                     }
                   }
                 }
