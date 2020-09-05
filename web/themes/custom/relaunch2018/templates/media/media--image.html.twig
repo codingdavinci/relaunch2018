@@ -16,12 +16,12 @@
   {{ title_suffix.contextual_links }}
   {% if content %}
     {{ content.field_media_image }}
-    <div class="media--attribution">
+    <div class="media__attribution">
       {% if content.field_caption['#items'] is not empty %}
-        {{ content.field_caption }},
+        {{ content.field_caption }}
       {% endif %}
       {% if content.field_creator['#items'] is not empty %}
-        {{ content.field_creator }},
+        {{ content.field_creator }}<span class="media__attribution__comma">,</span>
       {% endif %}
       {% if content.field_license['#items'] is not empty %}
         {{ content.field_license }}

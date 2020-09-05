@@ -8,13 +8,23 @@
     @include grayLink;
   }
 
-  .field--name-field-caption,
-  .field--name-field-creator,
-  .field--name-field-license {
-    display: inline-block;
+  .media__attribution {
+    * {
+      display: inline;
+    }
 
-    &.field--name-field-caption {
+    .media__attribution__comma {
+      &:after {
+        content: ' ';
+      }
+    }
+
+    .field--name-field-caption {
       margin-top: map_get($spacers, 2);
+
+      &:after {
+        content: ' ';
+      }
     }
   }
 
@@ -42,7 +52,7 @@
     padding: 0;
   }
 
-  .media--attribution {
+  .media__attribution {
     @include font-size(16px);
     margin-top: map_get($spacers, 2);
   }

@@ -9271,14 +9271,14 @@ body.path-user:not(.user-logged-in) main {
     font-weight: 500; }
     .media--type-image a:hover {
       color: #000; }
-  .media--type-image .field--name-field-caption,
-  .media--type-image .field--name-field-creator,
-  .media--type-image .field--name-field-license {
-    display: inline-block; }
-    .media--type-image .field--name-field-caption.field--name-field-caption,
-    .media--type-image .field--name-field-creator.field--name-field-caption,
-    .media--type-image .field--name-field-license.field--name-field-caption {
-      margin-top: 16px; }
+  .media--type-image .media__attribution * {
+    display: inline; }
+  .media--type-image .media__attribution .media__attribution__comma:after {
+    content: ' '; }
+  .media--type-image .media__attribution .field--name-field-caption {
+    margin-top: 16px; }
+    .media--type-image .media__attribution .field--name-field-caption:after {
+      content: ' '; }
   .media--type-image img {
     width: 100%;
     height: auto; }
@@ -9291,7 +9291,7 @@ body.path-user:not(.user-logged-in) main {
       height: auto; }
   .media--type-image.media--view-mode-default {
     padding: 0; }
-  .media--type-image .media--attribution {
+  .media--type-image .media__attribution {
     font-size: 16px;
     margin-top: 16px; }
 
