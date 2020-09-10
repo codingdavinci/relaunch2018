@@ -5,6 +5,10 @@ RUN docker-php-ext-install gd
 COPY / /tmp/cdv
 WORKDIR /tmp/cdv
 RUN composer install --no-dev
+# Add git tag version to PHP file
+RUN { \
+		echo -e "<\x21-- $(git describe --tags) -->"; \
+	} >> /tmp/cdv/web/themes/custom/relaunch2018/templates/html.html.twig	
 
 # from https://github.com/docker-library/drupal/blob/master/8.7/apache/Dockerfile
 FROM php:7.4-apache
