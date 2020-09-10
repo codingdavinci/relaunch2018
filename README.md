@@ -103,7 +103,7 @@ Run in the folder with `Dockerfile`:
 docker build -t cdv .
 ```
 
-And start Docker Container with:
+And start Docker container with:
 ```shell
 docker run -d -p 8080:80 -P \
   --env "MYSQL_HOSTNAME=cdv.example.com" \
