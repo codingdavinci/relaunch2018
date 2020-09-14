@@ -28,7 +28,7 @@ type_settings:
       weight: 0
   transitions:
     archive:
-      label: Archive
+      label: Archivieren
       from:
         - published
       to: archived

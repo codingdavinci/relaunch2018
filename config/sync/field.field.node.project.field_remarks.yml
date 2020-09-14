@@ -9,8 +9,8 @@ id: node.project.field_remarks
 field_name: field_remarks
 entity_type: node
 bundle: project
-label: 'Questions or comments to the organisers'
-description: 'Problems or comments on your submission? Write them here. This won''t be published on the website.'
+label: 'Fragen oder Nachrichten an die Veranstalter'
+description: 'Probleme mit oder Anmerkungen zu diesem Formular? Schreib'' sie hier rein. Was du in dieses Feld schreibst, wird nicht auf der Website veröffentlicht.'
 required: false
 translatable: false
 default_value: {  }

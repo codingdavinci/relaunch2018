@@ -21,6 +21,9 @@ display:
   block_3:
     display_options:
       use_more_text: 'All Projects'
+      header:
+        area_text_custom:
+          content: 'All apps, websites, data visualizations, games, interactive installations and even hardware developed at Coding da Vinci on the basis of open cultural data are available here permanently and under open licenses.'
   page_1:
     display_options:
       menu:

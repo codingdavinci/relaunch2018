@@ -18,6 +18,7 @@ track:
   site_search: false
 privacy:
   donottrack: true
+  disablecookies: false
 custom:
   variable:
     1:

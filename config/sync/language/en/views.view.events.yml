@@ -1,0 +1,7 @@
+display:
+  default:
+    display_options:
+      title: 'Upcoming Events'
+  block_1:
+    display_options:
+      title: 'Past Events'

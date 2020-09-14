@@ -1,0 +1,31 @@
+display:
+  default:
+    display_options:
+      fields:
+        comment_bulk_form:
+          action_title: Action
+        name:
+          label: Author
+        changed:
+          label: Updated
+        operations:
+          label: Operations
+      filters:
+        langcode:
+          expose:
+            label: Language
+  page_unapproved:
+    display_options:
+      filters:
+        langcode:
+          expose:
+            label: Language
+      fields:
+        comment_bulk_form:
+          action_title: Action
+        name:
+          label: Author
+        changed:
+          label: Updated
+        operations:
+          label: Operations

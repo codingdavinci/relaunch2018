@@ -1,0 +1,15 @@
+cron_last_run: 1600010339
+cron_frequency: 86400
+use_time_interval: false
+time_interval_start: '01:30'
+time_interval_end: '02:30'
+all_tables: 1
+write_log: 0
+_core:
+  default_config_hash: T_ds3REH4r3NJRKBQ8cLc-RVnb4uooa-F_oEyWxdB8w
+langcode: de
+table_list_cdvdrupal: {  }
+actions: null
+form_build_id: form-WUPShqxHH3H62qSAAi8OJKkkVO-KAfrdzjNboZxXnqg
+form_token: cxKoIiI-53QESi4maoIyBD_eHDuUjPDuehJLaHUdiVs
+form_id: db_maintenance_admin_settings

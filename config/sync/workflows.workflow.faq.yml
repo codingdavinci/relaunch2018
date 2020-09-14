@@ -21,6 +21,11 @@ type_settings:
       default_revision: true
       label: Veröffentlicht
       weight: 1
+    unpublished:
+      published: false
+      default_revision: true
+      label: Unveröffentlicht
+      weight: 2
   transitions:
     create_new_draft:
       label: 'Create New Draft'
@@ -36,6 +41,15 @@ type_settings:
       from:
         - draft
         - published
+        - unpublished
+    unpublish:
+      label: Unpublish
+      from:
+        - draft
+        - published
+        - unpublished
+      to: unpublished
+      weight: 2
   entity_types:
     node:
       - faq

@@ -11,7 +11,7 @@ field_name: field_object_type
 entity_type: node
 bundle: data_set
 label: Objekttyp
-description: ''
+description: 'Geben Sie an, aus welcher Art Objekte sich die Sammlung zusammensetzt. Unterkategorien erscheinen, nachdem Sie eine Kategorie ausgewählt haben. Mehrfachauswahl möglich.'
 required: false
 translatable: false
 default_value: {  }

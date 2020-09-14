@@ -1,0 +1,25 @@
+display:
+  default:
+    display_options:
+      fields:
+        media_bulk_form:
+          action_title: Action
+        uid:
+          label: Author
+        status:
+          settings:
+            format_custom_true: Veröffentlicht
+        changed:
+          label: Updated
+        operations:
+          label: Operations
+      filters:
+        status:
+          group_info:
+            label: Status
+            group_items:
+              1:
+                title: Veröffentlicht
+        langcode:
+          expose:
+            label: Language

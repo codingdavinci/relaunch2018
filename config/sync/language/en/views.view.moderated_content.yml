@@ -1,0 +1,33 @@
+label: 'Moderated content'
+display:
+  default:
+    display_options:
+      fields:
+        title:
+          label: Title
+        type:
+          label: 'Content type'
+        name:
+          label: Author
+        moderation_state:
+          label: 'Moderation State'
+        changed:
+          label: Updated
+        operations:
+          label: Operations
+      filters:
+        title:
+          expose:
+            label: Title
+        type:
+          expose:
+            label: 'Content type'
+        moderation_state:
+          expose:
+            label: 'Moderation State'
+        langcode:
+          expose:
+            label: Language
+      title: 'Moderated content'
+  moderated_content:
+    display_title: 'Moderated content'

@@ -9,7 +9,7 @@ _core:
 id: user_admin_people
 label: Benutzer
 module: user
-description: 'Menschen finden und verwalten, die mit Ihrer Website in Kontakt stehen.'
+description: 'Menschen finden und verwalten, die mit Ihrer Website interagieren.'
 tag: default
 base_table: users_field_data
 base_field: uid
@@ -469,7 +469,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Operations
+          label: Aktion
           exclude: false
           alter:
             alter_text: false
@@ -902,7 +902,7 @@ display:
       menu:
         type: 'default tab'
         title: Liste
-        description: 'Menschen finden und verwalten, die mit Ihrer Website in Kontakt stehen.'
+        description: 'Menschen finden und verwalten, die mit Ihrer Website interagieren.'
         menu_name: admin
         weight: -10
         context: ''

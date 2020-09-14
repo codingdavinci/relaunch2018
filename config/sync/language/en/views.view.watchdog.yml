@@ -1,0 +1,8 @@
+display:
+  default:
+    display_options:
+      fields:
+        link:
+          label: Operations
+  page:
+    display_title: Page

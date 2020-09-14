@@ -9,7 +9,7 @@ id: media.image.field_creator
 field_name: field_creator
 entity_type: media
 bundle: image
-label: Urheber
+label: Namensnennung
 description: ''
 required: false
 translatable: false

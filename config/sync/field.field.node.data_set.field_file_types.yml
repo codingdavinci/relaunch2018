@@ -11,7 +11,7 @@ field_name: field_file_types
 entity_type: node
 bundle: data_set
 label: Dateitypen
-description: 'Geben Sie an, in welchem Bild-, Audio-, Video- oder sonstigem Format die von Ihnen zur Verfügung gestellten Mediendateien vorliegen.'
+description: 'Geben Sie an, in welchem Bild-, Audio-, Video- oder sonstigem Format die von Ihnen zur Verfügung gestellten Mediendateien vorliegen. UNterkategorien erscheinen, wenn Sie eine Kategorie ausgewählt haben. Mehrfachauswahl möglich.'
 required: false
 translatable: false
 default_value: {  }

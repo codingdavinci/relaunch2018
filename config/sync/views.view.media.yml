@@ -11,7 +11,7 @@ dependencies:
 _core:
   default_config_hash: rRzAWaXpJGYA2gPG6BmGxy8gfFd4srCc-LQY3JB6tR8
 id: media
-label: Media
+label: Medien
 module: views
 description: ''
 tag: ''
@@ -184,7 +184,7 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          action_title: Action
+          action_title: Aktion
           include_exclude: exclude
           selected_actions: {  }
           entity_type: media
@@ -259,27 +259,38 @@ display:
           id: name
           table: media_field_data
           field: name
-          entity_type: media
-          entity_field: media
-          alter:
-            alter_text: false
-            make_link: false
-            absolute: false
-            trim: false
-            word_boundary: false
-            ellipsis: false
-            strip_tags: false
-            html: false
-          hide_empty: false
-          empty_zero: false
-          settings:
-            link_to_entity: true
-          plugin_id: field
           relationship: none
           group_type: group
           admin_label: ''
           label: 'Media name'
           exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: false
+            ellipsis: false
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
           element_type: ''
           element_class: ''
           element_label_type: ''
@@ -289,9 +300,13 @@ display:
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
+          hide_empty: false
+          empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
           type: string
+          settings:
+            link_to_entity: true
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -302,6 +317,9 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          entity_type: media
+          entity_field: media
+          plugin_id: field
         bundle:
           id: bundle
           table: media_field_data
@@ -309,7 +327,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Type
+          label: Medientyp
           exclude: false
           alter:
             alter_text: false
@@ -374,7 +392,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Author
+          label: Autor
           exclude: false
           alter:
             alter_text: false
@@ -485,7 +503,7 @@ display:
           settings:
             format: custom
             format_custom_true: Veröffentlicht
-            format_custom_false: Unpublished
+            format_custom_false: Unveröffentlicht
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -506,7 +524,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Updated
+          label: geändert
           exclude: false
           alter:
             alter_text: false
@@ -573,7 +591,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Operations
+          label: Aktion
           exclude: false
           alter:
             alter_text: false
@@ -673,10 +691,12 @@ display:
           exposed: true
           expose:
             operator_id: bundle_op
-            label: Type
+            label: Medientyp
             description: ''
             use_operator: false
             operator: bundle_op
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: type
             required: false
             remember: false
@@ -684,10 +704,12 @@ display:
             remember_roles:
               authenticated: authenticated
               anonymous: '0'
+              project_team: '0'
+              institution: '0'
+              event_team: '0'
+              office: '0'
               administrator: '0'
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -730,7 +752,7 @@ display:
             operator_list: {  }
           is_grouped: true
           group_info:
-            label: 'Published status'
+            label: Status
             description: ''
             identifier: status
             optional: true
@@ -745,7 +767,7 @@ display:
                 operator: '='
                 value: '1'
               2:
-                title: Unpublished
+                title: Unveröffentlicht
                 operator: '='
                 value: '0'
           plugin_id: boolean
@@ -764,7 +786,7 @@ display:
           exposed: true
           expose:
             operator_id: langcode_op
-            label: Language
+            label: Sprache
             description: ''
             use_operator: false
             operator: langcode_op
@@ -849,7 +871,7 @@ display:
           expose:
             label: ''
           granularity: second
-      title: Media
+      title: Medien
       header: {  }
       footer: {  }
       empty:
@@ -862,7 +884,7 @@ display:
           admin_label: ''
           empty: true
           tokenize: false
-          content: 'No media available.'
+          content: 'Keine Medien verfügbar.'
           plugin_id: text_custom
       relationships: {  }
       arguments: {  }
@@ -880,14 +902,14 @@ display:
   media_page_list:
     display_plugin: page
     id: media_page_list
-    display_title: Media
+    display_title: Medien
     position: 1
     display_options:
       display_extenders: {  }
       path: admin/content/media
       menu:
         type: tab
-        title: Media
+        title: Medien
         description: ''
         expanded: false
         parent: ''

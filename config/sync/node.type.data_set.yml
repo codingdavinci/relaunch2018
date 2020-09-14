@@ -8,9 +8,9 @@ third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
-name: Datensatz
+name: Datenset
 type: data_set
-description: 'Ein von einer Institution bereitgestellter Datensatz.'
+description: 'Ein von einer Institution bereitgestelltes Datenset.'
 help: ''
 new_revision: true
 preview_mode: 0

@@ -10,7 +10,7 @@ field_name: field_short_description
 entity_type: node
 bundle: project
 label: Kurzbeschreibung
-description: 'An wen richtet sich das Projekt und was ist die Idee dahinter?'
+description: 'Kurz und knackig: Was macht euer Projekt aus? Was macht es besonders? An wen richtet es sich?'
 required: false
 translatable: true
 default_value: {  }

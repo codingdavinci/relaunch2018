@@ -9,7 +9,7 @@ id: node.data_set.field_has_geo_references
 field_name: field_has_geo_references
 entity_type: node
 bundle: data_set
-label: 'Datensatz enthält Georeferenzen?'
+label: 'Enthält das Datenset Georeferenzen?'
 description: ''
 required: false
 translatable: false

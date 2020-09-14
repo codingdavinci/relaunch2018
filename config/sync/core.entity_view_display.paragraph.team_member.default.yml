@@ -9,6 +9,7 @@ dependencies:
     - paragraphs.paragraphs_type.team_member
   module:
     - link
+    - spamspan
 id: paragraph.team_member.default
 targetEntityType: paragraph
 bundle: team_member
@@ -17,9 +18,17 @@ content:
   field_email:
     weight: 1
     label: visually_hidden
-    settings: {  }
+    settings:
+      spamspan_at: ' [at] '
+      spamspan_use_graphic: 0
+      spamspan_dot_enable: 0
+      spamspan_dot: ' [dot] '
+      spamspan_use_form: 0
+      spamspan_form_pattern: '<a href="%url?goto=%email">%displaytext</a>'
+      spamspan_form_default_url: contact
+      spamspan_form_default_displaytext: 'contact form'
     third_party_settings: {  }
-    type: email_mailto
+    type: email_spamspan
     region: content
   field_links:
     weight: 2

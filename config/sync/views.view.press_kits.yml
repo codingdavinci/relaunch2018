@@ -574,6 +574,7 @@ display:
           granularity: second
           plugin_id: datetime
       display_description: ''
+      rendering_language: '***LANGUAGE_entity_translation***'
     cache_metadata:
       max-age: -1
       contexts:
@@ -599,13 +600,14 @@ display:
         title: false
       menu:
         type: normal
-        title: Presse
+        title: 'Kontakt und Presse'
         description: ''
         expanded: false
-        parent: ''
-        weight: -45
+        parent: 'menu_link_content:b44559be-a326-4847-b5c1-79a3eb8556be'
+        weight: -46
         context: '0'
         menu_name: main
+        enabled: true
       relationships:
         field_event:
           id: field_event
@@ -617,10 +619,10 @@ display:
           required: false
           plugin_id: standard
       title: Presse
+      rendering_language: '***LANGUAGE_language_interface***'
     cache_metadata:
       max-age: -1
       contexts:
-        - 'languages:language_content'
         - 'languages:language_interface'
         - 'user.node_grants:view'
         - user.permissions

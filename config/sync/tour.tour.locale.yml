@@ -16,7 +16,7 @@ tips:
   locale-overview:
     id: locale-overview
     plugin: text
-    label: Benutzeroberflächenübersetzung
+    label: 'Benutzeroberfläche übersetzen'
     body: 'Diese Seite erlaubt es die Benutzeroberfläche zu übersetzen oder bestehende Übersetzungen zu abzuändern. Falls die Website eingangs in Englisch installiert wurde, muss zuerst eine weitere Sprache auf der <a href="[site:url]admin/config/regional/language">Sprachen-Seite</a> hinzugefügt werden, um diese Seite nutzen zu können.'
     weight: 1
   locale-language:

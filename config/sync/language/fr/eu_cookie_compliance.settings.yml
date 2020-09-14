@@ -1,7 +1,6 @@
 popup_agreed:
   value: '<h2>Merci d''avoir accepté les cookies</h2><p>Vous pouvez désormais masquer ce message ou en apprendre plus à propos des cookies.</p>'
 popup_agree_button_message: Accepter
-popup_more_info_button_message: 'En savoir plus'
 popup_find_more_button_message: 'En savoir plus'
 popup_hide_button_message: Masquer
 popup_info:

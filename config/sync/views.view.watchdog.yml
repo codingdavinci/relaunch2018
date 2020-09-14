@@ -150,7 +150,7 @@ display:
           field: nothing
           relationship: none
           group_type: group
-          admin_label: Icon
+          admin_label: Symbol
           label: ''
           exclude: false
           alter:
@@ -299,7 +299,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Type
+          label: Medientyp
           exclude: false
           alter:
             alter_text: false
@@ -515,7 +515,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Operations
+          label: Aktion
           exclude: false
           alter:
             alter_text: false
@@ -571,7 +571,7 @@ display:
           exposed: true
           expose:
             operator_id: type_op
-            label: Type
+            label: Medientyp
             description: ''
             use_operator: false
             operator: type_op

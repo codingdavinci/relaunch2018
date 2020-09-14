@@ -39,10 +39,6 @@ display:
           reset_button_label: Reset
           sort_asc_label: Ascending
           sort_desc_label: Descending
-          text_input_required: 'Choose a filter and click apply to see the results'
-          bef:
-            general:
-              secondary_label: 'Advanced Filter'
       menu:
         title: Datasets
       fields:

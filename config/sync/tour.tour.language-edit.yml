@@ -17,7 +17,7 @@ tips:
     id: language-edit-overview
     plugin: text
     label: 'Sprachen bearbeiten'
-    body: '<p>Diese Seite bietet die Möglichkeit eine Sprache auf der Website, einschließlich benutzerdefinierter Sprachen, zu bearbeiten.</p>'
+    body: '<p>Diese Seite bietet die Möglichkeit, eine Sprache auf Ihrer Website zu bearbeiten, einschließlich benutzerdefinierter Sprachen.</p>'
     weight: 1
   language-edit-langcode:
     id: language-edit-langcode
@@ -31,7 +31,7 @@ tips:
     id: language-edit-label
     plugin: text
     label: Sprachname
-    body: '<p>Der Name der Sprache wird für alle Benutzer der Website in Englisch angezeigt. Die Namen von mitgelieferten Sprachen kann mit dem Interface Translation-Modul und Namen von mitgelieferten sowie benutzerdefinierten Sprache kann mit dem Configuration Translation-Modul übersetzt werden.</p>'
+    body: '<p>Der Name der Sprache wird für alle Benutzer der Website in Englisch angezeigt. Die Namen von mitgelieferten Sprachen können mit dem Interface-Translation-Modul und Namen von mitgelieferten sowie benutzerdefinierten Sprache können mit dem Configuration-Translation-Modul übersetzt werden.</p>'
     weight: 3
     attributes:
       data-id: edit-label
@@ -39,7 +39,7 @@ tips:
     id: language-edit-direction
     plugin: text
     label: Sprachlaufrichtung
-    body: '<p>Auswählen ob es sich um eine „Links-nach-rechts“ oder „Rechts-nach-links“ Sprache handelt.</p><p>Beachte, dass nicht alle Themes „Rechts-nach-links“ Layouts unterstützen. Sollte „Rechts-nach-links“ ausgewählt sein, das verwendete Theme im Hinblick darauf testen.</p>'
+    body: '<p>Auswählen ob es sich um eine „Links-nach-rechts“ oder „Rechts-nach-links“ Sprache handelt.</p><p>Bitte beachten, dass nicht alle Themes „Rechts-nach-links“-Layouts unterstützen. Sollte „Rechts-nach-links“ ausgewählt sein, sollte das verwendete Theme im Hinblick darauf getestet werden.</p>'
     weight: 4
     attributes:
       data-id: edit-direction--wrapper--description
@@ -47,5 +47,5 @@ tips:
     id: language-edit-continue
     plugin: text
     label: 'Übersetzungen wiederverwenden'
-    body: '<p>Nachdem sich ein Überblick über die „Sprache bearbeiten“ Funktion verschafft wurde, geht es hiermit weiter:<ul><li>Eine Sprache bearbeiten</li><li><a href="[site:url]admin/config/regional/language">Die eingerichteten Sprachen anzeigen</a></li></ul></p>'
+    body: '<p>Jetzt, da Sie einen Überblick über die Funktion „Sprache bearbeiten“ haben, können Sie fortfahren mit:<ul><li>Eine Sprache bearbeiten</li><li><a href="[site:url]admin/config/regional/language">Eingerichtete Sprachen anzeigen</a></li></ul></p>'
     weight: 5

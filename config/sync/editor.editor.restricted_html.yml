@@ -20,7 +20,6 @@ settings:
             - Superscript
             - Subscript
             - '-'
-            - Format
             - RemoveFormat
             - '-'
             - '-'
@@ -47,10 +46,10 @@ settings:
           items:
             - Source
   plugins:
-    language:
-      language_list: un
     stylescombo:
       styles: ''
+    language:
+      language_list: un
 image_upload:
   status: false
   scheme: public

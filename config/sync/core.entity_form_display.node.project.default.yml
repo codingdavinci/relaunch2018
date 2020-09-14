@@ -38,9 +38,9 @@ third_party_settings:
       weight: 5
       format_type: fieldset
       format_settings:
+        description: 'Erzähle uns beispielsweise: Worum geht es bei eurem Projekt? Was kann es, wie habt ihr es technisch umgesetzt und wie funktioniert es? Gibt es eine Geschichte hinter eurem Projekt? Was hat euch motiviert das Projekt zu machen? Wollt ihr weiter an eurem Projekt arbeiten?'
         id: ''
         classes: ''
-        description: 'Erzählt uns beispielsweise: Was hat euch motiviert das Projekt zu machen? Wie habt ihr das Projekt technisch umgesetzt und wie funktioniert es? Gibt es eine Geschichte hinter eurem Projekt? Wollt ihr weiter an eurem Projekt arbeiten?'
         required_fields: false
       label: Beschreibung
       region: content
@@ -103,8 +103,8 @@ content:
       autocollapse: none
       closed_mode_threshold: 0
       features:
-        duplicate: duplicate
         collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
     third_party_settings: {  }
     type: paragraphs
     region: content
@@ -122,9 +122,9 @@ content:
       form_display_mode: default
       default_paragraph_type: _none
       features:
-        duplicate: duplicate
-        collapse_edit_all: collapse_edit_all
         add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
     third_party_settings: {  }
     region: content
   field_datasets:
@@ -133,6 +133,7 @@ content:
       match_operator: CONTAINS
       autocomplete: false
       width: 100%
+      match_limit: 10
     third_party_settings: {  }
     type: select2_entity_reference
     region: content
@@ -183,8 +184,8 @@ content:
       autocollapse: none
       closed_mode_threshold: 0
       features:
-        duplicate: duplicate
         collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
     third_party_settings: {  }
     region: content
   field_links:
@@ -242,8 +243,8 @@ content:
       autocollapse: none
       closed_mode_threshold: 0
       features:
-        duplicate: duplicate
         collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
     third_party_settings: {  }
     region: content
   langcode:

@@ -76,7 +76,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Title
+          label: Titel
           exclude: false
           alter:
             alter_text: false
@@ -123,7 +123,7 @@ display:
           id: name
           table: users_field_data
           field: name
-          label: Author
+          label: Autor
           relationship: uid
           plugin_id: field
           type: user_name

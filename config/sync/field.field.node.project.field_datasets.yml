@@ -10,8 +10,8 @@ id: node.project.field_datasets
 field_name: field_datasets
 entity_type: node
 bundle: project
-label: Datensätze
-description: 'min. ein verwendeter Datensatz aus http://codingdavinci.de/daten/'
+label: Datensets
+description: 'mindestens ein Datenset aus http://codingdavinci.de/daten/'
 required: false
 translatable: false
 default_value: {  }

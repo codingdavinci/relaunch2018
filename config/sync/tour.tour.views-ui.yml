@@ -25,15 +25,15 @@ tips:
     id: views-ui-displays
     plugin: text
     label: 'Anzeigen in dieser Ansicht'
-    body: 'Eine Anzeige ist eine Möglichkeit Ergebnisse wie beispielsweise eine Seite order einen Block auszugeben. Eine Ansicht kann mehrere Anzeigen enthalten. Diese werden hier aufgeführt. Die Aktive Anzeige ist hervorgehoben.'
+    body: 'Eine Anzeige ist eine Möglichkeit, die Ergebnisse auszugeben, z. B. als Seite oder Block. Eine Ansicht kann mehrere Anzeigen enthalten, die hier aufgelistet sind. Die aktive Anzeige wird hervorgehoben.'
     weight: 2
     attributes:
       data-id: views-display-top
   views-ui-view-admin:
     id: views-ui-view-admin
     plugin: text
-    label: 'View administration'
-    body: 'Durchführung administrativer Aufgaben, wie das Hinzufügen einer Beschreibung und das Duplizieren einer Ansicht. Das Drop-down öffnen um alle verfügbaren Optionen anzuzeigen.'
+    label: Ansichtverwaltung
+    body: 'Führen Sie Verwaltungsaufgaben aus, einschließlich dem Hinzufügen einer Beschreibung und dem Duplizieren einer Ansicht. Klicken Sie auf den Dropdown-Button, um die verfügbaren Optionen anzuzeigen.'
     weight: 3
     location: left
     attributes:
@@ -42,7 +42,7 @@ tips:
     id: views-ui-format
     plugin: text
     label: Ausgabeformat
-    body: 'Wählen Sie wie die Ausgabe aussehen soll. Wählen Sie zum Beispiel <em>Inhalt</em> um jeden Eintrag unter Verwendung der von Ihnen vorgegebenen Anzeigeeinstellungen auszugeben oder Wählen Sie <em>Felder</em> um nur bestimmte Felder für jedes Ergebnis auszugeben. Weitere Formate können hinzugefügt werden, indem Sie zusätzliche Module installieren um Drupal''s Kernfunktionen zu erweitern.'
+    body: 'Wählen Sie, wie die Ergebnisse ausgegeben werden sollen. Wählen Sie z. B. <em>Inhalt</em>, um jedes Element vollständig auszugeben, wobei Sie Ihre konfigurierten Anzeigeeinstellungen verwenden. Oder wählen Sie <em>Felder</em>, um nur bestimmte Felder für jedes Ergebnis auszugeben. Zusätzliche Formate können durch die Installation von Modulen, die Drupal''s Basisfunktionalität <em>erweitern</em>, hinzugefügt werden.'
     weight: 4
     attributes:
       data-class: views-ui-display-tab-bucket.format
@@ -50,7 +50,7 @@ tips:
     id: views-ui-fields
     plugin: text
     label: Felder
-    body: 'Wenn diese Ansicht Felder verwendet, werden diese hier aufgelistet. Mit dem Klick auf ein Feld, kann man dieses konfigurieren.'
+    body: 'Wenn diese Ansicht Felder verwendet, werden diese hier aufgelistet. Sie können auf ein Feld klicken, um es zu konfigurieren.'
     weight: 5
     attributes:
       data-class: views-ui-display-tab-bucket.field
@@ -58,7 +58,7 @@ tips:
     id: views-ui-filter
     plugin: text
     label: 'Ansicht filtern'
-    body: 'Filter hinzufügen um die Ergebnisse der Ausgabe zu begrenzen. Zum Beispiel, damit nur Inhalte angezeigt werden die <em>veröffentlicht</em> sind, würde ein Filter mit  <em>Veröffentlicht</em> hinzugefügt und <em>Ja</em> ausgewählt.'
+    body: 'Fügen Sie Filter hinzu, um die Ergebnisse in der Ausgabe einzuschränken. Um z. B. nur Inhalte anzuzeigen, die <em>veröffentlicht</em> sind, würden Sie einen Filter für <em>Veröffentlicht</em> hinzufügen und <em>Ja</em> auswählen.'
     weight: 6
     attributes:
       data-class: views-ui-display-tab-bucket.filter

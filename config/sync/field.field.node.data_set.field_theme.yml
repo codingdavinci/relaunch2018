@@ -11,7 +11,7 @@ field_name: field_theme
 entity_type: node
 bundle: data_set
 label: Thema
-description: ''
+description: 'Mehrfachauswahl möglich'
 required: false
 translatable: false
 default_value: {  }

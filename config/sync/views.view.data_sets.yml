@@ -1151,7 +1151,7 @@ display:
           entity_type: node
           entity_field: created
           plugin_id: date
-      title: Datensätze
+      title: Daten
       header: {  }
       footer: {  }
       empty:
@@ -3209,61 +3209,78 @@ display:
           expose_sort_order: true
           sort_asc_label: Asc
           sort_desc_label: Desc
+          input_required: false
           text_input_required: 'Wählen Sie einen beliebigen Filter und klicken Sie auf Anwenden, um Ergebnisse zu sehen'
-          text_input_required_format: restricted_html
           bef:
             general:
               autosubmit: false
               autosubmit_exclude_textfield: false
-              autosubmit_textfield_delay: 500
               autosubmit_hide: false
               input_required: false
+              text_input_required: 'Wählen Sie einen beliebigen Filter und klicken Sie auf Anwenden, um Ergebnisse zu sehen'
+              text_input_required_format: basic_html
               allow_secondary: false
               secondary_label: 'Advanced options'
-              secondary_open: false
             filter:
               field_theme_target_id:
                 plugin_id: bef_links
+                select_all_none: false
                 advanced:
-                  rewrite:
-                    filter_rewrite_values: ''
                   collapsible: false
                   is_secondary: false
-                select_all_none: false
+                  placeholder_text: ''
+                  rewrite:
+                    filter_rewrite_values: ''
+                  sort_options: false
               field_event_target_id_views_entity_reference:
                 plugin_id: bef_links
+                select_all_none: false
                 advanced:
-                  rewrite:
-                    filter_rewrite_values: ''
                   collapsible: false
                   is_secondary: false
-                select_all_none: false
+                  placeholder_text: ''
+                  rewrite:
+                    filter_rewrite_values: ''
+                  sort_options: false
               field_object_type_target_id:
                 plugin_id: bef_links
+                select_all_none: false
                 advanced:
-                  rewrite:
-                    filter_rewrite_values: ''
                   collapsible: false
                   is_secondary: false
-                select_all_none: false
+                  placeholder_text: ''
+                  rewrite:
+                    filter_rewrite_values: ''
+                  sort_options: false
               combine:
                 plugin_id: default
                 advanced:
                   collapsible: false
                   is_secondary: false
+                  placeholder_text: ''
+                  rewrite:
+                    filter_rewrite_values: ''
+                  sort_options: false
               field_institution_name_value:
                 plugin_id: default
                 advanced:
                   collapsible: false
                   is_secondary: false
-              field_license_target_id:
-                plugin_id: bef_links
-                advanced:
+                  placeholder_text: ''
                   rewrite:
                     filter_rewrite_values: ''
+                  sort_options: false
+              field_license_target_id:
+                plugin_id: bef_links
+                select_all_none: false
+                advanced:
                   collapsible: false
                   is_secondary: false
-                select_all_none: false
+                  placeholder_text: ''
+                  rewrite:
+                    filter_rewrite_values: ''
+                  sort_options: false
+          text_input_required_format: restricted_html
       arguments: {  }
       menu:
         type: normal
@@ -4124,57 +4141,6 @@ display:
           entity_type: node
           entity_field: status
           plugin_id: boolean
-        field_theme_target_id:
-          id: field_theme_target_id
-          table: node__field_theme
-          field: field_theme_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value: {  }
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_theme_target_id_op
-            label: Thema
-            description: ''
-            use_operator: false
-            operator: field_theme_target_id_op
-            identifier: theme
-            required: false
-            remember: false
-            multiple: true
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              project_team: '0'
-              institution: '0'
-              event_team: '0'
-              office: '0'
-              administrator: '0'
-            reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: true
-          type: select
-          limit: true
-          vid: theme
-          hierarchy: false
-          error_message: true
-          plugin_id: taxonomy_index_tid
         field_event_target_id_views_entity_reference:
           id: field_event_target_id_views_entity_reference
           table: paragraph__field_event
@@ -4192,6 +4158,8 @@ display:
             description: ''
             use_operator: false
             operator: field_event_target_id_views_entity_reference_op
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: event
             required: false
             remember: false
@@ -4205,8 +4173,6 @@ display:
               office: '0'
               administrator: '0'
             reduce: 0
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -4236,7 +4202,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          operator: or
+          operator: and
           value: {  }
           group: 1
           exposed: true
@@ -4246,6 +4212,8 @@ display:
             description: ''
             use_operator: false
             operator: field_object_type_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: object_type
             required: false
             remember: false
@@ -4259,8 +4227,64 @@ display:
               office: '0'
               administrator: '0'
             reduce: false
+          is_grouped: false
+          group_info:
+            label: 'Objekttyp (field_object_type)'
+            description: null
+            identifier: field_object_type_target_id
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items:
+              1: {  }
+              2: {  }
+              3: {  }
+          reduce_duplicates: true
+          type: select
+          limit: true
+          vid: object_types
+          hierarchy: true
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        field_license_target_id:
+          id: field_license_target_id
+          table: paragraph__field_license
+          field: field_license_target_id
+          relationship: field_media_license
+          group_type: group
+          admin_label: ''
+          operator: and
+          value:
+            44: 44
+            27: 27
+            51: 51
+            54: 54
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_license_target_id_op
+            label: 'Lizenz Mediendateien'
+            description: ''
+            use_operator: false
+            operator: field_license_target_id_op
             operator_limit_selection: false
             operator_list: {  }
+            identifier: license
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              project_team: '0'
+              institution: '0'
+              event_team: '0'
+              office: '0'
+              administrator: '0'
+            reduce: true
           is_grouped: false
           group_info:
             label: ''
@@ -4276,10 +4300,106 @@ display:
           reduce_duplicates: true
           type: select
           limit: true
-          vid: object_types
-          hierarchy: true
+          vid: licenses
+          hierarchy: false
           error_message: true
           plugin_id: taxonomy_index_tid
+        field_theme_target_id:
+          id: field_theme_target_id
+          table: node__field_theme
+          field: field_theme_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: and
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_theme_target_id_op
+            label: Thema
+            description: ''
+            use_operator: false
+            operator: field_theme_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: theme
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              project_team: '0'
+              institution: '0'
+              event_team: '0'
+              office: '0'
+              administrator: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: true
+          type: select
+          limit: true
+          vid: theme
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        field_institution_name_value:
+          id: field_institution_name_value
+          table: user__field_institution_name
+          field: field_institution_name_value
+          relationship: uid
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_institution_name_value_op
+            label: Institution
+            description: ''
+            use_operator: false
+            operator: field_institution_name_value_op
+            identifier: institution
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              project_team: '0'
+              institution: '0'
+              event_team: '0'
+              office: '0'
+              administrator: '0'
+            placeholder: ''
+            operator_limit_selection: false
+            operator_list: {  }
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: string
         combine:
           id: combine
           table: views
@@ -4334,112 +4454,27 @@ display:
             name_3: name_3
             name_4: name_4
           plugin_id: combine
-        field_institution_name_value:
-          id: field_institution_name_value
-          table: user__field_institution_name
-          field: field_institution_name_value
-          relationship: uid
-          group_type: group
-          admin_label: ''
-          operator: '='
-          value: ''
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_institution_name_value_op
-            label: Institution
-            description: ''
-            use_operator: false
-            operator: field_institution_name_value_op
-            identifier: institution
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              project_team: '0'
-              institution: '0'
-              event_team: '0'
-              office: '0'
-              administrator: '0'
-            placeholder: ''
-            operator_limit_selection: false
-            operator_list: {  }
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          plugin_id: string
-        field_license_target_id:
-          id: field_license_target_id
-          table: paragraph__field_license
-          field: field_license_target_id
-          relationship: field_media_license
-          group_type: group
-          admin_label: ''
-          operator: or
-          value:
-            44: 44
-            27: 27
-            51: 51
-            54: 54
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_license_target_id_op
-            label: 'Lizenz Mediendateien'
-            description: ''
-            use_operator: false
-            operator: field_license_target_id_op
-            identifier: license
-            required: false
-            remember: false
-            multiple: true
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              project_team: '0'
-              institution: '0'
-              event_team: '0'
-              office: '0'
-              administrator: '0'
-            reduce: true
-            operator_limit_selection: false
-            operator_list: {  }
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: true
-          type: select
-          limit: true
-          vid: licenses
-          hierarchy: false
-          error_message: true
-          plugin_id: taxonomy_index_tid
       filter_groups:
         operator: AND
         groups:
           1: AND
       rendering_language: '***LANGUAGE_language_interface***'
-      sorts: {  }
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          granularity: second
+          entity_type: node
+          entity_field: created
+          plugin_id: date
     cache_metadata:
       max-age: -1
       contexts:

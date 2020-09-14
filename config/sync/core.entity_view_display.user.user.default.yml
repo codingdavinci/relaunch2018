@@ -16,6 +16,7 @@ dependencies:
     - field_group
     - image
     - link
+    - spamspan
     - user
 third_party_settings:
   field_group:
@@ -29,7 +30,6 @@ third_party_settings:
       weight: 2
       format_type: html_element
       format_settings:
-        label: Ansprechpartner
         element: div
         show_label: true
         label_element: h2
@@ -48,7 +48,6 @@ third_party_settings:
       weight: 1
       format_type: html_element
       format_settings:
-        label: 'Angaben zur Institution'
         element: div
         show_label: false
         label_element: h3
@@ -96,11 +95,19 @@ content:
       image_link: ''
     third_party_settings: {  }
   field_representative_email:
-    type: email_mailto
+    type: email_spamspan
     weight: 6
     region: content
     label: above
-    settings: {  }
+    settings:
+      spamspan_at: ' [at] '
+      spamspan_use_graphic: 0
+      spamspan_dot_enable: 0
+      spamspan_dot: ' [dot] '
+      spamspan_use_form: 0
+      spamspan_form_pattern: '<a href="%url?goto=%email">%displaytext</a>'
+      spamspan_form_default_url: contact
+      spamspan_form_default_displaytext: 'contact form'
     third_party_settings: {  }
   field_representative_name:
     type: string

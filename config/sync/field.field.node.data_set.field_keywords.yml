@@ -10,8 +10,8 @@ id: node.data_set.field_keywords
 field_name: field_keywords
 entity_type: node
 bundle: data_set
-label: Schlüsselwörter
-description: ''
+label: Schlagworte
+description: 'Einträge bitte durch Kommas trennen.'
 required: false
 translatable: true
 default_value: {  }

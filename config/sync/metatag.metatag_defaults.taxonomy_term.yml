@@ -8,5 +8,5 @@ id: taxonomy_term
 label: 'Taxonomy term'
 tags:
   canonical_url: '[term:url]'
-  description: '[Begriff:description]'
+  description: '[term:description]'
   title: '[term:name] | [site:name]'

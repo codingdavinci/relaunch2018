@@ -1,0 +1,16 @@
+display:
+  page_1:
+    display_options:
+      title: Press
+      menu:
+        title: Press
+  default:
+    display_options:
+      title: Press
+  attachment_1:
+    display_title: 'Media Coverage'
+    display_options:
+      fields:
+        field_date_1:
+          alter:
+            text: 'Media Coverage {{ field_date_1 }}'

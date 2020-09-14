@@ -10,7 +10,7 @@ id: node.data_set.field_submission_type
 field_name: field_submission_type
 entity_type: node
 bundle: data_set
-label: Datensatztyp
+label: Datenset-Typ
 description: ''
 required: true
 translatable: false

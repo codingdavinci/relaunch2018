@@ -1,0 +1,42 @@
+description: 'Inhalte finden und verwalten.'
+display:
+  default:
+    display_options:
+      fields:
+        title:
+          label: Title
+        type:
+          label: 'Content type'
+        name:
+          label: Author
+        status:
+          settings:
+            format_custom_true: Veröffentlicht
+        changed:
+          label: Updated
+        operations:
+          label: Operations
+      filters:
+        title:
+          expose:
+            label: Title
+        type:
+          expose:
+            label: 'Content type'
+        status:
+          group_info:
+            label: Status
+            group_items:
+              1:
+                title: Veröffentlicht
+        langcode:
+          expose:
+            label: Language
+      empty:
+        area_text_custom:
+          content: 'Kein Inhalt verfügbar.'
+  page_1:
+    display_options:
+      tab_options:
+        description: 'Inhalte finden und verwalten'
+    display_title: Page

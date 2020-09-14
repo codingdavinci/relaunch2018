@@ -9,8 +9,8 @@ id: node.data_set.field_remarks
 field_name: field_remarks
 entity_type: node
 bundle: data_set
-label: 'Questions or comments to the organisers'
-description: 'Problems or comments on your submission? Write them here. This won''t be published on the website.'
+label: 'Fragen oder Nachrichten an die Veranstalter'
+description: 'Haben Sie Probleme mit oder Anmerkungen zu diesem Formular? Hier können Sie diese formulieren. Was Sie in dieses Feld schreiben, wird nicht auf der Website veröffentlicht.'
 required: false
 translatable: false
 default_value: {  }

@@ -7,7 +7,7 @@ dependencies:
 _core:
   default_config_hash: o_8fSWHZOVIbydZACGsSX09DtuJhqkRmNOzcVj-4bQI
 id: who_s_new
-label: 'Neue Mitglieder'
+label: 'Neue Benutzer'
 module: user
 description: 'Zeigt eine Liste der neuesten Benutzerkonten der Website.'
 tag: default
@@ -163,7 +163,7 @@ display:
           plugin_id: date
           entity_type: user
           entity_field: created
-      title: 'Neue Mitglieder'
+      title: 'Neue Benutzer'
       header: {  }
       footer: {  }
       empty: {  }
@@ -180,11 +180,11 @@ display:
   block_1:
     display_plugin: block
     id: block_1
-    display_title: 'Neue Mitglieder'
+    display_title: 'Neue Benutzer'
     position: 1
     display_options:
-      display_description: 'Eine Liste neuer Benutzer'
-      block_description: 'Neue Mitglieder'
+      display_description: 'Eine Liste der neuen Benutzer'
+      block_description: 'Neue Benutzer'
       block_category: User
       display_extenders: {  }
     cache_metadata:

@@ -9,7 +9,7 @@ id: paragraph.attributed_image.field_author
 field_name: field_author
 entity_type: paragraph
 bundle: attributed_image
-label: Urheber
+label: Namensnennung
 description: ''
 required: false
 translatable: true
