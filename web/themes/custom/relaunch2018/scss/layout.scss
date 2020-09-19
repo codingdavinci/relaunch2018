@@ -159,9 +159,8 @@ header:not(.header--tiles) {
       > div {
         @include media-breakpoint-up(md) {
           > div {
-            width: 17%;
-            margin: 0 1.87%;
-            padding: 15px;
+            margin: 0 1.5%;
+            padding: 0 15px 15px 15px;
 
             &:first-child {
               margin-left: 0;
@@ -169,6 +168,26 @@ header:not(.header--tiles) {
 
             &:last-child {
               margin-right: 0;
+            }
+
+            &:nth-child(1) {
+              width: 21%;
+            }
+
+            &:nth-child(2) {
+              width: 17%;
+            }
+
+            &:nth-child(3) {
+              width: 15%;
+            }
+
+            &:nth-child(4) {
+              width: 17%;
+            }
+
+            &:nth-child(5) {
+              width: 18%;
             }
           }
         }

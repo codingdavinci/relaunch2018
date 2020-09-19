@@ -9062,13 +9062,22 @@ header:not(.header--tiles) .region-header {
         mix-blend-mode: multiply; }
       @media (min-width: 768px) {
         .layout-container--wrapper footer .logos-container > div > div {
-          width: 17%;
-          margin: 0 1.87%;
-          padding: 15px; }
+          margin: 0 1.5%;
+          padding: 0 15px 15px 15px; }
           .layout-container--wrapper footer .logos-container > div > div:first-child {
             margin-left: 0; }
           .layout-container--wrapper footer .logos-container > div > div:last-child {
-            margin-right: 0; } }
+            margin-right: 0; }
+          .layout-container--wrapper footer .logos-container > div > div:nth-child(1) {
+            width: 21%; }
+          .layout-container--wrapper footer .logos-container > div > div:nth-child(2) {
+            width: 17%; }
+          .layout-container--wrapper footer .logos-container > div > div:nth-child(3) {
+            width: 15%; }
+          .layout-container--wrapper footer .logos-container > div > div:nth-child(4) {
+            width: 17%; }
+          .layout-container--wrapper footer .logos-container > div > div:nth-child(5) {
+            width: 18%; } }
     .layout-container--wrapper footer .field--name-field-textblock {
       color: #fff; }
       .layout-container--wrapper footer .field--name-field-textblock h3 {
