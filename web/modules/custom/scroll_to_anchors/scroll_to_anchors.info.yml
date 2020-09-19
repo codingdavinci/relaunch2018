@@ -1,0 +1,6 @@
+name: Scroll to anchors
+version: 0.1
+type: module
+description: Have anchor links scroll to the destination instead of the browser's default jump behavior.
+package: Custom
+core: 8.x

@@ -1,0 +1,3 @@
+scroll_to_anchors:
+  js:
+    js/scroll_to_anchors.js: {}
