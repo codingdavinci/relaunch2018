@@ -25,7 +25,8 @@
   }
 
   .paragraph--type--image {
-    margin: map_get($spacers, 7) 0;
+    margin-top: map_get($spacers, 7);
+    margin-bottom: map_get($spacers, 7);
   }
 
   h3 {
