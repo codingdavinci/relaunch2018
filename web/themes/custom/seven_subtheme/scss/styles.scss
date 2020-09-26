@@ -6,6 +6,15 @@
   }
 }
 
+.cke_dialog {
+  .cke_dialog_ui_fieldset {
+    legend {
+      // Fix for anchor_link module UI glitch:
+      position: static;
+    }
+  }
+}
+
 .node-form {
   .layout-region-node-main {
     & > .form-wrapper {
