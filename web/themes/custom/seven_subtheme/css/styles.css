@@ -7,6 +7,9 @@
 .cke.cke_combopanel {
   min-width: 20rem; }
 
+.cke_dialog .cke_dialog_ui_fieldset legend {
+  position: static; }
+
 .node-form .layout-region-node-main > .form-wrapper {
   margin-bottom: 3rem; }
 

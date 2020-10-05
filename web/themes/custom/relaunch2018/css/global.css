@@ -9771,7 +9771,8 @@ a.icon-mail-1 {
       color: #000; }
 
 .node--type-article .paragraph--type--image {
-  margin: 56px 0; }
+  margin-top: 56px;
+  margin-bottom: 56px; }
 
 .node--type-article h3 {
   margin-top: 56px;
@@ -11504,7 +11505,7 @@ a.icon-mail-1 {
         display: inline; }
         .view .view-filters form .form--inline .form-item .bef-links ul li ul {
           display: none; }
-        .view .view-filters form .form--inline .form-item .bef-links ul li > a.bef-link--selected + ul {
+        .view .view-filters form .form--inline .form-item .bef-links ul li.bef-link--selected > ul {
           display: block; }
     .view .view-filters form .form--inline .form-item label {
       font-size: 16px; }

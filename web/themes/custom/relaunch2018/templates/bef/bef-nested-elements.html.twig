@@ -28,7 +28,7 @@
     {% endif %}
   {% endif %}
 
-  <li><div class="badge">{{ item }}</div>
+  <li{% if 'bef-link--selected' in item['#attributes']['class'] %} class="bef-link--selected"{% endif %}><div class="badge">{{ item }}</div>
 
   {% if loop.last %}
     {# Close any remaining <li> tags #}

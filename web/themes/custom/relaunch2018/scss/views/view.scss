@@ -22,11 +22,9 @@
                   display: none;
                 }
 
-                > a {
-                  &.bef-link--selected {
-                    & + ul {
-                      display: block;
-                    }
+                &.bef-link--selected {
+                  > ul {
+                    display: block;
                   }
                 }
               }
