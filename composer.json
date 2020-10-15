@@ -49,7 +49,7 @@
         "drupal/schema_dataset": "1.x-dev",
         "drupal/schema_metatag": "^1.4",
         "drupal/select2": "^1.1",
-        "drupal/sitemap": "^1.5",
+        "drupal/simple_sitemap": "^3.7",
         "drupal/spamspan": "^1.2",
         "drupal/taxonomy_menu": "^3.3",
         "drupal/transliterate_filenames": "^1.4",
