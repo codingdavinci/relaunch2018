@@ -1,6 +1,6 @@
 name: Related Content
 version: 0.1
 type: module
-description: "Properly filters related content."
+description: Filters related articles on `Article` nodes.
 package: Custom
 core: 8.x

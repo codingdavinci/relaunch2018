@@ -1,6 +1,6 @@
 name: Figures Block
 version: 0.1
 type: module
-description: "Supplies a block with figures to be used on the landing page."
+description: Provides the block visualising the number of institutions, data sets and projects, which is used on the landing page.
 package: Custom
 core: 8.x

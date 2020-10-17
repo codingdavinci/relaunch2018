@@ -1,6 +1,6 @@
 name: User Management
 version: 0.1
 type: module
-description: "Custom user management."
+description: Handles distinguishing between registering an `Institution` or `Project team` user account.
 package: Custom
 core: 8.x

@@ -1,6 +1,6 @@
 name: Language Switcher
 version: 0.1
 type: module
-description: "Customizes the language switcher."
+description: Customises the language switcher removing the link from a language when the particular page has no translation in that language.
 package: Custom
 core: 8.x

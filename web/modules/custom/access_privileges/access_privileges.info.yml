@@ -1,6 +1,6 @@
 name: Access Privileges
 version: 0.1
 type: module
-description: "Custom access privileges."
+description: Implements custom edit access privileges for `Event team` users.
 package: Custom
 core: 8.x

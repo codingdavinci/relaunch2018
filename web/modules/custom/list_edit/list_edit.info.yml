@@ -1,6 +1,6 @@
 name: List Edit
 version: 0.1
 type: module
-description: "Extends views listing content with edit controls."
+description: Adds links to create a new `Data set`/`Project` node to the view listing a user’s `Data set`/`Project` nodes.
 package: Custom
 core: 8.x
