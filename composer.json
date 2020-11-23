@@ -28,8 +28,7 @@
         "drupal/block_exclude_pages": "^1.2",
         "drupal/blockgroup": "^1.1",
         "drupal/config_installer": "^1.8",
-        "drupal/console": "~1.0",
-        "drupal/core-composer-scaffold": "^8.8",
+        "drupal/core-composer-scaffold": "^9.0.7",
         "drupal/core-recommended": "^8.9",
         "drupal/db_maintenance": "^1.4",
         "drupal/eu_cookie_compliance": "^1.8",
@@ -66,7 +65,7 @@
         "npm-asset/select2": "^4.0",
         "npm-asset/typeface-barlow": "*",
         "npm-asset/waypoints": "^4.0",
-        "oomphinc/composer-installers-extender": "^1.1",
+        "oomphinc/composer-installers-extender": "^2.0.0",
         "vlucas/phpdotenv": "^2.4",
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3"

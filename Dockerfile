@@ -1,4 +1,4 @@
-FROM composer:1.10 AS COMPOSER_CHAIN
+FROM composer:2 AS COMPOSER_CHAIN
 MAINTAINER Michael Büchner <m.buechner@dnb.de>
 RUN apk add --no-cache libpng libpng-dev libjpeg-turbo-dev libwebp-dev zlib-dev libxpm-dev
 RUN docker-php-ext-install gd
