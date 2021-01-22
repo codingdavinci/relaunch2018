@@ -9,11 +9,10 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on:  [ubuntu-latest]
 
     steps:
     - uses: actions/checkout@v2
-
     - name: Validate composer.json and composer.lock
       run: composer validate
       
@@ -27,11 +26,9 @@ jobs:
           ${{ runner.os }}-node-
 
     - name: Install dependencies
+      uses: php-actions/composer@v4
+      with:
+        php_version: 7.4
+        composer_version: 2
       if: steps.composer-cache.outputs.cache-hit != 'true'
-      run: composer install --prefer-dist --no-progress --no-suggest
-
-    # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
-    # Docs: https://getcomposer.org/doc/articles/scripts.md
-
-    # - name: Run test suite
-    #   run: composer run-script test
+      # run: composer install --prefer-dist --no-progress --no-suggest
