@@ -1,10 +1,68 @@
-FROM composer:2 AS COMPOSER_CHAIN
+# See https://github.com/composer/docker/blob/2a6335d61cc92b7c43b69072ac107c4afb568f49/2.0/Dockerfile
+# The following is identical, except the use of PHP 7.
+FROM php:7-alpine AS COMPOSER_CHAIN
 MAINTAINER Michael Büchner <m.buechner@dnb.de>
+RUN set -eux; \
+  apk add --no-cache --virtual .composer-rundeps \
+    bash \
+    coreutils \
+    git \
+    make \
+    mercurial \
+    openssh-client \
+    patch \
+    subversion \
+    tini \
+    unzip \
+    zip
+RUN set -eux; \
+  apk add --no-cache --virtual .build-deps \
+    libzip-dev \
+    zlib-dev; \
+  docker-php-ext-install -j "$(nproc)" \
+    zip; \
+  runDeps="$( \
+    scanelf --needed --nobanner --format '%n#p' --recursive /usr/local/lib/php/extensions \
+      | tr ',' '\n' \
+      | sort -u \
+      | awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' \
+    )"; \
+  apk add --no-cache --virtual .composer-phpext-rundeps $runDeps; \
+  apk del .build-deps
+
+RUN printf "# composer php cli ini settings\n\
+date.timezone=UTC\n\
+memory_limit=-1\n\
+" > $PHP_INI_DIR/php-cli.ini
+
+ENV COMPOSER_ALLOW_SUPERUSER 1
+ENV COMPOSER_HOME /tmp
+
+RUN set -eux; \
+  curl --silent --fail --location --retry 3 --output /tmp/keys.dev.pub --url https://raw.githubusercontent.com/composer/composer.github.io/e7f28b7200249f8e5bc912b42837d4598c74153a/snapshots.pub; \
+  curl --silent --fail --location --retry 3 --output /tmp/keys.tags.pub --url https://raw.githubusercontent.com/composer/composer.github.io/e7f28b7200249f8e5bc912b42837d4598c74153a/releases.pub; \
+  curl --silent --fail --location --retry 3 --output /tmp/installer.php --url https://raw.githubusercontent.com/composer/getcomposer.org/cb19f2aa3aeaa2006c0cd69a7ef011eb31463067/web/installer; \
+  php -r " \
+    \$signature = '48e3236262b34d30969dca3c37281b3b4bbe3221bda826ac6a9a62d6444cdb0dcd0615698a5cbe587c3f0fe57a54d8f5'; \
+    \$hash = hash('sha384', file_get_contents('/tmp/installer.php')); \
+    if (!hash_equals(\$signature, \$hash)) { \
+      unlink('/tmp/installer.php'); \
+      echo 'Integrity check failed, installer is either corrupt or worse.' . PHP_EOL; \
+      exit(1); \
+    }"; \
+  php /tmp/installer.php --no-ansi --install-dir=/usr/bin --filename=composer; \
+  composer --ansi --version --no-interaction; \
+  composer diagnose; \
+  rm -f /tmp/installer.php; \
+  find /tmp -type d -exec chmod -v 1777 {} +
+
+# CDV
 RUN apk add --no-cache libpng libpng-dev libjpeg-turbo-dev libwebp-dev zlib-dev libxpm-dev
 RUN docker-php-ext-install gd
 COPY / /tmp/cdv
 WORKDIR /tmp/cdv
 RUN composer install --no-dev
+
 # Add git tag version to PHP file
 RUN { \
 		echo -e "<\x21-- $(git describe --tags) -->"; \
