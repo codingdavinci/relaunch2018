@@ -647,7 +647,7 @@ $settings['file_public_path'] = getenv('FILE_PUBLIC_PATH');
  * configuration values in settings.php will not fire any of the configuration
  * change events.
  */
-$settings['file_temp_path'] = 'tmp';
+$settings['file_temp_path'] = getenv('TMP');
 # $config['system.site']['name'] = 'My Drupal site';
 # $config['system.theme']['default'] = 'stark';
 # $config['user.settings']['anonymous'] = 'Visitor';
