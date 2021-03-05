@@ -113,7 +113,7 @@ RUN { \
 		echo "opcache.max_accelerated_files=4000"; \
 		echo "opcache.max_wasted_percentage=10"; \
 		echo "opcache.revalidate_freq=60"; \
-	} > /usr/local/etc/php/conf.d/opcache-recommended.ini
+	} > /usr/local/etc/php/conf.d/2-opcache-recommended.ini
 RUN { \
 		echo "apc.enabled=1"; \
 		echo "apc.file_update_protection=2"; \ 
@@ -142,8 +142,14 @@ RUN { \
 		echo "apc.rfc1867_ttl=3600"; \ 
 		echo "apc.lazy_classes=0"; \ 
 		echo "apc.lazy_functions=0"; \
-	} > /usr/local/etc/php/conf.d/apcu-caching.ini
+	} > /usr/local/etc/php/conf.d/1-apcu-caching.ini
 RUN { \
+		echo "error_log = /dev/stderr"; \
+		echo "error_reporting = E_ALL & ~E_DEPRECATED & ~E_STRICT"; \
+		echo "display_errors = Off"; \
+		echo "display_startup_errors = Off"; \
+		echo "html_errors = On"; \
+		echo "log_errors = On"; \
 		echo "upload_max_filesize = 128M"; \
 		echo "post_max_size = 128M"; \
 		echo "memory_limit = 512M"; \
@@ -159,12 +165,13 @@ RUN find . -type d -exec chmod 755 {} \;
 RUN find . -type f -exec chmod 644 {} \;
 RUN chown -R www-data:www-data web/sites web/modules web/themes web/tmp
 RUN chmod +x /var/www/html/vendor/drush/drush/drush
+RUN echo "LISTEN 8080" > /etc/apache2/ports.conf
 RUN { \
-		echo "<VirtualHost *:80>"; \
-		echo "  ServerAdmin mbuechner@dnb.de"; \
+		echo "<VirtualHost *:8080>"; \
+		echo "  ServerAdmin m.buechner@dnb.de"; \
 		echo "  DocumentRoot /var/www/html/web"; \
-		echo "  ErrorLog ${APACHE_LOG_DIR}/error.log"; \
-		echo "  CustomLog ${APACHE_LOG_DIR}/access.log combined"; \
+		echo "  ErrorLog /dev/stderr"; \
+		echo "  CustomLog /dev/stdout combined"; \
 		echo "</VirtualHost>"; \
 	} > /etc/apache2/sites-enabled/000-default.conf
 
@@ -174,8 +181,7 @@ RUN rm -rf /var/lib/apt/lists/*
 
 ENTRYPOINT ["docker-php-entrypoint-drupal"]
 
-HEALTHCHECK --interval=1m --timeout=3s CMD curl --fail http://localhost/ || exit 1
+HEALTHCHECK --interval=1m --timeout=3s CMD curl --fail http://localhost:8080/ || exit 1
 
-EXPOSE 80
+EXPOSE 8080
 CMD ["apache2-foreground"]
-
