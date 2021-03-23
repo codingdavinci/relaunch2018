@@ -1,0 +1,6 @@
+name: Alternative View Custom Filters
+version: 0.1
+type: module
+description: "Alternative custom view filters."
+package: Custom
+core: 8.x

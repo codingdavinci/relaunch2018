@@ -1,0 +1,56 @@
+dd_views_filters.projecttypes:
+  path: '/dd_views/projecttypes'
+  defaults:
+    _controller: '\Drupal\dd_views_filters\Controller\FilterApi::projecttypes'
+    _title: 'DD Views Filter Api'
+  requirements:
+     _permission: 'access content'
+dd_views_filters.objecttypes:
+  path: '/dd_views/objecttypes'
+  defaults:
+    _controller: '\Drupal\dd_views_filters\Controller\FilterApi::objecttypes'
+    _title: 'DD Views Filter Api'
+  requirements:
+     _permission: 'access content'
+dd_views_filters.licenses:
+  path: '/dd_views/licenses'
+  defaults:
+    _controller: '\Drupal\dd_views_filters\Controller\FilterApi::licenses'
+    _title: 'DD Views Filter Api'
+  requirements:
+     _permission: 'access content'
+dd_views_filters.theme:
+  path: '/dd_views/theme'
+  defaults:
+    _controller: '\Drupal\dd_views_filters\Controller\FilterApi::theme'
+    _title: 'DD Views Filter Api'
+  requirements:
+     _permission: 'access content'
+dd_views_filters.institutions:
+  path: '/dd_views/institutions'
+  defaults:
+    _controller: '\Drupal\dd_views_filters\Controller\FilterApi::institutions'
+    _title: 'DD Views Filter Api'
+  requirements:
+     _permission: 'access content'
+dd_views_filters.events:
+  path: '/dd_views/events'
+  defaults:
+    _controller: '\Drupal\dd_views_filters\Controller\FilterApi::events'
+    _title: 'DD Views Filter Api'
+  requirements:
+     _permission: 'access content'
+dd_views_filters.cards:
+  path: '/dd_views/cards'
+  defaults:
+    _controller: '\Drupal\dd_views_filters\Controller\FilterApi::cards'
+    _title: 'DD Views Filter Api'
+  requirements:
+     _permission: 'access content'
+dd_views_filters.datasets:
+  path: '/dd_views/datasets'
+  defaults:
+    _controller: '\Drupal\dd_views_filters\Controller\FilterApi::datasets'
+    _title: 'DD Views Filter Api'
+  requirements:
+     _permission: 'access content'

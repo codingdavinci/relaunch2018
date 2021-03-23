@@ -1,0 +1,5 @@
+services:
+  dd_views_filters.commands:
+    class: \Drupal\dd_views_filters\Commands\DDViewsFiltersCustomCommands
+    tags:
+      - { name: drush.command }
