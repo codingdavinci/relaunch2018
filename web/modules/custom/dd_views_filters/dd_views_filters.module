@@ -67,8 +67,8 @@ function dd_views_filters_cache_product($conn, $row) {
       'node_created'   => $row["created"],
       'winner_tid'     => $winner_tid,
       'winner_title'   => $winner_title,
-      'projecttype_tids'   => join($tids, ", "),
-      'projecttype_titles' => join($titles, ", "),
+      'projecttype_tids'   => implode(", ", $tids),
+      'projecttype_titles' => implode(", ", $titles),
     )
   )->execute();
 }
@@ -159,10 +159,10 @@ function dd_views_filters_cache_dataset($conn, $object_types_first_level,  $row)
         'created' => $row["created"],
         'title'   => $row["title"],
         'description'   => strip_tags($field_description),
-        'theme_nids'    => join($theme_nids, ", "),
-        'events_nids'   => join($events_nids, ", "),
-        'events_titles' => join($events_titles, ", "),
-        'object_types_tids'   => join($object_types_tids, ", "),
+        'theme_nids'    => implode(", ", $theme_nids),
+        'events_nids'   => implode(", ", $events_nids),
+        'events_titles' => implode(", ", $events_titles),
+        'object_types_tids'   => implode(", ", $object_types_tids),
         'field_media_license' => $field_media_license,
         'author_name' => $author_name,
       )

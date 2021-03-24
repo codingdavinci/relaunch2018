@@ -303,8 +303,7 @@ class FilterApi extends ControllerBase {
     }
 
     if (isset($_GET['institution']) && !empty($_GET['institution'])) {
-      // allow only A-Z, Umlaute, Space und _-| (no quotes etc.)
-      $author_name = preg_replace('/[^a-zA-Zöäüß0-9_\-\s|]/', '', trim($_GET['institution']));
+      $author_name = str_replace(array('\\', "\0", "\n", "\r", "'", '"', "\x1a"), array('\\\\', '\\0', '\\n', '\\r', "\\'", '\\"', '\\Z'), trim($_GET['institution']));
       $institution_where .= sprintf(" ( author_name = '%s' ) " , $author_name);
     }
 
@@ -407,4 +406,5 @@ class FilterApi extends ControllerBase {
 
     return new JsonResponse(array("count"=>$count, "data"=>$out));
   }
+
 }
