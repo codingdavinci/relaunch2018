@@ -303,8 +303,9 @@ class FilterApi extends ControllerBase {
     }
 
     if (isset($_GET['institution']) && !empty($_GET['institution'])) {
-      $author_name = str_replace(array('\\', "\0", "\n", "\r", "'", '"', "\x1a"), array('\\\\', '\\0', '\\n', '\\r', "\\'", '\\"', '\\Z'), trim($_GET['institution']));
-      $institution_where .= sprintf(" ( author_name = '%s' ) " , $author_name);
+      $author_name = trim($_GET['institution']);
+      $institution_where .= " ( author_name = :author_name ) ";
+      $args[':author_name'] = $author_name;
     }
 
     if (isset($_GET['q']) && !empty($_GET['q'])) {
@@ -351,10 +352,9 @@ class FilterApi extends ControllerBase {
     }
 
 
-    $test_query = $database->query(sprintf("SELECT count(*) FROM {dd_views_datasets} %s", $where));
+    $test_query = $database->query(sprintf("SELECT count(*) FROM {dd_views_datasets} %s", $where), $args);
     $count = $test_query->fetchField();
-    #echo sprintf(" SELECT DISTINCT * FROM {dd_views_datasets} %s ORDER BY created ASC LIMIT %d OFFSET %d ", $where, $limit, $offset);
-    $query = $database->query(sprintf(" SELECT DISTINCT * FROM {dd_views_datasets} %s ORDER BY created DESC LIMIT %d OFFSET %d ", $where, $limit, $offset));
+    $query = $database->query(sprintf(" SELECT DISTINCT * FROM {dd_views_datasets} %s ORDER BY created DESC LIMIT %d OFFSET %d ", $where, $limit, $offset), $args);
 
     while ($row = $query->fetchAssoc()) {
       $objecttypes_titles = array();
