@@ -235,6 +235,8 @@ class FilterApi extends ControllerBase {
 
     $institution_where = "";
 
+    $args = [];
+
     $host = \Drupal::request()->getSchemeAndHttpHost();
 
     $langcode = \Drupal::service('language_manager')->getCurrentLanguage(LanguageInterface::TYPE_CONTENT)->getId();
