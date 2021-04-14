@@ -186,7 +186,7 @@ class FilterApi extends ControllerBase {
 
       if (!empty($events_where)) {
         $where .= $events_where;
-        $join = " AND ";
+        $join = " OR ";
       }
 
       if (!empty($projects_where)) {

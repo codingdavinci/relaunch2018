@@ -81,7 +81,6 @@ function dd_views_filters_cache_datasets_run() {
 
   $conn->truncate('{dd_views_datasets}')->execute();
 
-  $conn = \Drupal::database();
   $query = $conn->query("
     SELECT
       node_field_data.nid,
