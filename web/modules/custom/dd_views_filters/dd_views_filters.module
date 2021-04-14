@@ -75,9 +75,19 @@ function dd_views_filters_cache_product($conn, $row) {
 
 function dd_views_filters_cache_datasets_run() {
 
+  $conn = \Drupal::database();
+
+  // migration rename "object_types_titles" to "subobject_types_tids" and add institution
+  $query = $conn->query("SHOW COLUMNS FROM {dd_views_datasets} LIKE 'subobject_types_tids'");
+  $result = $query->fetchAll();
+  if (empty($result)) {
+    $result = $conn->query("ALTER TABLE {dd_views_datasets} CHANGE `object_types_titles` `subobject_types_tids` VARCHAR(255)  CHARACTER SET utf8  COLLATE utf8_general_ci  NULL  DEFAULT NULL;");
+    $result = $conn->query("ALTER TABLE {dd_views_datasets} ADD `institution`  VARCHAR(255)  CHARACTER SET utf8  COLLATE utf8_general_ci  NULL  DEFAULT NULL;");
+  }
+
   $object_types_first_level = dd_views_filters_load_taxonomy("object_types");
 
-  \Drupal::database()->truncate('{dd_views_datasets}')->execute();
+  $conn->truncate('{dd_views_datasets}')->execute();
 
   $conn = \Drupal::database();
   $query = $conn->query("
@@ -107,6 +117,7 @@ function dd_views_filters_cache_dataset($conn, $object_types_first_level,  $row)
   $theme_nids   = array();
 
   $object_types_tids   = array();
+  $subobject_types_tids = array();
 
   $node = \Drupal::entityTypeManager()->getStorage("node")->load($row['nid']);
   $events = $node->field_events->referencedEntities();
@@ -123,6 +134,9 @@ function dd_views_filters_cache_dataset($conn, $object_types_first_level,  $row)
   foreach ($object_types as $term) {
     if (in_array($term->id(), $object_types_first_level)) {
       $object_types_tids[]= $term->id();
+    } else {
+      // Fill $subobject_types_tids...
+      $subobject_types_tids[]= $term->id();
     }
   }
 
@@ -163,6 +177,7 @@ function dd_views_filters_cache_dataset($conn, $object_types_first_level,  $row)
         'events_nids'   => implode(", ", $events_nids),
         'events_titles' => implode(", ", $events_titles),
         'object_types_tids'   => implode(", ", $object_types_tids),
+        'subobject_types_tids'   => join($subobject_types_tids, ", "),
         'field_media_license' => $field_media_license,
         'author_name' => $author_name,
       )

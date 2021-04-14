@@ -12,6 +12,13 @@ dd_views_filters.objecttypes:
     _title: 'DD Views Filter Api'
   requirements:
      _permission: 'access content'
+dd_views_filters.subObjecttypes:
+  path: '/dd_views/subobjecttypes'
+  defaults:
+    _controller: '\Drupal\dd_views_filters\Controller\FilterApi::subObjecttypes'
+    _title: 'DD Views Filter Api'
+  requirements:
+     _permission: 'access content'
 dd_views_filters.licenses:
   path: '/dd_views/licenses'
   defaults:

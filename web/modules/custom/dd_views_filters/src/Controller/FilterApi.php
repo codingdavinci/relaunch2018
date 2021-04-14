@@ -23,6 +23,11 @@ class FilterApi extends ControllerBase {
     return $this->loadTaxonomy("object_types");
   }
 
+  public function subObjecttypes() {
+    $objectTypes = $this->loadNestedTaxonomy("object_types");
+    return $objectTypes;
+  }
+
   public function theme() {
     return $this->loadTaxonomy("theme");
   }
@@ -67,6 +72,32 @@ class FilterApi extends ControllerBase {
 
     return new JsonResponse($out);
   }
+
+
+  public function loadNestedTaxonomy($vid) {
+    $out = array();
+    $langcode = \Drupal::service('language_manager')->getCurrentLanguage(LanguageInterface::TYPE_CONTENT)->getId();
+
+    $query = \Drupal::entityQuery('taxonomy_term');
+    $query->condition('vid', $vid);
+    $tids = $query->execute();
+
+    foreach ($tids as $tid) {
+      $subterms = array();
+      $childTermIds = \Drupal::service('entity_type.manager')->getStorage("taxonomy_term")->loadChildren($tid);
+      if ($childTermIds) {
+        foreach ($childTermIds as $childTermId => $_) {
+          $taxonomy_term = Term::load($childTermId);
+          $taxonomy_term_trans = \Drupal::service('entity.repository')->getTranslationFromContext($taxonomy_term, $langcode);
+          $subterms[] = array( "tid"=> $childTermId, "title" => $taxonomy_term_trans->name->value);
+        }
+      }
+      $out[$tid] = $subterms;
+    }
+
+    return new JsonResponse($out);
+  }
+
 
   public function events() {
     $out = array();
@@ -224,6 +255,10 @@ class FilterApi extends ControllerBase {
     $objecttypes = [];
     $objecttypes_where = "";
 
+    $subobjecttypes = [];
+    $subobjecttypes_where = "";
+    $exclude_parent_objecttypes = [];
+
     $events = [];
     $events_where = "";
 
@@ -245,13 +280,36 @@ class FilterApi extends ControllerBase {
 
     $object_types_first_level = dd_views_filters_load_taxonomy("object_types");
 
+    // subobject are separate to filter
+    if (isset($_GET['subobjecttypes']) && !empty($_GET['subobjecttypes'])) {
+
+      $objecttypes     = explode(",", $_GET['subobjecttypes']);
+      $objecttypes_tmp = array();
+
+      foreach ($objecttypes as $objecttype) {
+        // exclude parent objecttypes
+        $parent_objecttype = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadParents($objecttype);
+        foreach ($parent_objecttype as $parent_objecttype_id => $_) {
+          $exclude_parent_objecttypes []= $parent_objecttype_id;
+        }
+        // filter to sub-terms
+        $objecttypes_tmp[]= "subobject_types_tids like '%" . (int)$objecttype ."%'";
+      }
+
+      if (count($objecttypes_tmp)!= 0) {
+        $subobjecttypes_where = join(" OR ", $objecttypes_tmp);
+      }
+    }
+
 
     if (isset($_GET['objecttypes']) && !empty($_GET['objecttypes'])) {
       $objecttypes     = explode(",", $_GET['objecttypes']);
       $objecttypes_tmp = array();
 
       foreach ($objecttypes as $objecttype) {
-        $objecttypes_tmp[]= "object_types_tids like '%" . (int)$objecttype ."%'";
+        if (false === in_array((int)$objecttype, $exclude_parent_objecttypes)) {
+          $objecttypes_tmp[]= "object_types_tids like '%" . (int)$objecttype ."%'";
+        }
       }
 
       if (count($objecttypes_tmp)!= 0) {
@@ -317,7 +375,7 @@ class FilterApi extends ControllerBase {
       $q .= " ) ";
     }
 
-    if (!empty($objecttypes_where) || !empty($events_where) || !empty($licenses_where) || !empty($theme_where) || !empty($institution_where) || !empty($q)) {
+    if (!empty($objecttypes_where) || !empty($subobjecttypes_where) || !empty($events_where) || !empty($licenses_where) || !empty($theme_where) || !empty($institution_where) || !empty($q)) {
 
       $where = " WHERE ";
       $join = "";
@@ -327,7 +385,16 @@ class FilterApi extends ControllerBase {
         $join = " AND ";
       }
 
-      if (!empty($objecttypes_where)) {
+      if (!empty($subobjecttypes_where)) {
+        // object and subobject is OR
+        if (!empty($objecttypes_where)) {
+          $where .= $join . '(' . $objecttypes_where . ')';
+          $join = " OR ";
+        }
+        $where .= $join . '(' . $subobjecttypes_where . ')';
+        $join = " AND ";
+      } else if (!empty($objecttypes_where)) {
+        // and without sub-terms
         $where .= $join . $objecttypes_where;
         $join = " AND ";
       }
