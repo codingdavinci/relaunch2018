@@ -77,14 +77,6 @@ function dd_views_filters_cache_datasets_run() {
 
   $conn = \Drupal::database();
 
-  // migration rename "object_types_titles" to "subobject_types_tids" and add institution
-  $query = $conn->query("SHOW COLUMNS FROM {dd_views_datasets} LIKE 'subobject_types_tids'");
-  $result = $query->fetchAll();
-  if (empty($result)) {
-    $result = $conn->query("ALTER TABLE {dd_views_datasets} CHANGE `object_types_titles` `subobject_types_tids` VARCHAR(255)  CHARACTER SET utf8  COLLATE utf8_general_ci  NULL  DEFAULT NULL;");
-    $result = $conn->query("ALTER TABLE {dd_views_datasets} ADD `institution`  VARCHAR(255)  CHARACTER SET utf8  COLLATE utf8_general_ci  NULL  DEFAULT NULL;");
-  }
-
   $object_types_first_level = dd_views_filters_load_taxonomy("object_types");
 
   $conn->truncate('{dd_views_datasets}')->execute();
