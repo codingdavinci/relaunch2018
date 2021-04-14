@@ -86,7 +86,7 @@ class FilterApi extends ControllerBase {
       $subterms = array();
       $childTermIds = \Drupal::service('entity_type.manager')->getStorage("taxonomy_term")->loadChildren($tid);
       if ($childTermIds) {
-        foreach ($childTermIds as $childTermId => $_) {
+        foreach (array_keys($childTermIds) as $childTermId) {
           $taxonomy_term = Term::load($childTermId);
           $taxonomy_term_trans = \Drupal::service('entity.repository')->getTranslationFromContext($taxonomy_term, $langcode);
           $subterms[] = array( "tid"=> $childTermId, "title" => $taxonomy_term_trans->name->value);
@@ -289,7 +289,7 @@ class FilterApi extends ControllerBase {
       foreach ($objecttypes as $objecttype) {
         // exclude parent objecttypes
         $parent_objecttype = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadParents($objecttype);
-        foreach ($parent_objecttype as $parent_objecttype_id => $_) {
+        foreach (array_keys($parent_objecttype) as $parent_objecttype_id) {
           $exclude_parent_objecttypes []= $parent_objecttype_id;
         }
         // filter to sub-terms
