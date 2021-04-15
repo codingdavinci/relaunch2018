@@ -153,7 +153,9 @@ class FilterApi extends ControllerBase {
       }
 
       if (count($projects_tmp)!= 0) {
-        $projects_where = join(" OR ", $projects_tmp);
+        $projects_where .= " ( ";
+        $projects_where .= join(" OR ", $projects_tmp);
+        $projects_where .= " ) ";
       }
     }
 
