@@ -186,7 +186,7 @@ class FilterApi extends ControllerBase {
 
       if (!empty($events_where)) {
         $where .= $events_where;
-        $join = " OR ";
+        $join = " AND ";
       }
 
       if (!empty($projects_where)) {
@@ -202,7 +202,6 @@ class FilterApi extends ControllerBase {
 
     $test_query = $database->query(sprintf("SELECT count(*) FROM {dd_views_projects} %s", $where));
     $count = $test_query->fetchField();
-    #echo sprintf("SELECT * FROM {dd_views_projects} %s ORDER BY event_nid DESC, winner DESC, node_created DESC LIMIT %d OFFSET %d ", $where, $limit, $offset);
     $query = $database->query(sprintf(" SELECT DISTINCT * FROM {dd_views_projects} %s ORDER BY event_nid DESC, winner_tid DESC, node_created DESC LIMIT %d OFFSET %d ", $where, $limit, $offset));
 
     while ($row = $query->fetchAssoc()) {
