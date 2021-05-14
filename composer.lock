@@ -69,7 +69,8 @@
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/FortAwesome/Font-Awesome/zipball/d79d85c3fad85ad1885e87ed558f4afd6fce8289",
-                "reference": "d79d85c3fad85ad1885e87ed558f4afd6fce8289"
+                "reference": "d79d85c3fad85ad1885e87ed558f4afd6fce8289",
+                "shasum": null
             },
             "type": "bower-asset"
         },
@@ -2289,17 +2290,17 @@
         },
         {
             "name": "drupal/ctools",
-            "version": "3.5.0",
+            "version": "3.6.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/ctools.git",
-                "reference": "8.x-3.5"
+                "reference": "8.x-3.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/ctools-8.x-3.5.zip",
-                "reference": "8.x-3.5",
-                "shasum": "0113cd1e787ff3bde088c836c2d79d14136b0013"
+                "url": "https://ftp.drupal.org/files/projects/ctools-8.x-3.6.zip",
+                "reference": "8.x-3.6",
+                "shasum": "9a849bb6ac9f4d02603d04b3265b35b7329e1ef5"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9"
@@ -2307,8 +2308,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-3.5",
-                    "datestamp": "1618592931",
+                    "version": "8.x-3.6",
+                    "datestamp": "1620838181",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -5411,7 +5412,9 @@
             "version": "4.6.0",
             "dist": {
                 "type": "tar",
-                "url": "https://registry.npmjs.org/bootstrap/-/bootstrap-4.6.0.tgz"
+                "url": "https://registry.npmjs.org/bootstrap/-/bootstrap-4.6.0.tgz",
+                "reference": null,
+                "shasum": null
             },
             "type": "npm-asset",
             "license": [
@@ -5423,7 +5426,9 @@
             "version": "2.0.8",
             "dist": {
                 "type": "tar",
-                "url": "https://registry.npmjs.org/hammerjs/-/hammerjs-2.0.8.tgz"
+                "url": "https://registry.npmjs.org/hammerjs/-/hammerjs-2.0.8.tgz",
+                "reference": null,
+                "shasum": null
             },
             "type": "npm-asset",
             "license": [
@@ -5435,7 +5440,9 @@
             "version": "3.0.0-alpha.2",
             "dist": {
                 "type": "tar",
-                "url": "https://registry.npmjs.org/jquery-color/-/jquery-color-3.0.0-alpha.2.tgz"
+                "url": "https://registry.npmjs.org/jquery-color/-/jquery-color-3.0.0-alpha.2.tgz",
+                "reference": null,
+                "shasum": null
             },
             "type": "npm-asset",
             "license": [
@@ -5447,7 +5454,9 @@
             "version": "1.0.1",
             "dist": {
                 "type": "tar",
-                "url": "https://registry.npmjs.org/jquery-countup/-/jquery-countup-1.0.1.tgz"
+                "url": "https://registry.npmjs.org/jquery-countup/-/jquery-countup-1.0.1.tgz",
+                "reference": null,
+                "shasum": null
             },
             "type": "npm-asset",
             "license": [
@@ -5465,7 +5474,8 @@
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/gdsmith/jquery.easing/zipball/df09da4048d2607c5d513681dff532dbe6680d95",
-                "reference": "df09da4048d2607c5d513681dff532dbe6680d95"
+                "reference": "df09da4048d2607c5d513681dff532dbe6680d95",
+                "shasum": null
             },
             "type": "npm-asset",
             "license": [
@@ -5477,7 +5487,9 @@
             "version": "1.16.1-patch1",
             "dist": {
                 "type": "tar",
-                "url": "https://registry.npmjs.org/popper.js/-/popper.js-1.16.1-lts.tgz"
+                "url": "https://registry.npmjs.org/popper.js/-/popper.js-1.16.1-lts.tgz",
+                "reference": null,
+                "shasum": null
             },
             "type": "npm-asset",
             "license": [
@@ -5489,7 +5501,9 @@
             "version": "4.0.13",
             "dist": {
                 "type": "tar",
-                "url": "https://registry.npmjs.org/select2/-/select2-4.0.13.tgz"
+                "url": "https://registry.npmjs.org/select2/-/select2-4.0.13.tgz",
+                "reference": null,
+                "shasum": null
             },
             "type": "npm-asset",
             "license": [
@@ -5501,7 +5515,9 @@
             "version": "0.0.71",
             "dist": {
                 "type": "tar",
-                "url": "https://registry.npmjs.org/typeface-barlow/-/typeface-barlow-0.0.71.tgz"
+                "url": "https://registry.npmjs.org/typeface-barlow/-/typeface-barlow-0.0.71.tgz",
+                "reference": null,
+                "shasum": null
             },
             "type": "npm-asset",
             "license": [
@@ -5513,7 +5529,9 @@
             "version": "4.0.1",
             "dist": {
                 "type": "tar",
-                "url": "https://registry.npmjs.org/waypoints/-/waypoints-4.0.1.tgz"
+                "url": "https://registry.npmjs.org/waypoints/-/waypoints-4.0.1.tgz",
+                "reference": null,
+                "shasum": null
             },
             "type": "npm-asset",
             "license": [
@@ -5946,12 +5964,6 @@
                 "issues": "https://github.com/PHPMailer/PHPMailer/issues",
                 "source": "https://github.com/PHPMailer/PHPMailer/tree/v6.4.1"
             },
-            "funding": [
-                {
-                    "url": "https://github.com/Synchro",
-                    "type": "github"
-                }
-            ],
             "time": "2021-04-29T12:25:04+00:00"
         },
         {
@@ -8279,6 +8291,5 @@
     "platform": {
         "ext-gd": "*"
     },
-    "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "platform-dev": []
 }
