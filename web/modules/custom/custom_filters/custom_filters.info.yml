@@ -4,3 +4,4 @@ type: module
 description: Custom/additional logic for filtering views, especially in respect to filtering data sets and projects.
 package: Custom
 core: 8.x
+core_version_requirement: ^8 || ^9

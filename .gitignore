@@ -45,3 +45,4 @@
 
 ## Ignored due to security problem (e.g. stored passwords)
 /config/sync/phpmailer_smtp.settings.yml
+/yarn-error.log

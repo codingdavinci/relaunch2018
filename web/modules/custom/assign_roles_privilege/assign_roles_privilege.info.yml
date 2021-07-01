@@ -4,3 +4,4 @@ type: module
 description: Allows `Event team` users to assign `Institution`, `Project team` and `Event team` roles to other users.
 package: Custom
 core: 8.x
+core_version_requirement: ^8 || ^9
