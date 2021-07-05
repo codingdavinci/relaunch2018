@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c3f4bf62b499af1f31e326948c434b9f",
+    "content-hash": "26af3afe81f3981fc5fda5135f3b4e47",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1407,26 +1407,26 @@
         },
         {
             "name": "drupal/block_exclude_pages",
-            "version": "1.5.0",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/block_exclude_pages.git",
-                "reference": "8.x-1.5"
+                "reference": "2.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/block_exclude_pages-8.x-1.5.zip",
-                "reference": "8.x-1.5",
-                "shasum": "bfee18338060913f91ea1c2343c3448cf8a2b68c"
+                "url": "https://ftp.drupal.org/files/projects/block_exclude_pages-2.0.0.zip",
+                "reference": "2.0.0",
+                "shasum": "b9eecc6b37507212f249e472a57308d26dcd468a"
             },
             "require": {
-                "drupal/core": "^8 || ^9"
+                "drupal/core": "^8.8 || ^9"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.5",
-                    "datestamp": "1588109514",
+                    "version": "2.0.0",
+                    "datestamp": "1594830387",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
