@@ -260,8 +260,9 @@ $databases['default']['default'] = array (
  *   ];
  * @endcode
  */
-$config_directories[CONFIG_SYNC_DIRECTORY] = DRUPAL_ROOT . '/../config/sync';
-$settings[CONFIG_SYNC_DIRECTORY] = DRUPAL_ROOT . '/../config/sync';
+/*$config_directories[CONFIG_SYNC_DIRECTORY] = DRUPAL_ROOT . '/../config/sync';*/
+$config_directories = [];
+$settings['config_sync_directory'] = DRUPAL_ROOT . '/../config/sync';
 
 /**
  * Settings:
