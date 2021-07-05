@@ -35,6 +35,7 @@
         "drupal/honeypot": "^2.0",
         "drupal/image_widget_crop": "^2.3",
         "drupal/insert": "^2.0",
+        "drupal/jquery_ui_accordion": "^1.1",
         "drupal/mailsystem": "^4.3",
         "drupal/matomo": "^1.11",
         "drupal/maxlength": "^1.0",
