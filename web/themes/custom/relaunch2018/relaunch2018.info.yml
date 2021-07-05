@@ -1,7 +1,6 @@
 name: Relaunch 2018
 type: theme
 description: 'Theme for Coding Da Vinci.'
-core: 8.x
 core_version_requirement: ^8.8 || ^9
 libraries:
   - relaunch2018/global-css
