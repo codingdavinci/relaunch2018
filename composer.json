@@ -1,12 +1,12 @@
 {
     "name": "drupal-composer/drupal-project",
-    "description": "Project template for Drupal 8 projects with composer",
+    "description": "Coding da Vinci website",
     "type": "project",
     "license": "GPL-2.0-or-later",
     "authors": [
         {
-            "name": "",
-            "role": ""
+            "name": "Michael Büchner",
+            "role": "Administration"
         }
     ],
     "repositories": [
@@ -80,7 +80,11 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "platform": {
+            "php": "7.4.0",
+            "ext-gd": "1"
+        }
     },
     "autoload": {
         "classmap": [
@@ -123,6 +127,9 @@
             "initial": {
                 ".editorconfig": "../.editorconfig",
                 ".gitattributes": "../.gitattributes"
+            },
+            "file-mapping": {
+                "[web-root]/README.md": false
             }
         },
         "patches": {
