@@ -53,7 +53,6 @@
         "drupal/spamspan": "^1.2",
         "drupal/taxonomy_menu": "^3.4",
         "drupal/transliterate_filenames": "^1.5",
-        "drupal/twig_debugger": "^1.1",
         "drupal/twig_tweak": "^2.9",
         "drupal/video_embed_field": "^2.4",
         "drupal/views_data_export": "^1.0",
