@@ -1921,16 +1921,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "8.9.17",
+            "version": "8.9.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "a1416f2cc6701acc0cc6725bfeac3715e633fd9c"
+                "reference": "e536176c45d9d75ec57f7a12c0e3c0aead856841"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/a1416f2cc6701acc0cc6725bfeac3715e633fd9c",
-                "reference": "a1416f2cc6701acc0cc6725bfeac3715e633fd9c",
+                "url": "https://api.github.com/repos/drupal/core/zipball/e536176c45d9d75ec57f7a12c0e3c0aead856841",
+                "reference": "e536176c45d9d75ec57f7a12c0e3c0aead856841",
                 "shasum": ""
             },
             "require": {
@@ -2149,13 +2149,13 @@
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
             "support": {
-                "source": "https://github.com/drupal/core/tree/8.9.17"
+                "source": "https://github.com/drupal/core/tree/8.9.18"
             },
-            "time": "2021-07-20T21:43:12+00:00"
+            "time": "2021-08-12T17:48:42+00:00"
         },
         {
             "name": "drupal/core-composer-scaffold",
-            "version": "9.2.3",
+            "version": "9.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-composer-scaffold.git",
@@ -2199,22 +2199,22 @@
                 "drupal"
             ],
             "support": {
-                "source": "https://github.com/drupal/core-composer-scaffold/tree/9.2.3"
+                "source": "https://github.com/drupal/core-composer-scaffold/tree/9.2.4"
             },
             "time": "2021-07-10T22:39:33+00:00"
         },
         {
             "name": "drupal/core-recommended",
-            "version": "8.9.17",
+            "version": "8.9.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-recommended.git",
-                "reference": "fcc40b85be8a37246965a276f1ae94a1dba971a6"
+                "reference": "71839bb9799b70f449b76294b461877ba1e9ff2c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/fcc40b85be8a37246965a276f1ae94a1dba971a6",
-                "reference": "fcc40b85be8a37246965a276f1ae94a1dba971a6",
+                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/71839bb9799b70f449b76294b461877ba1e9ff2c",
+                "reference": "71839bb9799b70f449b76294b461877ba1e9ff2c",
                 "shasum": ""
             },
             "require": {
@@ -2226,7 +2226,7 @@
                 "doctrine/common": "v2.7.3",
                 "doctrine/inflector": "v1.2.0",
                 "doctrine/lexer": "1.0.2",
-                "drupal/core": "8.9.17",
+                "drupal/core": "8.9.18",
                 "easyrdf/easyrdf": "0.9.1",
                 "egulias/email-validator": "2.1.17",
                 "guzzlehttp/guzzle": "6.5.4",
@@ -2284,9 +2284,9 @@
             ],
             "description": "Locked core dependencies; require this project INSTEAD OF drupal/core.",
             "support": {
-                "source": "https://github.com/drupal/core-recommended/tree/8.9.17"
+                "source": "https://github.com/drupal/core-recommended/tree/8.9.18"
             },
-            "time": "2021-07-20T21:43:12+00:00"
+            "time": "2021-08-12T17:48:42+00:00"
         },
         {
             "name": "drupal/crop",
@@ -2739,17 +2739,17 @@
         },
         {
             "name": "drupal/field_group",
-            "version": "3.1.0",
+            "version": "3.2.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/field_group.git",
-                "reference": "8.x-3.1"
+                "reference": "8.x-3.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/field_group-8.x-3.1.zip",
-                "reference": "8.x-3.1",
-                "shasum": "8a719eaea594f0ba874172831cb28da93c66b77a"
+                "url": "https://ftp.drupal.org/files/projects/field_group-8.x-3.2.zip",
+                "reference": "8.x-3.2",
+                "shasum": "2020bbfe40f6ba43bc733ae7c8761632572433a0"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9"
@@ -2760,8 +2760,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-3.1",
-                    "datestamp": "1591772567",
+                    "version": "8.x-3.2",
+                    "datestamp": "1628513585",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3669,7 +3669,7 @@
             ],
             "authors": [
                 {
-                    "name": "Drupalbee",
+                    "name": "jim.applebee",
                     "homepage": "https://www.drupal.org/user/2498674"
                 }
             ],
@@ -4368,16 +4368,16 @@
         },
         {
             "name": "drush/drush",
-            "version": "10.5.0",
+            "version": "10.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drush-ops/drush.git",
-                "reference": "3fd9f7e62ffb7f221e4be8151a738529345d22d5"
+                "reference": "c86d327359baddb0a2f51bb458703826469a0445"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drush-ops/drush/zipball/3fd9f7e62ffb7f221e4be8151a738529345d22d5",
-                "reference": "3fd9f7e62ffb7f221e4be8151a738529345d22d5",
+                "url": "https://api.github.com/repos/drush-ops/drush/zipball/c86d327359baddb0a2f51bb458703826469a0445",
+                "reference": "c86d327359baddb0a2f51bb458703826469a0445",
                 "shasum": ""
             },
             "require": {
@@ -4501,7 +4501,7 @@
                 "irc": "irc://irc.freenode.org/drush",
                 "issues": "https://github.com/drush-ops/drush/issues",
                 "slack": "https://drupal.slack.com/messages/C62H9CWQM",
-                "source": "https://github.com/drush-ops/drush/tree/10.5.0"
+                "source": "https://github.com/drush-ops/drush/tree/10.6.0"
             },
             "funding": [
                 {
@@ -4509,7 +4509,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-05-08T15:49:30+00:00"
+            "time": "2021-08-13T10:40:40+00:00"
         },
         {
             "name": "easyrdf/easyrdf",
@@ -9042,5 +9042,5 @@
         "php": "7.4.0",
         "ext-gd": "1"
     },
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.0.0"
 }
