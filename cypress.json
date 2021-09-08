@@ -1,5 +1,5 @@
 {
-  "projectId": "Qpj1bFDJ",
+  "projectId": "e47es9",
   "reporter": "junit",
   "reporterOptions": {
     "mochaFile": "cypress/results/test-[hash].xml"
