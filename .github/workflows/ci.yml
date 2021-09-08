@@ -1,4 +1,4 @@
-name: ci
+name: Cypress
 on: [push]
 jobs:
   cypress-run:
