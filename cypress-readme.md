@@ -13,7 +13,7 @@
 
 ## Cypress starten
 ### Installationen mit npm
-`npx cypress open` oder `npx cypress run`, letzteres startet alle definierten Tests in der Kommandozeile.
+Für die Live-Tests `npm run cy:live`, für die Test-Installation `npm run cy:test`. Hierbei werden die Testergebnisse in cypress/results gespeichert.
 
 ### Direktinstallation
 Die Cypress-App starten und die Testdateien auswählen. Dann einfach starten.
@@ -23,3 +23,9 @@ Die Testverfahren können einfach erweitert werden. Die [Dokumentation](https://
 
 ## Fehlermeldungen
 Cypress prüft und validiert nach vielen Faktoren. Wenn ein Test fehlschlägt wird eine detaillierte Fehlermeldung angegeben. Bei Timeout-Fehlern lohnt es sich den Test erneut zu starten, da diese auch an einer zeitweise schlechten Verbindung liegen können.
+
+### Fehler beim Logo-Check
+Beim Aufruf des Logo-Checks wird ein Fehler ausgegeben, dieser tritt auf weil der Link im Logo ohne Protokoll (https://) eingetragen ist.
+
+### Allgemeine Fehler
+Cypress prüft auf diverse Statuscodes. Wenn eine Seite bswp. Javascript Fehler enthält, kann dies schon zu einem Cypress-Fehler führen. In der Regel lohnt ein Blick in die Konsole.
