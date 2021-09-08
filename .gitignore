@@ -6,6 +6,7 @@
 /web/themes/contrib/
 /web/profiles/contrib/
 /web/libraries/*
+/cypress/results/
 
 # Required for anchor_link modules
 !/web/libraries/fakeobjects/
