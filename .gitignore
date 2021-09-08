@@ -42,6 +42,7 @@
 /robots.txt
 /update.php
 /web.config
+package-lock.json
 
 ## Ignored due to security problem (e.g. stored passwords)
 /config/sync/phpmailer_smtp.settings.yml
