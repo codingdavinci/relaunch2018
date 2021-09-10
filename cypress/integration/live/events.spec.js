@@ -15,7 +15,7 @@ context("Events", () => {
     cy.get(".nav-item:nth-child(2) > .nav-link")
       .click();
     cy.wait(500);
-    cy.url().should("contains", "https://test.codingdavinci.de/de/events");
+    cy.url().should("contains", "https://codingdavinci.de/de/events");
     cy.wait(500);
     cy.get(".node--view-mode-preview")
       .first()
