@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 context("Events", () => {
   it("Allgemeine Tests", () => {
-    cy.visit("https://test.codingdavinci.de/de/events");
+    cy.visit('https://'+Cypress.env('user')+':'+Cypress.env('password')+'@test.codingdavinci.de/de/events');
     cy.wait(500);
     cy.get(".node--view-mode-teaser")
       .first()
@@ -15,7 +15,7 @@ context("Events", () => {
     cy.get(".nav-item:nth-child(2) > .nav-link")
       .click();
     cy.wait(500);
-    cy.url().should("contains", "https://test.codingdavinci.de/de/events");
+    cy.visit('https://'+Cypress.env('user')+':'+Cypress.env('password')+'@test.codingdavinci.de/de/events');
     cy.wait(500);
     cy.get(".node--view-mode-preview")
       .first()
