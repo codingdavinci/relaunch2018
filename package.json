@@ -43,7 +43,7 @@
     "watch:js": "node ./web/core/scripts/js/babel-es6-watch.js",
     "watch:js-dev": "cross-env NODE_ENV=development node ./web/core/scripts/js/babel-es6-watch.js",
     "cy:live": "npx cypress run --spec 'cypress/integration/live/*.spec.js'",
-    "cy:test": "npx cypress run --spec 'cypress/integration/testing/*.spec.js'"
+    "cy:test": "npx cypress run --spec 'cypress/integration/testing/*.spec.js' --env user=$USER,password=$PASSWORD"
   },
   "babel": {
     "presets": [
