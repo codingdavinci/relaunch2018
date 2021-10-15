@@ -3158,10 +3158,6 @@
             ],
             "authors": [
                 {
-                    "name": "Aron Novak",
-                    "homepage": "https://www.drupal.org/user/61864"
-                },
-                {
                     "name": "cedewey",
                     "homepage": "https://www.drupal.org/user/38694"
                 },
@@ -3176,6 +3172,10 @@
                 {
                     "name": "mariuss",
                     "homepage": "https://www.drupal.org/user/28539"
+                },
+                {
+                    "name": "pmichelazzo",
+                    "homepage": "https://www.drupal.org/user/182237"
                 },
                 {
                     "name": "srdtwc",
@@ -9015,5 +9015,5 @@
         "php": "7.4.0",
         "ext-gd": "1"
     },
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "2.1.0"
 }
