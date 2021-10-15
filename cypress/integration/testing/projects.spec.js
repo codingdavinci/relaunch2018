@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 context('Daten', () => {
   it('Prüft ob projects-view einwandfrei funktioniert', () => {
-    cy.visit('https://test.codingdavinci.de/de/');
+    cy.visit('https://'+Cypress.env('user')+':'+Cypress.env('password')+'@test.codingdavinci.de/de/');
     cy.wait(500);
     cy.get(".navbar-toggler-icon")
     .click();

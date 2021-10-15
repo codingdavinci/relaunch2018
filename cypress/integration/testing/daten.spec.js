@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 context('Daten', () => {
   it('Prüft ob data-view einwandfrei funktioniert', () => {
-    cy.visit('https://test.codingdavinci.de/de/daten');
+    cy.visit('https://'+Cypress.env('user')+':'+Cypress.env('password')+'@test.codingdavinci.de/de/daten');
     // Check if filter works
     cy.wait(500);
     cy.get('#edit-project-type li:nth-child(1) .bef-link').click();

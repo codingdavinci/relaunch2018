@@ -1,8 +1,8 @@
 /// <reference types="cypress" />
 context('Login', () => {
   it('Prüft ob die Loginmaske einwandfrei funktioniert', () => {
-    cy.visit('https://test.codingdavinci.de/user');
-    cy.url().should('eq', 'https://test.codingdavinci.de/de/user/login');
+    cy.visit('https://'+Cypress.env('user')+':'+Cypress.env('password')+'@test.codingdavinci.de/user');
+    cy.url().should('eq', 'https://'+Cypress.env('user')+':'+Cypress.env('password')+'@test.codingdavinci.de/de/user/login');
 
     cy.get('#edit-name')
       .type('fake@email.com').should('have.value', 'fake@email.com')

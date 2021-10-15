@@ -1,5 +1,5 @@
 name: Cypress
-on: [push]
+on: [push, workflow_dispatch]
 jobs:
   cypress-run:
     name: Cypress run
