@@ -49,6 +49,6 @@ package-lock.json
 /config/sync/phpmailer_smtp.settings.yml
 
 ## Cypress test-data
-cypress/screenshots
-cypress/videos
-cypress/testing
+/cypress/screenshots/
+/cypress/videos/
+/cypress/testing/
