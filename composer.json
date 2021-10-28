@@ -56,6 +56,7 @@
         "drupal/taxonomy_menu": "^3.3",
         "drupal/transliterate_filenames": "^1.4",
         "drupal/twig_tweak": "^2.1",
+        "drupal/ultimate_cron": "^2.0@alpha",
         "drupal/video_embed_field": "^2.0",
         "drupal/views_data_export": "^1.0",
         "drush/drush": "^10.2",
