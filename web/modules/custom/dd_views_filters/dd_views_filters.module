@@ -169,7 +169,7 @@ function dd_views_filters_cache_dataset($conn, $object_types_first_level,  $row)
         'events_nids'   => implode(", ", $events_nids),
         'events_titles' => implode(", ", $events_titles),
         'object_types_tids'   => implode(", ", $object_types_tids),
-        'subobject_types_tids'   => join($subobject_types_tids, ", "),
+        'subobject_types_tids'   => implode(", ", $subobject_types_tids),
         'field_media_license' => $field_media_license,
         'author_name' => $author_name,
       )
