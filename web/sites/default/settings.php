@@ -261,7 +261,6 @@ $databases['default']['default'] = array (
  * @endcode
  */
 $config_directories[CONFIG_SYNC_DIRECTORY] = DRUPAL_ROOT . '/../config/sync';
-/*$settings[CONFIG_SYNC_DIRECTORY] = DRUPAL_ROOT . '/../config/sync';*/
 
 /**
  * Settings:
@@ -544,7 +543,7 @@ $settings['file_public_path'] = getenv('FILE_PUBLIC_PATH');
  * See https://www.drupal.org/documentation/modules/file for more information
  * about securing private files.
  */
-# $settings['file_private_path'] = '';
+$settings['file_private_path'] = getenv('FILE_PRIVATE_PATH');
 
 /**
  * Session write interval:
@@ -787,3 +786,11 @@ $settings['entity_update_backup'] = TRUE;
 if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
   include $app_root . '/' . $site_path . '/settings.local.php';
 }
+
+/* Redis */
+if ((getenv('USE_REDIS') ?: 'no') == 'yes') {
+  $settings['redis.connection']['interface'] = 'PhpRedis';
+  $settings['redis.connection']['host'] = '127.0.0.1';
+  $settings['cache']['default'] = 'cache.backend.redis';
+}
+

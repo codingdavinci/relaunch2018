@@ -1,6 +1,7 @@
 <?php
 
 use Drupal\block\Entity\Block;
+use Drupal\Core\Url;
 use Drupal\entity_reference_revisions\EntityReferenceRevisionsFieldItemList;
 use Drupal\entity_reference_revisions\Plugin\Field\FieldType\EntityReferenceRevisionsItem;
 use Drupal\file\Entity\File;
@@ -138,6 +139,7 @@ function relaunch2018_preprocess_menu__main(array &$variables) {
  * Implements THEME_preprocess_HOOK().
  *
  * @param array $variables
+ * @throws \Drupal\Core\TypedData\Exception\MissingDataException
  */
 function relaunch2018_preprocess_node(array &$variables) {
   /** @var Node $node */
@@ -145,6 +147,7 @@ function relaunch2018_preprocess_node(array &$variables) {
 
   if ($node->bundle() === 'project') {
     // Add award title to variables if project has won an award.
+    /** @var int $eventId */
     if (($eventId = $node->get('field_event')->target_id) !== null) {
       $nid = $node->id();
       $awards = [];
@@ -177,7 +180,7 @@ function relaunch2018_preprocess_node(array &$variables) {
     $audioVideo = $node->get('field_audio_video');
 
     if (($item = $audioVideo->get(0)) !== null) {
-      /** @var $item EntityReferenceRevisionsItem */
+      /** @var EntityReferenceRevisionsItem $item */
       $paragraph = Paragraph::load($item->getValue()['target_id']);
 
       $fileId = $paragraph->get('field_audio_video')->target_id;
@@ -192,7 +195,7 @@ function relaunch2018_preprocess_node(array &$variables) {
       else {
         $variables['audio_video'] = [
           'mime_type' => $file->getMimeType(),
-          'url' => $file->url(),
+          'url' => $file->createFileUrl(),
         ];
       }
 
@@ -200,7 +203,7 @@ function relaunch2018_preprocess_node(array &$variables) {
       $image = $node->get('field_attributed_image');
 
       if (($item = $image->get(0)) !== null) {
-        /** @var $item EntityReferenceRevisionsItem */
+        /** @var EntityReferenceRevisionsItem $item */
         $paragraph = Paragraph::load($item->getValue()['target_id']);
 
         $fileId = $paragraph->get('field_inline_image')->target_id;
@@ -436,8 +439,8 @@ function _relaunch2018_add_color_scheme($node, array &$variables) {
 
     if ($term !== null) {
       $variables['color_scheme'] = [
-        $term->get('field_color1')->value,
-        $term->get('field_color2')->value,
+        $term->get('field_color1')->getValue(),
+        $term->get('field_color2')->getValue(),
       ];
     }
   }
@@ -451,6 +454,8 @@ function _relaunch2018_add_color_scheme($node, array &$variables) {
  * @param array $variables
  */
 function relaunch2018_preprocess_pager(&$variables) {
+  /* @var $pager_manager \Drupal\Core\Pager\PagerManagerInterface */
+  $pager_manager = \Drupal::service('pager.manager');
   $element = $variables['pager']['#element'];
   $parameters = $variables['pager']['#parameters'];
   $quantity = $variables['pager']['#quantity'];
@@ -502,17 +507,17 @@ function relaunch2018_preprocess_pager(&$variables) {
   if ($pager_page_array[$element] > 0) {
     $items['first'] = array();
     $options = array(
-      'query' => pager_query_add_page($parameters, $element, 0),
+      'query' => $pager_manager->getUpdatedParameters($parameters, $element, 0),
     );
-    $items['first']['href'] = \Drupal::url($route_name, $route_parameters, $options);
+    $items['first']['href'] = Url::fromRoute($route_name, $route_parameters, $options)->toString();
     if (isset($tags[0])) {
       $items['first']['text'] = $tags[0];
     }
     $items['previous'] = array();
     $options = array(
-      'query' => pager_query_add_page($parameters, $element, $pager_page_array[$element] - 1),
+      'query' => $pager_manager->getUpdatedParameters($parameters, $element, $pager_page_array[$element] - 1),
     );
-    $items['previous']['href'] = \Drupal::url($route_name, $route_parameters, $options);
+    $items['previous']['href'] = Url::fromRoute($route_name, $route_parameters, $options)->toString();
     if (isset($tags[1])) {
       $items['previous']['text'] = $tags[1];
     }
@@ -527,9 +532,9 @@ function relaunch2018_preprocess_pager(&$variables) {
     // Now generate the actual pager piece.
     for (; $i <= $pager_last && $i <= $pager_max; $i++) {
       $options = array(
-        'query' => pager_query_add_page($parameters, $element, $i - 1),
+        'query' => $pager_manager->getUpdatedParameters($parameters, $element, $i - 1),
       );
-      $items['pages'][$i]['href'] = \Drupal::url($route_name, $route_parameters, $options);
+      $items['pages'][$i]['href'] = Url::fromRoute($route_name, $route_parameters, $options)->toString();
       if ($i == $pager_current) {
         $variables['current'] = $i;
       }
@@ -542,20 +547,21 @@ function relaunch2018_preprocess_pager(&$variables) {
   }
 
   // Create the "next" and "last" links if we are not on the last page.
+  $items = [];
   if ($pager_page_array[$element] < $pager_max - 1) {
     $items['next'] = array();
     $options = array(
-      'query' => pager_query_add_page($parameters, $element, $pager_page_array[$element] + 1),
+      'query' => $pager_manager->getUpdatedParameters($parameters, $element, $pager_page_array[$element] + 1),
     );
-    $items['next']['href'] = \Drupal::url($route_name, $route_parameters, $options);
+    $items['next']['href'] = Url::fromRoute($route_name, $route_parameters, $options)->toString();
     if (isset($tags[3])) {
       $items['next']['text'] = $tags[3];
     }
     $items['last'] = array();
     $options = array(
-      'query' => pager_query_add_page($parameters, $element, $pager_max - 1),
+      'query' => $pager_manager->getUpdatedParameters($parameters, $element, $pager_max - 1),
     );
-    $items['last']['href'] = \Drupal::url($route_name, $route_parameters, $options);
+    $items['last']['href'] = Url::fromRoute($route_name, $route_parameters, $options)->toString();
     if (isset($tags[4])) {
       $items['last']['text'] = $tags[4];
     }

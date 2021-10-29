@@ -4,3 +4,4 @@ type: module
 description: Have anchor links scroll to the destination instead of the browser's default jump behavior.
 package: Custom
 core: 8.x
+core_version_requirement: ^8 || ^9

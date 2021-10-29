@@ -9,8 +9,6 @@ The website [codingdavinci.de](https://codingdavinci.de/) was launched in early 
 
 Task management: Tasks are broken down as [issues](https://github.com/codingdavinci/relaunch2018/issues) and prioritised/tracked in the ["Relaunch 2018" project kanban](https://github.com/codingdavinci/relaunch2018/projects/1).
 
-Contact: lucy.patterson@wikimedia.de (@lucyWMDE)
-
 ## Installation
 
 The project was set up using the [Composer template for Drupal projects](https://github.com/drupal-composer/drupal-project). Installation requires [Composer](https://getcomposer.org/) for managing PHP packages.
@@ -63,7 +61,7 @@ Yarn scripts are set up to lint ES6 JavaScript files and SCSS files:
 
 ## Docker
 
-This Dupal project is available as Docker container from Docker Hub: https://hub.docker.com/r/codingdavinci/relaunch2018
+This Dupal project is available as Docker container from GitHub: https://github.com/codingdavinci/relaunch2018/pkgs/container/relaunch2018%2Fcdv
 
 To execute the pre-compiled Docker container run the following command with the variables set for your environment. An example for Docker Composer can be found in [docker-compose.yml](docker-compose.yml).
 ```shell
@@ -77,24 +75,30 @@ docker run -d -p 8080:80 -P \
   --env "UPDATE_FREE_ACCESS=FALSE" \
   --env "FILE_PUBLIC_PATH=sites/default/files" \
   --env "TRUSTED_HOST_PATTERNS=\"^localhost\$, ^127.0.0.1\$\"" \
-  codingsdavinci/relaunch2018:lastest
+  ghcr.io/codingdavinci/relaunch2018/cdv:latest
 ```
 
 ### Environment variables
 
-Please see [web/sites/default/settings.php](web/sites/default/settings.php) for additional information.
+Please also see [web/sites/default/settings.php](web/sites/default/settings.php) for additional information.
 
-| Environment variable  | Description                                                             | Example                         |
-|-----------------------|-------------------------------------------------------------------------|---------------------------------|
-| MYSQL_HOSTNAME        | Database connection. Server host name.                                  | `cdv.example.com`               |
-| MYSQL_DATABASE        | Database connection. Name of the database.                              | `mycdvdatabase`                 |
-| MYSQL_USER            | Database connection. Login name for database.                           | `mycdvuser`                     |
-| MYSQL_PASSWORD        | Database connection. Password for database.                             | `mycdvpassword`                 |
-| MYSQL_PORT            | Database connection. Server Connection Port.                            | `3306`                          |
-| HASH_SALT             | Salt for Drupal's one-time login links, cancel links, form tokens, etc. | `myverysecretcdvhashsalt`       |
-| UPDATE_FREE_ACCESS    | Access control for update.php script.                                   | `FALSE`                         |
-| FILE_PUBLIC_PATH      | Public file path.                                                       | `sites/default/files`           |
-| TRUSTED_HOST_PATTERNS | Trusted host configuration.                                             | `"^localhost\$, ^127.0.0.1\$\"` |
+| Environment variable    | Description                                                                                    | Example                         |
+|-------------------------|------------------------------------------------------------------------------------------------|---------------------------------|
+| MYSQL_HOSTNAME          | Database connection. Server host name.                                                         | `cdv.example.com`               |
+| MYSQL_DATABASE          | Database connection. Name of the database.                                                     | `mycdvdatabase`                 |
+| MYSQL_USER              | Database connection. Login name for database.                                                  | `mycdvuser`                     |
+| MYSQL_PASSWORD          | Database connection. Password for database.                                                    | `mycdvpassword`                 |
+| MYSQL_PORT              | Database connection. Server Connection Port.                                                   | `3306`                          |
+| HASH_SALT               | Salt for Drupal's one-time login links, cancel links, form tokens, etc.                        | `myverysecretcdvhashsalt`       |
+| UPDATE_FREE_ACCESS      | Access control for update.php script.                                                          | `FALSE`                         |
+| FILE_PUBLIC_PATH        | Public file path.                                                                              | `sites/default/files`           |
+| TRUSTED_HOST_PATTERNS   | Trusted host configuration.                                                                    | `"^localhost\$, ^127.0.0.1\$\"` |
+| HTPASSWD_USER           | If `HTPASSWD_USER` and `HTPASSWD_PWD` are set, ...                                             | `user`                          |
+| HTPASSWD_PWD            | the user will get a Basic HTTP Auth request when accessing the website .                       | `mypassword`                    |
+| HTPASSWD_GREETING       | Customized HTTP Auth greeting                                                                  | `Hello, welcome!`               |
+| UPDATEDB_ON_STARTUP     | If set to `yes`, `drush updatedb` will be executed once on container start. Default: `no`      | `yes`or `no`                    |
+| CACHEREBUILD_ON_STARTUP | If set to `yes`, `drush cache-rebuild` will be executed once on container start. Default: `no` | `yes`or `no`                    |
+| USE_REDIS               | Use Redis as memory cache. Default: `no`                                                       | `yes`or `no`                    |
 
 ### Build and start Docker container locally
 
@@ -117,3 +121,4 @@ docker run -d -p 8080:80 -P \
   --env "TRUSTED_HOST_PATTERNS=\"^localhost\$, ^127.0.0.1\$\"" \
   cdv
 ```
+

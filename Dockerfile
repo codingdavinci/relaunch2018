@@ -1,128 +1,135 @@
 FROM composer:2 AS COMPOSER_CHAIN
-MAINTAINER Michael Büchner <m.buechner@dnb.de>
 COPY / /tmp/cdv
 WORKDIR /tmp/cdv
 RUN composer install --no-dev
 
 # Add git tag version to PHP file
 RUN { \
-		echo -e "<\x21-- $(git describe --tags) -->"; \
-	} >> /tmp/cdv/web/themes/custom/relaunch2018/templates/html.html.twig
-RUN rm -rf .git/
+        echo -e "<\x21-- $(git describe --tags) -->"; \
+    } >> /tmp/cdv/web/themes/custom/relaunch2018/templates/html.html.twig; \
+    rm -rf .git/;
 
-# from https://github.com/docker-library/drupal/blob/master/8.7/apache/Dockerfile
-FROM php:7.4-apache
+FROM php:8.0-fpm-alpine
 MAINTAINER Michael Büchner <m.buechner@dnb.de>
+
+# Install packages
+RUN apk --no-cache add \
+    curl \
+    nginx \
+    nginx-mod-http-brotli \
+    redis \
+    supervisor; \
+    apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/testing \
+    supercronic;
+
 RUN set -eux; \
-	if command -v a2enmod; then \
-		a2enmod rewrite; \
-	fi; \
-	savedAptMark="$(apt-mark showmanual)"; \
-	apt-get update; \
-	apt-get install -y --no-install-recommends \
-		libfreetype6-dev \
-		libjpeg-dev \
-		libpng-dev \
-		libpq-dev \
-		libzip-dev; \
-	docker-php-ext-configure gd \
-		--with-freetype \
-		--with-jpeg; \
-	docker-php-ext-install -j "$(nproc)" \
-		gd \
-		opcache \
-		pdo_mysql \
-		pdo_pgsql \
-		zip; \
-	pecl install uploadprogress apcu; \
-	docker-php-ext-enable uploadprogress apcu; \
-	apt-mark auto '.*' > /dev/null; \
-	apt-mark manual $savedAptMark; \
-	ldd "$(php -r 'echo ini_get("extension_dir");')"/*.so \
-		| awk '/=>/ { print $3 }' \
-		| sort -u \
-		| xargs -r dpkg-query -S \
-		| cut -d: -f1 \
-		| sort -u \
-		| xargs -rt apt-mark manual; \
-	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false;
+     \
+     apk add --no-cache --virtual .build-deps \
+          coreutils \
+          freetype-dev \
+          libjpeg-turbo-dev \
+          libpng-dev \
+          libzip-dev \
+          pcre-dev \
+          autoconf \
+          g++ \
+          make \
+          git \
+          # postgresql-dev is needed for https://bugs.alpinelinux.org/issues/3642
+          postgresql-dev; \
+     \
+     docker-php-ext-configure gd \
+          --with-freetype \
+          --with-jpeg=/usr/include; \
+     \
+     docker-php-ext-install -j "$(nproc)" \
+          gd \
+          opcache \
+          pdo_mysql \
+          pdo_pgsql \
+          zip; \
+     pecl channel-update pecl.php.net; \
+     pecl install oauth apcu redis; \
+     docker-php-ext-enable apcu oauth redis; \
+     \
+     runDeps="$( \
+          scanelf --needed --nobanner --format '%n#p' --recursive /usr/local \
+               | tr ',' '\n' \
+               | sort -u \
+               | awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' \
+     )"; \
+     apk add --no-network --virtual .drupal-phpexts-rundeps $runDeps; \
+     apk del --no-network .build-deps \
+          coreutils \
+          freetype-dev \
+          libjpeg-turbo-dev \
+          libpng-dev \
+          libzip-dev \
+          pcre-dev \
+          autoconf \
+          g++ \
+          make \
+          git \
+          postgresql-dev;
 
-RUN echo "LISTEN 8080" > /etc/apache2/ports.conf; \
-  { \
-		echo "opcache.file_update_protection=0"; \
-		echo "opcache.validate_timestamps=0"; \
-		echo "opcache.interned_strings_buffer=16"; \
-		echo "opcache.memory_consumption=128"; \
-		echo "opcache.max_accelerated_files=4000"; \
-		echo "opcache.max_wasted_percentage=10"; \
-		echo "opcache.revalidate_freq=60"; \
-	} > /usr/local/etc/php/conf.d/2-opcache-recommended.ini; \
-  { \
-		echo "apc.enabled=1"; \
-		echo "apc.file_update_protection=2"; \
-		echo "apc.optimization=0"; \
-		echo "apc.shm_size=256M"; \
-		echo "apc.include_once_override=0"; \
-		echo "apc.shm_segments=1"; \
-		echo "apc.ttl=7200"; \
-		echo "apc.user_ttl=7200"; \
-		echo "apc.gc_ttl=3600"; \
-		echo "apc.num_files_hint=1024"; \
-		echo "apc.enable_cli=0"; \
-		echo "apc.max_file_size=5M"; \
-		echo "apc.cache_by_default=1"; \
-		echo "apc.use_request_time=1"; \
-		echo "apc.slam_defense=0"; \
-		echo "apc.mmap_file_mask=/tmp/apc.XXXXXX"; \
-		echo "apc.stat_ctime=0"; \
-		echo "apc.canonicalize=1"; \
-		echo "apc.write_lock=1"; \
-		echo "apc.report_autofilter=0"; \
-		echo "apc.rfc1867=0"; \
-		echo "apc.rfc1867_prefix =upload_"; \
-		echo "apc.rfc1867_name=APC_UPLOAD_PROGRESS"; \
-		echo "apc.rfc1867_freq=0"; \
-		echo "apc.rfc1867_ttl=3600"; \
-		echo "apc.lazy_classes=0"; \
-		echo "apc.lazy_functions=0"; \
-	} > /usr/local/etc/php/conf.d/1-apcu-caching.ini; \
-  { \
-		echo "error_log = /dev/stderr"; \
-		echo "error_reporting = E_ALL & ~E_DEPRECATED & ~E_STRICT"; \
-		echo "display_errors = Off"; \
-		echo "display_startup_errors = Off"; \
-		echo "html_errors = On"; \
-		echo "log_errors = On"; \
-		echo "upload_max_filesize = 128M"; \
-		echo "post_max_size = 128M"; \
-		echo "memory_limit = 512M"; \
-		echo "max_execution_time = 600"; \
-		echo "max_input_vars = 5000"; \
-	} > /usr/local/etc/php/conf.d/0-upload_large_dumps.ini; \
-  { \
-  		echo "<VirtualHost *:8080>"; \
-  		echo "  ServerAdmin m.buechner@dnb.de"; \
-  		echo "  DocumentRoot /var/www/html/web"; \
-  		echo "  ErrorLog /dev/stderr"; \
-  		echo "  CustomLog /dev/stdout combined"; \
-  		echo "</VirtualHost>"; \
-  	} > /etc/apache2/sites-enabled/000-default.conf;
+ENV RUN_USER nobody
+ENV RUN_GROUP 0
 
+# add PHP config
+COPY --chown=${RUN_USER}:${RUN_GROUP} ./config/php/ /usr/local/etc/php/conf.d/
+
+# add NGINX config
+COPY --chown=${RUN_USER}:${RUN_GROUP} config/nginx/*.conf /etc/nginx/
+COPY --chown=${RUN_USER}:${RUN_GROUP} config/nginx/mime.types /etc/nginx/mime.types
+COPY --chown=${RUN_USER}:${RUN_GROUP} config/nginx/conf.d/ /etc/nginx/conf.d/ 
+COPY --chown=${RUN_USER}:${RUN_GROUP} config/nginx/.authpasswd /etc/nginx/.authpasswd
+
+# add cron jobs
+COPY --chown=${RUN_USER}:${RUN_GROUP} config/cron/* /etc/crontabs/
+
+# add supervisord config
+COPY --chown=${RUN_USER}:${RUN_GROUP} config/supervisord/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+
+# Add application
 WORKDIR /var/www/html
-COPY --from=COMPOSER_CHAIN /tmp/cdv/ .
-COPY docker-php-entrypoint-drupal.sh /usr/local/bin/docker-php-entrypoint-drupal
-RUN chmod 775 /usr/local/bin/docker-php-entrypoint-drupal; \
-	chown -R www-data:www-data web/sites web/modules web/themes web/tmp; \
-	chmod +x /var/www/html/vendor/drush/drush/drush; \
-	find web \( -type d -exec chmod 755 {} + \) -o \( -type f -exec chmod 644 {} + \);
+COPY --chown=${RUN_USER}:${RUN_GROUP} --from=COMPOSER_CHAIN /tmp/cdv/ .
+ENV PATH=${PATH}:/var/www/html/vendor/bin
 
-# Clean system
-RUN apt-get clean; \
-	rm -rf /var/lib/apt/lists/*
+RUN \
+    # Create symlink for php8
+    ln -s /usr/bin/php8 /usr/bin/php; \
+    # Use the default PHP production configuration
+    mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"; \
+    # Move entrypoint script in place
+    mv scripts/docker-php-entrypoint-drupal.sh /usr/local/bin/docker-php-entrypoint-drupal; \
+    mv scripts/drupal-maintenance.sh /usr/local/bin/drupal-maintenance; \
+    # Generate SSL certificates fpr HTTP2
+    # Generating signing SSL private key
+    openssl genrsa -des3 -passout pass:foobar -out /etc/ssl/mykey.pem 2048; \
+    # Removing passphrase from private key
+    cp /etc/ssl/mykey.pem /etc/ssl/mykey.pem.orig; \
+    openssl rsa -passin pass:foobar -in /etc/ssl/mykey.pem.orig -out /etc/ssl/mykey.pem; \
+    # Generating certificate signing request
+    openssl req -new -key /etc/ssl/mykey.pem -out /etc/ssl/mycert.csr -subj "/C=DE/ST=DE/L=Frankfurt am Main/O=Deutsche Nationalbibliothek/OU=IT.DDB/CN=Coding da Vinci"; \
+    # Generating self-signed certificate
+    openssl x509 -req -days 3650 -in /etc/ssl/mycert.csr -signkey /etc/ssl/mykey.pem -out /etc/ssl/mycert.pem; \
+    # Make sure files/folders needed by the processes are accessable when they run under the nobody user
+    mkdir /var/cache/nginx; \
+    chgrp -R ${RUN_GROUP} /run /var/cache/nginx/ /var/lib/nginx/ /var/log/nginx/ /var/www/html/ /etc/ssl/mycert.pem /etc/ssl/mykey.pem /etc/nginx/.authpasswd; \
+    chmod -R g=u /run/ /etc/nginx/conf.d/ /etc/nginx/*.conf /var/cache/nginx/ /var/lib/nginx/ /var/log/nginx/ /var/www/html/ /etc/ssl/mycert.pem /etc/ssl/mykey.pem /etc/nginx/.authpasswd; \
+    chmod 751 /usr/local/bin/docker-php-entrypoint-drupal /usr/local/bin/drupal-maintenance /var/www/html/vendor/drush/drush/drush /var/www/html/web/sites/default; \
+    chmod 440 /var/www/html/web/sites/default/settings.php; \
+    # add permissions for suervisor & nginx user
+    touch /run/supervisord.pid && chgrp -R ${RUN_GROUP} /run/supervisord.pid && chmod -R g=u /run/supervisord.pid; \
+    touch /run/nginx/nginx.pid && chgrp -R ${RUN_GROUP} /run/nginx/nginx.pid && chmod -R g=u /run/nginx/nginx.pid;
+
+# Switch to use a non-root user
+USER ${RUN_USER}:${RUN_GROUP}
 
 ENTRYPOINT ["docker-php-entrypoint-drupal"]
 
-HEALTHCHECK --interval=1m --timeout=3s CMD curl --fail http://localhost:8080/ || exit 1
+# Expose the ports for nginx
+EXPOSE 8080 4430
 
-EXPOSE 8080
-CMD ["apache2-foreground"]
+# supervisord starts nginx & php-fpm
+CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
