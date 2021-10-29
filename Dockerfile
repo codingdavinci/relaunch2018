@@ -9,7 +9,7 @@ RUN { \
     } >> /tmp/cdv/web/themes/custom/relaunch2018/templates/html.html.twig; \
     rm -rf .git/;
 
-FROM php:8.0-fpm-alpine
+FROM php:7.4-fpm-alpine
 MAINTAINER Michael Büchner <m.buechner@dnb.de>
 
 # Install packages
@@ -96,8 +96,8 @@ COPY --chown=${RUN_USER}:${RUN_GROUP} --from=COMPOSER_CHAIN /tmp/cdv/ .
 ENV PATH=${PATH}:/var/www/html/vendor/bin
 
 RUN \
-    # Create symlink for php8
-    ln -s /usr/bin/php8 /usr/bin/php; \
+    # Create symlink for php7.4
+    ln -s /usr/bin/php7.4 /usr/bin/php; \
     # Use the default PHP production configuration
     mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"; \
     # Move entrypoint script in place
