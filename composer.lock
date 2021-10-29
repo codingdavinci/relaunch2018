@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fbf8fed7511adeeb62d45e7be200310c",
+    "content-hash": "f999907d0f31d4ee6f992d2a74945f3b",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3372,6 +3372,54 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/phpmailer_smtp",
                 "issues": "https://www.drupal.org/project/issues/phpmailer_smtp"
+            }
+        },
+        {
+            "name": "drupal/purge_users",
+            "version": "3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/purge_users.git",
+                "reference": "8.x-3.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/purge_users-8.x-3.0.zip",
+                "reference": "8.x-3.0",
+                "shasum": "0ef98e103271443dc2cf487cf3cbc2e184aba00e"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-3.0",
+                    "datestamp": "1628279106",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Andras_Szilagyi",
+                    "homepage": "https://www.drupal.org/user/1217938"
+                },
+                {
+                    "name": "jim.applebee",
+                    "homepage": "https://www.drupal.org/user/2498674"
+                }
+            ],
+            "description": "Purge inactive users after a set interval.",
+            "homepage": "https://www.drupal.org/project/purge_users",
+            "support": {
+                "source": "https://git.drupalcode.org/project/purge_users"
             }
         },
         {
