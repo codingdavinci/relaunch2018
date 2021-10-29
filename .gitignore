@@ -6,6 +6,7 @@
 /web/themes/contrib/
 /web/profiles/contrib/
 /web/libraries/*
+/cypress/results/
 
 # Required for anchor_link modules
 !/web/libraries/fakeobjects/
@@ -42,7 +43,12 @@
 /robots.txt
 /update.php
 /web.config
+package-lock.json
 
 ## Ignored due to security problem (e.g. stored passwords)
 /config/sync/phpmailer_smtp.settings.yml
-/yarn-error.log
+
+## Cypress test-data
+/cypress/screenshots/
+/cypress/videos/
+/cypress/testing/

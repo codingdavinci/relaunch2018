@@ -160,20 +160,20 @@ function dd_views_filters_cache_dataset($conn, $object_types_first_level,  $row)
   $field_description = $node->get('field_description')->value;
 
   $conn->insert('dd_views_datasets')->fields(
-    array(
-      'nid'     => $row["nid"],
-      'created' => $row["created"],
-      'title'   => $row["title"],
-      'description'   => strip_tags($field_description),
-      'theme_nids'    => implode(", ", $theme_nids),
-      'events_nids'   => implode(", ", $events_nids),
-      'events_titles' => implode(", ", $events_titles),
-      'object_types_tids'   => implode(", ", $object_types_tids),
-      'subobject_types_tids'   => join($subobject_types_tids, ", "),
-      'field_media_license' => $field_media_license,
-      'author_name' => $author_name,
-    )
-  )->execute();
+      array(
+        'nid'     => $row["nid"],
+        'created' => $row["created"],
+        'title'   => $row["title"],
+        'description'   => strip_tags($field_description),
+        'theme_nids'    => implode(", ", $theme_nids),
+        'events_nids'   => implode(", ", $events_nids),
+        'events_titles' => implode(", ", $events_titles),
+        'object_types_tids'   => implode(", ", $object_types_tids),
+        'subobject_types_tids'   => join($subobject_types_tids, ", "),
+        'field_media_license' => $field_media_license,
+        'author_name' => $author_name,
+      )
+    )->execute();
 }
 
 
