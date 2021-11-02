@@ -10,7 +10,7 @@
     grid-auto-columns: 100%;
     grid-auto-flow: column;
     width: 100%;
-    margin-right: -1 * $grid-gutter-width / 2;
+    margin-right: -1 * $grid-gutter-width * 0.5;
 
     @media #{$ie} {
       > .field__item {
@@ -45,10 +45,10 @@
     &.box--width-#{$width} {
       .field--name-field-boxes {
         @include boxWidth($width);
-        margin-right: -1 * $grid-gutter-width / 2;
+        margin-right: -1 * $grid-gutter-width * 0.5;
 
         > .field__item {
-          padding: $grid-gutter-width / 2;
+          padding: $grid-gutter-width * 0.5;
         }
 
         @media #{$ie} {

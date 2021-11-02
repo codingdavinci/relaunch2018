@@ -95,7 +95,7 @@
         width: 25%;
       }
     }
-    @elseif $width == 33 {
+    @else if $width == 33 {
       width: 67%;
 
       @include media-breakpoint-up(md) {
@@ -108,7 +108,7 @@
         width: 33%;
       }
     }
-    @elseif $width == 50 {
+    @else if $width == 50 {
       width: 80%;
 
       @include media-breakpoint-up(md) {
@@ -118,7 +118,7 @@
         width: 50%;
       }
     }
-    @elseif $width == 67 {
+    @else if $width == 67 {
       @include media-breakpoint-up(lg) {
         width: 67%;
       }

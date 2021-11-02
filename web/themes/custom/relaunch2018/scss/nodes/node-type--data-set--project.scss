@@ -74,7 +74,7 @@
             .paragraph--type--attributed-image--attribution,
             .paragraph--type--project-image--attribution {
               width: 100%;
-              padding: map_get($spacers, 1) / 2 map_get($spacers, 2) 0;
+              padding: map_get($spacers, 1) * 0.5 map_get($spacers, 2) 0;
               text-align: center;
               color: $white;
 

@@ -47,6 +47,7 @@
 .icon-award-empty:before { content: '\e823'; } /* '' */
 .icon-arrow:before { content: '\e825'; } /* '' */
 .icon-mail-1:before { content: '\e826'; } /* '' */
+.spamspan:before { content: '\e826'; } /* '' */
 .icon-search:before { content: '\e827'; } /* '' */
 .icon-phone:before { content: '\e828'; } /* '' */
 .icon-th-large:before { content: '\e829'; } /* '' */

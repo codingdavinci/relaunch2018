@@ -52,7 +52,7 @@
 
     .view-content {
       .views-row {
-        padding: $grid-gutter-width / 2;
+        padding: $grid-gutter-width * 0.5;
       }
 
       @include media-breakpoint-up(sm) {

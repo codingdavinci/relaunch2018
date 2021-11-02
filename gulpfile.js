@@ -1,7 +1,7 @@
 const { dest, series, src } = require('gulp');
 const del = require('del');
 const merge = require('merge-stream');
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const header = require('gulp-header');
 const importOnce = require('node-sass-import-once');
 const concat = require('gulp-concat');

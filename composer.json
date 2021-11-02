@@ -142,8 +142,5 @@
                 "#2992717: Fix for toggling filter links": "https://www.drupal.org/files/issues/2018-08-15/multiple_links_filters-2992717-2.patch"
             }
         }
-    },
-    "require-dev": {
-        "mglaman/drupal-check": "^1.1"
     }
 }

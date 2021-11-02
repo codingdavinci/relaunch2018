@@ -36,7 +36,7 @@
 
   &.node--view-mode-related {
     .article--header-image {
-      padding: 0 $grid-gutter-width / 2;
+      padding: 0 $grid-gutter-width * 0.5;
     }
 
     .article--content-container {
@@ -66,7 +66,7 @@
   }
 
   &.node--view-mode-teaser {
-    padding: $grid-gutter-width $grid-gutter-width / 2;
+    padding: $grid-gutter-width $grid-gutter-width * 0.5;
     background-color: $white;
 
     .node__submitted {

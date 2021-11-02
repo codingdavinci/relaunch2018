@@ -46,7 +46,7 @@
             background-color: $green-dark;
 
             &:after {
-              margin-left: map_get($spacers, 1) / 2;
+              margin-left: map_get($spacers, 1) * 0.5;
               content: '✖';
               font-size: 0.8em;
               font-weight: $font-weight-normal;

@@ -67,7 +67,7 @@
       margin-top: map_get($spacers, 5);
 
       .block {
-        padding: map_get($spacers, 5) $grid-gutter-width / 2 0 $grid-gutter-width / 2;
+        padding: map_get($spacers, 5) $grid-gutter-width * 0.5 0 $grid-gutter-width * 0.5;
         background-color: $white;
 
         &:last-child {
