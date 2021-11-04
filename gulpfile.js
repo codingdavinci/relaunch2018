@@ -32,20 +32,12 @@ function scss() {
     includePaths: [
       path.resolve(__dirname + '/web/libraries/bootstrap/scss'),
       path.resolve(__dirname + '/web/themes/custom/relaunch2018/scss'),
-      path.resolve(__dirname + '/web/themes/custom/relaunch2018/scss/_includes')
+      path.resolve(__dirname + '/web/themes/custom/relaunch2018/scss/includes')
     ]
   };
 
-  return merge(
-
-    // Frontend theme CSS
-    src([
-      root + 'scss/*.scss',
-      root + 'scss/nodes/*.scss',
-      root + 'scss/paragraphs/*.scss',
-      root + 'scss/views/*.scss'
-    ])
-    .pipe(concat('global.scss'))
+   return merge(
+    src(root + 'scss/global.scss')
     .pipe(sass(sassOptions))
     .pipe(replace(/@charset [^;]+;/g, ''))
     .pipe(header(headerNote))

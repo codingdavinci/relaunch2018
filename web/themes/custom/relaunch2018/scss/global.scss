@@ -1,0 +1,99 @@
+// global.scss
+
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import '../../../../../web/libraries/bootstrap/scss/functions';
+
+// 2. Include any default variable overrides here
+@import "includes/variables";
+@import "includes/mixins";
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "../../../../../web/libraries/bootstrap/scss/variables";
+@import "../../../../../web/libraries/bootstrap/scss/mixins";
+
+// 4. Include any optional Bootstrap components as you like
+@import "../../../../../web/libraries/bootstrap/scss/root";
+@import "../../../../../web/libraries/bootstrap/scss/reboot";
+@import "../../../../../web/libraries/bootstrap/scss/type";
+@import "../../../../../web/libraries/bootstrap/scss/images";
+@import "../../../../../web/libraries/bootstrap/scss/code";
+@import "../../../../../web/libraries/bootstrap/scss/grid";
+@import "../../../../../web/libraries/bootstrap/scss/tables";
+@import "../../../../../web/libraries/bootstrap/scss/forms";
+@import "../../../../../web/libraries/bootstrap/scss/buttons";
+@import "../../../../../web/libraries/bootstrap/scss/transitions";
+@import "../../../../../web/libraries/bootstrap/scss/dropdown";
+@import "../../../../../web/libraries/bootstrap/scss/button-group";
+@import "../../../../../web/libraries/bootstrap/scss/input-group";
+@import "../../../../../web/libraries/bootstrap/scss/custom-forms";
+@import "../../../../../web/libraries/bootstrap/scss/nav";
+@import "../../../../../web/libraries/bootstrap/scss/navbar";
+@import "../../../../../web/libraries/bootstrap/scss/card";
+@import "../../../../../web/libraries/bootstrap/scss/breadcrumb";
+@import "../../../../../web/libraries/bootstrap/scss/pagination";
+@import "../../../../../web/libraries/bootstrap/scss/badge";
+@import "../../../../../web/libraries/bootstrap/scss/jumbotron";
+@import "../../../../../web/libraries/bootstrap/scss/alert";
+@import "../../../../../web/libraries/bootstrap/scss/progress";
+@import "../../../../../web/libraries/bootstrap/scss/media";
+@import "../../../../../web/libraries/bootstrap/scss/list-group";
+@import "../../../../../web/libraries/bootstrap/scss/close";
+@import "../../../../../web/libraries/bootstrap/scss/toasts";
+@import "../../../../../web/libraries/bootstrap/scss/modal";
+@import "../../../../../web/libraries/bootstrap/scss/tooltip";
+@import "../../../../../web/libraries/bootstrap/scss/popover";
+@import "../../../../../web/libraries/bootstrap/scss/carousel";
+@import "../../../../../web/libraries/bootstrap/scss/spinners";
+@import "../../../../../web/libraries/bootstrap/scss/utilities";
+@import "../../../../../web/libraries/bootstrap/scss/print";
+
+// 5. Add additional custom code here
+@import "custom/badges";
+@import "custom/eu-cookie-compliance-banner";
+@import "custom/frontpage";
+@import "custom/horizontal-nav";
+@import "custom/layout";
+@import "custom/media";
+@import "custom/pager";
+@import "custom/styles";
+@import "custom/block-figures";
+@import "custom/form";
+@import "custom/header";
+@import "custom/language-switcher";
+@import "custom/login";
+@import "custom/menu";
+@import "custom/register-form";
+
+@import "nodes/node-type--article";
+@import "nodes/node-type--data-set--project";
+@import "nodes/node-type--event";
+@import "nodes/node-type--page";
+@import "nodes/node-type--press-kit";
+
+@import "paragraphs/attributed-image";
+@import "paragraphs/box-group";
+@import "paragraphs/filesize";
+@import "paragraphs/jury";
+@import "paragraphs/prizes";
+@import "paragraphs/slide-show";
+@import "paragraphs/team-member";
+@import "paragraphs/timeline";
+@import "paragraphs/winner";
+@import "paragraphs/attribution";
+@import "paragraphs/box";
+@import "paragraphs/grid";
+@import "paragraphs/logos";
+@import "paragraphs/project-image";
+@import "paragraphs/social-media";
+@import "paragraphs/textblock";
+@import "paragraphs/video";
+
+@import "views/view--articles";
+@import "views/view--events";
+@import "views/view--landing-page";
+@import "views/view--projects";
+@import "views/view--taxonomy-term";
+@import "views/view--data-sets";
+@import "views/view--faq";
+@import "views/view--press-kits";
+@import "views/view";
