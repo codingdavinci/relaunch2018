@@ -18,7 +18,7 @@
   <article{{ attributes.addClass(classes) }}{% if color_scheme %} style="background-color:#{{ color_scheme[0] }}" data-color-scheme-hover="{{ color_scheme|json_encode() }}"{% endif %}>
 
     <div class="node--event--teaser--content">
-      <div class="node--event--teaser--logo"><img src="{{ theme_path }}/img/CDV_Logo_Line_white.svg"></div>
+      <div class="node--event--teaser--logo"><img alt="Coding da Vinci" src="{{ theme_path }}/img/CDV_Logo_Line_white.svg"></div>
       <h2{{ title_attributes }}>
         {{ node.field_short_title.value|raw }}
       </h2>

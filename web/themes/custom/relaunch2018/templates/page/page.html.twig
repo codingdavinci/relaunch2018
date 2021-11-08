@@ -18,7 +18,7 @@
 <div class="layout-container--wrapper{% if tiled_header %} header-tiles-above{% endif %}">
 
     {% if not tiled_header and (page.admin_tabs or page.header) %}
-      <header role="banner">
+      <header>
         {% if page.admin_tabs %}
           {{ page.admin_tabs }}
         {% endif %}
@@ -35,7 +35,7 @@
 
     {{ page.help }}
 
-    <main role="main">
+    <main>
       <a id="main-content" tabindex="-1"></a>
         {% if tiled_header and page.admin_tabs %}
           {{ page.admin_tabs }}
@@ -44,7 +44,7 @@
     </main>
 
   {% if page.footer %}
-    <footer role="contentinfo">
+    <footer>
       {{ page.footer }}
     </footer>
   {% endif %}
