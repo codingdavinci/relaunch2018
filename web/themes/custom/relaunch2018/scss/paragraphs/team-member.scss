@@ -2,7 +2,7 @@
 .paragraph--type--team-member {
   .field--name-field-email {
     word-break: break-all;
-
+/*
     .field__item {
       &:before {
         @include icon;
@@ -13,6 +13,7 @@
         text-align: center;
       }
     }
+*/
   }
 
   .field--name-field-links {
