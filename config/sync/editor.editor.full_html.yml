@@ -32,8 +32,8 @@ settings:
         -
           name: Linking
           items:
-            - DrupalLink
-            - DrupalUnlink
+            - Link
+            - Unlink
             - Anchor
         -
           name: Lists
@@ -47,11 +47,6 @@ settings:
             - Table
             - HorizontalRule
         -
-          name: Tools
-          items:
-            - ShowBlocks
-            - Source
-        -
           name: einfugen
           items:
             - Copy
@@ -59,6 +54,11 @@ settings:
             - Paste
             - PasteText
             - PasteFromWord
+        -
+          name: Tools
+          items:
+            - ShowBlocks
+            - Source
   plugins:
     language:
       language_list: un

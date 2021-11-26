@@ -6,15 +6,19 @@ dependencies:
     - field.storage.node.field_submission_type
     - node.type.data_set
     - taxonomy.vocabulary.data_set_types
+  content:
+    - 'taxonomy_term:data_set_types:f05927e2-3288-4b73-915c-ebaa64319701'
 id: node.data_set.field_submission_type
 field_name: field_submission_type
 entity_type: node
 bundle: data_set
 label: Datenset-Typ
-description: ''
+description: 'Im Rahmen von Coding da Vinci verstehen wir unter einem <b>Datenset</b> einen Bestand von thematisch zusammengehörigen Mediendateien und/oder Metadaten, wobei die Metadaten in einem einheitlichen Format vorliegen. Bitte wählen Sie hier den <b>Typ</b> Ihres Bestandes aus und NICHT seinen Zugangsort.'
 required: true
 translatable: false
-default_value: {  }
+default_value:
+  -
+    target_uuid: f05927e2-3288-4b73-915c-ebaa64319701
 default_value_callback: ''
 settings:
   handler: 'default:taxonomy_term'

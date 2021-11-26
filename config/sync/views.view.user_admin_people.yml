@@ -17,7 +17,7 @@ display:
   default:
     display_plugin: default
     id: default
-    display_title: Master
+    display_title: Standard
     position: 0
     display_options:
       access:
@@ -894,14 +894,14 @@ display:
   page_1:
     display_plugin: page
     id: page_1
-    display_title: Seite
+    display_title: Page
     position: 1
     display_options:
       path: admin/people/list
       show_admin_links: false
       menu:
         type: 'default tab'
-        title: Liste
+        title: List
         description: 'Menschen finden und verwalten, die mit Ihrer Website interagieren.'
         menu_name: admin
         weight: -10

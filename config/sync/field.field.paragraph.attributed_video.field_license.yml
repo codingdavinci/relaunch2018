@@ -1,0 +1,25 @@
+uuid: f7a53602-c237-470f-bb87-6679e2225e9c
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_license
+    - paragraphs.paragraphs_type.attributed_video
+id: paragraph.attributed_video.field_license
+field_name: field_license
+entity_type: paragraph
+bundle: attributed_video
+label: Lizenz
+description: 'Bitte auswählen.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: licenses
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

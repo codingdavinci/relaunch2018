@@ -1,0 +1,10 @@
+uuid: fd28c66e-a732-47b5-aa3e-60554b882445
+langcode: de
+status: true
+dependencies: {  }
+id: attributed_video
+label: 'Video mit Lizenzhinweis'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.paragraph.attribution.field_author
     - field.field.paragraph.attribution.field_license
+    - field.field.paragraph.attribution.field_license_attribution
     - paragraphs.paragraphs_type.attribution
 id: paragraph.attribution.default
 targetEntityType: paragraph
@@ -12,7 +13,7 @@ bundle: attribution
 mode: default
 content:
   field_author:
-    weight: 1
+    weight: 2
     settings:
       size: 60
       placeholder: ''
@@ -24,6 +25,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
+  field_license_attribution:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   translation:
     weight: 10

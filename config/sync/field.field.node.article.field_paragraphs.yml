@@ -10,6 +10,7 @@ dependencies:
     - paragraphs.paragraphs_type.text
     - paragraphs.paragraphs_type.textblock_left
     - paragraphs.paragraphs_type.textblock_right
+    - paragraphs.paragraphs_type.video
   module:
     - entity_reference_revisions
 id: node.article.field_paragraphs
@@ -32,13 +33,8 @@ settings:
       slideshow: slideshow
       textblock_left: textblock_left
       textblock_right: textblock_right
+      video: video
     target_bundles_drag_drop:
-      image:
-        enabled: true
-        weight: 3
-      text:
-        enabled: true
-        weight: 4
       attributed_audio_video:
         weight: 33
         enabled: false
@@ -72,6 +68,9 @@ settings:
       heading:
         weight: 43
         enabled: false
+      image:
+        enabled: true
+        weight: 3
       introtext:
         weight: 45
         enabled: false
@@ -111,6 +110,9 @@ settings:
       team_member:
         weight: 57
         enabled: false
+      text:
+        enabled: true
+        weight: 4
       textblock_left:
         enabled: true
         weight: 59
@@ -124,8 +126,8 @@ settings:
         weight: 62
         enabled: false
       video:
+        enabled: true
         weight: 63
-        enabled: false
       winner:
         weight: 64
         enabled: false

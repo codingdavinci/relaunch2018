@@ -11,7 +11,7 @@ _core:
   default_config_hash: 2r_Yo2tYXnt7PLx1pnlr1JU3iHmnsoWFdzQFs2sUXGk
 id: remote_video
 label: 'Remote Video'
-description: 'Eine Referenz auf ein bei YouTube or Vimeo gehostetes Video erstellen.'
+description: 'Eine Referenz auf ein bei YouTube gehostetes Video erstellen.'
 source: 'oembed:video'
 queue_thumbnail_downloads: false
 new_revision: false

@@ -15,7 +15,7 @@ bundle: data_set_event
 label: 'Vertreter beim Kick-Off'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
@@ -25,24 +25,81 @@ settings:
     target_bundles:
       representative: representative
     target_bundles_drag_drop:
-      data_set_event:
-        weight: 11
+      attributed_audio_video:
+        weight: 34
         enabled: false
       attributed_image:
         weight: 12
         enabled: false
+      attributed_video:
+        weight: 36
+        enabled: false
       attribution:
         weight: 13
+        enabled: false
+      box:
+        weight: 38
+        enabled: false
+      box_group:
+        weight: 39
+        enabled: false
+      box_group_box:
+        weight: 40
+        enabled: false
+      data_set_event:
+        weight: 11
         enabled: false
       filesize:
         weight: 14
         enabled: false
+      grid:
+        weight: 43
+        enabled: false
+      grid_element:
+        weight: 44
+        enabled: false
+      heading:
+        weight: 45
+        enabled: false
       image:
         weight: 15
+        enabled: false
+      introtext:
+        weight: 47
+        enabled: false
+      jury:
+        weight: 48
+        enabled: false
+      jury_member:
+        weight: 49
+        enabled: false
+      logo:
+        weight: 50
+        enabled: false
+      logo_group:
+        weight: 51
+        enabled: false
+      logos:
+        weight: 52
+        enabled: false
+      prize:
+        weight: 53
+        enabled: false
+      prizes:
+        weight: 54
+        enabled: false
+      project_image:
+        weight: 55
         enabled: false
       representative:
         enabled: true
         weight: 16
+      slideshow:
+        weight: 57
+        enabled: false
+      social_media:
+        weight: 58
+        enabled: false
       team_member:
         weight: 17
         enabled: false
@@ -54,5 +111,17 @@ settings:
         enabled: false
       textblock_right:
         weight: 20
+        enabled: false
+      timeline:
+        weight: 63
+        enabled: false
+      timeline_item:
+        weight: 64
+        enabled: false
+      video:
+        weight: 65
+        enabled: false
+      winner:
+        weight: 66
         enabled: false
 field_type: entity_reference_revisions

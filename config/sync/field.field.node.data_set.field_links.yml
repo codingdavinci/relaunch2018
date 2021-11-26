@@ -12,7 +12,7 @@ field_name: field_links
 entity_type: node
 bundle: data_set
 label: Links
-description: ''
+description: "Beispiele:<br/>\r\n<ul>\r\n<li><b>Link zu den Daten (Mediendateien / Metadaten) bzw. zu der Schnittstelle</b></li> \r\n<li>Weitere Informationen</li> \r\n<li>Website Ihrer Institution</li>\r\n<li>usw.</li>\r\n</ul>"
 required: false
 translatable: true
 default_value: {  }

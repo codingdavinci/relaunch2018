@@ -1,0 +1,41 @@
+uuid: caf5d631-f640-447f-ae84-3723882b3810
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.attributed_video.field_author
+    - field.field.paragraph.attributed_video.field_inline_video
+    - field.field.paragraph.attributed_video.field_license
+    - paragraphs.paragraphs_type.attributed_video
+id: paragraph.attributed_video.default
+targetEntityType: paragraph
+bundle: attributed_video
+mode: default
+content:
+  field_author:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_inline_video:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_license:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true

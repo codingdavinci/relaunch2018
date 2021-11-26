@@ -1,0 +1,18 @@
+uuid: 4f3e3774-169c-4685-bf3d-0feadf530178
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.datasets_overview
+id: node.datasets_overview.metatag
+field_name: metatag
+entity_type: node
+bundle: datasets_overview
+label: 'Metatags (Hidden field for JSON support)'
+description: 'Die Meta-Tags dieser Entität.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

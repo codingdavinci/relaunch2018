@@ -15,7 +15,7 @@ bundle: logo_group
 label: Logos
 description: ''
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
@@ -25,9 +25,6 @@ settings:
     target_bundles:
       logo: logo
     target_bundles_drag_drop:
-      logo:
-        enabled: true
-        weight: 23
       attributed_image:
         weight: 24
         enabled: false
@@ -58,6 +55,9 @@ settings:
       jury_member:
         weight: 33
         enabled: false
+      logo:
+        enabled: true
+        weight: 23
       logo_group:
         weight: 34
         enabled: false

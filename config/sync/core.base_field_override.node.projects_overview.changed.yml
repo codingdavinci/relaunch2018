@@ -1,0 +1,18 @@
+uuid: c500a2ac-fc2e-4293-87b1-8baf4ce2d16c
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.projects_overview
+id: node.projects_overview.changed
+field_name: changed
+entity_type: node
+bundle: projects_overview
+label: Geändert
+description: 'Zeitpunkt, zu dem der Beitrag zuletzt bearbeitet wurde.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

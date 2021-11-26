@@ -1,0 +1,29 @@
+uuid: 2286828c-c438-44bb-adb3-62f3eda69e2f
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.node.projects_overview.body
+    - node.type.projects_overview
+  module:
+    - text
+    - user
+id: node.projects_overview.default
+targetEntityType: node
+bundle: projects_overview
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

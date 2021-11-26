@@ -1,0 +1,20 @@
+uuid: b8b45fca-db29-4058-8e7d-c6ba5590b28a
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.projects_overview
+  module:
+    - path
+id: node.projects_overview.path
+field_name: path
+entity_type: node
+bundle: projects_overview
+label: URL-Alias
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

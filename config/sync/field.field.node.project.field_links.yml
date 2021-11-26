@@ -14,7 +14,7 @@ bundle: project
 label: Links
 description: 'Projekt-Website, Projekt-Demo, Dokumentation, Quellcode etc.'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

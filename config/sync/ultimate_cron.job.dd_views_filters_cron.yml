@@ -1,0 +1,17 @@
+uuid: ae7524ba-29c3-4da7-8c4a-1c3ead87d935
+langcode: de
+status: true
+dependencies:
+  module:
+    - dd_views_filters
+title: 'Default cron handler'
+id: dd_views_filters_cron
+weight: 0
+module: dd_views_filters
+callback: dd_views_filters_cron
+scheduler:
+  id: simple
+launcher:
+  id: serial
+logger:
+  id: database

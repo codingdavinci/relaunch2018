@@ -25,35 +25,17 @@ settings:
     target_bundles:
       project_image: project_image
     target_bundles_drag_drop:
+      attributed_audio_video:
+        weight: 33
+        enabled: false
       attributed_image:
         weight: 10
         enabled: false
+      attributed_video:
+        weight: 35
+        enabled: false
       attribution:
         weight: 11
-        enabled: false
-      filesize:
-        weight: 12
-        enabled: false
-      image:
-        weight: 13
-        enabled: false
-      representative:
-        weight: 14
-        enabled: false
-      text:
-        weight: 16
-        enabled: false
-      textblock_left:
-        weight: 17
-        enabled: false
-      textblock_right:
-        weight: 18
-        enabled: false
-      project_image:
-        enabled: true
-        weight: 32
-      attributed_audio_video:
-        weight: 33
         enabled: false
       box:
         weight: 36
@@ -67,11 +49,20 @@ settings:
       data_set_event:
         weight: 39
         enabled: false
+      filesize:
+        weight: 12
+        enabled: false
       grid:
         weight: 41
         enabled: false
       grid_element:
         weight: 42
+        enabled: false
+      heading:
+        weight: 39
+        enabled: false
+      image:
+        weight: 13
         enabled: false
       introtext:
         weight: 44
@@ -97,6 +88,12 @@ settings:
       prizes:
         weight: 51
         enabled: false
+      project_image:
+        enabled: true
+        weight: 32
+      representative:
+        weight: 14
+        enabled: false
       slideshow:
         weight: 53
         enabled: false
@@ -105,6 +102,15 @@ settings:
         enabled: false
       team_member:
         weight: 55
+        enabled: false
+      text:
+        weight: 16
+        enabled: false
+      textblock_left:
+        weight: 17
+        enabled: false
+      textblock_right:
+        weight: 18
         enabled: false
       timeline:
         weight: 59

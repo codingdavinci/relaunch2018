@@ -14,7 +14,7 @@ bundle: project
 label: 'Andere Datensets'
 description: 'bspw. aus Wikipedia, APIs, Datenportalen, statistische Daten o.ä.'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

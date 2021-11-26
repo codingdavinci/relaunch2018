@@ -1,0 +1,31 @@
+uuid: 498851d7-f4bb-4e3a-b4f6-1806fccb763f
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.datasets_overview.body
+    - node.type.datasets_overview
+  module:
+    - text
+    - user
+id: node.datasets_overview.teaser
+targetEntityType: node
+bundle: datasets_overview
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

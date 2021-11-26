@@ -1,0 +1,22 @@
+uuid: 32f15d01-b4ce-4028-9d24-7955502a039a
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.datasets_overview
+id: node.datasets_overview.promote
+field_name: promote
+entity_type: node
+bundle: datasets_overview
+label: 'Auf der Startseite anzeigen'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: An
+  off_label: Aus
+field_type: boolean

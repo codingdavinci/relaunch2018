@@ -66,11 +66,11 @@ third_party_settings:
       weight: 9
       format_type: fieldset
       format_settings:
+        description: ''
         id: ''
         classes: ''
-        description: ''
         required_fields: false
-      label: 'Verwendete Datensätze'
+      label: 'Datensets / Datasets'
       region: content
 id: node.project.default
 targetEntityType: node

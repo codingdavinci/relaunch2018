@@ -11,7 +11,7 @@ field_name: field_image
 entity_type: paragraph
 bundle: jury_member
 label: Foto
-description: ''
+description: 'Mindestgröße 230x230px. Wird mittig und quadratisch zugeschnitten.'
 required: true
 translatable: false
 default_value: {  }

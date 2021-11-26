@@ -18,7 +18,7 @@ display:
   default:
     display_plugin: default
     id: default
-    display_title: Master
+    display_title: Standard
     position: 0
     display_options:
       access:
@@ -697,7 +697,7 @@ display:
   page:
     display_plugin: page
     id: page
-    display_title: Seite
+    display_title: Page
     position: 1
     display_options:
       display_extenders: {  }

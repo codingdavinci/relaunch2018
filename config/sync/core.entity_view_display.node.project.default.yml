@@ -49,16 +49,10 @@ third_party_settings:
       weight: 10
       format_type: fieldset
       format_settings:
-        element: div
-        show_label: true
-        label_element: h2
-        attributes: ''
-        effect: none
-        speed: fast
+        description: ''
         id: ''
         classes: group--data-sets
-        description: ''
-      label: 'Verwendete Datensätze'
+      label: 'Datensets / Datasets'
       region: content
     group_team:
       children:

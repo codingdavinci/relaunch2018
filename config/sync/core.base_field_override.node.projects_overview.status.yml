@@ -1,0 +1,22 @@
+uuid: afa50908-766b-4b1e-90c8-4ae9b72dfe87
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.projects_overview
+id: node.projects_overview.status
+field_name: status
+entity_type: node
+bundle: projects_overview
+label: Veröffentlicht
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: An
+  off_label: Aus
+field_type: boolean

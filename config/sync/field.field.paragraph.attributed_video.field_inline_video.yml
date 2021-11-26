@@ -1,0 +1,28 @@
+uuid: 56f4f8e5-1278-4d13-8458-131557d33856
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_inline_video
+    - media.type.remote_video
+    - paragraphs.paragraphs_type.attributed_video
+id: paragraph.attributed_video.field_inline_video
+field_name: field_inline_video
+entity_type: paragraph
+bundle: attributed_video
+label: Video
+description: 'Der Link zum Video wird von der <b>Geschäftsstelle</b> eingetragen. Bitte hier nur <b>Lizenz</b> und <b>Namensnennung</b> (wenn zutreffend) eintragen.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      remote_video: remote_video
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

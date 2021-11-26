@@ -24,7 +24,7 @@ type_settings:
     submitted:
       published: false
       default_revision: false
-      label: 'request review'
+      label: 'Bitte um Freigabe'
       weight: -1
     unpublished:
       published: false
@@ -32,47 +32,61 @@ type_settings:
       label: Unveröffentlicht
       weight: 1
   transitions:
+    approve_and_publish:
+      label: 'Approve and publish'
+      from:
+        - submitted
+      to: published
+      weight: 0
     create_new_draft:
-      label: 'Create New Draft'
+      label: 'Save as draft'
       to: draft
-      weight: -2
+      weight: -4
       from:
         - draft
         - published
-        - submitted
         - unpublished
     publish:
       label: Publish
       to: published
-      weight: 0
+      weight: 1
       from:
         - draft
         - published
+    re_request_review_before_approval_:
+      label: 'Re-request review (before approval)'
+      from:
         - submitted
+      to: submitted
+      weight: -2
     republish:
       label: Republish
       from:
         - unpublished
       to: published
-      weight: 2
+      weight: 3
+    request_review_entwurf:
+      label: 'Request review --> Entwurf'
+      from:
+        - submitted
+      to: draft
+      weight: -1
     submit:
-      label: Submit
+      label: 'Ask for approval / Submit'
       from:
         - draft
         - published
-        - submitted
         - unpublished
       to: submitted
-      weight: -1
+      weight: -3
     unpublish:
       label: Unpublish
       from:
         - draft
         - published
-        - submitted
         - unpublished
       to: unpublished
-      weight: 1
+      weight: 2
   entity_types:
     node:
       - project

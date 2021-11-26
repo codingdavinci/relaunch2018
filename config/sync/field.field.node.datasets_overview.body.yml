@@ -1,0 +1,23 @@
+uuid: 752a312c-8f52-4f3a-b612-c4ecd3672fc6
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.datasets_overview
+  module:
+    - text
+id: node.datasets_overview.body
+field_name: body
+entity_type: node
+bundle: datasets_overview
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

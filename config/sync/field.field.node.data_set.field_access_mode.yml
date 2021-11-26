@@ -10,9 +10,9 @@ id: node.data_set.field_access_mode
 field_name: field_access_mode
 entity_type: node
 bundle: data_set
-label: Zugriffsmodus
+label: Datenzugang
 description: ''
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''

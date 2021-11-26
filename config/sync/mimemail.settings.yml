@@ -1,0 +1,14 @@
+format: plain_text
+name: 'Coding da Vinci'
+mail: info@codingdavinci.de
+linkonly: false
+textonly: false
+sitestyle: false
+simple_address: false
+preserve_class: false
+advanced:
+  incoming: false
+  key: 1c0xseLFkp92bu4YScjviPpJMYSavkPdbtbzDnwUj1o
+_core:
+  default_config_hash: rLKGzzC9TqjbEZiBoiyMpOSyZgldADa5SzvbA2gQDxE
+langcode: de

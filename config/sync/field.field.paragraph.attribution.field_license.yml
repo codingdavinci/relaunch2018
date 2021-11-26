@@ -10,9 +10,9 @@ field_name: field_license
 entity_type: paragraph
 bundle: attribution
 label: Lizenz
-description: ''
+description: 'Bitte auswählen.'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

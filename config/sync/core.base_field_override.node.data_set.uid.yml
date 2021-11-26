@@ -11,9 +11,9 @@ bundle: data_set
 label: 'Geschrieben von'
 description: 'Der Benutzername des Autors.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
-default_value_callback: 'Drupal\node\Entity\Node::getCurrentUserId'
+default_value_callback: 'Drupal\node\Entity\Node::getDefaultEntityOwner'
 settings:
   handler: default
   handler_settings: {  }

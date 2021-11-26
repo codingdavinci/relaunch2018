@@ -2,11 +2,11 @@ label: Commentaires
 description: 'Trouver et gérer les commentaires.'
 display:
   default:
-    display_title: Maître
+    display_title: 'Par défaut'
     display_options:
       exposed_form:
         options:
-          submit_button: Appliquer
+          submit_button: Filtrer
           reset_button_label: Réinitialiser
           exposed_sorts_label: 'Trier par'
           sort_asc_label: Asc

@@ -11,8 +11,8 @@ id: paragraph.attributed_image.field_inline_image
 field_name: field_inline_image
 entity_type: paragraph
 bundle: attributed_image
-label: Bild
-description: ''
+label: Titelbild
+description: 'Hoch- oder Querformat (Seitenverhältnis nicht breiter als 16:9). Lange Kante mindestens 480 Pixel.'
 required: false
 translatable: false
 default_value: {  }

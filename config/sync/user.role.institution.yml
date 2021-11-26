@@ -8,13 +8,16 @@ weight: -7
 is_admin: null
 permissions:
   - 'access toolbar'
+  - 'change own username'
   - 'create content translations'
   - 'create data_set content'
   - 'delete content translations'
   - 'edit own data_set content'
   - 'translate data_set node'
   - 'update content translations'
+  - 'use data_set transition approve_and_create_draft'
   - 'use data_set transition create_new_draft'
+  - 'use data_set transition re_request_review_before_approval_'
   - 'use data_set transition submit'
   - 'use text format restricted_html'
   - 'view data_set revisions'

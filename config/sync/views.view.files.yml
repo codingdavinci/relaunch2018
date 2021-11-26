@@ -8,7 +8,7 @@ dependencies:
 _core:
   default_config_hash: rRWxAX-IQkJ5viACQRovRkC784EyCl9493GU_G23n2Q
 id: files
-label: Dateien
+label: Files
 module: file
 description: 'Dateien suchen und verwalten.'
 tag: default
@@ -18,7 +18,7 @@ display:
   default:
     display_plugin: default
     id: default
-    display_title: Master
+    display_title: Standard
     position: 0
     display_options:
       access:
@@ -249,7 +249,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: MIME-Typ
+          label: 'MIME type'
           exclude: false
           alter:
             alter_text: false
@@ -301,7 +301,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Größe
+          label: Size
           exclude: false
           alter:
             alter_text: false
@@ -397,8 +397,8 @@ display:
           type: boolean
           settings:
             format: custom
-            format_custom_false: Temporär
-            format_custom_true: Dauerhaft
+            format_custom_false: Temporary
+            format_custom_true: Permanent
           plugin_id: field
           entity_type: file
           entity_field: status
@@ -409,7 +409,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Upload-Datum
+          label: 'Upload date'
           exclude: false
           alter:
             alter_text: false
@@ -465,7 +465,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Änderungsdatum
+          label: 'Changed date'
           exclude: false
           alter:
             alter_text: false
@@ -521,7 +521,7 @@ display:
           relationship: fid
           group_type: sum
           admin_label: ''
-          label: 'Verwendet in'
+          label: 'Used in'
           exclude: false
           alter:
             alter_text: false
@@ -585,7 +585,7 @@ display:
           exposed: true
           expose:
             operator_id: filemime_op
-            label: Dateiname
+            label: Filename
             description: ''
             use_operator: false
             operator: filename_op
@@ -627,7 +627,7 @@ display:
           exposed: true
           expose:
             operator_id: filemime_op
-            label: MIME-Typ
+            label: 'MIME type'
             description: ''
             use_operator: false
             operator: filemime_op
@@ -700,7 +700,7 @@ display:
           entity_type: file
           entity_field: status
       sorts: {  }
-      title: Dateien
+      title: Files
       header: {  }
       footer: {  }
       empty:
@@ -742,7 +742,7 @@ display:
       path: admin/content/files
       menu:
         type: tab
-        title: Dateien
+        title: Files
         description: ''
         menu_name: admin
         weight: 0

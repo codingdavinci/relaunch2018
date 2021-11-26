@@ -32,9 +32,15 @@ settings:
         -
           name: Links
           items:
-            - DrupalLink
-            - DrupalUnlink
+            - Link
+            - Unlink
             - Anchor
+        -
+          name: Lists
+          items:
+            - BulletedList
+            - NumberedList
+            - Table
         -
           name: Einfügen
           items:
@@ -43,12 +49,6 @@ settings:
             - Paste
             - PasteText
             - PasteFromWord
-        -
-          name: Lists
-          items:
-            - BulletedList
-            - NumberedList
-            - Table
         -
           name: Tools
           items:

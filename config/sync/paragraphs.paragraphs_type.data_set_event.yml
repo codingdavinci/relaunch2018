@@ -5,5 +5,6 @@ dependencies: {  }
 id: data_set_event
 label: Event
 icon_uuid: null
+icon_default: null
 description: 'Event-Referenz mit einem oder mehreren Kick-Off-Vertretern.'
 behavior_plugins: {  }

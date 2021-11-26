@@ -12,7 +12,7 @@ bundle: project
 label: 'Fragen oder Nachrichten an die Veranstalter'
 description: 'Probleme mit oder Anmerkungen zu diesem Formular? Schreib'' sie hier rein. Was du in dieses Feld schreibst, wird nicht auf der Website veröffentlicht.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

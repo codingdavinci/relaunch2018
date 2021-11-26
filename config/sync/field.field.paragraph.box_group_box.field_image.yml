@@ -11,9 +11,9 @@ field_name: field_image
 entity_type: paragraph
 bundle: box_group_box
 label: Kopfbild
-description: ''
+description: test
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

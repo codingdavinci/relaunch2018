@@ -1,0 +1,17 @@
+uuid: f097dfcf-d844-442a-8d6f-57fe686e6fa0
+langcode: de
+status: true
+dependencies:
+  module:
+    - purge_users
+title: 'Default cron handler'
+id: purge_users_cron
+weight: 0
+module: purge_users
+callback: purge_users_cron
+scheduler:
+  id: simple
+launcher:
+  id: serial
+logger:
+  id: database

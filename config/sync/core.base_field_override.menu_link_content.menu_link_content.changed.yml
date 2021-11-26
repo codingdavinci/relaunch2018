@@ -11,7 +11,7 @@ bundle: menu_link_content
 label: Geändert
 description: 'Der Zeitpunkt an dem der Menülink zuletzt bearbeitete wurde.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

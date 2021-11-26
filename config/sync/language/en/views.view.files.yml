@@ -1,31 +1,31 @@
-label: Dateien
+label: Files
 description: 'Dateien suchen und verwalten.'
 display:
   default:
     display_options:
       fields:
         filemime:
-          label: MIME-Typ
+          label: 'MIME type'
         filesize:
-          label: Größe
+          label: Size
         status:
           settings:
-            format_custom_false: Temporär
-            format_custom_true: Dauerhaft
+            format_custom_false: Temporary
+            format_custom_true: Permanent
         created:
-          label: Upload-Datum
+          label: 'Upload date'
         changed:
-          label: Änderungsdatum
+          label: 'Changed date'
         count:
-          label: 'Verwendet in'
+          label: 'Used in'
       filters:
         filename:
           expose:
-            label: Dateiname
+            label: Filename
         filemime:
           expose:
-            label: MIME-Typ
-      title: Dateien
+            label: 'MIME type'
+      title: Files
       empty:
         area_text_custom:
           content: 'Keine Dateien verfügbar'
@@ -33,7 +33,7 @@ display:
     display_title: Dateiübersicht
     display_options:
       menu:
-        title: Dateien
+        title: Files
   page_2:
     display_title: Dateinutzung
     display_options:

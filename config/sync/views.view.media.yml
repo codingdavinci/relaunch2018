@@ -21,7 +21,7 @@ display:
   default:
     display_plugin: default
     id: default
-    display_title: Master
+    display_title: Standard
     position: 0
     display_options:
       access:
@@ -502,8 +502,8 @@ display:
           type: boolean
           settings:
             format: custom
-            format_custom_true: Veröffentlicht
-            format_custom_false: Unveröffentlicht
+            format_custom_true: Ja
+            format_custom_false: Nein
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -752,7 +752,7 @@ display:
             operator_list: {  }
           is_grouped: true
           group_info:
-            label: Status
+            label: Veröffentlicht
             description: ''
             identifier: status
             optional: true
@@ -763,11 +763,11 @@ display:
             default_group_multiple: {  }
             group_items:
               1:
-                title: Veröffentlicht
+                title: Ja
                 operator: '='
                 value: '1'
               2:
-                title: Unveröffentlicht
+                title: Nein
                 operator: '='
                 value: '0'
           plugin_id: boolean

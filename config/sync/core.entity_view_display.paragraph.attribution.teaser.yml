@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.paragraph.teaser
     - field.field.paragraph.attribution.field_author
     - field.field.paragraph.attribution.field_license
+    - field.field.paragraph.attribution.field_license_attribution
     - paragraphs.paragraphs_type.attribution
 id: paragraph.attribution.teaser
 targetEntityType: paragraph
@@ -29,4 +30,5 @@ content:
     third_party_settings: {  }
     type: entity_reference_entity_view
     region: content
-hidden: {  }
+hidden:
+  field_license_attribution: true

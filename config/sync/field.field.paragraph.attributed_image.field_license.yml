@@ -10,7 +10,7 @@ field_name: field_license
 entity_type: paragraph
 bundle: attributed_image
 label: Lizenz
-description: ''
+description: 'Bitte auswählen.'
 required: false
 translatable: false
 default_value: {  }

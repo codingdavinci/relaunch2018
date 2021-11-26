@@ -1,0 +1,20 @@
+uuid: ad70da6b-6384-4c5c-8987-8c6b7548a51d
+langcode: de
+status: true
+dependencies:
+  module:
+    - media
+    - paragraphs
+id: paragraph.field_inline_video
+field_name: field_inline_video
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

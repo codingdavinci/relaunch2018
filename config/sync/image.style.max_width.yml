@@ -1,0 +1,15 @@
+uuid: cd66e758-47b4-4f4b-8775-5585e8a60970
+langcode: de
+status: true
+dependencies: {  }
+name: max_width
+label: 'Maximale Breite (1100x*)'
+effects:
+  2e4c0e7e-a4f4-4db0-8b2b-29f93211e6a3:
+    uuid: 2e4c0e7e-a4f4-4db0-8b2b-29f93211e6a3
+    id: image_scale
+    weight: 1
+    data:
+      width: 1100
+      height: null
+      upscale: true

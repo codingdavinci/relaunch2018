@@ -18,7 +18,7 @@ display:
   default:
     display_plugin: default
     id: default
-    display_title: Master
+    display_title: Standard
     position: 0
     display_options:
       access:
@@ -39,7 +39,7 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Anwenden
+          submit_button: Apply
           reset_button: false
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
@@ -517,7 +517,7 @@ display:
   page_1:
     display_plugin: page
     id: page_1
-    display_title: Seite
+    display_title: Page
     position: 1
     display_options:
       display_extenders: {  }

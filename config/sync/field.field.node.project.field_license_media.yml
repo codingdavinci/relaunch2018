@@ -25,33 +25,18 @@ settings:
     target_bundles:
       attribution: attribution
     target_bundles_drag_drop:
+      attributed_audio_video:
+        weight: 33
+        enabled: false
       attributed_image:
         weight: 10
+        enabled: false
+      attributed_video:
+        weight: 36
         enabled: false
       attribution:
         enabled: true
         weight: 11
-      filesize:
-        weight: 12
-        enabled: false
-      image:
-        weight: 13
-        enabled: false
-      representative:
-        weight: 14
-        enabled: false
-      text:
-        weight: 16
-        enabled: false
-      textblock_left:
-        weight: 17
-        enabled: false
-      textblock_right:
-        weight: 18
-        enabled: false
-      attributed_audio_video:
-        weight: 33
-        enabled: false
       box:
         weight: 36
         enabled: false
@@ -64,6 +49,9 @@ settings:
       data_set_event:
         weight: 39
         enabled: false
+      filesize:
+        weight: 12
+        enabled: false
       grid:
         weight: 41
         enabled: false
@@ -72,6 +60,9 @@ settings:
         enabled: false
       heading:
         weight: 43
+        enabled: false
+      image:
+        weight: 13
         enabled: false
       introtext:
         weight: 45
@@ -85,11 +76,11 @@ settings:
       logo:
         weight: 48
         enabled: false
-      logos:
-        weight: 49
-        enabled: false
       logo_group:
         weight: 50
+        enabled: false
+      logos:
+        weight: 49
         enabled: false
       prize:
         weight: 51
@@ -100,6 +91,9 @@ settings:
       project_image:
         weight: 53
         enabled: false
+      representative:
+        weight: 14
+        enabled: false
       slideshow:
         weight: 55
         enabled: false
@@ -108,6 +102,15 @@ settings:
         enabled: false
       team_member:
         weight: 57
+        enabled: false
+      text:
+        weight: 16
+        enabled: false
+      textblock_left:
+        weight: 17
+        enabled: false
+      textblock_right:
+        weight: 18
         enabled: false
       timeline:
         weight: 61

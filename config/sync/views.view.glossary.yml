@@ -19,7 +19,7 @@ base_field: nid
 display:
   default:
     id: default
-    display_title: Master
+    display_title: Standard
     display_plugin: default
     position: 0
     display_options:
@@ -42,7 +42,7 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Anwenden
+          submit_button: Apply
           reset_button: false
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
@@ -352,6 +352,19 @@ display:
           plugin_id: language
           entity_type: node
           entity_field: langcode
+        status:
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+          field: status
+          group: 1
+          id: status
+          table: node_field_data
+          value: '1'
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
       display_extenders: {  }
     cache_metadata:
       contexts:
@@ -433,7 +446,7 @@ display:
       tags: {  }
   page_1:
     id: page_1
-    display_title: Seite
+    display_title: Page
     display_plugin: page
     position: 1
     display_options:

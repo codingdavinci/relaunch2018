@@ -8,6 +8,7 @@ weight: -8
 is_admin: null
 permissions:
   - 'access toolbar'
+  - 'change own username'
   - 'create content translations'
   - 'create project content'
   - 'delete content translations'
@@ -15,6 +16,8 @@ permissions:
   - 'translate project node'
   - 'update content translations'
   - 'use project transition create_new_draft'
+  - 'use project transition re_request_review_before_approval_'
+  - 'use project transition request_review_entwurf'
   - 'use project transition submit'
   - 'use text format restricted_html'
   - 'view latest version'

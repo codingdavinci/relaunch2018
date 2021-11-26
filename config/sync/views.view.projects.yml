@@ -1173,7 +1173,18 @@ display:
           entity_type: node
           entity_field: nid
           plugin_id: node_nid
-      empty: {  }
+      empty:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content: '<div class="field field__item">Noch ist kein Projekt entstanden, das diese Daten nutzt.</div>'
+          plugin_id: text_custom
       style:
         type: default
         options:
@@ -1197,9 +1208,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          empty: false
+          empty: true
           tokenize: false
-          content: 'Mit diesem Datensatz erstellte Projekte'
+          content: 'Mit diesem Datenset erstellte Projekte'
           plugin_id: text_custom
       rendering_language: '***LANGUAGE_language_interface***'
     cache_metadata:
@@ -2274,16 +2285,17 @@ display:
         arguments: true
         filters: true
         filter_groups: true
-      path: projekte
+      path: projekte_alt
       menu:
         type: normal
-        title: Projekte
+        title: 'Projekte (legacy)'
         description: ''
         expanded: false
         parent: ''
-        weight: -47
+        weight: -41
         context: '0'
         menu_name: main
+        enabled: false
       relationships:
         field_tags:
           id: field_tags
@@ -2954,7 +2966,6 @@ display:
         type: role
         options:
           role:
-            event_team: event_team
             office: office
             administrator: administrator
       pager:

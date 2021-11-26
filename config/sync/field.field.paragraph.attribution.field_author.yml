@@ -9,10 +9,10 @@ id: paragraph.attribution.field_author
 field_name: field_author
 entity_type: paragraph
 bundle: attribution
-label: Namensnennung
+label: 'Bitte NUR das obere Feld nutzen'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

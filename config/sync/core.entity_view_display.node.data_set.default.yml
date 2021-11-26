@@ -29,6 +29,7 @@ dependencies:
     - field.field.node.data_set.field_remarks
     - field.field.node.data_set.field_submission_type
     - field.field.node.data_set.field_theme
+    - field.field.node.data_set.field_video_abschnitt
     - node.type.data_set
   module:
     - entity_reference_revisions
@@ -111,18 +112,9 @@ content:
       link: ''
     third_party_settings: {  }
     region: content
-  field_audio_video:
-    weight: 3
-    label: hidden
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    type: entity_reference_revisions_entity_view
-    region: content
   field_controlled_vocabularies:
     type: entity_reference_label
-    weight: 6
+    weight: 7
     region: content
     label: above
     settings:
@@ -152,7 +144,7 @@ content:
     third_party_settings: {  }
     region: content
   field_file_types:
-    weight: 13
+    weight: 8
     label: above
     settings:
       link: false
@@ -161,7 +153,7 @@ content:
     region: content
   field_has_geo_references:
     type: boolean
-    weight: 5
+    weight: 6
     region: content
     label: above
     settings:
@@ -191,7 +183,7 @@ content:
     region: content
   field_media_count:
     type: number_integer
-    weight: 10
+    weight: 5
     region: content
     label: hidden
     settings:
@@ -200,7 +192,7 @@ content:
     third_party_settings: {  }
   field_media_filesize:
     type: entity_reference_revisions_entity_view
-    weight: 11
+    weight: 6
     region: content
     label: hidden
     settings:
@@ -209,15 +201,15 @@ content:
     third_party_settings: {  }
   field_media_license:
     type: entity_reference_revisions_entity_view
-    weight: 14
+    weight: 9
     label: hidden
     settings:
-      view_mode: preview
+      view_mode: default
       link: ''
     third_party_settings: {  }
     region: content
   field_metadata_doc_links:
-    weight: 8
+    weight: 9
     label: above
     settings:
       trim_length: 80
@@ -238,16 +230,16 @@ content:
     third_party_settings: {  }
   field_metadata_license:
     type: entity_reference_revisions_entity_view
-    weight: 7
+    weight: 8
     label: hidden
     settings:
-      view_mode: preview
+      view_mode: default
       link: ''
     third_party_settings: {  }
     region: content
   field_metadata_standards:
     type: entity_reference_label
-    weight: 4
+    weight: 5
     region: content
     label: above
     settings:
@@ -262,7 +254,7 @@ content:
     region: content
   field_objects_count:
     type: number_integer
-    weight: 12
+    weight: 7
     region: content
     label: hidden
     settings:
@@ -285,6 +277,15 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
+  field_video_abschnitt:
+    type: entity_reference_revisions_entity_view
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
   links:
     weight: 1
     region: content
@@ -292,6 +293,7 @@ content:
     third_party_settings: {  }
 hidden:
   field_acknowledge_privacy: true
+  field_audio_video: true
   field_legacy: true
   field_metadata_filesize: true
   field_remarks: true

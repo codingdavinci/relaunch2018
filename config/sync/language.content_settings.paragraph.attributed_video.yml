@@ -1,0 +1,18 @@
+uuid: 6e7fcace-8d5b-41a2-945a-3d55338972c1
+langcode: de
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.attributed_video
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.attributed_video
+target_entity_type_id: paragraph
+target_bundle: attributed_video
+default_langcode: site_default
+language_alterable: true

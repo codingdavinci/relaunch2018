@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.paragraph.attribution.field_author
     - field.field.paragraph.attribution.field_license
+    - field.field.paragraph.attribution.field_license_attribution
     - paragraphs.paragraphs_type.attribution
 id: paragraph.attribution.default
 targetEntityType: paragraph
@@ -12,7 +13,7 @@ bundle: attribution
 mode: default
 content:
   field_author:
-    weight: 1
+    weight: 2
     label: hidden
     settings:
       link_to_entity: false
@@ -27,5 +28,13 @@ content:
       link: false
     third_party_settings: {  }
     type: entity_reference_entity_view
+    region: content
+  field_license_attribution:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
 hidden: {  }

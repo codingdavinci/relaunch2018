@@ -1,0 +1,19 @@
+uuid: 22b3376b-6257-4e40-b633-49c401953559
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_license_attribution
+    - paragraphs.paragraphs_type.attribution
+id: paragraph.attribution.field_license_attribution
+field_name: field_license_attribution
+entity_type: paragraph
+bundle: attribution
+label: Namensnennung
+description: 'Bitte nur bei CC BY- oder CC BY-SA-Lizenzen eintragen.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

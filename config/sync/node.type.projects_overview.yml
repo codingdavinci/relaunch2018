@@ -1,0 +1,18 @@
+uuid: 737c9d20-3c44-4b8c-ad7e-730ebc41f901
+langcode: de
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Projekte (Übersicht)'
+type: projects_overview
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

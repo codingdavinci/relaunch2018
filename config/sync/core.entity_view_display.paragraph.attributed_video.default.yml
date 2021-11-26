@@ -1,0 +1,41 @@
+uuid: 02f647a9-308e-4667-b7d0-5fc9d7b1c39f
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.attributed_video.field_author
+    - field.field.paragraph.attributed_video.field_inline_video
+    - field.field.paragraph.attributed_video.field_license
+    - paragraphs.paragraphs_type.attributed_video
+id: paragraph.attributed_video.default
+targetEntityType: paragraph
+bundle: attributed_video
+mode: default
+content:
+  field_author:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_inline_video:
+    type: entity_reference_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_license:
+    weight: 1
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden: {  }

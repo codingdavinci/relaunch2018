@@ -11,7 +11,7 @@ field_name: field_metadata_standards
 entity_type: node
 bundle: data_set
 label: Metadaten-Schema
-description: 'Falls Ihre Daten nicht in einem den etablierten Metadaten-Standards entsprechenden Lieferformat vorliegen, geben Sie bitte ersatzweise dass Programm an, aus dem Sie Ihre Daten exportiert haben.'
+description: 'Falls Ihre Daten nicht in einem den etablierten Metadaten-Standards entsprechenden Lieferformat vorliegen, geben Sie bitte in einer Dokumentationsdatei das Programm an, aus dem Sie Ihre Daten exportiert haben.'
 required: false
 translatable: false
 default_value: {  }

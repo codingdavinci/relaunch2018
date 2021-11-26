@@ -11,7 +11,7 @@ field_name: field_image
 entity_type: paragraph
 bundle: grid_element
 label: Bild
-description: ''
+description: 'Querformat (wird mittig zugeschnitten auf das Seitenverhältnis 16:10). Mindestbreite 531px.'
 required: false
 translatable: false
 default_value: {  }

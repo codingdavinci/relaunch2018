@@ -1,0 +1,18 @@
+uuid: be1c15aa-540e-498b-8c80-1024acf34f60
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.datasets_overview
+id: node.datasets_overview.title
+field_name: title
+entity_type: node
+bundle: datasets_overview
+label: Titel
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

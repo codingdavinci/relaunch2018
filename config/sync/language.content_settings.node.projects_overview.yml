@@ -1,0 +1,18 @@
+uuid: aa06b45b-6125-4467-93bd-e6b7088b6cc6
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.projects_overview
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: node.projects_overview
+target_entity_type_id: node
+target_bundle: projects_overview
+default_langcode: site_default
+language_alterable: false

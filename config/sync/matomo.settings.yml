@@ -1,12 +1,14 @@
 site_id: '1'
-url_http: 'http://report-t.codingdavinci.de/'
-url_https: 'https://report-t.codingdavinci.de/'
+url_http: 'https://report.codingdavinci.de/'
+url_https: 'https://report.codingdavinci.de/'
 domain_mode: 0
 visibility:
   request_path_mode: 0
   request_path_pages: "/admin\r\n/admin/*\r\n/batch\r\n/node/add*\r\n/node/*/*\r\n/user/*/*"
   user_role_mode: 0
-  user_role_roles: {  }
+  user_role_roles:
+    anonymous: anonymous
+    authenticated: authenticated
   user_account_mode: 1
 track:
   mailto: true
@@ -15,7 +17,7 @@ track:
   colorbox: true
   userid: false
   messages: {  }
-  site_search: false
+  site_search: true
 privacy:
   donottrack: true
   disablecookies: false
@@ -47,7 +49,7 @@ custom:
       scope: visit
       slot: 5
 codesnippet:
-  before: ''
+  before: "document.addEventListener('DOMContentLoaded', function() {\r\n  if (!Drupal.eu_cookie_compliance.hasAgreed()) {\r\n      _paq.push(['disableCookies']);\r\n    }\r\n}, false);"
   after: ''
 translation_set: false
 cache: false

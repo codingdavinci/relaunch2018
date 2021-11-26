@@ -10,9 +10,9 @@ field_name: field_author
 entity_type: paragraph
 bundle: attributed_image
 label: Namensnennung
-description: ''
+description: 'Bitte nur bei CC BY- oder CC BY-SA-Lizenzen eintragen.'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

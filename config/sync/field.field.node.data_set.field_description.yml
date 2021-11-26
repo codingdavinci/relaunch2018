@@ -12,7 +12,7 @@ field_name: field_description
 entity_type: node
 bundle: data_set
 label: Beschreibung
-description: ''
+description: 'Bitte stellen Sie kurz den kulturhistorischen Kontext und die Bedeutung Ihres Datensets (bzw. der zugrunde liegenden Sammlung) dar. Beschreiben Sie bitte auch die Mediendateien, z. B. „3D-Scans indischer Musikinstrumente”, sowie besondere Erschließungsinformationen in den begleitenden Metadaten. Geben Sie z.B. an, welche kontrollierten Vokabulare oder anderen Normdaten Sie verwenden, ob es zu Ihren Sammlungsobjekten Georeferenzen gibt etc.'
 required: false
 translatable: true
 default_value: {  }

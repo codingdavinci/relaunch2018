@@ -437,7 +437,7 @@ display:
           entity_type: node
           entity_field: title
           plugin_id: standard
-      title: 'Häufig gestellte Fragen'
+      title: 'Frequently Asked Questions'
       header: {  }
       footer: {  }
       empty: {  }
@@ -471,7 +471,7 @@ display:
         description: ''
         expanded: false
         parent: ''
-        weight: 10
+        weight: -43
         context: '0'
         menu_name: main
         enabled: true
