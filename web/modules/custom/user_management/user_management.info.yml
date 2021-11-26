@@ -3,5 +3,5 @@ version: 0.1
 type: module
 description: Handles distinguishing between registering an `Institution` or `Project team` user account.
 package: Custom
-core: 8.x
-core_version_requirement: ^8 || ^9
+core: 9.x
+core_version_requirement: ^9

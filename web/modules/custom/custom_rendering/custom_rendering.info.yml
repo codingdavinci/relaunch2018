@@ -3,5 +3,5 @@ version: 0.1
 type: module
 description: Customisations regarding rendering of taxonomy terms and nodes by manipulating the render array or adding/manipulating template variables, especially of `Data set` and `Project` nodes.
 package: Custom
-core: 8.x
-core_version_requirement: ^8 || ^9
+core: 9.x
+core_version_requirement: ^9

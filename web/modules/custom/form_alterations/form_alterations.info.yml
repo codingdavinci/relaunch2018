@@ -3,5 +3,5 @@ version: 0.1
 type: module
 description: Applies customisations to back-end forms, especially the forms to create `Data set` and `Project` nodes.
 package: Custom
-core: 8.x
-core_version_requirement: ^8 || ^9
+core: 9.x
+core_version_requirement: ^9

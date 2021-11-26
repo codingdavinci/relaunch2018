@@ -1,6 +1,6 @@
 name: Views Entity Reference Filter
 description: Provides View filters for entity reference fields, so references can be picked by label instead of entity id.
 package: Custom
-core: 8.x
-core_version_requirement: ^8 || ^9
+core: 9.x
+core_version_requirement: ^9
 type: module
