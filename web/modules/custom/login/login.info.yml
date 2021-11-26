@@ -3,5 +3,4 @@ version: 0.1
 type: module
 description: Customises the login form appearance.
 package: Custom
-core: 9.x
 core_version_requirement: ^9

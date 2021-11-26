@@ -3,5 +3,4 @@ version: 0.1
 type: module
 description: Customises the language switcher removing the link from a language when the particular page has no translation in that language.
 package: Custom
-core: 9.x
 core_version_requirement: ^9

@@ -3,5 +3,4 @@ version: 0.1
 type: module
 description: "Alternative custom view filters."
 package: Custom
-core: 9.x
 core_version_requirement: ^9

@@ -3,7 +3,6 @@ version: 0.1
 type: module
 description: "Notifies users responsible for reviewing when projects and data sets are created or updated putting them into draft state."
 package: Custom
-core: 9.x
 core_version_requirement: ^9
 dependencies:
   - paragraphs:paragraphs
