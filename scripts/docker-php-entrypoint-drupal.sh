@@ -2,7 +2,6 @@
 set +e;
 
 HTPASSWD_GREETING="${HTPASSWD_GREETING:-Sie greifen auf ein Testsystem der DDB zu. Bitte geben als Benutzer 'testsystem' und als Passwort ebenfalls 'testsystem' ein.}";
-REDIS_MAXMEMORY="${REDIS_MAXMEMORY:-1gb}";
 # HTPASSWD_USER -> HTTP Basic Auth User
 # HTPASSWD_PWD -> HTTP Basic Auth Password
 
@@ -26,9 +25,6 @@ else
     echo "# do not delete";
   } > /etc/nginx/auth.conf;
 fi;
-
-/usr/bin/redis-cli config set maxmemory "${REDIS_MAXMEMORY}";
-/usr/bin/redis-cli config set maxmemory-policy volatile-lru;
 
 set -e;
 
