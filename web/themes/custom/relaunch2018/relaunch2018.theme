@@ -464,7 +464,7 @@ function relaunch2018_preprocess_pager(&$variables) {
   global $pager_page_array, $pager_total;
 
   // Nothing to do if there is only one page.
-  if ($pager_total[$element] <= 1) {
+  if (!isset($pager_total[$element]) || $pager_total[$element] <= 1) {
     return;
   }
   $tags = $variables['pager']['#tags'];
