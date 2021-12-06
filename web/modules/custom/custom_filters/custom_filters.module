@@ -35,7 +35,7 @@ function custom_filters_form_views_exposed_form_alter(array &$form, FormStateInt
     usort($events, function($a, $b) {
       /** @var Node $a */
       /** @var Node $b */
-      return $a->get('field_range')->end_value < $b->get('field_range')->end_value;
+      return $a->get('field_range')->end_value <=> $b->get('field_range')->end_value;
     });
 
     /** @var Node $event */
