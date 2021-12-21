@@ -438,7 +438,7 @@ class FilterApi extends ControllerBase {
       $media_entity = $node->get("field_attributed_image")->referencedEntities()[0];
       if ($media_entity) {
         $uri = $media_entity->get('field_inline_image')->entity->uri->value;
-        $image_url = file_create_url($uri);
+        $image_url = ImageStyle::load('datenset_vorschau')->buildUrl($uri);
       }
 
 
