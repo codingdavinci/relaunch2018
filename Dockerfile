@@ -3,12 +3,6 @@ COPY / /tmp/cdv
 WORKDIR /tmp/cdv
 RUN composer install --no-dev
 
-# Add git tag version to PHP file
-RUN { \
-        echo -e "<\x21-- $(git describe --tags) -->"; \
-    } >> /tmp/cdv/web/themes/custom/relaunch2018/templates/html.html.twig; \
-    rm -rf .git/;
-
 FROM php:8.0-fpm-alpine
 MAINTAINER Michael Büchner <m.buechner@dnb.de>
 
