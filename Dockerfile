@@ -64,7 +64,6 @@ RUN set -eux; \
           autoconf \
           g++ \
           make \
-          git \
           postgresql-dev;
 
 ENV RUN_USER nobody
