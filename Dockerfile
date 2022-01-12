@@ -9,6 +9,7 @@ MAINTAINER Michael Büchner <m.buechner@dnb.de>
 # Install packages
 RUN apk --no-cache add \
     curl \
+    git \
     nginx \
     nginx-mod-http-brotli \
     redis \
