@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3e724250e4ad8513629d39713fded4d1",
+    "content-hash": "f112747d3d8f7ce35d6009c6d1ed4938",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2354,6 +2354,54 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/field_group",
                 "issues": "https://www.drupal.org/project/issues/field_group"
+            }
+        },
+        {
+            "name": "drupal/gitinfo",
+            "version": "1.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/gitinfo.git",
+                "reference": "8.x-1.7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/gitinfo-8.x-1.7.zip",
+                "reference": "8.x-1.7",
+                "shasum": "671f1341b0b697d4970daa708ddc81bbe06a3275"
+            },
+            "require": {
+                "drupal/core": "^8.7.7 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.7",
+                    "datestamp": "1591530589",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "knyshuk.vova",
+                    "homepage": "https://www.drupal.org/user/3536002"
+                },
+                {
+                    "name": "lolandese",
+                    "homepage": "https://www.drupal.org/user/210402"
+                }
+            ],
+            "description": "Provide Git info per detected git directory.",
+            "homepage": "https://www.drupal.org/project/gitinfo",
+            "support": {
+                "source": "https://git.drupalcode.org/project/gitinfo"
             }
         },
         {
