@@ -29,7 +29,6 @@ RUN set -eux; \
           autoconf \
           g++ \
           make \
-          git \
           # postgresql-dev is needed for https://bugs.alpinelinux.org/issues/3642
           postgresql-dev; \
      \
