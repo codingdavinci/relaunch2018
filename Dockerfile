@@ -3,13 +3,18 @@ COPY / /tmp/cdv
 WORKDIR /tmp/cdv
 RUN composer install --no-dev
 
+# Add git tag version to PHP file
+RUN { \
+        echo -e "$(git describe --tags)"; \
+    } >> /tmp/cdv/version; \
+    rm -rf .git/;
+
 FROM php:8.0-fpm-alpine
 MAINTAINER Michael Büchner <m.buechner@dnb.de>
 
 # Install packages
 RUN apk --no-cache add \
     curl \
-    git \
     nginx \
     nginx-mod-http-brotli \
     redis \
@@ -29,6 +34,7 @@ RUN set -eux; \
           autoconf \
           g++ \
           make \
+          git \
           # postgresql-dev is needed for https://bugs.alpinelinux.org/issues/3642
           postgresql-dev; \
      \
@@ -63,6 +69,7 @@ RUN set -eux; \
           autoconf \
           g++ \
           make \
+          git \
           postgresql-dev;
 
 ENV RUN_USER nobody
