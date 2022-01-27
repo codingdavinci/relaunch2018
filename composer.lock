@@ -1249,20 +1249,20 @@
         },
         {
             "name": "drupal/admin_toolbar",
-            "version": "3.0.3",
+            "version": "3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/admin_toolbar.git",
-                "reference": "3.0.3"
+                "reference": "3.1.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/admin_toolbar-3.0.3.zip",
-                "reference": "3.0.3",
-                "shasum": "ce735c931c0bd6da79bd8e45ca459d61015bbe44"
+                "url": "https://ftp.drupal.org/files/projects/admin_toolbar-3.1.0.zip",
+                "reference": "3.1.0",
+                "shasum": "7b596d7de04faca747ba3e5216c2e819aae71f40"
             },
             "require": {
-                "drupal/core": "^8.8.0 || ^9.0"
+                "drupal/core": "^8.8.0 || ^9.0 || ^10.0"
             },
             "require-dev": {
                 "drupal/admin_toolbar_tools": "*"
@@ -1270,8 +1270,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.0.3",
-                    "datestamp": "1632322497",
+                    "version": "3.1.0",
+                    "datestamp": "1643097060",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4266,17 +4266,17 @@
         },
         {
             "name": "drupal/views_data_export",
-            "version": "1.0.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/views_data_export.git",
-                "reference": "8.x-1.0"
+                "reference": "8.x-1.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/views_data_export-8.x-1.0.zip",
-                "reference": "8.x-1.0",
-                "shasum": "f1d16fd06ee7574f680e30f6bf5d6a152e3e9f42"
+                "url": "https://ftp.drupal.org/files/projects/views_data_export-8.x-1.1.zip",
+                "reference": "8.x-1.1",
+                "shasum": "8ee9d441e69b5861ab12286246522d52613f4e61"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9",
@@ -4289,8 +4289,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.0",
-                    "datestamp": "1592589996",
+                    "version": "8.x-1.1",
+                    "datestamp": "1642805106",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -5288,16 +5288,16 @@
         },
         {
             "name": "laminas/laminas-stdlib",
-            "version": "3.7.0",
+            "version": "3.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-stdlib.git",
-                "reference": "cba75fad2053bb5dc8d3e7f5e62b61d75eecfaf1"
+                "reference": "bcd869e2fe88d567800057c1434f2380354fe325"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-stdlib/zipball/cba75fad2053bb5dc8d3e7f5e62b61d75eecfaf1",
-                "reference": "cba75fad2053bb5dc8d3e7f5e62b61d75eecfaf1",
+                "url": "https://api.github.com/repos/laminas/laminas-stdlib/zipball/bcd869e2fe88d567800057c1434f2380354fe325",
+                "reference": "bcd869e2fe88d567800057c1434f2380354fe325",
                 "shasum": ""
             },
             "require": {
@@ -5343,7 +5343,7 @@
                     "type": "community_bridge"
                 }
             ],
-            "time": "2022-01-10T11:18:55+00:00"
+            "time": "2022-01-21T15:50:46+00:00"
         },
         {
             "name": "league/container",
