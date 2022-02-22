@@ -113,7 +113,7 @@ function dd_views_filters_cache_dataset($conn, $object_types_first_level,  $row)
 
   $node = \Drupal::entityTypeManager()->getStorage("node")->load($row['nid']);
   $events = $node->field_events->referencedEntities();
-  $author_name = $node->getOwner()->name->value;
+  $author_name = $node->getOwner()->field_institution_name->value;
 
   foreach ($events as $term) {
     if ($term && $term->field_event && $term->field_event->entity) {
