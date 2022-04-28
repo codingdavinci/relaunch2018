@@ -210,13 +210,19 @@ class FilterApi extends ControllerBase {
 
       $project_types_titles = array();
       $event_title = "";
+      $image_url   = "";
 
       $node = \Drupal::entityTypeManager()->getStorage("node")->load($row['nid']);
       $node_trans = \Drupal::service('entity.repository')->getTranslationFromContext($node, $langcode);
 
-      $media_entity = $node->get("field_attributed_image")->referencedEntities()[0];
-      $uri = $media_entity->get('field_inline_image')->entity->uri->value;
-      $image_url = ImageStyle::load('project_preview_cropped')->buildUrl($uri);
+      if ($node && !$node->get('field_attributed_image')->isEmpty()) {
+        $media_entity = $node->get("field_attributed_image")->referencedEntities()[0];
+        if ($media_entity && !$media_entity->get('field_inline_image')->isEmpty()) {
+          $uri = $media_entity->get('field_inline_image')->entity->uri->value;
+          $image_url = ImageStyle::load('project_preview_cropped')->buildUrl($uri);
+        }
+      }
+
 
       $project_types = $node->field_tags->referencedEntities();
 
