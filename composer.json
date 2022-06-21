@@ -86,7 +86,7 @@
     "config": {
         "sort-packages": true,
         "platform": {
-            "php": "7.4.0",
+            "php": "8.1",
             "ext-gd": "1"
         }
     },
