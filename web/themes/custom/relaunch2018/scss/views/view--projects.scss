@@ -16,6 +16,9 @@
       @include media-breakpoint-up(lg) {
         grid-template-columns: 1fr 1fr 1fr;
       }
+      .views-row {
+        min-width: 0;
+      }
     }
   }
 
