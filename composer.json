@@ -28,6 +28,7 @@
         "drupal/better_exposed_filters": "^5.0@beta",
         "drupal/block_exclude_pages": "^2.0",
         "drupal/blockgroup": "^1.5",
+        "drupal/color-color": "^1.0",
         "drupal/core": "^9.2.0",
         "drupal/core-composer-scaffold": "^9.2.0",
         "drupal/core-project-message": "^9.0.0",
