@@ -138,3 +138,7 @@ view-faq:
   dependencies:
     - core/jquery
     - relaunch2018/jquery-easing
+netpromoterscore:
+  version: 1.0
+  js:
+    js/netpromoterscore.js: {}

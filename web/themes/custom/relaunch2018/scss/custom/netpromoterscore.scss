@@ -1,9 +1,15 @@
-#netpromoterscore {
+#netpromoterscore .active{
   width: 100vw;
   height: 100vh;
   position: fixed;
   background-color: #fff;
-  z-index: 999;
+  z-index: 99;
   top: 0;
   overflow: hidden;
+}
+
+#netpromoterscore form#webform-submission-netpromoterscore-add-form {
+  max-width: 800px;
+  margin: auto;
+  z-index: 999;
 }

@@ -32,7 +32,9 @@ function checkCookie() {
     setCookie("netpromoterscore", 3, 90);
     document.getElementById('netpromoterscore').classList.add('show')
   }
-  else {
+  if (user == 3) {
+    // setCookie("netpromoterscore", 3, 90);
+    // document.getElementById('netpromoterscore').classList.add('show')
   }
 }
 
