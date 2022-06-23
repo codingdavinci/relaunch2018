@@ -62,6 +62,7 @@
         "drupal/ultimate_cron": "^2.0@alpha",
         "drupal/video_embed_field": "^2.4",
         "drupal/views_data_export": "^1.0",
+        "drupal/webform": "^6.1",
         "drupal/x_frame_options_configuration": "^1.2",
         "drush/drush": "^10.5",
         "easyrdf/easyrdf": "^0.9",

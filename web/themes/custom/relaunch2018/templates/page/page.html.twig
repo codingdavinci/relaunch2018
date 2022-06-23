@@ -36,6 +36,9 @@
     {{ page.help }}
 
     <main>
+      <div id="netpromoterscore">
+        {{ drupal_form('netpromoterscore') }}
+      </div>
       <a id="main-content" tabindex="-1"></a>
         {% if tiled_header and page.admin_tabs %}
           {{ page.admin_tabs }}
