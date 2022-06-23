@@ -22,9 +22,16 @@
       }
       .views-row {
         min-width: 0;
+        -webkit-column-break-inside: avoid;
+        page-break-inside: avoid;
+        break-inside: avoid;
       }
       .card {
         margin-bottom: 30px;
+      }
+
+      img{
+        max-height: 192px;
       }
     }
   }
