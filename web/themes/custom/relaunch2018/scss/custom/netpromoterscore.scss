@@ -2,21 +2,27 @@
   display: none;
 }
 
-#netpromoterscore.active{
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  background-color: #fff;
-  z-index: 99;
-  top: 0;
-  overflow: hidden;
-  display: block;
+#netpromoterscore{
+  .active{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: #fff;
+    z-index: 99;
+    top: 0;
+    overflow: hidden;
+    display: block;
+  }
 }
 
-#netpromoterscore form#webform-submission-netpromoterscore-add-form {
-  max-width: 800px;
-  margin: auto;
-  z-index: 999;
-  top: 50%;
-  transform: translateY(-50%);
+#netpromoterscore {
+  form {
+    #webform-submission-netpromoterscore-add-form {
+      max-width: 800px;
+      margin: auto;
+      z-index: 999;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
 }
