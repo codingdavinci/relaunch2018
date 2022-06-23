@@ -1,3 +1,7 @@
+#netpromoterscore{
+  display: none;
+}
+
 #netpromoterscore .active{
   width: 100vw;
   height: 100vh;
@@ -6,6 +10,7 @@
   z-index: 99;
   top: 0;
   overflow: hidden;
+  display: block;
 }
 
 #netpromoterscore form#webform-submission-netpromoterscore-add-form {

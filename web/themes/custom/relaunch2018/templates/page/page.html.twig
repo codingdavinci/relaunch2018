@@ -37,7 +37,7 @@
 
     <main>
       <div id="netpromoterscore">
-        {{ drupal_form('netpromoterscore') }}
+        {{ {{ drupal_entity('webform', 'netpromoterscore') }} }}
       </div>
       <a id="main-content" tabindex="-1"></a>
         {% if tiled_header and page.admin_tabs %}

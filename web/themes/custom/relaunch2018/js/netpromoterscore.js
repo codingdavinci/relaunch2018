@@ -30,11 +30,12 @@ function checkCookie() {
   }
   if (user == 2) {
     setCookie("netpromoterscore", 3, 90);
-    document.getElementById('netpromoterscore').classList.add('show')
+    document.getElementById('netpromoterscore').classList.add('active')
   }
   if (user == 3) {
     // setCookie("netpromoterscore", 3, 90);
     // document.getElementById('netpromoterscore').classList.add('show')
   }
 }
+checkCookie();
 
