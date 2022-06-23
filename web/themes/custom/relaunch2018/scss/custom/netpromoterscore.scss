@@ -2,7 +2,7 @@
   display: none;
 }
 
-#netpromoterscore .active{
+#netpromoterscore.active{
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -17,4 +17,6 @@
   max-width: 800px;
   margin: auto;
   z-index: 999;
+  top: 50%;
+  transform: translateY(-50%);
 }

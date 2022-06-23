@@ -23,6 +23,7 @@ global-js:
     - relaunch2018/jquery-easing
     - relaunch2018/menu
     - relaunch2018/view-faq
+    - relaunch2018/netpromoterscore
 
 bootstrap-js:
   version: 4.1
