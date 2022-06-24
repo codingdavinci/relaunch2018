@@ -12,11 +12,13 @@
     display: block;
   }
 
-  form #webform-submission-netpromoterscore-add-form {
-    max-width: 800px;
-    margin: auto;
-    z-index: 999;
-    top: 50%;
-    transform: translateY(-50%);
+  form {
+    #webform-submission-netpromoterscore-add-form {
+      max-width: 800px;
+      margin: auto;
+      z-index: 999;
+      top: 50%;
+      transform: translateY(-50%);
+    }
   }
 }
