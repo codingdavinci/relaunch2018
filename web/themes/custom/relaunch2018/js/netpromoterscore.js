@@ -2,7 +2,7 @@ function setCookie(cname, cvalue, exdays) {
   const d = new Date();
   d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
   let expires = "expires="+d.toUTCString();
-  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/;max-age=600000";
 }
 
 function getCookie(cname) {
@@ -22,7 +22,7 @@ function getCookie(cname) {
 
 function checkCookie() {
   let user = getCookie("netpromoterscore");
-  if (user == "") {
+  if (!user) {
     setCookie("netpromoterscore", 1, 90);
   }
   if (user == 1){
