@@ -94,7 +94,7 @@ function dd_views_filters_cache_datasets_run() {
   ");
 
   while ($row = $query->fetchAssoc()) {
-    // dd_views_filters_cache_dataset($conn, $object_types_first_level, $row);
+    dd_views_filters_cache_dataset($conn, $object_types_first_level, $row);
   }
 }
 
