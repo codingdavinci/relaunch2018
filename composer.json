@@ -78,7 +78,8 @@
         "oomphinc/composer-installers-extender": "^2.0.0",
         "vlucas/phpdotenv": "^2.6",
         "webflo/drupal-finder": "^1.2",
-        "webmozart/path-util": "^2.3"
+        "webmozart/path-util": "^2.3",
+        "wikimedia/composer-merge-plugin": "^2.0"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -87,6 +88,13 @@
     "prefer-stable": true,
     "config": {
         "sort-packages": true,
+        "allow-plugins": {
+            "composer/installers": true,
+            "drupal/core-composer-scaffold": true,
+            "drupal/core-project-message": true,
+            "cweagans/composer-patches": true,
+            "wikimedia/composer-merge-plugin": true
+        },
         "platform": {
             "php": "8.1",
             "ext-gd": "1"
@@ -137,6 +145,18 @@
             "file-mapping": {
                 "[web-root]/README.md": false
             }
+        },
+        "merge-plugin": {
+            "include": [
+                "composer.*.json"
+            ],
+            "recurse": true,
+            "replace": false,
+            "ignore-duplicates": false,
+            "merge-dev": true,
+            "merge-extra": false,
+            "merge-extra-deep": false,
+            "merge-scripts": false
         },
         "patches": {
             "drupal/config_installer": {
