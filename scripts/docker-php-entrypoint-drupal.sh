@@ -8,7 +8,7 @@ HTPASSWD_GREETING="${HTPASSWD_GREETING:-Sie greifen auf ein Testsystem der DDB z
 if [ -n "${HTPASSWD_USER}" ] && [ -n "${HTPASSWD_PWD}" ];
 then
   echo "Setting HTTP Auth for nginx...";
-  printf '%s:%s\n' "${HTPASSWD_USER}" "$(openssl passwd -crypt "${HTPASSWD_PWD}")" > /etc/nginx/.authpasswd;
+  printf '%s:%s\n' "${HTPASSWD_USER}" "$(openssl passwd -apr1 "${HTPASSWD_PWD}")" > /etc/nginx/.authpasswd;
   {
     echo "# configuration file /etc/nginx/auth.conf:";
     echo "";
