@@ -347,6 +347,10 @@
           visibility: hidden;
       }
 
+      .paragraph--type--attributed-image--attribution {
+          display: none;
+      }
+
       img {
         @include img-fluid;
       }
