@@ -127,6 +127,14 @@
       }
     }
     
+    #block-views-block-data-sets-block-2 {
+      padding-top: 48px;
+      display: none;
+      @include media-breakpoint-up(lg) {
+        display: block;
+      }
+    }
+    
     #block-relaunch2018-content {
       display: none;
       margin-top: map_get($spacers, 10);
