@@ -7,7 +7,7 @@
 
 (function ($, Hammer, window) {
   $(function () {
-    $('.paragraph--type--box-group, .view-display-id-block_3').each(function () {
+    $('.paragraph--type--box-group, .view-id-data_sets, .view-id-projects').each(function () {
       var $container = $(this);
       var $nav = $container.find('.horizontal-nav');
       var $left = $nav.children('.horizontal-nav--left');

@@ -28,4 +28,61 @@
       }
     }
   }
+  
+  &.view-display-id-block_2 {
+    .view-header {
+      p {
+        &:last-child {
+          margin-bottom: map_get($spacers, 2);
+        }
+      }
+
+      .more-link {
+        a {
+          display: inline-block;
+          padding: 0.6em 1.4em;
+          color: $white;
+          background-color: $green;
+        }
+      }
+    }
+
+    .view-horizontal-navigation {
+      display: none;
+
+      @include media-breakpoint-up(sm) {
+        display: block;
+
+        @media #{$ie} {
+          display: none;
+        }
+      }
+    }
+
+    .view-content {
+      .views-row {
+        padding: $grid-gutter-width * 0.5;
+      }
+
+      @include media-breakpoint-up(sm) {
+        position: relative;
+        display: grid;
+        grid-auto-columns: 36%;
+        grid-auto-flow: column;
+        width: 100%;
+      }
+
+      @include media-breakpoint-up(md) {
+        grid-auto-columns: 50%;
+      }
+
+      @include media-breakpoint-up(lg) {
+        grid-auto-columns: 33.33%;
+      }
+
+      @include media-breakpoint-up(xl) {
+        grid-auto-columns: 25%;
+      }
+    }
+  }
 }

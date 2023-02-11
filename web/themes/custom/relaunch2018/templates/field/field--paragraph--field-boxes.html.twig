@@ -12,7 +12,7 @@
     'field--label-' ~ label_display,
   ]
 %}
-<div class="horizontal-nav container">
+<div class="horizontal-nav container" id="boxes-{{ uuid }}">
   <a href="#boxes-{{ uuid }}" class="horizontal-nav--left" role="button">
     <span class="horizontal-nav--prev--icon"></span>
   </a>
@@ -20,7 +20,7 @@
     <span class="horizontal-nav--next--icon"></span>
   </a>
 </div>
-<div{{ attributes.addClass(classes, 'field__items') }} id="boxes-{{ uuid }}">
+<div{{ attributes.addClass(classes, 'field__items') }}>
   {% for item in items %}
     <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
   {% endfor %}

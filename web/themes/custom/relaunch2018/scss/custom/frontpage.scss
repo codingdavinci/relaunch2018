@@ -111,7 +111,9 @@
       }
     }
 
-    #block-views-block-projects-block-3 {
+    #block-views-block-projects-block-3,
+    #block-views-block-projects-block-4,
+    #block-views-block-data_sets-block-2 {
       display: none;
       margin-top: map_get($spacers, 10);
       background-color: rgba($gray-2, 0.75);
@@ -124,7 +126,7 @@
         display: block;
       }
     }
-
+    
     #block-relaunch2018-content {
       display: none;
       margin-top: map_get($spacers, 10);

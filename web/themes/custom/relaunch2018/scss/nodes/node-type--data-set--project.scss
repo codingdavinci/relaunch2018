@@ -315,6 +315,36 @@
         padding: 0 12px;
         color: $white;
         background: $blue;
+        
+        a {
+            color: $white;
+            &:hover {
+                color: $white;
+            }
+            text-decoration: none;
+        }
+      }
+      
+      .vocabulary-licenses {
+        @include font-size(12px);
+        position: absolute;
+        top: map_get($spacers, 2);
+        right: 0;
+        padding: 0 18px;
+        color: $white;
+        background: $blue;
+        
+        a {
+            color: $white;
+            &:hover {
+                color: $white;
+            }
+            text-decoration: none;
+        }
+      }
+      
+      .field--name-field-author {
+          visibility: hidden;
       }
 
       img {
