@@ -52,6 +52,7 @@
         "drupal/pathauto": "^1.8",
         "drupal/phpmailer_smtp": "^2.0",
         "drupal/purge_users": "^3.0",
+        "drupal/quickedit": "^1.0",
         "drupal/redis": "^1.5",
         "drupal/schema_dataset": "^2.0@beta",
         "drupal/schema_metatag": "^1.8",
