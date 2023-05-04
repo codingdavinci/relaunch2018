@@ -1,4 +1,4 @@
-![PHP Composer](https://github.com/codingdavinci/relaunch2018/workflows/PHP%20Composer/badge.svg) ![Docker](https://github.com/codingdavinci/relaunch2018/workflows/Docker/badge.svg) [![Cypress](https://github.com/codingdavinci/relaunch2018/actions/workflows/ci.yml/badge.svg)](https://github.com/codingdavinci/relaunch2018/actions/workflows/ci.yml)
+![PHP Composer](https://github.com/codingdavinci/relaunch2018/workflows/PHP%20Composer/badge.svg) ![Docker](https://github.com/codingdavinci/relaunch2018/workflows/Docker/badge.svg)
 # codingdavinci.de relaunch 2018
 
 ## About
