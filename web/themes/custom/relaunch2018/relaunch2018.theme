@@ -240,6 +240,7 @@ function relaunch2018_preprocess_block(array &$variables) {
 
   $containerBlocks = [
     'block-block-about',
+    'block-startseiteplaybook',
     'block-landing-page-group-possibilities',
     'block-views-block-articles-block-1',
     'block-views-block-events-block-2',
