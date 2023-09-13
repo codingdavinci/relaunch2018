@@ -3,4 +3,4 @@ version: 0.1
 type: module
 description: Adds links to create a new `Data set`/`Project` node to the view listing a user’s `Data set`/`Project` nodes.
 package: Custom
-core_version_requirement: ^9
+core_version_requirement: ^9 || ^10

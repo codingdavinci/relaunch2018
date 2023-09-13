@@ -3,4 +3,4 @@ version: 0.1
 type: module
 description: Custom/additional logic for filtering views, especially in respect to filtering data sets and projects.
 package: Custom
-core_version_requirement: ^9
+core_version_requirement: ^9 || ^10

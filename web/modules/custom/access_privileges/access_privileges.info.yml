@@ -3,4 +3,4 @@ version: 0.1
 type: module
 description: Implements custom edit access privileges for `Event team` users.
 package: Custom
-core_version_requirement: ^9
+core_version_requirement: ^9 || ^10
