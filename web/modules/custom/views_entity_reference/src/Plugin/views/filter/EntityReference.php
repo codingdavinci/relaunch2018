@@ -183,6 +183,7 @@ class EntityReference extends InOperator implements ContainerFactoryPluginInterf
     );
     if ($this->targetEntityType->hasKey('bundle') && $targetBundles) {
       $query = $this->targetEntityStorage->getQuery();
+      $query->accessCheck(TRUE);
       $query->condition($this->targetEntityType->getKey('published'), '1', '=');
       $query->condition(
         $this->targetEntityType->getKey('bundle'), $targetBundles, 'IN'

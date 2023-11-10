@@ -3,7 +3,7 @@
  * @see field.html.twig
  */
 #}
-{% spaceless %}
+{% apply spaceless %}
 {%
   set classes = [
     'field',
@@ -15,4 +15,4 @@
 {% for item in items %}
   <h3{{ attributes.addClass(classes, 'field__item') }}>{{ item.content }}</h3>
 {% endfor %}
-{% endspaceless %}
+{% endapply %}

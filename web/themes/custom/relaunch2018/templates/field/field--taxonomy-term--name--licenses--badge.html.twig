@@ -3,8 +3,8 @@
  * @see field.html.twig
  */
 #}
-{% spaceless %}
+{% apply spaceless %}
 {% for item in items %}
   <div{{ attributes.addClass('badge') }}>{{ item.content }}</div>
 {% endfor %}
-{% endspaceless %}
+{% endapply %}

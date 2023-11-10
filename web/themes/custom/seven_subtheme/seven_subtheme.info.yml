@@ -1,7 +1,7 @@
 name: Seven Sub-Theme
 type: theme
 description: Sub-theme of core's Seven theme
-core_version_requirement: ^8.8 || ^9
+core_version_requirement: ^8.8 || ^9 || ^10
 base theme: seven
 libraries:
   - seven_subtheme/global

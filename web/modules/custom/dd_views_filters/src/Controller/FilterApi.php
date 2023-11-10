@@ -79,6 +79,7 @@ class FilterApi extends ControllerBase {
     $langcode = \Drupal::service('language_manager')->getCurrentLanguage(LanguageInterface::TYPE_CONTENT)->getId();
 
     $query = \Drupal::entityQuery('taxonomy_term');
+    $query->accessCheck(TRUE);
     $query->condition('vid', $vid);
     $tids = $query->execute();
 

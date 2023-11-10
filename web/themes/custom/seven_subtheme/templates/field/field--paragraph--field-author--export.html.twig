@@ -2,7 +2,7 @@
 /**
  * @see field.html.twig
 #}
-{% spaceless %}
+{% apply spaceless %}
 {% set i = 0 %}
 {% for item in items %}
   {% if i > 0 %}
@@ -11,4 +11,4 @@
   {{ item.content }}
   {% set i = i + 1 %}
 {% endfor %}
-{% endspaceless %}
+{% endapply %}

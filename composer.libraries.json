@@ -42,6 +42,7 @@
         "jquery/select2": "*",
         "jquery/textcounter": "*",
         "jquery/timepicker": "*",
+        "popperjs/popperjs": "*",
         "progress-tracker/progress-tracker": "*",
         "signature_pad/signature_pad": "*",
         "tabby/tabby": "*",
@@ -247,6 +248,22 @@
                 }
             }
         },
+        "popperjs": {
+            "type": "package",
+            "package": {
+                "name": "popperjs/popperjs",
+                "version": "2.11.8",
+                "type": "drupal-library",
+                "extra": {
+                    "installer-name": "popperjs"
+                },
+                "dist": {
+                    "url": "https://registry.npmjs.org/@popperjs/core/-/core-2.11.8.tgz",
+                    "type": "tar"
+                },
+                "license": "MIT"
+            }
+        },
         "progress-tracker": {
             "type": "package",
             "package": {
@@ -296,14 +313,14 @@
             "type": "package",
             "package": {
                 "name": "tippyjs/6.x",
-                "version": "6.2.6",
+                "version": "6.3.7",
                 "type": "drupal-library",
                 "extra": {
-                    "installer-name": "tippyjs/6.x"
+                    "installer-name": "tippyjs"
                 },
                 "dist": {
-                    "url": "https://unpkg.com/tippy.js@6.2.6/dist/tippy-bundle.umd.min.js",
-                    "type": "file"
+                    "url": "https://registry.npmjs.org/tippy.js/-/tippy.js-6.3.7.tgz",
+                    "type": "tar"
                 }
             }
         }

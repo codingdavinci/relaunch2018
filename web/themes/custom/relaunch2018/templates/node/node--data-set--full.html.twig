@@ -42,7 +42,7 @@
     </div>
   </div>
 
-  {% spaceless %}
+  {% apply spaceless %}
     <div class="container">
       {% if content.field_events['#items'] is not empty %}
         <div class="project__tags">
@@ -53,7 +53,7 @@
         {{ object_type }}
       </div>
     </div>
-  {% endspaceless %}
+  {% endapply %}
 
   <hr class="separator">
 

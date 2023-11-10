@@ -164,7 +164,7 @@ function dd_views_filters_cache_dataset($conn, $object_types_first_level,  $row)
         'nid'     => $row["nid"],
         'created' => $row["created"],
         'title'   => $row["title"],
-        'description'   => strip_tags($field_description),
+        'description'   => is_null($field_description) ? "" : strip_tags($field_description),
         'theme_nids'    => implode(", ", $theme_nids),
         'events_nids'   => implode(", ", $events_nids),
         'events_titles' => implode(", ", $events_titles),
