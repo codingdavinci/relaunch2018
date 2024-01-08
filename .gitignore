@@ -51,6 +51,7 @@ package-lock.json
 
 ## Ignored due to security problem (e.g. stored passwords)
 /config/sync/phpmailer_smtp.settings.yml
+/config/sync/smtp.settings.yml
 
 ## Cypress test-data
 /cypress/screenshots/
