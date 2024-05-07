@@ -61,6 +61,7 @@
         "drupal/simple_sitemap": "^4.0",
         "drupal/spamspan": "^3.0@beta",
         "drupal/taxonomy_menu": "^3.4",
+        "drupal/token_or": "^2.2",
         "drupal/twig_tweak": "^3.1",
         "drupal/ultimate_cron": "^2.0@alpha",
         "drupal/upgrade_status": "^4.0",
