@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d4824afbeecb79412647b8456671d14f",
+    "content-hash": "d02b900d54d5a6a48ce4e3f4a2006264",
     "packages": [
         {
             "name": "algolia/places",
@@ -2762,17 +2762,17 @@
         },
         {
             "name": "drupal/insert",
-            "version": "3.0.0-beta7",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/insert.git",
-                "reference": "3.0.0-beta7"
+                "reference": "3.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/insert-3.0.0-beta7.zip",
-                "reference": "3.0.0-beta7",
-                "shasum": "5387763d30e4dd15142617ce826df572689ec99a"
+                "url": "https://ftp.drupal.org/files/projects/insert-3.0.0.zip",
+                "reference": "3.0.0",
+                "shasum": "e6634d8f006e0a1f02f71c4b92645c5d8623096c"
             },
             "require": {
                 "drupal/core": "^10"
@@ -2783,11 +2783,11 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.0.0-beta7",
-                    "datestamp": "1717265062",
+                    "version": "3.0.0",
+                    "datestamp": "1719827333",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Beta releases are not covered by Drupal security advisories."
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 }
             },
@@ -3280,26 +3280,26 @@
         },
         {
             "name": "drupal/maxlength",
-            "version": "2.1.3",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/maxlength.git",
-                "reference": "2.1.3"
+                "reference": "3.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/maxlength-2.1.3.zip",
-                "reference": "2.1.3",
-                "shasum": "1be72277e071331455aa0402e227b85668c8dda5"
+                "url": "https://ftp.drupal.org/files/projects/maxlength-3.0.0.zip",
+                "reference": "3.0.0",
+                "shasum": "ad97615d4fd6766a4500087dfd96fb1d4a784569"
             },
             "require": {
-                "drupal/core": "^9.5 || ^10"
+                "drupal/core": "^10"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.1.3",
-                    "datestamp": "1716993829",
+                    "version": "3.0.0",
+                    "datestamp": "1716998578",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3342,8 +3342,9 @@
                     "role": "Maintainer"
                 },
                 {
-                    "name": "srdtwc",
-                    "homepage": "https://www.drupal.org/user/3422763"
+                    "name": "Adam Nagy (joevagyok)",
+                    "homepage": "https://www.drupal.org/u/joevagyok",
+                    "role": "Maintainer"
                 }
             ],
             "description": "MaxLength allows a soft or hard character limit to be set on titles, text fields and link fields.",
@@ -4416,6 +4417,50 @@
             "homepage": "https://www.drupal.org/project/token_or",
             "support": {
                 "source": "https://git.drupalcode.org/project/token_or"
+            }
+        },
+        {
+            "name": "drupal/tour",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/tour.git",
+                "reference": "1.0.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/tour-1.0.1.zip",
+                "reference": "1.0.1",
+                "shasum": "d65197ab10925db470dc6b8073a5a648813720d7"
+            },
+            "require": {
+                "drupal/core": ">=10.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.1",
+                    "datestamp": "1714579848",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "smustgrave",
+                    "homepage": "https://www.drupal.org/user/3252890"
+                }
+            ],
+            "description": "Displays guided tours of the site interface.",
+            "homepage": "https://www.drupal.org/project/tour",
+            "support": {
+                "source": "https://git.drupalcode.org/project/tour"
             }
         },
         {
@@ -6851,16 +6896,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.11.5",
+            "version": "1.11.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "490f0ae1c92b082f154681d7849aee776a7c1443"
+                "reference": "6ac78f1165346c83b4a753f7e4186d969c6ad0ee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/490f0ae1c92b082f154681d7849aee776a7c1443",
-                "reference": "490f0ae1c92b082f154681d7849aee776a7c1443",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/6ac78f1165346c83b4a753f7e4186d969c6ad0ee",
+                "reference": "6ac78f1165346c83b4a753f7e4186d969c6ad0ee",
                 "shasum": ""
             },
             "require": {
@@ -6905,7 +6950,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-06-17T15:10:54+00:00"
+            "time": "2024-07-01T15:33:06+00:00"
         },
         {
             "name": "phpstan/phpstan-deprecation-rules",
@@ -10628,8 +10673,6 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/block_exclude_pages": 10,
-        "drupal/insert": 10,
-        "drupal/maxlength": 5,
         "drupal/mimemail": 15,
         "drupal/purge_users": 10,
         "drupal/seven": 15,
