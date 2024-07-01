@@ -9,7 +9,7 @@ RUN { \
     } >> /tmp/cdv/version; \
     rm -rf .git/;
 
-FROM php:8.2-fpm-alpine
+FROM php:8.3-fpm-alpine
 MAINTAINER Michael Büchner <m.buechner@dnb.de>
 
 # Install packages

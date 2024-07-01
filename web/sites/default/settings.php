@@ -790,10 +790,12 @@ if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
 /* Simple Sitemap key */
 $settings['simple_sitemap_engines.index_now.key'] = getenv('SIMPLE_SITEMAP_KEY');
 
+/* State cache flag */
+$settings['state_cache'] = true;
+
 /* Redis */
 if ((getenv('USE_REDIS') ?: 'no') == 'yes') {
   $settings['redis.connection']['interface'] = 'PhpRedis';
   $settings['redis.connection']['host'] = '127.0.0.1';
   $settings['cache']['default'] = 'cache.backend.redis';
 }
-
