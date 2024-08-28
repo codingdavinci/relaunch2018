@@ -74,7 +74,7 @@
         "drupal/views_random_seed": "^1.2",
         "drupal/webform": "^6.1",
         "drupal/x_frame_options_configuration": "^1.2",
-        "drush/drush": "^12",
+        "drush/drush": "^13",
         "easyrdf/easyrdf": "^0.9",
         "npm-asset/bootstrap": "^4.6",
         "npm-asset/hammerjs": "^2.0",
@@ -107,7 +107,7 @@
             "oomphinc/composer-installers-extender": true
         },
         "platform": {
-            "php": "8.1",
+            "php": "8.3",
             "ext-gd": "1"
         }
     },
