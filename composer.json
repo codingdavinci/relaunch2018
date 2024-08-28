@@ -40,7 +40,7 @@
         "drupal/eu_cookie_compliance": "^1.14",
         "drupal/field_group": "^3.1",
         "drupal/health_check": "^3.0",
-        "drupal/honeypot": "2.1.4",
+        "drupal/honeypot": "^2.2",
         "drupal/image_widget_crop": "^2.3",
         "drupal/insert": "^3.0",
         "drupal/jquery_ui_accordion": "^2.0",
