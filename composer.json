@@ -22,7 +22,7 @@
     "require": {
         "ext-gd": "*",
         "bower-asset/fontawesome": "^5.15",
-        "composer/installers": "^1.11",
+        "composer/installers": "^2",
         "drupal/admin_toolbar": "^3.0",
         "drupal/ape": "^1.5",
         "drupal/bartik": "^1.0",
@@ -85,15 +85,15 @@
         "npm-asset/select2": "^4.0",
         "npm-asset/typeface-barlow": "*",
         "npm-asset/waypoints": "^4.0",
-        "oomphinc/composer-installers-extender": "^2.0.0",
-        "vlucas/phpdotenv": "^2.6",
+        "oomphinc/composer-installers-extender": "^2",
+        "vlucas/phpdotenv": "^5",
         "webflo/drupal-finder": "^1.2",
-        "wikimedia/composer-merge-plugin": "^2.0"
+        "wikimedia/composer-merge-plugin": "^2.1"
     },
     "conflict": {
         "drupal/drupal": "*"
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "alpha",
     "prefer-stable": true,
     "config": {
         "sort-packages": true,
@@ -158,7 +158,9 @@
         },
         "merge-plugin": {
             "include": [
-                "composer.*.json"
+                "composer.*.json",
+                "web/modules/contrib/*/composer.libraries.json",
+                "web/modules/custom/*/composer.libraries.json"
             ],
             "recurse": true,
             "replace": false,
