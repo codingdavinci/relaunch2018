@@ -59,7 +59,7 @@
         "drupal/quickedit": "^1.0",
         "drupal/redis": "^1.5",
         "drupal/schema_metatag": "^3.0",
-        "drupal/select2": "^1.13",
+        "drupal/select2": "^2.0",
         "drupal/seven": "^1.0@alpha",
         "drupal/simple_sitemap": "^4.0",
         "drupal/spamspan": "^3.0@beta",
