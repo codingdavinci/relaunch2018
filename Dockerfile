@@ -1,4 +1,4 @@
-FROM composer:2 AS COMPOSER_CHAIN
+FROM composer:2 AS cchain
 COPY / /tmp/cdv
 WORKDIR /tmp/cdv
 RUN composer install --no-dev
@@ -10,7 +10,7 @@ RUN { \
     rm -rf .git/;
 
 FROM php:8.3-fpm-alpine
-MAINTAINER Michael Büchner <m.buechner@dnb.de>
+LABEL org.opencontainers.image.authors="m.buechner@dnb.de"
 
 # Install packages
 RUN apk --no-cache add \
@@ -30,6 +30,7 @@ RUN set -eux; \
           libjpeg-turbo-dev \
           libpng-dev \
           libwebp-dev \
+          libavif-dev \
           libzip-dev \
           pcre-dev \
           autoconf \
@@ -41,8 +42,9 @@ RUN set -eux; \
      \
      docker-php-ext-configure gd \
           --with-freetype \
-          --with-jpeg=/usr/include \
-          --with-webp; \
+          --with-jpeg \
+          --with-webp \
+          --with-avif; \
      \
      docker-php-ext-install -j "$(nproc)" \
           gd \
@@ -74,8 +76,8 @@ RUN set -eux; \
           git \
           postgresql-dev;
 
-ENV RUN_USER nobody
-ENV RUN_GROUP 0
+ENV RUN_USER=nobody
+ENV RUN_GROUP=0
 
 # add PHP config
 COPY --chown=${RUN_USER}:${RUN_GROUP} ./config/php/ /usr/local/etc/php/conf.d/
@@ -94,12 +96,12 @@ COPY --chown=${RUN_USER}:${RUN_GROUP} config/supervisord/supervisord.conf /etc/s
 
 # Add application
 WORKDIR /var/www/html
-COPY --chown=${RUN_USER}:${RUN_GROUP} --from=COMPOSER_CHAIN /tmp/cdv/ .
+COPY --chown=${RUN_USER}:${RUN_GROUP} --from=cchain /tmp/cdv/ .
 ENV PATH=${PATH}:/var/www/html/vendor/bin
 
 RUN \
-    # Create symlink for php7.4
-    ln -s /usr/bin/php7.4 /usr/bin/php; \
+    # Create symlink for php8
+    ln -s /usr/bin/php8 /usr/bin/php; \
     # Use the default PHP production configuration
     mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"; \
     # Move entrypoint script in place
@@ -112,7 +114,7 @@ RUN \
     cp /etc/ssl/mykey.pem /etc/ssl/mykey.pem.orig; \
     openssl rsa -passin pass:foobar -in /etc/ssl/mykey.pem.orig -out /etc/ssl/mykey.pem; \
     # Generating certificate signing request
-    openssl req -new -key /etc/ssl/mykey.pem -out /etc/ssl/mycert.csr -subj "/C=DE/ST=DE/L=Frankfurt am Main/O=Deutsche Nationalbibliothek/OU=IT.DDB/CN=Coding da Vinci"; \
+    openssl req -new -key /etc/ssl/mykey.pem -out /etc/ssl/mycert.csr -subj "/C=DE/ST=DE/L=Frankfurt am Main/O=Deutsche Nationalbibliothek/OU=GD.DDB/CN=Coding da Vinci"; \
     # Generating self-signed certificate
     openssl x509 -req -days 3650 -in /etc/ssl/mycert.csr -signkey /etc/ssl/mykey.pem -out /etc/ssl/mycert.pem; \
     # Make sure files/folders needed by the processes are accessable when they run under the nobody user
