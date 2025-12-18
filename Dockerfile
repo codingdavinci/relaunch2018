@@ -15,7 +15,7 @@ RUN set -eu; \
         echo -e "$APP_VERSION"; \
     } >> /tmp/cdv/version;
 
-FROM php:8.3-fpm-alpine
+FROM php:8.4-fpm-alpine
 LABEL org.opencontainers.image.authors="m.buechner@dnb.de"
 
 # Install packages
