@@ -55,7 +55,7 @@
         "drupal/paragraphs": "^1.12",
         "drupal/pathauto": "^1.8",
         "drupal/phpmailer_smtp": "^2.3@beta",
-        "drupal/purge_users": "^4.0",
+        "drupal/purge_users": "^5.0@beta",
         "drupal/quickedit": "^2.0",
         "drupal/redis": "^1.5",
         "drupal/schema_metatag": "^3.0",
